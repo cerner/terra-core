@@ -1,5 +1,5 @@
 import React, {
-  useContext, useRef, useCallback,
+  useContext, useRef,
 } from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl } from 'react-intl';
@@ -65,10 +65,6 @@ const ColumnResizeHandle = (props) => {
   // Ref variable for native resize handle element
   const resizeHandle = useRef();
 
-  const resizeHandleRef = useCallback((node) => {
-    resizeHandle.current = node;
-  }, []);
-
   const onMouseDown = (event) => {
     // Execute callback function to notify consumer of mouse down event
     onResizeMouseDown(event);
@@ -83,7 +79,7 @@ const ColumnResizeHandle = (props) => {
     /* eslint-disable react/forbid-dom-props */
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/interactive-supports-focus
     <div
-      ref={resizeHandleRef}
+      ref={resizeHandle}
       draggable
       role="slider"
       tabIndex={gridContext.role === 'grid' ? -1 : 0}

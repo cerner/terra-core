@@ -134,10 +134,6 @@ const ColumnHeaderCell = (props) => {
   const gridContext = useContext(GridContext);
   const columnHeaderCell = useRef();
 
-  const columnHeaderCellRef = useCallback((node) => {
-    columnHeaderCell.current = node;
-  }, []);
-
   const onResizeHandleMouseDown = useCallback((event) => {
     if (onResizeMouseDown) {
       onResizeMouseDown(event, columnIndex, columnHeaderCell.current.offsetWidth);
@@ -187,7 +183,7 @@ const ColumnHeaderCell = (props) => {
   return (
   /* eslint-disable react/forbid-dom-props */
     <th
-      ref={columnHeaderCellRef}
+      ref={columnHeaderCell}
       key={id}
       className={cx('column-header', theme.className, { selectable: isSelectable, pinned: columnIndex < columnContext.pinnedColumnOffsets.length })}
       role="columnheader"

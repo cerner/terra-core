@@ -161,8 +161,8 @@ function Table(props) {
   const activeColumnPageX = useRef(0);
   const activeColumnWidth = useRef(200);
   const tableWidth = useRef(0);
-  const table = useRef();
-  const tableContainer = useRef();
+  const tableRef = useRef();
+  const tableContainerRef = useRef();
   const sortedColumn = useRef();
 
   const [cellAriaLiveMessage, setCellAriaLiveMessage] = useState(null);
@@ -177,38 +177,31 @@ function Table(props) {
   // functions
 
   // -------------------------------------
-  // callback Hooks
+  // useEffect Hooks
 
-  const tableContainerRef = useCallback((node) => {
-    tableContainer.current = node;
-  }, []);
-
-  const tableResizeRef = useCallback((node) => {
-    if (!node) {
-      return;
-    }
-
-    table.current = node;
+  // initialize the resize observer
+  useEffect(() => {
     const resizeObserver = new ResizeObserver(() => {
       // Update table height state variable
-      setTableHeight(table.current.offsetHeight - 1);
+      setTableHeight(tableRef.current.offsetHeight - 1);
     });
 
     // Register resize observer to detect size changes
-    resizeObserver.observe(node);
-  }, []);
+    resizeObserver.observe(tableRef.current);
 
-  // -------------------------------------
-  // useEffect Hooks
+    return () => {
+      resizeObserver.disconnect();
+    };
+  }, [tableRef]);
 
   // Make the table container focusable when scrollable.
   useEffect(() => {
     const containerRect = tableContainerRef.current.getBoundingClientRect();
-    const tableRect = table.current.getBoundingClientRect();
+    const tableRect = tableRef.current.getBoundingClientRect();
     if (tableRect.height > containerRect.height || tableRect.width > containerRect.width) {
       setIsContainerFocusable(true);
     }
-  }, [tableContainerRef, table]);
+  }, [tableContainerRef, tableRef]);
 
   // useEffect for row displayed columns
   useEffect(() => {
@@ -266,7 +259,7 @@ function Table(props) {
 
   const onResizeMouseDown = useCallback((event, index, resizeColumnWidth) => {
     // Store current table and column values for resize calculations
-    tableWidth.current = table.current.offsetWidth;
+    tableWidth.current = tableRef.current.offsetWidth;
     activeColumnPageX.current = event.pageX;
     activeColumnWidth.current = resizeColumnWidth;
 
@@ -290,7 +283,7 @@ function Table(props) {
     setRenderedColumns(newColumns);
 
     // Update the column and table width
-    table.current.style.width = `${tableWidth + (newColumnWidth - activeColumnWidth.current)}px`;
+    tableRef.current.style.width = `${tableWidth + (newColumnWidth - activeColumnWidth.current)}px`;
   };
 
   const onMouseUp = () => {
@@ -311,7 +304,7 @@ function Table(props) {
       tabIndex={isContainerFocusable ? 0 : undefined}
     >
       <table
-        ref={tableResizeRef}
+        ref={tableRef}
         id={id}
         role={gridContext.role}
         aria-labelledby={ariaLabelledBy}
@@ -356,4 +349,4 @@ function Table(props) {
 Table.propTypes = propTypes;
 Table.defaultProps = defaultProps;
 
-export default React.memo(injectIntl(Table));
+export default injectIntl(Table);

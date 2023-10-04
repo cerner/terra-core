@@ -1,17 +1,11 @@
 import React, { useState } from 'react';
 import Table from 'terra-table';
-import tableData from './mockTableData.json';
-
-const sortableTableData = { ...tableData };
-
-sortableTableData.cols[0].isSelectable = true;
-sortableTableData.cols[0].sortIndicator = 'ascending';
-
-sortableTableData.cols[1].isSelectable = true;
+import tableData from './mockSortableTableData.json';
 
 const SortableTable = () => {
-  const [tableColumns, setTableColumns] = useState(sortableTableData.cols);
-  const [tableRows, setTableRows] = useState(sortableTableData.rows);
+  const [tableColumns, setTableColumns] = useState(tableData.cols);
+  const [tableRows, setTableRows] = useState(tableData.rows);
+
   const handleColumnSelect = (columnId) => {
     const newColumns = [...tableColumns].map((col) => {
       const newCol = { ...col };
