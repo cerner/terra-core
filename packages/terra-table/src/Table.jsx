@@ -162,7 +162,7 @@ function Table(props) {
   const activeColumnWidth = useRef(200);
   const tableWidth = useRef(0);
   const table = useRef();
-  const tableContainerRef = useRef();
+  const tableContainer = useRef();
   const sortedColumn = useRef();
 
   const [cellAriaLiveMessage, setCellAriaLiveMessage] = useState(null);
@@ -178,6 +178,10 @@ function Table(props) {
 
   // -------------------------------------
   // callback Hooks
+
+  const tableContainerRef = useCallback((node) => {
+    tableContainer.current = node;
+  }, []);
 
   const tableResizeRef = useCallback((node) => {
     if (!node) {
@@ -352,4 +356,4 @@ function Table(props) {
 Table.propTypes = propTypes;
 Table.defaultProps = defaultProps;
 
-export default injectIntl(Table);
+export default React.memo(injectIntl(Table));
