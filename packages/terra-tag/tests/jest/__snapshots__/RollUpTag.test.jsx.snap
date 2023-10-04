@@ -85,12 +85,18 @@ exports[`Rollup Tag should render rollup tag with the label "4 more" 1`] = `
         </span>
       </button>
       <VisuallyHiddenText
+        aria-atomic="true"
         aria-hidden="true"
+        aria-live="polite"
+        aria-relevant="all"
         id="terra-rollup-tag-00000000-0000-0000-0000-000000000000"
         text="Terra.tags.hint.rollupTag"
       >
         <span
+          aria-atomic="true"
           aria-hidden="true"
+          aria-live="polite"
+          aria-relevant="all"
           className="visually-hidden-text"
           id="terra-rollup-tag-00000000-0000-0000-0000-000000000000"
         >
@@ -187,12 +193,18 @@ exports[`Rollup Tag should render rollup tag with the label "show less" when isC
         </span>
       </button>
       <VisuallyHiddenText
+        aria-atomic="true"
         aria-hidden="true"
+        aria-live="polite"
+        aria-relevant="all"
         id="terra-rollup-tag-00000000-0000-0000-0000-000000000000"
         text="Terra.tags.hint.showLess"
       >
         <span
+          aria-atomic="true"
           aria-hidden="true"
+          aria-live="polite"
+          aria-relevant="all"
           className="visually-hidden-text"
           id="terra-rollup-tag-00000000-0000-0000-0000-000000000000"
         >
@@ -289,12 +301,18 @@ exports[`Rollup Tag should render rollup tag with the label "show less" when isC
         </span>
       </button>
       <VisuallyHiddenText
+        aria-atomic="true"
         aria-hidden="true"
+        aria-live="polite"
+        aria-relevant="all"
         id="terra-rollup-tag-00000000-0000-0000-0000-000000000000"
         text="Terra.tags.hint.rollupTag"
       >
         <span
+          aria-atomic="true"
           aria-hidden="true"
+          aria-live="polite"
+          aria-relevant="all"
           className="visually-hidden-text"
           id="terra-rollup-tag-00000000-0000-0000-0000-000000000000"
         >

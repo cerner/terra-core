@@ -82,7 +82,14 @@ const RollUpTag = (props) => {
       >
         <span className={cx('rollup-tag-label')}>{rollUpLabel}</span>
       </button>
-      <VisuallyHiddenText id={visuallyHiddenContentId} text={rollUpHint} aria-hidden="true" />
+      <VisuallyHiddenText
+        aria-atomic="true"
+        aria-relevant="all"
+        aria-live="polite"
+        id={visuallyHiddenContentId}
+        text={rollUpHint}
+        aria-hidden="true"
+      />
     </div>
   );
 };

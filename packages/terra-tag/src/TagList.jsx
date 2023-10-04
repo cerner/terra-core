@@ -300,7 +300,6 @@ const TagList = (props) => {
     <div
       {...customProps}
       {...filterTagsProps}
-      aria-live="assertive"
       aria-label={!ariaLabelledBy ? `${containerHint.current}` : undefined}
       aria-labelledby={ariaLabelledBy}
       aria-describedby={tagGroupAriaDescribedBy}
@@ -310,7 +309,6 @@ const TagList = (props) => {
       tabIndex={containerTabindex}
     >
       <VisuallyHiddenText
-        aria-live="polite"
         id={tagGroupInteractionHintID}
         text={tagGroupInteractionHint}
         aria-hidden="true"

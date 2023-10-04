@@ -116,13 +116,11 @@ class Tag extends React.Component {
     const isClickable = href || onClick;
     const clickableComponent = href ? 'a' : 'button';
     const ComponentType = isClickable ? clickableComponent : 'span';
-    const tagRole = clickableComponent === 'a' ? 'link' : 'button';
 
     return (
       <ComponentType
         {...customProps}
         className={tagClasses}
-        role={tagRole}
         onKeyUp={this.handleKeyUp}
         onBlur={this.handleOnBlur}
         onClick={this.handleClick}

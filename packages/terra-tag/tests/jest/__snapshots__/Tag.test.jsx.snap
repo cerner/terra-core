@@ -17,7 +17,6 @@ exports[`Tag correctly applies the theme context className 1`] = `
       onBlur={[Function]}
       onClick={[Function]}
       onKeyUp={[Function]}
-      role="button"
     >
       Normal
     </span>
@@ -32,7 +31,6 @@ exports[`Tag should render a tag 1`] = `
   onBlur={[Function]}
   onClick={[Function]}
   onKeyUp={[Function]}
-  role="button"
 >
   Normal
 </span>
@@ -45,7 +43,6 @@ exports[`Tag should render an icon and text 1`] = `
   onBlur={[Function]}
   onClick={[Function]}
   onKeyUp={[Function]}
-  role="button"
 >
   <span
     className="icon"
@@ -65,7 +62,6 @@ exports[`Tag should render an interactive tag 1`] = `
   onBlur={[Function]}
   onClick={[Function]}
   onKeyUp={[Function]}
-  role="button"
 >
   text
 </button>
@@ -79,7 +75,6 @@ exports[`Tag should render as an anchor when provided an href 1`] = `
   onBlur={[Function]}
   onClick={[Function]}
   onKeyUp={[Function]}
-  role="link"
 >
   href
 </a>
@@ -92,7 +87,6 @@ exports[`Tag should render as an button tag when href is not provided 1`] = `
   onBlur={[Function]}
   onClick={[Function]}
   onKeyUp={[Function]}
-  role="button"
 >
   text
 </button>
