@@ -34,6 +34,8 @@ const propTypes = {
    */
   onKeyUp: PropTypes.func,
   /**
+   * @private
+   * Internal prop used to focus to current tag if the tag is clicked with mouse
    * Callback function triggered when tag is clicked with mouse.
    */
   onTagClick: PropTypes.func,
