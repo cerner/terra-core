@@ -9,7 +9,7 @@ Terra.describeViewports('Table', ['medium', 'large'], () => {
   describe('No Interaction Table', () => {
     it('Validates the default table is not interactable', () => {
       browser.url('/raw/tests/cerner-terra-core-docs/table/no-interaction-table');
-      browser.keys(['Tab']);
+      browser.keys(['Tab', 'Tab', 'Tab', 'Tab', 'Tab']);
       $('#focused-button').isFocused();
       Terra.validates.element('no-interaction-table', '#no-interaction-test-container');
     });
