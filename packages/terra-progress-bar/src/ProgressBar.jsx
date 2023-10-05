@@ -2,9 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
-import { injectIntl } from 'react-intl';
 import ThemeContext from 'terra-theme-context';
-import VisuallyHiddenText from 'terra-visually-hidden-text';
 import styles from './ProgressBar.module.scss';
 
 const cx = classNamesBind.bind(styles);
@@ -78,11 +76,9 @@ const ProgressBar = ({
   );
 
   const normalizedValue = (value / max) * 100;
-  const valText = valueText || intl.formatMessage({ id: 'Terra.progress.bar.percentage' }, { value: normalizedValue });
 
   return (
     <div>
-      <VisuallyHiddenText aria-live="polite" text={valText} />
       <progress
         {...customProps}
         className={classes}
@@ -91,7 +87,7 @@ const ProgressBar = ({
         aria-valuemax={100}
         aria-valuemin={0}
         aria-valuenow={normalizedValue}
-        aria-valuetext={valText}
+        aria-valuetext={valueText}
         tabIndex="-1"
       />
     </div>
@@ -102,5 +98,5 @@ ProgressBar.propTypes = propTypes;
 
 ProgressBar.defaultProps = defaultProps;
 
-export default injectIntl(ProgressBar);
+export default ProgressBar;
 export { ProgressBarHeightSize };

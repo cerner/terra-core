@@ -2,109 +2,35 @@
 
 exports[`correctly applies the theme context className 1`] = `
 <ThemeContextProvider
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   theme={
     Object {
       "className": "orion-fusion-theme",
     }
   }
 >
-  <InjectIntl(ProgressBar)
+  <ProgressBar
+    colorClass="default-color"
+    heightSize="small"
+    max={100}
     value={15}
   >
-    <ProgressBar
-      colorClass="default-color"
-      heightSize="small"
-      intl={
-        Object {
-          "defaultFormats": Object {},
-          "defaultLocale": "en",
-          "formatDate": [Function],
-          "formatHTMLMessage": [Function],
-          "formatMessage": [Function],
-          "formatNumber": [Function],
-          "formatPlural": [Function],
-          "formatRelative": [Function],
-          "formatTime": [Function],
-          "formats": Object {},
-          "formatters": Object {
-            "getDateTimeFormat": [Function],
-            "getMessageFormat": [Function],
-            "getNumberFormat": [Function],
-            "getPluralFormat": [Function],
-            "getRelativeFormat": [Function],
-          },
-          "locale": "en",
-          "messages": null,
-          "now": [Function],
-          "onError": [Function],
-          "textComponent": "span",
-          "timeZone": null,
-        }
-      }
-      max={100}
-      value={15}
-    >
-      <div>
-        <VisuallyHiddenText
-          aria-live="polite"
-          text="Terra.progress.bar.percentage"
-        >
-          <span
-            aria-live="polite"
-            className="visually-hidden-text"
-          >
-            Terra.progress.bar.percentage
-          </span>
-        </VisuallyHiddenText>
-        <progress
-          aria-valuemax={100}
-          aria-valuemin={0}
-          aria-valuenow={15}
-          aria-valuetext="Terra.progress.bar.percentage"
-          className="progress-bar small default-color orion-fusion-theme"
-          max={100}
-          tabIndex="-1"
-          value={15}
-        />
-      </div>
-    </ProgressBar>
-  </InjectIntl(ProgressBar)>
+    <div>
+      <progress
+        aria-valuemax={100}
+        aria-valuemin={0}
+        aria-valuenow={15}
+        className="progress-bar small default-color orion-fusion-theme"
+        max={100}
+        tabIndex="-1"
+        value={15}
+      />
+    </div>
+  </ProgressBar>
 </ThemeContextProvider>
 `;
 
 exports[`should render a ProgressBar component with default heightSize 50% fill and custom props and style 1`] = `
 <div>
-  <VisuallyHiddenText
-    aria-live="polite"
-    text="6%"
-  />
   <progress
     aria-valuemax={100}
     aria-valuemin={0}
@@ -121,10 +47,6 @@ exports[`should render a ProgressBar component with default heightSize 50% fill 
 
 exports[`should render a ProgressBar component with default heightSize 50% fill and valueText 1`] = `
 <div>
-  <VisuallyHiddenText
-    aria-live="polite"
-    text="Progress is 6%"
-  />
   <progress
     aria-valuemax={100}
     aria-valuemin={0}
@@ -140,10 +62,6 @@ exports[`should render a ProgressBar component with default heightSize 50% fill 
 
 exports[`should render a ProgressBar component with default heightSize and 50% fill and colorClass prop 1`] = `
 <div>
-  <VisuallyHiddenText
-    aria-live="polite"
-    text="60%"
-  />
   <progress
     aria-valuemax={100}
     aria-valuemin={0}
@@ -159,10 +77,6 @@ exports[`should render a ProgressBar component with default heightSize and 50% f
 
 exports[`should render a ProgressBar component with large heightSize and 60% fill 1`] = `
 <div>
-  <VisuallyHiddenText
-    aria-live="polite"
-    text="15%"
-  />
   <progress
     aria-valuemax={100}
     aria-valuemin={0}
@@ -178,10 +92,6 @@ exports[`should render a ProgressBar component with large heightSize and 60% fil
 
 exports[`should render a ProgressBar component with tiny heightSize and 15% fill 1`] = `
 <div>
-  <VisuallyHiddenText
-    aria-live="polite"
-    text="15%"
-  />
   <progress
     aria-valuemax={100}
     aria-valuemin={0}
@@ -197,15 +107,10 @@ exports[`should render a ProgressBar component with tiny heightSize and 15% fill
 
 exports[`should render a default component 1`] = `
 <div>
-  <VisuallyHiddenText
-    aria-live="polite"
-    text="Terra.progress.bar.percentage"
-  />
   <progress
     aria-valuemax={100}
     aria-valuemin={0}
     aria-valuenow={15}
-    aria-valuetext="Terra.progress.bar.percentage"
     className="progress-bar small default-color"
     max={100}
     tabIndex="-1"

@@ -7,6 +7,6 @@ const cx = classNames.bind(styles);
 
 export default () => (
   <div>
-    <ProgressBar valueText="8%" value={8} max={10} colorClass={cx(['customized-color-bar-example-2'])} />
+    <ProgressBar value={8} max={10} colorClass={cx(['customized-color-bar-example-2'])} />
   </div>
 );
