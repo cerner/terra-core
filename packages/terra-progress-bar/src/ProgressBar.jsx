@@ -29,7 +29,8 @@ const propTypes = {
    */
   max: PropTypes.number,
   /**
-   * Value passed to aria-valuetext for accessibility. You can view more about this attribute
+   * ![IMPORTANT](https://badgen.net/badge/prop/deprecated/red)
+   * valueText has been deprecated and will be removed on next major version release.
    * at https://www.w3.org/WAI/PF/aria/states_and_properties#aria-valuetext.
    */
   valueText: PropTypes.string,
@@ -77,6 +78,8 @@ const ProgressBar = ({
 
   const normalizedValue = (value / max) * 100;
 
+  const isMac = () => navigator.userAgent.indexOf('Mac') !== -1 && navigator.userAgent.indexOf('Win') === -1;
+
   return (
     <div>
       <progress
@@ -87,7 +90,7 @@ const ProgressBar = ({
         aria-valuemax={100}
         aria-valuemin={0}
         aria-valuenow={normalizedValue}
-        aria-valuetext={valueText}
+        aria-valuetext={!isMac ? `${normalizedValue}%` : undefined}
         tabIndex="-1"
       />
     </div>
