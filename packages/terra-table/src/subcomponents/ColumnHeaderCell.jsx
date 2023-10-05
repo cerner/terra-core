@@ -140,7 +140,6 @@ const ColumnHeaderCell = (props) => {
     }
   }, [columnIndex, onResizeMouseDown]);
 
-  // Handle column header selection via the mouse click.
   const handleMouseDown = (event) => {
     onColumnSelect(id, { row: rowIndex, col: columnIndex });
     event.stopPropagation();
@@ -188,15 +187,14 @@ const ColumnHeaderCell = (props) => {
       className={cx('column-header', theme.className, { selectable: isSelectable, pinned: columnIndex < columnContext.pinnedColumnOffsets.length })}
       role="columnheader"
       scope="col"
-      tabIndex={gridContext.role === 'grid' ? -1 : undefined}
+      tabIndex={gridContext.role === 'grid' || isSelectable ? 0 : undefined}
       aria-sort={sortIndicator}
       onMouseDown={(isSelectable && onColumnSelect) ? handleMouseDown : undefined}
       onKeyDown={isSelectable && onColumnSelect ? handleKeyDown : undefined}
       // eslint-disable-next-line react/forbid-dom-props
       style={{ width: `${width}px`, height: headerHeight, left: cellLeftEdge }}
     >
-      {/* eslint-disable jsx-a11y/no-noninteractive-tabindex */}
-      <div className={cx('header-container')} role={displayName && 'button'} tabIndex={isSelectable ? 0 : undefined}>
+      <div className={cx('header-container')} role={displayName && 'button'}>
         {errorIcon}
         <span>{displayName}</span>
         {sortIndicatorIcon}

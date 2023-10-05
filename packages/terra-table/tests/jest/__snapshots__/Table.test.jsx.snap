@@ -3,6 +3,7 @@
 exports[`Table verifies that the table created is consistent with the rows and overflowColumns props 1`] = `
 <div
   className="table-container"
+  tabIndex={-1}
 >
   <table
     className="table"
@@ -211,6 +212,7 @@ exports[`Table verifies that the table created is consistent with the rows and o
 exports[`Table verifies the rows are created with the right props 1`] = `
 <div
   className="table-container"
+  tabIndex={-1}
 >
   <table
     className="table"

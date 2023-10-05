@@ -66,7 +66,6 @@ const ColumnResizeHandle = (props) => {
   const resizeHandle = useRef();
 
   const onMouseDown = (event) => {
-    // Execute callback function to notify consumer of mouse down event
     onResizeMouseDown(event);
 
     // Prevent event bubbling since necessary actions are handled by this component
@@ -77,7 +76,6 @@ const ColumnResizeHandle = (props) => {
 
   return (
     /* eslint-disable react/forbid-dom-props */
-    // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/interactive-supports-focus
     <div
       ref={resizeHandle}
       draggable

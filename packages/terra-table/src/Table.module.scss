@@ -1,3 +1,6 @@
+@import './orion-fusion-theme/Table.module';
+@import './clinical-lowlight-theme/Table.module';
+
 :local {
   .table-container {
     height: 100%;
@@ -10,5 +13,10 @@
     border-spacing: 0;
     table-layout: fixed;
     width: 1px;
+
+    :focus {
+      outline: var(--terra-table-cell-focus-outline, 3px dashed #000);
+      outline-offset: var(--terra-table-cell-focus-outline-offset, -2px);
+    }
   }
 }

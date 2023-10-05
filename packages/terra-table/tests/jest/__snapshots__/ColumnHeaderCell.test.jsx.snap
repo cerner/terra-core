@@ -14,11 +14,11 @@ exports[`ColumnHeaderCell renders a column header cell with ascending sort 1`] =
       "width": "100px",
     }
   }
+  tabIndex={0}
 >
   <div
     className="header-container"
     role="button"
-    tabIndex={0}
   >
     <span>
        Vitals
@@ -95,11 +95,11 @@ exports[`ColumnHeaderCell renders a column header cell with descending sort 1`] 
       "width": "100px",
     }
   }
+  tabIndex={0}
 >
   <div
     className="header-container"
     role="button"
-    tabIndex={0}
   >
     <span>
        Vitals
@@ -172,11 +172,11 @@ exports[`ColumnHeaderCell renders a column header cell with onColumnSelect callb
       "width": "100px",
     }
   }
+  tabIndex={0}
 >
   <div
     className="header-container"
     role="button"
-    tabIndex={0}
   >
     <IconError
       a11yLabel="Terra.table.columnError"

@@ -37,11 +37,6 @@ const propTypes = {
   id: PropTypes.string.isRequired,
 
   /**
-   * Prop that determines whether the table's container should be scrollable.
-   */
-  isScrollable: PropTypes.bool,
-
-  /**
    * Data for content in the body of the table. Rows will be rendered in the order given.
    */
   rows: PropTypes.arrayOf(rowShape).isRequired,
@@ -112,10 +107,8 @@ const defaultProps = {
   rowHeight: '2.5rem',
   pinnedColumns: [],
   overflowColumns: [],
-  isScrollable: true,
 };
 
-// Default column size constraints
 const defaultColumnMinimumWidth = 60;
 const defaultColumnMaximumWidth = 300;
 
@@ -156,7 +149,6 @@ function Table(props) {
   // Manage column resize
   const [tableHeight, setTableHeight] = useState(0);
   const [activeIndex, setActiveIndex] = useState(null);
-  const [isContainerFocusable, setIsContainerFocusable] = useState(false);
 
   const activeColumnPageX = useRef(0);
   const activeColumnWidth = useRef(200);
@@ -169,39 +161,23 @@ function Table(props) {
 
   const gridContext = useContext(GridContext);
 
-  // Define ColumnContext Provider value object
   const columnContextValue = useMemo(() => ({ pinnedColumnOffsets, setCellAriaLiveMessage }), [pinnedColumnOffsets]);
   const theme = useContext(ThemeContext);
 
-  // -------------------------------------
-  // functions
-
-  // -------------------------------------
   // useEffect Hooks
 
-  // initialize the resize observer
+  // useEffect for managing the table height.
   useEffect(() => {
     const resizeObserver = new ResizeObserver(() => {
-      // Update table height state variable
       setTableHeight(tableRef.current.offsetHeight - 1);
     });
 
-    // Register resize observer to detect size changes
     resizeObserver.observe(tableRef.current);
 
     return () => {
       resizeObserver.disconnect();
     };
   }, [tableRef]);
-
-  // Make the table container focusable when scrollable.
-  useEffect(() => {
-    const containerRect = tableContainerRef.current.getBoundingClientRect();
-    const tableRect = tableRef.current.getBoundingClientRect();
-    if (tableRect.height > containerRect.height || tableRect.width > containerRect.width) {
-      setIsContainerFocusable(true);
-    }
-  }, [tableContainerRef, tableRef]);
 
   // useEffect for row displayed columns
   useEffect(() => {
@@ -300,8 +276,7 @@ function Table(props) {
     <div
       className={cx('table-container')}
       ref={tableContainerRef}
-      // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
-      tabIndex={isContainerFocusable ? 0 : undefined}
+      tabIndex={gridContext.role === 'grid' ? 0 : -1}
     >
       <table
         ref={tableRef}
@@ -310,7 +285,6 @@ function Table(props) {
         aria-labelledby={ariaLabelledBy}
         aria-label={ariaLabel}
         className={cx('table', theme.className)}
-        tabIndex={gridContext.role === 'grid' ? 0 : undefined}
         {...(activeIndex != null && { onMouseUp, onMouseMove, onMouseLeave: onMouseUp })}
       >
         <ColumnContext.Provider
