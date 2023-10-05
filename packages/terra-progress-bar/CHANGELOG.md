@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Fixed
-  * Removed visually hidden component to fix repeated announcement of progress.
+  * Removed visually hidden component to fix repeated announcement of progress
 
 ## 4.34.0 - (April 5, 2023)
 
