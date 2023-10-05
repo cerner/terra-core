@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 3.68.2 - (October 3, 2023)
+
+* Fixed
+  * Fixed bug where VoiceOver in Safari highlighting Terra Button within a modal dialog with a frame bigger than the button size.
+
 ## 3.68.1 - (August 25, 2023)
 
 * Fixed

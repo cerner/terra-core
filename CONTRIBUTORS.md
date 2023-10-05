@@ -96,6 +96,7 @@ Cerner Corporation
 - Alla Doroshkevych [@adoroshk]
 - Quan Le [@leducquan]
 - Yixuan Chen [@chenyixuan625]
+- Madalina Stelea [@MadalinaStelea]
 
 Community
 
@@ -219,3 +220,4 @@ Community
 [@adoroshk]: https://github.com/adoroshk
 [@leducquan]: https://github.com/leducquan
 [@chenyixuan625]: https://github.com/chenyixuan625
+[@MadalinaStelea]: https://github.com/MadalinaStelea

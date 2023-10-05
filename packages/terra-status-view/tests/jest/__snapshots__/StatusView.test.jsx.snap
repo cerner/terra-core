@@ -520,7 +520,7 @@ exports[`should render a status view with custom glyph, title, message, and two 
             type="button"
           >
             <span
-              className="button-label text-only"
+              className="button-label-win text-only"
             >
               <span
                 className=""
@@ -555,7 +555,7 @@ exports[`should render a status view with custom glyph, title, message, and two 
             type="button"
           >
             <span
-              className="button-label text-only"
+              className="button-label-win text-only"
             >
               <span
                 className=""
