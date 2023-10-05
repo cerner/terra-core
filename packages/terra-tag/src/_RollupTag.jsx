@@ -5,7 +5,6 @@ import { v4 as uuidv4 } from 'uuid';
 import classNamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import ThemeContext from 'terra-theme-context';
-import VisuallyHiddenText from 'terra-visually-hidden-text';
 import styles from './Tag.module.scss';
 
 const cx = classNamesBind.bind(styles);
@@ -62,7 +61,7 @@ const RollUpTag = (props) => {
   const rollUpLabel = isCollapsed && rollupCount > 0 ? intl.formatMessage({ id: 'Terra.tags.label.rollupTag' }, { tagsNotVisibleCount: rollupCount }) : intl.formatMessage({ id: 'Terra.tags.label.showLess' });
   const rollUpHint = isCollapsed ? intl.formatMessage({ id: 'Terra.tags.hint.rollupTag' }, { tagsNotVisibleCount: rollupCount }) : intl.formatMessage({ id: 'Terra.tags.hint.showLess' });
   const rollUpTagId = `terra-rollup-tag-${uuidv4()}`;
-  const visuallyHiddenContentId = `terra-rollup-tag-${uuidv4()}`;
+
   return (
     <div
       className={cx('tag-list-item')}
@@ -76,20 +75,14 @@ const RollUpTag = (props) => {
         onBlur={handleOnBlur}
         ref={rollUpTagRef}
         type="button"
-        aria-describedby={visuallyHiddenContentId}
+        aria-label={rollUpHint}
+        aria-describedby={rollUpHint}
+        aria-atomic="true"
         data-terra-rollup-tag-show-focus-styles
         data-terra-rollup-tag
       >
         <span className={cx('rollup-tag-label')}>{rollUpLabel}</span>
       </button>
-      <VisuallyHiddenText
-        aria-atomic="true"
-        aria-relevant="all"
-        aria-live="polite"
-        id={visuallyHiddenContentId}
-        text={rollUpHint}
-        aria-hidden="true"
-      />
     </div>
   );
 };
