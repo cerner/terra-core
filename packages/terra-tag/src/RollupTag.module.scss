@@ -1,0 +1,105 @@
+:local {
+  .rollup-tag-label {
+    font-family: inherit; // Button reset
+    left: 0; // Button reset for IE
+    min-width: 0;
+    overflow: hidden;
+    position: relative; // Button reset for IE
+    text-overflow: ellipsis;
+    top: 0;  // Button reset for IE
+    white-space: nowrap;  
+  }
+
+  @supports (not (-webkit-hyphens:none)) {
+    .rollup-tag-label {
+      top: var(--terra-tags-rollup-tag-label-not-ms-top, -0.01em); // Text alignment for all but IE + Safari
+    }
+  }
+
+  @supports selector(:-moz-is-html) {
+    .rollup-tag-label { 
+      top: var(--terra-tags-rollup-tag-label-moz-top, -0.02em); // Text alignment for Firefox
+    }
+  }
+
+  .rollup-tag {
+    background-color: var(--terra-tags-rollup-tag-background-color, rgba(28, 31, 33, 0.04));
+    border: var(--terra-tags-rollup-tag-border, 1px solid rgba(28, 31, 33, 0.1));
+    border-radius: var(--terra-tags-rollup-tag-border-radius, 3px);
+    border-style: solid;
+    border-width: var(--terra-tags-rollup-tag-border-width, 1px);
+    box-shadow: var(--terra-tags-rollup-tag-box-shadow, 0 1px 2px 0 rgba(0, 0, 0, 0.2));
+    box-sizing: border-box;
+    color: var(--terra-tags-rollup-tag-color, #595f62);
+    cursor: pointer;
+    display: inline-block;
+    font-family: inherit;
+    font-size: var(--terra-tags-rollup-tag-font-size, 0.85714rem);
+    height: var(--terra-tags-rollup-tag-height, 1.71429rem);
+    line-height: var(--terra-tags-rollup-tag-line-height, 1.16667);
+    margin: 0;
+    max-width: 100%; // Needed for IE10 truncation
+    min-width: 0;
+    outline: none;
+    overflow: hidden;
+    padding: 0;
+    padding-bottom: var(--terra-tags-rollup-tag-padding-bottom, 0.28571rem);
+    padding-left: var(--terra-tags-rollup-tag-padding-left, 0.71428rem);
+    padding-right: var(--terra-tags-rollup-tag-padding-right, 0.71428rem);
+    padding-top: var(--terra-tags-rollup-tag-padding-top, 0.28571rem);
+    text-overflow: ellipsis;
+    vertical-align: top;
+    white-space: nowrap;
+
+    &[data-terra-rollup-tag-show-focus-styles='true']:focus {
+      background-color: var(--terra-tag-focus-background-color, #fff);
+      border-color: var(--terra-tag-focus-border-color, rgba(76, 178, 233, 0.5));
+      border-width: var(--terra-tags-rollup-tag-focus-border-width, 1px);
+      box-shadow: var(--terra-tags-rollup-tag-focus-box-shadow, none);
+      outline: var(--terra-tags-rollup-tag-focus-outline, 2px dashed #000);
+      outline-offset: var(--terra-tags-rollup-tag-focus-outline-offset, 2px);
+    }
+
+    &:hover {
+      background-color: var(--terra-tags-rollup-tag-hover-background-color, #dedfe0);
+      border: var(--terra-tags-rollup-tag-hover-border, 1px solid #868a8c);
+      color: var(--terra-tags-rollup-tag-hover-color, #222a2e);
+    }
+
+    &:active {
+      background-color: var(--terra-tags-rollup-tag-active-background-color, #bcbfc0);
+      border: var(--terra-tags-rollup-tag-active-border, 1px solid #868a8c);
+      color: var(--terra-tags-rollup-tag-active-color, #222a2e);
+    }
+
+    &:focus {
+      border-color: var(--terra-tags-rollup-tag-focus-border-color, #868a8c);
+      border-width: var(--terra-tags-rollup-tag-focus-border-width, 1px);
+      // box-shadow: none;
+      outline: var(--terra-tags-rollup-tag-focus-outline, 2px dashed #000);
+      outline-offset: var(--terra-tags-rollup-tag-focus-outline-offset, 2px);
+    }
+  }
+
+  .tag-list-item {
+    box-sizing: border-box;
+    display: inline-block;
+    flex: 1 1 auto;
+    margin: 0;
+    margin-bottom: var(--terra-tags-tag-list-item-margin-bottom, 0.28571rem);
+    margin-right: var(--terra-tags-tag-list-item-margin-right, 0.42857rem);
+    margin-top: var(--terra-tags-tag-list-item-margin-top, 0.28571rem);
+    max-width: 100%; // Needed for IE10 truncation
+    outline: none;
+    position: relative;
+    vertical-align: top;
+  }
+  
+  .tags-group {
+    box-sizing: border-box;
+    margin: 0;
+    max-width: 100%;
+    min-width: 0;
+    outline: none;
+  }
+}

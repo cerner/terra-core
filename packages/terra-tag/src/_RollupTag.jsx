@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 import classNamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import ThemeContext from 'terra-theme-context';
-import styles from './Tag.module.scss';
+import styles from './RollupTag.module.scss';
 
 const cx = classNamesBind.bind(styles);
 
