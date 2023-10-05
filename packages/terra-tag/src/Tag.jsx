@@ -81,9 +81,7 @@ class Tag extends React.Component {
     if (this.props.onClick) {
       this.props.onClick();
     }
-    setTimeout(() => {
-      this.setState({ focused: true });
-    }, 100);
+    this.setState({ focused: true });
   }
 
   render() {
