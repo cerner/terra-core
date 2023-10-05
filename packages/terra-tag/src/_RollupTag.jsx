@@ -75,6 +75,7 @@ const RollUpTag = (props) => {
         onBlur={handleOnBlur}
         ref={rollUpTagRef}
         type="button"
+        aria-live={(isCollapsed) ? 'polite' : 'off'}
         aria-label={rollUpHint}
         aria-describedby={rollUpHint}
         aria-atomic="true"

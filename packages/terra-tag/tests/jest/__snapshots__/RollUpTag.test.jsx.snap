@@ -70,6 +70,7 @@ exports[`Rollup Tag should render rollup tag with the label "4 more" 1`] = `
         aria-atomic="true"
         aria-describedby="Terra.tags.hint.rollupTag"
         aria-label="Terra.tags.hint.rollupTag"
+        aria-live="polite"
         className="rollup-tag"
         data-terra-rollup-tag={true}
         data-terra-rollup-tag-show-focus-styles={true}
@@ -161,6 +162,7 @@ exports[`Rollup Tag should render rollup tag with the label "show less" when isC
         aria-atomic="true"
         aria-describedby="Terra.tags.hint.showLess"
         aria-label="Terra.tags.hint.showLess"
+        aria-live="off"
         className="rollup-tag"
         data-terra-rollup-tag={true}
         data-terra-rollup-tag-show-focus-styles={true}
@@ -252,6 +254,7 @@ exports[`Rollup Tag should render rollup tag with the label "show less" when isC
         aria-atomic="true"
         aria-describedby="Terra.tags.hint.rollupTag"
         aria-label="Terra.tags.hint.rollupTag"
+        aria-live="polite"
         className="rollup-tag"
         data-terra-rollup-tag={true}
         data-terra-rollup-tag-show-focus-styles={true}
