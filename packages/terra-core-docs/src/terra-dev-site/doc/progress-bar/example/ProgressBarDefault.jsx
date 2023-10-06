@@ -25,8 +25,8 @@ const ProgressBarDefault = () => {
 
   return (
     <div>
-      <label>{`Progress bar: ${val}%`}</label>
-      <ProgressBar id="progressbar" value={val} valueText={`Loading ${val}%`} />
+      <label aria-live="polite">{`Progress bar: ${val}%`}</label>
+      <ProgressBar id="progressbar" value={val} />
       <br />
       <Button text="Start" onClick={start} />
             &nbsp;
