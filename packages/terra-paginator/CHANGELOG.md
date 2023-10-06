@@ -7,6 +7,9 @@
 * Added
   * Added `hidePageCount` prop to hide page count provided by paginator.
 
+* Changed
+  * Updated all Paginator visually hidden text's aria-relevant attribute.
+
 ## 2.85.0 - (September 19, 2023)
 
 * Added
