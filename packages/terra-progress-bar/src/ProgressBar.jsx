@@ -90,7 +90,7 @@ const ProgressBar = ({
         aria-valuemax={100}
         aria-valuemin={0}
         aria-valuenow={normalizedValue}
-        aria-valuetext={!isMac ? `${normalizedValue}%` : undefined}
+        aria-valuetext={!isMac() ? `${normalizedValue}%` : undefined}
         tabIndex="-1"
       />
     </div>
