@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.44.0 - (October 6, 2023)
+
 * Updated
   * Updated test and doc examples for `terra-progress-bar` 
 
