@@ -66,7 +66,7 @@ exports[`Rollup Tag should render rollup tag with the label "4 more" 1`] = `
     <div
       className="tag-list-item"
     >
-      <button
+      <Button
         aria-atomic="true"
         aria-describedby="Terra.tags.hint.rollupTag"
         aria-label="Terra.tags.hint.rollupTag"
@@ -75,18 +75,75 @@ exports[`Rollup Tag should render rollup tag with the label "4 more" 1`] = `
         data-terra-rollup-tag={true}
         data-terra-rollup-tag-show-focus-styles={true}
         id="terra-rollup-tag-00000000-0000-0000-0000-000000000000"
+        isBlock={false}
+        isCompact={true}
+        isDisabled={false}
+        isIconOnly={false}
+        isReversed={false}
         onBlur={[Function]}
         onClick={[Function]}
         onKeyDown={[Function]}
         onMouseDown={[Function]}
+        refCallback={
+          Object {
+            "current": <button
+              aria-atomic="true"
+              aria-describedby="Terra.tags.hint.rollupTag"
+              aria-disabled="false"
+              aria-label="Terra.tags.hint.rollupTag"
+              aria-live="polite"
+              class="button neutral compact rollup-tag"
+              data-terra-rollup-tag="true"
+              data-terra-rollup-tag-show-focus-styles="true"
+              id="terra-rollup-tag-00000000-0000-0000-0000-000000000000"
+              type="button"
+            >
+              <span
+                class="button-label-win text-only"
+              >
+                <span
+                  class=""
+                >
+                  Terra.tags.label.rollupTag
+                </span>
+              </span>
+            </button>,
+          }
+        }
+        text="Terra.tags.label.rollupTag"
         type="button"
+        variant="neutral"
       >
-        <span
-          className="rollup-tag-label"
+        <button
+          aria-atomic="true"
+          aria-describedby="Terra.tags.hint.rollupTag"
+          aria-disabled={false}
+          aria-label="Terra.tags.hint.rollupTag"
+          aria-live="polite"
+          className="button neutral compact rollup-tag"
+          data-terra-rollup-tag={true}
+          data-terra-rollup-tag-show-focus-styles={true}
+          disabled={false}
+          id="terra-rollup-tag-00000000-0000-0000-0000-000000000000"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          type="button"
         >
-          Terra.tags.label.rollupTag
-        </span>
-      </button>
+          <span
+            className="button-label-win text-only"
+          >
+            <span
+              className=""
+            >
+              Terra.tags.label.rollupTag
+            </span>
+          </span>
+        </button>
+      </Button>
     </div>
   </RollUpTag>
 </InjectIntl(RollUpTag)>
@@ -158,7 +215,7 @@ exports[`Rollup Tag should render rollup tag with the label "show less" when isC
     <div
       className="tag-list-item"
     >
-      <button
+      <Button
         aria-atomic="true"
         aria-describedby="Terra.tags.hint.showLess"
         aria-label="Terra.tags.hint.showLess"
@@ -167,18 +224,75 @@ exports[`Rollup Tag should render rollup tag with the label "show less" when isC
         data-terra-rollup-tag={true}
         data-terra-rollup-tag-show-focus-styles={true}
         id="terra-rollup-tag-00000000-0000-0000-0000-000000000000"
+        isBlock={false}
+        isCompact={true}
+        isDisabled={false}
+        isIconOnly={false}
+        isReversed={false}
         onBlur={[Function]}
         onClick={[Function]}
         onKeyDown={[Function]}
         onMouseDown={[Function]}
+        refCallback={
+          Object {
+            "current": <button
+              aria-atomic="true"
+              aria-describedby="Terra.tags.hint.showLess"
+              aria-disabled="false"
+              aria-label="Terra.tags.hint.showLess"
+              aria-live="off"
+              class="button neutral compact rollup-tag"
+              data-terra-rollup-tag="true"
+              data-terra-rollup-tag-show-focus-styles="true"
+              id="terra-rollup-tag-00000000-0000-0000-0000-000000000000"
+              type="button"
+            >
+              <span
+                class="button-label-win text-only"
+              >
+                <span
+                  class=""
+                >
+                  Terra.tags.label.showLess
+                </span>
+              </span>
+            </button>,
+          }
+        }
+        text="Terra.tags.label.showLess"
         type="button"
+        variant="neutral"
       >
-        <span
-          className="rollup-tag-label"
+        <button
+          aria-atomic="true"
+          aria-describedby="Terra.tags.hint.showLess"
+          aria-disabled={false}
+          aria-label="Terra.tags.hint.showLess"
+          aria-live="off"
+          className="button neutral compact rollup-tag"
+          data-terra-rollup-tag={true}
+          data-terra-rollup-tag-show-focus-styles={true}
+          disabled={false}
+          id="terra-rollup-tag-00000000-0000-0000-0000-000000000000"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          type="button"
         >
-          Terra.tags.label.showLess
-        </span>
-      </button>
+          <span
+            className="button-label-win text-only"
+          >
+            <span
+              className=""
+            >
+              Terra.tags.label.showLess
+            </span>
+          </span>
+        </button>
+      </Button>
     </div>
   </RollUpTag>
 </InjectIntl(RollUpTag)>
@@ -250,7 +364,7 @@ exports[`Rollup Tag should render rollup tag with the label "show less" when isC
     <div
       className="tag-list-item"
     >
-      <button
+      <Button
         aria-atomic="true"
         aria-describedby="Terra.tags.hint.rollupTag"
         aria-label="Terra.tags.hint.rollupTag"
@@ -259,18 +373,75 @@ exports[`Rollup Tag should render rollup tag with the label "show less" when isC
         data-terra-rollup-tag={true}
         data-terra-rollup-tag-show-focus-styles={true}
         id="terra-rollup-tag-00000000-0000-0000-0000-000000000000"
+        isBlock={false}
+        isCompact={true}
+        isDisabled={false}
+        isIconOnly={false}
+        isReversed={false}
         onBlur={[Function]}
         onClick={[Function]}
         onKeyDown={[Function]}
         onMouseDown={[Function]}
+        refCallback={
+          Object {
+            "current": <button
+              aria-atomic="true"
+              aria-describedby="Terra.tags.hint.rollupTag"
+              aria-disabled="false"
+              aria-label="Terra.tags.hint.rollupTag"
+              aria-live="polite"
+              class="button neutral compact rollup-tag"
+              data-terra-rollup-tag="true"
+              data-terra-rollup-tag-show-focus-styles="true"
+              id="terra-rollup-tag-00000000-0000-0000-0000-000000000000"
+              type="button"
+            >
+              <span
+                class="button-label-win text-only"
+              >
+                <span
+                  class=""
+                >
+                  Terra.tags.label.showLess
+                </span>
+              </span>
+            </button>,
+          }
+        }
+        text="Terra.tags.label.showLess"
         type="button"
+        variant="neutral"
       >
-        <span
-          className="rollup-tag-label"
+        <button
+          aria-atomic="true"
+          aria-describedby="Terra.tags.hint.rollupTag"
+          aria-disabled={false}
+          aria-label="Terra.tags.hint.rollupTag"
+          aria-live="polite"
+          className="button neutral compact rollup-tag"
+          data-terra-rollup-tag={true}
+          data-terra-rollup-tag-show-focus-styles={true}
+          disabled={false}
+          id="terra-rollup-tag-00000000-0000-0000-0000-000000000000"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          type="button"
         >
-          Terra.tags.label.showLess
-        </span>
-      </button>
+          <span
+            className="button-label-win text-only"
+          >
+            <span
+              className=""
+            >
+              Terra.tags.label.showLess
+            </span>
+          </span>
+        </button>
+      </Button>
     </div>
   </RollUpTag>
 </InjectIntl(RollUpTag)>
