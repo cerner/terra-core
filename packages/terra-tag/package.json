@@ -31,6 +31,7 @@
     "keycode-js": "^3.1.0",
     "prop-types": "^15.5.8",
     "resize-observer-polyfill": "^1.4.1",
+    "terra-button": "^3.68.2",
     "terra-icon": "^3.57.1",
     "terra-theme-context": "^1.0.0",
     "terra-visually-hidden-text": "^2.36.0",

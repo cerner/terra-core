@@ -4,6 +4,7 @@ import { KEY_SPACE, KEY_RETURN } from 'keycode-js';
 import { v4 as uuidv4 } from 'uuid';
 import classNamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
+import Button from 'terra-button';
 import ThemeContext from 'terra-theme-context';
 import styles from './RollupTag.module.scss';
 
@@ -66,24 +67,23 @@ const RollUpTag = (props) => {
     <div
       className={cx('tag-list-item')}
     >
-      <button
+      <Button
         id={rollUpTagId}
         className={cx(['rollup-tag', theme.className])}
         onClick={handleOnSelectRollUp}
         onKeyDown={handleRollUpTagKeyDown}
         onMouseDown={handleRollUpTagMouseDown}
+        text={rollUpLabel}
         onBlur={handleOnBlur}
-        ref={rollUpTagRef}
-        type="button"
+        refCallback={rollUpTagRef}
+        isCompact
         aria-live={(isCollapsed) ? 'polite' : 'off'}
         aria-label={rollUpHint}
         aria-describedby={rollUpHint}
         aria-atomic="true"
         data-terra-rollup-tag-show-focus-styles
         data-terra-rollup-tag
-      >
-        <span className={cx('rollup-tag-label')}>{rollUpLabel}</span>
-      </button>
+      />
     </div>
   );
 };

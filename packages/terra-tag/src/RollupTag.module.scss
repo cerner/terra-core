@@ -22,7 +22,7 @@
     }
   }
 
-  .rollup-tag {
+  .rollup-tag:not(.is-active) {
     background-color: var(--terra-tags-rollup-tag-background-color, rgba(28, 31, 33, 0.04));
     border: var(--terra-tags-rollup-tag-border, 1px solid rgba(28, 31, 33, 0.1));
     border-radius: var(--terra-tags-rollup-tag-border-radius, 3px);
