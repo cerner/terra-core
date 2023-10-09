@@ -1,6 +1,6 @@
 {
   "name": "@cerner/terra-core-docs",
-  "version": "1.43.0",
+  "version": "1.44.0",
   "description": "Contains documentation for packages in the terra-core monorepo",
   "main": "index.js",
   "publishConfig": {
@@ -73,7 +73,7 @@
     "terra-overlay": "^3.78.0",
     "terra-paginator": "^2.86.0",
     "terra-profile-image": "^3.43.0",
-    "terra-progress-bar": "^4.34.0",
+    "terra-progress-bar": "^4.34.1",
     "terra-responsive-element": "^5.37.0",
     "terra-scroll": "^2.35.0",
     "terra-search-field": "^3.93.0",

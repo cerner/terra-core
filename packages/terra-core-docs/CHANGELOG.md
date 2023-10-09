@@ -5,6 +5,8 @@
 * Added
   * Added a visual error note for invalid example in `terra-form-single-select`.
 
+## 1.44.0 - (October 6, 2023)
+
 * Updated
   * Updated test and doc examples for `terra-progress-bar` 
 
