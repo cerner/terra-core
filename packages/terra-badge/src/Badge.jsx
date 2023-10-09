@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
+import { injectIntl } from 'react-intl';
 import ThemeContext from 'terra-theme-context';
 import VisuallyHiddenText from 'terra-visually-hidden-text';
 import styles from './Badge.module.scss';
@@ -40,6 +41,11 @@ const propTypes = {
    */
   intent: PropTypes.oneOf(['default', 'primary', 'secondary', 'info', 'warning', 'positive', 'negative']),
   /**
+   * @private
+   * The intl object to be injected for translations.
+   */
+  intl: PropTypes.shape({ formatMessage: PropTypes.func }),
+  /**
    * Reverses the position of the icon and text.
    */
   isReversed: PropTypes.bool,
@@ -71,6 +77,7 @@ const defaultProps = {
 const Badge = ({
   size,
   intent,
+  intl,
   isReversed,
   text,
   icon,
@@ -91,7 +98,7 @@ const Badge = ({
   );
 
   const textContent = text ? <span className={styles.text}>{text}</span> : null;
-  const intentText = intent !== 'default' ? <VisuallyHiddenText text={intent} /> : null;
+  const intentText = intent !== BadgeIntent.DEFAULT ? <VisuallyHiddenText text={intl.formatMessage({id: `Terra.badge.intent.${intent}`})} /> : null;
   const visuallyHiddenTextContent = visuallyHiddenText ? <VisuallyHiddenText text={visuallyHiddenText} /> : null;
   const content = isReversed ? [intentText, textContent, visuallyHiddenTextContent, icon, customProps.children] : [icon, intentText, textContent, visuallyHiddenTextContent, customProps.children];
   return React.createElement('span', { ...customProps, className: badgeClassNames }, ...content);
@@ -100,5 +107,5 @@ const Badge = ({
 Badge.propTypes = propTypes;
 Badge.defaultProps = defaultProps;
 
-export default Badge;
+export default injectIntl(Badge);
 export { BadgeIntent, BadgeSize };
