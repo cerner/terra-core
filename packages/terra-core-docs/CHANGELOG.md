@@ -5,10 +5,13 @@
 * Added
   * Added a visual error note for invalid example in `terra-form-single-select`.
 
+* Fixed
+  * Fixed hyperlink button example import for `terra-hyperlink`.
+
 ## 1.44.0 - (October 6, 2023)
 
 * Updated
-  * Updated test and doc examples for `terra-progress-bar` 
+  * Updated test and doc examples for `terra-progress-bar`.
 
 ## 1.43.0 - (October 3, 2023)
 
@@ -32,9 +35,9 @@
 * Fixed
   * `terra-icon` import corrections in documentation and examples.
   * Fixed formatting `terra-icon` accessibility guide.
-  
+
 * Changed
-  * Updated icon example to specify `IconCeMarking` is private. 
+  * Updated icon example to specify `IconCeMarking` is private.
 
 ## 1.40.0 - (September 19, 2023)
 
@@ -51,7 +54,7 @@
   * Updated `terra-alert` long text example for accessible `terra-show-hide`.
   * Updated doc site for `terra-form-single-select` and `terra-form-single-select-field`.
 
- 
+
 ## 1.39.0 - (August 25, 2023)
 
 * Fixed
@@ -147,7 +150,7 @@
 * Changed
   * Updated `terra-status-view - Change Variant` example component to use the apply button to change the selected variant.
   * Updated `terra-form-textarea` example component and added an button to toggle valid/invalid status
-  
+
 * Added
   * Added documentation updates for `Single Select` in `terra-form-select`.
 
@@ -212,7 +215,7 @@
 
 ## 1.24.0 - (April 5, 2023)
 
-* Added 
+* Added
   * Added Accessibility Guide for `terra-dropdown-button`.
 
 * Changed
@@ -253,7 +256,7 @@
 * Changed
   * Updated radio and checkbox tests to fix fusion theme tests.
 
-* Added 
+* Added
   * Added Accessibility Guide for `terra-toggle`.
   * Added A11y guide and examples for `terra-button`.
 
@@ -266,9 +269,9 @@
 * Changed
   * Updated examples to use informative icons.
 
-* Added 
+* Added
   * Added Label Example for `terra-toggle`.
-  
+
 ## 1.19.0 - (January 31, 2023)
 
 * Added
