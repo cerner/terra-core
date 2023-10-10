@@ -1,8 +1,8 @@
 import React, { useState, useRef } from 'react';
-import ShowHide, { ShowHideFocuser } from 'terra-show-hide';
-import Alert from 'terra-alert';
 import classNames from 'classnames/bind';
 
+import Alert from 'terra-alert';
+import ShowHide, { ShowHideFocuser } from 'terra-show-hide';
 import styles from './LongTextExample.module.scss';
 
 const cx = classNames.bind(styles);
@@ -14,7 +14,7 @@ const LongTextExample = () => {
   const paragraph = 'Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure. We are met on a great battle-field of that war. We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live. It is altogether fitting and proper that we should do this.';
 
   return (
-    <Alert type="info" title="Gettysburg Address:">
+    <Alert type="custom" title="Gettysburg Address:">
       <ShowHide
         focusRef={focusRef}
         preview={previewText}

@@ -74,12 +74,15 @@ const propTypes = {
    */
   role: PropTypes.string,
   /**
-   * The title for the notification banner which will be bolded.
+   * The optional custom title for the notification banner which will be bolded.
+   * Overrides the provided default title for all notification types (excludes `custom`).
+   * Title should be provided for `custom` notification banners.
    */
   title: PropTypes.string,
   /**
    * The type of notification banner to be rendered. One of `alert`, `error`, `warning`, `unsatisfied`, `unverified`, `advisory`,
    * `info`, `success`, or `custom`.
+   * A default title is provided for all notification types except `custom`.
    */
   type: PropTypes.oneOf([
     AlertTypes.ALERT,
