@@ -1,0 +1,50 @@
+:local {
+  .clinical-lowlight-theme {
+    --terra-tags-rollup-tag-label-not-ms-top: -0.01em;
+    --terra-tags-rollup-tag-label-moz-top: -0.02em;
+
+    // Rollup Tag
+    --terra-tags-rollup-tag-background-color: rgba(232, 239, 244, 0.04);
+    --terra-tags-rollup-tag-border: 1px solid rgba(28, 31, 33, 0.1);
+    --terra-tags-rollup-tag-border-radius: 3px;
+    --terra-tags-rollup-tag-border-width: 1px;
+    --terra-tags-rollup-tag-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    --terra-tags-rollup-tag-color: #c5c5c6;
+    --terra-tags-rollup-tag-font-size: 0.85714rem;
+    --terra-tags-rollup-tag-height: 1.71429rem;
+    --terra-tags-rollup-tag-line-height: 1.16667;
+    --terra-tags-rollup-tag-padding-bottom: 0.28571rem;
+    --terra-tags-rollup-tag-padding-left: 0.71428rem;
+    --terra-tags-rollup-tag-padding-right: 0.71428rem;
+    --terra-tags-rollup-tag-padding-top: 0.28571rem;
+
+    // Focus
+    --terra-tag-focus-background-color: #2d3539;
+    --terra-tag-focus-border-color: #181b1d;
+    --terra-tags-rollup-tag-focus-border-width: 1px;
+    --terra-tags-rollup-tag-focus-box-shadow: none;
+    --terra-tags-rollup-tag-focus-outline: 2px dashed #fff;
+    --terra-tags-rollup-tag-focus-outline-offset: 2px;
+
+    //Hover
+    --terra-tags-rollup-tag-hover-background-color: #dedfe0;
+    --terra-tags-rollup-tag-hover-border: 1px solid #525659;
+    --terra-tags-rollup-tag-hover-color: #003f61;
+
+    //Active
+    --terra-tags-rollup-tag-active-background-color: #2d3539;
+    --terra-tags-rollup-tag-active-border: 1px solid #525659;
+    --terra-tags-rollup-tag-active-color: #003f61;
+
+    //Focus
+    --terra-tags-rollup-tag-focus-border-color: #525659;
+    --terra-tags-rollup-tag-focus-border-width: 1px;
+    --terra-tags-rollup-tag-focus-outline: 2px dashed #fff;
+    --terra-tags-rollup-tag-focus-outline-offset: 2px;
+
+    //TagList
+    --terra-tags-tag-list-item-margin-bottom: 0.28571rem;
+    --terra-tags-tag-list-item-margin-right: 0.42857rem;
+    --terra-tags-tag-list-item-margin-top: 0.28571rem;
+  }
+}
