@@ -4,7 +4,6 @@
 
 * Added
   * Added a new subcomponent, TagList.
-  * Added prop `onTagClick` in TagList which takes a callback function that is triggered when the tag is clicked.
 
 ## 2.62.0 - (September 21, 2023)
 
