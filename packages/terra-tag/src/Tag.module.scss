@@ -53,13 +53,6 @@
     cursor: pointer;
     text-decoration: var(--terra-tag-interactive-text-decoration);
 
-    &.is-focused {
-      background-color: var(--terra-tag-focus-background-color, #fff);
-      border-color: var(--terra-tag-focus-border-color, rgba(76, 178, 233, 0.5));
-      color: var(--terra-tag-focus-color, #0059a8);
-      text-decoration: var(--terra-tag-focus-text-decoration);
-    }
-
     &.has-underline {
       text-decoration: underline;
     }
