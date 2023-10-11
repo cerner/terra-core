@@ -1,13 +1,15 @@
 import React from 'react';
+
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import { mountWithIntl, shallowWithIntl } from 'terra-enzyme-intl';
-import Table from '../../src/Table';
-import RowSelectionUtils from '../../src/utils/rowSelectionUtils';
-import ColumnHeaderCell from '../../src/subcomponents/ColumnHeaderCell';
+
 import ColumnHeader from '../../src/subcomponents/ColumnHeader';
-import Row from '../../src/subcomponents/Row';
-import ERRORS from '../../src/utils/constants';
+import ColumnHeaderCell from '../../src/subcomponents/ColumnHeaderCell';
 import GridContext, { GridConstants } from '../../src/utils/GridContext';
+import ERRORS from '../../src/utils/constants';
+import Row from '../../src/subcomponents/Row';
+import RowSelectionUtils from '../../src/utils/rowSelectionUtils';
+import Table from '../../src/Table';
 
 // Source data for tests
 const tableData = {

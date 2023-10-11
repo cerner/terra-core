@@ -4,17 +4,18 @@ import React, {
   useRef,
   useState,
 } from 'react';
-import PropTypes from 'prop-types';
-import { injectIntl } from 'react-intl';
+import * as KeyCode from 'keycode-js';
 import classNames from 'classnames/bind';
 import FocusTrap from 'focus-trap-react';
-import * as KeyCode from 'keycode-js';
+import { injectIntl } from 'react-intl';
+import PropTypes from 'prop-types';
+
 import ThemeContext from 'terra-theme-context';
 import VisuallyHiddenText from 'terra-visually-hidden-text';
 
-import styles from './Cell.module.scss';
 import ColumnContext from '../utils/ColumnContext';
 import GridContext, { GridConstants } from '../utils/GridContext';
+import styles from './Cell.module.scss';
 
 const cx = classNames.bind(styles);
 

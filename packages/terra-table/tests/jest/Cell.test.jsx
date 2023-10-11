@@ -1,9 +1,11 @@
 import React from 'react';
+import { IntlProvider } from 'react-intl';
+
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
-import { IntlProvider } from 'react-intl';
-import ColumnContext from '../../src/utils/ColumnContext';
+
 import Cell from '../../src/subcomponents/Cell';
+import ColumnContext from '../../src/utils/ColumnContext';
 
 describe('Cell', () => {
   it('verifies that only a row header cell (<th>) is created when isRowHeader prop is true', () => {

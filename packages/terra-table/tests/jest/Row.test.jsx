@@ -1,6 +1,7 @@
 import React from 'react';
-import Row from '../../src/subcomponents/Row';
+
 import Cell from '../../src/subcomponents/Cell';
+import Row from '../../src/subcomponents/Row';
 
 // Source data for tests
 const tableData = {

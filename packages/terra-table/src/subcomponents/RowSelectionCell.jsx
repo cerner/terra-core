@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
-import PropTypes from 'prop-types';
-import { injectIntl } from 'react-intl';
 import classNames from 'classnames/bind';
+import { injectIntl } from 'react-intl';
+import PropTypes from 'prop-types';
+
 import ThemeContext from 'terra-theme-context';
 
 import Cell from './Cell';

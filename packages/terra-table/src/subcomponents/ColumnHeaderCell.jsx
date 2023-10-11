@@ -1,18 +1,18 @@
 import React, { useContext, useRef, useCallback } from 'react';
-import PropTypes from 'prop-types';
-import { injectIntl } from 'react-intl';
 import * as KeyCode from 'keycode-js';
+import { injectIntl } from 'react-intl';
 import classNames from 'classnames/bind';
+import PropTypes from 'prop-types';
 
-import ThemeContext from 'terra-theme-context';
-import IconUp from 'terra-icon/lib/icon/IconUp';
 import IconDown from 'terra-icon/lib/icon/IconDown';
 import IconError from 'terra-icon/lib/icon/IconError';
+import IconUp from 'terra-icon/lib/icon/IconUp';
+import ThemeContext from 'terra-theme-context';
 
-import ColumnResizeHandle from './ColumnResizeHandle';
-import { SortIndicators } from '../proptypes/columnShape';
 import ColumnContext from '../utils/ColumnContext';
+import ColumnResizeHandle from './ColumnResizeHandle';
 import GridContext, { GridConstants } from '../utils/GridContext';
+import { SortIndicators } from '../proptypes/columnShape';
 import styles from './ColumnHeaderCell.module.scss';
 
 const cx = classNames.bind(styles);

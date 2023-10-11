@@ -5,20 +5,19 @@ import PropTypes from 'prop-types';
 import { injectIntl } from 'react-intl';
 import classNames from 'classnames/bind';
 import ResizeObserver from 'resize-observer-polyfill';
+
 import ThemeContext from 'terra-theme-context';
 import VisuallyHiddenText from 'terra-visually-hidden-text';
 
-import ERRORS from './utils/constants';
-
 import ColumnHeader from './subcomponents/ColumnHeader';
-import Row from './subcomponents/Row';
-import { columnShape } from './proptypes/columnShape';
 import ColumnContext from './utils/ColumnContext';
+import { columnShape } from './proptypes/columnShape';
+import ERRORS from './utils/constants';
 import GridContext, { GridConstants } from './utils/GridContext';
+import Row from './subcomponents/Row';
 import RowSelectionUtils from './utils/rowSelectionUtils';
 import rowShape from './proptypes/rowShape';
 import validateRowHeaderIndex from './proptypes/validators';
-
 import styles from './Table.module.scss';
 
 const cx = classNames.bind(styles);

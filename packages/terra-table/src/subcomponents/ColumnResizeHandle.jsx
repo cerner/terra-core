@@ -1,12 +1,14 @@
 import React, {
   useContext, useRef, useState,
 } from 'react';
-import PropTypes from 'prop-types';
-import { injectIntl } from 'react-intl';
 import classNames from 'classnames/bind';
+import { injectIntl } from 'react-intl';
+import PropTypes from 'prop-types';
+
 import ThemeContext from 'terra-theme-context';
-import styles from './ColumnResizeHandle.module.scss';
+
 import GridContext, { GridConstants } from '../utils/GridContext';
+import styles from './ColumnResizeHandle.module.scss';
 
 const cx = classNames.bind(styles);
 

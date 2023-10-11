@@ -1,12 +1,14 @@
 import React from 'react';
+import { IntlProvider } from 'react-intl';
+
 import IconUp from 'terra-icon/lib/icon/IconUp';
 import IconDown from 'terra-icon/lib/icon/IconDown';
 import IconError from 'terra-icon/lib/icon/IconError';
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import { mountWithIntl, shallowWithIntl } from 'terra-enzyme-intl';
-import { IntlProvider } from 'react-intl';
-import ColumnHeaderCell from '../../src/subcomponents/ColumnHeaderCell';
+
 import ColumnContext from '../../src/utils/ColumnContext';
+import ColumnHeaderCell from '../../src/subcomponents/ColumnHeaderCell';
 
 describe('ColumnHeaderCell', () => {
   it('renders a default column header cell', () => {

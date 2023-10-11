@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 
-import { columnShape } from '../proptypes/columnShape';
 import ColumnHeaderCell from './ColumnHeaderCell';
+import { columnShape } from '../proptypes/columnShape';
 import GridContext, { GridConstants } from '../utils/GridContext';
 
 const propTypes = {

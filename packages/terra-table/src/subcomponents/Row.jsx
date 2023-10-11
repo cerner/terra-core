@@ -1,7 +1,8 @@
 import React, { useContext, useState } from 'react';
-import PropTypes from 'prop-types';
-import ThemeContext from 'terra-theme-context';
 import classNames from 'classnames/bind';
+import PropTypes from 'prop-types';
+
+import ThemeContext from 'terra-theme-context';
 
 import Cell from './Cell';
 import cellShape from '../proptypes/cellShape';
