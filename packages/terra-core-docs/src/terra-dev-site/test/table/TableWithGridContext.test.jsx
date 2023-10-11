@@ -1,13 +1,13 @@
 import React from 'react';
 import Table, { GridContext } from 'terra-table';
-import tableData from './mockPinnedColumnsTableData.json';
+import tableData from './mockTableData.json';
 
 const DefaultTable = () => {
   const { cols, rows } = tableData;
   return (
     <GridContext.Provider value={{ role: 'grid' }}>
       <Table
-        id="default-terra-table"
+        id="terra-table-grid-context"
         overflowColumns={cols}
         rows={rows}
         rowHeaderIndex={0}

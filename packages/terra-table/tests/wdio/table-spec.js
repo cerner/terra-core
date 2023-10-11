@@ -77,4 +77,17 @@ Terra.describeViewports('Table', ['medium', 'large'], () => {
       Terra.validates.element('sortable-table-keyboard', { selector: sortableTableSelector });
     });
   });
+
+  describe('Table with Grid Context', () => {
+    const tableWithGridContextSelector = '#terra-table-grid-context';
+
+    beforeEach(() => {
+      browser.url('/raw/tests/cerner-terra-core-docs/table/table-with-grid-context');
+    });
+
+    it('Validates a cell is selectable and focused when clicked', () => {
+      $('tbody tr:first-child td').click();
+      Terra.validates.element('table-grid-context', { selector: tableWithGridContextSelector });
+    });
+  });
 });
