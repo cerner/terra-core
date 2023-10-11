@@ -1,12 +1,12 @@
 import React, {
-  useContext, useRef,
+  useContext, useRef, useState,
 } from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl } from 'react-intl';
 import classNames from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import styles from './ColumnResizeHandle.module.scss';
-import GridContext from '../utils/GridContext';
+import GridContext, { GridConstants } from '../utils/GridContext';
 
 const cx = classNames.bind(styles);
 
@@ -61,11 +61,18 @@ const ColumnResizeHandle = (props) => {
 
   const theme = useContext(ThemeContext);
   const gridContext = useContext(GridContext);
+  const isGridContext = gridContext.role === GridConstants.GRID;
+
+  // State variable to control screen reader visibility
+  const [isActive, setActive] = useState(false);
 
   // Ref variable for native resize handle element
-  const resizeHandle = useRef();
+  const resizeHandleRef = useRef();
 
   const onMouseDown = (event) => {
+    // Set focus to resize handle DOM element
+    resizeHandleRef.current.focus();
+
     onResizeMouseDown(event);
 
     // Prevent event bubbling since necessary actions are handled by this component
@@ -77,10 +84,11 @@ const ColumnResizeHandle = (props) => {
   return (
     /* eslint-disable react/forbid-dom-props */
     <div
-      ref={resizeHandle}
+      ref={resizeHandleRef}
       draggable
       role="slider"
-      tabIndex={gridContext.role === 'grid' ? -1 : 0}
+      tabIndex={isGridContext ? -1 : 0}
+      aria-hidden={isGridContext ? !isActive : undefined}
       aria-valuemin={minimumWidth}
       aria-valuenow={columnWidth}
       aria-valuemax={maximumWidth}
@@ -88,6 +96,8 @@ const ColumnResizeHandle = (props) => {
       aria-valuetext={intl.formatMessage({ id: 'Terra.table.resizeHandleValueText' }, { columnWidth })}
       style={{ height: `${height}px` }}
       onMouseDown={onMouseDown}
+      onFocus={() => setActive(true)}
+      onBlur={() => setActive(false)}
       className={cx('resize-handle', theme.className)}
     />
   );

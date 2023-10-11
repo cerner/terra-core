@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 
 import { columnShape } from '../proptypes/columnShape';
 import ColumnHeaderCell from './ColumnHeaderCell';
+import GridContext, { GridConstants } from '../utils/GridContext';
 
 const propTypes = {
   /**
@@ -41,6 +42,9 @@ const ColumnHeader = (props) => {
     onResizeMouseDown,
   } = props;
 
+  const gridContext = useContext(GridContext);
+  const isGridContext = gridContext.role === GridConstants.GRID;
+
   return (
     <thead>
       <tr className="column-header-row" height={headerHeight}>
@@ -56,7 +60,7 @@ const ColumnHeader = (props) => {
             maximumWidth={column.maximumWidth}
             headerHeight={headerHeight}
             isResizable={column.isResizable}
-            isSelectable={column.isSelectable}
+            isSelectable={isGridContext ? column.isSelectable !== false : column.isSelectable}
             tableHeight={tableHeight}
             hasError={column.hasError}
             sortIndicator={column.sortIndicator}

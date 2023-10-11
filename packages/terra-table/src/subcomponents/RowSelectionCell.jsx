@@ -11,14 +11,20 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * String identifier of the row in which the Cell will be rendered.
-   */
-  rowId: PropTypes.string.isRequired,
-
-  /**
    * String identifier of the column in which the Cell will be rendered.
    */
   columnId: PropTypes.string.isRequired,
+
+  /**
+   * @private
+   * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
+   */
+  intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
+
+  /**
+   * String identifier of the row in which the Cell will be rendered.
+   */
+  rowId: PropTypes.string.isRequired,
 
   /**
    * The cell's row position in the table. This is zero based.
@@ -44,12 +50,6 @@ const propTypes = {
    * Callback function that will be called when this cell is selected.
    */
   onCellSelect: PropTypes.func,
-
-  /**
-   * @private
-   * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
-   */
-  intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
 };
 
 function RowSelectionCell(props) {

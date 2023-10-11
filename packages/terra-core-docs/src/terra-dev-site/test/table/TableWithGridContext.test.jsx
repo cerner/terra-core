@@ -1,6 +1,6 @@
 import React from 'react';
 import Table, { GridContext } from 'terra-table';
-import tableData from './mockTableData.json';
+import tableData from './mockPinnedColumnsTableData.json';
 
 const DefaultTable = () => {
   const { cols, rows } = tableData;

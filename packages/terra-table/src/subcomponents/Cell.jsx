@@ -14,11 +14,17 @@ import VisuallyHiddenText from 'terra-visually-hidden-text';
 
 import styles from './Cell.module.scss';
 import ColumnContext from '../utils/ColumnContext';
-import GridContext from '../utils/GridContext';
+import GridContext, { GridConstants } from '../utils/GridContext';
 
 const cx = classNames.bind(styles);
 
 const propTypes = {
+  /**
+   * @private
+   * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
+   */
+  intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
+
   /**
    * String identifier of the row in which the Cell will be rendered.
    */
@@ -83,12 +89,6 @@ const propTypes = {
    * String that specifies the height of the cell. Any valid CSS value is accepted.
    */
   height: PropTypes.string,
-
-  /**
-   * @private
-   * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
-   */
-  intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
 };
 
 const defaultProps = {
@@ -121,9 +121,14 @@ function Cell(props) {
   const gridContext = useContext(GridContext);
   const columnContext = useContext(ColumnContext);
 
-  const [isInteractable, setInteractable] = useState(false);
-  const [isFocusTrapEnabled, setFocusTrapEnabled] = useState(false);
+  const [isInteractable, setIsInteractable] = useState(false);
+  const [isFocusTrapEnabled, setIsFocusTrapEnabled] = useState(false);
 
+  const isGridContext = gridContext.role === GridConstants.GRID;
+
+  /**
+   * Determine if cell has focusable elements
+   */
   const hasFocusableElements = () => {
     const focusableElementSelector = "a[href]:not([tabindex='-1']), area[href]:not([tabindex='-1']), input:not([disabled]):not([tabindex='-1']), "
       + "select:not([disabled]):not([tabindex='-1']), textarea:not([disabled]):not([tabindex='-1']), button:not([disabled]):not([tabindex='-1']), "
@@ -134,16 +139,20 @@ function Cell(props) {
     return focusableElements.length > 0;
   };
 
+  useEffect(() => {
+    setIsInteractable(hasFocusableElements());
+  }, []);
+
   /**
    * Handles the onDeactivate callback for FocusTrap component
    */
   const deactivateFocusTrap = () => {
-    setFocusTrapEnabled(false);
+    setIsFocusTrapEnabled(false);
     columnContext.setCellAriaLiveMessage(intl.formatMessage({ id: 'Terra.table.resume-navigation' }));
   };
 
   const onMouseDown = ((event) => {
-    if (onCellSelect) {
+    if (!isFocusTrapEnabled) {
       onCellSelect({
         rowId, columnId, rowIndex, columnIndex, isShiftPressed: event.shiftKey, isCellSelectable: (!isMasked && isSelectable),
       });
@@ -152,36 +161,38 @@ function Cell(props) {
 
   const handleKeyDown = (event) => {
     const key = event.keyCode;
-    switch (key) {
-      case KeyCode.KEY_RETURN:
-        // Lock focus into component
-        if (hasFocusableElements()) {
-          setFocusTrapEnabled(true);
-          columnContext.setCellAriaLiveMessage(intl.formatMessage({ id: 'Terra.table.cell-focus-trapped' }));
-          event.stopPropagation();
-          event.preventDefault();
-        }
-        break;
-      case KeyCode.KEY_SPACE:
-        if (isFocusTrapEnabled) {
+
+    if (isFocusTrapEnabled) {
+      switch (key) {
+        case KeyCode.KEY_ESCAPE:
           deactivateFocusTrap();
-          event.stopPropagation();
-          return;
-        }
-        if (onCellSelect) {
-          onCellSelect({
-            rowId, columnId, rowIndex, columnIndex, isShiftPressed: event.shiftKey, isCellSelectable: (!isMasked && isSelectable),
-          });
-        }
-        event.preventDefault(); // prevent the default scrolling
-        break;
-      default:
+          break;
+        default:
+      }
+      event.stopPropagation();
+    } else {
+      switch (key) {
+        case KeyCode.KEY_RETURN:
+          // Lock focus into component
+          if (hasFocusableElements()) {
+            setIsFocusTrapEnabled(true);
+            columnContext.setCellAriaLiveMessage(intl.formatMessage({ id: 'Terra.table.cell-focus-trapped' }));
+            event.stopPropagation();
+            event.preventDefault();
+          }
+          break;
+        case KeyCode.KEY_SPACE:
+          if (onCellSelect) {
+            onCellSelect({
+              rowId, columnId, rowIndex, columnIndex, isShiftPressed: event.shiftKey, isCellSelectable: (!isMasked && isSelectable),
+            });
+          }
+          event.preventDefault(); // prevent the default scrolling
+          break;
+        default:
+      }
     }
   };
-
-  useEffect(() => {
-    setInteractable(hasFocusableElements());
-  }, []);
 
   // Create cell content for masked and blank cells
   let cellContent;
@@ -210,20 +221,20 @@ function Cell(props) {
     blank: !children,
   }, theme.className);
 
-  const cellLeftEdge = columnIndex < columnContext.pinnedColumnOffsets.length
-    ? columnContext.pinnedColumnOffsets[columnIndex] : null;
+  const cellLeftEdge = (columnIndex < columnContext.pinnedColumnOffsets.length) ? columnContext.pinnedColumnOffsets[columnIndex] : null;
 
   const CellTag = isRowHeader ? 'th' : 'td';
 
   return (
     <CellTag
       ref={cellRef}
+      aria-selected={isGridContext ? isSelected : undefined}
       aria-label={ariaLabel}
+      tabIndex={isGridContext ? -1 : undefined}
       className={className}
-      tabIndex={gridContext.role === 'grid' ? -1 : undefined}
       {...(isRowHeader && { scope: 'row', role: 'rowheader' })}
-      onMouseDown={onMouseDown}
-      onKeyDown={handleKeyDown}
+      onMouseDown={isGridContext && onCellSelect ? onMouseDown : undefined}
+      onKeyDown={isGridContext ? handleKeyDown : undefined}
       // eslint-disable-next-line react/forbid-component-props
       style={{ left: cellLeftEdge }}
     >

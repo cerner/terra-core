@@ -31,6 +31,7 @@ describe('ColumnHeaderCell', () => {
     expect(columnHeader.key()).toBe('Column-0');
     expect(columnHeader.props().role).toBe('columnheader');
     expect(columnHeader.props().scope).toBe('col');
+    expect(columnHeader.props().tabIndex).toEqual(undefined);
     expect(columnHeader.props().style.width).toBe('100px');
     expect(columnHeader.props().style.height).toBe('150px');
 
@@ -46,7 +47,6 @@ describe('ColumnHeaderCell', () => {
       id: 'Column-0',
       displayName: ' Vitals',
       sortIndicator: 'ascending',
-      isSelectable: true,
     };
 
     const wrapper = shallowWithIntl(
@@ -60,11 +60,12 @@ describe('ColumnHeaderCell', () => {
       </IntlProvider>,
     ).dive().dive();
 
-    const columnHeader = wrapper.find('.column-header.selectable');
+    const columnHeader = wrapper.find('.column-header');
     expect(columnHeader).toHaveLength(1);
     expect(columnHeader.key()).toBe('Column-0');
     expect(columnHeader.props().role).toBe('columnheader');
     expect(columnHeader.props().scope).toBe('col');
+    expect(columnHeader.props().tabIndex).toEqual(undefined);
     expect(columnHeader.props()['aria-sort']).toBe('ascending');
     expect(columnHeader.props().style.width).toBe('100px');
     expect(columnHeader.props().style.height).toBe('150px');
@@ -81,7 +82,6 @@ describe('ColumnHeaderCell', () => {
       id: 'Column-0',
       displayName: ' Vitals',
       sortIndicator: 'descending',
-      isSelectable: true,
     };
 
     const wrapper = shallowWithIntl(
@@ -95,11 +95,12 @@ describe('ColumnHeaderCell', () => {
       </IntlProvider>,
     ).dive().dive();
 
-    const columnHeader = wrapper.find('.column-header.selectable');
+    const columnHeader = wrapper.find('.column-header');
     expect(columnHeader).toHaveLength(1);
     expect(columnHeader.key()).toBe('Column-0');
     expect(columnHeader.props().role).toBe('columnheader');
     expect(columnHeader.props().scope).toBe('col');
+    expect(columnHeader.props().tabIndex).toEqual(undefined);
     expect(columnHeader.props()['aria-sort']).toBe('descending');
     expect(columnHeader.props().style.width).toBe('100px');
     expect(columnHeader.props().style.height).toBe('150px');
@@ -134,6 +135,7 @@ describe('ColumnHeaderCell', () => {
     expect(columnHeader.key()).toBe('Column-0');
     expect(columnHeader.props().role).toBe('columnheader');
     expect(columnHeader.props().scope).toBe('col');
+    expect(columnHeader.props().tabIndex).toEqual(undefined);
     expect(columnHeader.props()['aria-sort']).toBeUndefined();
     expect(columnHeader.props().style.width).toBe('100px');
     expect(columnHeader.props().style.height).toBe('150px');
@@ -169,6 +171,7 @@ describe('ColumnHeaderCell', () => {
     expect(columnHeader.key()).toBe('Column-0');
     expect(columnHeader.props().role).toBe('columnheader');
     expect(columnHeader.props().scope).toBe('col');
+    expect(columnHeader.props().tabIndex).toEqual(undefined);
     expect(columnHeader.props()['aria-sort']).toBe('ascending');
     expect(columnHeader.props().style.width).toBe('100px');
     expect(columnHeader.props().style.height).toBe('150px');
@@ -186,7 +189,6 @@ describe('ColumnHeaderCell', () => {
       id: 'Column-0',
       displayName: ' Vitals',
       sortIndicator: 'ascending',
-      isSelectable: true,
       hasError: true,
     };
 
@@ -196,6 +198,7 @@ describe('ColumnHeaderCell', () => {
       <IntlProvider locale="en">
         <ColumnHeaderCell
           columnIndex={0}
+          isSelectable
           width={100}
           headerHeight="150px"
           {...column}
@@ -209,6 +212,7 @@ describe('ColumnHeaderCell', () => {
     expect(columnHeader.key()).toBe('Column-0');
     expect(columnHeader.props().role).toBe('columnheader');
     expect(columnHeader.props().scope).toBe('col');
+    expect(columnHeader.props().tabIndex).toEqual(0);
     expect(columnHeader.props()['aria-sort']).toBe('ascending');
     expect(columnHeader.props().onMouseDown).toBeDefined();
     expect(columnHeader.props().style.width).toBe('100px');
@@ -250,6 +254,7 @@ describe('ColumnHeaderCell', () => {
     expect(columnHeader.key()).toBe('Column-0');
     expect(columnHeader.props().role).toBe('columnheader');
     expect(columnHeader.props().scope).toBe('col');
+    expect(columnHeader.props().tabIndex).toEqual(undefined);
     expect(columnHeader.props()['aria-sort']).toBe('ascending');
     expect(columnHeader.props().onMouseDown).toBeUndefined();
     expect(columnHeader.props().style.width).toBe('100px');

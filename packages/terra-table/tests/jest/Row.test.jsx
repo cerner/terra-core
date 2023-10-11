@@ -43,12 +43,15 @@ describe('Row', () => {
 
     const wrapper = shallow(
       <Row
-        id={rowData.id}
         rowIndex={99}
+        id={rowData.id}
         height="25px"
         cells={rowData.cells}
+        hasRowSelection={tableData.rows[0].hasSelectableRows}
         displayedColumns={tableData.cols}
         rowHeaderIndex={0}
+        onCellSelect={jest.fn}
+        onRowSelect={jest.fn}
       />,
     );
 
@@ -65,11 +68,14 @@ describe('Row', () => {
       const expectedCell = expectedCells[cellIndex];
 
       const cell = cells.get(cellIndex);
-      expect(cell.props.columnIndex).toEqual(cellIndex);
       expect(cell.props.children).toEqual(expectedCell.content);
-      expect(cell.props.isMasked).toEqual(expectedCell.isMasked);
-      expect(cell.props.ariaLabel).toEqual(expectedCell.ariaLabel);
+      expect(cell.props.columnId).toEqual(columnId);
+      expect(cell.props.rowId).toEqual(rowId);
+      expect(cell.props.rowIndex).toEqual(rowIndex);
+      expect(cell.props.columnIndex).toEqual(cellIndex);
       expect(cell.props.isRowHeader).toEqual(isRowHeader);
+      expect(cell.props.isMasked).toEqual(expectedCell.isMasked);
+      expect(cell.props.onCellSelect).toBeDefined();
       expect(cell.key).toEqual(`${rowId}_${columnId}`);
     };
 
@@ -77,12 +83,16 @@ describe('Row', () => {
 
     const wrapper = shallow(
       <Row
-        id={rowData.id}
         rowIndex={rowIndex}
+        key={rowIndex}
+        id={rowData.id}
         height="25px"
         cells={rowData.cells}
+        isSelectable={rowData.isSelectable}
         displayedColumns={tableData.cols}
         rowHeaderIndex={0}
+        onCellSelect={jest.fn}
+        onRowSelect={jest.fn}
       />,
     );
 

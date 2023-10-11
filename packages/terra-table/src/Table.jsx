@@ -8,18 +8,39 @@ import ResizeObserver from 'resize-observer-polyfill';
 import ThemeContext from 'terra-theme-context';
 import VisuallyHiddenText from 'terra-visually-hidden-text';
 
+import ERRORS from './utils/constants';
+
 import ColumnHeader from './subcomponents/ColumnHeader';
 import Row from './subcomponents/Row';
-import rowShape from './proptypes/rowShape';
 import { columnShape } from './proptypes/columnShape';
 import ColumnContext from './utils/ColumnContext';
-import styles from './Table.module.scss';
-import GridContext from './utils/GridContext';
+import GridContext, { GridConstants } from './utils/GridContext';
+import RowSelectionUtils from './utils/rowSelectionUtils';
+import rowShape from './proptypes/rowShape';
 import validateRowHeaderIndex from './proptypes/validators';
+
+import styles from './Table.module.scss';
 
 const cx = classNames.bind(styles);
 
 const propTypes = {
+  /**
+   * String that will be used to identify the table. If multiple tables are on the same page, each table should have
+   * a unique id.
+   */
+  id: PropTypes.string.isRequired,
+
+  /**
+   * @private
+   * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
+  */
+  intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
+
+  /**
+      * Data for content in the body of the table. Rows will be rendered in the order given.
+      */
+  rows: PropTypes.arrayOf(rowShape).isRequired,
+
   /**
    * String that identifies the element (or elements) that labels the table.
    */
@@ -29,17 +50,6 @@ const propTypes = {
    * String that labels the table for accessibility. If ariaLabelledBy is specified, ariaLabel will not be used.
    */
   ariaLabel: PropTypes.string,
-
-  /**
-   * String that will be used to identify the table. If multiple tables are on the same page, each table should have
-   * a unique id.
-   */
-  id: PropTypes.string.isRequired,
-
-  /**
-   * Data for content in the body of the table. Rows will be rendered in the order given.
-   */
-  rows: PropTypes.arrayOf(rowShape).isRequired,
 
   /**
    * Data for pinned columns. Pinned columns are the stickied leftmost columns of the table.
@@ -94,10 +104,10 @@ const propTypes = {
   onColumnSelect: PropTypes.func,
 
   /**
-   * @private
-   * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
+   * Boolean indicating whether or not the DataGrid should allow entire rows to be selectable. An additional column will be
+   * rendered to allow for row selection to occur.
    */
-  intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
+  hasSelectableRows: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -126,11 +136,35 @@ function Table(props) {
     rowHeight,
     onColumnSelect,
     onCellSelect,
+    hasSelectableRows,
     rowHeaderIndex,
     intl,
   } = props;
 
-  const [pinnedColumnOffsets, setPinnedColumnOffsets] = useState([]);
+  if (pinnedColumns.length === 0) {
+    // eslint-disable-next-line no-console
+    console.warn(ERRORS.PINNED_COLUMNS_UNDEFINED);
+  }
+
+  // Manage column resize
+  const [tableHeight, setTableHeight] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(null);
+  const [cellAriaLiveMessage, setCellAriaLiveMessage] = useState(null);
+
+  const [pinnedColumnOffsets, setPinnedColumnOffsets] = useState([0]);
+
+  const activeColumnPageX = useRef(0);
+  const activeColumnWidth = useRef(200);
+  const tableWidth = useRef(0);
+  const tableRef = useRef();
+
+  const sortedColumn = useRef();
+
+  const gridContext = useContext(GridContext);
+  const theme = useContext(ThemeContext);
+
+  const isGridContext = gridContext.role === GridConstants.GRID;
+  const columnContextValue = useMemo(() => ({ pinnedColumnOffsets, setCellAriaLiveMessage }), [pinnedColumnOffsets]);
 
   // Initialize column width properties
   const initializeColumn = (column) => ({
@@ -140,31 +174,71 @@ function Table(props) {
     maximumWidth: column.maximumWidth || defaultColumnMaximumWidth,
   });
 
-  const displayedColumns = [
-    ...pinnedColumns,
-    ...overflowColumns,
-  ];
-  const [renderedColumns, setRenderedColumns] = useState(displayedColumns.map((column) => initializeColumn(column)));
+  const displayedColumns = (hasSelectableRows ? [RowSelectionUtils.ROW_SELECTION_COLUMN] : []).concat(pinnedColumns).concat(overflowColumns);
+  const [tableColumns, setTableColumns] = useState(displayedColumns.map((column) => initializeColumn(column)));
+  // -------------------------------------
+  // functions
 
-  // Manage column resize
-  const [tableHeight, setTableHeight] = useState(0);
-  const [activeIndex, setActiveIndex] = useState(null);
+  const handleCellSelection = useCallback((selectionDetails) => {
+    if (onCellSelect) {
+      onCellSelect(selectionDetails);
+    }
+  }, [onCellSelect]);
 
-  const activeColumnPageX = useRef(0);
-  const activeColumnWidth = useRef(200);
-  const tableWidth = useRef(0);
-  const tableRef = useRef();
-  const tableContainerRef = useRef();
-  const sortedColumn = useRef();
-
-  const [cellAriaLiveMessage, setCellAriaLiveMessage] = useState(null);
-
-  const gridContext = useContext(GridContext);
-
-  const columnContextValue = useMemo(() => ({ pinnedColumnOffsets, setCellAriaLiveMessage }), [pinnedColumnOffsets]);
-  const theme = useContext(ThemeContext);
-
+  // -------------------------------------
   // useEffect Hooks
+
+  // useEffect for row displayed columns
+  useEffect(() => {
+    setTableColumns(displayedColumns.map((column) => initializeColumn(column)));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pinnedColumns, overflowColumns]);
+
+  // useEffect to calculate pinned column offsets
+  useEffect(() => {
+    const offsetArray = [];
+    let cumulativeOffset = 0;
+    let lastPinnedColumnIndex;
+
+    // if grid has selectable rows but no pinned columns, then set the offset of the first column to 0
+    if (hasSelectableRows && pinnedColumns.length === 0) {
+      lastPinnedColumnIndex = 0;
+      offsetArray.push(cumulativeOffset);
+      setPinnedColumnOffsets(offsetArray);
+      return;
+    }
+
+    if (pinnedColumns.length > 0) {
+      offsetArray.push(cumulativeOffset);
+
+      lastPinnedColumnIndex = hasSelectableRows ? pinnedColumns.length : pinnedColumns.length - 1;
+
+      tableColumns.slice(0, lastPinnedColumnIndex).forEach((pinnedColumn) => {
+        cumulativeOffset += pinnedColumn.width;
+        offsetArray.push(cumulativeOffset);
+      });
+    }
+    setPinnedColumnOffsets(offsetArray);
+
+    const currentSortedColumn = tableColumns.find((column) => !!column.sortIndicator);
+    if (sortedColumn.current) {
+      const previousSortedColumn = { ...sortedColumn.current };
+
+      if (previousSortedColumn.id !== currentSortedColumn.id
+        || previousSortedColumn.sortIndicator !== currentSortedColumn.sortIndicator) {
+        setCellAriaLiveMessage(intl.formatMessage(
+          { id: 'Terra.table.sort-direction-changed' },
+          {
+            column: currentSortedColumn.displayName,
+            sortDirection: currentSortedColumn.sortIndicator,
+          },
+        ));
+      }
+    }
+
+    sortedColumn.current = currentSortedColumn;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [tableColumns]);
 
   // useEffect for managing the table height.
   useEffect(() => {
@@ -178,49 +252,6 @@ function Table(props) {
       resizeObserver.disconnect();
     };
   }, [tableRef]);
-
-  // useEffect for row displayed columns
-  useEffect(() => {
-    setRenderedColumns(displayedColumns.map((column) => initializeColumn(column)));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [pinnedColumns, overflowColumns]);
-
-  // useEffect to calculate pinned column offsets
-  useEffect(() => {
-    const offsetArray = [];
-    if (pinnedColumns.length > 1) {
-      let cumulativeOffset = 0;
-
-      offsetArray.push(cumulativeOffset);
-      const lastPinnedColumnIndex = pinnedColumns.length - 1;
-
-      renderedColumns.slice(0, lastPinnedColumnIndex).forEach((pinnedColumn) => {
-        cumulativeOffset += pinnedColumn.width;
-        offsetArray.push(cumulativeOffset);
-      });
-    }
-
-    setPinnedColumnOffsets(offsetArray);
-
-    const currentSortedColumn = renderedColumns.find((column) => !!column.sortIndicator);
-    if (sortedColumn.current) {
-      const previousSortedColumn = { ...sortedColumn.current };
-
-      if (previousSortedColumn.id !== currentSortedColumn.id
-      || previousSortedColumn.sortIndicator !== currentSortedColumn.sortIndicator) {
-        setCellAriaLiveMessage(intl.formatMessage(
-          { id: 'Terra.table.sort-direction-changed' },
-          {
-            column: currentSortedColumn.displayName,
-            sortDirection: currentSortedColumn.sortIndicator,
-          },
-        ));
-      }
-    }
-
-    sortedColumn.current = currentSortedColumn;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [renderedColumns]);
 
   // -------------------------------------
 
@@ -250,13 +281,13 @@ function Table(props) {
 
     // Ensure the new column width falls within the range of the minimum and maximum values
     const diffX = event.pageX - activeColumnPageX.current;
-    const { minimumWidth, maximumWidth } = renderedColumns[activeIndex];
+    const { minimumWidth, maximumWidth } = tableColumns[activeIndex];
     const newColumnWidth = Math.min(Math.max(activeColumnWidth.current + diffX, minimumWidth), maximumWidth);
 
     // Update the width for the column in the state variable
-    const newColumns = [...renderedColumns];
+    const newColumns = [...tableColumns];
     newColumns[activeIndex].width = newColumnWidth;
-    setRenderedColumns(newColumns);
+    setTableColumns(newColumns);
 
     // Update the column and table width
     tableRef.current.style.width = `${tableWidth + (newColumnWidth - activeColumnWidth.current)}px`;
@@ -264,7 +295,7 @@ function Table(props) {
 
   const onMouseUp = () => {
     if (onColumnResize) {
-      onColumnResize(renderedColumns[activeIndex].id, renderedColumns[activeIndex].width);
+      onColumnResize(tableColumns[activeIndex].id, tableColumns[activeIndex].width);
     }
     // Remove active index
     setActiveIndex(null);
@@ -273,11 +304,7 @@ function Table(props) {
   // -------------------------------------
 
   return (
-    <div
-      className={cx('table-container')}
-      ref={tableContainerRef}
-      tabIndex={gridContext.role === 'grid' ? 0 : -1}
-    >
+    <div className={cx('table-container')}>
       <table
         ref={tableRef}
         id={id}
@@ -291,7 +318,7 @@ function Table(props) {
           value={columnContextValue}
         >
           <ColumnHeader
-            columns={renderedColumns}
+            columns={tableColumns}
             headerHeight={columnHeaderHeight}
             tableHeight={tableHeight}
             onResizeMouseDown={onResizeMouseDown}
@@ -306,9 +333,10 @@ function Table(props) {
                 id={row.id}
                 cells={row.cells}
                 ariaLabel={row.ariaLabel}
+                hasRowSelection={hasSelectableRows}
                 displayedColumns={displayedColumns}
                 rowHeaderIndex={rowHeaderIndex}
-                onCellSelect={onCellSelect}
+                onCellSelect={isGridContext ? handleCellSelection : undefined}
                 isSelected={row.isSelected}
               />
             ))}

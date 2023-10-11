@@ -12,8 +12,8 @@ import IconError from 'terra-icon/lib/icon/IconError';
 import ColumnResizeHandle from './ColumnResizeHandle';
 import { SortIndicators } from '../proptypes/columnShape';
 import ColumnContext from '../utils/ColumnContext';
+import GridContext, { GridConstants } from '../utils/GridContext';
 import styles from './ColumnHeaderCell.module.scss';
-import GridContext from '../utils/GridContext';
 
 const cx = classNames.bind(styles);
 
@@ -22,6 +22,16 @@ const propTypes = {
    * Required string representing a unique identifier for the column header cell.
    */
   id: PropTypes.string.isRequired,
+
+  /**
+   * String that specifies the column height. Any valid CSS height value accepted.
+  */
+  headerHeight: PropTypes.string.isRequired,
+
+  /**
+   * String that specifies the default width for columns in the table. Any valid CSS width value is accepted.
+   */
+  width: PropTypes.number.isRequired,
 
   /**
    * String of text to render within the column header cell.
@@ -65,16 +75,6 @@ const propTypes = {
   tableHeight: PropTypes.number,
 
   /**
-   * String that specifies the default width for columns in the table. Any valid CSS width value is accepted.
-   */
-  width: PropTypes.number.isRequired,
-
-  /**
-   * String that specifies the column height. Any valid CSS height value accepted.
-  */
-  headerHeight: PropTypes.string.isRequired,
-
-  /**
    * The cell's row position in the table. This is zero based.
    */
   rowIndex: PropTypes.number,
@@ -105,8 +105,8 @@ const propTypes = {
 
 const defaultProps = {
   hasError: false,
-  isResizable: true,
   isSelectable: false,
+  isResizable: false,
 };
 
 const ColumnHeaderCell = (props) => {
@@ -130,9 +130,11 @@ const ColumnHeaderCell = (props) => {
   } = props;
 
   const columnContext = useContext(ColumnContext);
-  const theme = useContext(ThemeContext);
   const gridContext = useContext(GridContext);
+  const theme = useContext(ThemeContext);
   const columnHeaderCell = useRef();
+
+  const isGridContext = gridContext.role === GridConstants.GRID;
 
   const onResizeHandleMouseDown = useCallback((event) => {
     if (onResizeMouseDown) {
@@ -179,17 +181,25 @@ const ColumnHeaderCell = (props) => {
     )
     : null;
 
+  let tabIndex = isSelectable ? 0 : undefined;
+  if (isGridContext) {
+    tabIndex = -1;
+  }
+
   return (
   /* eslint-disable react/forbid-dom-props */
     <th
       ref={columnHeaderCell}
       key={id}
-      className={cx('column-header', theme.className, { selectable: isSelectable, pinned: columnIndex < columnContext.pinnedColumnOffsets.length })}
+      className={cx('column-header', theme.className, {
+        selectable: isSelectable,
+        pinned: columnIndex < columnContext.pinnedColumnOffsets.length,
+      })}
+      tabIndex={tabIndex}
       role="columnheader"
       scope="col"
-      tabIndex={gridContext.role === 'grid' || isSelectable ? 0 : undefined}
       aria-sort={sortIndicator}
-      onMouseDown={(isSelectable && onColumnSelect) ? handleMouseDown : undefined}
+      onMouseDown={isSelectable && onColumnSelect ? handleMouseDown : undefined}
       onKeyDown={isSelectable && onColumnSelect ? handleKeyDown : undefined}
       // eslint-disable-next-line react/forbid-dom-props
       style={{ width: `${width}px`, height: headerHeight, left: cellLeftEdge }}

@@ -3,7 +3,7 @@
 exports[`ColumnHeaderCell renders a column header cell with ascending sort 1`] = `
 <th
   aria-sort="ascending"
-  className="column-header selectable"
+  className="column-header"
   key="Column-0"
   role="columnheader"
   scope="col"
@@ -14,7 +14,6 @@ exports[`ColumnHeaderCell renders a column header cell with ascending sort 1`] =
       "width": "100px",
     }
   }
-  tabIndex={0}
 >
   <div
     className="header-container"
@@ -29,12 +28,6 @@ exports[`ColumnHeaderCell renders a column header cell with ascending sort 1`] =
       xmlns="http://www.w3.org/2000/svg"
     />
   </div>
-  <InjectIntl(ColumnResizeHandle)
-    columnIndex={0}
-    columnText=" Vitals"
-    columnWidth={100}
-    onResizeMouseDown={[Function]}
-  />
 </th>
 `;
 
@@ -72,19 +65,13 @@ exports[`ColumnHeaderCell renders a column header cell with ascending sort and e
       xmlns="http://www.w3.org/2000/svg"
     />
   </div>
-  <InjectIntl(ColumnResizeHandle)
-    columnIndex={0}
-    columnText=" Vitals"
-    columnWidth={100}
-    onResizeMouseDown={[Function]}
-  />
 </th>
 `;
 
 exports[`ColumnHeaderCell renders a column header cell with descending sort 1`] = `
 <th
   aria-sort="descending"
-  className="column-header selectable"
+  className="column-header"
   key="Column-0"
   role="columnheader"
   scope="col"
@@ -95,7 +82,6 @@ exports[`ColumnHeaderCell renders a column header cell with descending sort 1`] 
       "width": "100px",
     }
   }
-  tabIndex={0}
 >
   <div
     className="header-container"
@@ -110,12 +96,6 @@ exports[`ColumnHeaderCell renders a column header cell with descending sort 1`] 
       xmlns="http://www.w3.org/2000/svg"
     />
   </div>
-  <InjectIntl(ColumnResizeHandle)
-    columnIndex={0}
-    columnText=" Vitals"
-    columnWidth={100}
-    onResizeMouseDown={[Function]}
-  />
 </th>
 `;
 
@@ -147,12 +127,6 @@ exports[`ColumnHeaderCell renders a column header cell with error 1`] = `
        Vitals
     </span>
   </div>
-  <InjectIntl(ColumnResizeHandle)
-    columnIndex={0}
-    columnText=" Vitals"
-    columnWidth={100}
-    onResizeMouseDown={[Function]}
-  />
 </th>
 `;
 
@@ -193,12 +167,6 @@ exports[`ColumnHeaderCell renders a column header cell with onColumnSelect callb
       xmlns="http://www.w3.org/2000/svg"
     />
   </div>
-  <InjectIntl(ColumnResizeHandle)
-    columnIndex={0}
-    columnText=" Vitals"
-    columnWidth={100}
-    onResizeMouseDown={[Function]}
-  />
 </th>
 `;
 
@@ -236,12 +204,6 @@ exports[`ColumnHeaderCell renders a column header cell with onColumnSelect callb
       xmlns="http://www.w3.org/2000/svg"
     />
   </div>
-  <InjectIntl(ColumnResizeHandle)
-    columnIndex={0}
-    columnText=" Vitals"
-    columnWidth={100}
-    onResizeMouseDown={[Function]}
-  />
 </th>
 `;
 
@@ -267,12 +229,6 @@ exports[`ColumnHeaderCell renders a default column header cell 1`] = `
        Vitals
     </span>
   </div>
-  <InjectIntl(ColumnResizeHandle)
-    columnIndex={0}
-    columnText=" Vitals"
-    columnWidth={100}
-    onResizeMouseDown={[Function]}
-  />
 </th>
 `;
 
@@ -319,7 +275,7 @@ exports[`ColumnHeaderCell renders a pinned column header cell 1`] = `
         "timeZone": null,
       }
     }
-    isResizable={true}
+    isResizable={false}
     isSelectable={false}
     sortIndicator="ascending"
     width={100}
@@ -416,62 +372,6 @@ exports[`ColumnHeaderCell renders a pinned column header cell 1`] = `
           </IconBase>
         </IconUp>
       </div>
-      <InjectIntl(ColumnResizeHandle)
-        columnIndex={0}
-        columnText=" Vitals"
-        columnWidth={100}
-        onResizeMouseDown={[Function]}
-      >
-        <ColumnResizeHandle
-          columnIndex={0}
-          columnText=" Vitals"
-          columnWidth={100}
-          intl={
-            Object {
-              "defaultFormats": Object {},
-              "defaultLocale": "en",
-              "formatDate": [Function],
-              "formatHTMLMessage": [Function],
-              "formatMessage": [Function],
-              "formatNumber": [Function],
-              "formatPlural": [Function],
-              "formatRelative": [Function],
-              "formatTime": [Function],
-              "formats": Object {},
-              "formatters": Object {
-                "getDateTimeFormat": [Function],
-                "getMessageFormat": [Function],
-                "getNumberFormat": [Function],
-                "getPluralFormat": [Function],
-                "getRelativeFormat": [Function],
-              },
-              "locale": "en",
-              "messages": null,
-              "now": [Function],
-              "onError": [Function],
-              "textComponent": "span",
-              "timeZone": null,
-            }
-          }
-          onResizeMouseDown={[Function]}
-        >
-          <div
-            aria-label=" Vitals"
-            aria-valuenow={100}
-            aria-valuetext="Terra.table.resizeHandleValueText"
-            className="resize-handle"
-            draggable={true}
-            onMouseDown={[Function]}
-            role="slider"
-            style={
-              Object {
-                "height": "undefinedpx",
-              }
-            }
-            tabIndex={0}
-          />
-        </ColumnResizeHandle>
-      </InjectIntl(ColumnResizeHandle)>
       <div
         className="pinned-columns-divider"
         style={

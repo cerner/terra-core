@@ -2,8 +2,8 @@
 
 ## Unreleased
 
-* Changed
-  * Re-implementing Terra Table in preparation of being consumed by DataGrid package.
+* Breaking Change
+  * Redesigned the table component to meet accessibility guidelines. See Docs for details of the new API.
 
 ## 4.36.0 - (August 1, 2023)
 

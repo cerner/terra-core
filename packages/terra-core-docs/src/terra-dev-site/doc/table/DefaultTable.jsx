@@ -3,7 +3,7 @@ import Table from 'terra-table';
 
 const tableData = {
   cols: [
-    { id: 'Column-0', displayName: 'Patient' },
+    { id: 'Column-0', displayName: 'Patient', isResizable: true },
     { id: 'Column-1', displayName: 'Location' },
     { id: 'Column-2', displayName: 'Illness Severity' },
     { id: 'Column-3', displayName: 'Visit' },

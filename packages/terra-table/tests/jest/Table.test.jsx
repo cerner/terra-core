@@ -2,22 +2,25 @@ import React from 'react';
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import { mountWithIntl, shallowWithIntl } from 'terra-enzyme-intl';
 import Table from '../../src/Table';
+import RowSelectionUtils from '../../src/utils/rowSelectionUtils';
+import ColumnHeaderCell from '../../src/subcomponents/ColumnHeaderCell';
 import ColumnHeader from '../../src/subcomponents/ColumnHeader';
 import Row from '../../src/subcomponents/Row';
 import ERRORS from '../../src/utils/constants';
+import GridContext, { GridConstants } from '../../src/utils/GridContext';
 
 // Source data for tests
 const tableData = {
   cols: [
     { id: 'Column-0', displayName: ' Vitals' },
     { id: 'Column-1', displayName: 'March 16' },
-    { id: 'Column-2', displayName: 'March 17' },
+    { id: 'Column-2', displayName: 'March 17', isSelectable: false },
   ],
   rows: [
     {
       id: '1',
       cells: [
-        { content: 'Heart Rate Monitored (bpm)' },
+        { content: 'Heart Rate Monitored (bpm)', isSelectable: false },
         { content: '' },
         { content: '66', isMasked: true },
       ],
@@ -50,6 +53,21 @@ const tableData = {
   ],
 };
 
+beforeAll(() => {
+  jest.spyOn(console, 'error').mockImplementation();
+  jest.spyOn(console, 'warn').mockImplementation();
+});
+
+afterEach(() => {
+  console.error.mockClear(); // eslint-disable-line no-console
+  console.warn.mockClear(); // eslint-disable-line no-console
+});
+
+afterAll(() => {
+  console.error.mockRestore(); // eslint-disable-line no-console
+  console.warn.mockRestore(); // eslint-disable-line no-console
+});
+
 describe('Table', () => {
   it('verifies that the table created is consistent with the rows and overflowColumns props', () => {
     const wrapper = shallowWithIntl(
@@ -73,7 +91,9 @@ describe('Table', () => {
   it('verifies the rows are created with the right props', () => {
     const verifyRow = (rowIndex, rowComponent, data, overflowColumns) => {
       expect(rowComponent.props.displayedColumns).toEqual(overflowColumns);
+      expect(rowComponent.props.hasRowSelection).toBe(false);
       expect(rowComponent.key).toEqual(data.id);
+      expect(rowComponent.props.onCellSelect).toBeUndefined();
       expect(rowComponent.props.rowHeaderIndex).toEqual(0);
       expect(rowComponent.props.rowIndex).toEqual(rowIndex + 1);
       expect(rowComponent.props.cells).toEqual(data.cells);
@@ -96,6 +116,90 @@ describe('Table', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('verifies row selection column header selection', () => {
+    const mockColumnSelect = jest.fn();
+
+    const wrapper = mountWithIntl(
+      <Table
+        id="test-terra-table"
+        pinnedColumns={tableData.cols.slice(0, 2)}
+        overflowColumns={tableData.cols.slice(2)}
+        hasSelectableRows
+        rows={tableData.rows}
+        onColumnSelect={mockColumnSelect}
+      />,
+    );
+
+    // Find column headers
+    const columnHeader = wrapper.find(ColumnHeaderCell);
+
+    // Simulate onMouseDown event on row selection column header
+    columnHeader.at(0).simulate('mouseDown');
+
+    // Validate mock function was called from simulated click event
+    expect(mockColumnSelect).toHaveBeenCalledWith(RowSelectionUtils.ROW_SELECTION_COLUMN.id);
+
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('verifies onCellSelect callback is triggered when space is pressed on a masked cell', () => {
+    const mockCellSelect = jest.fn();
+
+    const wrapper = mountWithIntl(
+      <GridContext.Provider value={{ role: GridConstants.GRID }}>
+        <Table
+          id="test-terra-table"
+          pinnedColumns={tableData.cols.slice(0, 2)}
+          overflowColumns={tableData.cols.slice(2)}
+          rows={tableData.rows}
+          onCellSelect={mockCellSelect}
+        />
+        ,
+      </GridContext.Provider>,
+    );
+
+    // Find column headers
+    const maskedCell = wrapper.find(Row).at(0).find('.masked');
+
+    // Simulate onMouseDown event on row selection column header
+    maskedCell.at(0).simulate('keydown', { keyCode: 32 });
+
+    // Validate mock function was called from simulated click event
+    expect(mockCellSelect).toHaveBeenCalled();
+
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('verifies onCellSelect callback is triggered when space is pressed on a non-selectable cell', () => {
+    const mockCellSelect = jest.fn();
+
+    const wrapper = mountWithIntl(
+      <GridContext.Provider value={{ role: GridConstants.GRID }}>
+        <Table
+          id="test-terra-table"
+          pinnedColumns={tableData.cols.slice(0, 2)}
+          overflowColumns={tableData.cols.slice(2)}
+          rows={tableData.rows}
+          onCellSelect={mockCellSelect}
+        />
+        ,
+      </GridContext.Provider>,
+    );
+
+    // Find column headers
+    const nonSelectableCell = wrapper.find(Row).at(0).find('th:not(.selectable)');
+
+    // Simulate onMouseDown event on row selection column header
+    nonSelectableCell.at(0).simulate('keydown', { keyCode: 32 });
+
+    // Validate mock function was called from simulated click event
+    expect(mockCellSelect).toHaveBeenCalled();
+
+    expect(wrapper).toMatchSnapshot();
+  });
+});
+
+describe('with pinned columns', () => {
   it('sets pinnedColumns as pinned', () => {
     const pinnedColumns = tableData.cols.slice(0, 2);
 
@@ -112,19 +216,49 @@ describe('Table', () => {
 
     expect(pinnedColumnHeaderCells).toHaveLength(pinnedColumns.length * (tableData.rows.length + 1));
   });
+
+  it('sets row selection column as pinned', () => {
+    const pinnedColumns = tableData.cols.slice(0, 2);
+
+    const wrapper = mountWithIntl(
+      <GridContext.Provider value={{ role: GridConstants.GRID }}>
+        <Table
+          id="test-terra-table"
+          pinnedColumns={pinnedColumns}
+          overflowColumns={tableData.cols.slice(2)}
+          rows={tableData.rows}
+          hasSelectableRows
+        />
+        ,
+      </GridContext.Provider>,
+    );
+
+    const pinnedColumnHeaderCells = wrapper.find('.pinned');
+
+    expect(pinnedColumnHeaderCells).toHaveLength((pinnedColumns.length + 1) * (tableData.rows.length + 1));
+  });
+
+  it('pins row selection column if pinnedColumns is undefined', () => {
+    const wrapper = mountWithIntl(
+      <GridContext.Provider value={{ role: GridConstants.GRID }}>
+        <Table
+          id="sdfdss"
+          overflowColumns={tableData.cols}
+          rows={tableData.rows}
+          hasSelectableRows
+        />
+        ,
+      </GridContext.Provider>,
+    );
+
+    const pinnedColumnHeaderCells = wrapper.find('.pinned');
+
+    expect(pinnedColumnHeaderCells).toHaveLength(1 * (tableData.rows.length + 1));
+    expect(console.warn).toHaveBeenCalledWith(expect.stringContaining(ERRORS.PINNED_COLUMNS_UNDEFINED)); // eslint-disable-line no-console
+  });
 });
 
 describe('Error handling - prop types', () => {
-  beforeAll(() => {
-    jest.spyOn(console, 'error').mockImplementation();
-    jest.spyOn(console, 'warn').mockImplementation();
-  });
-
-  afterAll(() => {
-    console.error.mockRestore(); // eslint-disable-line no-console
-    console.warn.mockRestore(); // eslint-disable-line no-console
-  });
-
   it('throws an error if rowHeaderIndex is not an integer', () => {
     shallowWithIntl(
       <Table

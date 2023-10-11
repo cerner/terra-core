@@ -6,6 +6,6 @@
   "Terra.table.columnError": "Errors associated with column",
   "Terra.table.resizeHandleValueText": "{columnWidth} pixels column width",
   "Terra.table.resume-navigation": "Table navigation resumed.",
-  "Terra.dataGrid.row-index" : "Row {row}",  
+  "Terra.table.row-index" : "Row {row}",  
   "Terra.table.sort-direction-changed" : "{column} column sorted {sortDirection}"
 }

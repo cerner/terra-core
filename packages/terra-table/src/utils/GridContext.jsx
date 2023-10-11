@@ -4,5 +4,8 @@ const GridContext = React.createContext({
   role: 'table',
 });
 
-export default GridContext;
+export const GridConstants = {
+  GRID: 'grid',
+};
 
+export default GridContext;

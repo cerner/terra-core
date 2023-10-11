@@ -6,7 +6,9 @@ exports[`Cell renders a pinned cell 1`] = `
   columnIndex={0}
   height="50px"
   isRowHeader={true}
+  isSelected={false}
   key="key"
+  onCellSelect={[Function]}
   rowId="RowID"
   rowIndex={1}
 >
@@ -45,13 +47,12 @@ exports[`Cell renders a pinned cell 1`] = `
     isRowHeader={true}
     isSelectable={false}
     isSelected={false}
+    onCellSelect={[Function]}
     rowId="RowID"
     rowIndex={1}
   >
     <th
       className="cell pinned"
-      onKeyDown={[Function]}
-      onMouseDown={[Function]}
       role="rowheader"
       scope="row"
       style={
@@ -89,12 +90,10 @@ exports[`Cell renders a pinned cell 1`] = `
 </InjectIntl(Cell)>
 `;
 
-exports[`Cell verifies that a cell has the correct styles and no content when isMasked prop is true 1`] = `
+exports[`Cell verifies mask takes precedence when cell is masked, selectable and selected 1`] = `
 <td
   aria-label="Some Label Here"
   className="cell masked"
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
   style={
     Object {
       "left": null,
@@ -132,11 +131,87 @@ exports[`Cell verifies that a cell has the correct styles and no content when is
 </td>
 `;
 
+exports[`Cell verifies that a cell has the correct styles and no content when isMasked prop is true 1`] = `
+<td
+  aria-label="Some Label Here"
+  className="cell masked"
+  style={
+    Object {
+      "left": null,
+    }
+  }
+>
+  <FocusTrap
+    _createFocusTrap={[Function]}
+    active={false}
+    focusTrapOptions={
+      Object {
+        "clickOutsideDeactivates": true,
+        "escapeDeactivates": false,
+        "onDeactivate": [Function],
+        "returnFocusOnDeactivate": true,
+      }
+    }
+    paused={false}
+  >
+    <div
+      className="cell-content"
+      style={
+        Object {
+          "height": undefined,
+        }
+      }
+    >
+      <span
+        className="no-data-cell"
+      >
+        Terra.table.maskedCell
+      </span>
+    </div>
+  </FocusTrap>
+</td>
+`;
+
+exports[`Cell verifies that a selected cell has the correct styles when isSelected prop is true 1`] = `
+<td
+  aria-label="Some Label Here"
+  className="cell selected"
+  style={
+    Object {
+      "left": null,
+    }
+  }
+>
+  <FocusTrap
+    _createFocusTrap={[Function]}
+    active={false}
+    focusTrapOptions={
+      Object {
+        "clickOutsideDeactivates": true,
+        "escapeDeactivates": false,
+        "onDeactivate": [Function],
+        "returnFocusOnDeactivate": true,
+      }
+    }
+    paused={false}
+  >
+    <div
+      className="cell-content"
+      style={
+        Object {
+          "height": undefined,
+        }
+      }
+    >
+      Data in cell
+    </div>
+  </FocusTrap>
+</td>
+`;
+
 exports[`Cell verifies that only a regular cell(<td>) is created when isRowHeader prop is false 1`] = `
 <td
   className="cell"
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
   style={
     Object {
       "left": null,
@@ -173,8 +248,6 @@ exports[`Cell verifies that only a regular cell(<td>) is created when isRowHeade
 exports[`Cell verifies that only a row header cell (<th>) is created when isRowHeader prop is true 1`] = `
 <th
   className="cell"
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
   role="rowheader"
   scope="row"
   style={
@@ -213,8 +286,6 @@ exports[`Cell verifies that only a row header cell (<th>) is created when isRowH
 exports[`Cell verifies that the cell rendered is marked blank when the cell content is empty 1`] = `
 <td
   className="cell blank"
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
   style={
     Object {
       "left": null,
@@ -247,6 +318,42 @@ exports[`Cell verifies that the cell rendered is marked blank when the cell cont
       >
         Terra.table.blank
       </span>
+    </div>
+  </FocusTrap>
+</td>
+`;
+
+exports[`Cell verifies that the cell rendered is marked selectable when isSelectable prop is true 1`] = `
+<td
+  className="cell selectable"
+  style={
+    Object {
+      "left": null,
+    }
+  }
+>
+  <FocusTrap
+    _createFocusTrap={[Function]}
+    active={false}
+    focusTrapOptions={
+      Object {
+        "clickOutsideDeactivates": true,
+        "escapeDeactivates": false,
+        "onDeactivate": [Function],
+        "returnFocusOnDeactivate": true,
+      }
+    }
+    paused={false}
+  >
+    <div
+      className="cell-content"
+      style={
+        Object {
+          "height": undefined,
+        }
+      }
+    >
+      Data in cell
     </div>
   </FocusTrap>
 </td>
