@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Updated
+  * Updated `terra-alert` documentation for custom titles.
+
 ## 1.44.1 - (October 11, 2023)
 
 * Fixed
