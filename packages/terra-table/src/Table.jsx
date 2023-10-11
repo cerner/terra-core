@@ -36,9 +36,9 @@ const propTypes = {
   intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
 
   /**
-      * Data for content in the body of the table. Rows will be rendered in the order given.
-      */
-  rows: PropTypes.arrayOf(rowShape).isRequired,
+  * Data for content in the body of the table. Rows will be rendered in the order given.
+  */
+  rows: PropTypes.arrayOf(rowShape),
 
   /**
    * String that identifies the element (or elements) that labels the table.
@@ -116,6 +116,7 @@ const defaultProps = {
   rowHeight: '2.5rem',
   pinnedColumns: [],
   overflowColumns: [],
+  rows: [],
 };
 
 const defaultColumnMinimumWidth = 60;

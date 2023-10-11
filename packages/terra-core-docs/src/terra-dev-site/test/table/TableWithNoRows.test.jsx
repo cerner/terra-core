@@ -17,7 +17,6 @@ const TableWithNoRows = () => {
       id="table-with-no-rows"
       overflowColumns={cols}
       rowHeaderIndex={0}
-      rows={[]}
       columnHeaderHeight="50px"
       ariaLabel="table"
     />
