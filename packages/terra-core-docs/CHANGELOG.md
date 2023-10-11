@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.44.1 - (October 11, 2023)
+
 * Fixed
   * Fixed hyperlink button example import for `terra-hyperlink`.
 
