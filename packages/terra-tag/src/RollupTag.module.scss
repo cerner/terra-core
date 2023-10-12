@@ -1,3 +1,7 @@
+// Themes
+@import './clinical-lowlight-theme/RollupTag.module';
+@import './orion-fusion-theme/RollupTag.module';
+
 :local {
   .rollup-tag-label {
     font-family: inherit; // Button reset
