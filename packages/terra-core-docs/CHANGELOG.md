@@ -5,6 +5,11 @@
 * Added
   * Added a visual error note for invalid example in `terra-form-single-select`.
 
+* Updated
+  * Updated `terra-alert` documentation for custom titles.
+
+## 1.44.1 - (October 11, 2023)
+
 * Fixed
   * Fixed hyperlink button example import for `terra-hyperlink`.
 
