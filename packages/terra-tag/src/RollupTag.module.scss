@@ -37,11 +37,15 @@
     color: var(--terra-tags-rollup-tag-color, #595f62);
     cursor: pointer;
     display: inline-block;
+    flex: 1 1 auto;
     font-family: inherit;
     font-size: var(--terra-tags-rollup-tag-font-size, 0.85714rem);
     height: var(--terra-tags-rollup-tag-height, 1.71429rem);
     line-height: var(--terra-tags-rollup-tag-line-height, 1.16667);
     margin: 0;
+    margin-bottom: var(--terra-tags-tag-list-item-margin-bottom, 0.28571rem);
+    margin-right: var(--terra-tags-tag-list-item-margin-right, 0.42857rem);
+    margin-top: var(--terra-tags-tag-list-item-margin-top, 0.28571rem);
     max-width: 100%; // Needed for IE10 truncation
     min-width: 0;
     outline: none;
@@ -51,14 +55,10 @@
     padding-left: var(--terra-tags-rollup-tag-padding-left, 0.71428rem);
     padding-right: var(--terra-tags-rollup-tag-padding-right, 0.71428rem);
     padding-top: var(--terra-tags-rollup-tag-padding-top, 0.28571rem);
+    position: relative;
     text-overflow: ellipsis;
     vertical-align: top;
     white-space: nowrap;
-    flex: 1 1 auto;
-    margin-bottom: var(--terra-tags-tag-list-item-margin-bottom, 0.28571rem);
-    margin-right: var(--terra-tags-tag-list-item-margin-right, 0.42857rem);
-    margin-top: var(--terra-tags-tag-list-item-margin-top, 0.28571rem);
-    position: relative;
 
     &[data-terra-rollup-tag-show-focus-styles='true']:focus {
       background-color: var(--terra-tag-focus-background-color, #fff);
