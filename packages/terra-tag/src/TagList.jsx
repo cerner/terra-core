@@ -91,7 +91,7 @@ const TagList = (props) => {
 
   // Modifies the tabindex of the tag
   const setTabIndex = (val) => {
-    const currentNode = currentTag.current ? filterTagsRef.current.querySelector(`#${currentTag.current}`) : null;
+    const currentNode = currentTag.current ? currentTag.current : null;
     if (currentNode) {
       currentNode.setAttribute('tabIndex', val);
     }
@@ -99,7 +99,7 @@ const TagList = (props) => {
 
   // Sets focus to the current tag with tabindex 0
   const focusCurrentNode = () => {
-    const currentNode = currentTag.current ? filterTagsRef.current.querySelector(`#${currentTag.current}`) : null;
+    const currentNode = currentTag.current ? currentTag.current : null;
     if (currentNode) {
       currentNode.focus();
     }
@@ -117,10 +117,10 @@ const TagList = (props) => {
 
     if (tags.length > 0 && focusNode.current < tags.length) {
       TagsUtils.setTagsTabIndex(tags, '-1');
-      currentTag.current = tags[focusNode.current].id;
+      currentTag.current = tags[focusNode.current];
       setTabIndex('0');
     } else if (isCollapsible && isCollapsed && rollUpTag) { // if the first tag is rollUp tag, set rollUp tag tabindex 0
-      currentTag.current = rollUpTag.getAttribute('id');
+      currentTag.current = rollUpTag;
       setTabIndex('0');
     }
   }, [isCollapsed, isCollapsible]);
@@ -131,7 +131,7 @@ const TagList = (props) => {
     if (isCollapsible && !isCollapsed && tags.length > 0) {
       if (tags.length === React.Children.count(children)) {
         setTabIndex('-1');
-        currentTag.current = tags[focusNode.current].id;
+        currentTag.current = tags[focusNode.current];
         setTabIndex('0');
         if (isRollUpRemoved.current) { // if the rollup tag was triggered with keyboard focus the node
           focusCurrentNode();
@@ -170,15 +170,14 @@ const TagList = (props) => {
   }, [children, handleResize]);
 
   const focusNextNode = (tags, rollUpTag) => {
-    const rollUpTagId = rollUpTag ? rollUpTag.getAttribute('id') : null;
     if (focusNode.current + 1 <= tags.length) {
       setTabIndex('-1');
       // if the next tag is roll up tag, focus the roll up tag
       if (rollUpTag && focusNode.current + 1 === tags.length) {
-        currentTag.current = rollUpTagId;
+        currentTag.current = rollUpTag;
       } else if (focusNode.current + 1 < tags.length) { // focus the next available tag
         focusNode.current += 1;
-        currentTag.current = children[focusNode.current].props.id;
+        currentTag.current = tags[focusNode.current];
       }
       setTabIndex('0');
       focusCurrentNode();
@@ -186,15 +185,14 @@ const TagList = (props) => {
   };
 
   const focusPreviousNode = (tags, rollUpTag) => {
-    const rollUpTagId = rollUpTag ? rollUpTag.getAttribute('id') : null;
-    if (currentTag.current === rollUpTagId || focusNode.current >= 1) {
+    if (currentTag.current === rollUpTag || focusNode.current >= 1) {
       setTabIndex('-1');
-      if (rollUpTag && currentTag.current === rollUpTagId) { // If rollup tag, then focus the roll up tag
+      if (rollUpTag && currentTag.current === rollUpTag) { // If rollup tag, then focus the roll up tag
         focusNode.current = tags.length - 1;
-        currentTag.current = children[focusNode.current].props.id;
+        currentTag.current = tags[focusNode.current];
       } else {
         focusNode.current -= 1;
-        currentTag.current = children[focusNode.current].props.id;
+        currentTag.current = tags[focusNode.current];
       }
       setTabIndex('0');
       focusCurrentNode();
@@ -218,7 +216,7 @@ const TagList = (props) => {
         event.preventDefault();
         setTabIndex('-1');
         focusNode.current = 0;
-        currentTag.current = tags[focusNode.current].id;
+        currentTag.current = tags[focusNode.current];
         setTabIndex('0');
         focusCurrentNode();
         break;
@@ -226,7 +224,7 @@ const TagList = (props) => {
         event.preventDefault();
         setTabIndex('-1');
         focusNode.current = tags.length - 1;
-        currentTag.current = tags[focusNode.current].id;
+        currentTag.current = tags[focusNode.current];
         setTabIndex('0');
         focusCurrentNode();
         break;
@@ -240,7 +238,7 @@ const TagList = (props) => {
     const tags = [...filterTagsRef.current.querySelectorAll('[data-terra-tag]')];
     setTabIndex('-1');
     focusNode.current = tags.findIndex((tag) => tag.id === tagID);
-    currentTag.current = tagID;
+    currentTag.current = tags.find((tag) => tag.id === tagID);
     setTabIndex('0');
     focusCurrentNode();
   };
