@@ -10,7 +10,7 @@ const getTagWidth = (tag) => {
  * Takes rollUpTag as input and returns its width.
  */
 const getRollUpTagWidth = (rollUpTag) => {
-  const rollupTagWidth = rollUpTag.parentElement.offsetWidth + parseFloat(window.getComputedStyle(rollUpTag.parentElement, null).getPropertyValue('margin-right'), 10);
+  const rollupTagWidth = rollUpTag.offsetWidth + parseFloat(window.getComputedStyle(rollUpTag, null).getPropertyValue('margin-right'), 10);
   return rollupTagWidth;
 };
 

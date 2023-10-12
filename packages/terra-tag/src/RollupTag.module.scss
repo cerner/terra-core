@@ -54,6 +54,11 @@
     text-overflow: ellipsis;
     vertical-align: top;
     white-space: nowrap;
+    flex: 1 1 auto;
+    margin-bottom: var(--terra-tags-tag-list-item-margin-bottom, 0.28571rem);
+    margin-right: var(--terra-tags-tag-list-item-margin-right, 0.42857rem);
+    margin-top: var(--terra-tags-tag-list-item-margin-top, 0.28571rem);
+    position: relative;
 
     &[data-terra-rollup-tag-show-focus-styles='true']:focus {
       background-color: var(--terra-tag-focus-background-color, #fff);
@@ -83,20 +88,6 @@
       outline: var(--terra-tags-rollup-tag-focus-outline, 2px dashed #000);
       outline-offset: var(--terra-tags-rollup-tag-focus-outline-offset, 2px);
     }
-  }
-
-  .tag-list-item {
-    box-sizing: border-box;
-    display: inline-block;
-    flex: 1 1 auto;
-    margin: 0;
-    margin-bottom: var(--terra-tags-tag-list-item-margin-bottom, 0.28571rem);
-    margin-right: var(--terra-tags-tag-list-item-margin-right, 0.42857rem);
-    margin-top: var(--terra-tags-tag-list-item-margin-top, 0.28571rem);
-    max-width: 100%; // Needed for IE10 truncation
-    outline: none;
-    position: relative;
-    vertical-align: top;
   }
   
   .tags-group {

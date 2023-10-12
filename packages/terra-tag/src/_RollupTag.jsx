@@ -64,27 +64,23 @@ const RollUpTag = (props) => {
   const rollUpTagId = `terra-rollup-tag-${uuidv4()}`;
 
   return (
-    <div
-      className={cx('tag-list-item')}
-    >
-      <Button
-        id={rollUpTagId}
-        className={cx(['rollup-tag', theme.className])}
-        onClick={handleOnSelectRollUp}
-        onKeyDown={handleRollUpTagKeyDown}
-        onMouseDown={handleRollUpTagMouseDown}
-        text={rollUpLabel}
-        onBlur={handleOnBlur}
-        refCallback={rollUpTagRef}
-        isCompact
-        aria-live={(isCollapsed) ? 'polite' : 'off'}
-        aria-label={rollUpHint}
-        aria-describedby={rollUpHint}
-        aria-atomic="true"
-        data-terra-rollup-tag-show-focus-styles
-        data-terra-rollup-tag
-      />
-    </div>
+    <Button
+      id={rollUpTagId}
+      className={cx(['rollup-tag', theme.className])}
+      onClick={handleOnSelectRollUp}
+      onKeyDown={handleRollUpTagKeyDown}
+      onMouseDown={handleRollUpTagMouseDown}
+      text={rollUpLabel}
+      onBlur={handleOnBlur}
+      refCallback={(ref) => { rollUpTagRef.current = ref; }}
+      isCompact
+      aria-live={(isCollapsed) ? 'polite' : 'off'}
+      aria-label={rollUpHint}
+      aria-describedby={rollUpHint}
+      aria-atomic="true"
+      data-terra-rollup-tag-show-focus-styles
+      data-terra-rollup-tag
+    />
   );
 };
 
