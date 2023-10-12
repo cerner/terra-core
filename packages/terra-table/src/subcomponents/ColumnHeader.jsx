@@ -59,7 +59,7 @@ const ColumnHeader = (props) => {
             minimumWidth={column.minimumWidth}
             maximumWidth={column.maximumWidth}
             headerHeight={headerHeight}
-            isResizable={column.isResizable}
+            isResizable={isGridContext ? column.isResizable !== false : column.isResizable}
             isSelectable={isGridContext ? column.isSelectable !== false : column.isSelectable}
             tableHeight={tableHeight}
             hasError={column.hasError}
