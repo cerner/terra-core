@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed the console error appearing in the terra-menu examples while keyboard navigation.
+
 ## 4.64.0 - (October 3, 2023)
 
 * Added
