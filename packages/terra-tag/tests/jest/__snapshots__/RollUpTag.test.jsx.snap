@@ -63,88 +63,59 @@ exports[`Rollup Tag should render rollup tag with the label "4 more" 1`] = `
     isCollapsed={true}
     rollupCount={4}
   >
-    <div
-      className="tag-list-item"
+    <Button
+      aria-atomic="true"
+      aria-describedby="Terra.tags.hint.rollupTag"
+      aria-label="Terra.tags.hint.rollupTag"
+      aria-live="polite"
+      className="rollup-tag"
+      data-terra-rollup-tag={true}
+      data-terra-rollup-tag-show-focus-styles={true}
+      id="terra-rollup-tag-00000000-0000-0000-0000-000000000000"
+      isBlock={false}
+      isCompact={true}
+      isDisabled={false}
+      isIconOnly={false}
+      isReversed={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onMouseDown={[Function]}
+      refCallback={[Function]}
+      text="Terra.tags.label.rollupTag"
+      type="button"
+      variant="neutral"
     >
-      <Button
+      <button
         aria-atomic="true"
         aria-describedby="Terra.tags.hint.rollupTag"
+        aria-disabled={false}
         aria-label="Terra.tags.hint.rollupTag"
         aria-live="polite"
-        className="rollup-tag"
+        className="button neutral compact rollup-tag"
         data-terra-rollup-tag={true}
         data-terra-rollup-tag-show-focus-styles={true}
+        disabled={false}
         id="terra-rollup-tag-00000000-0000-0000-0000-000000000000"
-        isBlock={false}
-        isCompact={true}
-        isDisabled={false}
-        isIconOnly={false}
-        isReversed={false}
         onBlur={[Function]}
         onClick={[Function]}
+        onFocus={[Function]}
         onKeyDown={[Function]}
+        onKeyUp={[Function]}
         onMouseDown={[Function]}
-        refCallback={
-          Object {
-            "current": <button
-              aria-atomic="true"
-              aria-describedby="Terra.tags.hint.rollupTag"
-              aria-disabled="false"
-              aria-label="Terra.tags.hint.rollupTag"
-              aria-live="polite"
-              class="button neutral compact rollup-tag"
-              data-terra-rollup-tag="true"
-              data-terra-rollup-tag-show-focus-styles="true"
-              id="terra-rollup-tag-00000000-0000-0000-0000-000000000000"
-              type="button"
-            >
-              <span
-                class="button-label-win text-only"
-              >
-                <span
-                  class=""
-                >
-                  Terra.tags.label.rollupTag
-                </span>
-              </span>
-            </button>,
-          }
-        }
-        text="Terra.tags.label.rollupTag"
         type="button"
-        variant="neutral"
       >
-        <button
-          aria-atomic="true"
-          aria-describedby="Terra.tags.hint.rollupTag"
-          aria-disabled={false}
-          aria-label="Terra.tags.hint.rollupTag"
-          aria-live="polite"
-          className="button neutral compact rollup-tag"
-          data-terra-rollup-tag={true}
-          data-terra-rollup-tag-show-focus-styles={true}
-          disabled={false}
-          id="terra-rollup-tag-00000000-0000-0000-0000-000000000000"
-          onBlur={[Function]}
-          onClick={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          type="button"
+        <span
+          className="button-label-win text-only"
         >
           <span
-            className="button-label-win text-only"
+            className=""
           >
-            <span
-              className=""
-            >
-              Terra.tags.label.rollupTag
-            </span>
+            Terra.tags.label.rollupTag
           </span>
-        </button>
-      </Button>
-    </div>
+        </span>
+      </button>
+    </Button>
   </RollUpTag>
 </InjectIntl(RollUpTag)>
 `;
@@ -212,88 +183,59 @@ exports[`Rollup Tag should render rollup tag with the label "show less" when isC
     isCollapsed={false}
     rollupCount={3}
   >
-    <div
-      className="tag-list-item"
+    <Button
+      aria-atomic="true"
+      aria-describedby="Terra.tags.hint.showLess"
+      aria-label="Terra.tags.hint.showLess"
+      aria-live="off"
+      className="rollup-tag"
+      data-terra-rollup-tag={true}
+      data-terra-rollup-tag-show-focus-styles={true}
+      id="terra-rollup-tag-00000000-0000-0000-0000-000000000000"
+      isBlock={false}
+      isCompact={true}
+      isDisabled={false}
+      isIconOnly={false}
+      isReversed={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onMouseDown={[Function]}
+      refCallback={[Function]}
+      text="Terra.tags.label.showLess"
+      type="button"
+      variant="neutral"
     >
-      <Button
+      <button
         aria-atomic="true"
         aria-describedby="Terra.tags.hint.showLess"
+        aria-disabled={false}
         aria-label="Terra.tags.hint.showLess"
         aria-live="off"
-        className="rollup-tag"
+        className="button neutral compact rollup-tag"
         data-terra-rollup-tag={true}
         data-terra-rollup-tag-show-focus-styles={true}
+        disabled={false}
         id="terra-rollup-tag-00000000-0000-0000-0000-000000000000"
-        isBlock={false}
-        isCompact={true}
-        isDisabled={false}
-        isIconOnly={false}
-        isReversed={false}
         onBlur={[Function]}
         onClick={[Function]}
+        onFocus={[Function]}
         onKeyDown={[Function]}
+        onKeyUp={[Function]}
         onMouseDown={[Function]}
-        refCallback={
-          Object {
-            "current": <button
-              aria-atomic="true"
-              aria-describedby="Terra.tags.hint.showLess"
-              aria-disabled="false"
-              aria-label="Terra.tags.hint.showLess"
-              aria-live="off"
-              class="button neutral compact rollup-tag"
-              data-terra-rollup-tag="true"
-              data-terra-rollup-tag-show-focus-styles="true"
-              id="terra-rollup-tag-00000000-0000-0000-0000-000000000000"
-              type="button"
-            >
-              <span
-                class="button-label-win text-only"
-              >
-                <span
-                  class=""
-                >
-                  Terra.tags.label.showLess
-                </span>
-              </span>
-            </button>,
-          }
-        }
-        text="Terra.tags.label.showLess"
         type="button"
-        variant="neutral"
       >
-        <button
-          aria-atomic="true"
-          aria-describedby="Terra.tags.hint.showLess"
-          aria-disabled={false}
-          aria-label="Terra.tags.hint.showLess"
-          aria-live="off"
-          className="button neutral compact rollup-tag"
-          data-terra-rollup-tag={true}
-          data-terra-rollup-tag-show-focus-styles={true}
-          disabled={false}
-          id="terra-rollup-tag-00000000-0000-0000-0000-000000000000"
-          onBlur={[Function]}
-          onClick={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          type="button"
+        <span
+          className="button-label-win text-only"
         >
           <span
-            className="button-label-win text-only"
+            className=""
           >
-            <span
-              className=""
-            >
-              Terra.tags.label.showLess
-            </span>
+            Terra.tags.label.showLess
           </span>
-        </button>
-      </Button>
-    </div>
+        </span>
+      </button>
+    </Button>
   </RollUpTag>
 </InjectIntl(RollUpTag)>
 `;
@@ -361,88 +303,59 @@ exports[`Rollup Tag should render rollup tag with the label "show less" when isC
     isCollapsed={true}
     rollupCount={0}
   >
-    <div
-      className="tag-list-item"
+    <Button
+      aria-atomic="true"
+      aria-describedby="Terra.tags.hint.rollupTag"
+      aria-label="Terra.tags.hint.rollupTag"
+      aria-live="polite"
+      className="rollup-tag"
+      data-terra-rollup-tag={true}
+      data-terra-rollup-tag-show-focus-styles={true}
+      id="terra-rollup-tag-00000000-0000-0000-0000-000000000000"
+      isBlock={false}
+      isCompact={true}
+      isDisabled={false}
+      isIconOnly={false}
+      isReversed={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onMouseDown={[Function]}
+      refCallback={[Function]}
+      text="Terra.tags.label.showLess"
+      type="button"
+      variant="neutral"
     >
-      <Button
+      <button
         aria-atomic="true"
         aria-describedby="Terra.tags.hint.rollupTag"
+        aria-disabled={false}
         aria-label="Terra.tags.hint.rollupTag"
         aria-live="polite"
-        className="rollup-tag"
+        className="button neutral compact rollup-tag"
         data-terra-rollup-tag={true}
         data-terra-rollup-tag-show-focus-styles={true}
+        disabled={false}
         id="terra-rollup-tag-00000000-0000-0000-0000-000000000000"
-        isBlock={false}
-        isCompact={true}
-        isDisabled={false}
-        isIconOnly={false}
-        isReversed={false}
         onBlur={[Function]}
         onClick={[Function]}
+        onFocus={[Function]}
         onKeyDown={[Function]}
+        onKeyUp={[Function]}
         onMouseDown={[Function]}
-        refCallback={
-          Object {
-            "current": <button
-              aria-atomic="true"
-              aria-describedby="Terra.tags.hint.rollupTag"
-              aria-disabled="false"
-              aria-label="Terra.tags.hint.rollupTag"
-              aria-live="polite"
-              class="button neutral compact rollup-tag"
-              data-terra-rollup-tag="true"
-              data-terra-rollup-tag-show-focus-styles="true"
-              id="terra-rollup-tag-00000000-0000-0000-0000-000000000000"
-              type="button"
-            >
-              <span
-                class="button-label-win text-only"
-              >
-                <span
-                  class=""
-                >
-                  Terra.tags.label.showLess
-                </span>
-              </span>
-            </button>,
-          }
-        }
-        text="Terra.tags.label.showLess"
         type="button"
-        variant="neutral"
       >
-        <button
-          aria-atomic="true"
-          aria-describedby="Terra.tags.hint.rollupTag"
-          aria-disabled={false}
-          aria-label="Terra.tags.hint.rollupTag"
-          aria-live="polite"
-          className="button neutral compact rollup-tag"
-          data-terra-rollup-tag={true}
-          data-terra-rollup-tag-show-focus-styles={true}
-          disabled={false}
-          id="terra-rollup-tag-00000000-0000-0000-0000-000000000000"
-          onBlur={[Function]}
-          onClick={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          type="button"
+        <span
+          className="button-label-win text-only"
         >
           <span
-            className="button-label-win text-only"
+            className=""
           >
-            <span
-              className=""
-            >
-              Terra.tags.label.showLess
-            </span>
+            Terra.tags.label.showLess
           </span>
-        </button>
-      </Button>
-    </div>
+        </span>
+      </button>
+    </Button>
   </RollUpTag>
 </InjectIntl(RollUpTag)>
 `;
