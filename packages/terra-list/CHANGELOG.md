@@ -2,6 +2,42 @@
 
 ## Unreleased
 
+## 4.64.0 - (October 3, 2023)
+
+* Added
+  * Added arrow key navigation support for list items.
+
+## 4.63.0 - (September 26, 2023)
+
+* Added
+  * Added drag and drop icon for draggable list items.
+
+* Fixed
+  * Fixed position loss issue while dragging list item for `terra-list` inside `terra-slide-panel`.
+
+## 4.62.0 - (September 21, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.61.0 - (September 19, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.60.0 - (August 23, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+* Added
+  * Added drag and drop support for list items.
+
+## 4.59.0 - (August 1, 2023)
+
+* Changed
+  * Minor dependency version bump
+
 ## 4.58.0 - (June 14, 2023)
 
 * Fixed

@@ -2,6 +2,36 @@
 
 ## Unreleased
 
+## 2.86.0 - (October 3, 2023)
+
+* Added
+  * Added `hidePageCount` prop to hide page count provided by paginator.
+
+* Changed
+  * Updated all Paginator visually hidden text's aria-relevant attribute.
+
+## 2.85.0 - (September 19, 2023)
+
+* Added
+  * Added visually hidden text with meaningful contexts to help screen reader users understand when they navigate the pagination.
+
+* Changed
+  * Updated all Paginator reduced views to align with the default views styling.
+  * Updated the description of `ariaLabelledBy` and `ariaLabel` props.
+
+## 2.84.0 - (August 18, 2023)
+
+* Changed
+  * Minor dependency version bump.
+
+## 2.83.0 - (August 11, 2023)
+
+* Added
+  * Added optional props `ariaLabelledBy` and `ariaLabel` to provide ARIA contexts for the paginator.
+
+* Changed
+  * Updated Paginator button role to be link for screen reader usage.
+
 ## 2.82.0 - (February 15, 2023)
 
 * Changed

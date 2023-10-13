@@ -11,6 +11,12 @@ describe('Snapshots', () => {
     expect(searchField).toMatchSnapshot();
   });
 
+  it('renders a search field with a label', () => {
+    const searchField = shallowWithIntl(<SearchField groupName="TestGroup" isLabelVisible />).dive();
+    expect(searchField.find('label').text()).toEqual('TestGroup');
+    expect(searchField).toMatchSnapshot();
+  });
+
   it('renders a search field with a placeholder', () => {
     const searchField = shallowWithIntl(<SearchField placeholder="Test" />).dive();
     expect(searchField.find('input').prop('placeholder')).toEqual('Test');
@@ -40,7 +46,7 @@ describe('Snapshots', () => {
   it('renders a search field that displays as a block to fill its container', () => {
     const searchField = shallowWithIntl(<SearchField isBlock />).dive();
     searchField.instance().updateSearchText('Test');
-    expect(searchField.prop('className')).toContain('block');
+    expect(searchField.find('.search-field').prop('className')).toContain('block');
     expect(searchField).toMatchSnapshot();
   });
 
@@ -93,9 +99,8 @@ describe('Manual Search', () => {
     const onSearch = jest.fn();
     const searchField = shallowWithIntl(<SearchField onSearch={onSearch} />).dive();
     searchField.instance().updateSearchText('Te');
-
     expect(onSearch).not.toBeCalled();
-    searchField.childAt(1).simulate('click');
+    searchField.find('.search-field').childAt(1).simulate('click');
     expect(onSearch).toBeCalledTimes(1);
     expect(onSearch).toBeCalledWith('Te');
   });
@@ -125,7 +130,7 @@ describe('Manual Search', () => {
     searchField.setState({ searchText: 'T' });
 
     expect(onSearch).not.toBeCalled();
-    searchField.childAt(1).simulate('click');
+    searchField.find('.search-field').childAt(1).simulate('click');
     expect(onSearch).not.toBeCalled();
   });
 
@@ -135,7 +140,7 @@ describe('Manual Search', () => {
     searchField.setState({ searchText: 'Sear' });
 
     expect(onSearch).not.toBeCalled();
-    searchField.childAt(1).simulate('click');
+    searchField.find('.search-field').childAt(1).simulate('click');
     expect(onSearch).not.toBeCalled();
   });
 
@@ -143,7 +148,7 @@ describe('Manual Search', () => {
     const searchField = shallowWithIntl(<SearchField minimumSearchTextLength={5} />).dive();
     searchField.setState({ searchText: 'Searc' });
 
-    searchField.childAt(1).simulate('click'); // Verifies we do not attempt to call an undefined function.
+    searchField.find('.search-field').childAt(1).simulate('click'); // Verifies we do not attempt to call an undefined function.
   });
 });
 
@@ -175,7 +180,7 @@ describe('Auto Search', () => {
 
     expect(onSearch).not.toBeCalled();
 
-    searchField.childAt(1).simulate('click');
+    searchField.find('.search-field').childAt(1).simulate('click');
     expect(onSearch).toBeCalledWith('Te');
 
     jest.runAllTimers();
@@ -209,9 +214,8 @@ describe('Auto Search', () => {
 
   it('uses standard timeout for search delay when not provided', () => {
     const searchField = shallowWithIntl(<SearchField />).dive();
-
     searchField.find('.input').simulate('change', { target: {} });
-    expect(setTimeout).toBeCalledWith(expect.anything(), 250);
+    expect(setTimeout).toBeCalledWith(expect.anything(), 2500);
   });
 
   it('uses custom timeout for search delay when provided', () => {
@@ -219,11 +223,12 @@ describe('Auto Search', () => {
     const searchField = shallowWithIntl(<SearchField searchDelay={1000} onSearch={onSearch} />).dive();
 
     searchField.find('.input').simulate('change', { target: {} });
-
-    for (let i = 0; i < 3; i += 1) {
-      jest.advanceTimersByTime(250);
-      expect(onSearch).not.toBeCalled();
-    }
+    jest.advanceTimersByTime(2500);
+    expect(onSearch).not.toBeCalled();
+    jest.advanceTimersByTime(2500);
+    expect(onSearch).not.toBeCalled();
+    jest.advanceTimersByTime(2500);
+    expect(onSearch).not.toBeCalled();
 
     jest.advanceTimersByTime(1000);
     // 1000ms has been passed by jest by now

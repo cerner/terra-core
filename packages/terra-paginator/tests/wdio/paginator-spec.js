@@ -148,5 +148,15 @@ Terra.describeViewports('Controlled Paginator', ['large'], () => {
       $('#total-count-button').click();
       Terra.validates.element('custom page label with total count');
     });
+
+    it('should display custom page count with custom page label when hidePageCount is set to true', () => {
+      $('#hide-count-button').click();
+      Terra.validates.element('custom page label with custom page count');
+    });
+
+    it('should display progressive paginator with default page count when page label is not provided', () => {
+      $('#clear-page-lable-button').click();
+      Terra.validates.element('paginator with default page count');
+    });
   });
 });

@@ -302,7 +302,7 @@ describe('MenuUtil', () => {
         <OptGroup label="2">{options.slice(2, 5)}</OptGroup>,
       ];
 
-      expect(MenuUtil.findNext(group, '5')).toEqual(null);
+      expect(MenuUtil.findNext(group, '5')).toEqual('1');
     });
 
     it('should return null if there is no match', () => {

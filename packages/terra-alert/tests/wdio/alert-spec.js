@@ -72,6 +72,23 @@ Terra.describeViewports('Alert', ['tiny', 'large'], () => {
   });
 
   describe('Alert Long Text', () => {
+    it('focuses on show more button', () => {
+      browser.url('/raw/tests/cerner-terra-core-docs/alert/long-text-alert');
+      browser.keys(['Tab']);
+      expect($('button.button').isFocused).toBeTruthy();
+      Terra.validates.element('show more button focused');
+    });
+
+    it('open show hide upon button click', () => {
+      $('button.button').click();
+      Terra.validates.element('disclosed show hide');
+    });
+
+    it('close show hide', () => {
+      $('button.button').click();
+      Terra.validates.element('closed show hide');
+    });
+
     it('wraps naturally at high magnification', () => {
       browser.setWindowRect(0, 0, 100, 800);
       browser.url('/raw/tests/cerner-terra-core-docs/alert/long-text-alert');

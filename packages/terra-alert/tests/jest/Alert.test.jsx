@@ -10,9 +10,18 @@ import IconInformation from 'terra-icon/lib/icon/IconInformation';
 import IconSuccess from 'terra-icon/lib/icon/IconSuccess';
 import IconWarning from 'terra-icon/lib/icon/IconWarning';
 import Button from 'terra-button';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
+import { v4 as uuidv4 } from 'uuid';
 import Alert from '../../src/Alert';
 
-jest.mock('uuid', () => ({ v4: () => '00000000-0000-0000-0000-000000000000' }));
+let mockSpyUuid;
+beforeAll(() => {
+  mockSpyUuid = jest.spyOn(uuidv4, 'v4').mockReturnValue('00000000-0000-0000-0000-000000000000');
+});
+
+afterAll(() => {
+  mockSpyUuid.mockRestore();
+});
 
 describe('Alert with no props', () => {
   it('should render a default component', () => {
@@ -29,10 +38,10 @@ describe('Alert with no props', () => {
     const wrapper = shallowWithIntl(<Alert />).dive();
 
     const alertDiv = wrapper.find('div.alert-base');
-    const alertContentDiv = wrapper.find('div.body');
+    const alertFocusDiv = wrapper.find('div.focus-container');
     expect(alertDiv.prop('className')).toEqual('alert-base alert wide');
     expect(alertDiv.prop('role')).toEqual('alert');
-    expect(alertContentDiv.prop('tabIndex')).toEqual('-1');
+    expect(alertFocusDiv.prop('tabIndex')).toEqual('-1');
     expect(wrapper.find(IconAlert).length).toEqual(1);
     expect(wrapper.find('.title').text()).toEqual('Terra.alert.alert');
     expect(wrapper).toMatchSnapshot();
@@ -58,6 +67,20 @@ describe('Alert with props', () => {
     expect(alert.prop('disableAlertActionFocus')).toEqual(true);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should render an alert with provided title', () => {
+    const wrapper = shallowWithIntl(<Alert title="Custom Title" />).dive();
+    const alertTitle = wrapper.find('.title');
+
+    expect(alertTitle.prop('children')).toEqual(
+      [
+        <VisuallyHiddenText text="Terra.alert.alert," />,
+        'Custom Title',
+      ],
+    );
+    expect(alertTitle.text()).toEqual('<VisuallyHiddenText />Custom Title');
+    expect(wrapper).toMatchSnapshot();
+  });
 });
 
 describe('Dismissible Alert that includes actions section', () => {
@@ -65,10 +88,13 @@ describe('Dismissible Alert that includes actions section', () => {
     const mockOnDismiss = jest.fn();
     const wrapper = shallowWithIntl(<Alert onDismiss={mockOnDismiss}>This is a test</Alert>).dive();
 
-    expect(wrapper.find(Button).length).toEqual(1);
-    expect(wrapper.find(Button).prop('text')).toEqual('Terra.alert.dismiss');
-    expect(wrapper.find(Button).prop('onClick')).toEqual(mockOnDismiss);
-    expect(wrapper.find(Button).prop('variant')).toEqual('neutral');
+    const dismissButton = wrapper.find(Button);
+    expect(wrapper.find('.title').text()).toEqual('Terra.alert.alert');
+    expect(dismissButton.length).toEqual(1);
+    expect(dismissButton.prop('text')).toEqual('Terra.alert.dismiss');
+    expect(dismissButton.prop('onClick')).toEqual(mockOnDismiss);
+    expect(dismissButton.prop('variant')).toEqual('neutral');
+    expect(dismissButton.prop('aria-describedby')).toEqual('alert-title-00000000-0000-0000-0000-000000000000');
     expect(wrapper).toMatchSnapshot();
   });
 });
@@ -191,11 +217,20 @@ describe('Alert of type custom with custom title and text content', () => {
 
 describe('Alert of type info with custom title and HTML content', () => {
   it('should render an Alert component of type info with custom title and HTML content', () => {
-    const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.INFO} title="Gettysburg Address"><span>Four score and seven years ago . . .</span></Alert>);
+    const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.INFO} title="Gettysburg Address"><span>Four score and seven years ago . . .</span></Alert>).dive();
 
-    expect(wrapper.prop('title')).toEqual('Gettysburg Address');
-    expect(wrapper.prop('type')).toEqual('info');
-    expect(wrapper.find('span').text()).toEqual('Four score and seven years ago . . .');
+    const alertDiv = wrapper.find('div.alert-base');
+    expect(alertDiv.prop('className')).toEqual('alert-base info wide');
+    expect(alertDiv.prop('role')).toEqual('status');
+    expect(wrapper.find(IconInformation).length).toEqual(1);
+    expect(wrapper.find('.title').prop('children')).toEqual(
+      [
+        <VisuallyHiddenText text="Terra.alert.info," />,
+        'Gettysburg Address',
+      ],
+    );
+    expect(wrapper.find('.title').text()).toEqual('<VisuallyHiddenText />Gettysburg Address');
+    expect(wrapper.find('.section').find('span').text()).toEqual('Four score and seven years ago . . .');
     expect(wrapper).toMatchSnapshot();
   });
 });
@@ -218,7 +253,7 @@ describe('Alert of type success with an action button text content', () => {
   });
 });
 
-describe('Dismissable Alert of type custom with action button, custom title and text content', () => {
+describe('Dismissible Alert of type custom with action button, custom title and text content', () => {
   it('should render an Alert component of type custom with an action button', () => {
     const mockOnClick = jest.fn();
     const mockOnDismiss = jest.fn();
@@ -243,10 +278,10 @@ describe('Dismissable Alert of type custom with action button, custom title and 
   });
 });
 
-describe('Dismissible Alert', () => {
+describe('Notifications titles', () => {
   let wrapper;
 
-  describe('Custom Alert with no title prop', () => {
+  describe('Custom notification with no title prop', () => {
     beforeEach(() => {
       wrapper = shallowWithIntl(
         <Alert
@@ -258,18 +293,23 @@ describe('Dismissible Alert', () => {
         </Alert>,
       ).dive();
     });
-    it('should set the alert message ID', () => {
+    it('should set the notification message ID', () => {
       const alertContent = wrapper.find('.section');
       expect(alertContent.prop('id')).toEqual('alert-message-00000000-0000-0000-0000-000000000000');
     });
 
-    it('should set the dismiss button aria-describedby to the alert description', () => {
+    it('should have no title', () => {
+      const alertTitle = wrapper.find('.title');
+      expect(alertTitle.length).toEqual(0);
+    });
+
+    it('should set the dismiss button aria-describedby to the notification description', () => {
       const dismissButton = wrapper.find('Button');
       expect(dismissButton.prop('aria-describedby')).toEqual('alert-message-00000000-0000-0000-0000-000000000000');
     });
   });
 
-  describe('Custom Alert with custom title', () => {
+  describe('Custom notification with custom title', () => {
     beforeEach(() => {
       wrapper = shallowWithIntl(
         <Alert
@@ -293,13 +333,19 @@ describe('Dismissible Alert', () => {
       expect(alertTitle.prop('id')).toEqual('alert-title-00000000-0000-0000-0000-000000000000');
     });
 
+    it('should set the alert title', () => {
+      const alertTitle = wrapper.find('.title');
+      expect(alertTitle.prop('children')).toEqual(['', 'Help!']);
+      expect(alertTitle.text()).toEqual('Help!');
+    });
+
     it('should set the dismiss button aria-describedby to the alert title', () => {
       const dismissButton = wrapper.find('Button');
       expect(dismissButton.prop('aria-describedby')).toEqual('alert-title-00000000-0000-0000-0000-000000000000');
     });
   });
 
-  describe('Success Alert with no title prop', () => {
+  describe('Success notification with no title prop', () => {
     beforeEach(() => {
       wrapper = shallowWithIntl(
         <Alert
@@ -311,23 +357,29 @@ describe('Dismissible Alert', () => {
       ).dive();
     });
 
-    it('should set the alert message ID', () => {
+    it('should set the notification message ID', () => {
       const alertContent = wrapper.find('.section');
       expect(alertContent.prop('id')).toEqual('alert-message-00000000-0000-0000-0000-000000000000');
     });
 
-    it('should set the alert title ID', () => {
+    it('should set the notification title ID', () => {
       const alertTitle = wrapper.find('.title');
       expect(alertTitle.prop('id')).toEqual('alert-title-00000000-0000-0000-0000-000000000000');
     });
 
-    it('should set the dismiss button aria-describedby to the alert title', () => {
+    it('should use the default title', () => {
+      const alertTitle = wrapper.find('.title');
+      expect(alertTitle.prop('children')).toEqual([undefined, 'Terra.alert.success']);
+      expect(alertTitle.text()).toEqual('Terra.alert.success');
+    });
+
+    it('should set the dismiss button aria-describedby to the notification title', () => {
       const dismissButton = wrapper.find('Button');
       expect(dismissButton.prop('aria-describedby')).toEqual('alert-title-00000000-0000-0000-0000-000000000000');
     });
   });
 
-  describe('Success Alert with blank title', () => {
+  describe('Success notification with blank title', () => {
     beforeEach(() => {
       wrapper = shallowWithIntl(
         <Alert
@@ -342,20 +394,61 @@ describe('Dismissible Alert', () => {
 
     it('should use the default title', () => {
       const alertTitle = wrapper.find('.title');
-      expect(alertTitle.prop('children')).toEqual('Terra.alert.success');
+      expect(alertTitle.prop('children')).toEqual(['', 'Terra.alert.success']);
+      expect(alertTitle.text()).toEqual('Terra.alert.success');
     });
 
-    it('should set the alert message ID', () => {
+    it('should set the notification message ID', () => {
       const alertContent = wrapper.find('.section');
       expect(alertContent.prop('id')).toEqual('alert-message-00000000-0000-0000-0000-000000000000');
     });
 
-    it('should set the alert title ID', () => {
+    it('should set the notification title ID', () => {
       const alertTitle = wrapper.find('.title');
       expect(alertTitle.prop('id')).toEqual('alert-title-00000000-0000-0000-0000-000000000000');
     });
 
-    it('should set the dismiss button aria-describedby to the alert title', () => {
+    it('should set the dismiss button aria-describedby to the notification title', () => {
+      const dismissButton = wrapper.find('Button');
+      expect(dismissButton.prop('aria-describedby')).toEqual('alert-title-00000000-0000-0000-0000-000000000000');
+    });
+  });
+
+  describe('Success notification with title', () => {
+    beforeEach(() => {
+      wrapper = shallowWithIntl(
+        <Alert
+          type={Alert.Opts.Types.SUCCESS}
+          title="Custom Success Title"
+          onDismiss={() => { }}
+        >
+          This is a success alert.
+        </Alert>,
+      ).dive();
+    });
+
+    it('should use the custom title', () => {
+      const alertTitle = wrapper.find('.title');
+      expect(alertTitle.prop('children')).toEqual(
+        [
+          <VisuallyHiddenText text="Terra.alert.success," />,
+          'Custom Success Title',
+        ],
+      );
+      expect(alertTitle.text()).toEqual('<VisuallyHiddenText />Custom Success Title');
+    });
+
+    it('should set the notification message ID', () => {
+      const alertContent = wrapper.find('.section');
+      expect(alertContent.prop('id')).toEqual('alert-message-00000000-0000-0000-0000-000000000000');
+    });
+
+    it('should set the notification title ID', () => {
+      const alertTitle = wrapper.find('.title');
+      expect(alertTitle.prop('id')).toEqual('alert-title-00000000-0000-0000-0000-000000000000');
+    });
+
+    it('should set the dismiss button aria-describedby to the notification title', () => {
       const dismissButton = wrapper.find('Button');
       expect(dismissButton.prop('aria-describedby')).toEqual('alert-title-00000000-0000-0000-0000-000000000000');
     });

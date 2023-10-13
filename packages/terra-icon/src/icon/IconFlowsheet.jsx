@@ -13,7 +13,7 @@ const SvgIcon = (customProps) => {
 };
 
 SvgIcon.displayName = "IconFlowsheet";
-SvgIcon.defaultProps = {"className":"","viewBox":"0 0 48 48","xmlns":"http://www.w3.org/2000/svg","data-name":"Layer 1","isBidi":true};
+SvgIcon.defaultProps = {"viewBox":"0 0 48 48","data-name":"Layer 1","xmlns":"http://www.w3.org/2000/svg"};
 
 export default SvgIcon;
 /* eslint-enable */

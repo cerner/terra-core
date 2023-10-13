@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import Button from 'terra-button';
+
 import Alert from 'terra-alert';
+import Button from 'terra-button';
 
 const AlertActionFocusDemo = () => {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,24 +1,27 @@
 import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
-import ResponsiveElement from 'terra-responsive-element';
-import Button from 'terra-button';
 import { injectIntl } from 'react-intl';
-import IconAlert from 'terra-icon/lib/icon/IconAlert';
-import IconError from 'terra-icon/lib/icon/IconError';
-import IconWarning from 'terra-icon/lib/icon/IconWarning';
-import IconGapChecking from 'terra-icon/lib/icon/IconGapChecking';
-import IconDiamondSymbol from 'terra-icon/lib/icon/IconDiamondSymbol';
-import IconInformation from 'terra-icon/lib/icon/IconInformation';
-import IconSuccess from 'terra-icon/lib/icon/IconSuccess';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
-import ThemeContext from 'terra-theme-context';
 import { v4 as uuidv4 } from 'uuid';
+
+import ResponsiveElement from 'terra-responsive-element';
+import Button from 'terra-button';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
+import {
+  IconAlert,
+  IconError,
+  IconWarning,
+  IconGapChecking,
+  IconDiamondSymbol,
+  IconInformation,
+  IconSuccess,
+} from 'terra-icon';
+import ThemeContext from 'terra-theme-context';
 
 import styles from './Alert.module.scss';
 
 const cx = classNamesBind.bind(styles);
-
 const AlertTypes = {
   ALERT: 'alert',
   ERROR: 'error',
@@ -71,12 +74,15 @@ const propTypes = {
    */
   role: PropTypes.string,
   /**
-   * The title for the notification banner which will be bolded.
+   * The optional custom title for the notification banner which will be bolded.
+   * Overrides the provided default title for all notification types (excludes `custom`).
+   * Title should be provided for `custom` notification banners.
    */
   title: PropTypes.string,
   /**
    * The type of notification banner to be rendered. One of `alert`, `error`, `warning`, `unsatisfied`, `unverified`, `advisory`,
    * `info`, `success`, or `custom`.
+   * A default title is provided for all notification types except `custom`.
    */
   type: PropTypes.oneOf([
     AlertTypes.ALERT,
@@ -160,6 +166,9 @@ const Alert = ({
     { 'body-narrow': isNarrow && (onDismiss || action) },
   );
 
+  const focusContainerClassName = cx('focus-container');
+  const contentContainerClassName = cx('content-container');
+
   const alertId = uuidv4();
   const alertTitleId = `alert-title-${alertId}`;
   const alertMessageId = `alert-message-${alertId}`;
@@ -197,6 +206,7 @@ const Alert = ({
     <div id={alertMessageId} className={alertSectionClassName}>
       {(title || defaultTitle) && (
         <strong id={alertTitleId} className={cx('title')}>
+          {title && defaultTitle && <VisuallyHiddenText text={`${defaultTitle},`} />}
           {title || defaultTitle}
         </strong>
       )}
@@ -227,9 +237,12 @@ const Alert = ({
         {...customProps}
         className={alertClassNames}
       >
-        <div className={bodyClassNameForParent} ref={alertBodyRef} tabIndex="-1">
-          {getAlertIcon(type, customIcon)}
-          {alertMessageContent}
+        <div className={bodyClassNameForParent}>
+          <div className={focusContainerClassName} ref={alertBodyRef} tabIndex="-1" />
+          <div className={contentContainerClassName}>
+            {getAlertIcon(type, customIcon)}
+            {alertMessageContent}
+          </div>
         </div>
         {actionsSection}
       </div>

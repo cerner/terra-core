@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import Alert from 'terra-alert';
 import Button from 'terra-button';
-import IconHelp from 'terra-icon/lib/icon/IconHelp';
+import { IconHelp } from 'terra-icon';
 import Input from 'terra-form-input';
 import MultiSelect from 'terra-form-select/lib/MultiSelect';
 import NativeSelect from 'terra-form-select/lib/native-select/NativeSelect';

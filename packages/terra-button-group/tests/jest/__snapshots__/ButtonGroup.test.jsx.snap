@@ -24,7 +24,6 @@ exports[`correctly applies the theme context className 1`] = `
         key="1"
         onClick={[Function]}
         onKeyDown={[Function]}
-        role="button"
         text="Button 1"
       >
         <Button
@@ -41,7 +40,6 @@ exports[`correctly applies the theme context className 1`] = `
           onFocus={[Function]}
           onKeyDown={[Function]}
           onKeyUp={[Function]}
-          role="button"
           text="Button 1"
           type="button"
           variant="neutral"
@@ -58,11 +56,10 @@ exports[`correctly applies the theme context className 1`] = `
             onKeyDown={[Function]}
             onKeyUp={[Function]}
             onMouseDown={[Function]}
-            role="button"
             type="button"
           >
             <span
-              className="button-label text-only"
+              className="button-label-win text-only"
             >
               <span
                 className=""
@@ -80,7 +77,6 @@ exports[`correctly applies the theme context className 1`] = `
         key="2"
         onClick={[Function]}
         onKeyDown={[Function]}
-        role="button"
         text="Button 2"
       >
         <Button
@@ -97,7 +93,6 @@ exports[`correctly applies the theme context className 1`] = `
           onFocus={[Function]}
           onKeyDown={[Function]}
           onKeyUp={[Function]}
-          role="button"
           text="Button 2"
           type="button"
           variant="neutral"
@@ -114,11 +109,10 @@ exports[`correctly applies the theme context className 1`] = `
             onKeyDown={[Function]}
             onKeyUp={[Function]}
             onMouseDown={[Function]}
-            role="button"
             type="button"
           >
             <span
-              className="button-label text-only"
+              className="button-label-win text-only"
             >
               <span
                 className=""
@@ -175,6 +169,7 @@ exports[`should apply correct role for single select button group 1`] = `
     onClick={[Function]}
     onKeyDown={[Function]}
     role="radio"
+    tabIndex="-1"
     text="Button 1"
   />
   <ButtonGroupButton
@@ -185,6 +180,7 @@ exports[`should apply correct role for single select button group 1`] = `
     onClick={[Function]}
     onKeyDown={[Function]}
     role="radio"
+    tabIndex="-1"
     text="Button 2"
   />
 </div>
@@ -202,7 +198,6 @@ exports[`should only render enabled buttons as toggle buttons 1`] = `
     key="1"
     onClick={[Function]}
     onKeyDown={[Function]}
-    role="button"
     text="Button 1"
   />
   <ButtonGroupButton
@@ -212,7 +207,6 @@ exports[`should only render enabled buttons as toggle buttons 1`] = `
     key="2"
     onClick={[Function]}
     onKeyDown={[Function]}
-    role="button"
     text="Button 2"
   />
   <ButtonGroupButton
@@ -221,7 +215,6 @@ exports[`should only render enabled buttons as toggle buttons 1`] = `
     key="dis"
     onClick={[Function]}
     onKeyDown={[Function]}
-    role="button"
     text="Disabled Button"
   />
 </div>
@@ -239,7 +232,6 @@ exports[`should render a block button group with children 1`] = `
     key="1"
     onClick={[Function]}
     onKeyDown={[Function]}
-    role="button"
     text="Button 1"
   />
   <ButtonGroupButton
@@ -249,7 +241,6 @@ exports[`should render a block button group with children 1`] = `
     key="2"
     onClick={[Function]}
     onKeyDown={[Function]}
-    role="button"
     text="Button 2"
   />
   <ButtonGroupButton
@@ -259,7 +250,6 @@ exports[`should render a block button group with children 1`] = `
     key="3"
     onClick={[Function]}
     onKeyDown={[Function]}
-    role="button"
     text="Button 3"
   />
 </div>
@@ -277,7 +267,6 @@ exports[`should render a button group with children 1`] = `
     key="1"
     onClick={[Function]}
     onKeyDown={[Function]}
-    role="button"
     text="Button 1"
   />
 </div>
@@ -295,7 +284,6 @@ exports[`should render a button group with children selected 1`] = `
     key="1"
     onClick={[Function]}
     onKeyDown={[Function]}
-    role="button"
     text="Button 1"
   />
   <ButtonGroupButton
@@ -305,7 +293,6 @@ exports[`should render a button group with children selected 1`] = `
     key="2"
     onClick={[Function]}
     onKeyDown={[Function]}
-    role="button"
     text="Button 2"
   />
 </div>
@@ -330,7 +317,6 @@ exports[`should select a button 1`] = `
     key="1"
     onClick={[Function]}
     onKeyDown={[Function]}
-    role="button"
     text="Button 1"
   />
   <ButtonGroupButton
@@ -340,7 +326,6 @@ exports[`should select a button 1`] = `
     key="2"
     onClick={[Function]}
     onKeyDown={[Function]}
-    role="button"
     text="Button 2"
   />
 </div>
@@ -358,7 +343,6 @@ exports[`should select a button 2`] = `
     key="1"
     onClick={[Function]}
     onKeyDown={[Function]}
-    role="button"
     text="Button 1"
   />
   <ButtonGroupButton
@@ -368,7 +352,6 @@ exports[`should select a button 2`] = `
     key="2"
     onClick={[Function]}
     onKeyDown={[Function]}
-    role="button"
     text="Button 2"
   />
 </div>

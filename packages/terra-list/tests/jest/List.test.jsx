@@ -135,7 +135,7 @@ it('should render with ariaDescription', () => {
   const items = [item1, item2, item3, item4, item5];
   const shallowComponent = shallowWithIntl(
     <List ariaDescription="Navigate this list using the arrow keys.">{items}</List>,
-  );
+  ).dive();
   expect(shallowComponent).toMatchSnapshot();
 });
 

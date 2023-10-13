@@ -95,6 +95,8 @@ Cerner Corporation
 - Steven Mason [@smason0]
 - Alla Doroshkevych [@adoroshk]
 - Quan Le [@leducquan]
+- Yixuan Chen [@chenyixuan625]
+- Madalina Stelea [@MadalinaStelea]
 
 Community
 
@@ -217,3 +219,5 @@ Community
 [@smason0]: https://github.com/smason0
 [@adoroshk]: https://github.com/adoroshk
 [@leducquan]: https://github.com/leducquan
+[@chenyixuan625]: https://github.com/chenyixuan625
+[@MadalinaStelea]: https://github.com/MadalinaStelea

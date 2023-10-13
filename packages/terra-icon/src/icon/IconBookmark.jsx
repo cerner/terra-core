@@ -7,13 +7,13 @@ const SvgIcon = (customProps) => {
 
   return (
     <IconBase {...attributes}>
-      <path d="M24 34l14 14V0H10v48z" ></path>
+      <path d="m24 34 14 14V0H10v48z" ></path>
     </IconBase>
   );
 };
 
 SvgIcon.displayName = "IconBookmark";
-SvgIcon.defaultProps = {"viewBox":"0 0 48 48","xmlns":"http://www.w3.org/2000/svg","data-name":"Layer 1"};
+SvgIcon.defaultProps = {"viewBox":"0 0 48 48","data-name":"Layer 1","xmlns":"http://www.w3.org/2000/svg"};
 
 export default SvgIcon;
 /* eslint-enable */

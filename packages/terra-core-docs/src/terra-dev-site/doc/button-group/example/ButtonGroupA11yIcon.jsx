@@ -1,6 +1,5 @@
 import React from 'react';
-import IconPrinter from 'terra-icon/lib/icon/IconPrinter';
-import IconSave from 'terra-icon/lib/icon/IconSave';
+import { IconPrinter, IconSave } from 'terra-icon';
 import ButtonGroup from 'terra-button-group';
 
 const iconPrint = <IconPrinter a11yLabel="Print" />;

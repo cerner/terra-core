@@ -155,7 +155,6 @@ exports[`Menu correctly applies the theme context className 1`] = `
           >
             <li
               aria-disabled={false}
-              aria-label="Terra.form.select.expanded display "
               aria-selected={true}
               className="option is-active is-default is-selected orion-fusion-theme"
               data-select-active={true}
@@ -168,11 +167,25 @@ exports[`Menu correctly applies the theme context className 1`] = `
               role="option"
               tabIndex="0"
             >
+              <VisuallyHiddenText
+                text="Terra.form.select.expanded"
+              >
+                <span
+                  className="visually-hidden-text"
+                >
+                  Terra.form.select.expanded
+                </span>
+              </VisuallyHiddenText>
               <span
                 className="display"
               >
                 display
               </span>
+              <VisuallyHiddenText>
+                <span
+                  className="visually-hidden-text"
+                />
+              </VisuallyHiddenText>
             </li>
           </Option>
         </InjectIntl(Option)>

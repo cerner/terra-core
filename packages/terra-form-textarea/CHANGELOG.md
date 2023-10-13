@@ -1,6 +1,24 @@
 # Changelog
 
 ## Unreleased
+
+## 5.28.0 - (September 21, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 5.27.0 - (September 19, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 5.26.0 - (August 23, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 5.25.0 - (August 1, 2023)
+
 * Added
   * Added support for `aria-invalid` through the `isInvalid` prop to mark what field is invalid for assistive technology.
 

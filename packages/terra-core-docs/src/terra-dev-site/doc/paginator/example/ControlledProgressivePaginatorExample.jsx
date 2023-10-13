@@ -10,8 +10,8 @@ const cx = classNames.bind(styles);
 const totalCount = 450;
 
 const buildPage = () => {
-  const fullContent = [<p>This example used to  separating content into discrete pages.</p>,
-    <p>selectedPage must be managed through the state of a parent component, and passed into this paginator through props.</p>];
+  const fullContent = [<p>This example is used to separate content into discrete pages.</p>,
+    <p>The selectedPage must be managed through the state of a parent component, and passed into this paginator through props.</p>];
 
   return (
     fullContent
@@ -39,12 +39,11 @@ class ProgressivePaginatorExample extends React.Component {
       <div className={cx('paginator-wrapper')}>
         <Dialog
           header={(
-            <h1>
-              Page
-              {this.state.currentPage}
+            <h1 id="controlled_progressive_paginator_header_id">
+              Controlled Progressive Paginator Example
             </h1>
 )}
-          footer={<ControlledProgressivePaginator onPageChange={this.changePages} selectedPage={this.state.currentPage} totalCount={totalCount} itemCountPerPage={10} />}
+          footer={<ControlledProgressivePaginator onPageChange={this.changePages} selectedPage={this.state.currentPage} totalCount={totalCount} itemCountPerPage={10} ariaLabelledBy="controlled_paginator_header_id" />}
         >
           <div>
             <Button text="Set Page to 9" onClick={() => { this.setState({ currentPage: 9 }); }} />

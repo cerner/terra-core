@@ -11,7 +11,7 @@ exports[`ToggleButton should render a default toggle-button 1`] = `
     type="button"
   >
     <span
-      class="button-label text-and-icon"
+      class="button-label-win text-and-icon"
     >
       <span
         class="icon icon-first"
@@ -20,7 +20,7 @@ exports[`ToggleButton should render a default toggle-button 1`] = `
           class="icon icon-svg"
         >
           <svg
-            class="tui-Icon icon is-bidi"
+            class="tui-Icon icon"
             data-name="Layer 1"
             focusable="false"
             height="1em"
@@ -30,7 +30,7 @@ exports[`ToggleButton should render a default toggle-button 1`] = `
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
+              d="M37.7 24 14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
             />
           </svg>
         </span>
@@ -60,7 +60,7 @@ exports[`ToggleButton should render an animated toggle-button 1`] = `
     type="button"
   >
     <span
-      class="button-label text-and-icon"
+      class="button-label-win text-and-icon"
     >
       <span
         class="icon icon-first"
@@ -69,7 +69,7 @@ exports[`ToggleButton should render an animated toggle-button 1`] = `
           class="icon icon-svg"
         >
           <svg
-            class="tui-Icon icon is-bidi"
+            class="tui-Icon icon"
             data-name="Layer 1"
             focusable="false"
             height="1em"
@@ -79,7 +79,7 @@ exports[`ToggleButton should render an animated toggle-button 1`] = `
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
+              d="M37.7 24 14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
             />
           </svg>
         </span>
@@ -121,7 +121,7 @@ exports[`ToggleButton should render an icon only toggle-button 1`] = `
     type="button"
   >
     <span
-      class="button-label icon-only"
+      class="button-label-win icon-only"
     >
       <span
         class="icon"
@@ -130,7 +130,7 @@ exports[`ToggleButton should render an icon only toggle-button 1`] = `
           class="icon icon-svg"
         >
           <svg
-            class="tui-Icon icon is-bidi"
+            class="tui-Icon icon"
             data-name="Layer 1"
             focusable="false"
             height="1em"
@@ -140,7 +140,7 @@ exports[`ToggleButton should render an icon only toggle-button 1`] = `
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
+              d="M37.7 24 14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
             />
           </svg>
         </span>
@@ -165,7 +165,7 @@ exports[`ToggleButton should render an initially open toggle-button 1`] = `
     type="button"
   >
     <span
-      class="button-label text-and-icon"
+      class="button-label-win text-and-icon"
     >
       <span
         class="icon icon-first"
@@ -174,7 +174,7 @@ exports[`ToggleButton should render an initially open toggle-button 1`] = `
           class="icon icon-svg"
         >
           <svg
-            class="tui-Icon icon is-bidi"
+            class="tui-Icon icon"
             data-name="Layer 1"
             focusable="false"
             height="1em"
@@ -184,7 +184,7 @@ exports[`ToggleButton should render an initially open toggle-button 1`] = `
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
+              d="M37.7 24 14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
             />
           </svg>
         </span>
@@ -210,9 +210,7 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
   closedButtonText="Show"
   icon={
     <IconChevronRight
-      className=""
       data-name="Layer 1"
-      isBidi={true}
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
@@ -232,9 +230,7 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
           className="icon"
         >
           <IconChevronRight
-            className=""
             data-name="Layer 1"
-            isBidi={true}
             viewBox="0 0 48 48"
             xmlns="http://www.w3.org/2000/svg"
           />
@@ -264,7 +260,7 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
         type="button"
       >
         <span
-          className="button-label text-and-icon"
+          className="button-label-win text-and-icon"
         >
           <span
             className="icon icon-first"
@@ -273,25 +269,22 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
               className="icon icon-svg"
             >
               <IconChevronRight
-                className=""
                 data-name="Layer 1"
-                isBidi={true}
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <IconBase
-                  className=""
                   data-name="Layer 1"
                   focusable="false"
                   height="1em"
-                  isBidi={true}
+                  isBidi={false}
                   isSpin={false}
                   viewBox="0 0 48 48"
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <svg
-                    className="tui-Icon icon is-bidi"
+                    className="tui-Icon icon"
                     data-name="Layer 1"
                     focusable="false"
                     height="1em"
@@ -301,7 +294,7 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
+                      d="M37.7 24 14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
                     />
                   </svg>
                 </IconBase>
@@ -342,9 +335,7 @@ exports[`ToggleButton should set icon prop correctly 1`] = `
         className="icon"
       >
         <IconChevronRight
-          className=""
           data-name="Layer 1"
-          isBidi={true}
           viewBox="0 0 48 48"
           xmlns="http://www.w3.org/2000/svg"
         />
@@ -380,8 +371,6 @@ exports[`ToggleButton should set icon prop correctly with custom icon 1`] = `
         className="icon"
       >
         <IconCaretRight
-          className=""
-          isBidi={true}
           viewBox="0 0 48 48"
           xmlns="http://www.w3.org/2000/svg"
         />
@@ -417,9 +406,7 @@ exports[`ToggleButton should set onClose prop correctly 1`] = `
         className="icon"
       >
         <IconChevronRight
-          className=""
           data-name="Layer 1"
-          isBidi={true}
           viewBox="0 0 48 48"
           xmlns="http://www.w3.org/2000/svg"
         />
@@ -455,9 +442,7 @@ exports[`ToggleButton should set onOpen prop correctly 1`] = `
         className="icon"
       >
         <IconChevronRight
-          className=""
           data-name="Layer 1"
-          isBidi={true}
           viewBox="0 0 48 48"
           xmlns="http://www.w3.org/2000/svg"
         />

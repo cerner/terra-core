@@ -1,12 +1,8 @@
 {
   "name": "terra-icon",
-  "version": "3.54.0",
+  "version": "3.57.1",
   "description": "The terra-icon component is used to visually represent a literal or symbolic object intended to initiate an action, communicate a status, or navigate the workflow.",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cerner/terra-core.git",
-    "directory": "packages/terra-icon"
-  },
+  "main": "lib/index.js",
   "keywords": [
     "Cerner",
     "Terra",
@@ -14,16 +10,49 @@
     "Icon",
     "UI"
   ],
-  "author": "Cerner Corporation",
-  "license": "Apache-2.0",
+  "homepage": "https://github.com/cerner/terra-core#readme",
   "bugs": {
     "url": "https://github.com/cerner/terra-core/issues"
   },
-  "homepage": "https://github.com/cerner/terra-core#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cerner/terra-core.git",
+    "directory": "packages/terra-icon"
+  },
+  "license": "Apache-2.0",
+  "author": "Cerner Corporation",
+  "scripts": {
+    "clean:all-icons": "find . -name \\all_icons.png -type f -exec rm -f {} \\;",
+    "precompile": "rm -rf lib",
+    "compile": "babel --root-mode upward src --out-dir lib --copy-files",
+    "compilescripts": "npm run compilescripts:clean && npm run compilescripts:build",
+    "compilescripts:build": "babel --root-mode upward scripts/src --out-dir scripts/lib --copy-files",
+    "compilescripts:clean": "rm -rf scripts/lib",
+    "generate-example": "node scripts/lib/generate-example/index.js",
+    "generate-icons": "node scripts/lib/generate-icons/index.js",
+    "generate-json": "node scripts/lib/generate-json/index.js",
+    "jest": "jest --config ../../jest.config.js",
+    "lint": "npm run lint:js && npm run lint:scss",
+    "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
+    "lint:scss": "stylelint src/**/*.scss",
+    "migrate-csv": "node scripts/lib/migrate-csv/index.js",
+    "migrate-ocs-icons": "npm run compilescripts && npm run migrate-csv && npm run migrate-svg && npm run generate-json && npm run generate-icons && npm run generate-example",
+    "migrate-svg": "node scripts/lib/migrate-svg/index.js",
+    "test": "npm run lint && npm run jest && npm run wdio",
+    "wdio": "npm run wdio-default && npm run wdio-lowlight && npm run wdio-fusion",
+    "wdio-default": "cd ../.. && terra wdio",
+    "wdio-fusion": "cd ../.. && terra wdio --themes orion-fusion-theme",
+    "wdio-lowlight": "cd ../.. && terra wdio --themes clinical-lowlight-theme"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "prop-types": "^15.5.8",
+    "terra-theme-context": "^1.0.0"
+  },
   "devDependencies": {
     "csvtojson": "^2.0.8",
     "jsdom": "^21.0.0",
-    "one-cerner-style-icons": "https://github.com/cerner/one-cerner-style-icons/archive/v1.50.0.tar.gz",
+    "one-cerner-style-icons": "https://github.com/cerner/one-cerner-style-icons/archive/v1.51.0.tar.gz",
     "shelljs": "^0.8.2",
     "svgo": "^3.0.2"
   },
@@ -31,33 +60,5 @@
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
     "react-intl": ">=2.8.0 <6.0.0"
-  },
-  "dependencies": {
-    "classnames": "^2.2.5",
-    "prop-types": "^15.5.8",
-    "terra-theme-context": "^1.0.0"
-  },
-  "scripts": {
-    "clean:all-icons": "find . -name \\all_icons.png -type f -exec rm -f {} \\;",
-    "compilescripts": "npm run compilescripts:clean && npm run compilescripts:build",
-    "compilescripts:clean": "rm -rf scripts/lib",
-    "compilescripts:build": "babel --root-mode upward scripts/src --out-dir scripts/lib --copy-files",
-    "migrate-csv": "node scripts/lib/migrate-csv/index.js",
-    "migrate-svg": "node scripts/lib/migrate-svg/index.js",
-    "generate-json": "node scripts/lib/generate-json/index.js",
-    "generate-icons": "node scripts/lib/generate-icons/index.js",
-    "generate-example": "node scripts/lib/generate-example/index.js",
-    "migrate-ocs-icons": "npm run compilescripts && npm run migrate-csv && npm run migrate-svg && npm run generate-json && npm run generate-icons && npm run generate-example",
-    "compile": "babel --root-mode upward src --out-dir lib --copy-files",
-    "lint": "npm run lint:js && npm run lint:scss",
-    "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
-    "lint:scss": "stylelint src/**/*.scss",
-    "precompile": "rm -rf lib",
-    "test": "npm run lint && npm run jest && npm run wdio",
-    "jest": "jest --config ../../jest.config.js",
-    "wdio-default": "cd ../.. && terra wdio",
-    "wdio-lowlight": "cd ../.. && terra wdio --themes clinical-lowlight-theme",
-    "wdio-fusion": "cd ../.. && terra wdio --themes orion-fusion-theme",
-    "wdio": "npm run wdio-default && npm run wdio-lowlight && npm run wdio-fusion"
   }
 }

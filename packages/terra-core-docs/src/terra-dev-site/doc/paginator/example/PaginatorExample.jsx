@@ -47,12 +47,11 @@ class PaginatorExample extends React.Component {
       <div className={cx('paginator-wrapper')}>
         <Dialog
           header={(
-            <h1>
-              Page
-              {this.state.currentPage}
+            <h1 id="paginator_header_id">
+              Paginator Example
             </h1>
 )}
-          footer={<Paginator onPageChange={this.changePages} selectedPage={1} totalCount={totalCount} itemCountPerPage={10} />}
+          footer={<Paginator onPageChange={this.changePages} selectedPage={this.state.currentPage} totalCount={totalCount} itemCountPerPage={10} ariaLabelledBy="paginator_header_id" />}
         >
           {this.state.content}
         </Dialog>

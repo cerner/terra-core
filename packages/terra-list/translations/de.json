@@ -1,4 +1,9 @@
 {
   "Terra.list.singleSelect": "Einzelauswahlliste. Drücken Sie die Eingabetaste oder die Leertaste, um Elemente auszuwählen oder die Auswahl aufzuheben.",
-  "Terra.list.multiSelect": "Mehrfachauswahlliste. Drücken Sie die Eingabetaste oder die Leertaste, um Elemente auszuwählen oder die Auswahl aufzuheben."
+  "Terra.list.multiSelect": "Mehrfachauswahlliste. Drücken Sie die Eingabetaste oder die Leertaste, um Elemente auszuwählen oder die Auswahl aufzuheben.",
+  "Terra.list.lift": "Sie haben ein Element in Position {startPosition} hochgezogen. Pfeiltasten verwenden, um das Element in eine neue Position zu ziehen. Leertaste drücken, um die Position des Elements zu bestimmen oder Esc-Taste, um abzubrechen.",
+  "Terra.list.drag": "Sie haben das Element von Position {startPosition} nach Position {endPosition} verschoben.",
+  "Terra.list.cancelDrag": "Verschiebung abgebrochen. Das Element wurde zurück an seine Ausgangsposition {startPosition} verschoben.",
+  "Terra.list.drop": "Sie haben das Element abgelegt. Sie haben das Element von Position {startPosition} nach Position {endPosition} verschoben.",
+  "Terra.list.focus": "Leertaste drücken, um mit dem Ziehen zu beginnen. Beim Ziehen können Sie die Pfeiltasten verwenden, um das Element zu verschieben, und die Esc-Taste, um abzubrechen. Stellen Sie sicher, dass Ihre Sprachausgabe im Fokus- oder Formularmodus ist."
 }

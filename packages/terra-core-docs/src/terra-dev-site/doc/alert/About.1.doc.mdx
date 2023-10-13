@@ -13,9 +13,9 @@ import CustomExample from './example/CustomExample?dev-site-example';
 import LongTextExample from './example/LongTextExample?dev-site-example';
 import ActionExample from './example/ActionExample?dev-site-example';
 import DismissibleExample from './example/DismissibleExample?dev-site-example';
-import ActionAndDismissibleExample from './example/ActionAndDismissibleExample?dev-site-example';
+import LiveRegionsExampleCode from './example/LiveRegionsExampleCode';
 
-import AlertPropsTable from 'terra-alert/src/Alert?dev-site-props-table';
+import AlertPropsTable from 'terra-alert/lib/Alert?dev-site-props-table';
 
 <Badge />
 
@@ -73,40 +73,18 @@ For further guidance, please view the full [Accessibility Guide](./accessibility
 <Notice variant="important" ariaLevel="3">
 
 - The `alert` notification type will seize keyboard focus by default when an action element is present. This behavior should only be used when absolutely necessary to interrupt the user's workflow.
-- Custom notification banners should always have a title provided to the `title` prop.
 
 </Notice>
+
+#### Accessibility Guidance: Titles
+- Notification banners of type `custom` should always have a title provided to the `title` prop.
+- All other notification types will provide a default title. The `title` prop will override the default title and should be avoided.
 
 #### Accessibility Guidance: Live regions
 - For less critical notifications (non-alerts), the notification banner should be in an `aria-live="polite"` region. See example code below.
 - Avoid mixing critical alert notifications and less critical notifications in the same region.
 
-<div aria-label="Example code">
-
-    import Alert from 'terra-alert';
-
-    <>
-        // This less critical notification should be in polite aria-live region so screen reader users are notified.
-        <div aria-live="polite">
-            {isOpen && (
-                <Alert type="success">
-                    This notification is a less critical and should be polite.
-                </Alert>
-            )}
-        </div>
-
-        // Alert notifications are implicitly assertive, no aria-live needed
-        // It is recommended to keep these separate from polite aria-live regions.
-        <div>
-            {isOpen && (
-                <Alert type="alert">
-                    This notification is a critical alert that is interruptive.
-                </Alert>
-            )}
-        </div>
-    </>
-
-</div>
+<LiveRegionsExampleCode />
 
 ## Component Features
 * [Cross-Browser Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#cross-browser-support)
@@ -125,22 +103,32 @@ For further guidance, please view the full [Accessibility Guide](./accessibility
 <InfoExample title="Information Notification Banner" />
 <SuccessExample title="Success Notification Banner" />
 <CustomExample title="Custom Notification Banner" />
-<LongTextExample title="Long Text Notification Banner" />
 <ActionExample title="Notification Banner with Action" />
 <DismissibleExample title="Dismissible Notification Banner" />
-<ActionAndDismissibleExample title="Dismissible Notification Banner with Actions" />
+<LongTextExample title="Long Text Notification Banner" />
 
 ## Alert Props
 <AlertPropsTable />
 
 ## Testing
 
-Terra Alert uses `uuid` which changes the component's description id dynamically. To mock it with the Jest testing library, `jest.mock` can be used.
+Terra Alert uses `uuid` which changes the component's description id dynamically. To mock the return value with the Jest testing library, `jest.spyOn` can be used.
 
 If Enzyme `shallow` is being used for the tests then the mock may not be required depending on the depth of the returned wrapper. However, if `mount` is used then `uuid` should be mocked as shown below:
 
 ```js
-// using a variable may result in failures. For best results, hardcode the mock return value.
-jest.mock('uuid', () => ({ v4: () => '00000000-0000-0000-0000-000000000000' }));
+import { v4 as uuidv4 } from 'uuid';
+
+let mockSpyUuid;
+
+// using a variable may result in failures. For best results, mock return value.
+beforeAll(() => {
+  mockSpyUuid = jest.spyOn(uuidv4, 'v4').mockReturnValue('00000000-0000-0000-0000-000000000000');
+});
+
+// restore the mock
+afterAll(() => {
+  mockSpyUuid.mockRestore();
+});
 
 ```

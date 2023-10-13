@@ -2,6 +2,36 @@
 
 ## Unreleased
 
+## 6.47.0 - (September 21, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 6.46.1 - (September 19, 2023)
+
+* Fixed
+  * Fixed bug where cyclic navigation in `terra-form-single-select` was not working.
+  * Fixed bug where VoiceOver was reading `terra-form-single-select` as a radio button .
+  * Fixed focus issue of Invalid example `form-single-select`.
+  * Fixed safari browser minimised issue in `form-single-select`.
+  * Fixed selection not working with space key in `form-single-select`.
+  * Fixed enter key not expanding the combo box in `form-single-select` .
+
+## 6.46.0 - (August 25, 2023)
+
+* Added
+  * Added aria-label to make screenreader to announce the selected option.
+
+## 6.45.0 - (August 23, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 6.44.0 - (August 1, 2023)
+
+* Changed
+  * Minor dependency version bump
+
 ## 6.43.0 - (July 13, 2023)
 
 * Changed

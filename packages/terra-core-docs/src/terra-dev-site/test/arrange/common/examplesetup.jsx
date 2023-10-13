@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 import PropTypes from 'prop-types';
-import IconAlert from 'terra-icon/lib/icon/IconAlert';
+import { IconAlert } from 'terra-icon';
 import styles from './examplesetuptest.scss';
 
 const cx = classNames.bind(styles);

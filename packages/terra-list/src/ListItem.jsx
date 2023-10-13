@@ -4,6 +4,9 @@ import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import ChevronRight from 'terra-icon/lib/icon/IconChevronRight';
+import { injectIntl } from 'react-intl';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
+import IconKnurling from 'terra-icon/lib/icon/IconKnurling';
 import ListUtils from './ListUtils';
 import styles from './List.module.scss';
 
@@ -56,6 +59,11 @@ const propTypes = {
    * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
    */
   onMouseDown: PropTypes.func,
+  /**
+   * @private
+   * The intl object to be injected for translations.
+   */
+  intl: PropTypes.shape({ formatMessage: PropTypes.func }),
 };
 
 const defaultProps = {
@@ -77,6 +85,7 @@ const ListItem = ({
   onMouseDown,
   onSelect,
   refCallback,
+  intl,
   ...customProps
 }) => {
   const theme = React.useContext(ThemeContext);
@@ -90,8 +99,12 @@ const ListItem = ({
     ),
     customProps.className,
   );
-
+  const { isDraggable } = customProps;
   const attrSpread = {};
+
+  const onFocusResponse = intl.formatMessage({ id: 'Terra.list.focus' });
+  const responseId = `terra-hidden-tab-pane-response=${Math.random()}`;
+
   if (isSelectable) {
     attrSpread.onClick = ListUtils.wrappedOnClickForItem(onClick, onSelect, metaData);
     attrSpread.onKeyDown = ListUtils.wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
@@ -102,10 +115,21 @@ const ListItem = ({
     attrSpread.onBlur = ListUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-item-show-focus', 'true'));
     attrSpread.onMouseDown = ListUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-item-show-focus', 'false'));
   }
+  if (isDraggable) {
+    attrSpread['aria-describedby'] = responseId;
+  }
 
   return (
     <li {...customProps} {...attrSpread} className={listItemClassNames} ref={refCallback}>
-      <div className={cx('item-fill')} key="item-fill">{children}</div>
+      {(isDraggable) && (
+        <div key="knurling-icon">
+          <IconKnurling />
+          <VisuallyHiddenText aria-hidden id={responseId} text={onFocusResponse} />
+        </div>
+      )}
+      <div className={cx('item-fill')} key="item-fill">
+        {children}
+      </div>
       {hasChevron && <div className={cx('item-end')} key="item-end"><span className={cx('chevron')}><ChevronRight height="1em" width="1em" /></span></div>}
     </li>
   );
@@ -114,4 +138,4 @@ const ListItem = ({
 ListItem.propTypes = propTypes;
 ListItem.defaultProps = defaultProps;
 
-export default ListItem;
+export default injectIntl(ListItem);

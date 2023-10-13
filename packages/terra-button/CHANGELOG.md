@@ -2,6 +2,31 @@
 
 ## Unreleased
 
+## 3.68.2 - (October 3, 2023)
+
+* Fixed
+  * Fixed bug where VoiceOver in Safari highlighting Terra Button within a modal dialog with a frame bigger than the button size.
+
+## 3.68.1 - (August 25, 2023)
+
+* Fixed
+  * Reverted change from functional component to class component to fix an issue with passing refs into the component.
+
+## 3.68.0 - (August 11, 2023)
+
+* Changed
+  * Reverted `3.66` changes.
+
+## 3.67.0 - (August 11, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.66.0 - (August 8, 2023)
+
+* Changed
+  * Reduced package size by excluding unneeded files when publishing.
+
 ## 3.65.0 - (March 1, 2023)
 
 * Removed

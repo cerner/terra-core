@@ -4,6 +4,8 @@ import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import { injectIntl } from 'react-intl';
 import ThemeContext from 'terra-theme-context';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import VisuallyHiddenText from 'terra-visually-hidden-text';
 import SharedUtil from './_SharedUtil';
 import styles from './_Option.module.scss';
 
@@ -112,12 +114,14 @@ const Option = ({
 
   let role = 'option'; // Used for JAWs and VoiceOver on iOS
 
-  let itemLabel = display;
+  let itemLabel;
+  let notSelectedText;
   if (index === 1 || isSelected) {
-    itemLabel = `${expandedStateText} ${display} `;
-    if (!isSelected && SharedUtil.isMac() && SharedUtil.isSafari() && variant !== 'tag' && variant !== 'multiple') {
-      itemLabel += intl.formatMessage({ id: 'Terra.form.select.notselected' });
-    }
+    itemLabel = `${expandedStateText}`;
+  }
+
+  if (!isSelected && SharedUtil.isMac() && SharedUtil.isSafari() && variant !== 'tag' && variant !== 'multiple') {
+    notSelectedText = intl.formatMessage({ id: 'Terra.form.select.notselected' }, { text: notSelectedText });
   }
 
   if (SharedUtil.isSafari() && !('ontouchstart' in window)) {
@@ -136,10 +140,11 @@ const Option = ({
       aria-disabled={disabled}
       tabIndex="0" // eslint-disable-line jsx-a11y/no-noninteractive-tabindex
       data-terra-select-option
-      aria-label={itemLabel}
     >
       {(isCheckable || isAddOption) && <span className={cx('icon')} />}
+      <VisuallyHiddenText text={itemLabel} />
       <span className={cx('display')}>{display}</span>
+      <VisuallyHiddenText text={notSelectedText} />
     </li>
   );
 };
