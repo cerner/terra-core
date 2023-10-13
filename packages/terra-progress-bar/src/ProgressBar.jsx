@@ -2,9 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
-import { injectIntl } from 'react-intl';
 import ThemeContext from 'terra-theme-context';
-import VisuallyHiddenText from 'terra-visually-hidden-text';
 import styles from './ProgressBar.module.scss';
 
 const cx = classNamesBind.bind(styles);
@@ -31,7 +29,8 @@ const propTypes = {
    */
   max: PropTypes.number,
   /**
-   * Value passed to aria-valuetext for accessibility. You can view more about this attribute
+   * ![IMPORTANT](https://badgen.net/badge/prop/deprecated/red)
+   * valueText has been deprecated and will be removed on next major version release.
    * at https://www.w3.org/WAI/PF/aria/states_and_properties#aria-valuetext.
    */
   valueText: PropTypes.string,
@@ -78,11 +77,11 @@ const ProgressBar = ({
   );
 
   const normalizedValue = (value / max) * 100;
-  const valText = valueText || intl.formatMessage({ id: 'Terra.progress.bar.percentage' }, { value: normalizedValue });
+
+  const isMac = () => navigator.userAgent.indexOf('Mac') !== -1 && navigator.userAgent.indexOf('Win') === -1;
 
   return (
     <div>
-      <VisuallyHiddenText aria-live="polite" text={valText} />
       <progress
         {...customProps}
         className={classes}
@@ -91,7 +90,7 @@ const ProgressBar = ({
         aria-valuemax={100}
         aria-valuemin={0}
         aria-valuenow={normalizedValue}
-        aria-valuetext={valText}
+        aria-valuetext={!isMac() ? `${normalizedValue}%` : undefined}
         tabIndex="-1"
       />
     </div>
@@ -102,5 +101,5 @@ ProgressBar.propTypes = propTypes;
 
 ProgressBar.defaultProps = defaultProps;
 
-export default injectIntl(ProgressBar);
+export default ProgressBar;
 export { ProgressBarHeightSize };

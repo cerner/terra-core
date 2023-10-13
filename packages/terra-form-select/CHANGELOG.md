@@ -1,12 +1,17 @@
 # Changelog
 
-* Fixed
-  * Fixed focus issue of Invalid example `form-single-select`.
-  * Fixed safari browser minimised issue in `form-single-select` .
-
 ## Unreleased
 
+## 6.47.0 - (September 21, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 6.46.1 - (September 19, 2023)
+
 * Fixed
+  * Fixed focus issue of Invalid example `form-single-select`.
+  * Fixed safari browser minimised issue in `form-single-select`.
   * Fixed selection not working with space key in `form-single-select`.
   * Fixed enter key not expanding the combo box in `form-single-select` .
 

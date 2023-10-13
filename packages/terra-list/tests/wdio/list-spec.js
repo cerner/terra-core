@@ -96,4 +96,26 @@ Terra.describeViewports('List', ['medium'], () => {
       Terra.validates.element('After Drop Focus Next Item', { selector: '#root' });
     });
   });
+
+  describe('Slidepanel ListItem Drag and Drop', () => {
+    before(() => browser.url('raw/tests/cerner-terra-core-docs/list/slide-panel-draggable-list'));
+
+    it('should perform drag and drop operation', () => {
+      browser.keys(['Tab', 'Space', 'ArrowDown', 'Space']);
+      Terra.validates.element('Slide Panel After Drag and Drop', { selector: '#root' });
+    });
+  });
+
+  describe('Keyboard Navigation Using Arrow Keys', () => {
+    before(() => browser.url('raw/tests/cerner-terra-core-docs/list/multi-select-list'));
+
+    it('Navigates from last item to first item', () => {
+      browser.keys(['Tab', 'ArrowDown', 'ArrowDown', 'ArrowDown', 'ArrowDown', 'ArrowDown']);
+      Terra.validates.element('first list item focused', { selector: '#root' });
+    });
+    it('should focus on second list item', () => {
+      browser.keys(['ArrowDown']);
+      Terra.validates.element('second list item focused', { selector: '#root' });
+    });
+  });
 });

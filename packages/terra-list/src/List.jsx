@@ -117,6 +117,7 @@ const List = ({
 }) => {
   const theme = useContext(ThemeContext);
   const [listItem, setlistItem] = useState([]);
+  let listNode = useRef();
 
   useEffect(() => {
     if (Array.isArray(children)) {
@@ -137,7 +138,6 @@ const List = ({
     ),
     customProps.className,
   );
-  let listNode = useRef();
 
   const handleListRef = (node) => {
     if (refCallback) {
@@ -147,14 +147,32 @@ const List = ({
   };
   const handleKeyDown = event => {
     const listItems = listNode.querySelectorAll('[data-item-show-focus]');
-    if (event.nativeEvent.keyCode === KeyCode.KEY_END) {
-      event.preventDefault();
-      listItems[listItems.length - 1].focus();
-    }
+    const currentIndex = Array.from(listItems).indexOf(event.target);
+    const lastIndex = listItems.length - 1;
 
-    if (event.nativeEvent.keyCode === KeyCode.KEY_HOME) {
-      event.preventDefault();
-      listItems[0].focus();
+    switch (event.nativeEvent.keyCode) {
+      case KeyCode.KEY_END:
+        event.preventDefault();
+        listItems[listItems.length - 1].focus();
+        break;
+      case KeyCode.KEY_HOME:
+        event.preventDefault();
+        listItems[0].focus();
+        break;
+      case KeyCode.KEY_UP: {
+        event.preventDefault();
+        const previousIndex = currentIndex > 0 ? currentIndex - 1 : lastIndex;
+        listItems[previousIndex].focus();
+        break;
+      }
+      case KeyCode.KEY_DOWN: {
+        event.preventDefault();
+        const nextIndex = currentIndex < lastIndex ? currentIndex + 1 : 0;
+        listItems[nextIndex].focus();
+        break;
+      }
+      default:
+        break;
     }
   };
 
@@ -239,7 +257,12 @@ const List = ({
 
   const renderDraggableListDom = () => (
     <DragDropContext onDragEnd={handleDragEnd} onDragStart={handleDragStart} onDragUpdate={handleDragUpdate}>
-      <Droppable droppableId="ListItem">
+      <Droppable
+        droppableId="ListItem"
+        renderClone={(provided, snapshot, rubric) => (
+          cloneListItem(listItem[rubric.source.index], provided)
+        )}
+      >
         {(provided) => (
           // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions, jsx-a11y/role-supports-aria-props
           <ul

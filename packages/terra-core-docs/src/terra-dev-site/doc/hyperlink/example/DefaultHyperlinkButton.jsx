@@ -1,4 +1,4 @@
 import React from 'react';
-import HyperlinkButton from 'terra-hyperlink';
+import Hyperlink from 'terra-hyperlink';
 
-export default () => <HyperlinkButton onClick={() => {}} text="Default hyperlink button" />;
+export default () => <Hyperlink onClick={() => {}} text="Default hyperlink button" />;

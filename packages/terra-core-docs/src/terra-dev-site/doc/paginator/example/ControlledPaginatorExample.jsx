@@ -10,8 +10,8 @@ const cx = classNames.bind(styles);
 const totalCount = 450;
 
 const buildPage = () => {
-  const fullContent = [<p>This example used to  separating content into discrete pages with page preview.</p>,
-    <p>selectedPage must be managed through the state of a parent component, and passed into this paginator through props.</p>];
+  const fullContent = [<p>This example is used to separate content into discrete pages with page preview.</p>,
+    <p>The selectedPage must be managed through the state of a parent component, and passed into this paginator through props.</p>];
 
   return (
     fullContent

@@ -8,8 +8,8 @@ import styles from './ControlledPaginatorCommon.module.scss';
 const cx = classNames.bind(styles);
 
 const buildPage = () => {
-  const fullContent = [<p>This example used to  separating content into discrete pages without page preview.</p>,
-    <p>selectedPage must be managed through the state of a parent component, and passed into this paginator through props.</p>];
+  const fullContent = [<p>This example is used to separate content into discrete pages without page preview.</p>,
+    <p>The selectedPage must be managed through the state of a parent component, and passed into this paginator through props.</p>];
 
   return (
     fullContent

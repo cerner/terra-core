@@ -33,11 +33,13 @@ const propTypes = {
    */
   itemCountPerPage: PropTypes.number,
   /**
-   * Allows user to set the heading id of the page.
+   * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue)
+   * Preferred method: Allows consumers to create an accessible name for the paginator by adding the ID of heading that describes paginator content.
    */
   ariaLabelledBy: PropTypes.string,
   /**
-   * Allows user to set the custom paginator label.
+   * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue)
+   * Allows consumers to create an accessible name for the paginator by adding a meaningful and descriptive text string.
    */
   ariaLabel: PropTypes.string,
   /**
@@ -220,7 +222,7 @@ class Paginator extends React.Component {
     );
 
     const navigationMessage = (
-      <VisuallyHiddenText aria-live="polite" aria-relevant="all" text={this.state.selectedPageMessage} />
+      <VisuallyHiddenText aria-live="polite" aria-relevant="additions text" text={this.state.selectedPageMessage} />
     );
 
     const fullView = (
@@ -324,7 +326,7 @@ class Paginator extends React.Component {
     );
 
     const navigationMessage = (
-      <VisuallyHiddenText aria-live="polite" aria-relevant="all" text={this.state.selectedPageMessage} />
+      <VisuallyHiddenText aria-live="polite" aria-relevant="additions text" text={this.state.selectedPageMessage} />
     );
 
     const reducedView = (

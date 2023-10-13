@@ -80,7 +80,11 @@
     }
   }
 
-  .button-label {
+  .button-label-mac {
+    display: inline-block;
+  }
+
+  .button-label-win {
     display: inline-block;
     left: 0; // For IE
     position: relative; // For IE

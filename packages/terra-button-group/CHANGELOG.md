@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+## 3.70.0 - (October 3, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.69.1 - (September 21, 2023)
+
+* Fixed
+  * Arrow keys selection for Single Select examples.
+
 ## 3.69.0 - (August 25, 2023)
 
 * Changed

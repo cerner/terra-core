@@ -1,5 +1,5 @@
 import React from 'react';
-import IconAnnouncement from 'terra-icon/lib/icon/IconAnnouncement';
+import { IconAnnouncement } from 'terra-icon';
 import Card from 'terra-card';
 import { width, height } from './common';
 
