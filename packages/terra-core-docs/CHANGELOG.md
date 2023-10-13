@@ -5,6 +5,9 @@
 * Updated
   * Updated `terra-alert` documentation for custom titles.
 
+* Fixed
+  * Fixed import statements not rendering properly for `terra-icon`.
+
 ## 1.44.1 - (October 11, 2023)
 
 * Fixed
