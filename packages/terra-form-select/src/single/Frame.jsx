@@ -144,7 +144,6 @@ class Frame extends React.Component {
     this.handleToggleButtonMouseDown = this.handleToggleButtonMouseDown.bind(this);
     this.visuallyHiddenComponent = React.createRef();
     this.setSelectMenuRef = this.setSelectMenuRef.bind(this);
-    this.role = this.role.bind(this);
   }
 
   componentDidMount() {
@@ -308,13 +307,6 @@ class Frame extends React.Component {
     );
   }
 
-  // eslint-disable-next-line class-methods-use-this
-  role() {
-    const role = SharedUtil.isSafari() ? 'group' : 'combobox';
-
-    return role;
-  }
-
   /**
    * Closes the dropdown.
    */
@@ -399,9 +391,10 @@ class Frame extends React.Component {
     const selectedText = this.props.intl.formatMessage({ id: 'Terra.form.select.selected' });
     let label;
     if (this.props.display) {
-      label = `${this.props.display} ${selectedText}, ${this.ariaLabel()}`;
+      // Added below condition to prevent VO from announcing placeholder and selected item name twice in Safari.
+      label = SharedUtil.isSafari() ? `${selectedText}, ${this.ariaLabel()}` : `${this.props.display} ${selectedText}, ${this.ariaLabel()}`;
     } else if (this.props.placeholder) {
-      label = `${this.props.placeholder}, ${this.ariaLabel()}`;
+      label = SharedUtil.isSafari() ? this.ariaLabel() : `${this.props.placeholder}, ${this.ariaLabel()}`;
     }
 
     return label || this.ariaLabel();
@@ -505,7 +498,7 @@ class Frame extends React.Component {
     return (
       <div
         {...customProps}
-        role={this.role()}
+        role="combobox"
         data-terra-select-combobox
         aria-controls={!disabled && this.state.isOpen ? selectMenuId : undefined}
         aria-disabled={!!disabled}
@@ -533,7 +526,7 @@ class Frame extends React.Component {
           <span id={descriptionId}>{this.renderDescriptionText()}</span>
         </div>
         {/* Added aria label to avoid announcing empty group by voice over in safari browser */}
-        <div className={cx('display')} aria-label={SharedUtil.isSafari() ? intl.formatMessage({ id: 'Terra.form.select.optGroup' }) : ''}>
+        <div className={cx('display')} aria-label={this.ariaLabel()} aria-hidden={disabled}>
           {this.getDisplay(displayId, placeholderId)}
         </div>
         {this.renderToggleButton()}
