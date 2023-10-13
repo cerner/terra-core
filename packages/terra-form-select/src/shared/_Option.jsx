@@ -111,6 +111,7 @@ const Option = ({
    * Switching to role="radio" and role="checkbox" mitigates this behavior.
    */
   if (SharedUtil.isSafari() && !('ontouchstart' in window)) {
+    role = 'radio';
     if (variant === 'tag' || variant === 'multiple') {
       role = 'checkbox';
     }

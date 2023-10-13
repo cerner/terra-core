@@ -144,6 +144,7 @@ class Frame extends React.Component {
     this.handleToggleButtonMouseDown = this.handleToggleButtonMouseDown.bind(this);
     this.visuallyHiddenComponent = React.createRef();
     this.setSelectMenuRef = this.setSelectMenuRef.bind(this);
+    this.role = this.role.bind(this);
   }
 
   componentDidMount() {
@@ -307,6 +308,13 @@ class Frame extends React.Component {
     );
   }
 
+  // eslint-disable-next-line class-methods-use-this
+  role() {
+    const role = SharedUtil.isSafari() ? 'group' : 'combobox';
+
+    return role;
+  }
+
   /**
    * Closes the dropdown.
    */
@@ -408,13 +416,13 @@ class Frame extends React.Component {
     const comboboxState = this.state.isOpen ? intl.formatMessage({ id: 'Terra.form.select.expanded' })
       : intl.formatMessage({ id: 'Terra.form.select.collapsed' });
     const listOfOptionsTxt = intl.formatMessage({ id: 'Terra.form.select.listOfTotalOptions' });
-    const defaultUsageGuidanceTxt = intl.formatMessage({ id: 'Terra.form.select.defaultUsageGuidance' });
+    const defaultUsageGuidanceTxt = this.props.intl.formatMessage({ id: 'Terra.form.select.defaultUsageGuidance' });
 
     if ('ontouchstart' in window) {
       return listOfOptionsTxt;
     }
 
-    return `${comboboxState} ${listOfOptionsTxt} ${defaultUsageGuidanceTxt}`;
+    return this.props.disabled ? '' : `${comboboxState} ${listOfOptionsTxt} ${defaultUsageGuidanceTxt}`;
   }
 
   renderToggleButton() {
@@ -497,7 +505,7 @@ class Frame extends React.Component {
     return (
       <div
         {...customProps}
-        role="combobox"
+        role={this.role()}
         data-terra-select-combobox
         aria-controls={!disabled && this.state.isOpen ? selectMenuId : undefined}
         aria-disabled={!!disabled}
