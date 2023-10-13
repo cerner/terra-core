@@ -2,7 +2,7 @@ name: pr-preview
 
 on:
   pull_request:
-    branches: ['main']
+    branches: ['main', 'table-mvb']
 jobs:
   deploy:
     runs-on: ubuntu-latest

@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+* Changed
+  * Changed Terra Table examples to be more applicable to new table.
+  * Deleted examples of Terra Outline View Table as it is an obsolete package.
+
 * Updated
   *  Updated doc site for `terra-form-single-select` and `terra-form-single-select-field`.
   

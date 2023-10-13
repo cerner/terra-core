@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Breaking Change
+  * Redesigned the table component to meet accessibility guidelines. See Docs for details of the new API.
+
 ## 4.36.0 - (August 1, 2023)
 
 * Changed

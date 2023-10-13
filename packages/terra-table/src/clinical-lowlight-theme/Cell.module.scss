@@ -1,0 +1,13 @@
+:local {
+  .clinical-lowlight-theme {
+    --terra-table-cell-border-bottom: 1px solid #181b1d;
+    --terra-table-cell-border-left: 1px solid #181b1d;
+    --terra-table-cell-border-right: 1px solid #181b1d;
+    --terra-table-cell-selected-background-color: #1e3a49;
+    --terra-table-mask-background: repeating-linear-gradient(-45deg, #434647, #434647 3px, transparent 3px, transparent 6px);
+    --terra-table-highlight-mask-background: repeating-linear-gradient(-45deg, #434647, #434647 3px, transparent 3px, transparent 6px);
+    --terra-table-odd-row-hover-background-color: #25282a;
+    --terra-table-even-row-hover-background-color: #1d2225;
+    --terra-table-pinned-columns-cell-border: 1px solid #181b1d;
+  }
+}

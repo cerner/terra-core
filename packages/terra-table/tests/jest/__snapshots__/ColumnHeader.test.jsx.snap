@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColumnHeader renders a column header with an active resize column 1`] = `
+<thead>
+  <tr
+    className="column-header-row"
+    height="3rem"
+  >
+    <Memo(InjectIntl(ColumnHeaderCell))
+      columnIndex={0}
+      displayName=" Vitals"
+      headerHeight="3rem"
+      id="Column-0"
+      key="Column-0"
+      rowIndex={0}
+      tableHeight={500}
+    />
+    <Memo(InjectIntl(ColumnHeaderCell))
+      columnIndex={1}
+      displayName=" Patient"
+      headerHeight="3rem"
+      id="Column-1"
+      key="Column-1"
+      rowIndex={0}
+      tableHeight={500}
+    />
+  </tr>
+</thead>
+`;
+
+exports[`ColumnHeader renders a column header with callbacks 1`] = `
+<thead>
+  <tr
+    className="column-header-row"
+    height="3rem"
+  >
+    <Memo(InjectIntl(ColumnHeaderCell))
+      columnIndex={0}
+      displayName=" Vitals"
+      headerHeight="3rem"
+      id="Column-0"
+      key="Column-0"
+      onColumnSelect={[MockFunction]}
+      onResizeMouseDown={[MockFunction]}
+      rowIndex={0}
+      tableHeight={500}
+    />
+    <Memo(InjectIntl(ColumnHeaderCell))
+      columnIndex={1}
+      displayName=" Patient"
+      headerHeight="3rem"
+      id="Column-1"
+      key="Column-1"
+      onColumnSelect={[MockFunction]}
+      onResizeMouseDown={[MockFunction]}
+      rowIndex={0}
+      tableHeight={500}
+    />
+  </tr>
+</thead>
+`;
+
+exports[`ColumnHeader renders a column header with tableHeight prop 1`] = `
+<thead>
+  <tr
+    className="column-header-row"
+    height="3rem"
+  >
+    <Memo(InjectIntl(ColumnHeaderCell))
+      columnIndex={0}
+      displayName=" Vitals"
+      headerHeight="3rem"
+      id="Column-0"
+      key="Column-0"
+      rowIndex={0}
+      tableHeight={500}
+    />
+    <Memo(InjectIntl(ColumnHeaderCell))
+      columnIndex={1}
+      displayName=" Patient"
+      headerHeight="3rem"
+      id="Column-1"
+      key="Column-1"
+      rowIndex={0}
+      tableHeight={500}
+    />
+  </tr>
+</thead>
+`;
+
+exports[`ColumnHeader renders a default column header 1`] = `
+<thead>
+  <tr
+    className="column-header-row"
+    height="3rem"
+  >
+    <Memo(InjectIntl(ColumnHeaderCell))
+      columnIndex={0}
+      displayName=" Vitals"
+      headerHeight="3rem"
+      id="Column-0"
+      key="Column-0"
+      rowIndex={0}
+    />
+    <Memo(InjectIntl(ColumnHeaderCell))
+      columnIndex={1}
+      displayName=" Patient"
+      headerHeight="3rem"
+      id="Column-1"
+      key="Column-1"
+      rowIndex={0}
+    />
+  </tr>
+</thead>
+`;

@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Row creates a row with the correct number of cells 1`] = `
+<tr
+  className="row"
+  style={
+    Object {
+      "height": "25px",
+    }
+  }
+>
+  <Memo(InjectIntl(Cell))
+    columnId="Column-0"
+    columnIndex={0}
+    height="25px"
+    isHighlighted={false}
+    isRowHeader={true}
+    key="1_Column-0"
+    onCellSelect={[Function]}
+    rowId="1"
+    rowIndex={99}
+  >
+    Heart Rate Monitored (bpm)
+  </Memo(InjectIntl(Cell))>
+  <Memo(InjectIntl(Cell))
+    columnId="Column-1"
+    columnIndex={1}
+    height="25px"
+    isHighlighted={false}
+    isRowHeader={false}
+    key="1_Column-1"
+    onCellSelect={[Function]}
+    rowId="1"
+    rowIndex={99}
+  />
+  <Memo(InjectIntl(Cell))
+    columnId="Column-2"
+    columnIndex={2}
+    height="25px"
+    isHighlighted={false}
+    isMasked={true}
+    isRowHeader={false}
+    key="1_Column-2"
+    onCellSelect={[Function]}
+    rowId="1"
+    rowIndex={99}
+  >
+    66
+  </Memo(InjectIntl(Cell))>
+</tr>
+`;
+
+exports[`Row verifies the cell is created with the right props 1`] = `
+<tr
+  className="row"
+  style={
+    Object {
+      "height": "25px",
+    }
+  }
+>
+  <Memo(InjectIntl(Cell))
+    columnId="Column-0"
+    columnIndex={0}
+    height="25px"
+    isHighlighted={false}
+    isRowHeader={true}
+    key="3_Column-0"
+    onCellSelect={[Function]}
+    rowId="3"
+    rowIndex={2}
+  >
+    Cardiac Index (L/min/m2)
+  </Memo(InjectIntl(Cell))>
+  <Memo(InjectIntl(Cell))
+    columnId="Column-1"
+    columnIndex={1}
+    height="25px"
+    isHighlighted={false}
+    isRowHeader={false}
+    key="3_Column-1"
+    onCellSelect={[Function]}
+    rowId="3"
+    rowIndex={2}
+  >
+    2.25
+  </Memo(InjectIntl(Cell))>
+  <Memo(InjectIntl(Cell))
+    columnId="Column-2"
+    columnIndex={2}
+    height="25px"
+    isHighlighted={false}
+    isMasked={false}
+    isRowHeader={false}
+    key="3_Column-2"
+    onCellSelect={[Function]}
+    rowId="3"
+    rowIndex={2}
+  >
+    2.28
+  </Memo(InjectIntl(Cell))>
+</tr>
+`;

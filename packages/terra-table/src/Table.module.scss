@@ -1,0 +1,22 @@
+@import './clinical-lowlight-theme/Table.module';
+@import './orion-fusion-theme/Table.module';
+
+:local {
+  .table-container {
+    height: 100%;
+    overflow: auto;
+    width: 100%;
+  }
+
+  .table {
+    border-collapse: separate;
+    border-spacing: 0;
+    table-layout: fixed;
+    width: 1px;
+
+    :focus {
+      outline: var(--terra-table-cell-focus-outline, 3px dashed #000);
+      outline-offset: var(--terra-table-cell-focus-outline-offset, -2px);
+    }
+  }
+}

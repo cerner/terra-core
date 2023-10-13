@@ -1,0 +1,10 @@
+{
+  "Terra.table.blank": "Blank",
+  "Terra.table.maskedCell": "Masked data",
+  "Terra.table.cell-focus-trapped": "Focus contained in cell. Press Escape to resume table navigation.",
+  "Terra.table.cell-interactable": "Cell contains interactable elements. Press Enter to move focus inside the cell.",  
+  "Terra.table.columnError": "Errors associated with column",
+  "Terra.table.resizeHandleValueText": "{columnWidth} pixels column width",
+  "Terra.table.resume-navigation": "Table navigation resumed.",
+  "Terra.table.row-index" : "Row {row}"
+}

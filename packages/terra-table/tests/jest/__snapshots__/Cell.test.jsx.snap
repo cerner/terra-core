@@ -1,0 +1,365 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cell renders a pinned cell 1`] = `
+<InjectIntl(Cell)
+  columnId="ColumnId"
+  columnIndex={0}
+  height="50px"
+  isRowHeader={true}
+  isSelected={false}
+  key="key"
+  onCellSelect={[Function]}
+  rowId="RowID"
+  rowIndex={1}
+>
+  <Cell
+    columnId="ColumnId"
+    columnIndex={0}
+    height="50px"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    isMasked={false}
+    isRowHeader={true}
+    isSelectable={false}
+    isSelected={false}
+    onCellSelect={[Function]}
+    rowId="RowID"
+    rowIndex={1}
+  >
+    <th
+      aria-selected={false}
+      className="cell pinned"
+      role="rowheader"
+      scope="row"
+      style={
+        Object {
+          "left": 0,
+        }
+      }
+    >
+      <FocusTrap
+        _createFocusTrap={[Function]}
+        active={false}
+        focusTrapOptions={
+          Object {
+            "clickOutsideDeactivates": true,
+            "escapeDeactivates": false,
+            "onDeactivate": [Function],
+            "returnFocusOnDeactivate": true,
+          }
+        }
+        paused={false}
+      >
+        <div
+          className="cell-content"
+          style={
+            Object {
+              "height": "50px",
+            }
+          }
+        >
+          Pinned cell data
+        </div>
+      </FocusTrap>
+    </th>
+  </Cell>
+</InjectIntl(Cell)>
+`;
+
+exports[`Cell verifies mask takes precedence when cell is masked, selectable and selected 1`] = `
+<td
+  aria-label="Some Label Here"
+  aria-selected={true}
+  className="cell masked"
+  style={
+    Object {
+      "left": null,
+    }
+  }
+>
+  <FocusTrap
+    _createFocusTrap={[Function]}
+    active={false}
+    focusTrapOptions={
+      Object {
+        "clickOutsideDeactivates": true,
+        "escapeDeactivates": false,
+        "onDeactivate": [Function],
+        "returnFocusOnDeactivate": true,
+      }
+    }
+    paused={false}
+  >
+    <div
+      className="cell-content"
+      style={
+        Object {
+          "height": undefined,
+        }
+      }
+    >
+      <span
+        className="no-data-cell"
+      >
+        Terra.table.maskedCell
+      </span>
+    </div>
+  </FocusTrap>
+</td>
+`;
+
+exports[`Cell verifies that a cell has the correct styles and no content when isMasked prop is true 1`] = `
+<td
+  aria-label="Some Label Here"
+  className="cell masked"
+  style={
+    Object {
+      "left": null,
+    }
+  }
+>
+  <FocusTrap
+    _createFocusTrap={[Function]}
+    active={false}
+    focusTrapOptions={
+      Object {
+        "clickOutsideDeactivates": true,
+        "escapeDeactivates": false,
+        "onDeactivate": [Function],
+        "returnFocusOnDeactivate": true,
+      }
+    }
+    paused={false}
+  >
+    <div
+      className="cell-content"
+      style={
+        Object {
+          "height": undefined,
+        }
+      }
+    >
+      <span
+        className="no-data-cell"
+      >
+        Terra.table.maskedCell
+      </span>
+    </div>
+  </FocusTrap>
+</td>
+`;
+
+exports[`Cell verifies that a selected cell has the correct styles when isSelected prop is true 1`] = `
+<td
+  aria-label="Some Label Here"
+  aria-selected={true}
+  className="cell selected"
+  style={
+    Object {
+      "left": null,
+    }
+  }
+>
+  <FocusTrap
+    _createFocusTrap={[Function]}
+    active={false}
+    focusTrapOptions={
+      Object {
+        "clickOutsideDeactivates": true,
+        "escapeDeactivates": false,
+        "onDeactivate": [Function],
+        "returnFocusOnDeactivate": true,
+      }
+    }
+    paused={false}
+  >
+    <div
+      className="cell-content"
+      style={
+        Object {
+          "height": undefined,
+        }
+      }
+    >
+      Data in cell
+    </div>
+  </FocusTrap>
+</td>
+`;
+
+exports[`Cell verifies that only a regular cell(<td>) is created when isRowHeader prop is false 1`] = `
+<td
+  aria-selected={false}
+  className="cell"
+  style={
+    Object {
+      "left": null,
+    }
+  }
+>
+  <FocusTrap
+    _createFocusTrap={[Function]}
+    active={false}
+    focusTrapOptions={
+      Object {
+        "clickOutsideDeactivates": true,
+        "escapeDeactivates": false,
+        "onDeactivate": [Function],
+        "returnFocusOnDeactivate": true,
+      }
+    }
+    paused={false}
+  >
+    <div
+      className="cell-content"
+      style={
+        Object {
+          "height": undefined,
+        }
+      }
+    >
+      Data in cell
+    </div>
+  </FocusTrap>
+</td>
+`;
+
+exports[`Cell verifies that only a row header cell (<th>) is created when isRowHeader prop is true 1`] = `
+<th
+  aria-selected={false}
+  className="cell"
+  role="rowheader"
+  scope="row"
+  style={
+    Object {
+      "left": null,
+    }
+  }
+>
+  <FocusTrap
+    _createFocusTrap={[Function]}
+    active={false}
+    focusTrapOptions={
+      Object {
+        "clickOutsideDeactivates": true,
+        "escapeDeactivates": false,
+        "onDeactivate": [Function],
+        "returnFocusOnDeactivate": true,
+      }
+    }
+    paused={false}
+  >
+    <div
+      className="cell-content"
+      style={
+        Object {
+          "height": "50px",
+        }
+      }
+    >
+      Data in cell
+    </div>
+  </FocusTrap>
+</th>
+`;
+
+exports[`Cell verifies that the cell rendered is marked blank when the cell content is empty 1`] = `
+<td
+  className="cell blank"
+  style={
+    Object {
+      "left": null,
+    }
+  }
+>
+  <FocusTrap
+    _createFocusTrap={[Function]}
+    active={false}
+    focusTrapOptions={
+      Object {
+        "clickOutsideDeactivates": true,
+        "escapeDeactivates": false,
+        "onDeactivate": [Function],
+        "returnFocusOnDeactivate": true,
+      }
+    }
+    paused={false}
+  >
+    <div
+      className="cell-content"
+      style={
+        Object {
+          "height": undefined,
+        }
+      }
+    >
+      <span
+        className="no-data-cell"
+      >
+        Terra.table.blank
+      </span>
+    </div>
+  </FocusTrap>
+</td>
+`;
+
+exports[`Cell verifies that the cell rendered is marked selectable when isSelectable prop is true 1`] = `
+<td
+  className="cell selectable"
+  style={
+    Object {
+      "left": null,
+    }
+  }
+>
+  <FocusTrap
+    _createFocusTrap={[Function]}
+    active={false}
+    focusTrapOptions={
+      Object {
+        "clickOutsideDeactivates": true,
+        "escapeDeactivates": false,
+        "onDeactivate": [Function],
+        "returnFocusOnDeactivate": true,
+      }
+    }
+    paused={false}
+  >
+    <div
+      className="cell-content"
+      style={
+        Object {
+          "height": undefined,
+        }
+      }
+    >
+      Data in cell
+    </div>
+  </FocusTrap>
+</td>
+`;

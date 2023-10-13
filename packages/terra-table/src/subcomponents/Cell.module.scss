@@ -1,0 +1,61 @@
+@import '../clinical-lowlight-theme/Cell.module';
+@import '../orion-fusion-theme/Cell.module';
+
+:local {
+  .cell {
+    border-bottom: var(--terra-table-cell-border-bottom, 1px solid #dedfe0);
+    border-right: var(--terra-table-cell-border-right, 1px solid #dedfe0);
+    font-weight: normal;
+    padding: var(--terra-table-cell-content-padding, 7px);
+    position: relative;
+
+    &:first-child {
+      border-left: var(--terra-table-cell-border-left, 1px solid #dedfe0);
+    }
+  }
+
+  .selected {
+    background-color: var(--terra-table-cell-selected-background-color, #cbe7fa);
+  }
+
+  // Create gradient background for masked cells
+  .masked {
+    background: var(--terra-table-mask-background, repeating-linear-gradient(-45deg, #dedfe0, #dedfe0 3px, transparent 3px, transparent 6px));
+  }
+
+  .masked.highlighted {
+    background: var(--terra-table-highlight-mask-background, repeating-linear-gradient(-45deg, #cfd2d3, #cfd2d3 3px, #cbe7fa 3px, #cbe7fa 6px));
+  }
+
+  .cell-content {
+    overflow: hidden;
+    overflow-wrap: break-word;
+    text-align: left;
+
+    // Blank and masked cell styles
+    .no-data-cell {
+      // Text is transparent so that it is only visible to screen readers
+      color: transparent;
+    }
+  }
+
+  .pinned {
+    position: sticky;
+    z-index: 1;
+  }
+
+  .pinned:not(.selected) {
+    background-color: inherit;
+  }
+
+  // Hover state for selectable elements
+  tr:nth-child(odd) .selectable:hover {
+    background-color: var(--terra-table-odd-row-hover-background-color, #e0f2fb);
+    cursor: pointer;
+  }
+
+  tr:nth-child(even) .selectable:hover {
+    background-color: var(--terra-table-even-row-hover-background-color, #d3e5ee);
+    cursor: pointer;
+  }
+}

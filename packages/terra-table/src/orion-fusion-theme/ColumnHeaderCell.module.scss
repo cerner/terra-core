@@ -1,0 +1,17 @@
+:local {
+  .orion-fusion-theme {
+    // Column Headers
+    --terra-table-column-header-text-color: #595f62;
+    --terra-table-column-header-background-color: #fff;
+    --terra-table-column-header-border-bottom: 1px solid #c8cacb;
+    --terra-table-column-header-border-right: 1px solid #c8cacb;
+    --terra-table-column-header-border-top: 1px solid #c8cacb;
+
+    // Pinned Columns
+    --terra-table-pinned-columns-header-border: 1px solid #c8cacb;
+    --terra-table-pinned-columns-header-box-shadow: 1px 0 #c8cacb;
+
+    // Hover
+    --terra-table-header-hover-background-color: #d5e7f2;
+  }
+}
