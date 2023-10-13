@@ -206,6 +206,7 @@ class DropdownList extends React.Component {
     const {
       width,
       refCallback,
+      ...customProps
     } = this.props;
 
     const theme = this.context;
@@ -225,6 +226,8 @@ class DropdownList extends React.Component {
         onKeyDown={this.handleKeyDown}
         onKeyUp={this.handleKeyUp}
         role="menu"
+        id={customProps.menuId}
+        aria-labelledby={customProps.buttonId}
       >
         {this.cloneChildren()}
       </ul>

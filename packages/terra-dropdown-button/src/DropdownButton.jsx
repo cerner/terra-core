@@ -184,6 +184,8 @@ class DropdownButton extends React.Component {
     }
     const customLabel = (selectText) ? `${selectText}, ${selectedLabel}, ${label}` : label;
     buttonAriaLabel = `${customLabel}${buttonAriaLabel ? `, ${buttonAriaLabel}` : ''}`;
+    const buttonId = 'menubutton';
+    const menuId = 'menu';
 
     return (
       <DropdownButtonBase
@@ -197,6 +199,8 @@ class DropdownButton extends React.Component {
         refCallback={this.setListNode}
         buttonRef={this.getButtonNode}
         getSelectedOptionText={this.getSelectedOptionText}
+        menuId={menuId}
+        buttonId={buttonId}
       >
         <button
           {...modifiedButtonAttrs}
@@ -211,6 +215,9 @@ class DropdownButton extends React.Component {
           ref={this.setButtonNode}
           aria-expanded={isOpen}
           aria-label={buttonAriaLabel}
+          aria-haspopup="true"
+          id={buttonId}
+          aria-controls={menuId}
           onBlur={this.handleBlur}
         >
           <span className={cx('dropdown-button-text')}>{label}</span>

@@ -41,7 +41,7 @@ const propTypes = {
 };
 
 const Dropdown = ({
-  requestClose, isOpen, targetRef, children, width, refCallback, buttonRef, getSelectedOptionText,
+  requestClose, isOpen, targetRef, children, width, refCallback, buttonRef, getSelectedOptionText, ...customProps
 }) => {
   const buttonFocused = useRef(false);
   useEffect(() => {
@@ -76,6 +76,8 @@ const Dropdown = ({
             width={width}
             refCallback={refCallback}
             getSelectedOptionText={getSelectedOptionText}
+            menuId={customProps.menuId}
+            buttonId={customProps.buttonId}
           >
             {children}
           </DropdownList>
