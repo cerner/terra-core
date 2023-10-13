@@ -34,23 +34,28 @@ exports[`should render TagSelectField component with max height 1`] = `
     maxHeight={100}
     required={false}
   >
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Blue"
       value="blue"
     />
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Green"
       value="green"
     />
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Purple"
       value="purple"
     />
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Red"
       value="red"
     />
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Violet"
       value="violet"
     />

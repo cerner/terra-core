@@ -142,7 +142,6 @@ class Frame extends React.Component {
     this.handleMouseDown = this.handleMouseDown.bind(this);
     this.handleToggleMouseDown = this.handleToggleMouseDown.bind(this);
     this.handleToggleButtonMouseDown = this.handleToggleButtonMouseDown.bind(this);
-    this.role = this.role.bind(this);
     this.visuallyHiddenComponent = React.createRef();
     this.setSelectMenuRef = this.setSelectMenuRef.bind(this);
   }
@@ -401,16 +400,6 @@ class Frame extends React.Component {
   }
 
   /**
-   * Determines compatible role attribute to apply to select based on active variant and disabled prop
-   */
-  role() {
-    const { disabled } = this.props;
-    const role = SharedUtil.isSafari() ? 'group' : 'combobox';
-
-    return disabled ? undefined : role;
-  }
-
-  /**
    * Renders descriptive text related to the select component to be available for screen readers
    */
   renderDescriptionText() {
@@ -508,7 +497,7 @@ class Frame extends React.Component {
     return (
       <div
         {...customProps}
-        role={this.role()}
+        role="combobox"
         data-terra-select-combobox
         aria-controls={!disabled && this.state.isOpen ? selectMenuId : undefined}
         aria-disabled={!!disabled}
@@ -517,6 +506,7 @@ class Frame extends React.Component {
         aria-haspopup={!disabled ? 'true' : undefined}
         aria-describedby={ariaDescribedBy}
         aria-owns={this.state.isOpen ? selectMenuId : undefined}
+        aria-required={required}
         className={selectClasses}
         onBlur={this.handleBlur}
         onFocus={this.handleFocus}

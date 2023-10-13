@@ -2,10 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
-import { injectIntl } from 'react-intl';
 import ThemeContext from 'terra-theme-context';
-// eslint-disable-next-line import/no-extraneous-dependencies
-import VisuallyHiddenText from 'terra-visually-hidden-text';
 import SharedUtil from './_SharedUtil';
 import styles from './_Option.module.scss';
 
@@ -69,11 +66,6 @@ const propTypes = {
    * The i18n value of the text "Expanded combobox".
    */
   expandedStateText: PropTypes.string,
-  /**
-   * @private
-   * The intl object to be injected for translations.
-   */
-  intl: PropTypes.shape({ formatMessage: PropTypes.func }),
 };
 
 const defaultProps = {
@@ -86,7 +78,6 @@ const Option = ({
   display,
   value,
   variant,
-  intl,
   isActive,
   isSelected,
   isCheckable,
@@ -114,21 +105,18 @@ const Option = ({
 
   let role = 'option'; // Used for JAWs and VoiceOver on iOS
 
-  let itemLabel;
-  let notSelectedText;
-  if (index === 1 || isSelected) {
-    itemLabel = `${expandedStateText}`;
-  }
-
-  if (!isSelected && SharedUtil.isMac() && SharedUtil.isSafari() && variant !== 'tag' && variant !== 'multiple') {
-    notSelectedText = intl.formatMessage({ id: 'Terra.form.select.notselected' }, { text: notSelectedText });
-  }
-
+  /**
+   * VoiceOver in Safari on desktop has issues with role="option" with the combination of the
+   * aria-live section we have and will stutter when reading options.
+   * Switching to role="radio" and role="checkbox" mitigates this behavior.
+   */
   if (SharedUtil.isSafari() && !('ontouchstart' in window)) {
     if (variant === 'tag' || variant === 'multiple') {
       role = 'checkbox';
     }
   }
+
+  const itemLabel = isSelected || index === 1 ? `${expandedStateText} ${display}` : display;
 
   return (
     <li
@@ -140,11 +128,10 @@ const Option = ({
       aria-disabled={disabled}
       tabIndex="0" // eslint-disable-line jsx-a11y/no-noninteractive-tabindex
       data-terra-select-option
+      aria-label={itemLabel}
     >
       {(isCheckable || isAddOption) && <span className={cx('icon')} />}
-      <VisuallyHiddenText text={itemLabel} />
       <span className={cx('display')}>{display}</span>
-      <VisuallyHiddenText text={notSelectedText} />
     </li>
   );
 };
@@ -153,4 +140,4 @@ Option.propTypes = propTypes;
 Option.defaultProps = defaultProps;
 Option.isOption = true;
 
-export default injectIntl(Option);
+export default Option;

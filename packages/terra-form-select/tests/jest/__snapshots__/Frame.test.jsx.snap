@@ -67,6 +67,7 @@ exports[`Frame correctly applies the theme context className for default variant
   aria-haspopup="true"
   aria-invalid="false"
   aria-label=""
+  aria-required="false"
   class="select default orion-fusion-theme"
   data-terra-select-combobox="true"
   role="combobox"
