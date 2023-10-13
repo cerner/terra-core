@@ -106,6 +106,7 @@ exports[`ColumnResizeHandle renders a default column resize handle 1`] = `
     }
   >
     <div
+      aria-hidden={true}
       aria-label="Vitals"
       aria-valuemax={300}
       aria-valuemin={60}

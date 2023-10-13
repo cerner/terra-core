@@ -90,7 +90,7 @@ const ColumnResizeHandle = (props) => {
       draggable
       role="slider"
       tabIndex={isGridContext ? -1 : 0}
-      aria-hidden={isGridContext ? !isActive : undefined}
+      aria-hidden={!isActive}
       aria-valuemin={minimumWidth}
       aria-valuenow={columnWidth}
       aria-valuemax={maximumWidth}

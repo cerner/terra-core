@@ -94,7 +94,6 @@ const propTypes = {
 
 const defaultProps = {
   isRowHeader: false,
-  isSelected: false,
   isSelectable: false,
   isMasked: false,
 };
@@ -233,7 +232,7 @@ function Cell(props) {
   return (
     <CellTag
       ref={cellRef}
-      aria-selected={isGridContext ? isSelected : undefined}
+      aria-selected={isSelected}
       aria-label={ariaLabel}
       tabIndex={isGridContext ? -1 : undefined}
       className={className}

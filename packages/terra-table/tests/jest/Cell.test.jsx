@@ -135,7 +135,7 @@ describe('Cell', () => {
     const selectedCell = wrapper.find('td.selected');
     expect(selectedCell).toHaveLength(1); // Cell should have been styled selected.
 
-    expect(wrapper.find('td').prop('aria-selected')).toBe(undefined);
+    expect(wrapper.find('td').prop('aria-selected')).toBe(true);
     expect(wrapper.find('td').prop('aria-label')).toBe('Some Label Here');
 
     const cellContent = selectedCell.find('div');

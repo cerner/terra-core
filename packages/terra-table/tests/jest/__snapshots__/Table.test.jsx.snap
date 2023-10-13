@@ -655,13 +655,11 @@ Array [
                     isMasked={false}
                     isRowHeader={true}
                     isSelectable={false}
-                    isSelected={false}
                     onCellSelect={[Function]}
                     rowId="1"
                     rowIndex={1}
                   >
                     <th
-                      aria-selected={false}
                       className="cell pinned"
                       onKeyDown={[Function]}
                       onMouseDown={[Function]}
@@ -747,13 +745,11 @@ Array [
                     isMasked={false}
                     isRowHeader={false}
                     isSelectable={false}
-                    isSelected={false}
                     onCellSelect={[Function]}
                     rowId="1"
                     rowIndex={1}
                   >
                     <td
-                      aria-selected={false}
                       className="cell pinned blank"
                       onKeyDown={[Function]}
                       onMouseDown={[Function]}
@@ -842,13 +838,11 @@ Array [
                     isMasked={true}
                     isRowHeader={false}
                     isSelectable={false}
-                    isSelected={false}
                     onCellSelect={[Function]}
                     rowId="1"
                     rowIndex={1}
                   >
                     <td
-                      aria-selected={false}
                       className="cell masked"
                       onKeyDown={[Function]}
                       onMouseDown={[Function]}
@@ -985,13 +979,11 @@ Array [
                     isMasked={false}
                     isRowHeader={true}
                     isSelectable={false}
-                    isSelected={false}
                     onCellSelect={[Function]}
                     rowId="2"
                     rowIndex={2}
                   >
                     <th
-                      aria-selected={false}
                       className="cell pinned"
                       onKeyDown={[Function]}
                       onMouseDown={[Function]}
@@ -1077,13 +1069,11 @@ Array [
                     isMasked={false}
                     isRowHeader={false}
                     isSelectable={false}
-                    isSelected={false}
                     onCellSelect={[Function]}
                     rowId="2"
                     rowIndex={2}
                   >
                     <td
-                      aria-selected={false}
                       className="cell pinned"
                       onKeyDown={[Function]}
                       onMouseDown={[Function]}
@@ -1168,13 +1158,11 @@ Array [
                     isMasked={true}
                     isRowHeader={false}
                     isSelectable={false}
-                    isSelected={false}
                     onCellSelect={[Function]}
                     rowId="2"
                     rowIndex={2}
                   >
                     <td
-                      aria-selected={false}
                       className="cell masked"
                       onKeyDown={[Function]}
                       onMouseDown={[Function]}
@@ -1311,13 +1299,11 @@ Array [
                     isMasked={false}
                     isRowHeader={true}
                     isSelectable={false}
-                    isSelected={false}
                     onCellSelect={[Function]}
                     rowId="3"
                     rowIndex={3}
                   >
                     <th
-                      aria-selected={false}
                       className="cell pinned"
                       onKeyDown={[Function]}
                       onMouseDown={[Function]}
@@ -1403,13 +1389,11 @@ Array [
                     isMasked={false}
                     isRowHeader={false}
                     isSelectable={false}
-                    isSelected={false}
                     onCellSelect={[Function]}
                     rowId="3"
                     rowIndex={3}
                   >
                     <td
-                      aria-selected={false}
                       className="cell pinned"
                       onKeyDown={[Function]}
                       onMouseDown={[Function]}
@@ -1494,13 +1478,11 @@ Array [
                     isMasked={true}
                     isRowHeader={false}
                     isSelectable={false}
-                    isSelected={false}
                     onCellSelect={[Function]}
                     rowId="3"
                     rowIndex={3}
                   >
                     <td
-                      aria-selected={false}
                       className="cell masked"
                       onKeyDown={[Function]}
                       onMouseDown={[Function]}
@@ -1637,13 +1619,11 @@ Array [
                     isMasked={false}
                     isRowHeader={true}
                     isSelectable={false}
-                    isSelected={false}
                     onCellSelect={[Function]}
                     rowId="4"
                     rowIndex={4}
                   >
                     <th
-                      aria-selected={false}
                       className="cell pinned highlighted"
                       onKeyDown={[Function]}
                       onMouseDown={[Function]}
@@ -1729,13 +1709,11 @@ Array [
                     isMasked={false}
                     isRowHeader={false}
                     isSelectable={false}
-                    isSelected={false}
                     onCellSelect={[Function]}
                     rowId="4"
                     rowIndex={4}
                   >
                     <td
-                      aria-selected={false}
                       className="cell pinned highlighted"
                       onKeyDown={[Function]}
                       onMouseDown={[Function]}
@@ -1819,13 +1797,11 @@ Array [
                     isMasked={false}
                     isRowHeader={false}
                     isSelectable={false}
-                    isSelected={false}
                     onCellSelect={[Function]}
                     rowId="4"
                     rowIndex={4}
                   >
                     <td
-                      aria-selected={false}
                       className="cell highlighted"
                       onKeyDown={[Function]}
                       onMouseDown={[Function]}
@@ -2529,13 +2505,11 @@ Array [
                     isMasked={false}
                     isRowHeader={true}
                     isSelectable={false}
-                    isSelected={false}
                     onCellSelect={[Function]}
                     rowId="1"
                     rowIndex={1}
                   >
                     <th
-                      aria-selected={false}
                       className="cell pinned"
                       onKeyDown={[Function]}
                       onMouseDown={[Function]}
@@ -2621,13 +2595,11 @@ Array [
                     isMasked={false}
                     isRowHeader={false}
                     isSelectable={false}
-                    isSelected={false}
                     onCellSelect={[Function]}
                     rowId="1"
                     rowIndex={1}
                   >
                     <td
-                      aria-selected={false}
                       className="cell pinned blank"
                       onKeyDown={[Function]}
                       onMouseDown={[Function]}
@@ -2716,13 +2688,11 @@ Array [
                     isMasked={true}
                     isRowHeader={false}
                     isSelectable={false}
-                    isSelected={false}
                     onCellSelect={[Function]}
                     rowId="1"
                     rowIndex={1}
                   >
                     <td
-                      aria-selected={false}
                       className="cell masked"
                       onKeyDown={[Function]}
                       onMouseDown={[Function]}
@@ -2859,13 +2829,11 @@ Array [
                     isMasked={false}
                     isRowHeader={true}
                     isSelectable={false}
-                    isSelected={false}
                     onCellSelect={[Function]}
                     rowId="2"
                     rowIndex={2}
                   >
                     <th
-                      aria-selected={false}
                       className="cell pinned"
                       onKeyDown={[Function]}
                       onMouseDown={[Function]}
@@ -2951,13 +2919,11 @@ Array [
                     isMasked={false}
                     isRowHeader={false}
                     isSelectable={false}
-                    isSelected={false}
                     onCellSelect={[Function]}
                     rowId="2"
                     rowIndex={2}
                   >
                     <td
-                      aria-selected={false}
                       className="cell pinned"
                       onKeyDown={[Function]}
                       onMouseDown={[Function]}
@@ -3042,13 +3008,11 @@ Array [
                     isMasked={true}
                     isRowHeader={false}
                     isSelectable={false}
-                    isSelected={false}
                     onCellSelect={[Function]}
                     rowId="2"
                     rowIndex={2}
                   >
                     <td
-                      aria-selected={false}
                       className="cell masked"
                       onKeyDown={[Function]}
                       onMouseDown={[Function]}
@@ -3185,13 +3149,11 @@ Array [
                     isMasked={false}
                     isRowHeader={true}
                     isSelectable={false}
-                    isSelected={false}
                     onCellSelect={[Function]}
                     rowId="3"
                     rowIndex={3}
                   >
                     <th
-                      aria-selected={false}
                       className="cell pinned"
                       onKeyDown={[Function]}
                       onMouseDown={[Function]}
@@ -3277,13 +3239,11 @@ Array [
                     isMasked={false}
                     isRowHeader={false}
                     isSelectable={false}
-                    isSelected={false}
                     onCellSelect={[Function]}
                     rowId="3"
                     rowIndex={3}
                   >
                     <td
-                      aria-selected={false}
                       className="cell pinned"
                       onKeyDown={[Function]}
                       onMouseDown={[Function]}
@@ -3368,13 +3328,11 @@ Array [
                     isMasked={true}
                     isRowHeader={false}
                     isSelectable={false}
-                    isSelected={false}
                     onCellSelect={[Function]}
                     rowId="3"
                     rowIndex={3}
                   >
                     <td
-                      aria-selected={false}
                       className="cell masked"
                       onKeyDown={[Function]}
                       onMouseDown={[Function]}
@@ -3511,13 +3469,11 @@ Array [
                     isMasked={false}
                     isRowHeader={true}
                     isSelectable={false}
-                    isSelected={false}
                     onCellSelect={[Function]}
                     rowId="4"
                     rowIndex={4}
                   >
                     <th
-                      aria-selected={false}
                       className="cell pinned highlighted"
                       onKeyDown={[Function]}
                       onMouseDown={[Function]}
@@ -3603,13 +3559,11 @@ Array [
                     isMasked={false}
                     isRowHeader={false}
                     isSelectable={false}
-                    isSelected={false}
                     onCellSelect={[Function]}
                     rowId="4"
                     rowIndex={4}
                   >
                     <td
-                      aria-selected={false}
                       className="cell pinned highlighted"
                       onKeyDown={[Function]}
                       onMouseDown={[Function]}
@@ -3693,13 +3647,11 @@ Array [
                     isMasked={false}
                     isRowHeader={false}
                     isSelectable={false}
-                    isSelected={false}
                     onCellSelect={[Function]}
                     rowId="4"
                     rowIndex={4}
                   >
                     <td
-                      aria-selected={false}
                       className="cell highlighted"
                       onKeyDown={[Function]}
                       onMouseDown={[Function]}
@@ -4551,6 +4503,7 @@ exports[`Table verifies row selection column header selection 1`] = `
                       rowIndex={1}
                     >
                       <td
+                        aria-selected={false}
                         className="cell pinned"
                         style={
                           Object {
@@ -4646,6 +4599,7 @@ exports[`Table verifies row selection column header selection 1`] = `
                   rowIndex={1}
                 >
                   <th
+                    aria-selected={false}
                     className="cell pinned"
                     role="rowheader"
                     scope="row"
@@ -4733,6 +4687,7 @@ exports[`Table verifies row selection column header selection 1`] = `
                   rowIndex={1}
                 >
                   <td
+                    aria-selected={false}
                     className="cell pinned blank"
                     style={
                       Object {
@@ -4823,6 +4778,7 @@ exports[`Table verifies row selection column header selection 1`] = `
                   rowIndex={1}
                 >
                   <td
+                    aria-selected={false}
                     className="cell masked"
                     style={
                       Object {
@@ -5005,6 +4961,7 @@ exports[`Table verifies row selection column header selection 1`] = `
                       rowIndex={2}
                     >
                       <td
+                        aria-selected={false}
                         className="cell pinned"
                         style={
                           Object {
@@ -5099,6 +5056,7 @@ exports[`Table verifies row selection column header selection 1`] = `
                   rowIndex={2}
                 >
                   <th
+                    aria-selected={false}
                     className="cell pinned"
                     role="rowheader"
                     scope="row"
@@ -5186,6 +5144,7 @@ exports[`Table verifies row selection column header selection 1`] = `
                   rowIndex={2}
                 >
                   <td
+                    aria-selected={false}
                     className="cell pinned"
                     style={
                       Object {
@@ -5272,6 +5231,7 @@ exports[`Table verifies row selection column header selection 1`] = `
                   rowIndex={2}
                 >
                   <td
+                    aria-selected={false}
                     className="cell masked"
                     style={
                       Object {
@@ -5454,6 +5414,7 @@ exports[`Table verifies row selection column header selection 1`] = `
                       rowIndex={3}
                     >
                       <td
+                        aria-selected={false}
                         className="cell pinned"
                         style={
                           Object {
@@ -5548,6 +5509,7 @@ exports[`Table verifies row selection column header selection 1`] = `
                   rowIndex={3}
                 >
                   <th
+                    aria-selected={false}
                     className="cell pinned"
                     role="rowheader"
                     scope="row"
@@ -5635,6 +5597,7 @@ exports[`Table verifies row selection column header selection 1`] = `
                   rowIndex={3}
                 >
                   <td
+                    aria-selected={false}
                     className="cell pinned"
                     style={
                       Object {
@@ -5721,6 +5684,7 @@ exports[`Table verifies row selection column header selection 1`] = `
                   rowIndex={3}
                 >
                   <td
+                    aria-selected={false}
                     className="cell masked"
                     style={
                       Object {
@@ -5903,6 +5867,7 @@ exports[`Table verifies row selection column header selection 1`] = `
                       rowIndex={4}
                     >
                       <td
+                        aria-selected={false}
                         className="cell pinned"
                         style={
                           Object {
@@ -5997,6 +5962,7 @@ exports[`Table verifies row selection column header selection 1`] = `
                   rowIndex={4}
                 >
                   <th
+                    aria-selected={false}
                     className="cell pinned highlighted"
                     role="rowheader"
                     scope="row"
@@ -6084,6 +6050,7 @@ exports[`Table verifies row selection column header selection 1`] = `
                   rowIndex={4}
                 >
                   <td
+                    aria-selected={false}
                     className="cell pinned highlighted"
                     style={
                       Object {
@@ -6169,6 +6136,7 @@ exports[`Table verifies row selection column header selection 1`] = `
                   rowIndex={4}
                 >
                   <td
+                    aria-selected={false}
                     className="cell highlighted"
                     style={
                       Object {
