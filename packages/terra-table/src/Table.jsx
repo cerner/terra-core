@@ -7,7 +7,6 @@ import classNames from 'classnames/bind';
 import ResizeObserver from 'resize-observer-polyfill';
 
 import ThemeContext from 'terra-theme-context';
-import VisuallyHiddenText from 'terra-visually-hidden-text';
 
 import ColumnHeader from './subcomponents/ColumnHeader';
 import ColumnContext from './utils/ColumnContext';
@@ -28,12 +27,6 @@ const propTypes = {
    * a unique id.
    */
   id: PropTypes.string.isRequired,
-
-  /**
-   * @private
-   * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
-  */
-  intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
 
   /**
   * Data for content in the body of the table. Rows will be rendered in the order given.
@@ -103,7 +96,7 @@ const propTypes = {
   onColumnSelect: PropTypes.func,
 
   /**
-   * Boolean indicating whether or not the DataGrid should allow entire rows to be selectable. An additional column will be
+   * Boolean indicating whether or not the table should allow entire rows to be selectable. An additional column will be
    * rendered to allow for row selection to occur.
    */
   hasSelectableRows: PropTypes.bool,
@@ -138,7 +131,6 @@ function Table(props) {
     onCellSelect,
     hasSelectableRows,
     rowHeaderIndex,
-    intl,
   } = props;
 
   if (pinnedColumns.length === 0) {
@@ -149,7 +141,6 @@ function Table(props) {
   // Manage column resize
   const [tableHeight, setTableHeight] = useState(0);
   const [activeIndex, setActiveIndex] = useState(null);
-  const [cellAriaLiveMessage, setCellAriaLiveMessage] = useState(null);
 
   const [pinnedColumnOffsets, setPinnedColumnOffsets] = useState([0]);
 
@@ -158,13 +149,13 @@ function Table(props) {
   const tableWidth = useRef(0);
   const tableRef = useRef();
 
-  const sortedColumn = useRef();
+  // const sortedColumn = useRef();
 
   const gridContext = useContext(GridContext);
   const theme = useContext(ThemeContext);
 
   const isGridContext = gridContext.role === GridConstants.GRID;
-  const columnContextValue = useMemo(() => ({ pinnedColumnOffsets, setCellAriaLiveMessage }), [pinnedColumnOffsets]);
+  const columnContextValue = useMemo(() => ({ pinnedColumnOffsets }), [pinnedColumnOffsets]);
 
   // Initialize column width properties
   const initializeColumn = (column) => ({
@@ -200,7 +191,7 @@ function Table(props) {
     let cumulativeOffset = 0;
     let lastPinnedColumnIndex;
 
-    // if grid has selectable rows but no pinned columns, then set the offset of the first column to 0
+    // if table has selectable rows but no pinned columns, then set the offset of the first column to 0
     if (hasSelectableRows && pinnedColumns.length === 0) {
       lastPinnedColumnIndex = 0;
       offsetArray.push(cumulativeOffset);
@@ -219,24 +210,6 @@ function Table(props) {
       });
     }
     setPinnedColumnOffsets(offsetArray);
-
-    const currentSortedColumn = tableColumns.find((column) => !!column.sortIndicator);
-    if (sortedColumn.current) {
-      const previousSortedColumn = { ...sortedColumn.current };
-
-      if (previousSortedColumn.id !== currentSortedColumn.id
-        || previousSortedColumn.sortIndicator !== currentSortedColumn.sortIndicator) {
-        setCellAriaLiveMessage(intl.formatMessage(
-          { id: 'Terra.table.sort-direction-changed' },
-          {
-            column: currentSortedColumn.displayName,
-            sortDirection: currentSortedColumn.sortIndicator,
-          },
-        ));
-      }
-    }
-
-    sortedColumn.current = currentSortedColumn;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [tableColumns]);
 
@@ -343,7 +316,6 @@ function Table(props) {
           </tbody>
         </ColumnContext.Provider>
       </table>
-      <VisuallyHiddenText aria-live="polite" aria-atomic="true" text={cellAriaLiveMessage} />
     </div>
   );
 }
@@ -351,4 +323,4 @@ function Table(props) {
 Table.propTypes = propTypes;
 Table.defaultProps = defaultProps;
 
-export default injectIntl(Table);
+export default React.memo(injectIntl(Table));

@@ -149,7 +149,9 @@ function Cell(props) {
    */
   const deactivateFocusTrap = () => {
     setIsFocusTrapEnabled(false);
-    columnContext.setCellAriaLiveMessage(intl.formatMessage({ id: 'Terra.table.resume-navigation' }));
+    if (gridContext.setCellAriaLiveMessage) {
+      gridContext.setCellAriaLiveMessage(intl.formatMessage({ id: 'Terra.table.resume-navigation' }));
+    }
   };
 
   const onMouseDown = ((event) => {
@@ -177,7 +179,9 @@ function Cell(props) {
           // Lock focus into component
           if (hasFocusableElements()) {
             setIsFocusTrapEnabled(true);
-            columnContext.setCellAriaLiveMessage(intl.formatMessage({ id: 'Terra.table.cell-focus-trapped' }));
+            if (gridContext.setCellAriaLiveMessage) {
+              gridContext.setCellAriaLiveMessage(intl.formatMessage({ id: 'Terra.table.cell-focus-trapped' }));
+            }
             event.stopPropagation();
             event.preventDefault();
           }

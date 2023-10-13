@@ -1,4 +1,5 @@
 import React from 'react';
+import { IntlProvider } from 'react-intl';
 
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import { mountWithIntl, shallowWithIntl } from 'terra-enzyme-intl';
@@ -73,13 +74,15 @@ afterAll(() => {
 describe('Table', () => {
   it('verifies that the table created is consistent with the rows and overflowColumns props', () => {
     const wrapper = shallowWithIntl(
-      <Table
-        id="test-terra-table"
-        pinnedColumns={tableData.cols.slice(0, 2)}
-        overflowColumns={tableData.cols.slice(2)}
-        rows={tableData.rows}
-      />,
-    ).dive();
+      <IntlProvider locale="en">
+        <Table
+          id="test-terra-table"
+          pinnedColumns={tableData.cols.slice(0, 2)}
+          overflowColumns={tableData.cols.slice(2)}
+          rows={tableData.rows}
+        />
+      </IntlProvider>,
+    ).dive().dive();
 
     // One row used for the header.
     const columnHeader = wrapper.find(ColumnHeader);
@@ -102,12 +105,14 @@ describe('Table', () => {
     };
 
     const wrapper = shallowWithIntl(
-      <Table
-        id="test-terra-table"
-        overflowColumns={tableData.cols}
-        rows={tableData.rows}
-      />,
-    ).dive();
+      <IntlProvider locale="en">
+        <Table
+          id="test-terra-table"
+          overflowColumns={tableData.cols}
+          rows={tableData.rows}
+        />
+      </IntlProvider>,
+    ).dive().dive();
 
     const rows = wrapper.find(Row);
     expect(rows).toHaveLength(tableData.rows.length);
@@ -263,11 +268,14 @@ describe('with pinned columns', () => {
 describe('Error handling - prop types', () => {
   it('throws an error if rowHeaderIndex is not an integer', () => {
     shallowWithIntl(
-      <Table
-        id="test-terra-table"
-        rows={tableData.rows}
-        rowHeaderIndex="2"
-      />,
+      <IntlProvider locale="en">
+        <Table
+          id="test-terra-table"
+          rows={tableData.rows}
+          rowHeaderIndex="2"
+        />
+      </IntlProvider>
+      ,
     ).dive();
 
     expect(console.error).toHaveBeenCalledWith(expect.stringContaining(ERRORS.ROW_HEADER_INDEX_NOT_AN_INTEGER)); // eslint-disable-line no-console
@@ -275,11 +283,13 @@ describe('Error handling - prop types', () => {
 
   it('throws an error if rowHeaderIndex is not a positive integer', () => {
     shallowWithIntl(
-      <Table
-        id="test-terra-table"
-        rows={tableData.rows}
-        rowHeaderIndex={-1}
-      />,
+      <IntlProvider locale="en">
+        <Table
+          id="test-terra-table"
+          rows={tableData.rows}
+          rowHeaderIndex={-1}
+        />
+      </IntlProvider>,
     ).dive();
 
     expect(console.error).toHaveBeenCalledWith(expect.stringContaining(ERRORS.ROW_HEADER_INDEX_LESS_THAN_ZERO)); // eslint-disable-line no-console
@@ -287,13 +297,15 @@ describe('Error handling - prop types', () => {
 
   it('throws an error if rowHeaderIndex is greater than the length of pinned columns', () => {
     shallowWithIntl(
-      <Table
-        id="test-terra-table"
-        pinnedColumns={tableData.cols.slice(0, 2)}
-        overflowColumns={tableData.cols.slice(2)}
-        rowHeaderIndex={2}
-        rows={tableData.rows}
-      />,
+      <IntlProvider locale="en">
+        <Table
+          id="test-terra-table"
+          pinnedColumns={tableData.cols.slice(0, 2)}
+          overflowColumns={tableData.cols.slice(2)}
+          rowHeaderIndex={2}
+          rows={tableData.rows}
+        />
+      </IntlProvider>,
     ).dive();
 
     expect(console.error).toHaveBeenCalledWith(expect.stringContaining(ERRORS.ROW_HEADER_INDEX_EXCEEDS_PINNED)); // eslint-disable-line no-console

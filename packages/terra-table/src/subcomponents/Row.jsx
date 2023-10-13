@@ -7,7 +7,6 @@ import ThemeContext from 'terra-theme-context';
 import Cell from './Cell';
 import cellShape from '../proptypes/cellShape';
 import { columnShape } from '../proptypes/columnShape';
-import GridContext, { GridConstants } from '../utils/GridContext';
 import RowSelectionCell from './RowSelectionCell';
 import styles from './Row.module.scss';
 
@@ -15,12 +14,12 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * An identifier to uniquely identify the row within the grid.
+   * An identifier to uniquely identify the row within the table.
    */
   id: PropTypes.string.isRequired,
 
   /**
-   * The row's position in the Grid. This is zero based.
+   * The row's position in the table. This is zero based.
    */
   rowIndex: PropTypes.number,
 
@@ -46,7 +45,7 @@ const propTypes = {
   ariaLabel: PropTypes.string,
 
   /**
-   * Boolean indicating whether or not the DataGrid allows a row to be selected. If true, an additional
+   * Boolean indicating whether or not the table allows a row to be selected. If true, an additional
    * column containing a checkbox is rendered to indicate when when the row is selected.
    */
   hasRowSelection: PropTypes.bool,
@@ -90,12 +89,10 @@ function Row(props) {
   } = props;
 
   const theme = useContext(ThemeContext);
-  const gridContext = useContext(GridContext);
 
   const [isHovered, setHovered] = useState(false);
 
   const columnIndexOffSet = hasRowSelection ? 1 : 0;
-  const isGridContext = gridContext.role === GridConstants.GRID;
 
   return (
     <tr
@@ -130,7 +127,7 @@ function Row(props) {
           key={`${id}_${displayedColumns[cellColumnIndex].id}`}
           isSelected={!hasRowSelection && cellData.isSelected}
           isMasked={cellData.isMasked}
-          isSelectable={isGridContext ? cellData.isSelectable !== false : false}
+          isSelectable={cellData.isSelectable}
           isRowHeader={cellColumnIndex === rowHeaderIndex}
           isHighlighted={isHovered || isSelected}
           onCellSelect={onCellSelect}
