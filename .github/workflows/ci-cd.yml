@@ -3,9 +3,9 @@ name: CI and CD
 
 on:
   push:
-    branches: ['main', 'table-mvb']
+    branches: ['main']
   pull_request:
-    branches: ['main', 'table-mvb']
+    branches: ['main']
   schedule:
     - cron: '0 1 * * SUN'
 
