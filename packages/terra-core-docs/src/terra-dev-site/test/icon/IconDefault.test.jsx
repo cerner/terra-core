@@ -12,4 +12,3 @@ const IconDefault = () => (
 );
 
 export default IconDefault;
-ˀˀ

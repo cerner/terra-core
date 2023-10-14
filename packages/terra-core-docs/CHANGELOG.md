@@ -2,9 +2,6 @@
 
 ## Unreleased
 
-* Added
-  * Added example for customIcons.
-
 * Updated
   * Updated `terra-alert` documentation for custom titles.
 
