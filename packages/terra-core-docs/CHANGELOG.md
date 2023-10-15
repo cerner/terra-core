@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added a visual error note for invalid example in `terra-form-single-select`.
+
 * Updated
   * Updated `terra-alert` documentation for custom titles.
 
