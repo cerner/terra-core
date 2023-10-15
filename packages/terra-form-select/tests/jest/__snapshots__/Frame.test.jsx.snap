@@ -91,6 +91,7 @@ exports[`Frame correctly applies the theme context className for default variant
     </span>
   </div>
   <div
+    aria-hidden="false"
     aria-label=""
     class="display"
   >
