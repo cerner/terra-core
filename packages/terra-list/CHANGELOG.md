@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Fixed
-  * Fixed the console error appearing in the terra-menu examples while keyboard navigation.
+  * Fixed _property is undefined_ error while navigating with a keyboard.
 
 ## 4.64.0 - (October 3, 2023)
 
