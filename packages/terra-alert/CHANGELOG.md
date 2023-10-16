@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 4.83.0 - (October 16, 2023)
+
 * Updated
   * Updated prop documentation for optional custom titles.
 

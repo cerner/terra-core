@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.58.0 - (October 16, 2023)
+
 * Added
   * Added export for `IconBase`.
 
