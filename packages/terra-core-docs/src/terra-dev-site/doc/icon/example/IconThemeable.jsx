@@ -245,9 +245,6 @@ IconZoomIn,
 IconZoomOut, 
 } from 'terra-icon';
 
-// IconCeMarking is a private icon for internal use
-import IconCeMarking from 'terra-icon/lib/icon/IconCeMarking';
-
 const cellStyle = { padding: '0.5rem' };
 const IconAll = () => (
   <div>  <table>
@@ -264,7 +261,7 @@ const IconAll = () => (
         <td style={cellStyle}>add</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconAdd } from 'terra-icon';
+            {`import { IconAdd } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -273,7 +270,7 @@ const IconAll = () => (
         <td style={cellStyle}>search</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconSearch } from 'terra-icon';
+            {`import { IconSearch } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -282,7 +279,7 @@ const IconAll = () => (
         <td style={cellStyle}>commit</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconCommit } from 'terra-icon';
+            {`import { IconCommit } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -291,7 +288,7 @@ const IconAll = () => (
         <td style={cellStyle}>checkmark</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconCheckmark } from 'terra-icon';
+            {`import { IconCheckmark } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -300,7 +297,7 @@ const IconAll = () => (
         <td style={cellStyle}>trash</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconTrash } from 'terra-icon';
+            {`import { IconTrash } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -309,7 +306,7 @@ const IconAll = () => (
         <td style={cellStyle}>paperFolded</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconPaperFolded } from 'terra-icon';
+            {`import { IconPaperFolded } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -318,7 +315,7 @@ const IconAll = () => (
         <td style={cellStyle}>printer</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconPrinter } from 'terra-icon';
+            {`import { IconPrinter } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -327,7 +324,7 @@ const IconAll = () => (
         <td style={cellStyle}>comment</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconComment } from 'terra-icon';
+            {`import { IconComment } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -336,7 +333,7 @@ const IconAll = () => (
         <td style={cellStyle}>bookmark</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconBookmark } from 'terra-icon';
+            {`import { IconBookmark } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -345,7 +342,7 @@ const IconAll = () => (
         <td style={cellStyle}>modified</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconModified } from 'terra-icon';
+            {`import { IconModified } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -354,7 +351,7 @@ const IconAll = () => (
         <td style={cellStyle}>first</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconFirst } from 'terra-icon';
+            {`import { IconFirst } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -363,7 +360,7 @@ const IconAll = () => (
         <td style={cellStyle}>folder</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconFolder } from 'terra-icon';
+            {`import { IconFolder } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -372,7 +369,7 @@ const IconAll = () => (
         <td style={cellStyle}>attachment</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconAttachment } from 'terra-icon';
+            {`import { IconAttachment } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -381,7 +378,7 @@ const IconAll = () => (
         <td style={cellStyle}>send</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconSend } from 'terra-icon';
+            {`import { IconSend } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -390,7 +387,7 @@ const IconAll = () => (
         <td style={cellStyle}>pill</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconPill } from 'terra-icon';
+            {`import { IconPill } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -399,7 +396,7 @@ const IconAll = () => (
         <td style={cellStyle}>redo</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconRedo } from 'terra-icon';
+            {`import { IconRedo } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -408,7 +405,7 @@ const IconAll = () => (
         <td style={cellStyle}>visualization</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconVisualization } from 'terra-icon';
+            {`import { IconVisualization } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -417,7 +414,7 @@ const IconAll = () => (
         <td style={cellStyle}>lightbulb</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconLightbulb } from 'terra-icon';
+            {`import { IconLightbulb } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -426,7 +423,7 @@ const IconAll = () => (
         <td style={cellStyle}>forward</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconForward } from 'terra-icon';
+            {`import { IconForward } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -435,7 +432,7 @@ const IconAll = () => (
         <td style={cellStyle}>projects</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconProjects } from 'terra-icon';
+            {`import { IconProjects } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -444,7 +441,7 @@ const IconAll = () => (
         <td style={cellStyle}>replyAll</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconReplyAll } from 'terra-icon';
+            {`import { IconReplyAll } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -453,7 +450,7 @@ const IconAll = () => (
         <td style={cellStyle}>flag</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconFlag } from 'terra-icon';
+            {`import { IconFlag } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -462,7 +459,7 @@ const IconAll = () => (
         <td style={cellStyle}>calculator</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconCalculator } from 'terra-icon';
+            {`import { IconCalculator } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -471,7 +468,7 @@ const IconAll = () => (
         <td style={cellStyle}>caretRight</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconCaretRight } from 'terra-icon';
+            {`import { IconCaretRight } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -480,7 +477,7 @@ const IconAll = () => (
         <td style={cellStyle}>caretLeft</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconCaretLeft } from 'terra-icon';
+            {`import { IconCaretLeft } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -489,7 +486,7 @@ const IconAll = () => (
         <td style={cellStyle}>caretUp</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconCaretUp } from 'terra-icon';
+            {`import { IconCaretUp } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -498,7 +495,7 @@ const IconAll = () => (
         <td style={cellStyle}>caretDown</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconCaretDown } from 'terra-icon';
+            {`import { IconCaretDown } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -507,7 +504,7 @@ const IconAll = () => (
         <td style={cellStyle}>trophy</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconTrophy } from 'terra-icon';
+            {`import { IconTrophy } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -516,7 +513,7 @@ const IconAll = () => (
         <td style={cellStyle}>chevronLeft</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconChevronLeft } from 'terra-icon';
+            {`import { IconChevronLeft } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -525,7 +522,7 @@ const IconAll = () => (
         <td style={cellStyle}>previous</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconPrevious } from 'terra-icon';
+            {`import { IconPrevious } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -534,7 +531,7 @@ const IconAll = () => (
         <td style={cellStyle}>chevronRight</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconChevronRight } from 'terra-icon';
+            {`import { IconChevronRight } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -543,7 +540,7 @@ const IconAll = () => (
         <td style={cellStyle}>next</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconNext } from 'terra-icon';
+            {`import { IconNext } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -552,7 +549,7 @@ const IconAll = () => (
         <td style={cellStyle}>chevronUp</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconChevronUp } from 'terra-icon';
+            {`import { IconChevronUp } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -561,7 +558,7 @@ const IconAll = () => (
         <td style={cellStyle}>expandLess</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconExpandLess } from 'terra-icon';
+            {`import { IconExpandLess } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -570,7 +567,7 @@ const IconAll = () => (
         <td style={cellStyle}>chevron</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconChevron } from 'terra-icon';
+            {`import { IconChevron } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -579,7 +576,7 @@ const IconAll = () => (
         <td style={cellStyle}>chevronDown</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconChevronDown } from 'terra-icon';
+            {`import { IconChevronDown } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -588,7 +585,7 @@ const IconAll = () => (
         <td style={cellStyle}>expandMore</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconExpandMore } from 'terra-icon';
+            {`import { IconExpandMore } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -597,7 +594,7 @@ const IconAll = () => (
         <td style={cellStyle}>clock</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconClock } from 'terra-icon';
+            {`import { IconClock } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -606,7 +603,7 @@ const IconAll = () => (
         <td style={cellStyle}>away</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconAway } from 'terra-icon';
+            {`import { IconAway } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -615,7 +612,7 @@ const IconAll = () => (
         <td style={cellStyle}>sortAscending</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconSortAscending } from 'terra-icon';
+            {`import { IconSortAscending } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -624,7 +621,7 @@ const IconAll = () => (
         <td style={cellStyle}>sortDescending</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconSortDescending } from 'terra-icon';
+            {`import { IconSortDescending } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -633,7 +630,7 @@ const IconAll = () => (
         <td style={cellStyle}>treemap</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconTreemap } from 'terra-icon';
+            {`import { IconTreemap } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -642,7 +639,7 @@ const IconAll = () => (
         <td style={cellStyle}>glasses</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconGlasses } from 'terra-icon';
+            {`import { IconGlasses } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -651,7 +648,7 @@ const IconAll = () => (
         <td style={cellStyle}>image</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconImage } from 'terra-icon';
+            {`import { IconImage } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -660,7 +657,7 @@ const IconAll = () => (
         <td style={cellStyle}>doorOpen</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconDoorOpen } from 'terra-icon';
+            {`import { IconDoorOpen } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -669,7 +666,7 @@ const IconAll = () => (
         <td style={cellStyle}>ellipses</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconEllipses } from 'terra-icon';
+            {`import { IconEllipses } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -678,7 +675,7 @@ const IconAll = () => (
         <td style={cellStyle}>exclamation</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconExclamation } from 'terra-icon';
+            {`import { IconExclamation } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -687,7 +684,7 @@ const IconAll = () => (
         <td style={cellStyle}>italic-i</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconItalicI } from 'terra-icon';
+            {`import { IconItalicI } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -696,7 +693,7 @@ const IconAll = () => (
         <td style={cellStyle}>information_themeable</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconInformationThemeable } from 'terra-icon';
+            {`import { IconInformationThemeable } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -705,7 +702,7 @@ const IconAll = () => (
         <td style={cellStyle}>minus</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconMinus } from 'terra-icon';
+            {`import { IconMinus } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -714,7 +711,7 @@ const IconAll = () => (
         <td style={cellStyle}>close</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconClose } from 'terra-icon';
+            {`import { IconClose } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -723,7 +720,7 @@ const IconAll = () => (
         <td style={cellStyle}>clear</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconClear } from 'terra-icon';
+            {`import { IconClear } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -732,7 +729,7 @@ const IconAll = () => (
         <td style={cellStyle}>incomplete</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconIncomplete } from 'terra-icon';
+            {`import { IconIncomplete } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -741,7 +738,7 @@ const IconAll = () => (
         <td style={cellStyle}>notMet</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconNotMet } from 'terra-icon';
+            {`import { IconNotMet } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -750,7 +747,7 @@ const IconAll = () => (
         <td style={cellStyle}>person</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconPerson } from 'terra-icon';
+            {`import { IconPerson } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -759,7 +756,7 @@ const IconAll = () => (
         <td style={cellStyle}>left</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconLeft } from 'terra-icon';
+            {`import { IconLeft } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -768,7 +765,7 @@ const IconAll = () => (
         <td style={cellStyle}>right</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconRight } from 'terra-icon';
+            {`import { IconRight } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -777,7 +774,7 @@ const IconAll = () => (
         <td style={cellStyle}>up</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconUp } from 'terra-icon';
+            {`import { IconUp } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -786,7 +783,7 @@ const IconAll = () => (
         <td style={cellStyle}>down</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconDown } from 'terra-icon';
+            {`import { IconDown } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -795,7 +792,7 @@ const IconAll = () => (
         <td style={cellStyle}>settings</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconSettings } from 'terra-icon';
+            {`import { IconSettings } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -804,7 +801,7 @@ const IconAll = () => (
         <td style={cellStyle}>edit</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconEdit } from 'terra-icon';
+            {`import { IconEdit } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -813,7 +810,7 @@ const IconAll = () => (
         <td style={cellStyle}>calendar</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconCalendar } from 'terra-icon';
+            {`import { IconCalendar } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -822,7 +819,7 @@ const IconAll = () => (
         <td style={cellStyle}>lookback</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconLookback } from 'terra-icon';
+            {`import { IconLookback } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -831,7 +828,7 @@ const IconAll = () => (
         <td style={cellStyle}>refresh</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconRefresh } from 'terra-icon';
+            {`import { IconRefresh } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -840,7 +837,7 @@ const IconAll = () => (
         <td style={cellStyle}>provider</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconProvider } from 'terra-icon';
+            {`import { IconProvider } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -849,7 +846,7 @@ const IconAll = () => (
         <td style={cellStyle}>padlock</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconPadlock } from 'terra-icon';
+            {`import { IconPadlock } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -858,7 +855,7 @@ const IconAll = () => (
         <td style={cellStyle}>featured</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconFeatured } from 'terra-icon';
+            {`import { IconFeatured } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -867,7 +864,7 @@ const IconAll = () => (
         <td style={cellStyle}>featuredOff</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconFeaturedOff } from 'terra-icon';
+            {`import { IconFeaturedOff } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -876,7 +873,7 @@ const IconAll = () => (
         <td style={cellStyle}>featuredOutline</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconFeaturedOutline } from 'terra-icon';
+            {`import { IconFeaturedOutline } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -885,7 +882,7 @@ const IconAll = () => (
         <td style={cellStyle}>halfRating</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconHalfRating } from 'terra-icon';
+            {`import { IconHalfRating } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -894,7 +891,7 @@ const IconAll = () => (
         <td style={cellStyle}>archive</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconArchive } from 'terra-icon';
+            {`import { IconArchive } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -903,7 +900,7 @@ const IconAll = () => (
         <td style={cellStyle}>funnel</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconFunnel } from 'terra-icon';
+            {`import { IconFunnel } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -912,7 +909,7 @@ const IconAll = () => (
         <td style={cellStyle}>documents</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconDocuments } from 'terra-icon';
+            {`import { IconDocuments } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -921,7 +918,7 @@ const IconAll = () => (
         <td style={cellStyle}>question</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconQuestion } from 'terra-icon';
+            {`import { IconQuestion } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -930,7 +927,7 @@ const IconAll = () => (
         <td style={cellStyle}>help_themeable</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconHelpThemeable } from 'terra-icon';
+            {`import { IconHelpThemeable } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -939,7 +936,7 @@ const IconAll = () => (
         <td style={cellStyle}>unknown</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconUnknown } from 'terra-icon';
+            {`import { IconUnknown } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -948,7 +945,7 @@ const IconAll = () => (
         <td style={cellStyle}>questionOutline</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconQuestionOutline } from 'terra-icon';
+            {`import { IconQuestionOutline } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -957,7 +954,7 @@ const IconAll = () => (
         <td style={cellStyle}>house</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconHouse } from 'terra-icon';
+            {`import { IconHouse } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -966,7 +963,7 @@ const IconAll = () => (
         <td style={cellStyle}>save</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconSave } from 'terra-icon';
+            {`import { IconSave } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -975,7 +972,7 @@ const IconAll = () => (
         <td style={cellStyle}>hospital</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconHospital } from 'terra-icon';
+            {`import { IconHospital } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -984,7 +981,7 @@ const IconAll = () => (
         <td style={cellStyle}>pending</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconPending } from 'terra-icon';
+            {`import { IconPending } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -993,7 +990,7 @@ const IconAll = () => (
         <td style={cellStyle}>analytics</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconAnalytics } from 'terra-icon';
+            {`import { IconAnalytics } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1002,7 +999,7 @@ const IconAll = () => (
         <td style={cellStyle}>announcement</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconAnnouncement } from 'terra-icon';
+            {`import { IconAnnouncement } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1011,7 +1008,7 @@ const IconAll = () => (
         <td style={cellStyle}>camera</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconCamera } from 'terra-icon';
+            {`import { IconCamera } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1020,7 +1017,7 @@ const IconAll = () => (
         <td style={cellStyle}>briefcase</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconBriefcase } from 'terra-icon';
+            {`import { IconBriefcase } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1029,7 +1026,7 @@ const IconAll = () => (
         <td style={cellStyle}>link</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconLink } from 'terra-icon';
+            {`import { IconLink } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1038,7 +1035,7 @@ const IconAll = () => (
         <td style={cellStyle}>menu</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconMenu } from 'terra-icon';
+            {`import { IconMenu } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1047,7 +1044,7 @@ const IconAll = () => (
         <td style={cellStyle}>list</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconList } from 'terra-icon';
+            {`import { IconList } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1056,7 +1053,7 @@ const IconAll = () => (
         <td style={cellStyle}>checklist</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconChecklist } from 'terra-icon';
+            {`import { IconChecklist } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1065,7 +1062,7 @@ const IconAll = () => (
         <td style={cellStyle}>unlock</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconUnlock } from 'terra-icon';
+            {`import { IconUnlock } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1074,7 +1071,7 @@ const IconAll = () => (
         <td style={cellStyle}>due</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconDue } from 'terra-icon';
+            {`import { IconDue } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1083,7 +1080,7 @@ const IconAll = () => (
         <td style={cellStyle}>spinner</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconSpinner } from 'terra-icon';
+            {`import { IconSpinner } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1092,7 +1089,7 @@ const IconAll = () => (
         <td style={cellStyle}>tile</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconTile } from 'terra-icon';
+            {`import { IconTile } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1101,7 +1098,7 @@ const IconAll = () => (
         <td style={cellStyle}>users</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconUsers } from 'terra-icon';
+            {`import { IconUsers } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1110,7 +1107,7 @@ const IconAll = () => (
         <td style={cellStyle}>knurling</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconKnurling } from 'terra-icon';
+            {`import { IconKnurling } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1119,7 +1116,7 @@ const IconAll = () => (
         <td style={cellStyle}>addPerson</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconAddPerson } from 'terra-icon';
+            {`import { IconAddPerson } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1128,7 +1125,7 @@ const IconAll = () => (
         <td style={cellStyle}>upload</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconUpload } from 'terra-icon';
+            {`import { IconUpload } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1137,7 +1134,7 @@ const IconAll = () => (
         <td style={cellStyle}>download</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconDownload } from 'terra-icon';
+            {`import { IconDownload } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1146,7 +1143,7 @@ const IconAll = () => (
         <td style={cellStyle}>cancel</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconCancel } from 'terra-icon';
+            {`import { IconCancel } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1155,7 +1152,7 @@ const IconAll = () => (
         <td style={cellStyle}>maximize</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconMaximize } from 'terra-icon';
+            {`import { IconMaximize } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1164,7 +1161,7 @@ const IconAll = () => (
         <td style={cellStyle}>minimize</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconMinimize } from 'terra-icon';
+            {`import { IconMinimize } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1173,7 +1170,7 @@ const IconAll = () => (
         <td style={cellStyle}>reply</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconReply } from 'terra-icon';
+            {`import { IconReply } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1182,7 +1179,7 @@ const IconAll = () => (
         <td style={cellStyle}>table</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconTable } from 'terra-icon';
+            {`import { IconTable } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1191,7 +1188,7 @@ const IconAll = () => (
         <td style={cellStyle}>required</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconRequired } from 'terra-icon';
+            {`import { IconRequired } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1200,7 +1197,7 @@ const IconAll = () => (
         <td style={cellStyle}>gap checking</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconGapChecking } from 'terra-icon';
+            {`import { IconGapChecking } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1209,7 +1206,7 @@ const IconAll = () => (
         <td style={cellStyle}>personHospital</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconPersonHospital } from 'terra-icon';
+            {`import { IconPersonHospital } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1218,7 +1215,7 @@ const IconAll = () => (
         <td style={cellStyle}>personnelPerson</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconPersonnelPerson } from 'terra-icon';
+            {`import { IconPersonnelPerson } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1227,7 +1224,7 @@ const IconAll = () => (
         <td style={cellStyle}>leftPane</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconLeftPane } from 'terra-icon';
+            {`import { IconLeftPane } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1236,7 +1233,7 @@ const IconAll = () => (
         <td style={cellStyle}>flowsheet</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconFlowsheet } from 'terra-icon';
+            {`import { IconFlowsheet } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1245,7 +1242,7 @@ const IconAll = () => (
         <td style={cellStyle}>notificationOff</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconNotificationOff } from 'terra-icon';
+            {`import { IconNotificationOff } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1254,7 +1251,7 @@ const IconAll = () => (
         <td style={cellStyle}>notification</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconNotification } from 'terra-icon';
+            {`import { IconNotification } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1263,7 +1260,7 @@ const IconAll = () => (
         <td style={cellStyle}>notificationDisabled</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconNotificationDisabled } from 'terra-icon';
+            {`import { IconNotificationDisabled } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1272,7 +1269,7 @@ const IconAll = () => (
         <td style={cellStyle}>last</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconLast } from 'terra-icon';
+            {`import { IconLast } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1281,7 +1278,7 @@ const IconAll = () => (
         <td style={cellStyle}>device</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconDevice } from 'terra-icon';
+            {`import { IconDevice } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1290,7 +1287,7 @@ const IconAll = () => (
         <td style={cellStyle}>paperPencil</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconPaperPencil } from 'terra-icon';
+            {`import { IconPaperPencil } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1299,7 +1296,7 @@ const IconAll = () => (
         <td style={cellStyle}>clipboard</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconClipboard } from 'terra-icon';
+            {`import { IconClipboard } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1308,7 +1305,7 @@ const IconAll = () => (
         <td style={cellStyle}>zoomOut</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconZoomOut } from 'terra-icon';
+            {`import { IconZoomOut } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1317,7 +1314,7 @@ const IconAll = () => (
         <td style={cellStyle}>zoomIn</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconZoomIn } from 'terra-icon';
+            {`import { IconZoomIn } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1326,7 +1323,7 @@ const IconAll = () => (
         <td style={cellStyle}>envelope</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconEnvelope } from 'terra-icon';
+            {`import { IconEnvelope } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1335,7 +1332,7 @@ const IconAll = () => (
         <td style={cellStyle}>envelopeFill</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconEnvelopeFill } from 'terra-icon';
+            {`import { IconEnvelopeFill } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1344,7 +1341,7 @@ const IconAll = () => (
         <td style={cellStyle}>allergy</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconAllergy } from 'terra-icon';
+            {`import { IconAllergy } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1353,7 +1350,7 @@ const IconAll = () => (
         <td style={cellStyle}>phoneDown</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconPhoneDown } from 'terra-icon';
+            {`import { IconPhoneDown } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1362,7 +1359,7 @@ const IconAll = () => (
         <td style={cellStyle}>phone</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconPhone } from 'terra-icon';
+            {`import { IconPhone } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1371,7 +1368,7 @@ const IconAll = () => (
         <td style={cellStyle}>panelLeft</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconPanelLeft } from 'terra-icon';
+            {`import { IconPanelLeft } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1380,7 +1377,7 @@ const IconAll = () => (
         <td style={cellStyle}>panelRight</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconPanelRight } from 'terra-icon';
+            {`import { IconPanelRight } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1389,7 +1386,7 @@ const IconAll = () => (
         <td style={cellStyle}>tag</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconTag } from 'terra-icon';
+            {`import { IconTag } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1398,7 +1395,7 @@ const IconAll = () => (
         <td style={cellStyle}>iPass</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconIPass } from 'terra-icon';
+            {`import { IconIPass } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1407,7 +1404,7 @@ const IconAll = () => (
         <td style={cellStyle}>scratchPad</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconScratchPad } from 'terra-icon';
+            {`import { IconScratchPad } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1416,7 +1413,7 @@ const IconAll = () => (
         <td style={cellStyle}>pharmacyReview</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconPharmacyReview } from 'terra-icon';
+            {`import { IconPharmacyReview } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1425,7 +1422,7 @@ const IconAll = () => (
         <td style={cellStyle}>busy</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconBusy } from 'terra-icon';
+            {`import { IconBusy } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1434,7 +1431,7 @@ const IconAll = () => (
         <td style={cellStyle}>unavailable</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconUnavailable } from 'terra-icon';
+            {`import { IconUnavailable } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1443,7 +1440,7 @@ const IconAll = () => (
         <td style={cellStyle}>implant</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconImplant } from 'terra-icon';
+            {`import { IconImplant } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1452,7 +1449,7 @@ const IconAll = () => (
         <td style={cellStyle}>protocol</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconProtocol } from 'terra-icon';
+            {`import { IconProtocol } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1461,7 +1458,7 @@ const IconAll = () => (
         <td style={cellStyle}>videoCamera</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconVideoCamera } from 'terra-icon';
+            {`import { IconVideoCamera } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1470,7 +1467,7 @@ const IconAll = () => (
         <td style={cellStyle}>videoCameraDisabled</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconVideoCameraDisabled } from 'terra-icon';
+            {`import { IconVideoCameraDisabled } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1479,7 +1476,7 @@ const IconAll = () => (
         <td style={cellStyle}>noSignal</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconNoSignal } from 'terra-icon';
+            {`import { IconNoSignal } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1488,7 +1485,7 @@ const IconAll = () => (
         <td style={cellStyle}>undo</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconUndo } from 'terra-icon';
+            {`import { IconUndo } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1497,7 +1494,7 @@ const IconAll = () => (
         <td style={cellStyle}>recurringEvent</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconRecurringEvent } from 'terra-icon';
+            {`import { IconRecurringEvent } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1506,7 +1503,7 @@ const IconAll = () => (
         <td style={cellStyle}>separate</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconSeparate } from 'terra-icon';
+            {`import { IconSeparate } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1515,7 +1512,7 @@ const IconAll = () => (
         <td style={cellStyle}>merge</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconMerge } from 'terra-icon';
+            {`import { IconMerge } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1524,7 +1521,7 @@ const IconAll = () => (
         <td style={cellStyle}>compose</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconCompose } from 'terra-icon';
+            {`import { IconCompose } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1533,7 +1530,7 @@ const IconAll = () => (
         <td style={cellStyle}>unread</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconUnread } from 'terra-icon';
+            {`import { IconUnread } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1542,7 +1539,7 @@ const IconAll = () => (
         <td style={cellStyle}>swap</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconSwap } from 'terra-icon';
+            {`import { IconSwap } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1551,7 +1548,7 @@ const IconAll = () => (
         <td style={cellStyle}>microphone</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconMicrophone } from 'terra-icon';
+            {`import { IconMicrophone } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1560,7 +1557,7 @@ const IconAll = () => (
         <td style={cellStyle}>microphoneDisabled</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconMicrophoneDisabled } from 'terra-icon';
+            {`import { IconMicrophoneDisabled } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1569,7 +1566,7 @@ const IconAll = () => (
         <td style={cellStyle}>outgoingCall</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconOutgoingCall } from 'terra-icon';
+            {`import { IconOutgoingCall } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1578,7 +1575,7 @@ const IconAll = () => (
         <td style={cellStyle}>incomingCall</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconIncomingCall } from 'terra-icon';
+            {`import { IconIncomingCall } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1587,7 +1584,7 @@ const IconAll = () => (
         <td style={cellStyle}>missedCall</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconMissedCall } from 'terra-icon';
+            {`import { IconMissedCall } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1596,7 +1593,7 @@ const IconAll = () => (
         <td style={cellStyle}>pinDown</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconPinDown } from 'terra-icon';
+            {`import { IconPinDown } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1605,7 +1602,7 @@ const IconAll = () => (
         <td style={cellStyle}>pinDiagonal</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconPinDiagonal } from 'terra-icon';
+            {`import { IconPinDiagonal } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1614,7 +1611,7 @@ const IconAll = () => (
         <td style={cellStyle}>audio</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconAudio } from 'terra-icon';
+            {`import { IconAudio } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1623,7 +1620,7 @@ const IconAll = () => (
         <td style={cellStyle}>externalLink</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconExternalLink } from 'terra-icon';
+            {`import { IconExternalLink } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1632,7 +1629,7 @@ const IconAll = () => (
         <td style={cellStyle}>bedRequested</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconBedRequested } from 'terra-icon';
+            {`import { IconBedRequested } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1641,7 +1638,7 @@ const IconAll = () => (
         <td style={cellStyle}>flipVertical</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconFlipVertical } from 'terra-icon';
+            {`import { IconFlipVertical } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1650,7 +1647,7 @@ const IconAll = () => (
         <td style={cellStyle}>flipHorizontal</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconFlipHorizontal } from 'terra-icon';
+            {`import { IconFlipHorizontal } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1659,7 +1656,7 @@ const IconAll = () => (
         <td style={cellStyle}>rotateLeft</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconRotateLeft } from 'terra-icon';
+            {`import { IconRotateLeft } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1668,7 +1665,7 @@ const IconAll = () => (
         <td style={cellStyle}>rotateRight</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconRotateRight } from 'terra-icon';
+            {`import { IconRotateRight } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1677,7 +1674,7 @@ const IconAll = () => (
         <td style={cellStyle}>hold</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconHold } from 'terra-icon';
+            {`import { IconHold } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1686,7 +1683,7 @@ const IconAll = () => (
         <td style={cellStyle}>fitWidth</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconFitWidth } from 'terra-icon';
+            {`import { IconFitWidth } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1695,7 +1692,7 @@ const IconAll = () => (
         <td style={cellStyle}>fitScale</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconFitScale } from 'terra-icon';
+            {`import { IconFitScale } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1704,7 +1701,7 @@ const IconAll = () => (
         <td style={cellStyle}>secondaryProvider</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconSecondaryProvider } from 'terra-icon';
+            {`import { IconSecondaryProvider } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1713,7 +1710,7 @@ const IconAll = () => (
         <td style={cellStyle}>partiallyMet</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconPartiallyMet } from 'terra-icon';
+            {`import { IconPartiallyMet } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1722,7 +1719,7 @@ const IconAll = () => (
         <td style={cellStyle}>simulation</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconSimulation } from 'terra-icon';
+            {`import { IconSimulation } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1731,7 +1728,7 @@ const IconAll = () => (
         <td style={cellStyle}>collapseRow</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconCollapseRow } from 'terra-icon';
+            {`import { IconCollapseRow } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1740,7 +1737,7 @@ const IconAll = () => (
         <td style={cellStyle}>expandRow</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconExpandRow } from 'terra-icon';
+            {`import { IconExpandRow } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1749,7 +1746,7 @@ const IconAll = () => (
         <td style={cellStyle}>doubleChevronLeft</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconDoubleChevronLeft } from 'terra-icon';
+            {`import { IconDoubleChevronLeft } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1758,7 +1755,7 @@ const IconAll = () => (
         <td style={cellStyle}>doubleChevronRight</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconDoubleChevronRight } from 'terra-icon';
+            {`import { IconDoubleChevronRight } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1767,7 +1764,7 @@ const IconAll = () => (
         <td style={cellStyle}>extensions</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconExtensions } from 'terra-icon';
+            {`import { IconExtensions } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1776,7 +1773,7 @@ const IconAll = () => (
         <td style={cellStyle}>documentPlus</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconDocumentPlus } from 'terra-icon';
+            {`import { IconDocumentPlus } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1785,7 +1782,7 @@ const IconAll = () => (
         <td style={cellStyle}>refusedSlot</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconRefusedSlot } from 'terra-icon';
+            {`import { IconRefusedSlot } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1794,7 +1791,7 @@ const IconAll = () => (
         <td style={cellStyle}>pharmacyVerification</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconPharmacyVerification } from 'terra-icon';
+            {`import { IconPharmacyVerification } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1803,7 +1800,7 @@ const IconAll = () => (
         <td style={cellStyle}>fitHeight</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconFitHeight } from 'terra-icon';
+            {`import { IconFitHeight } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1812,7 +1809,7 @@ const IconAll = () => (
         <td style={cellStyle}>personDoor</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconPersonDoor } from 'terra-icon';
+            {`import { IconPersonDoor } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1821,7 +1818,7 @@ const IconAll = () => (
         <td style={cellStyle}>locationPin</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconLocationPin } from 'terra-icon';
+            {`import { IconLocationPin } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1830,7 +1827,7 @@ const IconAll = () => (
         <td style={cellStyle}>mediaPlay</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconMediaPlay } from 'terra-icon';
+            {`import { IconMediaPlay } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1839,7 +1836,7 @@ const IconAll = () => (
         <td style={cellStyle}>mediaPause</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconMediaPause } from 'terra-icon';
+            {`import { IconMediaPause } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1848,7 +1845,7 @@ const IconAll = () => (
         <td style={cellStyle}>mediaStop</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconMediaStop } from 'terra-icon';
+            {`import { IconMediaStop } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1857,7 +1854,7 @@ const IconAll = () => (
         <td style={cellStyle}>mediaRecord</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconMediaRecord } from 'terra-icon';
+            {`import { IconMediaRecord } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1866,7 +1863,7 @@ const IconAll = () => (
         <td style={cellStyle}>mediaFastForward</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconMediaFastForward } from 'terra-icon';
+            {`import { IconMediaFastForward } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1875,7 +1872,7 @@ const IconAll = () => (
         <td style={cellStyle}>mediaRewind</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconMediaRewind } from 'terra-icon';
+            {`import { IconMediaRewind } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1884,7 +1881,7 @@ const IconAll = () => (
         <td style={cellStyle}>bluetooth</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconBluetooth } from 'terra-icon';
+            {`import { IconBluetooth } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1893,7 +1890,7 @@ const IconAll = () => (
         <td style={cellStyle}>bluetoothSlash</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconBluetoothSlash } from 'terra-icon';
+            {`import { IconBluetoothSlash } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1902,7 +1899,7 @@ const IconAll = () => (
         <td style={cellStyle}>startPresenting</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconStartPresenting } from 'terra-icon';
+            {`import { IconStartPresenting } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1911,7 +1908,7 @@ const IconAll = () => (
         <td style={cellStyle}>stopPresenting</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconStopPresenting } from 'terra-icon';
+            {`import { IconStopPresenting } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1920,7 +1917,7 @@ const IconAll = () => (
         <td style={cellStyle}>pager</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconPager } from 'terra-icon';
+            {`import { IconPager } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1929,7 +1926,7 @@ const IconAll = () => (
         <td style={cellStyle}>autoText</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconAutoText } from 'terra-icon';
+            {`import { IconAutoText } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1938,7 +1935,7 @@ const IconAll = () => (
         <td style={cellStyle}>keyboard</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconKeyboard } from 'terra-icon';
+            {`import { IconKeyboard } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1947,7 +1944,7 @@ const IconAll = () => (
         <td style={cellStyle}>sharedSchedules</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconSharedSchedules } from 'terra-icon';
+            {`import { IconSharedSchedules } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1956,7 +1953,7 @@ const IconAll = () => (
         <td style={cellStyle}>patientSearch</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconPatientSearch } from 'terra-icon';
+            {`import { IconPatientSearch } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1965,7 +1962,7 @@ const IconAll = () => (
         <td style={cellStyle}>group</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconGroup } from 'terra-icon';
+            {`import { IconGroup } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1974,7 +1971,7 @@ const IconAll = () => (
         <td style={cellStyle}>medicationTablet</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconMedicationTablet } from 'terra-icon';
+            {`import { IconMedicationTablet } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1983,7 +1980,7 @@ const IconAll = () => (
         <td style={cellStyle}>medicationTabletOutline</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconMedicationTabletOutline } from 'terra-icon';
+            {`import { IconMedicationTabletOutline } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -1992,7 +1989,7 @@ const IconAll = () => (
         <td style={cellStyle}>medicationTabletHalf</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconMedicationTabletHalf } from 'terra-icon';
+            {`import { IconMedicationTabletHalf } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2001,7 +1998,7 @@ const IconAll = () => (
         <td style={cellStyle}>medicationTabletHalfOutline</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconMedicationTabletHalfOutline } from 'terra-icon';
+            {`import { IconMedicationTabletHalfOutline } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2010,7 +2007,7 @@ const IconAll = () => (
         <td style={cellStyle}>waveform</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconWaveform } from 'terra-icon';
+            {`import { IconWaveform } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2019,7 +2016,7 @@ const IconAll = () => (
         <td style={cellStyle}>confidential</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconConfidential } from 'terra-icon';
+            {`import { IconConfidential } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2028,7 +2025,7 @@ const IconAll = () => (
         <td style={cellStyle}>wifi</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconWifi } from 'terra-icon';
+            {`import { IconWifi } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2037,7 +2034,7 @@ const IconAll = () => (
         <td style={cellStyle}>wifiSlash</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconWifiSlash } from 'terra-icon';
+            {`import { IconWifiSlash } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2046,7 +2043,7 @@ const IconAll = () => (
         <td style={cellStyle}>brokenImage</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconBrokenImage } from 'terra-icon';
+            {`import { IconBrokenImage } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2055,7 +2052,7 @@ const IconAll = () => (
         <td style={cellStyle}>brokenLink_unlink</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconBrokenLinkUnlink } from 'terra-icon';
+            {`import { IconBrokenLinkUnlink } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2064,7 +2061,7 @@ const IconAll = () => (
         <td style={cellStyle}>volumeSet_default</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconVolumeSetDefault } from 'terra-icon';
+            {`import { IconVolumeSetDefault } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2073,7 +2070,7 @@ const IconAll = () => (
         <td style={cellStyle}>volumeSet_decrease</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconVolumeSetDecrease } from 'terra-icon';
+            {`import { IconVolumeSetDecrease } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2082,7 +2079,7 @@ const IconAll = () => (
         <td style={cellStyle}>volumeSet_increase</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconVolumeSetIncrease } from 'terra-icon';
+            {`import { IconVolumeSetIncrease } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2091,7 +2088,7 @@ const IconAll = () => (
         <td style={cellStyle}>volumeSet_mute</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconVolumeSetMute } from 'terra-icon';
+            {`import { IconVolumeSetMute } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2100,7 +2097,7 @@ const IconAll = () => (
         <td style={cellStyle}>personConnection</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconPersonConnection } from 'terra-icon';
+            {`import { IconPersonConnection } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2109,7 +2106,7 @@ const IconAll = () => (
         <td style={cellStyle}>trendingUp</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconTrendingUp } from 'terra-icon';
+            {`import { IconTrendingUp } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2118,7 +2115,7 @@ const IconAll = () => (
         <td style={cellStyle}>trendingDown</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconTrendingDown } from 'terra-icon';
+            {`import { IconTrendingDown } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2127,7 +2124,7 @@ const IconAll = () => (
         <td style={cellStyle}>noResults</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconNoResults } from 'terra-icon';
+            {`import { IconNoResults } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2136,7 +2133,7 @@ const IconAll = () => (
         <td style={cellStyle}>navStackUp</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconNavStackUp } from 'terra-icon';
+            {`import { IconNavStackUp } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2145,7 +2142,7 @@ const IconAll = () => (
         <td style={cellStyle}>multipleResultsNormal</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconMultipleResultsNormal } from 'terra-icon';
+            {`import { IconMultipleResultsNormal } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2154,7 +2151,7 @@ const IconAll = () => (
         <td style={cellStyle}>multipleResultsNotNormal</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconMultipleResultsNotNormal } from 'terra-icon';
+            {`import { IconMultipleResultsNotNormal } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2163,7 +2160,7 @@ const IconAll = () => (
         <td style={cellStyle}>multipleResultsCritical</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconMultipleResultsCritical } from 'terra-icon';
+            {`import { IconMultipleResultsCritical } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2172,7 +2169,7 @@ const IconAll = () => (
         <td style={cellStyle}>circle_symbol</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconCircleSymbol } from 'terra-icon';
+            {`import { IconCircleSymbol } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2181,7 +2178,7 @@ const IconAll = () => (
         <td style={cellStyle}>circle_symbol_light</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconCircleSymbolLight } from 'terra-icon';
+            {`import { IconCircleSymbolLight } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2190,7 +2187,7 @@ const IconAll = () => (
         <td style={cellStyle}>diamond_symbol</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconDiamondSymbol } from 'terra-icon';
+            {`import { IconDiamondSymbol } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2199,7 +2196,7 @@ const IconAll = () => (
         <td style={cellStyle}>diamond_symbol_light</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconDiamondSymbolLight } from 'terra-icon';
+            {`import { IconDiamondSymbolLight } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2208,7 +2205,7 @@ const IconAll = () => (
         <td style={cellStyle}>plus_symbol</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconPlusSymbol } from 'terra-icon';
+            {`import { IconPlusSymbol } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2217,7 +2214,7 @@ const IconAll = () => (
         <td style={cellStyle}>plus_symbol_light</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconPlusSymbolLight } from 'terra-icon';
+            {`import { IconPlusSymbolLight } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2226,7 +2223,7 @@ const IconAll = () => (
         <td style={cellStyle}>rectangle_symbol</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconRectangleSymbol } from 'terra-icon';
+            {`import { IconRectangleSymbol } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2235,7 +2232,7 @@ const IconAll = () => (
         <td style={cellStyle}>rectangle_symbol_light</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconRectangleSymbolLight } from 'terra-icon';
+            {`import { IconRectangleSymbolLight } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2244,7 +2241,7 @@ const IconAll = () => (
         <td style={cellStyle}>square_symbol</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconSquareSymbol } from 'terra-icon';
+            {`import { IconSquareSymbol } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2253,7 +2250,7 @@ const IconAll = () => (
         <td style={cellStyle}>square_symbol_light</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconSquareSymbolLight } from 'terra-icon';
+            {`import { IconSquareSymbolLight } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2262,7 +2259,7 @@ const IconAll = () => (
         <td style={cellStyle}>teardrop_symbol</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconTeardropSymbol } from 'terra-icon';
+            {`import { IconTeardropSymbol } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2271,7 +2268,7 @@ const IconAll = () => (
         <td style={cellStyle}>teardrop_symbol_light</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconTeardropSymbolLight } from 'terra-icon';
+            {`import { IconTeardropSymbolLight } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2280,7 +2277,7 @@ const IconAll = () => (
         <td style={cellStyle}>teardropUp_symbol</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconTeardropUpSymbol } from 'terra-icon';
+            {`import { IconTeardropUpSymbol } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2289,7 +2286,7 @@ const IconAll = () => (
         <td style={cellStyle}>teardropUp_symbol_light</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconTeardropUpSymbolLight } from 'terra-icon';
+            {`import { IconTeardropUpSymbolLight } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2298,7 +2295,7 @@ const IconAll = () => (
         <td style={cellStyle}>thinDiamond_symbol</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconThinDiamondSymbol } from 'terra-icon';
+            {`import { IconThinDiamondSymbol } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2307,7 +2304,7 @@ const IconAll = () => (
         <td style={cellStyle}>thinDiamond_symbol_light</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconThinDiamondSymbolLight } from 'terra-icon';
+            {`import { IconThinDiamondSymbolLight } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2316,7 +2313,7 @@ const IconAll = () => (
         <td style={cellStyle}>triangle_symbol</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconTriangleSymbol } from 'terra-icon';
+            {`import { IconTriangleSymbol } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2325,7 +2322,7 @@ const IconAll = () => (
         <td style={cellStyle}>triangle_symbol_light</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconTriangleSymbolLight } from 'terra-icon';
+            {`import { IconTriangleSymbolLight } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2334,7 +2331,7 @@ const IconAll = () => (
         <td style={cellStyle}>triangleDown_symbol</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconTriangleDownSymbol } from 'terra-icon';
+            {`import { IconTriangleDownSymbol } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2343,7 +2340,7 @@ const IconAll = () => (
         <td style={cellStyle}>triangleDown_symbol_light</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconTriangleDownSymbolLight } from 'terra-icon';
+            {`import { IconTriangleDownSymbolLight } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2352,7 +2349,7 @@ const IconAll = () => (
         <td style={cellStyle}>x_symbol</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconXSymbol } from 'terra-icon';
+            {`import { IconXSymbol } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2361,7 +2358,7 @@ const IconAll = () => (
         <td style={cellStyle}>x_symbol_light</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconXSymbolLight } from 'terra-icon';
+            {`import { IconXSymbolLight } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2370,7 +2367,7 @@ const IconAll = () => (
         <td style={cellStyle}>circleLines_symbol</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconCircleLinesSymbol } from 'terra-icon';
+            {`import { IconCircleLinesSymbol } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2379,7 +2376,7 @@ const IconAll = () => (
         <td style={cellStyle}>catalogueNumber</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconCatalogueNumber } from 'terra-icon';
+            {`import { IconCatalogueNumber } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2388,7 +2385,7 @@ const IconAll = () => (
         <td style={cellStyle}>caution</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconCaution } from 'terra-icon';
+            {`import { IconCaution } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2397,7 +2394,7 @@ const IconAll = () => (
         <td style={cellStyle}>consultInstructionsForUse</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconConsultInstructionsForUse } from 'terra-icon';
+            {`import { IconConsultInstructionsForUse } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2406,7 +2403,7 @@ const IconAll = () => (
         <td style={cellStyle}>dateOfManufacture</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconDateOfManufacture } from 'terra-icon';
+            {`import { IconDateOfManufacture } from 'terra-icon';`}
           </code>
         </td>
       </tr>
@@ -2415,14 +2412,8 @@ const IconAll = () => (
         <td style={cellStyle}>manufacturer</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconManufacturer } from 'terra-icon';
+            {`import { IconManufacturer } from 'terra-icon';`}
           </code>
-        </td>
-      </tr>
-      <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconCeMarking height='2em' width='2em' /></td>
-        <td style={cellStyle}>ceMarking</td>
-        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
@@ -2430,7 +2421,7 @@ const IconAll = () => (
         <td style={cellStyle}>ecRep</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import { IconEcRep } from 'terra-icon';
+            {`import { IconEcRep } from 'terra-icon';`}
           </code>
         </td>
       </tr>
