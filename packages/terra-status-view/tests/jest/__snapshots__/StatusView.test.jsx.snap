@@ -502,6 +502,7 @@ exports[`should render a status view with custom glyph, title, message, and two 
           isDisabled={false}
           isIconOnly={false}
           isReversed={false}
+          isSelectable={false}
           key="1"
           text="Action1"
           type="button"
@@ -537,6 +538,7 @@ exports[`should render a status view with custom glyph, title, message, and two 
           isDisabled={false}
           isIconOnly={false}
           isReversed={false}
+          isSelectable={false}
           key="2"
           text="Action2"
           type="button"

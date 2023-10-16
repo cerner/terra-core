@@ -14,6 +14,7 @@ exports[`correctly applies the theme context className 1`] = `
     isDisabled={false}
     isIconOnly={false}
     isReversed={false}
+    isSelectable={false}
     text="neutral"
     type="button"
     variant="neutral"
@@ -51,6 +52,7 @@ exports[`should pass in refCallback as the ref prop of the input element 1`] = `
   isDisabled={false}
   isIconOnly={false}
   isReversed={false}
+  isSelectable={false}
   refCallback={
     [MockFunction] {
       "calls": Array [
@@ -362,6 +364,33 @@ exports[`should render a neutral button 1`] = `
       className=""
     >
       neutral
+    </span>
+  </span>
+</button>
+`;
+
+exports[`should render a selectable button 1`] = `
+<button
+  aria-checked={false}
+  aria-disabled={false}
+  className="button neutral"
+  disabled={false}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  role="checkbox"
+  type="button"
+>
+  <span
+    className="button-label-win text-only"
+  >
+    <span
+      className=""
+    >
+      Selectable Button
     </span>
   </span>
 </button>

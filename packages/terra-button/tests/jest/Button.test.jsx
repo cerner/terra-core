@@ -263,4 +263,9 @@ it('correctly applies the theme context className', () => {
   );
   expect(button).toMatchSnapshot();
 });
+
+it('should render a selectable button', () => {
+  const button = shallow(<Button text="Selectable Button" isSelectable />);
+  expect(button).toMatchSnapshot();
+});
 /* eslint-enable react/forbid-dom-props */

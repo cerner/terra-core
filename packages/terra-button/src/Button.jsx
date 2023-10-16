@@ -101,6 +101,16 @@ const propTypes = {
    * Sets the button variant. One of `neutral`,  `emphasis`, `ghost`, `de-emphasis`, `action` or `utility`.
    */
   variant: PropTypes.oneOf([ButtonVariants.NEUTRAL, ButtonVariants.EMPHASIS, ButtonVariants.GHOST, ButtonVariants['DE-EMPHASIS'], ButtonVariants.ACTION, ButtonVariants.UTILITY]),
+  /**
+   * @private
+   * Whether or not the button can be selected (toggleable button).
+   */
+  isSelectable: PropTypes.bool,
+  /**
+   * @private
+   * Callback function when the state changes. Parameters are (event, toggleState).
+   */
+  onChange: PropTypes.func,
 };
 
 const defaultProps = {
@@ -113,18 +123,20 @@ const defaultProps = {
   title: undefined,
   type: ButtonTypes.BUTTON,
   variant: ButtonVariants.NEUTRAL,
+  isSelectable: false,
 };
 
 class Button extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { active: false, focused: false };
+    this.state = { active: false, focused: false, isSelected: false };
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleKeyUp = this.handleKeyUp.bind(this);
     this.handleOnBlur = this.handleOnBlur.bind(this);
     this.handleFocus = this.handleFocus.bind(this);
     this.handleMouseDown = this.handleMouseDown.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.handleOnChange = this.handleOnChange.bind(this);
 
     this.shouldShowFocus = true;
   }
@@ -144,6 +156,12 @@ class Button extends React.Component {
     }
   }
 
+  handleOnChange(event) {
+    if (this.props.onChange && this.props.isSelectable) {
+      this.props.onChange(event, this.state.isSelected);
+    }
+  }
+
   handleClick(event) {
     // See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Button#Clicking_and_focus
     // Button on Firefox, Safari and IE running on OS X does not receive focus when clicked.
@@ -153,6 +171,8 @@ class Button extends React.Component {
       event.currentTarget.focus();
       this.shouldShowFocus = true;
     }
+
+    this.handleOnChange(event);
 
     if (this.props.onClick) {
       this.props.onClick(event);
@@ -174,7 +194,7 @@ class Button extends React.Component {
 
     // Add focus styles for keyboard navigation
     if (event.nativeEvent.keyCode === KeyCode.KEY_SPACE || event.nativeEvent.keyCode === KeyCode.KEY_RETURN) {
-      this.setState({ focused: true });
+      this.setState(prevState => ({ focused: true, isSelected: !prevState.isSelected }));
     }
 
     if (this.props.onKeyDown) {
@@ -212,6 +232,7 @@ class Button extends React.Component {
     if (this.props.onMouseDown) {
       this.props.onMouseDown(event);
     }
+    this.setState(prevState => ({ isSelected: !prevState.isSelected }));
 
     // See https://developer.mozilla.org/en-US/docs/Web/API/HTMLOrForeignElement/focus#Notes
     // If you call HTMLElement.focus() from a mousedown event handler, you must call event.preventDefault() to keep the focus from leaving the HTMLElement.
@@ -239,6 +260,8 @@ class Button extends React.Component {
       onKeyUp,
       refCallback,
       title,
+      isSelectable,
+      onChange,
       ...customProps
     } = this.props;
 
@@ -255,6 +278,7 @@ class Button extends React.Component {
         { compact: isCompact },
         { 'is-active': this.state.active && !isDisabled },
         { 'is-focused': this.state.focused && !isDisabled },
+        { 'is-selected': isSelectable && this.state.isSelected && !isDisabled },
         theme.className,
       ]),
       customProps.className,
@@ -306,6 +330,8 @@ class Button extends React.Component {
     if (href) {
       ComponentType = 'a';
       customProps.role = 'button';
+    } else if (isSelectable) {
+      customProps.role = 'checkbox';
     }
 
     return (
@@ -326,6 +352,7 @@ class Button extends React.Component {
         onFocus={this.handleFocus}
         href={href}
         ref={refCallback}
+        aria-checked={isSelectable ? this.state.isSelected : undefined}
       >
         {buttonLabel}
       </ComponentType>
