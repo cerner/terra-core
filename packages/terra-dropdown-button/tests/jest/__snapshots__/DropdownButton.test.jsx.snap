@@ -74,7 +74,7 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
       variant="neutral"
     >
       <DropdownButtonBase
-        buttonId="menuButtonId"
+        buttonId="dropDownMenuButton"
         buttonRef={[Function]}
         getSelectedOptionText={[Function]}
         isBlock={false}
@@ -87,24 +87,24 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
             onSelect={[Function]}
           />
         }
-        menuId="menuId"
+        menuId="dropDownMenuList"
         refCallback={[Function]}
         requestClose={[Function]}
       >
         <div
-          buttonId="menuButtonId"
+          buttonId="dropDownMenuButton"
           className="dropdown-button-base orion-fusion-theme"
-          menuId="menuId"
+          menuId="dropDownMenuList"
         >
           <button
-            aria-controls="menuId"
+            aria-controls="dropDownMenuList"
             aria-disabled={false}
             aria-expanded={false}
             aria-haspopup="true"
             aria-label="Primary Option"
             className="dropdown-button neutral orion-fusion-theme"
             disabled={false}
-            id="menuButtonId"
+            id="dropDownMenuButton"
             onBlur={[Function]}
             onClick={[Function]}
             onKeyDown={[Function]}
@@ -121,11 +121,11 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
             />
           </button>
           <Dropdown
-            buttonId="menuButtonId"
+            buttonId="dropDownMenuButton"
             buttonRef={[Function]}
             getSelectedOptionText={[Function]}
             isOpen={false}
-            menuId="menuId"
+            menuId="dropDownMenuList"
             refCallback={[Function]}
             requestClose={[Function]}
             targetRef={[Function]}
