@@ -74,7 +74,7 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
       variant="neutral"
     >
       <DropdownButtonBase
-        buttonId="dropDownMenuButton"
+        buttonId="dropdown-menu-button-0aad83ab-2f04-4dfa-930e-cb37bd1c4707"
         buttonRef={[Function]}
         getSelectedOptionText={[Function]}
         isBlock={false}
@@ -87,24 +87,24 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
             onSelect={[Function]}
           />
         }
-        menuId="dropDownMenuList"
+        menuId="dropdown-menu-list-0aad83ab-2f04-4dfa-930e-cb37bd1c4707"
         refCallback={[Function]}
         requestClose={[Function]}
       >
         <div
-          buttonId="dropDownMenuButton"
+          buttonId="dropdown-menu-button-0aad83ab-2f04-4dfa-930e-cb37bd1c4707"
           className="dropdown-button-base orion-fusion-theme"
-          menuId="dropDownMenuList"
+          menuId="dropdown-menu-list-0aad83ab-2f04-4dfa-930e-cb37bd1c4707"
         >
           <button
-            aria-controls="dropDownMenuList"
+            aria-controls="dropdown-menu-list-0aad83ab-2f04-4dfa-930e-cb37bd1c4707"
             aria-disabled={false}
             aria-expanded={false}
             aria-haspopup="true"
             aria-label="Primary Option"
             className="dropdown-button neutral orion-fusion-theme"
             disabled={false}
-            id="dropDownMenuButton"
+            id="dropdown-menu-button-0aad83ab-2f04-4dfa-930e-cb37bd1c4707"
             onBlur={[Function]}
             onClick={[Function]}
             onKeyDown={[Function]}
@@ -121,11 +121,11 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
             />
           </button>
           <Dropdown
-            buttonId="dropDownMenuButton"
+            buttonId="dropdown-menu-button-0aad83ab-2f04-4dfa-930e-cb37bd1c4707"
             buttonRef={[Function]}
             getSelectedOptionText={[Function]}
             isOpen={false}
-            menuId="dropDownMenuList"
+            menuId="dropdown-menu-list-0aad83ab-2f04-4dfa-930e-cb37bd1c4707"
             refCallback={[Function]}
             requestClose={[Function]}
             targetRef={[Function]}
