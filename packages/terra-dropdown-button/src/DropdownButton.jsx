@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import * as KeyCode from 'keycode-js';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { v4 as uuidv4 } from 'uuid';
 import { injectIntl } from 'react-intl';
 import DropdownButtonBase from './_DropdownButtonBase';
 import styles from './DropdownButton.module.scss';
@@ -185,13 +187,13 @@ class DropdownButton extends React.Component {
     const customLabel = (selectText) ? `${selectText}, ${selectedLabel}, ${label}` : label;
     buttonAriaLabel = `${customLabel}${buttonAriaLabel ? `, ${buttonAriaLabel}` : ''}`;
 
-    let dropDownMenuButton = 'dropDownMenuButton';
+    const dropDownMenuId = uuidv4();
+    const dropDownMenuListId = `dropdown-menu-list-${dropDownMenuId}`;
+    let dropDownMenuButtonId = `dropdown-menu-button-${dropDownMenuId}`;
     if (modifiedButtonAttrs && modifiedButtonAttrs.id) {
-      dropDownMenuButton = modifiedButtonAttrs.id;
+      dropDownMenuButtonId = modifiedButtonAttrs.id;
       delete modifiedButtonAttrs.id;
     }
-    // const dropDownMenuButton = customProps.id ? customProps.id : 'dropDownMenuButton';
-    const dropDownMenuList = 'dropDownMenuList';
 
     return (
       <DropdownButtonBase
@@ -205,8 +207,8 @@ class DropdownButton extends React.Component {
         refCallback={this.setListNode}
         buttonRef={this.getButtonNode}
         getSelectedOptionText={this.getSelectedOptionText}
-        menuId={dropDownMenuList}
-        buttonId={dropDownMenuButton}
+        menuId={dropDownMenuListId}
+        buttonId={dropDownMenuButtonId}
       >
         <button
           {...modifiedButtonAttrs}
@@ -222,8 +224,8 @@ class DropdownButton extends React.Component {
           aria-expanded={isOpen}
           aria-label={buttonAriaLabel}
           aria-haspopup="true"
-          id={dropDownMenuButton}
-          aria-controls={dropDownMenuList}
+          id={dropDownMenuButtonId}
+          aria-controls={dropDownMenuListId}
           onBlur={this.handleBlur}
         >
           <span className={cx('dropdown-button-text')}>{label}</span>
