@@ -74,7 +74,7 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
       variant="neutral"
     >
       <DropdownButtonBase
-        buttonId="dropdown-menu-button-0aad83ab-2f04-4dfa-930e-cb37bd1c4707"
+        buttonId="dropdown-menu-button-46abd7a0-9912-410a-a3c1-26be34274a37"
         buttonRef={[Function]}
         getSelectedOptionText={[Function]}
         isBlock={false}
@@ -87,24 +87,24 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
             onSelect={[Function]}
           />
         }
-        menuId="dropdown-menu-list-0aad83ab-2f04-4dfa-930e-cb37bd1c4707"
+        menuId="dropdown-menu-list-46abd7a0-9912-410a-a3c1-26be34274a37"
         refCallback={[Function]}
         requestClose={[Function]}
       >
         <div
-          buttonId="dropdown-menu-button-0aad83ab-2f04-4dfa-930e-cb37bd1c4707"
+          buttonId="dropdown-menu-button-46abd7a0-9912-410a-a3c1-26be34274a37"
           className="dropdown-button-base orion-fusion-theme"
-          menuId="dropdown-menu-list-0aad83ab-2f04-4dfa-930e-cb37bd1c4707"
+          menuId="dropdown-menu-list-46abd7a0-9912-410a-a3c1-26be34274a37"
         >
           <button
-            aria-controls="dropdown-menu-list-0aad83ab-2f04-4dfa-930e-cb37bd1c4707"
+            aria-controls="dropdown-menu-list-46abd7a0-9912-410a-a3c1-26be34274a37"
             aria-disabled={false}
             aria-expanded={false}
             aria-haspopup="true"
             aria-label="Primary Option"
             className="dropdown-button neutral orion-fusion-theme"
             disabled={false}
-            id="dropdown-menu-button-0aad83ab-2f04-4dfa-930e-cb37bd1c4707"
+            id="dropdown-menu-button-46abd7a0-9912-410a-a3c1-26be34274a37"
             onBlur={[Function]}
             onClick={[Function]}
             onKeyDown={[Function]}
@@ -121,11 +121,11 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
             />
           </button>
           <Dropdown
-            buttonId="dropdown-menu-button-0aad83ab-2f04-4dfa-930e-cb37bd1c4707"
+            buttonId="dropdown-menu-button-46abd7a0-9912-410a-a3c1-26be34274a37"
             buttonRef={[Function]}
             getSelectedOptionText={[Function]}
             isOpen={false}
-            menuId="dropdown-menu-list-0aad83ab-2f04-4dfa-930e-cb37bd1c4707"
+            menuId="dropdown-menu-list-46abd7a0-9912-410a-a3c1-26be34274a37"
             refCallback={[Function]}
             requestClose={[Function]}
             targetRef={[Function]}
