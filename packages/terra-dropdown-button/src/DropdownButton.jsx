@@ -184,8 +184,8 @@ class DropdownButton extends React.Component {
     }
     const customLabel = (selectText) ? `${selectText}, ${selectedLabel}, ${label}` : label;
     buttonAriaLabel = `${customLabel}${buttonAriaLabel ? `, ${buttonAriaLabel}` : ''}`;
-    const buttonId = 'menubutton';
-    const menuId = 'menu';
+    const buttonId = 'menuButtonId';
+    const menuId = 'menuId';
 
     return (
       <DropdownButtonBase
