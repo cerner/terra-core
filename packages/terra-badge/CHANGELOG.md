@@ -4,6 +4,7 @@
 
 * Added
   * Added hidden text to announce the intent of the badge
+  
 * Changed
   * Removed `aria-hidden` from the textContent to announce text of badge
 
