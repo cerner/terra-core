@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 6.48.0 - (October 16, 2023)
+
 * Changed
   * Fixed Cyclic navigation and added aria-required to single select.
   * Added relevant roles to fix a11y issues. 
