@@ -4,9 +4,11 @@
 
 * Added
   * Added a visual error note for invalid example in `terra-form-single-select`.
+  * Added example for `terra-badge` with `terra-html-table`.
 
 * Updated
   * Updated `terra-alert` documentation for custom titles.
+  * Updated exisiting examples upto a11y standards
 
 * Fixed
   * Fixed import statements not rendering properly for `terra-icon`.

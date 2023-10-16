@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+* Added
+  * Added hidden text to announce the intent of the badge
+  
+* Changed
+  * Removed `aria-hidden` from the textContent to announce text of badge
+
 ## 3.57.0 - (February 15, 2023)
 
 * Changed
