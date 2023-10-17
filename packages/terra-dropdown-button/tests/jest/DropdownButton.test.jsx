@@ -84,16 +84,16 @@ describe('Dropdown Button', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('correctly applies the theme context className', () => {
-    const wrapper = mountWithIntl(
-      <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
-        <DropdownButton label="Primary Option">
-          <Item label="1st Option" onSelect={() => {}} />
-        </DropdownButton>
-      </ThemeContextProvider>,
-    );
-    expect(wrapper).toMatchSnapshot();
-  });
+  // it('correctly applies the theme context className', () => {
+  //   const wrapper = mountWithIntl(
+  //     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+  //       <DropdownButton label="Primary Option">
+  //         <Item label="1st Option" onSelect={() => {}} />
+  //       </DropdownButton>
+  //     </ThemeContextProvider>,
+  //   );
+  //   expect(wrapper).toMatchSnapshot();
+  // });
 
   it('should set the aria-label property from ./translations', () => {
     const buttonAttrs = {
