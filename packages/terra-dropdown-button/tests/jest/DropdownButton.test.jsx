@@ -1,8 +1,8 @@
 import React from 'react';
-// import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 import { IntlProvider } from 'react-intl';
 /* eslint-disable-next-line import/no-extraneous-dependencies */
-import { shallowWithIntl } from 'terra-enzyme-intl';
+import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
 import translationsFile from '../../translations/en.json';
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import DropdownButton, { Item, Variants } from '../../src/DropdownButton';
@@ -84,16 +84,16 @@ describe('Dropdown Button', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  // it('correctly applies the theme context className', () => {
-  //   const wrapper = mountWithIntl(
-  //     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
-  //       <DropdownButton label="Primary Option">
-  //         <Item label="1st Option" onSelect={() => {}} />
-  //       </DropdownButton>
-  //     </ThemeContextProvider>,
-  //   );
-  //   expect(wrapper).toMatchSnapshot();
-  // });
+  it('correctly applies the theme context className', () => {
+    const wrapper = mountWithIntl(
+      <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+        <DropdownButton label="Primary Option" id="dropDown">
+          <Item label="1st Option" onSelect={() => {}} />
+        </DropdownButton>
+      </ThemeContextProvider>,
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
 
   it('should set the aria-label property from ./translations', () => {
     const buttonAttrs = {
