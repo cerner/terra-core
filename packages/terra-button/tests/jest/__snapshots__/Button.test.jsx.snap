@@ -371,8 +371,8 @@ exports[`should render a neutral button 1`] = `
 
 exports[`should render a selectable button 1`] = `
 <button
-  aria-checked={false}
   aria-disabled={false}
+  aria-pressed={false}
   className="button neutral"
   disabled={false}
   onBlur={[Function]}
@@ -381,7 +381,6 @@ exports[`should render a selectable button 1`] = `
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   onMouseDown={[Function]}
-  role="checkbox"
   type="button"
 >
   <span

@@ -330,8 +330,6 @@ class Button extends React.Component {
     if (href) {
       ComponentType = 'a';
       customProps.role = 'button';
-    } else if (isSelectable) {
-      customProps.role = 'checkbox';
     }
 
     return (
@@ -352,7 +350,7 @@ class Button extends React.Component {
         onFocus={this.handleFocus}
         href={href}
         ref={refCallback}
-        aria-checked={isSelectable ? this.state.isSelected : undefined}
+        aria-pressed={isSelectable ? this.state.isSelected : undefined}
       >
         {buttonLabel}
       </ComponentType>
