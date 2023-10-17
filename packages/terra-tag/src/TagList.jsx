@@ -237,8 +237,8 @@ const TagList = (props) => {
   const handleOnTagSelect = (event) => {
     const tags = [...filterTagsRef.current.querySelectorAll('[data-terra-tag]')];
     setTabIndex('-1');
-    focusNode.current = tags.findIndex((tag) => tag.id === event.target.id);
-    currentTag.current = tags.find((tag) => tag.id === event.target.id);
+    focusNode.current = tags.findIndex((tag) => tag.id === event.currentTarget.id);
+    currentTag.current = tags.find((tag) => tag.id === event.currentTarget.id);
     setTabIndex('0');
     focusCurrentNode();
   };
