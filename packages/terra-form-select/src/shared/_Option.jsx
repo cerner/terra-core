@@ -132,7 +132,7 @@ const Option = ({
       aria-label={itemLabel}
     >
       {(isCheckable || isAddOption) && <span className={cx('icon')} />}
-      <span className={cx('display')}>{display}</span>
+      <span data-terra-add-option className={cx('display')}>{display}</span>
     </li>
   );
 };
