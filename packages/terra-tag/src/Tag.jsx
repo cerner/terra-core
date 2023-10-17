@@ -64,10 +64,6 @@ class Tag extends React.Component {
     }
   }
 
-  setTagNode = (node) => {
-    this.tagNode = node;
-  };
-
   render() {
     const {
       icon,
