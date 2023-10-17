@@ -51,7 +51,6 @@ it('should render with tabindex -1 when isTabFocusDisabled is set to true', () =
   ).dive();
 
   expect(shallowComponent.prop('tabIndex')).toContain('-1');
-  // expect(shallowComponent.find('li').getAttribute('tabindex')).toEqual(-1);
   expect(shallowComponent).toMatchSnapshot();
 });
 

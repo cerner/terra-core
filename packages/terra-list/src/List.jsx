@@ -106,23 +106,22 @@ const defaultProps = {
   role: 'none',
 };
 
-const List = (props) => {
-  const {
-    ariaDescribedBy,
-    ariaDescription,
-    ariaDetails,
-    children,
-    intl,
-    dividerStyle,
-    paddingStyle,
-    refCallback,
-    role,
-    ariaSelectionStyle,
-    isDraggable,
-    isTabFocusDisabled,
-    onDragEnd,
-    ...customProps
-  } = props;
+const List = ({
+  ariaDescribedBy,
+  ariaDescription,
+  ariaDetails,
+  children,
+  intl,
+  dividerStyle,
+  paddingStyle,
+  refCallback,
+  role,
+  ariaSelectionStyle,
+  isDraggable,
+  isTabFocusDisabled,
+  onDragEnd,
+  ...customProps
+}) => {
   const theme = useContext(ThemeContext);
   const [listItem, setlistItem] = useState([]);
   let listNode = useRef();
