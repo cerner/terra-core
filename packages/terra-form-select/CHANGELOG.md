@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+* Changed
+  * Fixed replacing hardcoded classname with data attribute in form select combo box.
 ## 6.48.0 - (October 16, 2023)
 
 * Changed
