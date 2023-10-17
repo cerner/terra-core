@@ -7,7 +7,7 @@ import styles from './ListDocCommon.module.scss';
 const cx = classNames.bind(styles);
 
 const ListSectionExample = () => (
-  <List role="listbox" aria-label="example-label">
+  <List role="listbox" aria-label="example-label" isTabFocusDisabled>
     <Item
       key="default"
     >

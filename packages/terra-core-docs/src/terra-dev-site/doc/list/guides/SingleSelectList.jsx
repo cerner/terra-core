@@ -42,7 +42,7 @@ class SingleSelectList extends React.Component {
 
   render() {
     return (
-      <List dividerStyle="standard" ariaSelectionStyle="single-select">
+      <List dividerStyle="standard" ariaSelectionStyle="single-select" isTabFocusDisabled>
         {this.createListItems(mockData)}
       </List>
     );

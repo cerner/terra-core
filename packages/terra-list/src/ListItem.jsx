@@ -61,6 +61,11 @@ const propTypes = {
   onMouseDown: PropTypes.func,
   /**
    * @private
+   * Whether or not the list item is focusable with Tab key. Ensure alternative way of focusing list item when set to true for best accessibility experience.
+   */
+  isTabFocusDisabled: PropTypes.bool,
+  /**
+   * @private
    * The intl object to be injected for translations.
    */
   intl: PropTypes.shape({ formatMessage: PropTypes.func }),
@@ -108,7 +113,7 @@ const ListItem = ({
   if (isSelectable) {
     attrSpread.onClick = ListUtils.wrappedOnClickForItem(onClick, onSelect, metaData);
     attrSpread.onKeyDown = ListUtils.wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
-    attrSpread.tabIndex = '0';
+    attrSpread.tabIndex = (isTabFocusDisabled) ? '-1' : '0';
     attrSpread.role = 'option';
     attrSpread['aria-selected'] = isSelected;
     attrSpread['data-item-show-focus'] = 'true';

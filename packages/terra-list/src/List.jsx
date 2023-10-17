@@ -85,6 +85,11 @@ const propTypes = {
    */
   isDraggable: PropTypes.bool,
   /**
+   * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue)
+   * Whether or not the list item is focusable with Tab key. Ensure alternative way of focusing list item when set to true for best accessibility experience.
+   */
+  isTabFocusDisabled: PropTypes.bool,
+  /**
    * Function callback when the Item is dropped. Parameters:
    * @param {Object} result result
    * @param {Object} provided provided
@@ -93,11 +98,12 @@ const propTypes = {
 };
 
 const defaultProps = {
+  ariaSelectionStyle: 'none',
   children: [],
   dividerStyle: 'none',
+  isTabFocusDisabled: false,
   paddingStyle: 'none',
   role: 'none',
-  ariaSelectionStyle: 'none',
 };
 
 const List = ({
@@ -234,10 +240,15 @@ const List = ({
 
   const cloneListItem = (ListItem, provider) => React.cloneElement(ListItem, {
     isDraggable: ListItem?.props?.isSelectable,
+    isTabFocusDisabled,
     refCallback: provider.innerRef,
     ...provider.draggableProps,
     ...provider.dragHandleProps,
   });
+
+  const clone = (object) => React.Children.map(object, (listitem) => React.cloneElement(listitem, {
+    isTabFocusDisabled,
+  }));
 
   const renderListDom = () => (
     // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions, jsx-a11y/role-supports-aria-props
@@ -251,7 +262,7 @@ const List = ({
       ref={handleListRef}
       onKeyDown={handleKeyDown}
     >
-      {children}
+      {clone(children)}
     </ul>
   );
 

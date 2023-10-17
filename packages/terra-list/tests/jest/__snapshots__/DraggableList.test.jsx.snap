@@ -62,6 +62,7 @@ exports[`should render List with items 1`] = `
       }
     }
     isDraggable={true}
+    isTabFocusDisabled={false}
     paddingStyle="none"
     role="none"
   >
@@ -219,6 +220,7 @@ exports[`should render List with items 1`] = `
                             draggable={false}
                             isDraggable={true}
                             isSelectable={true}
+                            isTabFocusDisabled={false}
                             key="1"
                             onDragStart={[Function]}
                             onTransitionEnd={null}
@@ -270,6 +272,7 @@ exports[`should render List with items 1`] = `
                               isDraggable={true}
                               isSelectable={true}
                               isSelected={false}
+                              isTabFocusDisabled={false}
                               onDragStart={[Function]}
                               onTransitionEnd={null}
                               refCallback={[Function]}
@@ -467,6 +470,7 @@ exports[`should render List with items 1`] = `
                             draggable={false}
                             isDraggable={true}
                             isSelectable={true}
+                            isTabFocusDisabled={false}
                             key="2"
                             onDragStart={[Function]}
                             onTransitionEnd={null}
@@ -518,6 +522,7 @@ exports[`should render List with items 1`] = `
                               isDraggable={true}
                               isSelectable={true}
                               isSelected={false}
+                              isTabFocusDisabled={false}
                               onDragStart={[Function]}
                               onTransitionEnd={null}
                               refCallback={[Function]}
@@ -674,15 +679,18 @@ exports[`should render List without Draggable items 1`] = `
 >
   <InjectIntl(ListItem)
     isSelectable={true}
-    key="123"
+    isTabFocusDisabled={false}
+    key=".$123"
   />
   <InjectIntl(ListItem)
     isSelectable={true}
-    key="124"
+    isTabFocusDisabled={false}
+    key=".$124"
   />
   <InjectIntl(ListItem)
     isSelectable={true}
-    key="125"
+    isTabFocusDisabled={false}
+    key=".$125"
   />
 </ul>
 `;
