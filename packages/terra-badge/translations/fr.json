@@ -1,0 +1,8 @@
+{
+  "Terra.badge.intent.primary": "primaire",
+  "Terra.badge.intent.secondary": "secondaire",
+  "Terra.badge.intent.info": "information",
+  "Terra.badge.intent.warning": "avertissement",
+  "Terra.badge.intent.positive": "positif",
+  "Terra.badge.intent.negative": "négatif"
+}

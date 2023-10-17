@@ -1,7 +1,7 @@
 {
   "name": "terra-show-hide",
   "main": "lib/index.js",
-  "version": "2.65.0",
+  "version": "2.66.0",
   "description": "Show/Hide component that previews a small section of content or shows the full content with the click of a button",
   "repository": {
     "type": "git",
@@ -35,7 +35,7 @@
     "prop-types": "^15.5.8",
     "terra-mixins": "^1.40.0",
     "terra-theme-context": "^1.0.0",
-    "terra-toggle": "^3.59.0",
+    "terra-toggle": "^3.60.0",
     "uuid": "3.4.0"
   },
   "scripts": {
