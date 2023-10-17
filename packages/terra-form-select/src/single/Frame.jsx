@@ -142,7 +142,6 @@ class Frame extends React.Component {
     this.handleMouseDown = this.handleMouseDown.bind(this);
     this.handleToggleMouseDown = this.handleToggleMouseDown.bind(this);
     this.handleToggleButtonMouseDown = this.handleToggleButtonMouseDown.bind(this);
-    this.role = this.role.bind(this);
     this.visuallyHiddenComponent = React.createRef();
     this.setSelectMenuRef = this.setSelectMenuRef.bind(this);
   }
@@ -374,16 +373,15 @@ class Frame extends React.Component {
   ariaLabel() {
     const { ariaLabel, disabled, intl } = this.props;
 
-    const defaultAriaLabel = intl.formatMessage({ id: 'Terra.form.select.ariaLabel' });
     const dimmed = intl.formatMessage({ id: 'Terra.form.select.dimmed' });
 
     // VO on iOS doesn't do a good job of announcing disabled stated. Here we append the phrase that
     // VO associates with disabled form controls.
     if ('ontouchstart' in window && disabled) {
-      return ariaLabel === undefined ? `${defaultAriaLabel} ${dimmed}` : `${ariaLabel} ${dimmed}`;
+      return ariaLabel === undefined ? '' : `${ariaLabel} ${dimmed}`;
     }
 
-    return ariaLabel === undefined ? defaultAriaLabel : ariaLabel;
+    return ariaLabel === undefined ? '' : ariaLabel;
   }
 
   /**
@@ -393,22 +391,13 @@ class Frame extends React.Component {
     const selectedText = this.props.intl.formatMessage({ id: 'Terra.form.select.selected' });
     let label;
     if (this.props.display) {
-      label = `${this.props.display} ${selectedText}, ${this.ariaLabel()}`;
+      // Added below condition to prevent VO from announcing placeholder and selected item name twice in Safari.
+      label = SharedUtil.isSafari() ? `${selectedText}, ${this.ariaLabel()}` : `${this.props.display} ${selectedText}, ${this.ariaLabel()}`;
     } else if (this.props.placeholder) {
-      label = `${this.props.placeholder}, ${this.ariaLabel()}`;
+      label = SharedUtil.isSafari() ? this.ariaLabel() : `${this.props.placeholder}, ${this.ariaLabel()}`;
     }
 
     return label || this.ariaLabel();
-  }
-
-  /**
-   * Determines compatible role attribute to apply to select based on active variant and disabled prop
-   */
-  role() {
-    const { disabled } = this.props;
-    const role = SharedUtil.isSafari() ? 'group' : 'button';
-
-    return disabled ? undefined : role;
   }
 
   /**
@@ -420,13 +409,13 @@ class Frame extends React.Component {
     const comboboxState = this.state.isOpen ? intl.formatMessage({ id: 'Terra.form.select.expanded' })
       : intl.formatMessage({ id: 'Terra.form.select.collapsed' });
     const listOfOptionsTxt = intl.formatMessage({ id: 'Terra.form.select.listOfTotalOptions' });
-    const defaultUsageGuidanceTxt = intl.formatMessage({ id: 'Terra.form.select.defaultUsageGuidance' });
+    const defaultUsageGuidanceTxt = this.props.intl.formatMessage({ id: 'Terra.form.select.defaultUsageGuidance' });
 
     if ('ontouchstart' in window) {
       return listOfOptionsTxt;
     }
 
-    return `${comboboxState} ${listOfOptionsTxt} ${defaultUsageGuidanceTxt}`;
+    return this.props.disabled ? '' : `${comboboxState} ${listOfOptionsTxt} ${defaultUsageGuidanceTxt}`;
   }
 
   renderToggleButton() {
@@ -485,7 +474,6 @@ class Frame extends React.Component {
       customProps.className,
     );
 
-    const labelId = `terra-select-screen-reader-label-${uniqueid()}`;
     const displayId = `terra-select-screen-reader-display-${uniqueid()}`;
     const placeholderId = `terra-select-screen-reader-placeholder-${uniqueid()}`;
     const descriptionId = `terra-select-screen-reader-description-${uniqueid()}`;
@@ -510,7 +498,7 @@ class Frame extends React.Component {
     return (
       <div
         {...customProps}
-        role={this.role()}
+        role="combobox"
         data-terra-select-combobox
         aria-controls={!disabled && this.state.isOpen ? selectMenuId : undefined}
         aria-disabled={!!disabled}
@@ -519,6 +507,7 @@ class Frame extends React.Component {
         aria-haspopup={!disabled ? 'true' : undefined}
         aria-describedby={ariaDescribedBy}
         aria-owns={this.state.isOpen ? selectMenuId : undefined}
+        aria-required={required}
         className={selectClasses}
         onBlur={this.handleBlur}
         onFocus={this.handleFocus}
@@ -526,13 +515,18 @@ class Frame extends React.Component {
         onMouseDown={this.handleMouseDown}
         tabIndex={disabled ? '-1' : '0'} // eslint-disable-line jsx-a11y/no-noninteractive-tabindex
         ref={(select) => { this.select = select; }}
+        aria-invalid={isInvalid}
       >
+        {/* Added this label and input to avoid accessibility violations after changing the role from button to combobox */}
+        <label hidden>
+          <input type="text" />
+        </label>
         <div className={cx('visually-hidden-component')} hidden>
           {/* Hidden attribute used to prevent VoiceOver on desktop from announcing this content twice */}
-          <span id={labelId}>{this.ariaLabel()}</span>
           <span id={descriptionId}>{this.renderDescriptionText()}</span>
         </div>
-        <div className={cx('display')} aria-label={this.ariaLabel()}>
+        {/* Added aria label to avoid announcing empty group by voice over in safari browser */}
+        <div className={cx('display')} aria-label={this.ariaLabel()} aria-hidden={disabled}>
           {this.getDisplay(displayId, placeholderId)}
         </div>
         {this.renderToggleButton()}

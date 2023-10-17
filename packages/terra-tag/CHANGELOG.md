@@ -3,7 +3,12 @@
 ## Unreleased
 
 * Added
-  * Added a new subcomponent, TagList.
+  * Added a new subcomponent `TagList`.
+
+## 2.63.0 - (October 16, 2023)
+
+* Changed
+  * Minor dependency version bump
 
 ## 2.62.0 - (September 21, 2023)
 

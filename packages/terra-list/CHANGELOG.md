@@ -1,6 +1,19 @@
 # Changelog
 
 ## Unreleased
+
+## 4.65.0 - (October 16, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.64.0 - (October 3, 2023)
+
+* Added
+  * Added arrow key navigation support for list items.
+
+## 4.63.0 - (September 26, 2023)
+
 * Added
   * Added drag and drop icon for draggable list items.
 

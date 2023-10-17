@@ -243,6 +243,8 @@ class Button extends React.Component {
     } = this.props;
 
     const theme = this.context;
+    const isMac = () => navigator.userAgent.indexOf('Mac') !== -1;
+    const buttonLabelCx = isMac() ? 'button-label-mac' : 'button-label-win';
 
     const buttonClasses = classNames(
       cx([
@@ -259,7 +261,7 @@ class Button extends React.Component {
     );
 
     const buttonLabelClasses = cx([
-      'button-label',
+      buttonLabelCx,
       { 'text-and-icon': icon && !isIconOnly && variant !== 'utility' },
       { 'icon-only': isIconOnly || variant === 'utility' },
       { 'text-only': !icon },

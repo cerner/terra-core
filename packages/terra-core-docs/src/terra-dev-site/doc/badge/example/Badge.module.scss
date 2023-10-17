@@ -1,0 +1,16 @@
+:local {
+  .badge-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .badge {
+    align-self: flex-end;
+    margin-right: 0.07rem;
+  }
+
+  .table-container {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+}

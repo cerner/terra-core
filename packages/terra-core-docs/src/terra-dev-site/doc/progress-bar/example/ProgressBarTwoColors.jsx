@@ -7,13 +7,13 @@ const cx = classNames.bind(styles);
 
 const ProgressBarGradient = () => (
   <div>
-    <ProgressBar valueText="5%" value={5} max={10} colorClass={cx(['two-colors-bar-example-1'])} />
+    <ProgressBar value={5} max={10} colorClass={cx(['two-colors-bar-example-1'])} />
     <br />
     <br />
-    <ProgressBar valueText="3%" value={3} max={10} colorClass={cx(['two-colors-bar-example-2'])} />
+    <ProgressBar value={3} max={10} colorClass={cx(['two-colors-bar-example-2'])} />
     <br />
     <br />
-    <ProgressBar valueText="8%" value={8} max={10} colorClass={cx(['two-colors-bar-example-3'])} />
+    <ProgressBar value={8} max={10} colorClass={cx(['two-colors-bar-example-3'])} />
   </div>
 );
 

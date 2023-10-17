@@ -13,6 +13,7 @@ import IconAudio from './icon/IconAudio';
 import IconAutoText from './icon/IconAutoText';
 import IconAvailable from './icon/IconAvailable';
 import IconAway from './icon/IconAway';
+import IconBase from './IconBase';
 import IconBedAssigned from './icon/IconBedAssigned';
 import IconBedAssignedLowLight from './icon/IconBedAssignedLowLight';
 import IconBedRequested from './icon/IconBedRequested';
@@ -341,6 +342,7 @@ export {
   IconAutoText,
   IconAvailable,
   IconAway,
+  IconBase,
   IconBedAssigned,
   IconBedAssignedLowLight,
   IconBedRequested,

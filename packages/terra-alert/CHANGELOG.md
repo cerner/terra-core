@@ -2,6 +2,18 @@
 
 ## Unreleased
 
+## 4.83.0 - (October 16, 2023)
+
+* Updated
+  * Updated prop documentation for optional custom titles.
+
+## 4.82.0 - (October 3, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.81.0 - (September 26, 2023)
+
 * Added
   * Added visually hidden default title for screen readers to read with custom titles.
 
