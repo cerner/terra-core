@@ -33,12 +33,6 @@ const propTypes = {
    */
   onKeyUp: PropTypes.func,
   /**
-   * @private
-   * Internal prop used to focus to current tag if the tag is clicked with mouse
-   * Callback function triggered when tag is clicked with mouse.
-   */
-  onTagClick: PropTypes.func,
-  /**
    * Sets the tag text.
    */
   text: PropTypes.string.isRequired,
@@ -50,7 +44,6 @@ class Tag extends React.Component {
     this.handleKeyUp = this.handleKeyUp.bind(this);
     this.handleOnBlur = this.handleOnBlur.bind(this);
     this.handleClick = this.handleClick.bind(this);
-    this.tagNode = null;
   }
 
   handleOnBlur(event) {
@@ -66,12 +59,8 @@ class Tag extends React.Component {
   }
 
   handleClick(event) {
-    if (this.props.onTagClick) {
-      const TagId = (this.tagNode) ? this.tagNode.id : event.target.id;
-      this.props.onTagClick(TagId);
-    }
     if (this.props.onClick) {
-      this.props.onClick();
+      this.props.onClick(event);
     }
   }
 
@@ -88,7 +77,6 @@ class Tag extends React.Component {
       onBlur,
       onFocus,
       onKeyUp,
-      onTagClick,
       ...customProps
     } = this.props;
 
@@ -120,7 +108,6 @@ class Tag extends React.Component {
         onClick={this.handleClick}
         onFocus={onFocus}
         href={href}
-        ref={this.setTagNode}
         data-terra-tag
       >
         {tagIcon}

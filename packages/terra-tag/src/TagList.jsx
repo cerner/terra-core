@@ -234,11 +234,11 @@ const TagList = (props) => {
   };
 
   // set the focus to current tag if the tag is clicked with mouse
-  const handleOnTagSelect = (tagID) => {
+  const handleOnTagSelect = (event) => {
     const tags = [...filterTagsRef.current.querySelectorAll('[data-terra-tag]')];
     setTabIndex('-1');
-    focusNode.current = tags.findIndex((tag) => tag.id === tagID);
-    currentTag.current = tags.find((tag) => tag.id === tagID);
+    focusNode.current = tags.findIndex((tag) => tag.id === event.target.id);
+    currentTag.current = tags.find((tag) => tag.id === event.target.id);
     setTabIndex('0');
     focusCurrentNode();
   };
@@ -284,7 +284,7 @@ const TagList = (props) => {
     const tags = React.Children.map(items, (tag) => {
       if (React.isValidElement(tag)) {
         return React.cloneElement(tag, {
-          onSelect: handleOnTagSelect, onTagClick: handleOnTagSelect,
+          onSelect: handleOnTagSelect, onClick: handleOnTagSelect,
         });
       }
       return undefined;
