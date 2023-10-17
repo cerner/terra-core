@@ -61,11 +61,6 @@ const propTypes = {
   onMouseDown: PropTypes.func,
   /**
    * @private
-   * Whether or not the list item is focusable with Tab key. Ensure alternative way of focusing list item when set to true for best accessibility experience.
-   */
-  isTabFocusDisabled: PropTypes.bool,
-  /**
-   * @private
    * The intl object to be injected for translations.
    */
   intl: PropTypes.shape({ formatMessage: PropTypes.func }),
@@ -104,7 +99,7 @@ const ListItem = ({
     ),
     customProps.className,
   );
-  const { isDraggable } = customProps;
+  const { isDraggable, isTabFocusDisabled } = customProps;
   const attrSpread = {};
 
   const onFocusResponse = intl.formatMessage({ id: 'Terra.list.focus' });

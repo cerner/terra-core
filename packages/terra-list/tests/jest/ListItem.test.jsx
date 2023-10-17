@@ -43,6 +43,18 @@ it('should render with callback functions', () => {
   expect(mockCallBack.mock.calls.length).toEqual(3);
 });
 
+it('should render with tabindex -1 when isTabFocusDisabled is set to true', () => {
+  const mockCallBack = jest.fn();
+
+  const shallowComponent = shallowWithIntl(
+    <ListItem title="test" isSelectable isTabFocusDisabled onSelect={mockCallBack} refCallback={jest.fn()} />,
+  ).dive();
+
+  expect(shallowComponent.prop('tabIndex')).toContain('-1');
+  // expect(shallowComponent.find('li').getAttribute('tabindex')).toEqual(-1);
+  expect(shallowComponent).toMatchSnapshot();
+});
+
 it('correctly applies the theme context className', () => {
   const wrapper = mountWithIntl(
     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>

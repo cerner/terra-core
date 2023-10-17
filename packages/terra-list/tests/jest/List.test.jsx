@@ -168,18 +168,6 @@ it('should render with single select aria attributes with ariaSelectionStyle sin
   expect(shallowComponent).toMatchSnapshot();
 });
 
-it('should render selectable list with tabIndex -1 ', () => {
-  const mockCallBack = jest.fn();
-  const item1 = <Item key="123" isSelectable onSelect={mockCallBack} />;
-  const item2 = <Item key="124" isSelectable onSelect={mockCallBack} />;
-  const items = [item1, item2];
-  const shallowComponent = shallowWithIntl(
-    <List ariaSelectionStyle="single-select" isTabFocusDisabled>{items}</List>,
-  ).dive();
-  // expect(shallowComponent);
-  expect(shallowComponent).toMatchSnapshot();
-});
-
 it('should render with mutli select aria attributes with ariaSelectionStyle mutli-select', () => {
   const item1 = <Item key="123" />;
   const item2 = <Item key="124" />;
