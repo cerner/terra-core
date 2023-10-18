@@ -1,6 +1,9 @@
 # Changelog
 
 ## Unreleased
+*Fixed
+ * Fixed Terra Arrange Reflow issue `terra-arrange`.
+ * Fixed Terra Arrange Radio button issue `terra-arrange`.
 
 ## 1.45.0 - (October 16, 2023)
 
