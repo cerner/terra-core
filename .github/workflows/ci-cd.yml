@@ -59,7 +59,20 @@ jobs:
         if: matrix.theme == 'fusion'
       - name: Run WDIO Tests for form factor ${{ matrix.form-factor }} and ${{ matrix.theme }}
         run: SITE=build/${{ matrix.theme }} FORM_FACTOR=${{ matrix.form-factor }} npm run wdio-${{ matrix.theme }}
+  NPM_Audit:
+    runs-on: ubuntu-latest
 
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Install dependencies and run npm audit
+        run: |
+        npm i --package-lock-only
+        npm audit --json > audit.json || true
+        if [ -s audit.json ]; then
+          echo 'NPM audit vulnerabilities found:'
+          cat audit.json
+        fi
   release-and-deploy:
     runs-on: ubuntu-latest
 
