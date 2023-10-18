@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed _property is undefined_ error while navigating with a keyboard.
+
 ## 4.65.0 - (October 16, 2023)
 
 * Changed
