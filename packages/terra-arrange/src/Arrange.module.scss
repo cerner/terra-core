@@ -38,4 +38,11 @@
   .default {
     align-self: flex-start;
   }
+
+  @media (max-width: 320px) {
+    .fit {
+      align-self: flex-start;
+      flex: 0 0;
+    }
+  }
 }
