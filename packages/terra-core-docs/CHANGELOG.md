@@ -2,8 +2,7 @@
 
 ## Unreleased
 *Fixed
- * Fixed Terra Arrange Reflow issue `terra-arrange`.
- * Fixed Terra Arrange Radio button issue `terra-arrange`.
+ * Fixed reflow issue when the viewport is resized to 320x256 px `terra-arrange`.
 
 ## 1.45.0 - (October 16, 2023)
 
