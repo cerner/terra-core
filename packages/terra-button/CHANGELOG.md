@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Added support of selection state for Fusion-Button
+
 ## 3.68.2 - (October 3, 2023)
 
 * Fixed
