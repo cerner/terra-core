@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added `isTabFocusDisabled` prop to disable tab key navigation.
+
 ## 4.65.0 - (October 16, 2023)
 
 * Changed

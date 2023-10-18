@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Updated
+  * Updated `terra-list` examples to include `isTabFocusDisabled` prop.
+
 ## 1.45.0 - (October 16, 2023)
 
 * Added

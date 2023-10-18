@@ -7,32 +7,40 @@ import styles from './ListDocCommon.module.scss';
 const cx = classNames.bind(styles);
 
 const ListSectionExample = () => (
-  <List role="listbox" aria-label="example-label" isTabFocusDisabled>
-    <Item
-      key="default"
-    >
-      <Placeholder title="Default ListItem" className={cx('placeholder')} />
-    </Item>
-    <Item
-      key="chevron"
-      hasChevron
-    >
-      <Placeholder title="Chevron ListItem" className={cx('placeholder')} />
-    </Item>
-    <Item
-      key="selectable"
-      isSelectable
-    >
-      <Placeholder title="Selectable ListItem" className={cx('placeholder')} />
-    </Item>
-    <Item
-      key="selected"
-      isSelectable
-      isSelected
-    >
-      <Placeholder title="Selected ListItem" className={cx('placeholder')} />
-    </Item>
-  </List>
+  <>
+    <p>
+      <b>Note</b>
+      {' '}
+      Tab key Navigation is disabled for below list items
+      {' '}
+    </p>
+    <List role="listbox" aria-label="example-label" isTabFocusDisabled>
+      <Item
+        key="default"
+      >
+        <Placeholder title="Default ListItem" className={cx('placeholder')} />
+      </Item>
+      <Item
+        key="chevron"
+        hasChevron
+      >
+        <Placeholder title="Chevron ListItem" className={cx('placeholder')} />
+      </Item>
+      <Item
+        key="selectable"
+        isSelectable
+      >
+        <Placeholder title="Selectable ListItem" className={cx('placeholder')} />
+      </Item>
+      <Item
+        key="selected"
+        isSelectable
+        isSelected
+      >
+        <Placeholder title="Selected ListItem" className={cx('placeholder')} />
+      </Item>
+    </List>
+  </>
 );
 
 export default ListSectionExample;
