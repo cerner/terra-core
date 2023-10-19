@@ -91,17 +91,15 @@ const TagList = (props) => {
 
   // Modifies the tabindex of the tag
   const setTabIndex = (val) => {
-    const currentNode = currentTag.current ? currentTag.current : null;
-    if (currentNode) {
-      currentNode.setAttribute('tabIndex', val);
+    if (currentTag.current) {
+      currentTag.current.setAttribute('tabIndex', val);
     }
   };
 
   // Sets focus to the current tag with tabindex 0
   const focusCurrentNode = () => {
-    const currentNode = currentTag.current ? currentTag.current : null;
-    if (currentNode) {
-      currentNode.focus();
+    if (currentTag.current) {
+      currentTag.current.focus();
     }
   };
 
