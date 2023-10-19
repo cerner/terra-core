@@ -60,6 +60,7 @@ exports[`ClearOption correctly applies the theme context className 1`] = `
       >
         <span
           className="display"
+          data-terra-add-option={true}
         >
           Clear
         </span>

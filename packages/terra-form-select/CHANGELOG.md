@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+* Changed
+  * Changed `class` selector used for accessing input text with data-attribute in form select `combobox` and `tag`.
 ## 6.48.0 - (October 16, 2023)
 
 * Changed

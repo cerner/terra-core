@@ -2517,4 +2517,19 @@ Terra.describeViewports('Select', ['tiny'], () => {
       after(() => $('#root').click());
     });
   });
+
+  describe('Combobox Add New Option', () => {
+    before(() => {
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/is-touch-accessible-combobox');
+    });
+
+    it('should add new option in combo box', () => {
+      $('[data-terra-select]').click();
+      browser.keys(['N', 'e', 'w']);
+      $('[data-terra-add-option]').click();
+      expect($('[data-terra-add-option]')).toHaveTextContaining('Add "New"');
+      $('[data-terra-select]').click();
+      Terra.validates.element('Add New Option in combo box', { selector: '#root' });
+    });
+  });
 });
