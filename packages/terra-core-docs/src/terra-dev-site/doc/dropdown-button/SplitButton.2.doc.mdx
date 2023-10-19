@@ -55,7 +55,7 @@ import { Item, SplitButton } from 'terra-dropdown-button';
 
 ## Testing
 
-Terra Alert uses `uuid` which changes the component's description id dynamically. To mock the return value with the Jest testing library, `jest.spyOn` can be used.
+Terra Split Button uses `uuid` which changes the component's description id dynamically. To mock the return value with the Jest testing library, `jest.spyOn` can be used.
 
 If Enzyme `shallow` is being used for the tests then the mock may not be required depending on the depth of the returned wrapper. However, if `mount` is used then `uuid` should be mocked as shown below:
 
