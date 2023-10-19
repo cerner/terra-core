@@ -1,8 +1,8 @@
 # Changelog
 
 ## Unreleased
-*Fixed
- * Fixed reflow issue when the viewport is resized to 320x256 px `terra-arrange`.
+* Updated
+ * Updated `terra-arrange` examples to use `terra-form-radio`.
 
 ## 1.45.0 - (October 16, 2023)
 

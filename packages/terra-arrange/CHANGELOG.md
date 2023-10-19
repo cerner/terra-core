@@ -1,8 +1,8 @@
 # Changelog
 
 ## Unreleased
-*Fixed
- * Fixed reflow issue when the viewport is resized to 320x256 px `terra-arrange`.
+* Fixed
+ * Fixed reflow issue when the viewport is resized to 320x256 px.
 
 ## 3.53.0 - (August 23, 2023)
 
