@@ -255,17 +255,4 @@ Terra.describeViewports('Button', ['tiny'], () => {
       Terra.validates.element('programmatic re-enabled -Enabled Button is not focused', { selector: '#root' });
     });
   });
-
-  describe('Selectable button', () => {
-    it('displays unselected button', () => {
-      browser.url('/raw/tests/cerner-terra-core-docs/button/selectable-button');
-      Terra.validates.element('unselected-button');
-    });
-
-    it('displays selected button', () => {
-      browser.url('/raw/tests/cerner-terra-core-docs/button/selectable-button');
-      $('<button>').click();
-      Terra.validates.element('selected-button');
-    });
-  });
 });

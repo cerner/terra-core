@@ -101,16 +101,6 @@ const propTypes = {
    * Sets the button variant. One of `neutral`,  `emphasis`, `ghost`, `de-emphasis`, `action` or `utility`.
    */
   variant: PropTypes.oneOf([ButtonVariants.NEUTRAL, ButtonVariants.EMPHASIS, ButtonVariants.GHOST, ButtonVariants['DE-EMPHASIS'], ButtonVariants.ACTION, ButtonVariants.UTILITY]),
-  /**
-   * @private
-   * Whether or not the button can be selected (toggleable button).
-   */
-  isSelectable: PropTypes.bool,
-  /**
-   * @private
-   * Callback function when the state changes. Parameters are (event, toggleState).
-   */
-  onChange: PropTypes.func,
 };
 
 const defaultProps = {
@@ -123,7 +113,6 @@ const defaultProps = {
   title: undefined,
   type: ButtonTypes.BUTTON,
   variant: ButtonVariants.NEUTRAL,
-  isSelectable: false,
 };
 
 class Button extends React.Component {
@@ -157,7 +146,9 @@ class Button extends React.Component {
   }
 
   handleOnChange(event) {
+    // eslint-disable-next-line react/prop-types
     if (this.props.onChange && this.props.isSelectable) {
+      // eslint-disable-next-line react/prop-types
       this.props.onChange(event, this.state.isSelected);
     }
   }
@@ -260,14 +251,14 @@ class Button extends React.Component {
       onKeyUp,
       refCallback,
       title,
-      isSelectable,
-      onChange,
       ...customProps
     } = this.props;
 
     const theme = this.context;
     const isMac = () => navigator.userAgent.indexOf('Mac') !== -1;
     const buttonLabelCx = isMac() ? 'button-label-mac' : 'button-label-win';
+
+    // TODO: Custom prop `isSelectable` is used for fusion pass through passivity and should be removed after Fusion Phase2 release.
 
     const buttonClasses = classNames(
       cx([
@@ -278,7 +269,7 @@ class Button extends React.Component {
         { compact: isCompact },
         { 'is-active': this.state.active && !isDisabled },
         { 'is-focused': this.state.focused && !isDisabled },
-        { 'is-selected': isSelectable && this.state.isSelected && !isDisabled },
+        { 'is-selected': customProps.isSelectable && this.state.isSelected && !isDisabled },
         theme.className,
       ]),
       customProps.className,
@@ -332,11 +323,6 @@ class Button extends React.Component {
       customProps.role = 'button';
     }
 
-    if (isSelectable) {
-      // eslint-disable-next-line no-console
-      console.warn('`isSelectable` prop will be deprecated in future and we do not recommend it for use');
-    }
-
     return (
       <ComponentType
         {...customProps}
@@ -355,7 +341,7 @@ class Button extends React.Component {
         onFocus={this.handleFocus}
         href={href}
         ref={refCallback}
-        aria-pressed={isSelectable ? this.state.isSelected : undefined}
+        aria-pressed={customProps.isSelectable ? this.state.isSelected : undefined}
       >
         {buttonLabel}
       </ComponentType>
