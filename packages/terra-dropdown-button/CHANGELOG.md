@@ -2,7 +2,7 @@
 
 ## Unreleased
 * Added
-  * Added aria-haspoup and aria-controls attributes for dropdown button.
+  * Added 'aria-haspoup' and 'aria-controls' attributes for dropdown button.
 
 ## 1.36.0 - (August 8, 2023)
 

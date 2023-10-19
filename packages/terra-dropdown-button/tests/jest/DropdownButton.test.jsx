@@ -103,6 +103,8 @@ describe('Dropdown Button', () => {
         </DropdownButton>
       </ThemeContextProvider>,
     );
+    const dropDownButtonId = wrapper.find('#dropDown');
+    expect(dropDownButtonId.exists()).toBe(true);
     expect(wrapper).toMatchSnapshot();
   });
 
