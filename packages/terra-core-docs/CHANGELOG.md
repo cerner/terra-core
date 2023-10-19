@@ -3,6 +3,9 @@
 ## Unreleased
 
 * Added
+  * Added aria-label attribute for `terra-dropdown-split-button` examples.
+
+* Added
   * Added a visual error note for invalid example in `terra-form-single-select`.
 
 * Updated
