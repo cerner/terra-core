@@ -332,6 +332,11 @@ class Button extends React.Component {
       customProps.role = 'button';
     }
 
+    if (isSelectable) {
+      // eslint-disable-next-line no-console
+      console.warn('`isSelectable` prop will be deprecated in future and we do not recommend it for use');
+    }
+
     return (
       <ComponentType
         {...customProps}
