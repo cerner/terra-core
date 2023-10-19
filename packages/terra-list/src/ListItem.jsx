@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -100,6 +101,7 @@ const ListItem = ({
     customProps.className,
   );
   const { isDraggable, isTabFocusDisabled } = customProps;
+
   const attrSpread = {};
 
   const onFocusResponse = intl.formatMessage({ id: 'Terra.list.focus' });
@@ -118,6 +120,9 @@ const ListItem = ({
   if (isDraggable) {
     attrSpread['aria-describedby'] = responseId;
   }
+
+  delete customProps?.isTabFocusDisabled;
+  delete customProps?.isDraggable;
 
   return (
     <li {...customProps} {...attrSpread} className={listItemClassNames} ref={refCallback}>
