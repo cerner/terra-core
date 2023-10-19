@@ -112,7 +112,6 @@ const Option = ({
    */
   if (SharedUtil.isSafari() && !('ontouchstart' in window)) {
     role = 'radio';
-
     if (variant === 'tag' || variant === 'multiple') {
       role = 'checkbox';
     }

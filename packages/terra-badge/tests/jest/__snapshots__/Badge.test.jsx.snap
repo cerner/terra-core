@@ -1,24 +1,81 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Badge with additional props correctly applies the theme context className 1`] = `
-<Badge
-  icon={null}
-  intent="default"
-  isReversed={false}
-  size="small"
+<InjectIntl(Badge)
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
   text="Test value"
 >
-  <span
-    className="badge small default orion-fusion-theme"
+  <Badge
+    icon={null}
+    intent="default"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    isReversed={false}
+    size="small"
+    text="Test value"
   >
     <span
-      aria-hidden="true"
-      className="text"
+      className="badge small default orion-fusion-theme"
     >
-      Test value
+      <span
+        className="text"
+      >
+        Test value
+      </span>
     </span>
-  </span>
-</Badge>
+  </Badge>
+</InjectIntl(Badge)>
 `;
 
 exports[`should render a badge component in the order, icon and text with medium size 1`] = `
@@ -29,7 +86,6 @@ exports[`should render a badge component in the order, icon and text with medium
     alt="Test icon"
   />
   <span
-    aria-hidden="true"
     className="text"
   >
     Test value
@@ -41,8 +97,10 @@ exports[`should render a badge component in the order, text and icon with info i
 <span
   className="badge has-icon is-reversed small info"
 >
+  <VisuallyHiddenText
+    text="Terra.badge.intent.info"
+  />
   <span
-    aria-hidden="true"
     className="text"
   >
     Test value
@@ -70,6 +128,9 @@ exports[`should render a badge component with icon and warning intent 1`] = `
   <img
     alt="Test icon"
   />
+  <VisuallyHiddenText
+    text="Terra.badge.intent.warning"
+  />
 </span>
 `;
 
@@ -78,7 +139,6 @@ exports[`should render a badge component with text and large size 1`] = `
   className="badge large default"
 >
   <span
-    aria-hidden="true"
     className="text"
   >
     Large
@@ -90,8 +150,10 @@ exports[`should render a badge component with text and secondary intent 1`] = `
 <span
   className="badge small secondary"
 >
+  <VisuallyHiddenText
+    text="Terra.badge.intent.secondary"
+  />
   <span
-    aria-hidden="true"
     className="text"
   >
     Secondary
@@ -103,15 +165,14 @@ exports[`should render a badge component with visually hidden text 1`] = `
 <span
   className="badge small default"
 >
-  <VisuallyHiddenText
-    text="Risk Score 3"
-  />
   <span
-    aria-hidden="true"
     className="text"
   >
     3
   </span>
+  <VisuallyHiddenText
+    text="Risk Score 3"
+  />
 </span>
 `;
 

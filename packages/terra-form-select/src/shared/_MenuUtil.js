@@ -195,7 +195,10 @@ class MenuUtil {
   static findNext(object, value) {
     const options = MenuUtil.flatten(object, true);
     const index = options.findIndex(({ props }) => MenuUtil.isEqual(props.value, value));
-    return index === -1 ? null : options[Math.min(index + 1, options.length - 1)].props.value;
+    if (options.length - 1 === index) {
+      return options[0].props.value;
+    }
+    return index === -1 ? null : options[index + 1].props.value;
   }
 
   /**
@@ -218,8 +221,11 @@ class MenuUtil {
    */
   static findPrevious(object, value) {
     const options = MenuUtil.flatten(object, true);
-    const index = options.findIndex(({ props }) => MenuUtil.isEqual(props.value, value));
-    return index === -1 ? null : options[Math.max(index - 1, 0)].props.value;
+    let index = options.findIndex(({ props }) => MenuUtil.isEqual(props.value, value));
+    if (index === 0) {
+      index = options.length;
+    }
+    return index === -1 ? null : options[index - 1].props.value;
   }
 
   /**

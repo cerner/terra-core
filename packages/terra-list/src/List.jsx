@@ -162,13 +162,17 @@ const List = ({
       case KeyCode.KEY_UP: {
         event.preventDefault();
         const previousIndex = currentIndex > 0 ? currentIndex - 1 : lastIndex;
-        listItems[previousIndex].focus();
+        if (listItems[previousIndex]) {
+          listItems[previousIndex].focus();
+        }
         break;
       }
       case KeyCode.KEY_DOWN: {
         event.preventDefault();
         const nextIndex = currentIndex < lastIndex ? currentIndex + 1 : 0;
-        listItems[nextIndex].focus();
+        if (listItems[nextIndex]) {
+          listItems[nextIndex].focus();
+        }
         break;
       }
       default:
