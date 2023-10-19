@@ -58,9 +58,6 @@
 
     &[data-terra-rollup-tag-show-focus-styles='true']:focus {
       background-color: var(--terra-tag-focus-background-color, #fff);
-      border-color: var(--terra-tag-focus-border-color, rgba(76, 178, 233, 0.5));
-      border-width: var(--terra-tags-rollup-tag-focus-border-width, 1px);
-      box-shadow: var(--terra-tags-rollup-tag-focus-box-shadow, none);
       outline: var(--terra-tags-rollup-tag-focus-outline, 2px dashed #000);
       outline-offset: var(--terra-tags-rollup-tag-focus-outline-offset, 2px);
     }
