@@ -4,6 +4,7 @@
 
 * Updated
   * Updated `terra-alert` documentation for custom titles.
+  * Updated `terra-dropdown-button` documentation for testing uuid details.
 
 ## 1.44.1 - (October 11, 2023)
 
