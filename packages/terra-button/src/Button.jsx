@@ -125,7 +125,6 @@ class Button extends React.Component {
     this.handleFocus = this.handleFocus.bind(this);
     this.handleMouseDown = this.handleMouseDown.bind(this);
     this.handleClick = this.handleClick.bind(this);
-    this.handleOnChange = this.handleOnChange.bind(this);
 
     this.shouldShowFocus = true;
     // eslint-disable-next-line react/prop-types
@@ -149,12 +148,6 @@ class Button extends React.Component {
     }
   }
 
-  handleOnChange(event) {
-    if (this.onChange) {
-      this.onChange(event, this.state.isSelected);
-    }
-  }
-
   handleClick(event) {
     // See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Button#Clicking_and_focus
     // Button on Firefox, Safari and IE running on OS X does not receive focus when clicked.
@@ -165,12 +158,12 @@ class Button extends React.Component {
       this.shouldShowFocus = true;
     }
 
-    if (this.isSelectable) {
-      this.handleOnChange(event);
-    }
-
     if (this.props.onClick) {
-      this.props.onClick(event);
+      if (this.isSelectable) {
+        this.props.onClick(event, this.state.isSelected);
+      } else {
+        this.props.onClick(event);
+      }
     }
   }
 
@@ -267,7 +260,7 @@ class Button extends React.Component {
     const isMac = () => navigator.userAgent.indexOf('Mac') !== -1;
     const buttonLabelCx = isMac() ? 'button-label-mac' : 'button-label-win';
 
-    // TODO: Custom prop `isSelectable` is used for fusion pass through passivity and should be removed after Fusion Phase2 release.
+    // TODO: `isSelectable` prop is used for fusion pass through passivity and should be removed after Fusion Phase2 release.
 
     const buttonClasses = classNames(
       cx([

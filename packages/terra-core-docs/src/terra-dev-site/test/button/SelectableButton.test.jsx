@@ -23,7 +23,7 @@ const SelectableButton = () => {
         {' '}
         {text}
       </p>
-      <Button text="Click Me" className={cx('button')} isSelectable onChange={handleSelection} />
+      <Button text="Click Me" className={cx('button')} isSelectable onClick={handleSelection} />
     </div>
   );
 };

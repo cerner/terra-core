@@ -93,15 +93,14 @@
       color: var(--terra-button-selected-color, #fff);
     }
 
-    &:active.is-selected,
-    &:active {
-      background-color: var(--terra-button-active-background-color, #52585b);
-      border-color: var(--terra-button-active-border-color, #52585b);
-      box-shadow: var(--terra-button-active-box-shadow);
-      color: var(--terra-button-active-color, #fff);
+    &.is-selected:active {
+      background-color: var(--terra-button-selected-and-active-background-color, #52585b);
+      border-color: var(--terra-button-selected-and-active-border-color, #52585b);
+      box-shadow: var(--terra-button-selected-and-active-box-shadow);
+      color: var(--terra-button-selected-and-active-color, #fff);
     }
 
-    &:hover.is-selected {
+    &.is-selected:hover {
       background-color: var(--terra-button-selected-and-hover-background-color, #40474a);
       border-color: var(--terra-button-selected-and-hover-border-color, #40474a);
       box-shadow: var(--terra-button-selected-and-hover-box-shadow);
