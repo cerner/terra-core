@@ -128,6 +128,10 @@ class Button extends React.Component {
     this.handleOnChange = this.handleOnChange.bind(this);
 
     this.shouldShowFocus = true;
+    // eslint-disable-next-line react/prop-types
+    this.isSelectable = this.props.isSelectable;
+    // eslint-disable-next-line react/prop-types
+    this.onChange = this.props.onChange;
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
@@ -146,10 +150,8 @@ class Button extends React.Component {
   }
 
   handleOnChange(event) {
-    // eslint-disable-next-line react/prop-types
-    if (this.props.onChange && this.props.isSelectable) {
-      // eslint-disable-next-line react/prop-types
-      this.props.onChange(event, this.state.isSelected);
+    if (this.onChange) {
+      this.onChange(event, this.state.isSelected);
     }
   }
 
@@ -163,7 +165,9 @@ class Button extends React.Component {
       this.shouldShowFocus = true;
     }
 
-    this.handleOnChange(event);
+    if (this.isSelectable) {
+      this.handleOnChange(event);
+    }
 
     if (this.props.onClick) {
       this.props.onClick(event);
@@ -185,7 +189,10 @@ class Button extends React.Component {
 
     // Add focus styles for keyboard navigation
     if (event.nativeEvent.keyCode === KeyCode.KEY_SPACE || event.nativeEvent.keyCode === KeyCode.KEY_RETURN) {
-      this.setState(prevState => ({ focused: true, isSelected: !prevState.isSelected }));
+      this.setState({ focused: true });
+      if (this.isSelectable) {
+        this.setState(prevState => ({ isSelected: !prevState.isSelected }));
+      }
     }
 
     if (this.props.onKeyDown) {
@@ -223,7 +230,9 @@ class Button extends React.Component {
     if (this.props.onMouseDown) {
       this.props.onMouseDown(event);
     }
-    this.setState(prevState => ({ isSelected: !prevState.isSelected }));
+    if (this.isSelectable) {
+      this.setState(prevState => ({ isSelected: !prevState.isSelected }));
+    }
 
     // See https://developer.mozilla.org/en-US/docs/Web/API/HTMLOrForeignElement/focus#Notes
     // If you call HTMLElement.focus() from a mousedown event handler, you must call event.preventDefault() to keep the focus from leaving the HTMLElement.
@@ -269,7 +278,7 @@ class Button extends React.Component {
         { compact: isCompact },
         { 'is-active': this.state.active && !isDisabled },
         { 'is-focused': this.state.focused && !isDisabled },
-        { 'is-selected': customProps.isSelectable && this.state.isSelected && !isDisabled },
+        { 'is-selected': this.isSelectable && this.state.isSelected && !isDisabled },
         theme.className,
       ]),
       customProps.className,
@@ -317,6 +326,10 @@ class Button extends React.Component {
       ariaLabel = (icon && icon.props.a11yLabel) ? icon.props.a11yLabel : ariaLabel || text;
     }
 
+    if (this.isSelectable) {
+      customProps['aria-pressed'] = this.state.isSelected;
+    }
+
     let ComponentType = 'button';
     if (href) {
       ComponentType = 'a';
@@ -341,7 +354,6 @@ class Button extends React.Component {
         onFocus={this.handleFocus}
         href={href}
         ref={refCallback}
-        aria-pressed={customProps.isSelectable ? this.state.isSelected : undefined}
       >
         {buttonLabel}
       </ComponentType>
