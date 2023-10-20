@@ -4,6 +4,7 @@
 
 * Updated
   * Updated `terra-list` examples to include `isTabFocusDisabled` prop.
+  * Removed `terra-table` as a dependency as the docs have now moved to `terra-framework-docs`.
 
 ## 1.45.0 - (October 16, 2023)
 
