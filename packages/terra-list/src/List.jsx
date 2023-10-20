@@ -261,7 +261,8 @@ const List = ({
       {...customProps}
       {...attrSpread}
       aria-describedby={ariaDescribedBy}
-      aria-description={ariaDescription} // eslint-disable-line jsx-a11y/aria-props
+       // eslint-disable-next-line jsx-a11y/aria-props
+      aria-description={ariaDescription}
       aria-details={ariaDetails}
       className={listClassNames}
       ref={handleListRef}
@@ -280,13 +281,13 @@ const List = ({
         )}
       >
         {(provided) => (
-          /* eslint-disable jsx-a11y/aria-props */
           /* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions, jsx-a11y/role-supports-aria-props */
           <ul
             {...provided.droppableProps}
             {...customProps}
             {...attrSpread}
             aria-describedby={ariaDescribedBy}
+            // eslint-disable-next-line jsx-a11y/aria-props
             aria-description={ariaDescription}
             aria-details={ariaDetails}
             className={listClassNames}

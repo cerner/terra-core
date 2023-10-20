@@ -193,7 +193,6 @@ exports[`should render with tabindex -1 when isTabFocusDisabled is set to true 1
   aria-selected={false}
   className="list-item is-selectable"
   data-item-show-focus="true"
-  isTabFocusDisabled={true}
   onBlur={[Function]}
   onClick={[Function]}
   onKeyDown={[Function]}
