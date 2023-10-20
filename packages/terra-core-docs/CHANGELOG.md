@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased
+* Updated
+ * Updated `terra-arrange` examples to use `terra-form-radio`.
 
 * Updated
   * Removed `terra-table` as a dependency as the docs have now moved to `terra-framework-docs`.
