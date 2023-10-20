@@ -282,7 +282,7 @@ const TagList = (props) => {
     const tags = React.Children.map(items, (tag) => {
       if (React.isValidElement(tag)) {
         return React.cloneElement(tag, {
-          onSelect: handleOnTagSelect, onClick: handleOnTagSelect,
+          onSelect: handleOnTagSelect,
         });
       }
       return undefined;
