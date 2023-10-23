@@ -5,5 +5,5 @@
   "Terra.list.drag": "U heeft het item van positie {startPosition} naar positie {endPosition} verplaatst",
   "Terra.list.cancelDrag": "Verplaatsing geannuleerd. Het item is teruggezet naar startpositie {startPosition}.",
   "Terra.list.drop": "U heeft het item neergezet. U heeft het item van positie {startPosition} naar {endPosition} verplaatst.",
-  "Terra.list.focus": "Druk op de spatiebalk om een sleepactie te starten. U kunt tijdens het slepen de pijltoetsen gebruiken om het item te verplaatsen. Druk op Escape om te annuleren. Zorg dat de schermlezer in de focus- of formulierenmodus is."
+  "Terra.list.focus": "Druk op de spatiebalk om een sleepactie te starten. U kunt tijdens het slepen de pijltoetsen gebruiken om het item te verplaatsen. Druk op Escape om te annuleren"
 }
