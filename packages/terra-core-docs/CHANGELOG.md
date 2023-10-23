@@ -7,6 +7,9 @@
 * Updated
   * Removed `terra-table` as a dependency as the docs have now moved to `terra-framework-docs`.
 
+* Added
+  *  Added example for selection state of Fusion-Button in `terra-button`.
+
 ## 1.45.0 - (October 16, 2023)
 
 * Added
