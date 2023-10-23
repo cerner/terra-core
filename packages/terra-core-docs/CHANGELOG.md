@@ -1,10 +1,10 @@
 # Changelog
 
 ## Unreleased
-* Updated
- * Updated `terra-arrange` examples to use `terra-form-radio`.
 
 * Updated
+  * Updated `terra-arrange` examples to use `terra-form-radio`.
+  * Updated `terra-paginator` custom page label and count example to display correct page count.
   * Updated `terra-list` examples to include `isTabFocusDisabled` prop.
   * Removed `terra-table` as a dependency as the docs have now moved to `terra-framework-docs`.
 
