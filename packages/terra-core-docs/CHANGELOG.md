@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.46.0 - (October 23, 2023)
+
 * Updated
   * Updated `terra-arrange` examples to use `terra-form-radio`.
   * Updated `terra-paginator` custom page label and count example to display correct page count.
