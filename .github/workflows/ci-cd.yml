@@ -71,7 +71,10 @@ jobs:
         npm audit --json > audit.json || true
         if [ -s audit.json ]; then
           echo 'NPM audit vulnerabilities found:'
-          cat audit.json
+          npm audit --registry=https://registry.npmjs.org --json > audit-full.json
+          cat audit-full.json  # Display the contents of audit-full.json
+        else
+          echo 'No NPM audit vulnerabilities found.'
         fi
   release-and-deploy:
     runs-on: ubuntu-latest
