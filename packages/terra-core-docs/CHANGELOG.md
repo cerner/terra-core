@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added about page for `TagList`.
+
 ## 1.45.0 - (October 16, 2023)
 
 * Added
@@ -130,9 +133,6 @@
   * Added realistic examples for `terra-arrange`.
   * Added realistic examples for `terra-toggle-section-header`.
   * Added email validation for `terra-form-field`.
-
-* Added
-  * Added about page for `TagList`.
 
 * Updated
   * Updated an example for `terra-dropdown-button`.
