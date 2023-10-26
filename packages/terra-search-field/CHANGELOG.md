@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 3.95.0 - (October 23, 2023)
+
+* Changed
+  * Minor dependency version bump
+
 ## 3.94.0 - (October 16, 2023)
 
 * Changed

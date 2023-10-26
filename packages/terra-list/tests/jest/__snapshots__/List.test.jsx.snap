@@ -66,6 +66,7 @@ exports[`correctly applies the theme context className 1`] = `
           "timeZone": null,
         }
       }
+      isTabFocusDisabled={false}
       paddingStyle="none"
       role="none"
     >
@@ -201,19 +202,24 @@ exports[`should render with ariaDescription 1`] = `
   role="list"
 >
   <InjectIntl(ListItem)
-    key="123"
+    isTabFocusDisabled={false}
+    key=".$123"
   />
   <InjectIntl(ListItem)
-    key="124"
+    isTabFocusDisabled={false}
+    key=".$124"
   />
   <InjectIntl(ListItem)
-    key="125"
+    isTabFocusDisabled={false}
+    key=".$125"
   />
   <InjectIntl(ListItem)
-    key="126"
+    isTabFocusDisabled={false}
+    key=".$126"
   />
   <InjectIntl(ListItem)
-    key="127"
+    isTabFocusDisabled={false}
+    key=".$127"
   />
 </ul>
 `;
@@ -226,19 +232,24 @@ exports[`should render with ariaDescription 2`] = `
   role="list"
 >
   <InjectIntl(ListItem)
-    key="123"
+    isTabFocusDisabled={false}
+    key=".$123"
   />
   <InjectIntl(ListItem)
-    key="124"
+    isTabFocusDisabled={false}
+    key=".$124"
   />
   <InjectIntl(ListItem)
-    key="125"
+    isTabFocusDisabled={false}
+    key=".$125"
   />
   <InjectIntl(ListItem)
-    key="126"
+    isTabFocusDisabled={false}
+    key=".$126"
   />
   <InjectIntl(ListItem)
-    key="127"
+    isTabFocusDisabled={false}
+    key=".$127"
   />
 </ul>
 `;
@@ -364,19 +375,24 @@ exports[`should render with bottom only divided items 1`] = `
   role="list"
 >
   <InjectIntl(ListItem)
-    key="123"
+    isTabFocusDisabled={false}
+    key=".$123"
   />
   <InjectIntl(ListItem)
-    key="124"
+    isTabFocusDisabled={false}
+    key=".$124"
   />
   <InjectIntl(ListItem)
-    key="125"
+    isTabFocusDisabled={false}
+    key=".$125"
   />
   <InjectIntl(ListItem)
-    key="126"
+    isTabFocusDisabled={false}
+    key=".$126"
   />
   <InjectIntl(ListItem)
-    key="127"
+    isTabFocusDisabled={false}
+    key=".$127"
   />
 </ul>
 `;
@@ -388,19 +404,24 @@ exports[`should render with items 1`] = `
   role="list"
 >
   <InjectIntl(ListItem)
-    key="123"
+    isTabFocusDisabled={false}
+    key=".$123"
   />
   <InjectIntl(ListItem)
-    key="124"
+    isTabFocusDisabled={false}
+    key=".$124"
   />
   <InjectIntl(ListItem)
-    key="125"
+    isTabFocusDisabled={false}
+    key=".$125"
   />
   <InjectIntl(ListItem)
-    key="126"
+    isTabFocusDisabled={false}
+    key=".$126"
   />
   <InjectIntl(ListItem)
-    key="127"
+    isTabFocusDisabled={false}
+    key=".$127"
   />
 </ul>
 `;
@@ -414,19 +435,24 @@ exports[`should render with mutli select aria attributes with ariaSelectionStyle
   role="listbox"
 >
   <InjectIntl(ListItem)
-    key="123"
+    isTabFocusDisabled={false}
+    key=".$123"
   />
   <InjectIntl(ListItem)
-    key="124"
+    isTabFocusDisabled={false}
+    key=".$124"
   />
   <InjectIntl(ListItem)
-    key="125"
+    isTabFocusDisabled={false}
+    key=".$125"
   />
   <InjectIntl(ListItem)
-    key="126"
+    isTabFocusDisabled={false}
+    key=".$126"
   />
   <InjectIntl(ListItem)
-    key="127"
+    isTabFocusDisabled={false}
+    key=".$127"
   />
 </ul>
 `;
@@ -447,19 +473,24 @@ exports[`should render with single select aria attributes with ariaSelectionStyl
   role="listbox"
 >
   <InjectIntl(ListItem)
-    key="123"
+    isTabFocusDisabled={false}
+    key=".$123"
   />
   <InjectIntl(ListItem)
-    key="124"
+    isTabFocusDisabled={false}
+    key=".$124"
   />
   <InjectIntl(ListItem)
-    key="125"
+    isTabFocusDisabled={false}
+    key=".$125"
   />
   <InjectIntl(ListItem)
-    key="126"
+    isTabFocusDisabled={false}
+    key=".$126"
   />
   <InjectIntl(ListItem)
-    key="127"
+    isTabFocusDisabled={false}
+    key=".$127"
   />
 </ul>
 `;
@@ -471,19 +502,24 @@ exports[`should render with standard divided items 1`] = `
   role="list"
 >
   <InjectIntl(ListItem)
-    key="123"
+    isTabFocusDisabled={false}
+    key=".$123"
   />
   <InjectIntl(ListItem)
-    key="124"
+    isTabFocusDisabled={false}
+    key=".$124"
   />
   <InjectIntl(ListItem)
-    key="125"
+    isTabFocusDisabled={false}
+    key=".$125"
   />
   <InjectIntl(ListItem)
-    key="126"
+    isTabFocusDisabled={false}
+    key=".$126"
   />
   <InjectIntl(ListItem)
-    key="127"
+    isTabFocusDisabled={false}
+    key=".$127"
   />
 </ul>
 `;
@@ -495,19 +531,24 @@ exports[`should render with standard padded items 1`] = `
   role="list"
 >
   <InjectIntl(ListItem)
-    key="123"
+    isTabFocusDisabled={false}
+    key=".$123"
   />
   <InjectIntl(ListItem)
-    key="124"
+    isTabFocusDisabled={false}
+    key=".$124"
   />
   <InjectIntl(ListItem)
-    key="125"
+    isTabFocusDisabled={false}
+    key=".$125"
   />
   <InjectIntl(ListItem)
-    key="126"
+    isTabFocusDisabled={false}
+    key=".$126"
   />
   <InjectIntl(ListItem)
-    key="127"
+    isTabFocusDisabled={false}
+    key=".$127"
   />
 </ul>
 `;
@@ -519,19 +560,24 @@ exports[`should render with thin padded items 1`] = `
   role="list"
 >
   <InjectIntl(ListItem)
-    key="123"
+    isTabFocusDisabled={false}
+    key=".$123"
   />
   <InjectIntl(ListItem)
-    key="124"
+    isTabFocusDisabled={false}
+    key=".$124"
   />
   <InjectIntl(ListItem)
-    key="125"
+    isTabFocusDisabled={false}
+    key=".$125"
   />
   <InjectIntl(ListItem)
-    key="126"
+    isTabFocusDisabled={false}
+    key=".$126"
   />
   <InjectIntl(ListItem)
-    key="127"
+    isTabFocusDisabled={false}
+    key=".$127"
   />
 </ul>
 `;

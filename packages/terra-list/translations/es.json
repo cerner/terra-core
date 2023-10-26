@@ -5,5 +5,5 @@
   "Terra.list.drag": "Ha movido el elemento de la posición {startPosition} a la posición {endPosition}",
   "Terra.list.cancelDrag": "Se canceló el movimiento. El elemento ha vuelto a su posición inicial {startPosition}",
   "Terra.list.drop": "Ha soltado el elemento. Ha movido el elemento de la posición {startPosition} a {endPosition}",
-  "Terra.list.focus": "Presione la barra espaciadora para empezar a arrastrar. Se pueden usar las teclas de flecha para mover el elemento al arrastrar y la tecla Esc para cancelar. Asegúrese de que su lector de pantalla esté en el modo de enfoque o el modo formularios"
+  "Terra.list.focus": "Presione la barra espaciadora para empezar a arrastrar. Se pueden usar las teclas de flecha para mover el elemento al arrastrar y la tecla Esc para cancelar"
 }

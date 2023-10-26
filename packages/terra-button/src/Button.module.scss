@@ -78,6 +78,34 @@
       opacity: var(--terra-button-disabled-opacity, 0.3);
       pointer-events: none; // prevent pointer interaction for anchor elements
     }
+
+    &.is-selected.is-focused {
+      background-color: var(--terra-button-selected-and-focus-background-color, #52585b);
+      border-color: var(--terra-button-selected-and-focus-border-color, #52585b);
+      box-shadow: var(--terra-button-selected-and-focus-box-shadow, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35));
+      color: var(--terra-button-selected-and-focus-color, #fff);
+    }
+
+    &.is-selected {
+      background-color: var(--terra-button-selected-background-color, #52585b);
+      border-color: var(--terra-button-selected-border-color, #52585b);
+      box-shadow: var(--terra-button-selected-box-shadow);
+      color: var(--terra-button-selected-color, #fff);
+    }
+
+    &.is-selected:active {
+      background-color: var(--terra-button-selected-and-active-background-color, #52585b);
+      border-color: var(--terra-button-selected-and-active-border-color, #52585b);
+      box-shadow: var(--terra-button-selected-and-active-box-shadow);
+      color: var(--terra-button-selected-and-active-color, #fff);
+    }
+
+    &.is-selected:hover {
+      background-color: var(--terra-button-selected-and-hover-background-color, #40474a);
+      border-color: var(--terra-button-selected-and-hover-border-color, #40474a);
+      box-shadow: var(--terra-button-selected-and-hover-box-shadow);
+      color: var(--terra-button-selected-and-hover-color, #fff);
+    }
   }
 
   .button-label-mac {

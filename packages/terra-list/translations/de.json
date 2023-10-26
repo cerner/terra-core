@@ -5,5 +5,5 @@
   "Terra.list.drag": "Sie haben das Element von Position {startPosition} nach Position {endPosition} verschoben.",
   "Terra.list.cancelDrag": "Verschiebung abgebrochen. Das Element wurde zurück an seine Ausgangsposition {startPosition} verschoben.",
   "Terra.list.drop": "Sie haben das Element abgelegt. Sie haben das Element von Position {startPosition} nach Position {endPosition} verschoben.",
-  "Terra.list.focus": "Leertaste drücken, um mit dem Ziehen zu beginnen. Beim Ziehen können Sie die Pfeiltasten verwenden, um das Element zu verschieben, und die Esc-Taste, um abzubrechen. Stellen Sie sicher, dass Ihre Sprachausgabe im Fokus- oder Formularmodus ist."
+  "Terra.list.focus": "Leertaste drücken, um mit dem Ziehen zu beginnen. Beim Ziehen können Sie die Pfeiltasten verwenden, um das Element zu verschieben, und die Esc-Taste, um abzubrechen"
 }
