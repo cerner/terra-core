@@ -118,7 +118,7 @@ const defaultProps = {
 class Button extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { active: false, focused: false };
+    this.state = { active: false, focused: false, isSelected: false };
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleKeyUp = this.handleKeyUp.bind(this);
     this.handleOnBlur = this.handleOnBlur.bind(this);
@@ -144,7 +144,7 @@ class Button extends React.Component {
     }
   }
 
-  handleClick(event) {
+  handleClick(event, isSelectable) {
     // See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Button#Clicking_and_focus
     // Button on Firefox, Safari and IE running on OS X does not receive focus when clicked.
     // This will put focus on the button when clicked if it is not currently the active element.
@@ -155,11 +155,15 @@ class Button extends React.Component {
     }
 
     if (this.props.onClick) {
-      this.props.onClick(event);
+      if (isSelectable) {
+        this.props.onClick(event, this.state.isSelected);
+      } else {
+        this.props.onClick(event);
+      }
     }
   }
 
-  handleKeyDown(event) {
+  handleKeyDown(event, isSelectable) {
     // Add active state to FF browsers
     if (event.nativeEvent.keyCode === KeyCode.KEY_SPACE) {
       this.setState({ active: true });
@@ -175,6 +179,9 @@ class Button extends React.Component {
     // Add focus styles for keyboard navigation
     if (event.nativeEvent.keyCode === KeyCode.KEY_SPACE || event.nativeEvent.keyCode === KeyCode.KEY_RETURN) {
       this.setState({ focused: true });
+      if (isSelectable) {
+        this.setState(prevState => ({ isSelected: !prevState.isSelected }));
+      }
     }
 
     if (this.props.onKeyDown) {
@@ -208,9 +215,12 @@ class Button extends React.Component {
     }
   }
 
-  handleMouseDown(event) {
+  handleMouseDown(event, isSelectable) {
     if (this.props.onMouseDown) {
       this.props.onMouseDown(event);
+    }
+    if (isSelectable) {
+      this.setState(prevState => ({ isSelected: !prevState.isSelected }));
     }
 
     // See https://developer.mozilla.org/en-US/docs/Web/API/HTMLOrForeignElement/focus#Notes
@@ -246,6 +256,9 @@ class Button extends React.Component {
     const isMac = () => navigator.userAgent.indexOf('Mac') !== -1;
     const buttonLabelCx = isMac() ? 'button-label-mac' : 'button-label-win';
 
+    // TODO: `isSelectable` prop is used for fusion pass through passivity and should be removed after Fusion Phase2 release.
+    const { isSelectable } = customProps;
+
     const buttonClasses = classNames(
       cx([
         'button',
@@ -255,6 +268,7 @@ class Button extends React.Component {
         { compact: isCompact },
         { 'is-active': this.state.active && !isDisabled },
         { 'is-focused': this.state.focused && !isDisabled },
+        { 'is-selected': isSelectable && this.state.isSelected && !isDisabled },
         theme.className,
       ]),
       customProps.className,
@@ -302,6 +316,10 @@ class Button extends React.Component {
       ariaLabel = (icon && icon.props.a11yLabel) ? icon.props.a11yLabel : ariaLabel || text;
     }
 
+    if (isSelectable) {
+      customProps['aria-pressed'] = this.state.isSelected;
+    }
+
     let ComponentType = 'button';
     if (href) {
       ComponentType = 'a';
@@ -317,12 +335,12 @@ class Button extends React.Component {
         tabIndex={isDisabled ? '-1' : customProps.tabIndex}
         aria-disabled={isDisabled}
         aria-label={ariaLabel}
-        onKeyDown={this.handleKeyDown}
+        onKeyDown={(event) => { this.handleKeyDown(event, isSelectable); }}
         onKeyUp={this.handleKeyUp}
         onBlur={this.handleOnBlur}
         title={buttonTitle}
-        onClick={this.handleClick}
-        onMouseDown={this.handleMouseDown}
+        onClick={(event) => { this.handleClick(event, isSelectable); }}
+        onMouseDown={(event) => { this.handleMouseDown(event, isSelectable); }}
         onFocus={this.handleFocus}
         href={href}
         ref={refCallback}

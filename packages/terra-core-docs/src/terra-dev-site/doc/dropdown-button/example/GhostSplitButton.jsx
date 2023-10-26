@@ -10,6 +10,9 @@ const GhostSplitButton = () => {
         primaryOptionLabel="Reply"
         onSelect={() => setMessage('Reply clicked')}
         variant="ghost"
+        buttonAttrs={{
+          'aria-label': 'ghost split',
+        }}
       >
         <Item label="Reply All" onSelect={() => setMessage('Reply All clicked')} />
         <Item label="Forward" onSelect={() => setMessage('Forward clicked')} />

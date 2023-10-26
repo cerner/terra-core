@@ -2,10 +2,26 @@
 
 ## Unreleased
 
+## 1.47.0 - (October 26, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 1.46.0 - (October 23, 2023)
+
 * Updated
+  * Updated `terra-arrange` examples to use `terra-form-radio`.
+  * Updated `terra-paginator` custom page label and count example to display correct page count.
+  * Updated `terra-list` examples to include `isTabFocusDisabled` prop.
   * Removed `terra-table` as a dependency as the docs have now moved to `terra-framework-docs`.
 
+* Added
+  *  Added example for selection state of Fusion-Button in `terra-button`.
+
 ## 1.45.0 - (October 16, 2023)
+
+* Added
+  * Added aria-label attribute for `terra-dropdown-split-button` examples.
 
 * Added
   * Added a visual error note for invalid example in `terra-form-single-select`.

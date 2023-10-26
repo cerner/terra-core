@@ -57,7 +57,7 @@
 
     &:focus {
       border-right-color: map-get($color-map, focus-border-color);
-      box-shadow: map-get($color-map, focus-split-box-shadow);
+      outline: map-get($color-map, focus-split-outline);
     }
 
     &.is-active,
@@ -82,7 +82,7 @@
     box-shadow: map-get($color-map, split-caret-box-shadow);
 
     &:focus {
-      box-shadow: map-get($color-map, focus-split-caret-box-shadow);
+      outline: map-get($color-map, focus-split-caret-outline);
     }
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (hover: hover) and (pointer: fine) {
       &:hover {
