@@ -189,11 +189,6 @@ class DropdownButton extends React.Component {
 
     const dropDownMenuId = uuidv4();
     const dropDownMenuListId = `dropdown-menu-list-${dropDownMenuId}`;
-    let dropDownMenuButtonId = `dropdown-menu-button-${dropDownMenuId}`;
-    if (modifiedButtonAttrs && modifiedButtonAttrs.id) {
-      dropDownMenuButtonId = modifiedButtonAttrs.id;
-      delete modifiedButtonAttrs.id;
-    }
 
     return (
       <DropdownButtonBase
@@ -208,7 +203,6 @@ class DropdownButton extends React.Component {
         buttonRef={this.getButtonNode}
         getSelectedOptionText={this.getSelectedOptionText}
         menuId={dropDownMenuListId}
-        buttonId={dropDownMenuButtonId}
       >
         <button
           {...modifiedButtonAttrs}
@@ -224,7 +218,6 @@ class DropdownButton extends React.Component {
           aria-expanded={isOpen}
           aria-label={buttonAriaLabel}
           aria-haspopup="true"
-          id={dropDownMenuButtonId}
           aria-controls={dropDownMenuListId}
           onBlur={this.handleBlur}
         >

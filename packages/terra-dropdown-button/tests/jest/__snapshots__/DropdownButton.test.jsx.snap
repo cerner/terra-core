@@ -76,7 +76,6 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
       variant="neutral"
     >
       <DropdownButtonBase
-        buttonId="dropdown-menu-button-00000000-0000-0000-0000-000000000000"
         buttonRef={[Function]}
         getSelectedOptionText={[Function]}
         id="dropDown"
@@ -95,7 +94,6 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
         requestClose={[Function]}
       >
         <div
-          buttonId="dropdown-menu-button-00000000-0000-0000-0000-000000000000"
           className="dropdown-button-base orion-fusion-theme"
           id="dropDown"
           menuId="dropdown-menu-list-00000000-0000-0000-0000-000000000000"
@@ -108,7 +106,6 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
             aria-label="Primary Option"
             className="dropdown-button neutral orion-fusion-theme"
             disabled={false}
-            id="dropdown-menu-button-00000000-0000-0000-0000-000000000000"
             onBlur={[Function]}
             onClick={[Function]}
             onKeyDown={[Function]}
@@ -125,7 +122,6 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
             />
           </button>
           <Dropdown
-            buttonId="dropdown-menu-button-00000000-0000-0000-0000-000000000000"
             buttonRef={[Function]}
             getSelectedOptionText={[Function]}
             isOpen={false}

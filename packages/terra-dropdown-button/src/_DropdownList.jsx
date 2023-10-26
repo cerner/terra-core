@@ -227,7 +227,6 @@ class DropdownList extends React.Component {
         onKeyUp={this.handleKeyUp}
         role="menu"
         id={customProps.menuId}
-        aria-labelledby={customProps.buttonId}
       >
         {this.cloneChildren()}
       </ul>
