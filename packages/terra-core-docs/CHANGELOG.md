@@ -16,6 +16,9 @@
 ## 1.45.0 - (October 16, 2023)
 
 * Added
+  * Added aria-label attribute for `terra-dropdown-split-button` examples.
+
+* Added
   * Added a visual error note for invalid example in `terra-form-single-select`.
   * Added example for `terra-badge` with `terra-html-table`.
 

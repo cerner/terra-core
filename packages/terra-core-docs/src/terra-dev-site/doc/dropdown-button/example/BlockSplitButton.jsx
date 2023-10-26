@@ -10,6 +10,9 @@ const Example = () => {
         primaryOptionLabel="Primary Option"
         onSelect={() => setMessage('Primary option clicked')}
         isBlock
+        buttonAttrs={{
+          'aria-label': 'block split',
+        }}
       >
         <Item label="1st Option" onSelect={() => setMessage('1st option clicked')} />
         <Item label="2nd Option" onSelect={() => setMessage('2nd option clicked')} />

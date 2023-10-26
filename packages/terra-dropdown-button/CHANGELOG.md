@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated focus border as dashed border in `dropdown-split-button`.
+
 ## 1.36.0 - (August 8, 2023)
 
 * Added
