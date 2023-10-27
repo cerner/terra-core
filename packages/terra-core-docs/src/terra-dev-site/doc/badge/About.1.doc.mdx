@@ -12,7 +12,7 @@ import BadgePropsTable from 'terra-badge/lib/Badge?dev-site-props-table';
 
 # Terra Badge
 
-The badge component displays content classification.
+Badges are used to represent items like number of filtered items, number of unread items, or to represent state. If you need a selectable annotation consider using a label instead.
 
 ## Getting Started
 
@@ -42,6 +42,22 @@ The Badge component must be composed inside the [Base][1] component with a local
 ```jsx
 import Badge from 'terra-badge';
 ```
+
+To implement an accessible terra badge:
+
+- Ensure a meaningful text is provided as `text` prop for terra-badge and choose appropriate intent that matches the defination of Badge text. 
+
+- Ensure Information is not conveyed by only color added by different intent of terra-badge.
+
+- Ensure that the terra-badge is provided with visually hidden text to convey the purpose of the badge to users via screen reader or similar assistive technologies when required.
+
+- When multiple badges are used together, Consider following steps which will help users to perceive or understand the difference between the two badges.
+
+  - Add an icon to visually convey information.
+  - Add a visually-hidden-text to convey information for screen reader users.
+  - Avoid having badges with similar intent on group.
+
+- visually-hidden-text should be ignored when the badge color and text is sufficient to convey information of badge.
 
 ## Component Features
 * [Cross-Browser Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#cross-browser-support)

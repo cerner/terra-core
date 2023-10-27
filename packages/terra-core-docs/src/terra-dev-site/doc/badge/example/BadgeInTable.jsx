@@ -45,7 +45,7 @@ const BadgeInTable = () => (
                 <Badge intent="negative" size="large" text="Inactive" />
               </div>
               <div className={cx('badge')}>
-                <Badge intent="info" icon={Icon} text="Verification Pending" visuallyHiddenText="Please check back in 2-4 business days" />
+                <Badge intent="info" icon={Icon} text="Verification Pending" />
               </div>
             </div>
           </Cell>

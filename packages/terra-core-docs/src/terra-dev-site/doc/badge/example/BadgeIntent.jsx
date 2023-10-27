@@ -6,29 +6,71 @@ import styles from './Badge.module.scss';
 const cx = classNames.bind(styles);
 
 const BadgeIntent = () => (
-  <div className={cx('badge-container')}>
-    <div className={cx('badge')}>
-      <Badge text="Patient Arrival" />
+  <React.Fragment>
+    <p>
+      Intent with severity of issues.
+    </p>
+    <div className={cx('badge-container')}>
+      <div className={cx('badge')}>
+        <Badge text="No Risk" />
+      </div>
+      <div className={cx('badge')}>
+        <Badge intent="primary" text="Low" />
+      </div>
+      <div className={cx('badge')}>
+        <Badge intent="secondary" text="Moderate" />
+      </div>
+      <div className={cx('badge')}>
+        <Badge intent="warning" text="High" />
+      </div>
+      <div className={cx('badge')}>
+        <Badge intent="negative" text="Critical" />
+      </div>
     </div>
-    <div className={cx('badge')}>
-      <Badge intent="primary" text="Admitted" />
+    <p>
+      Secondary Intent can be used to label user name as NEW
+    </p>
+    <div className={cx('badge-container')}>
+      <div className={cx('badge')}>
+        <React.Fragment>Segun Adebayo </React.Fragment>
+        <Badge intent="secondary" text="NEW" />
+      </div>
     </div>
-    <div className={cx('badge')}>
-      <Badge intent="secondary" text="Discharged" />
+    <p>
+      Primary Intent with unread items
+    </p>
+    <div className={cx('badge-container')}>
+      <div className={cx('badge')}>
+        <Badge intent="primary" text="3" />
+      </div>
+      <div className={cx('badge')}>
+        <Badge intent="primary" text="7" />
+      </div>
+      <div className={cx('badge')}>
+        <Badge intent="primary" text="24" />
+      </div>
+      <div className={cx('badge')}>
+        <Badge intent="primary" text="240+" />
+      </div>
     </div>
-    <div className={cx('badge')}>
-      <Badge intent="positive" text="Recovery" />
+    <p>
+      Default Intent with read items
+    </p>
+    <div className={cx('badge-container')}>
+      <div className={cx('badge')}>
+        <Badge text="3" />
+      </div>
+      <div className={cx('badge')}>
+        <Badge text="7" />
+      </div>
+      <div className={cx('badge')}>
+        <Badge text="24" />
+      </div>
+      <div className={cx('badge')}>
+        <Badge text="240+" />
+      </div>
     </div>
-    <div className={cx('badge')}>
-      <Badge intent="negative" text="Complications" />
-    </div>
-    <div className={cx('badge')}>
-      <Badge intent="warning" text="Urgent" />
-    </div>
-    <div className={cx('badge')}>
-      <Badge intent="info" text="Medical Notes" />
-    </div>
-  </div>
+  </React.Fragment>
 );
 
 export default BadgeIntent;
