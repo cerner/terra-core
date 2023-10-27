@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added No results found text in `terra-form-select-combobox`.
+
 ## 6.49.0 - (October 23, 2023)
 
 * Changed
