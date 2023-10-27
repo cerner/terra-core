@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Updated
+  * Updated doc examples for `terra-badge`.
+
 ## 1.47.0 - (October 26, 2023)
 
 * Changed
