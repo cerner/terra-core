@@ -11,6 +11,7 @@ exports[`SectionHeader correctly applies the theme context className 1`] = `
   <SectionHeader
     isOpen={false}
     isTransparent={false}
+    level={2}
     text="foo"
   >
     <h2
@@ -81,46 +82,92 @@ exports[`SectionHeader should render a default component 1`] = `
 </h2>
 `;
 
-exports[`SectionHeader should render with an accordion icon in the open position when an 'onClick()' callback and 'isOpen' is passed 1`] = `
-<h2
-  class="section-header is-interactable"
-  tabindex="0"
+exports[`SectionHeader should render a span element for title since no onClick exists 1`] = `
+<SectionHeader
+  isOpen={false}
+  isTransparent={false}
+  level={2}
+  text="foo"
 >
-  <button
-    aria-expanded="true"
+  <h2
     aria-label="foo"
-    class="arrange-wrapper"
-    tabindex="-1"
-    type="button"
+    className="section-header"
   >
     <span
-      class="arrange title-arrange"
+      className="arrange-wrapper"
     >
-      <span
-        class="fit fit-block"
+      <Arrange
+        className="title-arrange"
+        fill={
+          <span
+            aria-hidden={false}
+            className="title"
+          >
+            foo
+          </span>
+        }
       >
         <span
-          class="accordion-icon-wrapper"
+          className="arrange title-arrange"
         >
           <span
-            class="accordion-icon is-open"
+            className="fit fit-block"
+          />
+          <span
+            className="fill fill-block"
+          >
+            <span
+              aria-hidden={false}
+              className="title"
+            >
+              foo
+            </span>
+          </span>
+          <span
+            className="fit"
           />
         </span>
-      </span>
-      <span
-        class="fill fill-block"
-      >
+      </Arrange>
+    </span>
+  </h2>
+</SectionHeader>
+`;
+
+exports[`SectionHeader should render with an accordion icon in the open position when an 'onClick()' callback and 'isOpen' is passed 1`] = `
+<h2
+  className="section-header is-interactable"
+  onFocus={[Function]}
+  tabIndex="-1"
+>
+  <button
+    aria-expanded={true}
+    aria-label="foo"
+    className="arrange-wrapper"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    type="button"
+  >
+    <Arrange
+      className="title-arrange"
+      fill={
         <span
-          aria-hidden="true"
-          class="title"
+          aria-hidden={true}
+          className="title"
         >
           foo
         </span>
-      </span>
-      <span
-        class="fit"
-      />
-    </span>
+      }
+      fitStart={
+        <span
+          className="accordion-icon-wrapper"
+        >
+          <span
+            className="accordion-icon is-open"
+          />
+        </span>
+      }
+    />
   </button>
 </h2>
 `;
@@ -128,13 +175,12 @@ exports[`SectionHeader should render with an accordion icon in the open position
 exports[`SectionHeader should render with an accordion icon when an 'onClick()' callback is passed 1`] = `
 <h2
   class="section-header is-interactable"
-  tabindex="0"
+  tabindex="-1"
 >
   <button
     aria-expanded="false"
     aria-label="foo"
     class="arrange-wrapper"
-    tabindex="-1"
     type="button"
   >
     <span
@@ -199,4 +245,232 @@ exports[`SectionHeader should render without an accordion icon when no 'onClick(
     </span>
   </span>
 </h2>
+`;
+
+exports[`SectionHeader verifies onClick callback is triggered when clicking a button 1`] = `
+<SectionHeader
+  isOpen={false}
+  isTransparent={false}
+  level={2}
+  onClick={[Function]}
+  text="foo"
+>
+  <h2
+    className="section-header is-interactable"
+    onFocus={[Function]}
+    tabIndex="-1"
+  >
+    <button
+      aria-expanded={false}
+      aria-label="foo"
+      className="arrange-wrapper"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      type="button"
+    >
+      <Arrange
+        className="title-arrange"
+        fill={
+          <span
+            aria-hidden={true}
+            className="title"
+          >
+            foo
+          </span>
+        }
+        fitStart={
+          <span
+            className="accordion-icon-wrapper"
+          >
+            <span
+              className="accordion-icon"
+            />
+          </span>
+        }
+      >
+        <span
+          className="arrange title-arrange"
+        >
+          <span
+            className="fit fit-block"
+          >
+            <span
+              className="accordion-icon-wrapper"
+            >
+              <span
+                className="accordion-icon"
+              />
+            </span>
+          </span>
+          <span
+            className="fill fill-block"
+          >
+            <span
+              aria-hidden={true}
+              className="title"
+            >
+              foo
+            </span>
+          </span>
+          <span
+            className="fit"
+          />
+        </span>
+      </Arrange>
+    </button>
+  </h2>
+</SectionHeader>
+`;
+
+exports[`SectionHeader verifies onClick callback is triggered when pressing return when button has focus 1`] = `
+<SectionHeader
+  isOpen={false}
+  isTransparent={false}
+  level={2}
+  onClick={[Function]}
+  text="foo"
+>
+  <h2
+    className="section-header is-interactable is-active"
+    onFocus={[Function]}
+    tabIndex="-1"
+  >
+    <button
+      aria-expanded={false}
+      aria-label="foo"
+      className="arrange-wrapper"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      type="button"
+    >
+      <Arrange
+        className="title-arrange"
+        fill={
+          <span
+            aria-hidden={true}
+            className="title"
+          >
+            foo
+          </span>
+        }
+        fitStart={
+          <span
+            className="accordion-icon-wrapper"
+          >
+            <span
+              className="accordion-icon"
+            />
+          </span>
+        }
+      >
+        <span
+          className="arrange title-arrange"
+        >
+          <span
+            className="fit fit-block"
+          >
+            <span
+              className="accordion-icon-wrapper"
+            >
+              <span
+                className="accordion-icon"
+              />
+            </span>
+          </span>
+          <span
+            className="fill fill-block"
+          >
+            <span
+              aria-hidden={true}
+              className="title"
+            >
+              foo
+            </span>
+          </span>
+          <span
+            className="fit"
+          />
+        </span>
+      </Arrange>
+    </button>
+  </h2>
+</SectionHeader>
+`;
+
+exports[`SectionHeader verifies onClick callback is triggered when pressing space when button has focus 1`] = `
+<SectionHeader
+  isOpen={false}
+  isTransparent={false}
+  level={2}
+  onClick={[Function]}
+  text="foo"
+>
+  <h2
+    className="section-header is-interactable is-active"
+    onFocus={[Function]}
+    tabIndex="-1"
+  >
+    <button
+      aria-expanded={false}
+      aria-label="foo"
+      className="arrange-wrapper"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      type="button"
+    >
+      <Arrange
+        className="title-arrange"
+        fill={
+          <span
+            aria-hidden={true}
+            className="title"
+          >
+            foo
+          </span>
+        }
+        fitStart={
+          <span
+            className="accordion-icon-wrapper"
+          >
+            <span
+              className="accordion-icon"
+            />
+          </span>
+        }
+      >
+        <span
+          className="arrange title-arrange"
+        >
+          <span
+            className="fit fit-block"
+          >
+            <span
+              className="accordion-icon-wrapper"
+            >
+              <span
+                className="accordion-icon"
+              />
+            </span>
+          </span>
+          <span
+            className="fill fill-block"
+          >
+            <span
+              aria-hidden={true}
+              className="title"
+            >
+              foo
+            </span>
+          </span>
+          <span
+            className="fit"
+          />
+        </span>
+      </Arrange>
+    </button>
+  </h2>
+</SectionHeader>
 `;

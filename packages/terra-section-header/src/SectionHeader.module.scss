@@ -30,6 +30,10 @@
       outline-offset: var(--terra-section-header-focus-within-outline-offset, -2px);
     }
 
+    &.is-transparent:focus-within {
+      background: var(--terra-section-header-transparent-focus-background, rgba(0, 0, 0, 0.07));
+    }
+
     &.is-interactable {
       @include terra-padding-start(var(--terra-section-header-accordion-padding-start, 0.5rem));
       cursor: pointer;
