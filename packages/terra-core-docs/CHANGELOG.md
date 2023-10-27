@@ -5,6 +5,11 @@
 * Added
   * Added about page for `TagList`.
   
+## 1.47.0 - (October 26, 2023)
+
+* Changed
+  * Minor dependency version bump
+
 ## 1.46.0 - (October 23, 2023)
 
 * Updated
@@ -17,6 +22,9 @@
   *  Added example for selection state of Fusion-Button in `terra-button`.
 
 ## 1.45.0 - (October 16, 2023)
+
+* Added
+  * Added aria-label attribute for `terra-dropdown-split-button` examples.
 
 * Added
   * Added a visual error note for invalid example in `terra-form-single-select`.
