@@ -38,12 +38,17 @@ const propTypes = {
    * Sets the background of the section header to transparent.
    */
   isTransparent: PropTypes.bool,
+  /**
+   * The tab index for either the section header or its button when onClick is defined.
+   */
+  tabIndex: PropTypes.string,
 };
 
 const defaultProps = {
   onClick: undefined,
   isOpen: false,
   isTransparent: false,
+  tabIndex: '0',
 };
 
 const isRecognizedKeyPress = event => ((event.nativeEvent.keyCode === KeyCode.KEY_RETURN) || (event.nativeEvent.keyCode === KeyCode.KEY_SPACE));
@@ -93,6 +98,7 @@ class SectionHeader extends React.Component {
       onClick,
       isOpen,
       isTransparent,
+      tabIndex,
       level,
       ...customProps
     } = this.props;
@@ -104,23 +110,9 @@ class SectionHeader extends React.Component {
       console.warn('\'isOpen\' are intended to be used only when \'onClick\' is provided.');
     }
 
-    const attributes = { ...customProps };
-
-    if (onClick) {
-      attributes.tabIndex = '0';
-      attributes.onKeyDown = this.wrapOnKeyDown(attributes.onKeyDown);
-      attributes.onKeyUp = this.wrapOnKeyUp(attributes.onKeyUp);
-      attributes.onClick = onClick;
-    }
-
-    const iconClassNames = cx([
-      'accordion-icon',
-      { 'is-open': onClick && isOpen },
-    ]);
-
     const accordionIcon = (
       <span className={cx('accordion-icon-wrapper')}>
-        <span className={iconClassNames} />
+        <span className={cx(['accordion-icon', { 'is-open': isOpen }])} />
       </span>
     );
 
@@ -147,16 +139,37 @@ class SectionHeader extends React.Component {
     const Element = `h${level || 2}`;
     const headerText = text || title;
 
+    const attributes = { ...customProps };
+    const buttonAttributes = {};
+    let ArrangeWrapper;
+
+    if (onClick) {
+      // Set section header container attributes
+      attributes.tabIndex = '-1';
+      attributes.onKeyDown = this.wrapOnKeyDown(attributes.onKeyDown);
+      attributes.onKeyUp = this.wrapOnKeyUp(attributes.onKeyUp);
+      attributes.onClick = onClick;
+
+      // Set section header button attributes
+      buttonAttributes.type = 'button';
+      buttonAttributes.tabIndex = tabIndex;
+      buttonAttributes['aria-expanded'] = isOpen;
+      buttonAttributes['aria-label'] = headerText;
+
+      // Specify button element for header content
+      ArrangeWrapper = 'button';
+    } else {
+      attributes.tabIndex = tabIndex;
+
+      // Specify span element for header content
+      ArrangeWrapper = 'span';
+    }
+
     // allows us to set an onClick on the div
     // We set key events and role conditionally set if onClick is set
     // eslint doesn't know about this and so it marks this as a lint error
     /* eslint-disable jsx-a11y/click-events-have-key-events */
     /* eslint-disable jsx-a11y/no-static-element-interactions */
-
-    const buttonAttributes = (onClick && accordionIcon) ? {
-      type: 'button', tabIndex: '-1', 'aria-expanded': isOpen, 'aria-label': headerText,
-    } : undefined;
-    const ArrangeWrapper = onClick && accordionIcon ? 'button' : 'span';
 
     return (
       <Element {...attributes} className={sectionHeaderClassNames} aria-label={!onClick ? headerText : undefined}>

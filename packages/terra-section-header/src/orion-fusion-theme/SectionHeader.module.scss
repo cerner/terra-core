@@ -30,12 +30,9 @@
     --terra-section-header-active-color: #1c1f21;
 
     --terra-section-header-focus-background: #dedfe0;
-    --terra-section-header-focus-border-bottom: 1px solid #9b9fa1;
-    --terra-section-header-focus-border-left: 0 none;
-    --terra-section-header-focus-border-right: 0 none;
-    --terra-section-header-focus-border-top: 0 none;
-    --terra-section-header-focus-box-shadow: 0 0 1px 3px #4cb2e980, 0 0 7px 4px #4cb2e959;
     --terra-section-header-focus-color: #1c1f21;
+    --terra-section-header-focus-within-outline: 3px dashed #000;
+    --terra-section-header-focus-within-outline-offset: -2px;
 
     --terra-section-header-hover-background: #c8cacb;
     --terra-section-header-hover-border-bottom: 1px solid #9b9fa1;
