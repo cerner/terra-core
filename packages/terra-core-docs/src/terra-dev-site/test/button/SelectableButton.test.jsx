@@ -17,7 +17,7 @@ const SelectableButton = () => {
         {' '}
         {isSelected ? 'Selected' : 'Unselected'}
       </p>
-      <Button text="Click Me" className={cx('button')} isSelectable isSelected={isSelected} onClick={handleSelection} refCallback={(ref) => { button1.current = ref; }} />
+      <Button id="button1" text="Click Me" className={cx('button')} isSelectable isSelected={isSelected} onClick={handleSelection} refCallback={(ref) => { button1.current = ref; }} />
       <br />
       <br />
       <Button text="Toggle" onClick={() => button1.current.click()} />
