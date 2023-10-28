@@ -55,13 +55,13 @@ class SectionHeader extends React.Component {
     this.state = { isActive: false };
     this.wrapOnKeyDown = this.wrapOnKeyDown.bind(this);
     this.wrapOnKeyUp = this.wrapOnKeyUp.bind(this);
-    this.onFocus = this.onFocus.bind(this);
-    this.buttonRef = React.createRef();
+    this.setFocus = this.setFocus.bind(this);
+    this.focusableElementRef = React.createRef();
   }
 
-  onFocus(event) {
-    if (event.currentTarget === event.target) {
-      this.buttonRef.current.focus();
+  setFocus() {
+    if (this.focusableElementRef.current) {
+      this.focusableElementRef.current.focus();
     }
   }
 
@@ -146,12 +146,8 @@ class SectionHeader extends React.Component {
     let ArrangeWrapper;
 
     if (onClick) {
-      // Set section header container attributes
-      headerAttributes.tabIndex = '-1';
-      headerAttributes.onFocus = this.onFocus;
-
       // Set section header button attributes
-      buttonAttributes.ref = this.buttonRef;
+      buttonAttributes.ref = this.focusableElementRef;
       buttonAttributes.type = 'button';
       buttonAttributes['aria-expanded'] = isOpen;
       buttonAttributes['aria-label'] = headerText;
@@ -162,6 +158,8 @@ class SectionHeader extends React.Component {
       // Specify button element for header content
       ArrangeWrapper = 'button';
     } else {
+      headerAttributes.ref = this.focusableElementRef;
+
       // Specify span element for header content
       ArrangeWrapper = 'span';
     }

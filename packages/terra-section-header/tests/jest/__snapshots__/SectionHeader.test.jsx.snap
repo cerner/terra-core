@@ -136,8 +136,6 @@ exports[`SectionHeader should render a span element for title since no onClick e
 exports[`SectionHeader should render with an accordion icon in the open position when an 'onClick()' callback and 'isOpen' is passed 1`] = `
 <h2
   className="section-header is-interactable"
-  onFocus={[Function]}
-  tabIndex="-1"
 >
   <button
     aria-expanded={true}
@@ -174,43 +172,37 @@ exports[`SectionHeader should render with an accordion icon in the open position
 
 exports[`SectionHeader should render with an accordion icon when an 'onClick()' callback is passed 1`] = `
 <h2
-  class="section-header is-interactable"
-  tabindex="-1"
+  className="section-header is-interactable"
 >
   <button
-    aria-expanded="false"
+    aria-expanded={false}
     aria-label="foo"
-    class="arrange-wrapper"
+    className="arrange-wrapper"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
     type="button"
   >
-    <span
-      class="arrange title-arrange"
-    >
-      <span
-        class="fit fit-block"
-      >
+    <Arrange
+      className="title-arrange"
+      fill={
         <span
-          class="accordion-icon-wrapper"
-        >
-          <span
-            class="accordion-icon"
-          />
-        </span>
-      </span>
-      <span
-        class="fill fill-block"
-      >
-        <span
-          aria-hidden="true"
-          class="title"
+          aria-hidden={true}
+          className="title"
         >
           foo
         </span>
-      </span>
-      <span
-        class="fit"
-      />
-    </span>
+      }
+      fitStart={
+        <span
+          className="accordion-icon-wrapper"
+        >
+          <span
+            className="accordion-icon"
+          />
+        </span>
+      }
+    />
   </button>
 </h2>
 `;
@@ -257,8 +249,6 @@ exports[`SectionHeader verifies onClick callback is triggered when clicking a bu
 >
   <h2
     className="section-header is-interactable"
-    onFocus={[Function]}
-    tabIndex="-1"
   >
     <button
       aria-expanded={false}
@@ -333,8 +323,6 @@ exports[`SectionHeader verifies onClick callback is triggered when pressing retu
 >
   <h2
     className="section-header is-interactable is-active"
-    onFocus={[Function]}
-    tabIndex="-1"
   >
     <button
       aria-expanded={false}
@@ -409,8 +397,6 @@ exports[`SectionHeader verifies onClick callback is triggered when pressing spac
 >
   <h2
     className="section-header is-interactable is-active"
-    onFocus={[Function]}
-    tabIndex="-1"
   >
     <button
       aria-expanded={false}
