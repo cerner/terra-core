@@ -2,8 +2,8 @@
 
 ## Unreleased
 
-*Fixed
-  *Fixed lint errors
+* Fixed
+  * Fixed lint errors
 
 ## 1.40.0 - (April 6, 2021)
 

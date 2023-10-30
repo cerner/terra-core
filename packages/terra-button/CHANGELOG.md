@@ -2,8 +2,8 @@
 
 ## Unreleased
 
-*Fixed
-  *Fixed lint errors
+* Fixed
+  * Fixed lint errors
 
 ## 3.69.0 - (October 23, 2023)
 
