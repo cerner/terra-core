@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 4.66.0 - (October 23, 2023)
+
+* Added
+  * Added `isTabFocusDisabled` prop to disable tab key navigation.
+
 * Fixed
   * Fixed _property is undefined_ error while navigating with a keyboard.
 

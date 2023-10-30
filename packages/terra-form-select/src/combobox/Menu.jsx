@@ -348,7 +348,7 @@ class Menu extends React.Component {
     // Detects if option is an "Add option" and provides accessible text
     const active = this.menu.querySelector('[data-select-active]');
     if (active && active.hasAttribute('data-terra-select-add-option')) {
-      const display = active.querySelector("[class*='display']").innerText;
+      const display = active.querySelector('[data-terra-add-option]') ? active.querySelector('[data-terra-add-option]').innerText : null;
       visuallyHiddenComponent.current.innerText = display;
     }
 
