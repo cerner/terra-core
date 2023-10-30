@@ -192,7 +192,7 @@ class ControlledProgressivePaginator extends React.Component {
     );
 
     const navigationMessage = (
-      <VisuallyHiddenText aria-live="polite" aria-relevant="additions text" text={this.state.selectedPageMessage} />
+      <VisuallyHiddenText aria-live="polite" aria-relevant="additions text" text={pageLabel ? pageDetails : this.state.selectedPageMessage} />
     );
 
     const fullView = (
