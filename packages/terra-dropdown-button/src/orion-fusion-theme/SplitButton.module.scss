@@ -15,7 +15,7 @@
     --terra-dropdown-button-split-type-caret-height: 1em;
     --terra-dropdown-button-split-type-caret-top: 0.2em;
     --terra-dropdown-button-split-type-caret-width: 1em;
-    
+
     // neutral
     --terra-dropdown-button-active-background-color-neutral: #9b9fa1;
     --terra-dropdown-button-active-border-color-neutral: #6f7477;
@@ -34,8 +34,8 @@
     --terra-dropdown-button-split-type-box-shadow-neutral: inset 0 3rem 1.5rem -2rem #f4f4f4;
     --terra-dropdown-button-split-type-font-weight-neutral: 400;
     --terra-dropdown-button-split-type-caret-box-shadow-neutral: inset 0 3rem 1.5rem -2rem #f4f4f4;
-    --terra-dropdown-button-split-type-focus-box-shadow-neutral: inset 0 3rem 1.5rem -2rem #f4f4f4, 0 0 1px 1px rgba(255, 255, 255, 0.65), 0 0 2px 3px rgba(128, 191, 253, 1), 0 0 6px 3px rgba(128, 191, 253, 1);
-    --terra-dropdown-button-split-type-caret-focus-box-shadow-neutral: inset 0 3rem 1.5rem -2rem #f4f4f4, 0 0 1px 1px rgba(255, 255, 255, 0.65), 0 0 2px 3px rgba(128, 191, 253, 1), 0 0 6px 3px rgba(128, 191, 253, 1);
+    --terra-dropdown-button-split-type-focus-outline-neutral: 2px dashed #000;
+    --terra-dropdown-button-split-type-caret-focus-outline-neutral: 2px dashed #000;
     --terra-dropdown-button-split-type-caret-hover-box-shadow-neutral: inset 0 3rem 1.5rem -2rem #f4f4f4;
 
     // ghost
@@ -56,8 +56,8 @@
     --terra-dropdown-button-split-type-box-shadow-ghost: none;
     --terra-dropdown-button-split-type-font-weight-ghost: 400;
     --terra-dropdown-button-split-type-caret-box-shadow-ghost: none;
-    --terra-dropdown-button-split-type-focus-box-shadow-ghost: 0 0 1px 1px rgba(255, 255, 255, 0.65), 0 0 2px 3px rgba(76, 178, 233, 0.5), 0 0 6px 4px rgba(76, 178, 233, 0.3);
-    --terra-dropdown-button-split-type-caret-focus-box-shadow-ghost: 0 0 1px 1px rgba(255, 255, 255, 0.65), 0 0 2px 3px rgba(76, 178, 233, 0.5), 0 0 6px 4px rgba(76, 178, 233, 0.3);
+    --terra-dropdown-button-split-type-focus-outline-ghost: 2px dashed #000;
+    --terra-dropdown-button-split-type-caret-focus-outline-ghost: 2px dashed #000;
     --terra-dropdown-button-split-type-caret-hover-box-shadow-ghost: none;
 
     /* Icons */

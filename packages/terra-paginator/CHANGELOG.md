@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 2.87.0 - (October 26, 2023)
+
 * Changed
   * Updated all Paginator visually hidden text's aria-relevant attribute.
 
