@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed lint errors
+
 ## 1.37.0 - (October 26, 2023)
 
 * Changed
