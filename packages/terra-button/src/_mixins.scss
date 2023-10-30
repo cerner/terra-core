@@ -1,6 +1,6 @@
 //  Map Button Variant's Color Schemes
 // ==========================
-
+/* stylelint-disable scss/no-global-function-names */
 @mixin terra-button-variant-color($color-map) {
   background-color: map-get($color-map, background-color);
   border-color: map-get($color-map, border-color);
@@ -45,3 +45,4 @@
     box-shadow: map-get($color-map, active-and-focus-box-shadow);
   }
 }
+/* stylelint-enable scss/no-global-function-names */

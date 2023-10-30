@@ -2,7 +2,7 @@
 
 //  Map Dropdown Button Variant's Color Schemes
 // ==========================
-
+/* stylelint-disable scss/no-global-function-names */
 @mixin terra-dropdown-button-variant-color($color-map) {
   &.dropdown-button,
   &.split-button-primary,
@@ -112,3 +112,4 @@
     background-image: map-get($color-map, disabled-caret-icon-background-image);
   }
 }
+/* stylelint-enable scss/no-global-function-names */
