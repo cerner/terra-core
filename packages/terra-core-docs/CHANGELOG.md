@@ -1,8 +1,6 @@
 # Changelog
 
 ## Unreleased
-* Updated
- * Updated `terra-arrange` examples to use `terra-form-radio`.
 
 ## 1.47.0 - (October 26, 2023)
 
