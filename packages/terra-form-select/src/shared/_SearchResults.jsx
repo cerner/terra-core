@@ -1,10 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNamesBind from 'classnames/bind';
-import ThemeContext from 'terra-theme-context';
-import styles from './_SearchResults.module.scss';
-
-const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -14,9 +9,8 @@ const propTypes = {
 };
 
 const SearchResults = ({ searchResultContent }) => {
-  const theme = React.useContext(ThemeContext);
   return (
-    <div role="option" className={cx('search-results', theme.className)} aria-selected="false">
+    <div role="option" aria-selected="false">
       {searchResultContent }
     </div>
   );
