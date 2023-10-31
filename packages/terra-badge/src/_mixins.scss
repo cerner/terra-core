@@ -1,6 +1,4 @@
-/* stylelint-disable scss/no-global-function-names */
 @mixin terra-badge-color($color-map) {
   background-color: map-get($color-map, background-color);
   color: map-get($color-map, color);
 }
-/* stylelint-enable scss/no-global-function-names */

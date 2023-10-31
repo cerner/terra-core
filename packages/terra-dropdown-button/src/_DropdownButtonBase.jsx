@@ -123,6 +123,7 @@ class DropdownButtonBase extends React.Component {
           buttonRef={buttonRef}
           refCallback={refCallback}
           getSelectedOptionText={getSelectedOptionText}
+          menuId={customProps.menuId}
         >
           {items}
         </Dropdown>

@@ -259,7 +259,7 @@ Terra.describeViewports('Button', ['tiny'], () => {
   describe('Selectable button', () => {
     it('displays selected button', () => {
       browser.url('/raw/tests/cerner-terra-core-docs/button/selectable-button');
-      $('<button>').click();
+      $('#button1').click();
       Terra.validates.element('selected-button');
     });
   });
