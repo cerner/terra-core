@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import * as KeyCode from 'keycode-js';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { v4 as uuidv4 } from 'uuid';
 import { injectIntl } from 'react-intl';
 import DropdownButtonBase from './_DropdownButtonBase';
 import styles from './DropdownButton.module.scss';
@@ -185,6 +187,9 @@ class DropdownButton extends React.Component {
     const customLabel = (selectText) ? `${selectText}, ${selectedLabel}, ${label}` : label;
     buttonAriaLabel = `${customLabel}${buttonAriaLabel ? `, ${buttonAriaLabel}` : ''}`;
 
+    const dropDownMenuId = uuidv4();
+    const dropDownMenuListId = `dropdown-menu-list-${dropDownMenuId}`;
+
     return (
       <DropdownButtonBase
         {...customProps}
@@ -197,6 +202,7 @@ class DropdownButton extends React.Component {
         refCallback={this.setListNode}
         buttonRef={this.getButtonNode}
         getSelectedOptionText={this.getSelectedOptionText}
+        menuId={dropDownMenuListId}
       >
         <button
           {...modifiedButtonAttrs}
@@ -211,6 +217,8 @@ class DropdownButton extends React.Component {
           ref={this.setButtonNode}
           aria-expanded={isOpen}
           aria-label={buttonAriaLabel}
+          aria-haspopup="true"
+          aria-controls={dropDownMenuListId}
           onBlur={this.handleBlur}
         >
           <span className={cx('dropdown-button-text')}>{label}</span>

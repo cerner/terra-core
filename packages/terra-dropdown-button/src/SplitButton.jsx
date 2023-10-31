@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import * as KeyCode from 'keycode-js';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { v4 as uuidv4 } from 'uuid';
 import { injectIntl } from 'react-intl';
 import DropdownButtonBase from './_DropdownButtonBase';
 import styles from './SplitButton.module.scss';
@@ -242,6 +244,9 @@ class SplitButton extends React.Component {
     const customLabel = (selectText) ? `${selectText}, ${selectedLabel}, ${caretLabel}` : caretLabel;
     buttonAriaLabel = `${customLabel}${buttonAriaLabel ? `, ${buttonAriaLabel}` : ''}`;
 
+    const dropDownMenuId = uuidv4();
+    const dropDownMenuListId = `dropdown-menu-list-${dropDownMenuId}`;
+
     return (
       <DropdownButtonBase
         {...customProps}
@@ -254,6 +259,7 @@ class SplitButton extends React.Component {
         buttonRef={this.getButtonNode}
         refCallback={this.setListNode}
         getSelectedOptionText={this.getSelectedOptionText}
+        menuId={dropDownMenuListId}
       >
         <button
           type="button"
@@ -282,6 +288,7 @@ class SplitButton extends React.Component {
           aria-label={buttonAriaLabel}
           onFocus={this.handleFocus}
           onBlur={this.handleBlur}
+          aria-controls={dropDownMenuListId}
           ref={this.setButtonNode}
         >
           <span className={cx('caret-icon')} />

@@ -88,11 +88,13 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
             onSelect={[Function]}
           />
         }
+        menuId="dropdown-menu-list-00000000-0000-0000-0000-000000000000"
         refCallback={[Function]}
         requestClose={[Function]}
       >
         <div
           className="dropdown-button-base orion-fusion-theme"
+          menuId="dropdown-menu-list-00000000-0000-0000-0000-000000000000"
         >
           <button
             aria-disabled={false}
@@ -106,6 +108,7 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
             Primary Option
           </button>
           <button
+            aria-controls="dropdown-menu-list-00000000-0000-0000-0000-000000000000"
             aria-disabled={false}
             aria-expanded={false}
             aria-haspopup="menu"
@@ -126,6 +129,7 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
             buttonRef={[Function]}
             getSelectedOptionText={[Function]}
             isOpen={false}
+            menuId="dropdown-menu-list-00000000-0000-0000-0000-000000000000"
             refCallback={[Function]}
             requestClose={[Function]}
             targetRef={[Function]}
@@ -183,6 +187,7 @@ exports[`Dropdown Button should render a block split type 1`] = `
       onSelect={[Function]}
     />
   }
+  menuId="dropdown-menu-list-00000000-0000-0000-0000-000000000000"
   refCallback={[Function]}
   requestClose={[Function]}
 >
@@ -198,6 +203,7 @@ exports[`Dropdown Button should render a block split type 1`] = `
     Primary Option
   </button>
   <button
+    aria-controls="dropdown-menu-list-00000000-0000-0000-0000-000000000000"
     aria-disabled={false}
     aria-expanded={false}
     aria-haspopup="menu"
@@ -231,6 +237,7 @@ exports[`Dropdown Button should render a compact split type 1`] = `
       onSelect={[Function]}
     />
   }
+  menuId="dropdown-menu-list-00000000-0000-0000-0000-000000000000"
   refCallback={[Function]}
   requestClose={[Function]}
 >
@@ -246,6 +253,7 @@ exports[`Dropdown Button should render a compact split type 1`] = `
     Primary Option
   </button>
   <button
+    aria-controls="dropdown-menu-list-00000000-0000-0000-0000-000000000000"
     aria-disabled={false}
     aria-expanded={false}
     aria-haspopup="menu"
@@ -279,6 +287,7 @@ exports[`Dropdown Button should render a default split type 1`] = `
       onSelect={[Function]}
     />
   }
+  menuId="dropdown-menu-list-00000000-0000-0000-0000-000000000000"
   refCallback={[Function]}
   requestClose={[Function]}
 >
@@ -294,6 +303,7 @@ exports[`Dropdown Button should render a default split type 1`] = `
     Primary Option
   </button>
   <button
+    aria-controls="dropdown-menu-list-00000000-0000-0000-0000-000000000000"
     aria-disabled={false}
     aria-expanded={false}
     aria-haspopup="menu"
@@ -328,6 +338,7 @@ exports[`Dropdown Button should render a disabled split type 1`] = `
       onSelect={[Function]}
     />
   }
+  menuId="dropdown-menu-list-00000000-0000-0000-0000-000000000000"
   refCallback={[Function]}
   requestClose={[Function]}
 >
@@ -343,6 +354,7 @@ exports[`Dropdown Button should render a disabled split type 1`] = `
     Primary Option
   </button>
   <button
+    aria-controls="dropdown-menu-list-00000000-0000-0000-0000-000000000000"
     aria-disabled={false}
     aria-expanded={false}
     aria-haspopup="menu"
@@ -376,6 +388,7 @@ exports[`Dropdown Button should render a split type with custom attributes 1`] =
       onSelect={[Function]}
     />
   }
+  menuId="dropdown-menu-list-00000000-0000-0000-0000-000000000000"
   other-custom-attribute="purple"
   refCallback={[Function]}
   requestClose={[Function]}
@@ -393,6 +406,7 @@ exports[`Dropdown Button should render a split type with custom attributes 1`] =
     Primary Option
   </button>
   <button
+    aria-controls="dropdown-menu-list-00000000-0000-0000-0000-000000000000"
     aria-disabled={false}
     aria-expanded={false}
     aria-haspopup="menu"
@@ -436,6 +450,7 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
       />,
     ]
   }
+  menuId="dropdown-menu-list-00000000-0000-0000-0000-000000000000"
   refCallback={[Function]}
   requestClose={[Function]}
 >
@@ -451,6 +466,7 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
     Primary Option
   </button>
   <button
+    aria-controls="dropdown-menu-list-00000000-0000-0000-0000-000000000000"
     aria-disabled={false}
     aria-expanded={false}
     aria-haspopup="menu"
@@ -484,6 +500,7 @@ exports[`Dropdown Button should render an open split type 1`] = `
       onSelect={[Function]}
     />
   }
+  menuId="dropdown-menu-list-00000000-0000-0000-0000-000000000000"
   refCallback={[Function]}
   requestClose={[Function]}
 >
@@ -499,6 +516,7 @@ exports[`Dropdown Button should render an open split type 1`] = `
     Primary Option
   </button>
   <button
+    aria-controls="dropdown-menu-list-00000000-0000-0000-0000-000000000000"
     aria-disabled={false}
     aria-expanded={false}
     aria-haspopup="menu"

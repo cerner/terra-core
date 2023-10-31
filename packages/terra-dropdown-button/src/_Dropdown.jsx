@@ -41,9 +41,10 @@ const propTypes = {
 };
 
 const Dropdown = ({
-  requestClose, isOpen, targetRef, children, width, refCallback, buttonRef, getSelectedOptionText,
+  requestClose, isOpen, targetRef, children, width, refCallback, buttonRef, getSelectedOptionText, ...customProps
 }) => {
   const buttonFocused = useRef(false);
+  const { menuId } = customProps;
   useEffect(() => {
     // added this change to bring focus back to button when dropdown list is closed.
     if (buttonFocused.current && buttonRef) {
@@ -76,6 +77,7 @@ const Dropdown = ({
             width={width}
             refCallback={refCallback}
             getSelectedOptionText={getSelectedOptionText}
+            menuId={menuId}
           >
             {children}
           </DropdownList>
