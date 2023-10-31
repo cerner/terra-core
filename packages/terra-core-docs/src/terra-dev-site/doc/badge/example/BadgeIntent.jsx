@@ -1,5 +1,6 @@
 import React from 'react';
 import Badge from 'terra-badge';
+import Avatar from 'terra-avatar';
 import classNames from 'classnames/bind';
 import styles from './Badge.module.scss';
 
@@ -30,41 +31,29 @@ const BadgeIntent = () => (
     <p>
       Secondary Intent can be used to label user name as NEW
     </p>
-    <div className={cx('badge-container')}>
-      <div className={cx('badge')}>
-        <React.Fragment>Segun Adebayo </React.Fragment>
-        <Badge intent="secondary" text="NEW" />
+    <div className={cx('profile-container')}>
+      <Avatar alt="Segun Adebayo" initials="SA" />
+      <div className={cx('profile-name-container')}>
+        <span className={cx('profile-name')}>Segun Adebayo </span>
+        <br />
+        <span>UI Engineer</span>
+      </div>
+      <div className={cx('profile-badge')}>
+        <Badge intent="secondary" text="NEW" visuallyHiddenText="New User" />
       </div>
     </div>
     <p>
-      Primary Intent with unread items
+      Badges with read and unread items
     </p>
     <div className={cx('badge-container')}>
       <div className={cx('badge')}>
         <Badge intent="primary" text="3" />
       </div>
       <div className={cx('badge')}>
-        <Badge intent="primary" text="7" />
-      </div>
-      <div className={cx('badge')}>
-        <Badge intent="primary" text="24" />
-      </div>
-      <div className={cx('badge')}>
-        <Badge intent="primary" text="240+" />
-      </div>
-    </div>
-    <p>
-      Default Intent with read items
-    </p>
-    <div className={cx('badge-container')}>
-      <div className={cx('badge')}>
         <Badge text="3" />
       </div>
       <div className={cx('badge')}>
-        <Badge text="7" />
-      </div>
-      <div className={cx('badge')}>
-        <Badge text="24" />
+        <Badge intent="primary" text="240+" />
       </div>
       <div className={cx('badge')}>
         <Badge text="240+" />
