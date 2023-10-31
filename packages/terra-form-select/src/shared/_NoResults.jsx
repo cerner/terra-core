@@ -13,13 +13,11 @@ const propTypes = {
   value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
 
-const NoResults = ({ noResultContent, value }) => {
-  return (
-    <div role="option" aria-selected="false">
-      {noResultContent || <FormattedMessage id="Terra.form.select.noResults" values={{ text: value }} />}
-    </div>
-  );
-};
+const NoResults = ({ noResultContent, value }) => (
+  <div role="option" aria-selected="false">
+    {noResultContent || <FormattedMessage id="Terra.form.select.noResults" values={{ text: value }} />}
+  </div>
+);
 
 NoResults.propTypes = propTypes;
 

@@ -40,7 +40,6 @@ exports[`NoResults correctly applies the theme context className 1`] = `
   >
     <div
       aria-selected="false"
-      className="no-results orion-fusion-theme"
       role="option"
     >
       <FormattedMessage
@@ -63,7 +62,6 @@ exports[`NoResults correctly applies the theme context className 1`] = `
 exports[`NoResults should render NoResults with custom content 1`] = `
 <div
   aria-selected="false"
-  className="no-results"
   role="option"
 >
   <div>
@@ -75,7 +73,6 @@ exports[`NoResults should render NoResults with custom content 1`] = `
 exports[`NoResults should render a default NoResults 1`] = `
 <div
   aria-selected="false"
-  className="no-results"
   role="option"
 >
   <FormattedMessage
