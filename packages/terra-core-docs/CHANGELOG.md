@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Updated
+  *  Updated example for selection state of Fusion-Button in `terra-button`.
+
 ## 1.47.0 - (October 26, 2023)
 
 * Changed
