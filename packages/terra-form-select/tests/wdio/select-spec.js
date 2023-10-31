@@ -909,7 +909,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       it('combobox input should be focused', () => {
         expect($('[data-terra-select] input')).toBeFocused();
 
-        Terra.validates.element('is-touch-accessible-tab-focus', { selector: '#root' });
+        Terra.validates.element('combobox-is-touch-accessible-tab-focus', { selector: '#root' });
       });
 
       after(() => {
