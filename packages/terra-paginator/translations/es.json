@@ -5,6 +5,7 @@
   "Terra.paginator.last": "Última",
   "Terra.paginator.pageIndex": "Página {pageNumber}",
   "Terra.paginator.pageSelected": "Página {pageNumber} seleccionada",
+  "Terra.paginator.customPageSelected": "{pageLabel} seleccionada",
   "Terra.paginator.pageSelectedWithCount": "La página {pageNumber} de {pageNumberTotal} está seleccionada",
   "Terra.paginator.pageCount": "Página {pageNumber} de {pageNumberTotal}",
   "Terra.paginator.pageIndexWithLabel": "{pageLabel} {pageNumber}",

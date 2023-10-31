@@ -124,12 +124,7 @@ class ControlledProgressivePaginator extends React.Component {
 
     const { messageId, messageAttributes } = getPageLabel(pageLabel, selectedPage, totalPages);
     const pageDetails = (hidePageCount && pageLabel) ? <div>{pageLabel}</div> : <div>{intl.formatMessage({ id: messageId }, messageAttributes)}</div>;
-    const pageLabelSuffix = intl.formatMessage({ id: 'Terra.paginator.pageLabelSuffix' });
-    const pageDetailsForHiddenText = (hidePageCount && pageLabel) ? <div>{`${pageLabel} ${pageLabelSuffix}`}</div> : (
-      <div>
-        {`${intl.formatMessage({ id: messageId }, messageAttributes)} ${pageLabelSuffix}`}
-      </div>
-    );
+    const customPageSelectedMessage = (hidePageCount && pageLabel) ? intl.formatMessage({ id: 'Terra.paginator.customPageSelected' }, { pageLabel }) : undefined;
 
     const fullViewChildren = (
       <>
@@ -198,7 +193,7 @@ class ControlledProgressivePaginator extends React.Component {
     );
 
     const navigationMessage = (
-      <VisuallyHiddenText aria-live="polite" aria-relevant="additions text" text={pageLabel ? pageDetailsForHiddenText : this.state.selectedPageMessage} />
+      <VisuallyHiddenText aria-live="polite" aria-relevant="additions text" text={customPageSelectedMessage || this.state.selectedPageMessage} />
     );
 
     const fullView = (
@@ -235,6 +230,7 @@ class ControlledProgressivePaginator extends React.Component {
 
     const { messageId, messageAttributes } = getPageLabel(pageLabel, selectedPage, totalPages);
     const pageDetails = (hidePageCount && pageLabel) ? <div>{pageLabel}</div> : <div>{intl.formatMessage({ id: messageId }, messageAttributes)}</div>;
+    const customPageSelectedMessage = (hidePageCount && pageLabel) ? intl.formatMessage({ id: 'Terra.paginator.customPageSelected' }, { pageLabel }) : undefined;
 
     const reducedViewChildren = (
       <>
@@ -303,7 +299,7 @@ class ControlledProgressivePaginator extends React.Component {
     );
 
     const navigationMessage = (
-      <VisuallyHiddenText aria-live="polite" aria-relevant="additions text" text={this.state.selectedPageMessage} />
+      <VisuallyHiddenText aria-live="polite" aria-relevant="additions text" text={customPageSelectedMessage || this.state.selectedPageMessage} />
     );
 
     const reducedView = (
