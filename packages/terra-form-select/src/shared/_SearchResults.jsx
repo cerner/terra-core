@@ -8,13 +8,11 @@ const propTypes = {
   searchResultContent: PropTypes.node,
 };
 
-const SearchResults = ({ searchResultContent }) => {
-  return (
-    <div role="option" aria-selected="false">
-      {searchResultContent }
-    </div>
-  );
-};
+const SearchResults = ({ searchResultContent }) => (
+  <div role="option" aria-selected="false">
+    {searchResultContent }
+  </div>
+);
 
 SearchResults.propTypes = propTypes;
 
