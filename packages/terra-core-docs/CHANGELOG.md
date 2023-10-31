@@ -29,6 +29,7 @@
 
 * Updated
   * Updated `terra-alert` documentation for custom titles.
+  * Updated `terra-dropdown-button` documentation for testing uuid details.
   * Updated exisiting examples upto a11y standards
 
 * Fixed
