@@ -5,9 +5,6 @@
   * Added 'aria-haspoup' and 'aria-controls' attributes for dropdown button.
   * Added customClass support for dropdown item.
 
-* Fixed
-  * Fixed lint errors
-
 ## 1.37.0 - (October 26, 2023)
 
 * Changed
