@@ -25,12 +25,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # https://github.com/danger/danger-js/issues/557#issuecomment-664851950
           DANGER_DISABLE_TRANSPILATION: true
+      - name: Testing Project
+        run: |
+          npm run jest:no-coverage
       - name: Linting Project
         run: |
           npm run lint
-      - name: Testing Project
-        run: |
-          npm run jest
+
   wdio:
     runs-on: ubuntu-latest
 
