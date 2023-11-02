@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Updated
+  * Updated the Upgrade Guide for `terra-form-combobox`.
+
 ## 1.49.0 - (November 3, 2023)
 
 * Updated
