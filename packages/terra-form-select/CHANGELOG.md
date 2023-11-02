@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Breaking Change
+  * Removed support for custom placeholder on the `combobox`.
+
 * Added
   * Added No results found text in `terra-form-select-combobox`.
 
