@@ -9,5 +9,6 @@
   "Terra.paginator.pageSelectedWithCount": "Page {pageNumber} of {pageNumberTotal} is selected",
   "Terra.paginator.pageCount": "Page {pageNumber} of {pageNumberTotal}",
   "Terra.paginator.pageIndexWithLabel": "{pageLabel} {pageNumber}",
-  "Terra.paginator.pageCountWithLabel": "{pageLabel} {pageNumber} of {pageNumberTotal}"
+  "Terra.paginator.pageCountWithLabel": "{pageLabel} {pageNumber} of {pageNumberTotal}",
+  "Terra.paginator.customPageSelectedWithCount": "{pageLabel} {pageNumber} of {pageNumberTotal} is selected"
 }
