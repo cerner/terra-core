@@ -78,6 +78,7 @@ class ControlledProgressivePaginator extends React.Component {
       itemCountPerPage,
       totalCount,
       pageLabel,
+      hidePageCount,
     } = this.props;
 
     return (event) => {
@@ -89,7 +90,7 @@ class ControlledProgressivePaginator extends React.Component {
 
       let message;
       if (totalCount && itemCountPerPage) {
-        if (pageLabel) {
+        if (pageLabel && !hidePageCount) {
           message = intl.formatMessage({ id: 'Terra.paginator.customPageSelectedWithCount' }, { pageLabel, pageNumber: index, pageNumberTotal: calculatePages(totalCount, itemCountPerPage) });
         } else {
           message = intl.formatMessage({ id: 'Terra.paginator.pageSelectedWithCount' }, { pageNumber: index, pageNumberTotal: calculatePages(totalCount, itemCountPerPage) });
