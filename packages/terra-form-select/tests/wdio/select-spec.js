@@ -536,6 +536,11 @@ Terra.describeViewports('Select', ['tiny'], () => {
         Terra.validates.element('[combobox-spacebar]open-dropdown', { selector: '#root' });
       });
 
+      it('should display no results on search', () => {
+        $('[data-terra-select] input').setValue('John');
+        Terra.validates.element('combobox no results displayed on search', { selector: '#root' });
+      });
+
       after(() => {
         // remove backspace that is added to the input. Bug logged here: https://github.com/cerner/terra-core/issues/2414
         browser.keys('Backspace');
