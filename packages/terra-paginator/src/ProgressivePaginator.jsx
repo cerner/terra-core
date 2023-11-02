@@ -131,7 +131,16 @@ class ProgressivePaginator extends React.Component {
 
     const { messageId, messageAttributes } = getPageLabel(pageLabel, selectedPage, totalPages);
     const pageDetails = (hidePageCount && pageLabel) ? <div>{pageLabel}</div> : <div>{intl.formatMessage({ id: messageId }, messageAttributes)}</div>;
-    const customPageSelectedMessage = (hidePageCount && pageLabel) ? intl.formatMessage({ id: 'Terra.paginator.customPageSelected' }, { pageLabel }) : undefined;
+    let customPageSelectedMessage;
+    if (pageLabel) {
+      if (hidePageCount) {
+        customPageSelectedMessage = intl.formatMessage({ id: 'Terra.paginator.customPageSelected' }, { pageLabel });
+      } else {
+        customPageSelectedMessage = intl.formatMessage({
+          id: 'Terra.paginator.customPageSelectedWithCount',
+        }, { pageLabel, pageNumber: selectedPage, pageNumberTotal: totalPages });
+      }
+    }
 
     const fullViewChildren = (
       <>
@@ -237,7 +246,16 @@ class ProgressivePaginator extends React.Component {
 
     const { messageId, messageAttributes } = getPageLabel(pageLabel, selectedPage, totalPages);
     const pageDetails = (hidePageCount && pageLabel) ? <div>{pageLabel}</div> : <div>{intl.formatMessage({ id: messageId }, messageAttributes)}</div>;
-    const customPageSelectedMessage = (hidePageCount && pageLabel) ? intl.formatMessage({ id: 'Terra.paginator.customPageSelected' }, { pageLabel }) : undefined;
+    let customPageSelectedMessage;
+    if (pageLabel) {
+      if (hidePageCount) {
+        customPageSelectedMessage = intl.formatMessage({ id: 'Terra.paginator.customPageSelected' }, { pageLabel });
+      } else {
+        customPageSelectedMessage = intl.formatMessage({
+          id: 'Terra.paginator.customPageSelectedWithCount',
+        }, { pageLabel, pageNumber: selectedPage, pageNumberTotal: totalPages });
+      }
+    }
 
     const reducedViewChildren = (
       <>
