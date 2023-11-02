@@ -82,7 +82,6 @@ class ProgressivePaginator extends React.Component {
       itemCountPerPage,
       totalCount,
       pageLabel,
-      hidePageCount,
     } = this.props;
 
     return (event) => {
@@ -91,11 +90,8 @@ class ProgressivePaginator extends React.Component {
       }
 
       this.props.onPageChange(index);
-
       let message;
-      if (pageLabel && hidePageCount) {
-        message = intl.formatMessage({ id: 'Terra.paginator.customPageSelected' }, { pageLabel });
-      } else if (totalCount && itemCountPerPage) {
+      if (totalCount && itemCountPerPage) {
         if (pageLabel) {
           message = intl.formatMessage({ id: 'Terra.paginator.customPageSelectedWithCount' }, { pageLabel, pageNumber: index, pageNumberTotal: calculatePages(totalCount, itemCountPerPage) });
         } else {
@@ -139,6 +135,7 @@ class ProgressivePaginator extends React.Component {
 
     const { messageId, messageAttributes } = getPageLabel(pageLabel, selectedPage, totalPages);
     const pageDetails = (hidePageCount && pageLabel) ? <div>{pageLabel}</div> : <div>{intl.formatMessage({ id: messageId }, messageAttributes)}</div>;
+    const customPageSelectedMessage = (hidePageCount && pageLabel) ? intl.formatMessage({ id: 'Terra.paginator.customPageSelected' }, { pageLabel }) : undefined;
 
     const fullViewChildren = (
       <>
@@ -207,7 +204,7 @@ class ProgressivePaginator extends React.Component {
     );
 
     const navigationMessage = (
-      <VisuallyHiddenText aria-live="polite" aria-relevant="additions text" text={this.state.selectedPageMessage} />
+      <VisuallyHiddenText aria-live="polite" aria-relevant="additions text" text={customPageSelectedMessage || this.state.selectedPageMessage} />
     );
 
     const fullView = (
@@ -244,6 +241,7 @@ class ProgressivePaginator extends React.Component {
 
     const { messageId, messageAttributes } = getPageLabel(pageLabel, selectedPage, totalPages);
     const pageDetails = (hidePageCount && pageLabel) ? <div>{pageLabel}</div> : <div>{intl.formatMessage({ id: messageId }, messageAttributes)}</div>;
+    const customPageSelectedMessage = (hidePageCount && pageLabel) ? intl.formatMessage({ id: 'Terra.paginator.customPageSelected' }, { pageLabel }) : undefined;
 
     const reducedViewChildren = (
       <>
@@ -312,7 +310,7 @@ class ProgressivePaginator extends React.Component {
     );
 
     const navigationMessage = (
-      <VisuallyHiddenText aria-live="polite" aria-relevant="additions text" text={this.state.selectedPageMessage} />
+      <VisuallyHiddenText aria-live="polite" aria-relevant="additions text" text={customPageSelectedMessage || this.state.selectedPageMessage} />
     );
 
     const reducedView = (
