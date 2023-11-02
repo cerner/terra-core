@@ -25,5 +25,7 @@
   "Terra.form.select.selectCleared": "Geselecteerde waarde gewist",
   "Terra.form.select.menu": "Menu",
   "Terra.form.select.option": "Opties",
-  "Terra.form.select.optGroup": "Groeperen {text}"
+  "Terra.form.select.optGroup": "Groeperen {text}",
+  "Terra.form.select.defaultComboboxDisplay": "Selecteer of druk op Enter",
+  "Terra.form.select.resultsText": "Resultaten met \"{text}\""
 }
