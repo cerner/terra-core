@@ -4,6 +4,7 @@
 
 * Updated
   * Updated doc examples for `terra-badge`.
+  *  Updated example for selection state of Fusion-Button in `terra-button`.
 
 ## 1.47.0 - (October 26, 2023)
 
@@ -32,6 +33,7 @@
 
 * Updated
   * Updated `terra-alert` documentation for custom titles.
+  * Updated `terra-dropdown-button` documentation for testing uuid details.
   * Updated exisiting examples upto a11y standards
 
 * Fixed
