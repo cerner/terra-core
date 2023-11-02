@@ -7,8 +7,8 @@
   "Terra.paginator.pageSelected": "Página {pageNumber} seleccionada",
   "Terra.paginator.customPageSelected": "{pageLabel} seleccionada",
   "Terra.paginator.pageSelectedWithCount": "La página {pageNumber} de {pageNumberTotal} está seleccionada",
+  "Terra.paginator.customPageSelectedWithCount": "{pageLabel} {pageNumber} de {pageNumberTotal} está seleccionada",
   "Terra.paginator.pageCount": "Página {pageNumber} de {pageNumberTotal}",
   "Terra.paginator.pageIndexWithLabel": "{pageLabel} {pageNumber}",
-  "Terra.paginator.pageCountWithLabel": "{pageLabel} {pageNumber} de {pageNumberTotal}",
-  "Terra.paginator.customPageSelectedWithCount": "{pageLabel} {pageNumber} de {pageNumberTotal} está seleccionada"
+  "Terra.paginator.pageCountWithLabel": "{pageLabel} {pageNumber} de {pageNumberTotal}"
 }

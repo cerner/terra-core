@@ -7,8 +7,8 @@
   "Terra.paginator.pageSelected": "Sida {pageNumber} har valts",
   "Terra.paginator.customPageSelected": "{pageLabel} har valts",
   "Terra.paginator.pageSelectedWithCount": "Sida {pageNumber} av {pageNumberTotal} har valts",
+  "Terra.paginator.customPageSelectedWithCount": "{pageLabel} {pageNumber} av {pageNumberTotal} har valts",
   "Terra.paginator.pageCount": "Sida {pageNumber} av {pageNumberTotal}",
   "Terra.paginator.pageIndexWithLabel": "{pageLabel} {pageNumber}",
-  "Terra.paginator.pageCountWithLabel": "{pageLabel} {pageNumber} av {pageNumberTotal}",
-  "Terra.paginator.customPageSelectedWithCount": "{pageLabel} {pageNumber} av {pageNumberTotal} har valts"
+  "Terra.paginator.pageCountWithLabel": "{pageLabel} {pageNumber} av {pageNumberTotal}"
 }
