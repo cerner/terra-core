@@ -38,6 +38,9 @@ const propTypes = {
   icon: PropTypes.element,
   /**
    * Sets the badge color scheme. One of `default`, `primary`, `secondary`, `positive`, `negative`, `warning`, `info`.
+   *
+   * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue)
+   * Follow the accessibility guidance for color to ensure color is not the only method used to convey information.
    */
   intent: PropTypes.oneOf(['default', 'primary', 'secondary', 'info', 'warning', 'positive', 'negative']),
   /**
@@ -55,11 +58,16 @@ const propTypes = {
   size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
   /**
    * Sets the badge text.
+   *
+   * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue)
+   * It is best practice to always use text. Use text that conveys the meaning or purpose of the badge.
    */
   text: PropTypes.string,
   /**
-   * Text that describes the badge to a screen reader. Use this
-   * for creating an accessible badge.
+   * Additional text that can be visually hidden but supports people that use assistive technologies like screen readers.
+   *
+   * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue)
+   * Follow the Accessibility Guidance for visually hidden text above to better understand when to use this prop.
    */
   visuallyHiddenText: PropTypes.string,
 };

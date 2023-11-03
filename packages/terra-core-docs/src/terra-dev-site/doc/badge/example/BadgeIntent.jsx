@@ -9,7 +9,10 @@ const cx = classNames.bind(styles);
 const BadgeIntent = () => (
   <React.Fragment>
     <p>
-      Intent with severity of issues.
+      The Intent prop can be used to apply colors to badges. Please refer to the important Accessibility Guidance sections above to ensure proper usage.
+    </p>
+    <p>
+      An example usage of the “Intent” Badge:
     </p>
     <div className={cx('badge-container')}>
       <div className={cx('badge')}>
@@ -28,9 +31,7 @@ const BadgeIntent = () => (
         <Badge intent="negative" text="Critical" />
       </div>
     </div>
-    <p>
-      Secondary Intent can be used to label user name as NEW
-    </p>
+    <br />
     <div className={cx('profile-container')}>
       <Avatar alt="Segun Adebayo" initials="SA" />
       <div className={cx('profile-name-container')}>
@@ -40,23 +41,6 @@ const BadgeIntent = () => (
       </div>
       <div className={cx('profile-badge')}>
         <Badge intent="secondary" text="NEW" visuallyHiddenText="New User" />
-      </div>
-    </div>
-    <p>
-      Badges with read and unread items
-    </p>
-    <div className={cx('badge-container')}>
-      <div className={cx('badge')}>
-        <Badge intent="primary" text="3" />
-      </div>
-      <div className={cx('badge')}>
-        <Badge text="3" />
-      </div>
-      <div className={cx('badge')}>
-        <Badge intent="primary" text="240+" />
-      </div>
-      <div className={cx('badge')}>
-        <Badge text="240+" />
       </div>
     </div>
   </React.Fragment>
