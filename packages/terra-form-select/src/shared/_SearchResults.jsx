@@ -14,13 +14,13 @@ const propTypes = {
 };
 
 const SearchResults = ({ searchResultContent }) => {
-    const theme = React.useContext(ThemeContext);
-    return (
-        <div role="option" className={cx('results-that-contain', theme.className)} aria-selected="false">
-            {searchResultContent }
-        </div>
-    );
-}
+  const theme = React.useContext(ThemeContext);
+  return (
+    <div role="option" className={cx('results-that-contain', theme.className)} aria-selected="false">
+      {searchResultContent}
+    </div>
+  );
+};
 
 SearchResults.propTypes = propTypes;
 
