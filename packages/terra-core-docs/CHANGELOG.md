@@ -1,6 +1,9 @@
 # Changelog
 
 ## Unreleased
+
+## 1.49.0 - (November 3, 2023)
+
 * Updated
   * Updated accessibility guidance for `terra-arrange`.
 
