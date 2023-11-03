@@ -16,11 +16,6 @@ const propTypes = {
    */
   text: PropTypes.string,
   /**
-   * ![IMPORTANT](https://badgen.net/badge/prop/deprecated/red)
-   * title prop has been deperecated and will be removed on next major version relase. Replace the `title` prop with `text` prop.
-   */
-  title: PropTypes.string,
-  /**
    * Callback function triggered when the accordion icon is clicked.
    */
   onClick: PropTypes.func,
@@ -97,7 +92,6 @@ class SectionHeader extends React.Component {
   render() {
     const {
       text,
-      title,
       onClick,
       isOpen,
       isTransparent,
@@ -129,17 +123,7 @@ class SectionHeader extends React.Component {
       customProps.className,
     );
 
-    if (!level) {
-      // eslint-disable-next-line no-console
-      console.warn('Default heading level may not appropriate has it would fail to convey context of heading in a site / application where it is used. Heading level should be set explicitly depending on the position of header in site / application to allow screen readers to identify headers consistently.'); // to be removed on next major version release.
-    }
-
-    if (title) {
-      // eslint-disable-next-line no-console
-      console.warn('`title` prop has been renamed to `text`. please update all the refernces of `title` prop to use prop `text`.'); // to be removed on next major version release.
-    }
     const Element = `h${level || 2}`;
-    const headerText = text || title;
 
     const headerAttributes = { ...customProps };
     const buttonAttributes = {};
@@ -150,7 +134,7 @@ class SectionHeader extends React.Component {
       buttonAttributes.ref = this.focusableElementRef;
       buttonAttributes.type = 'button';
       buttonAttributes['aria-expanded'] = isOpen;
-      buttonAttributes['aria-label'] = headerText;
+      buttonAttributes['aria-label'] = text;
       buttonAttributes.onKeyDown = this.wrapOnKeyDown(headerAttributes.onKeyDown);
       buttonAttributes.onKeyUp = this.wrapOnKeyUp(headerAttributes.onKeyUp);
       buttonAttributes.onClick = onClick;
@@ -165,11 +149,11 @@ class SectionHeader extends React.Component {
     }
 
     return (
-      <Element {...headerAttributes} className={sectionHeaderClassNames} aria-label={!onClick ? headerText : undefined}>
+      <Element {...headerAttributes} className={sectionHeaderClassNames} aria-label={!onClick ? text : undefined}>
         <ArrangeWrapper {...buttonAttributes} className={cx('arrange-wrapper')}>
           <Arrange
             fitStart={onClick && accordionIcon}
-            fill={<span aria-hidden={(onClick !== undefined)} className={cx('title')}>{headerText}</span>}
+            fill={<span aria-hidden={(onClick !== undefined)} className={cx('title')}>{text}</span>}
             className={cx('title-arrange')}
           />
         </ArrangeWrapper>

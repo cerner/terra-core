@@ -4,6 +4,30 @@ import { Badge } from 'terra-section-header/package.json?dev-site-package';
 
 # Terra Section Header Upgrade Guide
 
+## Changes from version 2 to version 3
+
+### Props
+* **Removed** `title` prop. This is **replaced** by the `text` prop. This prop accepts a string of text to be dispayed in the SectionHeader.
+
+### Changes to CSS Custom Properties
+
+#### Added
+* --terra-section-header-focus-within-outline
+* --terra-section-header-focus-within-outline-offset
+
+#### Removed
+* --terra-section-header-focus-border-bottom
+* --terra-section-header-focus-border-left
+* --terra-section-header-focus-border-right
+* --terra-section-header-focus-border-top
+* --terra-section-header-focus-box-shadow
+* --terra-section-header-transparent-focus-border-bottom
+* --terra-section-header-transparent-focus-border-left
+* --terra-section-header-transparent-focus-border-right
+* --terra-section-header-transparent-focus-border-top
+* --terra-section-header-transparent-focus-box-shadow
+* --terra-section-header-transparent-focus-color
+
 ## Changes from version 1 to version 2
 
 ### Changes to CSS Custom Properties
