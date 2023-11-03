@@ -1,0 +1,12 @@
+// Themes
+@import '../clinical-lowlight-theme/SearchResults.module';
+@import '../orion-fusion-theme/SearchResults.module';
+
+:local {
+  .results-that-contain {
+    overflow: hidden;
+    padding: var(--terra-form-select-search-results-padding, 0.28571rem 0.714286rem);
+    word-break: break-word;
+    word-wrap: break-word;
+  }
+}
