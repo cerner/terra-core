@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased
+* Updated
+  * Updated accessibility guidance for `terra-arrange`.
 
 * Changed
   * Changed paginator label on custom page count example.
