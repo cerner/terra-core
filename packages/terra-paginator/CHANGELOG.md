@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+ * Added VisuallyHiddenText with pageLabel to support screen reader users.
+
 ## 2.87.0 - (October 26, 2023)
 
 * Changed

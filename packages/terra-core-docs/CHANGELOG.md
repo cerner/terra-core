@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+* Changed
+  * Changed paginator label on custom page count example.
 ## 1.48.0 - (November 2, 2023)
 
 * Updated
