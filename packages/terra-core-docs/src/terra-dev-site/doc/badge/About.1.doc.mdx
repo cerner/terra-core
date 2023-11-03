@@ -9,6 +9,7 @@ import BadgeInTable from './example/BadgeInTable?dev-site-example';
 
 import BadgePropsTable from 'terra-badge/lib/Badge?dev-site-props-table';
 
+import BadgeInDoc from './example/BadgeInDoc';
 <Badge />
 
 # Terra Badge
@@ -52,11 +53,11 @@ To implement an accessible terra badge:
 - Ensure the words used within the badge (the text provided as text prop) or the icon conveys the purpose of the badge. Badge color must always be used as a secondary or supportive method to understand meaning.
   - Color must never be the only method used to convey badge meaning. 
      - A good example where words convey the meaning and color is supportive: 
-        - Heart Rate: `High`
-        - Blood Pressure:  `Critical` 
+        - Heart Rate: <BadgeInDoc text='High' intent='warning' />
+        - Blood Pressure: <BadgeInDoc text='Critical' intent='negative'/>
      - A bad example where color alone is used to convey meaning:
-        - `Heart Rate`
-        - `Blood Pressure` 
+        - <BadgeInDoc text='Heart Rate' intent='warning' />
+        - <BadgeInDoc text='Blood Pressure' intent='negative' />
 - When using the intent prop to set badge colors, choose the appropriate intent prop type value that matches the purpose and intent of the badge(s). And, be consistent in the use of color per the meaning of the words.
   - Do not use one color with different meanings. For example, do not have 2 or more badges using the same color each with a different meaning.
 
