@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Update props description in props table.
+
 ## 3.58.0 - (October 16, 2023)
 
 * Added
