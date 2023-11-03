@@ -535,7 +535,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       it('should display open dropdown', () => {
         Terra.validates.element('[combobox-spacebar]open-dropdown', { selector: '#root' });
       });
-      
+
       it('should display results on search', () => {
         $('[data-terra-select] input').setValue('Blue');
         Terra.validates.element('[combobox] Results displayed on search', { selector: '#root' });
