@@ -1,5 +1,6 @@
 import React from 'react';
 import Badge from 'terra-badge';
+import Button from 'terra-button';
 import classNames from 'classnames/bind';
 import styles from './Badge.module.scss';
 
@@ -7,30 +8,22 @@ const cx = classNames.bind(styles);
 
 const BadgeVisuallyHiddenText = () => (
   <React.Fragment>
+    <p>
+      Ensuring Programmatic Context Badge Example: When a Badge is paired with a word or item but not semantically understood as grouped with that word, add use the word or words as the visually hidden text string as illustrated in the following example.
+    </p>
     <div className={cx('badge-container')}>
       <div className={cx('badge')}>
-        <Badge text="Low" visuallyHiddenText="Risk" />
+        <Badge text="High" intent="warning" visuallyHiddenText="Heart Rate" />
       </div>
       <div className={cx('badge')}>
-        <Badge text="Medium" visuallyHiddenText="Risk" />
-      </div>
-      <div className={cx('badge')}>
-        <Badge text="High" visuallyHiddenText="Risk" />
-      </div>
-      <div className={cx('badge')}>
-        <Badge text="Critical" visuallyHiddenText="Risk" />
+        <Badge text="Critical" intent="negative" visuallyHiddenText="Blood Pressure" />
       </div>
     </div>
     <p>
-      An example usage of Badge for the count of unread items using the Visually Hidden Text and Size props:
+      Add Additional Context to a Badge Example: Use the VisuallyHiddenText prop to provide additional context that sighted users can see but may make the content more meaningful and better understood by screen reader users.
     </p>
     <div>
-      <button type="button">
-        <span>Mailbox</span>
-        <span className={cx('message-count')}>
-          <Badge intent="primary" text="20" size="small" visuallyHiddenText="unread messages" />
-        </span>
-      </button>
+      <Button icon={<span><Badge intent="primary" text="20" size="small" visuallyHiddenText="unread messages" /></span>} text="Mailbox" isReversed />
     </div>
   </React.Fragment>
 );
