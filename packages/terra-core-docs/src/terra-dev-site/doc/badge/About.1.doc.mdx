@@ -68,8 +68,6 @@ Use visually-hidden-text when:
 
 - **Ensure Programmatic Context**: The visible relationship of the Badge is not also semantically connected or represented in code.
   - For example, a Badge placed visibly next to one word within a string of words but the one word and Badge pairing is not coded as a semantic group and would not easily be associated together. See the good example underneath the Accessibility Guidance: Badge Color section above.
-- **Add Additional Context**: The visible presentation provides visible context but we want to ensure more meaningful text for a screen reader user.
-  - For example, a mailbox icon with a Badge count of 20 can easily be interpreted by sighted users a 20 unread messages. It would best to provide more context for AT users. In this instance we could have the Badge include the count and visually hidden text “unread messages” so a screen reader would read “20 unread messages” instead of just “20.”
 
 ```jsx
 import Badge from 'terra-badge';
@@ -77,6 +75,9 @@ import Badge from 'terra-badge';
 <Badge text='High' intent='warning' visuallyHiddenText="Heart Rate" />
 <Badge text='Critical' intent='negative' visuallyHiddenText="Blood Pressure"/>
 ```
+
+- **Add Additional Context**: The visible presentation provides visible context but we want to ensure more meaningful text for a screen reader user.
+  - For example, a mailbox icon with a Badge count of 20 can easily be interpreted by sighted users a 20 unread messages. It would best to provide more context for AT users. In this instance we could have the Badge include the count and visually hidden text “unread messages” so a screen reader would read “20 unread messages” instead of just “20.”
 
 Other helpful hints in using visually-hidden-text:
 
