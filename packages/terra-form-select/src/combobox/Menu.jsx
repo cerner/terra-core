@@ -11,6 +11,7 @@ import MenuUtil from '../shared/_MenuUtil';
 import SharedUtil from '../shared/_SharedUtil';
 import SearchResults from '../shared/_SearchResults';
 import styles from '../shared/_Menu.module.scss';
+import NoResults from '../shared/_NoResults';
 
 const cx = classNamesBind.bind(styles);
 
@@ -120,15 +121,20 @@ class Menu extends React.Component {
    */
   static getDerivedStateFromProps(props, state) {
     const {
-      clearOptionDisplay, searchValue,
+      clearOptionDisplay, searchValue, noResultContent,
     } = props;
 
-    const hasNoResults = false;
+    let hasNoResults = false;
     const hasMaxSelection = false;
     let hasAddOption = false;
 
     let children = MenuUtil.filter(props.children, props.searchValue, props.optionFilter);
     children = MenuUtil.updateSelectionState(children, props);
+
+    if (!children.length) {
+      children.push(<NoResults noResultContent={noResultContent} value={searchValue} />);
+      hasNoResults = true;
+    }
 
     if (Menu.shouldAllowFreeText(props, children)) {
       children.push(<AddOption value={searchValue} />);

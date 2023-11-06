@@ -2,6 +2,18 @@
 
 ## Unreleased
 
+## 1.49.0 - (November 3, 2023)
+
+* Updated
+  * Updated accessibility guidance for `terra-arrange`.
+
+* Changed
+  * Changed paginator label on custom page count example.
+## 1.48.0 - (November 2, 2023)
+
+* Updated
+  *  Updated example for selection state of Fusion-Button in `terra-button`.
+
 ## 1.47.0 - (October 26, 2023)
 
 * Changed
@@ -29,6 +41,7 @@
 
 * Updated
   * Updated `terra-alert` documentation for custom titles.
+  * Updated `terra-dropdown-button` documentation for testing uuid details.
   * Updated exisiting examples upto a11y standards
 
 * Fixed

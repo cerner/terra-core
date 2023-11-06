@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## 1.38.0 - (November 2, 2023)
+
+* Added
+  * Added 'aria-haspoup' and 'aria-controls' attributes for dropdown button.
+  * Added customClass support for dropdown item.
+
 ## 1.37.0 - (October 26, 2023)
 
 * Changed
