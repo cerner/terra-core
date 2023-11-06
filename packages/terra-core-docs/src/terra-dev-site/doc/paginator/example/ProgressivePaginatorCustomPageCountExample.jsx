@@ -31,7 +31,7 @@ class ProgressivePaginatorCustomPageCountExample extends React.Component {
 
   changePages(index) {
     this.setState({ currentPage: index });
-    this.setState({ pageLabel: `Summary ${index} of total ${Math.abs(totalCount / itemCountPerPage)}` });
+    this.setState({ pageLabel: `Summary ${index} in total ${Math.abs(totalCount / itemCountPerPage)}` });
   }
 
   render() {
