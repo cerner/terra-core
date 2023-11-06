@@ -1,13 +1,18 @@
 {
   "name": "terra-toggle",
-  "main": "lib/Toggle.js",
   "version": "3.60.0",
   "description": "Toggle component that transitions content in and out.",
+  "author": "Cerner Corporation",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git",
     "directory": "packages/terra-toggle"
   },
+  "bugs": {
+    "url": "https://github.com/cerner/terra-core/issues"
+  },
+  "homepage": "https://github.com/cerner/terra-core#readme",
+  "license": "Apache-2.0",
   "keywords": [
     "Cerner",
     "Terra",
@@ -15,21 +20,16 @@
     "Toggle",
     "UI"
   ],
-  "author": "Cerner Corporation",
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/cerner/terra-core/issues"
-  },
-  "homepage": "https://github.com/cerner/terra-core#readme",
-  "peerDependencies": {
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5"
-  },
+  "main": "lib/Toggle.js",
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "react-animate-height": "^2.0.1",
     "terra-icon": "^3.58.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",
