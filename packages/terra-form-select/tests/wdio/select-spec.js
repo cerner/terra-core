@@ -539,6 +539,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       it('should display results on search', () => {
         $('[data-terra-select] input').setValue('Blue');
         Terra.validates.element('[combobox] Results displayed on search', { selector: '#root' });
+      });
       it('should display no results on search', () => {
         $('[data-terra-select] input').setValue('John');
         Terra.validates.element('combobox no results displayed on search', { selector: '#root' });
