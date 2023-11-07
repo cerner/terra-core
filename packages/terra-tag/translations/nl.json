@@ -1,0 +1,14 @@
+{
+  "Terra.tags.label.delete": "{tagLabelName} verwijderen",
+  "Terra.tags.label.rollupTag": "nog {tagsNotVisibleCount}",
+  "Terra.tags.label.showLess": "Minder tonen",
+  "Terra.tags.hint.removable": "kan verwijderd worden via de toets Delete of de toets Backspace",
+  "Terra.tags.hint.selectable": "voor meer informatie kunt u de knop selecteren via de spatiebalk of de toets Enter",
+  "Terra.tags.hint.selectableAndRemovable": "kan verwijderd worden via de toets Delete of de toets Backspace, voor meer informatie kunt u de knop selecteren via de spatiebalk of de toets Enter",
+  "Terra.tags.hint.wasRemoved": "{tagLabelName} verwijderd",
+  "Terra.tags.hint.rollupTag": "{tagsNotVisibleCount} items zijn verborgen. Selecteer om {tagsNotVisibleCount} verborgen items weer te geven",
+  "Terra.tags.hint.showLess": "selecteer om items te verbergen",
+  "Terra.tags.hint.rollupNotVisible": "{tagsNotVisibleCount} items worden niet weergegeven",
+  "Terra.tags.hint.rollupVisible": "{tagsNotVisibleCount} verbogen items worden nu weergegeven",
+  "Terra.tags.hint.tagList": "Bevat {numberOfTags} items"
+}
