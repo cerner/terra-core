@@ -72,8 +72,10 @@ Use visually-hidden-text when:
 ```jsx
 import Badge from 'terra-badge';
 
-<Badge text='High' intent='warning' visuallyHiddenText="Heart Rate" />
-<Badge text='Critical' intent='negative' visuallyHiddenText="Blood Pressure"/>
+<div>
+  <span> Heart Rate: </span> <Badge text='High' intent='warning' visuallyHiddenText="Heart Rate" /> <br />
+  <span> Blood Pressure: </span> <Badge text='Critical' intent='negative' visuallyHiddenText="Blood Pressure"/>
+</div>
 ```
 
 - **Add Additional Context**: The visible presentation provides visible context but we want to ensure more meaningful text for a screen reader user.

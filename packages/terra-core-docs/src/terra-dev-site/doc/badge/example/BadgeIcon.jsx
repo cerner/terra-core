@@ -1,12 +1,11 @@
 import React from 'react';
-import { IconBookmark, IconFeaturedOutlineYellow } from 'terra-icon';
+import { IconBookmark } from 'terra-icon';
 import Badge from 'terra-badge';
 import classNames from 'classnames/bind';
 import styles from './Badge.module.scss';
 
 const cx = classNames.bind(styles);
 const Icon = <IconBookmark />;
-const Bookmark = <IconFeaturedOutlineYellow />;
 
 const BadgeIcon = () => (
   <React.Fragment>
@@ -23,7 +22,7 @@ const BadgeIcon = () => (
         <Badge icon={Icon} text="Bookmark" isReversed />
       </div>
       <div className={cx('badge')}>
-        <Badge icon={Bookmark} visuallyHiddenText="Bookmark" />
+        <Badge icon={Icon} visuallyHiddenText="Bookmark" />
       </div>
     </div>
   </React.Fragment>
