@@ -1,5 +1,6 @@
 {
   "Terra.form.select.add": "Lägg till \"{text}\"",
+  "Terra.form.select.addText": "Lägg till ",
   "Terra.form.select.ariaLabel": "Sök",
   "Terra.form.select.defaultDisplay": "- Välj -",
   "Terra.form.select.maxSelectionHelp": "Max {text} objekt.",

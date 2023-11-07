@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Button from 'terra-button';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
+import { injectIntl } from 'react-intl';
 import SharedUtil from './_SharedUtil';
 import styles from './_Option.module.scss';
 
@@ -66,6 +68,11 @@ const propTypes = {
    * The i18n value of the text "Expanded combobox".
    */
   expandedStateText: PropTypes.string,
+  /**
+   * @private
+   * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
+   */
+  intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
 };
 
 const defaultProps = {
@@ -86,6 +93,7 @@ const Option = ({
   totalOptions,
   ofText,
   expandedStateText,
+  intl,
   ...customProps
 }) => {
   const theme = React.useContext(ThemeContext);
@@ -131,7 +139,8 @@ const Option = ({
       data-terra-select-option
       aria-label={itemLabel}
     >
-      {(isCheckable || isAddOption) && <span className={cx('icon')} />}
+      {isAddOption && <Button className={cx('add-button')} text={intl.formatMessage({ id: 'Terra.form.select.addText' })} icon={<span className={cx('icon')} />} />}
+      {isCheckable && <span className={cx('icon')} />}
       <span data-terra-add-option className={cx('display')}>{display}</span>
     </li>
   );
@@ -141,4 +150,4 @@ Option.propTypes = propTypes;
 Option.defaultProps = defaultProps;
 Option.isOption = true;
 
-export default Option;
+export default injectIntl(Option);

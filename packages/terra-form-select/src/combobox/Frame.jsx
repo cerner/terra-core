@@ -160,6 +160,7 @@ class Frame extends React.Component {
       isPositioned: false,
       hasSearchChanged: false,
       searchValue: '',
+      hasEscPressed: false,
     };
 
     this.ariaLabel = this.ariaLabel.bind(this);
@@ -267,8 +268,15 @@ class Frame extends React.Component {
       event.preventDefault();
       this.openDropdown(event);
     } else if (this.state.isOpen && keyCode === KeyCode.KEY_ESCAPE) {
-      event.stopPropagation();
-      this.closeDropdown();
+      this.setState({ hasEscPressed: true }, () => {
+        event.stopPropagation();
+        this.closeDropdown();
+      });
+    } else if (!this.state.isOpen && keyCode === KeyCode.KEY_ESCAPE && this.state.hasEscPressed) {
+      this.setState({ hasEscPressed: false }, () => {
+        event.stopPropagation();
+        this.closeDropdown();
+      });
     }
   }
 
@@ -420,21 +428,12 @@ class Frame extends React.Component {
       isFocused: document.activeElement === this.input || document.activeElement === this.select,
       isOpen: false,
       isPositioned: false,
-      hasSearchChanged: false,
-      searchValue: '',
     });
-
-    // 'Tag' and 'Combobox' variants select the current search value when the component loses focus.
-    const { searchValue } = this.state;
-    if (Frame.shouldAddOptionOnBlur(this.props, this.state)) {
-      // NOTE: Since 'Combobox' does not allow blank strings to be created within the options dropdown,
-      // a blank input string should be explicitly converted into an empty string. This ensures that
-      // on blur, Combobox updates the search field to be an empty string when the user inputs a blank string.
-      // Upon failing to do so, Combobox resets the search field back to a previously selected value.
-      const freeText = searchValue.trim().length === 0 ? '' : searchValue;
-      if (this.props.onSelect) {
-        this.props.onSelect(freeText);
-      }
+    if (!this.state.hasEscPressed) {
+      this.setState({
+        hasSearchChanged: false,
+        searchValue: '',
+      });
     }
   }
 

@@ -20,7 +20,7 @@ const AddOption = ({ value, intl, ...customProps }) => (
     {...customProps}
     isAddOption
     value={value}
-    display={intl.formatMessage({ id: 'Terra.form.select.add' }, { text: value })}
+    display={value}
     data-terra-select-add-option
   />
 );
