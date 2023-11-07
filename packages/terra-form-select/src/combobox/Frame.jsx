@@ -537,7 +537,6 @@ class Frame extends React.Component {
    */
   role() {
     const { disabled } = this.props;
-    // role="application" needed to allow JAWS to work correctly with the select and use our key event listeners
     return disabled ? undefined : 'combobox';
   }
 
