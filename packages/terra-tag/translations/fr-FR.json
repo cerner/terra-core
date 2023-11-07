@@ -1,0 +1,14 @@
+{
+  "Terra.tags.label.delete": "Supprimer {tagLabelName}",
+  "Terra.tags.label.rollupTag": "{tagsNotVisibleCount} de plus",
+  "Terra.tags.label.showLess": "Réduire",
+  "Terra.tags.hint.removable": "Vous pouvez supprimer cet élément avec la touche Supprimer ou Retour arrière",
+  "Terra.tags.hint.selectable": "Pour plus d'informations, vous pouvez sélectionner le bouton avec la barre d'espace ou la touche Entrée",
+  "Terra.tags.hint.selectableAndRemovable": "Vous pouvez supprimer cet élément avec la touche Suppression ou Retour arrière. Pour plus d'informations, vous pouvez sélectionner le bouton avec la barre d'espace ou la touche Entrée",
+  "Terra.tags.hint.wasRemoved": "{tagLabelName} supprimé",
+  "Terra.tags.hint.rollupTag": "{tagsNotVisibleCount} éléments sont masqués. Sélectionnez pour afficher {tagsNotVisibleCount} éléments masqués",
+  "Terra.tags.hint.showLess": "Sélectionnez pour masquer les éléments",
+  "Terra.tags.hint.rollupNotVisible": "{tagsNotVisibleCount} éléments ne sont pas affichés",
+  "Terra.tags.hint.rollupVisible": "{tagsNotVisibleCount} éléments masqués sont désormais affichés",
+  "Terra.tags.hint.tagList": "Contient {numberOfTags} éléments"
+}

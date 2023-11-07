@@ -1,0 +1,11 @@
+$selector: '.cerner-mock-theme';
+@import '~terra-mixins/lib/Mixins';
+
+@include themeStyles {
+  --terra-base-font-size: 20px;
+  --terra-base-background-color: #f00;
+  --terra-base-color: #0f0;
+  --terra-framework-docs-theme-provider-mock-background-color: #f00;
+  --terra-framework-docs-theme-provider-mock-color: #00f;
+  --terra-framework-docs-theme-provider-mock-display: inline-block;
+}

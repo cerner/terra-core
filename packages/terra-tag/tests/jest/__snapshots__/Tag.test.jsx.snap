@@ -13,7 +13,9 @@ exports[`Tag correctly applies the theme context className 1`] = `
   >
     <span
       className="tag orion-fusion-theme"
+      data-terra-tag={true}
       onBlur={[Function]}
+      onClick={[Function]}
       onKeyUp={[Function]}
     >
       Normal
@@ -25,7 +27,9 @@ exports[`Tag correctly applies the theme context className 1`] = `
 exports[`Tag should render a tag 1`] = `
 <span
   className="tag"
+  data-terra-tag={true}
   onBlur={[Function]}
+  onClick={[Function]}
   onKeyUp={[Function]}
 >
   Normal
@@ -35,7 +39,9 @@ exports[`Tag should render a tag 1`] = `
 exports[`Tag should render an icon and text 1`] = `
 <span
   className="tag"
+  data-terra-tag={true}
   onBlur={[Function]}
+  onClick={[Function]}
   onKeyUp={[Function]}
 >
   <span
@@ -52,6 +58,7 @@ exports[`Tag should render an icon and text 1`] = `
 exports[`Tag should render an interactive tag 1`] = `
 <button
   className="tag is-interactive"
+  data-terra-tag={true}
   onBlur={[Function]}
   onClick={[Function]}
   onKeyUp={[Function]}
@@ -63,8 +70,10 @@ exports[`Tag should render an interactive tag 1`] = `
 exports[`Tag should render as an anchor when provided an href 1`] = `
 <a
   className="tag is-interactive has-underline"
+  data-terra-tag={true}
   href="MockHref"
   onBlur={[Function]}
+  onClick={[Function]}
   onKeyUp={[Function]}
 >
   href
@@ -74,6 +83,7 @@ exports[`Tag should render as an anchor when provided an href 1`] = `
 exports[`Tag should render as an button tag when href is not provided 1`] = `
 <button
   className="tag is-interactive"
+  data-terra-tag={true}
   onBlur={[Function]}
   onClick={[Function]}
   onKeyUp={[Function]}
