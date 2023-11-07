@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added about page for `TagList`.
+
 ## 1.49.0 - (November 3, 2023)
 
 * Updated
@@ -9,6 +12,7 @@
 
 * Changed
   * Changed paginator label on custom page count example.
+
 ## 1.48.0 - (November 2, 2023)
 
 * Updated
