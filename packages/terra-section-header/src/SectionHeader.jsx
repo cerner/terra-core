@@ -39,6 +39,7 @@ const defaultProps = {
   onClick: undefined,
   isOpen: false,
   isTransparent: false,
+  level: 2,
 };
 
 const isRecognizedKeyPress = event => ((event.keyCode === KeyCode.KEY_RETURN) || (event.keyCode === KeyCode.KEY_SPACE));
@@ -123,7 +124,7 @@ class SectionHeader extends React.Component {
       customProps.className,
     );
 
-    const Element = `h${level || 2}`;
+    const Element = `h${level}`;
 
     const headerAttributes = { ...customProps };
     const buttonAttributes = {};
