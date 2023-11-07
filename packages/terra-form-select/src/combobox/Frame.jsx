@@ -404,13 +404,13 @@ class Frame extends React.Component {
       'aria-describedby': ariaDescribedBy,
       'aria-disabled': disabled,
       'aria-owns': this.state.isOpen ? id : undefined,
+      'aria-expanded': !disabled && this.state.isOpen,
       type: 'text',
       className: cx('search-input'),
       required,
       'aria-required': required,
       id: inputId,
       role: this.role(),
-      'aria-expanded': !disabled && this.state.isOpen,
     };
     const value = hasSearchChanged ? searchValue : display;
 
