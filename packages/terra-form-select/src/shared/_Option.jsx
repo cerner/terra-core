@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from 'terra-button';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import { injectIntl } from 'react-intl';
+import { IconAdd } from 'terra-icon';
+import Button from 'terra-button';
 import SharedUtil from './_SharedUtil';
 import styles from './_Option.module.scss';
 
@@ -139,7 +140,7 @@ const Option = ({
       data-terra-select-option
       aria-label={itemLabel}
     >
-      {isAddOption && <Button className={cx('add-button')} text={intl.formatMessage({ id: 'Terra.form.select.addText' })} icon={<span className={cx('icon')} />} />}
+      {isAddOption && <Button className={cx('add-button')} text={intl.formatMessage({ id: 'Terra.form.select.addText' })} icon={<IconAdd />} />}
       {isCheckable && <span className={cx('icon')} />}
       <span data-terra-add-option className={cx('display')}>{display}</span>
     </li>

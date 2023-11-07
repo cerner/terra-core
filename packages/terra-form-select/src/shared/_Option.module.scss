@@ -35,18 +35,6 @@
 
   .add-button {
     margin-right: var(--terra-form-select-option-icon-margin-right, 0.714rem);
-
-    .icon {
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      display: inline-block; // IE 10
-      flex-shrink: 0;
-      height: var(--terra-form-select-option-icon-height, 1.143rem);
-      margin-right: var(--terra-form-select-option-icon-margin-right, 0.714rem);
-      visibility: hidden;
-      width: var(--terra-form-select-option-icon-width, 1.143rem);
-    }
   }
 
   .display {
@@ -64,6 +52,7 @@
     display: inline-block; // IE 10
     flex-shrink: 0;
     height: var(--terra-form-select-option-icon-height, 1.143rem);
+    margin-right: var(--terra-form-select-option-icon-margin-right, 0.714rem);
     visibility: hidden;
     width: var(--terra-form-select-option-icon-width, 1.143rem);
   }
@@ -81,9 +70,8 @@
     visibility: visible;
   }
 
-  .is-add-option .icon {
+  .is-add-option > .icon {
     background: var(--terra-form-select-option-icon-add-background, inline-svg('<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#0079be" d="M48 21H27V0h-6v21H0v6h21v21h6V27h21z"/></svg>'));
-    margin-right: 0;
     visibility: visible;
   }
 
