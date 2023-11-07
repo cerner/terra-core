@@ -1,31 +1,26 @@
 {
   "name": "terra-paginator",
-  "main": "lib/Paginator.js",
   "version": "2.87.1",
   "description": "Paginator to be used for data sets of known and unknown size. Provides first, last, previous, next, and paged functionality.",
+  "author": "Cerner Corporation",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git",
     "directory": "packages/terra-paginator"
   },
-  "keywords": [
-    "Cerner",
-    "Terra",
-    "terra-paginator",
-    "Paginator",
-    "UI"
-  ],
-  "author": "Cerner Corporation",
-  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/cerner/terra-core/issues"
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
-  "peerDependencies": {
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5",
-    "react-intl": ">=2.8.0 <6.0.0"
-  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "Cerner",
+    "Paginator",
+    "Terra",
+    "terra-paginator",
+    "UI"
+  ],
+  "main": "lib/Paginator.js",
   "dependencies": {
     "classnames": "^2.2.5",
     "keycode-js": "^3.1.0",
@@ -34,6 +29,11 @@
     "terra-responsive-element": "^5.37.0",
     "terra-theme-context": "^1.0.0",
     "terra-visually-hidden-text": "^2.36.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "react-intl": ">=2.8.0 <6.0.0"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",

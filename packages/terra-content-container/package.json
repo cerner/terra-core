@@ -1,35 +1,35 @@
 {
   "name": "terra-content-container",
-  "main": "lib/ContentContainer.js",
   "version": "3.39.1",
   "description": "The Terra ContentContainer is a structural component for the purpose of arranging content with a header.",
+  "author": "Cerner Corporation",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git",
     "directory": "packages/terra-content-container"
   },
-  "keywords": [
-    "Cerner",
-    "Terra",
-    "terra-content-container",
-    "ContentContainer",
-    "UI"
-  ],
-  "author": "Cerner Corporation",
-  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/cerner/terra-core/issues"
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
-  "peerDependencies": {
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5"
-  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "Cerner",
+    "ContentContainer",
+    "Terra",
+    "terra-content-container",
+    "UI"
+  ],
+  "main": "lib/ContentContainer.js",
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "terra-scroll": "^2.35.0",
     "terra-theme-context": "^1.0.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",
