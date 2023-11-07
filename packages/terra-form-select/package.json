@@ -34,6 +34,7 @@
     "mutationobserver-shim": "<=0.3.3",
     "prop-types": "^15.5.8",
     "react-lifecycles-compat": "^3.0.2",
+    "terra-button": "^3.70.0",
     "terra-form-field": "^4.30.0",
     "terra-hookshot": "^5.0.0",
     "terra-mixins": "^1.40.0",
