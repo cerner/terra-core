@@ -536,10 +536,6 @@ Terra.describeViewports('Select', ['tiny'], () => {
         Terra.validates.element('[combobox-spacebar]open-dropdown', { selector: '#root' });
       });
 
-      it('should display results on search', () => {
-        $('[data-terra-select] input').setValue('Blue');
-        Terra.validates.element('[combobox] Results displayed on search', { selector: '#root' });
-      });
       it('should display no results on search', () => {
         $('[data-terra-select] input').setValue('John');
         Terra.validates.element('combobox no results displayed on search', { selector: '#root' });
@@ -859,6 +855,16 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
 
       after(() => $('#root').click());
+    });
+  });
+
+  describe('Combobox UnControlled Search Results', () => {
+    before(() => {
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/uncontrolled-combobox');
+    });
+    it('should display results on search', () => {
+      $('[data-terra-select] input').setValue('Blue');
+      Terra.validates.element('[combobox] Results displayed on search', { selector: '#root' });
     });
   });
 
