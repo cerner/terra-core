@@ -31,8 +31,8 @@
 
     --terra-section-header-focus-background: #dedfe0;
     --terra-section-header-focus-color: #1c1f21;
-    --terra-section-header-focus-within-outline: 3px dashed #000;
-    --terra-section-header-focus-within-outline-offset: -2px;
+    --terra-section-header-focus-within-outline: none;
+    --terra-section-header-focus-within-outline-offset: 0;
 
     --terra-section-header-hover-background: #c8cacb;
     --terra-section-header-hover-border-bottom: 1px solid #9b9fa1;
@@ -69,6 +69,12 @@
     --terra-section-header-accordion-icon-height: 0.66667rem;
     --terra-section-header-accordion-icon-width: 0.66667rem;
     --terra-section-header-font-family: Tahoma, 'Geneva', Verdana, 'Trebuchet MS', sans-serif;
+
+    // Custom focus style for Orion Fusion theme
+    &:focus-within {
+      border-bottom: 1px solid #c8cacb;
+      box-shadow: 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35);
+    }
     
     // accordion icon
     @include terra-inline-svg-var('--terra-section-header-accordion-icon-background', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#1c1f21" d="M12,0l24,24L12,48V0z"/></svg>');
