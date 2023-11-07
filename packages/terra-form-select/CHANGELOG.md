@@ -4,7 +4,7 @@
 
 * Changed
   * Change role from application to combobox in `terra-form-select-combobox`.
-  * Replace add text to button in dropdown list in  `terra-form-select-combobox`.
+  * Replace +Add text to button in the dropdown list in  `terra-form-select-combobox`.
   * Ability to close dropdown and clear text by ESC key in `terra-form-select-combobox`.
 
 * Added

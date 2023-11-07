@@ -2,71 +2,162 @@
 
 exports[`Option correctly applies the theme context className 1`] = `
 <ThemeContextProvider
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
   theme={
     Object {
       "className": "orion-fusion-theme",
     }
   }
 >
-  <Option
-    disabled={false}
+  <InjectIntl(Option)
     display="display"
     value="value"
   >
-    <li
-      aria-disabled={false}
-      aria-label="display"
-      className="option is-default orion-fusion-theme"
-      data-terra-select-option={true}
+    <Option
       disabled={false}
-      role="option"
-      tabIndex="0"
+      display="display"
+      intl={
+        Object {
+          "defaultFormats": Object {},
+          "defaultLocale": "en",
+          "formatDate": [Function],
+          "formatHTMLMessage": [Function],
+          "formatMessage": [Function],
+          "formatNumber": [Function],
+          "formatPlural": [Function],
+          "formatRelative": [Function],
+          "formatTime": [Function],
+          "formats": Object {},
+          "formatters": Object {
+            "getDateTimeFormat": [Function],
+            "getMessageFormat": [Function],
+            "getNumberFormat": [Function],
+            "getPluralFormat": [Function],
+            "getRelativeFormat": [Function],
+          },
+          "locale": "en",
+          "messages": null,
+          "now": [Function],
+          "onError": [Function],
+          "textComponent": "span",
+          "timeZone": null,
+        }
+      }
+      value="value"
     >
-      <span
-        className="display"
-        data-terra-add-option={true}
+      <li
+        aria-disabled={false}
+        aria-label="display"
+        className="option is-default orion-fusion-theme"
+        data-terra-select-option={true}
+        disabled={false}
+        role="option"
+        tabIndex="0"
       >
-        display
-      </span>
-    </li>
-  </Option>
+        <span
+          className="display"
+          data-terra-add-option={true}
+        >
+          display
+        </span>
+      </li>
+    </Option>
+  </InjectIntl(Option)>
 </ThemeContextProvider>
 `;
 
 exports[`Option should render a default Option 1`] = `
-<li
-  aria-disabled={false}
-  aria-label="display"
-  className="option is-default"
-  data-terra-select-option={true}
+<Option
   disabled={false}
-  role="option"
-  tabIndex="0"
->
-  <span
-    className="display"
-    data-terra-add-option={true}
-  >
-    display
-  </span>
-</li>
+  display="display"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  value="value"
+/>
 `;
 
 exports[`Option should render a disabled Option 1`] = `
-<li
-  aria-disabled={true}
-  aria-label="display"
-  className="option is-default is-disabled"
-  data-terra-select-option={true}
+<Option
   disabled={true}
-  role="option"
-  tabIndex="0"
->
-  <span
-    className="display"
-    data-terra-add-option={true}
-  >
-    display
-  </span>
-</li>
+  display="display"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  value="value"
+/>
 `;
