@@ -541,7 +541,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
         Terra.validates.element('combobox no results displayed on search', { selector: '#root' });
       });
 
-      it('should enter a free text entry and close list item by pressing escape and clear the free text by pressing again escape', () => {
+      it('should enter a free text entry in combobox and close list item by pressing escape and clear the free text by pressing again escape', () => {
         $('[data-terra-select] input').setValue('Black');
         Terra.validates.element('combobox displayed Add button with typed free text', { selector: '#root' });
         browser.keys('Escape');
@@ -1534,6 +1534,15 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
       it('should display toggle closed dropdown', () => {
         Terra.validates.element('search close on outside click after toggle open', { selector: '#root' });
+      });
+
+      it('should enter a free text entry in search select and close list item by pressing escape and clear the free text by pressing again escape', () => {
+        $('[data-terra-select] input').setValue('Black');
+        Terra.validates.element('search select displayed displayed typed text', { selector: '#root' });
+        browser.keys('Escape');
+        Terra.validates.element('search select dropdown list close by first escape', { selector: '#root' });
+        browser.keys('Escape');
+        Terra.validates.element('search select cleared entered text by second escape', { selector: '#root' });
       });
     });
 

@@ -141,7 +141,7 @@ const Option = ({
       aria-label={itemLabel}
     >
       {isAddOption && <Button className={cx('add-button')} text={intl.formatMessage({ id: 'Terra.form.select.addText' })} icon={<IconAdd />} />}
-      {isCheckable && <span className={cx('icon')} />}
+      {(isCheckable && !isAddOption) && <span className={cx('icon')} />}
       <span data-terra-add-option className={cx('display')}>{display}</span>
     </li>
   );
