@@ -21,6 +21,10 @@ const propTypes = {
    */
   title: PropTypes.string,
   /**
+   * Callback ref to pass into the dom element.
+   */
+  refCallback: PropTypes.func,
+  /**
    * Callback function triggered when the accordion icon is clicked.
    */
   onClick: PropTypes.func,
@@ -56,14 +60,6 @@ class SectionHeader extends React.Component {
     this.state = { isActive: false };
     this.wrapOnKeyDown = this.wrapOnKeyDown.bind(this);
     this.wrapOnKeyUp = this.wrapOnKeyUp.bind(this);
-    this.setFocus = this.setFocus.bind(this);
-    this.focusableElementRef = React.createRef();
-  }
-
-  setFocus() {
-    if (this.focusableElementRef.current) {
-      this.focusableElementRef.current.focus();
-    }
   }
 
   wrapOnKeyDown(onKeyDown) {
@@ -99,6 +95,7 @@ class SectionHeader extends React.Component {
     const {
       text,
       title,
+      refCallback,
       onClick,
       isOpen,
       isTransparent,
@@ -143,7 +140,7 @@ class SectionHeader extends React.Component {
 
     if (onClick) {
       // Set section header button attributes
-      buttonAttributes.ref = this.focusableElementRef;
+      buttonAttributes.ref = refCallback;
       buttonAttributes.type = 'button';
       buttonAttributes['aria-expanded'] = isOpen;
       buttonAttributes['aria-label'] = headerText;
@@ -154,7 +151,7 @@ class SectionHeader extends React.Component {
       // Specify button element for header content
       ArrangeWrapper = 'button';
     } else {
-      headerAttributes.ref = this.focusableElementRef;
+      headerAttributes.ref = refCallback;
 
       // Specify span element for header content
       ArrangeWrapper = 'span';

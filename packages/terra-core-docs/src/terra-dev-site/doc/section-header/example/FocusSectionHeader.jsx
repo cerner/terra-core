@@ -2,14 +2,10 @@ import React, { useRef } from 'react';
 import SectionHeader from 'terra-section-header';
 
 const FocusSectionHeader = () => {
-  const sectionHeader = useRef();
-
-  const sectionHeaderRef = (header) => {
-    sectionHeader.current = header;
-  };
+  const sectionHeaderRef = useRef();
 
   const handleClick = () => {
-    sectionHeader.current.setFocus();
+    sectionHeaderRef.current?.focus();
   };
 
   return (
@@ -18,7 +14,7 @@ const FocusSectionHeader = () => {
 
       {/* eslint-disable-next-line react/forbid-dom-props */}
       <div style={{ marginTop: '20px' }}>
-        <SectionHeader ref={sectionHeaderRef} text="Focusable Section Header" level={2} onClick={() => {}} />
+        <SectionHeader refCallback={sectionHeaderRef} text="Focusable Section Header" level={2} onClick={() => {}} />
       </div>
     </>
   );
