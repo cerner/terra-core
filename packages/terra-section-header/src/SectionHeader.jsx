@@ -16,6 +16,11 @@ const propTypes = {
    */
   text: PropTypes.string,
   /**
+   * ![IMPORTANT](https://badgen.net/badge/prop/deprecated/red)
+   * title prop has been deperecated and will be removed on next major version relase. Replace the `title` prop with `text` prop.
+   */
+  title: PropTypes.string,
+  /**
    * Callback function triggered when the accordion icon is clicked.
    */
   onClick: PropTypes.func,
@@ -93,6 +98,7 @@ class SectionHeader extends React.Component {
   render() {
     const {
       text,
+      title,
       onClick,
       isOpen,
       isTransparent,
@@ -124,7 +130,12 @@ class SectionHeader extends React.Component {
       customProps.className,
     );
 
+    if (title) {
+      // eslint-disable-next-line no-console
+      console.warn('`title` prop has been renamed to `text`. please update all the refernces of `title` prop to use prop `text`.'); // to be removed on next major version release.
+    }
     const Element = `h${level}`;
+    const headerText = text || title;
 
     const headerAttributes = { ...customProps };
     const buttonAttributes = {};
@@ -135,7 +146,7 @@ class SectionHeader extends React.Component {
       buttonAttributes.ref = this.focusableElementRef;
       buttonAttributes.type = 'button';
       buttonAttributes['aria-expanded'] = isOpen;
-      buttonAttributes['aria-label'] = text;
+      buttonAttributes['aria-label'] = headerText;
       buttonAttributes.onKeyDown = this.wrapOnKeyDown(headerAttributes.onKeyDown);
       buttonAttributes.onKeyUp = this.wrapOnKeyUp(headerAttributes.onKeyUp);
       buttonAttributes.onClick = onClick;
@@ -150,11 +161,11 @@ class SectionHeader extends React.Component {
     }
 
     return (
-      <Element {...headerAttributes} className={sectionHeaderClassNames} aria-label={!onClick ? text : undefined}>
+      <Element {...headerAttributes} className={sectionHeaderClassNames} aria-label={!onClick ? headerText : undefined}>
         <ArrangeWrapper {...buttonAttributes} className={cx('arrange-wrapper')}>
           <Arrange
             fitStart={onClick && accordionIcon}
-            fill={<span aria-hidden={(onClick !== undefined)} className={cx('title')}>{text}</span>}
+            fill={<span aria-hidden={(onClick !== undefined)} className={cx('title')}>{headerText}</span>}
             className={cx('title-arrange')}
           />
         </ArrangeWrapper>

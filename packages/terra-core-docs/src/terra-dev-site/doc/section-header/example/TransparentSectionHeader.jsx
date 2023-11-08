@@ -10,6 +10,6 @@ const sectionHeaderProps = {
   isTransparent: true,
 };
 
-const TransparentSectionHeader = () => <SectionHeaderExampleTemplate exampleProps={sectionHeaderProps} />;
+const TransparentSectionHeader = () => <SectionHeaderExampleTemplate text="Transparent Section Header" exampleProps={sectionHeaderProps} />;
 
 export default TransparentSectionHeader;

@@ -6,6 +6,6 @@ const sectionHeaderProps = {
   onClick: () => {},
 };
 
-const ClosedSectionHeader = () => <SectionHeaderExampleTemplate exampleProps={sectionHeaderProps} />;
+const ClosedSectionHeader = () => <SectionHeaderExampleTemplate text="Closed Section Header" exampleProps={sectionHeaderProps} />;
 
 export default ClosedSectionHeader;
