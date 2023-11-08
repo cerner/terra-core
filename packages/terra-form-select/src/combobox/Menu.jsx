@@ -146,11 +146,10 @@ class Menu extends React.Component {
     })) {
       children.unshift(<ClearOption display={clearOptionDisplay} value="" />);
     }
+
     if (children.map(x => x.key).filter(x => x != null).length && !hasNoResults) {
       if (searchValue.trim().length > 0) {
         children.unshift(<SearchResults searchResultContent={<FormattedMessage id="Terra.form.select.resultsText" values={{ text: searchValue }} />} />);
-      } else {
-        children.unshift(<SearchResults searchResultContent={<FormattedMessage id="Terra.form.select.defaultComboboxDisplay" />} />);
       }
     }
 
