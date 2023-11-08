@@ -150,6 +150,7 @@ class Frame extends React.Component {
       isPositioned: false,
       hasSearchChanged: false,
       searchValue: '',
+      hasEscPressed: false,
     };
 
     this.ariaLabel = this.ariaLabel.bind(this);
@@ -257,8 +258,15 @@ class Frame extends React.Component {
       event.preventDefault();
       this.openDropdown(event);
     } else if (this.state.isOpen && keyCode === KeyCode.KEY_ESCAPE) {
-      event.stopPropagation();
-      this.closeDropdown();
+      this.setState({ hasEscPressed: true }, () => {
+        event.stopPropagation();
+        this.closeDropdown();
+      });
+    } else if (!this.state.isOpen && keyCode === KeyCode.KEY_ESCAPE && this.state.hasEscPressed) {
+      this.setState({ hasEscPressed: false }, () => {
+        event.stopPropagation();
+        this.closeDropdown();
+      });
     }
   }
 
@@ -410,9 +418,13 @@ class Frame extends React.Component {
       isFocused: document.activeElement === this.input || document.activeElement === this.select,
       isOpen: false,
       isPositioned: false,
-      hasSearchChanged: false,
-      searchValue: '',
     });
+    if (!this.state.hasEscPressed) {
+      this.setState({
+        hasSearchChanged: false,
+        searchValue: '',
+      });
+    }
   }
 
   /**
