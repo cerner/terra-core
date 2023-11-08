@@ -16,7 +16,8 @@
 ## 1.48.0 - (November 2, 2023)
 
 * Updated
-  *  Updated example for selection state of Fusion-Button in `terra-button`.
+  * Updated example for selection state of Fusion-Button in `terra-button`.
+  * Updated examples and tests for `terra-section-header` for accessibility changes.
 
 ## 1.47.0 - (October 26, 2023)
 
