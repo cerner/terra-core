@@ -184,13 +184,10 @@ exports[`Frame correctly applies the theme context className for multiple varian
 
 exports[`Frame correctly applies the theme context className for search variant 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-14"
   aria-disabled="false"
-  aria-expanded="false"
   aria-haspopup="true"
   class="select search orion-fusion-theme"
   data-terra-select-combobox="true"
-  role="application"
   tabindex="-1"
 >
   <div
@@ -217,9 +214,11 @@ exports[`Frame correctly applies the theme context className for search variant 
       <input
         aria-describedby="terra-select-screen-reader-description-14"
         aria-disabled="false"
+        aria-expanded="false"
         aria-label="Terra.form.select.ariaLabel"
         aria-required="false"
         class="search-input"
+        role="combobox"
         type="text"
       />
     </div>

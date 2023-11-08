@@ -386,11 +386,13 @@ class Frame extends React.Component {
       'aria-describedby': ariaDescribedBy,
       'aria-disabled': disabled,
       'aria-owns': this.state.isOpen ? id : undefined,
+      'aria-expanded': !disabled && this.state.isOpen,
       type: 'text',
       className: cx('search-input', { 'is-hidden': FrameUtil.shouldHideSearch(this.props, this.state) }),
       required,
       'aria-required': required,
       id: inputId,
+      role: this.role(),
     };
     const value = hasSearchChanged ? searchValue : display;
 
@@ -512,8 +514,8 @@ class Frame extends React.Component {
    */
   role() {
     const { disabled } = this.props;
-    // role="application" needed to allow JAWS to work correctly with the select and use our key event listeners
-    return disabled ? undefined : 'application';
+    // updated role to combobox
+    return disabled ? undefined : 'combobox';
   }
 
   /**
@@ -670,14 +672,10 @@ class Frame extends React.Component {
     return (
       <div
         {...customProps}
-        role={this.role()}
         data-terra-select-combobox
         aria-controls={!disabled && this.state.isOpen ? this.menuId : undefined}
         aria-disabled={!!disabled}
-        aria-expanded={!!disabled && !!this.state.isOpen}
         aria-haspopup={!disabled ? 'true' : undefined}
-        aria-describedby={ariaDescribedBy}
-        aria-owns={this.state.isOpen ? this.menuId : undefined}
         className={selectClasses}
         onBlur={this.handleBlur}
         onFocus={this.handleFocus}
