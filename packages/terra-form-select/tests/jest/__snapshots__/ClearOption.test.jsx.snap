@@ -39,76 +39,42 @@ exports[`ClearOption correctly applies the theme context className 1`] = `
     display="Clear"
     value=""
   >
-    <InjectIntl(Option)
+    <Option
       className="clear-option orion-fusion-theme"
       data-terra-select-clear-option={true}
+      disabled={false}
       display="Clear"
       isSelected={false}
       value=""
     >
-      <Option
-        className="clear-option orion-fusion-theme"
+      <li
+        aria-disabled={false}
+        aria-label="Clear"
+        aria-selected={false}
+        className="option is-default orion-fusion-theme clear-option orion-fusion-theme"
         data-terra-select-clear-option={true}
+        data-terra-select-option={true}
         disabled={false}
-        display="Clear"
-        intl={
-          Object {
-            "defaultFormats": Object {},
-            "defaultLocale": "en",
-            "formatDate": [Function],
-            "formatHTMLMessage": [Function],
-            "formatMessage": [Function],
-            "formatNumber": [Function],
-            "formatPlural": [Function],
-            "formatRelative": [Function],
-            "formatTime": [Function],
-            "formats": Object {},
-            "formatters": Object {
-              "getDateTimeFormat": [Function],
-              "getMessageFormat": [Function],
-              "getNumberFormat": [Function],
-              "getPluralFormat": [Function],
-              "getRelativeFormat": [Function],
-            },
-            "locale": "en",
-            "messages": null,
-            "now": [Function],
-            "onError": [Function],
-            "textComponent": "span",
-            "timeZone": null,
-          }
-        }
-        isSelected={false}
-        value=""
+        role="option"
+        tabIndex="0"
       >
-        <li
-          aria-disabled={false}
-          aria-label="Clear"
-          aria-selected={false}
-          className="option is-default orion-fusion-theme clear-option orion-fusion-theme"
-          data-terra-select-clear-option={true}
-          data-terra-select-option={true}
-          disabled={false}
-          role="option"
-          tabIndex="0"
+        <span
+          className="display"
+          data-terra-add-option={true}
         >
-          <span
-            className="display"
-            data-terra-add-option={true}
-          >
-            Clear
-          </span>
-        </li>
-      </Option>
-    </InjectIntl(Option)>
+          Clear
+        </span>
+      </li>
+    </Option>
   </ClearOption>
 </ThemeContextProvider>
 `;
 
 exports[`ClearOption should render a default ClearOption 1`] = `
-<InjectIntl(Option)
+<Option
   className="clear-option"
   data-terra-select-clear-option={true}
+  disabled={false}
   display="Clear"
   intl={
     Object {

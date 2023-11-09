@@ -1,6 +1,5 @@
 {
   "Terra.form.select.add": "\"{text}\" hinzufügen",
-  "Terra.form.select.addText": "hinzufügen ",
   "Terra.form.select.ariaLabel": "Suchen",
   "Terra.form.select.defaultDisplay": "- Auswählen -",
   "Terra.form.select.maxSelectionHelp": "{text} Elemente begrenzen.",

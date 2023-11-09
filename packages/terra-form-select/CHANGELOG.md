@@ -4,7 +4,6 @@
 
 * Changed
   * Change role from application to combobox in `terra-form-select-combobox`.
-  * Replace +Add text to button in the dropdown list in  `terra-form-select-combobox`.
   * Ability to close dropdown and clear text by ESC key in `terra-form-select-combobox`.
 
 * Added
@@ -19,7 +18,7 @@
 
 * Changed
   * Fixed Cyclic navigation and added aria-required to single select.
-  * Added relevant roles to fix a11y issues. 
+  * Added relevant roles to fix a11y issues.
 
 ## 6.47.0 - (September 21, 2023)
 

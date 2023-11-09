@@ -189,6 +189,7 @@ class Frame extends React.Component {
     this.visuallyHiddenComponent = React.createRef();
     this.setSelectMenuRef = this.setSelectMenuRef.bind(this);
     this.shouldFocusDropdown = false;
+    this.hasEscPressed = false;
   }
 
   componentDidMount() {
@@ -268,15 +269,13 @@ class Frame extends React.Component {
       event.preventDefault();
       this.openDropdown(event);
     } else if (this.state.isOpen && keyCode === KeyCode.KEY_ESCAPE) {
-      this.setState({ hasEscPressed: true }, () => {
-        event.stopPropagation();
-        this.closeDropdown();
-      });
-    } else if (!this.state.isOpen && keyCode === KeyCode.KEY_ESCAPE && this.state.hasEscPressed) {
-      this.setState({ hasEscPressed: false }, () => {
-        event.stopPropagation();
-        this.closeDropdown();
-      });
+      this.hasEscPressed = true;
+      event.stopPropagation();
+      this.closeDropdown(true);
+    } else if (!this.state.isOpen && keyCode === KeyCode.KEY_ESCAPE && this.hasEscPressed) {
+      this.hasEscPressed = false;
+      event.stopPropagation();
+      this.closeDropdown(false);
     }
   }
 
@@ -424,14 +423,14 @@ class Frame extends React.Component {
   /**
    * Closes the dropdown.
    */
-  closeDropdown() {
+  closeDropdown(hasEscPressed) {
     this.setState({
       isAbove: false,
       isFocused: document.activeElement === this.input || document.activeElement === this.select,
       isOpen: false,
       isPositioned: false,
     });
-    if (!this.state.hasEscPressed) {
+    if (!hasEscPressed) {
       this.setState({
         hasSearchChanged: false,
         searchValue: '',

@@ -1,6 +1,5 @@
 {
   "Terra.form.select.add": "Lisätä \"{text}\"",
-  "Terra.form.select.addText": "Lisätä ",
   "Terra.form.select.ariaLabel": "Haku",
   "Terra.form.select.defaultDisplay": "- Valitat -",
   "Terra.form.select.maxSelectionHelp": "Rajoita {text} kohdetta.",

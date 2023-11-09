@@ -35,23 +35,28 @@ exports[`should render a default SelectField component 1`] = `
     required={false}
     variant="default"
   >
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Blue"
       value="blue"
     />
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Green"
       value="green"
     />
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Purple"
       value="purple"
     />
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Red"
       value="red"
     />
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Violet"
       value="violet"
     />
@@ -95,23 +100,28 @@ exports[`should render a default SelectField component with attributes spread on
     required={false}
     variant="default"
   >
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Blue"
       value="blue"
     />
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Green"
       value="green"
     />
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Purple"
       value="purple"
     />
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Red"
       value="red"
     />
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Violet"
       value="violet"
     />
@@ -154,23 +164,28 @@ exports[`should render a disabled SelectField component 1`] = `
     required={false}
     variant="default"
   >
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Blue"
       value="blue"
     />
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Green"
       value="green"
     />
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Purple"
       value="purple"
     />
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Red"
       value="red"
     />
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Violet"
       value="violet"
     />
@@ -213,23 +228,28 @@ exports[`should render a disabled SelectField component via selectAttrs 1`] = `
     required={false}
     variant="default"
   >
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Blue"
       value="blue"
     />
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Green"
       value="green"
     />
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Purple"
       value="purple"
     />
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Red"
       value="red"
     />
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Violet"
       value="violet"
     />
@@ -273,23 +293,28 @@ exports[`should render a max height SelectField component 1`] = `
     required={false}
     variant="default"
   >
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Blue"
       value="blue"
     />
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Green"
       value="green"
     />
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Purple"
       value="purple"
     />
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Red"
       value="red"
     />
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Violet"
       value="violet"
     />
@@ -335,23 +360,28 @@ exports[`should render a multiple SelectField component that limits the selectio
     required={false}
     variant="multiple"
   >
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Blue"
       value="blue"
     />
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Green"
       value="green"
     />
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Purple"
       value="purple"
     />
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Red"
       value="red"
     />
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Violet"
       value="violet"
     />
@@ -410,23 +440,28 @@ exports[`should render a required SelectField component 1`] = `
     required={true}
     variant="default"
   >
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Blue"
       value="blue"
     />
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Green"
       value="green"
     />
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Purple"
       value="purple"
     />
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Red"
       value="red"
     />
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Violet"
       value="violet"
     />
@@ -469,23 +504,28 @@ exports[`should render an incomplete SelectField component 1`] = `
     required={false}
     variant="default"
   >
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Blue"
       value="blue"
     />
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Green"
       value="green"
     />
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Purple"
       value="purple"
     />
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Red"
       value="red"
     />
-    <InjectIntl(Option)
+    <Option
+      disabled={false}
       display="Violet"
       value="violet"
     />
