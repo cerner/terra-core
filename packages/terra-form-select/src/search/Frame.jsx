@@ -524,7 +524,6 @@ class Frame extends React.Component {
    */
   role() {
     const { disabled } = this.props;
-    // updated role to combobox
     return disabled ? undefined : 'combobox';
   }
 
