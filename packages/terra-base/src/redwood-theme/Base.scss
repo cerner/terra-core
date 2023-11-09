@@ -1,0 +1,107 @@
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    src: url("https://www.oracle.com/asset/web/fonts/OracleSans-Lt.woff2") format("woff2"), url("https://www.oracle.com/asset/web/fonts/OracleSans-Lt.woff") format("woff");
+    font-weight: 200;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    src: url("https://www.oracle.com/asset/web/fonts/OracleSans-LtIt.woff2") format("woff2"), url("https://www.oracle.com/asset/web/fonts/OracleSans-LtIt.woff") format("woff");
+    font-weight: 200;
+    font-style:italic
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    src: url("https://www.oracle.com/asset/web/fonts/OracleSans-Rg.woff2") format("woff2"), url("https://www.oracle.com/asset/web/fonts/OracleSans-Rg.woff") format("woff");
+    font-weight: 300;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    src: url("https://www.oracle.com/asset/web/fonts/OracleSans-It.woff2") format("woff2"), url("https://www.oracle.com/asset/web/fonts/OracleSans-It.woff") format("woff");
+    font-weight: 300;
+    font-style:italic
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    src: url("https://www.oracle.com/asset/web/fonts/OracleSans-SBd.woff2") format("woff2"), url("https://www.oracle.com/asset/web/fonts/OracleSans-SBd.woff") format("woff");
+    font-weight: 400;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    src: url("https://www.oracle.com/asset/web/fonts/OracleSans-SBdIt.woff2") format("woff2"), url("https://www.oracle.com/asset/web/fonts/OracleSans-SBdIt.woff") format("woff");
+    font-weight: 400;
+    font-style:italic
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    src: url("https://www.oracle.com/asset/web/fonts/OracleSans-Bd.woff2") format("woff2"), url("https://www.oracle.com/asset/web/fonts/OracleSans-Bd.woff") format("woff");
+    font-weight: 700;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    src: url("https://www.oracle.com/asset/web/fonts/OracleSans-BdIt.woff2") format("woff2"), url("https://www.oracle.com/asset/web/fonts/OracleSans-BdIt.woff") format("woff");
+    font-weight: 700;
+    font-style:italic
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    src: url("https://www.oracle.com/asset/web/fonts/OracleSans-XBd.woff2") format("woff2"), url("https://www.oracle.com/asset/web/fonts/OracleSans-XBd.woff") format("woff");
+    font-weight: 800;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    src: url("https://www.oracle.com/asset/web/fonts/OracleSans-XBdIt.woff2") format("woff2"), url("https://www.oracle.com/asset/web/fonts/OracleSans-XBdIt.woff") format("woff");
+    font-weight: 800;
+    font-style:italic
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans Condensed";
+    src: url("https://www.oracle.com/asset/web/fonts/OracleSans-Bd.woff2") format("woff2"), url("https://www.oracle.com/asset/web/fonts/OracleSans-Bd.woff") format("woff");
+    font-weight: 500;
+    font-style:normal
+}
+
+:global {
+  .redwood-theme {
+    --terra-base-background-attachment: scroll;
+    --terra-base-background-color: rgba(255, 255, 255, 1);
+    --terra-base-background-image: none;
+    --terra-base-background-position: none;
+    --terra-base-background-repeat: none;
+    --terra-base-background-size: auto;
+    --terra-base-font-family: var(--rds-sans-serif-font-family);
+    --terra-base-font-size: 75%;            // root: 16px, base: 14px
+    --terra-base-font-weight: 300;
+    --terra-base-html-height: 100%;
+    --terra-base-html-margin: 0;
+    --terra-base-color: #1c1f21;
+    --terra-base-body-height: 100%;
+    --terra-base-line-height: 1.4285694285714286;
+    --terra-base-body-margin: 0;
+  }
+}

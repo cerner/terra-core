@@ -1,6 +1,7 @@
 // Themes
 @import './clinical-lowlight-theme/Base';
 @import './orion-fusion-theme/Base';
+@import './redwood-theme/Base';
 
 html {
   background-attachment: var(--terra-base-background-attachment);
@@ -14,6 +15,7 @@ html {
   box-sizing: border-box;
   font-family: var(--terra-base-font-family, 'Helvetica Neue', Helvetica, Arial, sans-serif);
   font-size: var(--terra-base-font-size, 87.5%);
+  font-weight: var(--terra-base-font-weight, 400);
   height: var(--terra-base-html-height, 100%);
   margin: var(--terra-base-html-margin, 0);
   text-size-adjust: 100%;
