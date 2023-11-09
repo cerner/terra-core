@@ -42,5 +42,9 @@
     --terra-tag-icon-margin-top: 0;
     --terra-tag-icon-height: 1rem;
     --terra-tag-icon-width: 1rem;
+
+    // RollupTag Focus Dashed Border
+    --terra-tags-rollup-tag-focus-outline: 2px dashed #000;
+    --terra-tags-rollup-tag-focus-outline-offset: 2px;
   }
 }

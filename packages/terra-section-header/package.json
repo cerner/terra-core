@@ -1,30 +1,26 @@
 {
   "name": "terra-section-header",
-  "main": "lib/SectionHeader.js",
   "version": "2.63.0",
   "description": "Section Header component that contains text and can be optionally interacted with.",
+  "author": "Cerner Corporation",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git",
     "directory": "packages/terra-section-header"
   },
-  "keywords": [
-    "Cerner",
-    "Terra",
-    "terra-section-header",
-    "SectionHeader",
-    "UI"
-  ],
-  "author": "Cerner Corporation",
-  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/cerner/terra-core/issues"
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
-  "peerDependencies": {
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5"
-  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "Cerner",
+    "SectionHeader",
+    "Terra",
+    "terra-section-header",
+    "UI"
+  ],
+  "main": "lib/SectionHeader.js",
   "dependencies": {
     "classnames": "^2.2.5",
     "keycode-js": "^3.1.0",
@@ -32,6 +28,10 @@
     "terra-arrange": "^3.54.0",
     "terra-mixins": "^1.40.0",
     "terra-theme-context": "^1.0.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",
