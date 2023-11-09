@@ -260,11 +260,11 @@ class Frame extends React.Component {
     } else if (this.state.isOpen && keyCode === KeyCode.KEY_ESCAPE) {
       this.hasEscPressed = true;
       event.stopPropagation();
-      this.closeDropdown(true);
+      this.closeDropdown();
     } else if (!this.state.isOpen && keyCode === KeyCode.KEY_ESCAPE && this.hasEscPressed) {
       this.hasEscPressed = false;
       event.stopPropagation();
-      this.closeDropdown(false);
+      this.closeDropdown();
     }
   }
 
@@ -412,14 +412,14 @@ class Frame extends React.Component {
   /**
    * Closes the dropdown.
    */
-  closeDropdown(hasEscPressed) {
+  closeDropdown() {
     this.setState({
       isAbove: false,
       isFocused: document.activeElement === this.input || document.activeElement === this.select,
       isOpen: false,
       isPositioned: false,
     });
-    if (!hasEscPressed) {
+    if (!this.hasEscPressed) {
       this.setState({
         hasSearchChanged: false,
         searchValue: '',
