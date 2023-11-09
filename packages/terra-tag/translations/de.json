@@ -1,0 +1,14 @@
+{
+  "Terra.tags.label.delete": "{tagLabelName} entfernen",
+  "Terra.tags.label.rollupTag": "{tagsNotVisibleCount} weitere",
+  "Terra.tags.label.showLess": "Weniger anzeigen",
+  "Terra.tags.hint.removable": "Element kann mit Löschen oder Zurück entfernt werden",
+  "Terra.tags.hint.selectable": "Für weitere Informationen ist die Schaltfläche über die Leertaste oder die Eingabetaste auswählbar",
+  "Terra.tags.hint.selectableAndRemovable": "Element kann mit Löschen oder Zurück entfernt werden. Für weitere Informationen ist die Schaltfläche über die Leertaste oder die Eingabetaste auswählbar.",
+  "Terra.tags.hint.wasRemoved": "{tagLabelName} entfernt",
+  "Terra.tags.hint.rollupTag": "{tagsNotVisibleCount} Elemente sind ausgeblendet. Wählen, um {tagsNotVisibleCount} ausgeblendete Elemente anzuzeigen.",
+  "Terra.tags.hint.showLess": "wählen, um Elemente auszublenden",
+  "Terra.tags.hint.rollupNotVisible": "{tagsNotVisibleCount} Elemente werden nicht angezeigt",
+  "Terra.tags.hint.rollupVisible": "{tagsNotVisibleCount} ausgeblendete Elemente werden jetzt angezeigt",
+  "Terra.tags.hint.tagList": "Enthält {numberOfTags} Elemente"
+}

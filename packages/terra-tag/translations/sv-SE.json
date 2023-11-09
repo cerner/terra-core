@@ -1,0 +1,14 @@
+{
+  "Terra.tags.label.delete": "Ta bort {tagLabelName}",
+  "Terra.tags.label.rollupTag": "{tagsNotVisibleCount} fler",
+  "Terra.tags.label.showLess": "Visa färre",
+  "Terra.tags.hint.removable": "objektet kan tas bort med Delete-tangenten eller Backstegstangenten",
+  "Terra.tags.hint.selectable": "för ytterligare information kan knappen väljas med Blankstegstangenten eller Retur-tangenten.",
+  "Terra.tags.hint.selectableAndRemovable": "objektet kan tas bort med Delete-tangenten eller Backstegstangenten, för ytterligare information kan knappen väljas med Blankstegstangenten eller Retur-tangenten",
+  "Terra.tags.hint.wasRemoved": "{tagLabelName} har tagits bort",
+  "Terra.tags.hint.rollupTag": "{tagsNotVisibleCount} objekt är dolda. Välj för att visa {tagsNotVisibleCount} dolda objekt",
+  "Terra.tags.hint.showLess": "välj för att dölja objekt",
+  "Terra.tags.hint.rollupNotVisible": "{tagsNotVisibleCount} objekt visas inte",
+  "Terra.tags.hint.rollupVisible": "{tagsNotVisibleCount} dolda objekt visas nu",
+  "Terra.tags.hint.tagList": "Innehåller {numberOfTags} objekt"
+}
