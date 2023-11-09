@@ -433,6 +433,7 @@ class Frame extends React.Component {
         hasSearchChanged: false,
         searchValue: '',
       });
+      this.props.onSelect('');
     }
   }
 
