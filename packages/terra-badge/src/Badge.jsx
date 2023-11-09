@@ -106,7 +106,6 @@ const Badge = ({
   );
 
   const textContent = text ? <span className={styles.text}>{text}</span> : null;
-  // const intentText = intent !== BadgeIntent.DEFAULT ? <VisuallyHiddenText text={intl.formatMessage({ id: `Terra.badge.intent.${intent}` })} /> : null;
   const visuallyHiddenTextContent = visuallyHiddenText ? <VisuallyHiddenText text={visuallyHiddenText} /> : null;
   const content = isReversed ? [textContent, visuallyHiddenTextContent, icon, customProps.children] : [icon, textContent, visuallyHiddenTextContent, customProps.children];
   return React.createElement('span', { ...customProps, className: badgeClassNames }, ...content);
