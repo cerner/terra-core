@@ -4,6 +4,7 @@
 
 * Changed
   * Update props description in props table.
+  * Removed hidden text to announce the intent of the badge.
 
 ## 3.58.0 - (October 16, 2023)
 
