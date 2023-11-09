@@ -184,7 +184,6 @@ class Frame extends React.Component {
     this.handleToggleButtonMouseDown = this.handleToggleButtonMouseDown.bind(this);
     this.handleTouchStart = this.handleTouchStart.bind(this);
     this.menuId = `terra-select-menu-${uniqueid()}`;
-    this.role = this.role.bind(this);
     this.visuallyHiddenComponent = React.createRef();
     this.setSelectMenuRef = this.setSelectMenuRef.bind(this);
     this.shouldFocusDropdown = false;
@@ -408,7 +407,7 @@ class Frame extends React.Component {
       required,
       'aria-required': required,
       id: inputId,
-      role: this.role(),
+      role: 'combobox',
     };
     const value = hasSearchChanged ? searchValue : display;
 
@@ -528,14 +527,6 @@ class Frame extends React.Component {
     }
 
     return ariaLabel === undefined ? defaultAriaLabel : ariaLabel;
-  }
-
-  /**
-   * Determines compatible role attribute to apply to select based on active variant and disabled prop
-   */
-  role() {
-    const { disabled } = this.props;
-    return disabled ? undefined : 'combobox';
   }
 
   /**
