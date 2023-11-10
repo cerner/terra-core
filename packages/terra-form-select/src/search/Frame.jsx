@@ -115,6 +115,11 @@ const propTypes = {
    * The select value.
    */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
+  /**
+   * @private
+   * Callback function to reset input value after search
+   */
+  resetComboboxValue: PropTypes.func,
 };
 
 const defaultProps = {
@@ -262,8 +267,14 @@ class Frame extends React.Component {
       this.closeDropdown();
     } else if (!this.state.isOpen && keyCode === KeyCode.KEY_ESCAPE && this.hasEscPressed) {
       this.hasEscPressed = false;
+      if (this.props.resetComboboxValue) {
+        this.props.resetComboboxValue();
+      }
+      this.setState({
+        hasSearchChanged: false,
+        searchValue: '',
+      });
       event.stopPropagation();
-      this.closeDropdown();
     }
   }
 
@@ -418,13 +429,6 @@ class Frame extends React.Component {
       isOpen: false,
       isPositioned: false,
     });
-    if (!this.hasEscPressed) {
-      this.setState({
-        hasSearchChanged: false,
-        searchValue: '',
-      });
-      this.props.onSelect('');
-    }
   }
 
   /**

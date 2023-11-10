@@ -541,15 +541,6 @@ Terra.describeViewports('Select', ['tiny'], () => {
         Terra.validates.element('combobox no results displayed on search', { selector: '#root' });
       });
 
-      it('should enter a free text entry in combobox and close list item by pressing escape and clear the free text by pressing again escape', () => {
-        $('[data-terra-select] input').setValue('Black');
-        Terra.validates.element('combobox displayed Add button with typed free text', { selector: '#root' });
-        browser.keys('Escape');
-        Terra.validates.element('combobox dropdown list close by first escape', { selector: '#root' });
-        browser.keys('Escape');
-        Terra.validates.element('combobox cleared entered text by second escape', { selector: '#root' });
-      });
-
       after(() => {
         // remove backspace that is added to the input. Bug logged here: https://github.com/cerner/terra-core/issues/2414
         browser.keys('Backspace');
@@ -864,6 +855,21 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
 
       after(() => $('#root').click());
+    });
+  });
+
+  describe('Combobox uncontrolled free text clear by escape key press', () => {
+    before(() => {
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/uncontrolled-combobox');
+    });
+
+    it('should enter a free text entry in combobox and close list item by pressing escape and clear the free text by pressing again escape', () => {
+      $('[data-terra-select] input').setValue('Black');
+      Terra.validates.element('combobox displayed Add button with typed free text', { selector: '#root' });
+      browser.keys('Escape');
+      Terra.validates.element('combobox dropdown list close by first escape', { selector: '#root' });
+      browser.keys('Escape');
+      Terra.validates.element('combobox cleared entered text by second escape', { selector: '#root' });
     });
   });
 
