@@ -280,8 +280,11 @@ class Frame extends React.Component {
       if (this.props.resetComboboxValue) {
         this.props.resetComboboxValue();
       }
+      this.setState({
+        hasSearchChanged: false,
+        searchValue: '',
+      });
       event.stopPropagation();
-      this.closeDropdown();
     }
   }
 
@@ -436,12 +439,6 @@ class Frame extends React.Component {
       isOpen: false,
       isPositioned: false,
     });
-    if (!this.hasEscPressed) {
-      this.setState({
-        hasSearchChanged: false,
-        searchValue: '',
-      });
-    }
   }
 
   /**
