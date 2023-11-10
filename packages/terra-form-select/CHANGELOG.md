@@ -3,8 +3,8 @@
 ## Unreleased
 
 * Changed
-  * Change role from application to combobox in `terra-form-select-combobox`.
-  * Ability to close dropdown and clear text by ESC key in `terra-form-select-combobox`.
+  * Changed role from application to combobox in `terra-form-select-combobox`.
+  * Updated keydown handler to clear the text on `ESC` key press in `terra-form-select-combobox`.
 
 * Added
   * Added results that contain in `terra-form-select-combobox`.
