@@ -25,5 +25,7 @@
   "Terra.form.select.selectCleared": "Selecionar valor limpo",
   "Terra.form.select.menu": "Menu",
   "Terra.form.select.option": "Opções",
-  "Terra.form.select.optGroup": "Grupo {text}"
+  "Terra.form.select.optGroup": "Grupo {text}",
+  "Terra.form.select.defaultComboboxDisplay": "Selecione ou pressione Enter",
+  "Terra.form.select.resultsText": "Resultados que contém \"{text}\""
 }

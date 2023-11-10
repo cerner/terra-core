@@ -89,7 +89,7 @@ const propTypes = {
    */
   optionFilter: PropTypes.func,
   /**
-   * Placeholder text.
+   * Placeholder text. defaults to 'Select or Enter'
    */
   placeholder: PropTypes.string,
   /**
@@ -203,7 +203,7 @@ class Combobox extends React.Component {
       allowClear, children, defaultValue, onChange, placeholder, required, value, intl, inputId, ...otherProps
     } = this.props;
 
-    const defaultPlaceholder = intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' });
+    const defaultPlaceholder = intl.formatMessage({ id: 'Terra.form.select.defaultComboboxDisplay' });
     const selectPlaceholder = placeholder === undefined ? defaultPlaceholder : placeholder;
     let clearOptionDisplay;
 
