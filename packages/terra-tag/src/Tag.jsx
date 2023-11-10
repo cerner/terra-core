@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
-import * as KeyCode from 'keycode-js';
 import styles from './Tag.module.scss';
 
 const cx = classNamesBind.bind(styles);
@@ -42,27 +41,26 @@ const propTypes = {
 class Tag extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { focused: false };
     this.handleKeyUp = this.handleKeyUp.bind(this);
     this.handleOnBlur = this.handleOnBlur.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleOnBlur(event) {
-    this.setState({ focused: false });
-
     if (this.props.onBlur) {
       this.props.onBlur(event);
     }
   }
 
   handleKeyUp(event) {
-    // Apply focus styles for keyboard navigation
-    if (event.nativeEvent.keyCode === KeyCode.KEY_TAB) {
-      this.setState({ focused: true });
-    }
-
     if (this.props.onKeyUp) {
       this.props.onKeyUp(event);
+    }
+  }
+
+  handleClick(event) {
+    if (this.props.onClick) {
+      this.props.onClick(event);
     }
   }
 
@@ -83,7 +81,6 @@ class Tag extends React.Component {
     const tagClasses = classNames(
       cx(
         'tag',
-        { 'is-focused': this.state.focused },
         { 'is-interactive': href || onClick },
         { 'has-underline': href },
         theme.className,
@@ -104,9 +101,10 @@ class Tag extends React.Component {
         className={tagClasses}
         onKeyUp={this.handleKeyUp}
         onBlur={this.handleOnBlur}
-        onClick={onClick}
+        onClick={this.handleClick}
         onFocus={onFocus}
         href={href}
+        data-terra-tag
       >
         {tagIcon}
         {text}

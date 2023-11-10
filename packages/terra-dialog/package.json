@@ -1,31 +1,26 @@
 {
   "name": "terra-dialog",
-  "main": "lib/Dialog.js",
   "version": "2.83.0",
   "description": "Dialogs are temporary views that can be used in a myriad of ways. Dialogs have the ability to alert users to act on critical information. In doing so, Dialogs may allow users to avoid destructive decisions, and also extend user workflows without disorienting the user.",
+  "author": "Cerner Corporation",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git",
     "directory": "packages/terra-dialog"
   },
-  "keywords": [
-    "Cerner",
-    "Terra",
-    "terra-dialog",
-    "Dialog",
-    "UI"
-  ],
-  "author": "Cerner Corporation",
-  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/cerner/terra-core/issues"
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
-  "peerDependencies": {
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5",
-    "react-intl": ">=2.8.0 <6.0.0"
-  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "Cerner",
+    "Dialog",
+    "Terra",
+    "terra-dialog",
+    "UI"
+  ],
+  "main": "lib/Dialog.js",
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
@@ -34,6 +29,11 @@
     "terra-icon": "^3.58.0",
     "terra-mixins": "^1.40.0",
     "terra-theme-context": "^1.0.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "react-intl": ">=2.8.0 <6.0.0"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",

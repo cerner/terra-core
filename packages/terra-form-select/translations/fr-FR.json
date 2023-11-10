@@ -25,5 +25,7 @@
   "Terra.form.select.selectCleared": "Valeur sélectionnée effacée.",
   "Terra.form.select.menu": "Menu",
   "Terra.form.select.option": "Options",
-  "Terra.form.select.optGroup": "Groupe {text}"
+  "Terra.form.select.optGroup": "Groupe {text}",
+  "Terra.form.select.defaultComboboxDisplay": "Sélectionner ou saisir",
+  "Terra.form.select.resultsText": "Résultats contenant « {text} »"
 }

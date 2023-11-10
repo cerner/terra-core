@@ -2,38 +2,33 @@
   "name": "@cerner/terra-core-docs",
   "version": "1.49.0",
   "description": "Contains documentation for packages in the terra-core monorepo",
-  "main": "index.js",
-  "publishConfig": {
-    "access": "public"
-  },
+  "author": "Cerner Corporation",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git",
     "directory": "packages/terra-core-docs"
   },
+  "bugs": {
+    "url": "https://github.com/cerner/terra-core/issues"
+  },
+  "homepage": "https://github.com/cerner/terra-core",
+  "license": "Apache-2.0",
   "keywords": [
     "Cerner",
     "Terra",
     "terra-core-docs"
   ],
-  "author": "Cerner Corporation",
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/cerner/terra-core/issues"
+  "publishConfig": {
+    "access": "public"
   },
   "engines": {
     "node": "^10.0.0 || ^12.0.0 || ^14.0.0"
   },
-  "homepage": "https://github.com/cerner/terra-core",
+  "main": "index.js",
   "files": [
     "lib",
     "src"
   ],
-  "scripts": {
-    "compile": "babel --root-mode upward src --out-dir lib --copy-files",
-    "lint": "eslint --ext .js,.jsx .",
-    "precompile": "rm -rf lib"
-  },
   "dependencies": {
     "@cerner/terra-docs": "^1.9.0",
     "moment": "^2.29.4",
@@ -93,5 +88,10 @@
     "terra-toggle-section-header": "^2.71.0",
     "terra-toolbar": "^1.40.0",
     "terra-visually-hidden-text": "^2.36.0"
+  },
+  "scripts": {
+    "compile": "babel --root-mode upward src --out-dir lib --copy-files",
+    "lint": "eslint --ext .js,.jsx .",
+    "precompile": "rm -rf lib"
   }
 }

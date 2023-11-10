@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import { polyfill } from 'react-lifecycles-compat';
-import { injectIntl } from 'react-intl';
+import { injectIntl, FormattedMessage } from 'react-intl';
 import * as KeyCode from 'keycode-js';
 import AddOption from '../shared/_AddOption';
 import ClearOption from '../shared/_ClearOption';
 import MenuUtil from '../shared/_MenuUtil';
 import SharedUtil from '../shared/_SharedUtil';
+import SearchResults from '../shared/_SearchResults';
 import styles from '../shared/_Menu.module.scss';
 import NoResults from '../shared/_NoResults';
 
@@ -144,6 +145,12 @@ class Menu extends React.Component {
       clearOptionDisplay, searchValue, hasAddOption, hasNoResults,
     })) {
       children.unshift(<ClearOption display={clearOptionDisplay} value="" />);
+    }
+
+    if (children.map(x => x.key).filter(x => x != null).length && !hasNoResults) {
+      if (searchValue.trim().length > 0) {
+        children.unshift(<SearchResults searchResultContent={<FormattedMessage id="Terra.form.select.resultsText" values={{ text: searchValue }} />} />);
+      }
     }
 
     return {

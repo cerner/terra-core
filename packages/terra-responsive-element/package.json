@@ -1,36 +1,36 @@
 {
   "name": "terra-responsive-element",
-  "main": "lib/ResponsiveElement.js",
   "version": "5.38.0",
   "description": "The terra-responsive-element conditionally renders components based on viewport size",
+  "author": "Cerner Corporation",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git",
     "directory": "packages/terra-responsive-element"
   },
-  "keywords": [
-    "Cerner",
-    "Terra",
-    "terra-responsive-element",
-    "ResponsiveElement",
-    "UI"
-  ],
-  "author": "Cerner Corporation",
-  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/cerner/terra-core/issues"
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
-  "peerDependencies": {
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5"
-  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "Cerner",
+    "ResponsiveElement",
+    "Terra",
+    "terra-responsive-element",
+    "UI"
+  ],
+  "main": "lib/ResponsiveElement.js",
   "dependencies": {
     "@cerner/terra-docs": "^1.9.0",
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "resize-observer-polyfill": "^1.4.1",
     "terra-breakpoints": "^2.38.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",

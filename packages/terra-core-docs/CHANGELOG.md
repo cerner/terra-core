@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added about page for `TagList`.
+
 ## 1.49.0 - (November 3, 2023)
 
 * Updated
@@ -9,10 +12,12 @@
 
 * Changed
   * Changed paginator label on custom page count example.
+
 ## 1.48.0 - (November 2, 2023)
 
 * Updated
-  *  Updated example for selection state of Fusion-Button in `terra-button`.
+  * Updated example for selection state of Fusion-Button in `terra-button`.
+  * Updated examples and tests for `terra-section-header` for accessibility changes.
 
 ## 1.47.0 - (October 26, 2023)
 

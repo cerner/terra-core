@@ -1,31 +1,26 @@
 {
   "name": "terra-form-checkbox",
-  "main": "lib/Checkbox.js",
   "version": "4.21.0",
   "description": "The Terra Form Checkbox is a responsive input component rendered as a box. When activated, a check mark shall appear. Focus can be activated through tabbing and the checked state can be toggled with the space bar.",
+  "author": "Cerner Corporation",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git",
     "directory": "packages/terra-form-checkbox"
   },
-  "keywords": [
-    "Cerner",
-    "Terra",
-    "terra-form-checkbox",
-    "Checkbox",
-    "UI"
-  ],
-  "author": "Cerner Corporation",
-  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/cerner/terra-core/issues"
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
-  "peerDependencies": {
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5",
-    "react-intl": ">=2.8.0 <6.0.0"
-  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "Cerner",
+    "Checkbox",
+    "Terra",
+    "terra-form-checkbox",
+    "UI"
+  ],
+  "main": "lib/Checkbox.js",
   "dependencies": {
     "classnames": "^2.2.5",
     "lodash.uniqueid": "^4.0.1",
@@ -33,6 +28,11 @@
     "terra-mixins": "^1.40.0",
     "terra-theme-context": "^1.0.0",
     "terra-visually-hidden-text": "^2.36.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "react-intl": ">=2.8.0 <6.0.0"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",
