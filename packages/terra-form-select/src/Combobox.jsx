@@ -143,6 +143,7 @@ class Combobox extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleDeselect = this.handleDeselect.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
+    this.handleResetComboboxValue = this.handleResetComboboxValue.bind(this);
   }
 
   /**
@@ -190,6 +191,13 @@ class Combobox extends React.Component {
   }
 
   /**
+   * Added to reset value field for combobox
+   */
+  handleResetComboboxValue() {
+    this.setState({ value: '' });
+  }
+
+  /**
    * Returns the appropriate variant display
    */
   display() {
@@ -228,6 +236,7 @@ class Combobox extends React.Component {
         totalOptions={SelectUtil.getTotalNumberOfOptions(children)}
         clearOptionDisplay={clearOptionDisplay}
         inputId={inputId}
+        resetComboboxValue={this.handleResetComboboxValue}
       >
         {this.state.tags}
         {children}
