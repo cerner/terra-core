@@ -1,6 +1,6 @@
 {
   "name": "terra-heading",
-  "version": "4.53.0",
+  "version": "4.54.0",
   "description": "Terra includes styling for all standard headings `h1` through `h6`, as well as styles that match the size of their respective heading.",
   "author": "Cerner Corporation",
   "repository": {
@@ -25,7 +25,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-arrange": "^3.54.0"
+    "terra-arrange": "^3.55.0"
   },
   "peerDependencies": {
     "react": "^16.8.5",

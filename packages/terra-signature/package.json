@@ -1,6 +1,6 @@
 {
   "name": "terra-signature",
-  "version": "2.40.0",
+  "version": "2.41.0",
   "description": "A signature defined by an array of line segments.",
   "author": "Cerner Corporation",
   "repository": {
