@@ -115,6 +115,11 @@ const propTypes = {
    * The select value.
    */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
+  /**
+   * @private
+   * Callback function to reset input value after search
+   */
+  resetComboboxValue: PropTypes.func,
 };
 
 const defaultProps = {
@@ -184,10 +189,10 @@ class Frame extends React.Component {
     this.handleToggleButtonMouseDown = this.handleToggleButtonMouseDown.bind(this);
     this.handleTouchStart = this.handleTouchStart.bind(this);
     this.menuId = `terra-select-menu-${uniqueid()}`;
-    this.role = this.role.bind(this);
     this.visuallyHiddenComponent = React.createRef();
     this.setSelectMenuRef = this.setSelectMenuRef.bind(this);
     this.shouldFocusDropdown = false;
+    this.hasEscPressed = false;
   }
 
   componentDidMount() {
@@ -267,8 +272,19 @@ class Frame extends React.Component {
       event.preventDefault();
       this.openDropdown(event);
     } else if (this.state.isOpen && keyCode === KeyCode.KEY_ESCAPE) {
+      this.hasEscPressed = true;
       event.stopPropagation();
       this.closeDropdown();
+    } else if (!this.state.isOpen && keyCode === KeyCode.KEY_ESCAPE && this.hasEscPressed) {
+      this.hasEscPressed = false;
+      if (this.props.resetComboboxValue) {
+        this.props.resetComboboxValue();
+      }
+      this.setState({
+        hasSearchChanged: false,
+        searchValue: '',
+      });
+      event.stopPropagation();
     }
   }
 
@@ -396,11 +412,13 @@ class Frame extends React.Component {
       'aria-describedby': ariaDescribedBy,
       'aria-disabled': disabled,
       'aria-owns': this.state.isOpen ? id : undefined,
+      'aria-expanded': !disabled && this.state.isOpen,
       type: 'text',
       className: cx('search-input'),
       required,
       'aria-required': required,
       id: inputId,
+      role: 'combobox',
     };
     const value = hasSearchChanged ? searchValue : display;
 
@@ -420,22 +438,7 @@ class Frame extends React.Component {
       isFocused: document.activeElement === this.input || document.activeElement === this.select,
       isOpen: false,
       isPositioned: false,
-      hasSearchChanged: false,
-      searchValue: '',
     });
-
-    // 'Tag' and 'Combobox' variants select the current search value when the component loses focus.
-    const { searchValue } = this.state;
-    if (Frame.shouldAddOptionOnBlur(this.props, this.state)) {
-      // NOTE: Since 'Combobox' does not allow blank strings to be created within the options dropdown,
-      // a blank input string should be explicitly converted into an empty string. This ensures that
-      // on blur, Combobox updates the search field to be an empty string when the user inputs a blank string.
-      // Upon failing to do so, Combobox resets the search field back to a previously selected value.
-      const freeText = searchValue.trim().length === 0 ? '' : searchValue;
-      if (this.props.onSelect) {
-        this.props.onSelect(freeText);
-      }
-    }
   }
 
   /**
@@ -529,15 +532,6 @@ class Frame extends React.Component {
     }
 
     return ariaLabel === undefined ? defaultAriaLabel : ariaLabel;
-  }
-
-  /**
-   * Determines compatible role attribute to apply to select based on active variant and disabled prop
-   */
-  role() {
-    const { disabled } = this.props;
-    // role="application" needed to allow JAWS to work correctly with the select and use our key event listeners
-    return disabled ? undefined : 'application';
   }
 
   /**
@@ -696,14 +690,10 @@ class Frame extends React.Component {
     return (
       <div
         {...customProps}
-        role={this.role()}
         data-terra-select-combobox
         aria-controls={!disabled && this.state.isOpen ? this.menuId : undefined}
         aria-disabled={!!disabled}
-        aria-expanded={!!disabled && !!this.state.isOpen}
         aria-haspopup={!disabled ? 'true' : undefined}
-        aria-describedby={ariaDescribedBy}
-        aria-owns={this.state.isOpen ? this.menuId : undefined}
         className={selectClasses}
         onBlur={this.handleBlur}
         onFocus={this.handleFocus}
