@@ -1,6 +1,5 @@
 import React from 'react';
 import Badge from 'terra-badge';
-import IconHelpInverse from 'terra-icon/lib/icon/IconHelpInverse';
 import Table, {
   Header,
   HeaderCell,
@@ -13,7 +12,6 @@ import classNames from 'classnames/bind';
 import styles from './Badge.module.scss';
 
 const cx = classNames.bind(styles);
-const Icon = <IconHelpInverse />;
 
 const BadgeInTable = () => (
   <div className={cx('table-container')}>
@@ -31,7 +29,7 @@ const BadgeInTable = () => (
           <Cell key="BADGE">
             <div className={cx('badge-container')}>
               <div className={cx('badge')}>
-                <Badge intent="positive" size="large" text="Active" />
+                <Badge intent="positive" size="medium" text="Active" />
               </div>
             </div>
           </Cell>
@@ -42,10 +40,7 @@ const BadgeInTable = () => (
           <Cell key="BADGE">
             <div className={cx('badge-container')}>
               <div className={cx('badge')}>
-                <Badge intent="negative" size="large" text="Inactive" />
-              </div>
-              <div className={cx('badge')}>
-                <Badge intent="info" icon={Icon} text="Verification Pending" visuallyHiddenText="Please check back in 2-4 business days" />
+                <Badge intent="negative" size="medium" text="Inactive" />
               </div>
             </div>
           </Cell>
@@ -56,10 +51,7 @@ const BadgeInTable = () => (
           <Cell key="BADGE">
             <div className={cx('badge-container')}>
               <div className={cx('badge')}>
-                <Badge intent="positive" size="large" text="Active" />
-              </div>
-              <div className={cx('badge')}>
-                <Badge intent="warning" text="Order Pending" />
+                <Badge intent="positive" size="medium" text="Active" />
               </div>
             </div>
           </Cell>

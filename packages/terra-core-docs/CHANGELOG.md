@@ -4,6 +4,7 @@
 
 * Added
   * Added about page for `TagList`.
+  * Updated doc examples for `terra-badge`.
 
 ## 1.49.0 - (November 3, 2023)
 
