@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 6.50.0 - (November 13, 2023)
+
 * Changed
   * Changed role from application to combobox in `terra-form-select-combobox`.
   * Updated keydown handler to clear the text on `ESC` key press in `terra-form-select-combobox`.

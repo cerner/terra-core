@@ -1,6 +1,6 @@
 {
   "name": "terra-form-checkbox",
-  "version": "4.21.0",
+  "version": "4.22.0",
   "description": "The Terra Form Checkbox is a responsive input component rendered as a box. When activated, a check mark shall appear. Focus can be activated through tabbing and the checked state can be toggled with the space bar.",
   "author": "Cerner Corporation",
   "repository": {
@@ -25,9 +25,9 @@
     "classnames": "^2.2.5",
     "lodash.uniqueid": "^4.0.1",
     "prop-types": "^15.5.8",
-    "terra-mixins": "^1.40.0",
+    "terra-mixins": "^1.41.0",
     "terra-theme-context": "^1.0.0",
-    "terra-visually-hidden-text": "^2.36.0"
+    "terra-visually-hidden-text": "^2.37.0"
   },
   "peerDependencies": {
     "react": "^16.8.5",
