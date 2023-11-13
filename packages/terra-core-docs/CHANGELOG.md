@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.50.0 - (November 13, 2023)
+
 * Added
   * Added about page for `TagList`.
   * Updated doc examples for `terra-badge`.

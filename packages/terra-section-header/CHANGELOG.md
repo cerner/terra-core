@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 2.64.0 - (November 13, 2023)
+
   * Changed
     * Updated the section header components to meet accessibility standards.
 

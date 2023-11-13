@@ -1,6 +1,6 @@
 {
   "name": "terra-status-view",
-  "version": "4.68.0",
+  "version": "4.69.0",
   "description": "The status view component provides an icon, title, message, and buttons inside a view.",
   "author": "Cerner Corporation",
   "repository": {
@@ -25,10 +25,10 @@
     "classnames": "^2.2.5",
     "lodash.uniqueid": "^4.0.1",
     "prop-types": "^15.5.8",
-    "terra-button": "^3.70.0",
-    "terra-divider": "^3.38.0",
-    "terra-icon": "^3.58.0",
-    "terra-mixins": "^1.40.0",
+    "terra-button": "^3.71.0",
+    "terra-divider": "^3.39.0",
+    "terra-icon": "^3.59.0",
+    "terra-mixins": "^1.41.0",
     "terra-theme-context": "^1.0.0"
   },
   "peerDependencies": {
