@@ -1,6 +1,6 @@
 {
   "name": "terra-badge",
-  "version": "3.58.0",
+  "version": "3.59.0",
   "description": "The terra-badge component displays content classification.",
   "author": "Cerner Corporation",
   "repository": {
@@ -26,7 +26,7 @@
     "prop-types": "^15.5.8",
     "terra-enzyme-intl": "^3.0.0",
     "terra-theme-context": "^1.0.0",
-    "terra-visually-hidden-text": "^2.36.0"
+    "terra-visually-hidden-text": "^2.37.0"
   },
   "peerDependencies": {
     "react": "^16.8.5",

@@ -1,6 +1,6 @@
 {
   "name": "terra-i18n",
-  "version": "4.40.0",
+  "version": "4.41.0",
   "description": "The terra-i18n package provides on-demand internationalization of React components.",
   "author": "Cerner Corporation",
   "repository": {

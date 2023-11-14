@@ -1,6 +1,6 @@
 {
   "name": "terra-mixins",
-  "version": "1.40.0",
+  "version": "1.41.0",
   "description": "The terra-mixins component supplies global mixins for use throughout the Terra ecosystem.",
   "author": "Cerner Corporation",
   "repository": {
