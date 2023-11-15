@@ -105,11 +105,6 @@ const propTypes = {
    * The id of the input field.
    */
   inputId: PropTypes.string,
-  /**
-   * @private
-   * Label for input field.
-   */
-  searchSelectLabel: PropTypes.string,
 };
 
 const defaultProps = {
@@ -131,7 +126,6 @@ const defaultProps = {
   isTouchAccessible: false,
   value: undefined,
   inputId: undefined,
-  searchSelectLabel: undefined,
 };
 
 class SearchSelect extends React.Component {
@@ -208,7 +202,7 @@ class SearchSelect extends React.Component {
 
   render() {
     const {
-      allowClear, children, defaultValue, onChange, placeholder, required, value, intl, inputId, searchSelectLabel, ...otherProps
+      allowClear, children, defaultValue, onChange, placeholder, required, value, intl, inputId, ...otherProps
     } = this.props;
 
     const defaultPlaceholder = intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' });
@@ -224,25 +218,22 @@ class SearchSelect extends React.Component {
     }
 
     return (
-      <>
-        {searchSelectLabel && <label htmlFor={inputId}><strong>{searchSelectLabel}</strong></label>}
-        <Frame
-          {...otherProps}
-          data-terra-select
-          value={SelectUtil.value(this.props, this.state)}
-          display={this.display()}
-          onDeselect={this.handleDeselect}
-          onSelect={this.handleSelect}
-          placeholder={selectPlaceholder}
-          required={required}
-          totalOptions={SelectUtil.getTotalNumberOfOptions(children)}
-          clearOptionDisplay={clearOptionDisplay}
-          inputId={inputId}
-          resetComboboxValue={this.handleResetComboboxValue}
-        >
-          {children}
-        </Frame>
-      </>
+      <Frame
+        {...otherProps}
+        data-terra-select
+        value={SelectUtil.value(this.props, this.state)}
+        display={this.display()}
+        onDeselect={this.handleDeselect}
+        onSelect={this.handleSelect}
+        placeholder={selectPlaceholder}
+        required={required}
+        totalOptions={SelectUtil.getTotalNumberOfOptions(children)}
+        clearOptionDisplay={clearOptionDisplay}
+        inputId={inputId}
+        resetComboboxValue={this.handleResetComboboxValue}
+      >
+        {children}
+      </Frame>
     );
   }
 }
