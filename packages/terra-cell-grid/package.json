@@ -1,6 +1,6 @@
 {
   "name": "terra-cell-grid",
-  "version": "1.13.0",
+  "version": "1.14.0",
   "description": "The terra-cell-grid is a structural row based layout for aligning column cells within 100% width of its parent",
   "author": "Cerner Corporation",
   "repository": {

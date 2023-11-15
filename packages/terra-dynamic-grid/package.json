@@ -1,6 +1,6 @@
 {
   "name": "terra-dynamic-grid",
-  "version": "3.34.0",
+  "version": "3.35.0",
   "description": "The terra-dynamic-grid component provides users a way to build dynamic layouts using CSS Grids.",
   "author": "Cerner Corporation",
   "repository": {
