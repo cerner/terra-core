@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+## 3.55.0 - (November 13, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.54.0 - (October 23, 2023)
+
+* Fixed
+ * Fixed reflow issue when the viewport is resized to 320x256 px.
+
 ## 3.53.0 - (August 23, 2023)
 
 * Removed

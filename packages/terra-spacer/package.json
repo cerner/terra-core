@@ -1,35 +1,35 @@
 {
   "name": "terra-spacer",
-  "main": "lib/Spacer.js",
-  "version": "3.61.0",
+  "version": "3.62.0",
   "description": "This component is used to provide margin and/or padding space between two components based on the given values.",
+  "author": "Cerner Corporation",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git",
     "directory": "packages/terra-spacer"
   },
-  "keywords": [
-    "Cerner",
-    "Terra",
-    "terra-spacer",
-    "Spacer",
-    "UI"
-  ],
-  "author": "Cerner Corporation",
-  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/cerner/terra-core/issues"
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
-  "peerDependencies": {
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5"
-  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "Cerner",
+    "Spacer",
+    "Terra",
+    "terra-spacer",
+    "UI"
+  ],
+  "main": "lib/Spacer.js",
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-image": "^3.38.0",
+    "terra-image": "^3.39.0",
     "terra-theme-context": "^1.0.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",

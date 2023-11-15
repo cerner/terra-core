@@ -21,6 +21,10 @@ const propTypes = {
    */
   title: PropTypes.string,
   /**
+   * Callback ref to pass into the dom element.
+   */
+  refCallback: PropTypes.func,
+  /**
    * Callback function triggered when the accordion icon is clicked.
    */
   onClick: PropTypes.func,
@@ -44,9 +48,10 @@ const defaultProps = {
   onClick: undefined,
   isOpen: false,
   isTransparent: false,
+  level: 2,
 };
 
-const isRecognizedKeyPress = event => ((event.nativeEvent.keyCode === KeyCode.KEY_RETURN) || (event.nativeEvent.keyCode === KeyCode.KEY_SPACE));
+const isRecognizedKeyPress = event => ((event.keyCode === KeyCode.KEY_RETURN) || (event.keyCode === KeyCode.KEY_SPACE));
 
 class SectionHeader extends React.Component {
   constructor(props) {
@@ -90,6 +95,7 @@ class SectionHeader extends React.Component {
     const {
       text,
       title,
+      refCallback,
       onClick,
       isOpen,
       isTransparent,
@@ -104,23 +110,9 @@ class SectionHeader extends React.Component {
       console.warn('\'isOpen\' are intended to be used only when \'onClick\' is provided.');
     }
 
-    const attributes = { ...customProps };
-
-    if (onClick) {
-      attributes.tabIndex = '0';
-      attributes.onKeyDown = this.wrapOnKeyDown(attributes.onKeyDown);
-      attributes.onKeyUp = this.wrapOnKeyUp(attributes.onKeyUp);
-      attributes.onClick = onClick;
-    }
-
-    const iconClassNames = cx([
-      'accordion-icon',
-      { 'is-open': onClick && isOpen },
-    ]);
-
     const accordionIcon = (
       <span className={cx('accordion-icon-wrapper')}>
-        <span className={iconClassNames} />
+        <span className={cx(['accordion-icon', { 'is-open': isOpen }])} />
       </span>
     );
 
@@ -135,31 +127,38 @@ class SectionHeader extends React.Component {
       customProps.className,
     );
 
-    if (!level) {
-      // eslint-disable-next-line no-console
-      console.warn('Default heading level may not appropriate has it would fail to convey context of heading in a site / application where it is used. Heading level should be set explicitly depending on the position of header in site / application to allow screen readers to identify headers consistently.'); // to be removed on next major version release.
-    }
-
     if (title) {
       // eslint-disable-next-line no-console
       console.warn('`title` prop has been renamed to `text`. please update all the refernces of `title` prop to use prop `text`.'); // to be removed on next major version release.
     }
-    const Element = `h${level || 2}`;
+    const Element = `h${level}`;
     const headerText = text || title;
 
-    // allows us to set an onClick on the div
-    // We set key events and role conditionally set if onClick is set
-    // eslint doesn't know about this and so it marks this as a lint error
-    /* eslint-disable jsx-a11y/click-events-have-key-events */
-    /* eslint-disable jsx-a11y/no-static-element-interactions */
+    const headerAttributes = { ...customProps };
+    const buttonAttributes = {};
+    let ArrangeWrapper;
 
-    const buttonAttributes = (onClick && accordionIcon) ? {
-      type: 'button', tabIndex: '-1', 'aria-expanded': isOpen, 'aria-label': headerText,
-    } : undefined;
-    const ArrangeWrapper = onClick && accordionIcon ? 'button' : 'span';
+    if (onClick) {
+      // Set section header button attributes
+      buttonAttributes.ref = refCallback;
+      buttonAttributes.type = 'button';
+      buttonAttributes['aria-expanded'] = isOpen;
+      buttonAttributes['aria-label'] = headerText;
+      buttonAttributes.onKeyDown = this.wrapOnKeyDown(headerAttributes.onKeyDown);
+      buttonAttributes.onKeyUp = this.wrapOnKeyUp(headerAttributes.onKeyUp);
+      buttonAttributes.onClick = onClick;
+
+      // Specify button element for header content
+      ArrangeWrapper = 'button';
+    } else {
+      headerAttributes.ref = refCallback;
+
+      // Specify span element for header content
+      ArrangeWrapper = 'span';
+    }
 
     return (
-      <Element {...attributes} className={sectionHeaderClassNames} aria-label={!onClick ? headerText : undefined}>
+      <Element {...headerAttributes} className={sectionHeaderClassNames} aria-label={!onClick ? headerText : undefined}>
         <ArrangeWrapper {...buttonAttributes} className={cx('arrange-wrapper')}>
           <Arrange
             fitStart={onClick && accordionIcon}

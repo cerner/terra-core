@@ -1,26 +1,36 @@
 {
   "name": "terra-image",
-  "main": "lib/Image.js",
-  "version": "3.38.0",
+  "version": "3.39.0",
   "description": "The terra-image component provides styling for visual imagery.",
+  "author": "Cerner Corporation",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git",
     "directory": "packages/terra-image"
   },
-  "keywords": [
-    "Cerner",
-    "Terra",
-    "terra-image",
-    "Image",
-    "UI"
-  ],
-  "author": "Cerner Corporation",
-  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/cerner/terra-core/issues"
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
+  "license": "Apache-2.0",
+  "keywords": [
+    "Cerner",
+    "Image",
+    "Terra",
+    "terra-image",
+    "UI"
+  ],
+  "main": "lib/Image.js",
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "object-fit-images": "^3.2.4",
+    "prop-types": "^15.5.8",
+    "terra-theme-context": "^1.0.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5"
+  },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",
     "lint": "npm run lint:js && npm run lint:scss",
@@ -33,15 +43,5 @@
     "wdio-lowlight": "cd ../.. && terra wdio --themes clinical-lowlight-theme",
     "wdio-fusion": "cd ../.. && terra wdio --themes orion-fusion-theme",
     "wdio": "npm run wdio-default && npm run wdio-lowlight && npm run wdio-fusion"
-  },
-  "peerDependencies": {
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5"
-  },
-  "dependencies": {
-    "classnames": "^2.2.5",
-    "object-fit-images": "^3.2.4",
-    "prop-types": "^15.5.8",
-    "terra-theme-context": "^1.0.0"
   }
 }

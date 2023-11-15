@@ -13,4 +13,25 @@
     max-width: 100%;
     overflow-x: auto;
   }
+
+  .profile-name {
+    font-weight: bold;
+  }
+
+  .profile-container {
+    border: 1px solid #c8cacb;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+  }
+
+  .profile-name-container {
+    padding-left: 10px;
+    padding-top: 2px;
+  }
+
+  .profile-badge {
+    margin: 5px;
+  }
 }

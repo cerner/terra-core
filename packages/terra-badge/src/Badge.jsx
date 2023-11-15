@@ -38,6 +38,9 @@ const propTypes = {
   icon: PropTypes.element,
   /**
    * Sets the badge color scheme. One of `default`, `primary`, `secondary`, `positive`, `negative`, `warning`, `info`.
+   *
+   * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue)
+   * Follow the accessibility guidance for color to ensure color is not the only method used to convey information.
    */
   intent: PropTypes.oneOf(['default', 'primary', 'secondary', 'info', 'warning', 'positive', 'negative']),
   /**
@@ -55,11 +58,16 @@ const propTypes = {
   size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
   /**
    * Sets the badge text.
+   *
+   * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue)
+   * It is best practice to always use text. Use text that conveys the meaning or purpose of the badge.
    */
   text: PropTypes.string,
   /**
-   * Text that describes the badge to a screen reader. Use this
-   * for creating an accessible badge.
+   * Additional text that can be visually hidden but supports people that use assistive technologies like screen readers.
+   *
+   * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue)
+   * Follow the Accessibility Guidance for visually hidden text above to better understand when to use this prop.
    */
   visuallyHiddenText: PropTypes.string,
 };
@@ -98,9 +106,8 @@ const Badge = ({
   );
 
   const textContent = text ? <span className={styles.text}>{text}</span> : null;
-  const intentText = intent !== BadgeIntent.DEFAULT ? <VisuallyHiddenText text={intl.formatMessage({ id: `Terra.badge.intent.${intent}` })} /> : null;
   const visuallyHiddenTextContent = visuallyHiddenText ? <VisuallyHiddenText text={visuallyHiddenText} /> : null;
-  const content = isReversed ? [intentText, textContent, visuallyHiddenTextContent, icon, customProps.children] : [icon, intentText, textContent, visuallyHiddenTextContent, customProps.children];
+  const content = isReversed ? [textContent, visuallyHiddenTextContent, icon, customProps.children] : [icon, textContent, visuallyHiddenTextContent, customProps.children];
   return React.createElement('span', { ...customProps, className: badgeClassNames }, ...content);
 };
 

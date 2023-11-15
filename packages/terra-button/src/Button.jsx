@@ -246,6 +246,9 @@ class Button extends React.Component {
     const isMac = () => navigator.userAgent.indexOf('Mac') !== -1;
     const buttonLabelCx = isMac() ? 'button-label-mac' : 'button-label-win';
 
+    // TODO: `isSelectable` and `isSelected` prop is used for fusion pass through passivity and should be removed after Fusion Phase2 release.
+    const { isSelectable, isSelected } = customProps;
+
     const buttonClasses = classNames(
       cx([
         'button',
@@ -255,6 +258,7 @@ class Button extends React.Component {
         { compact: isCompact },
         { 'is-active': this.state.active && !isDisabled },
         { 'is-focused': this.state.focused && !isDisabled },
+        { 'is-selected': isSelectable && isSelected && !isDisabled },
         theme.className,
       ]),
       customProps.className,
@@ -302,6 +306,10 @@ class Button extends React.Component {
       ariaLabel = (icon && icon.props.a11yLabel) ? icon.props.a11yLabel : ariaLabel || text;
     }
 
+    if (isSelectable) {
+      customProps['aria-pressed'] = isSelected;
+    }
+
     let ComponentType = 'button';
     if (href) {
       ComponentType = 'a';
@@ -317,12 +325,12 @@ class Button extends React.Component {
         tabIndex={isDisabled ? '-1' : customProps.tabIndex}
         aria-disabled={isDisabled}
         aria-label={ariaLabel}
-        onKeyDown={this.handleKeyDown}
+        onKeyDown={(event) => { this.handleKeyDown(event); }}
         onKeyUp={this.handleKeyUp}
         onBlur={this.handleOnBlur}
         title={buttonTitle}
-        onClick={this.handleClick}
-        onMouseDown={this.handleMouseDown}
+        onClick={(event) => { this.handleClick(event); }}
+        onMouseDown={(event) => { this.handleMouseDown(event); }}
         onFocus={this.handleFocus}
         href={href}
         ref={refCallback}

@@ -4,7 +4,46 @@
 * Added
   * Added a invalid example in `terra-search-Field`.
 
+## 1.50.0 - (November 13, 2023)
+
+* Added
+  * Added about page for `TagList`.
+  * Updated doc examples for `terra-badge`.
+
+## 1.49.0 - (November 3, 2023)
+
+* Updated
+  * Updated accessibility guidance for `terra-arrange`.
+
+* Changed
+  * Changed paginator label on custom page count example.
+
+## 1.48.0 - (November 2, 2023)
+
+* Updated
+  * Updated example for selection state of Fusion-Button in `terra-button`.
+  * Updated examples and tests for `terra-section-header` for accessibility changes.
+
+## 1.47.0 - (October 26, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 1.46.0 - (October 23, 2023)
+
+* Updated
+  * Updated `terra-arrange` examples to use `terra-form-radio`.
+  * Updated `terra-paginator` custom page label and count example to display correct page count.
+  * Updated `terra-list` examples to include `isTabFocusDisabled` prop.
+  * Removed `terra-table` as a dependency as the docs have now moved to `terra-framework-docs`.
+
+* Added
+  *  Added example for selection state of Fusion-Button in `terra-button`.
+
 ## 1.45.0 - (October 16, 2023)
+
+* Added
+  * Added aria-label attribute for `terra-dropdown-split-button` examples.
 
 * Added
   * Added a visual error note for invalid example in `terra-form-single-select`.
@@ -12,6 +51,7 @@
 
 * Updated
   * Updated `terra-alert` documentation for custom titles.
+  * Updated `terra-dropdown-button` documentation for testing uuid details.
   * Updated exisiting examples upto a11y standards
 
 * Fixed

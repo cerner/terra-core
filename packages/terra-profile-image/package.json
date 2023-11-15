@@ -1,26 +1,37 @@
 {
   "name": "terra-profile-image",
-  "main": "lib/ProfileImage.js",
-  "version": "3.43.0",
+  "version": "3.44.0",
   "description": "The terra-profile-image component displays an avatar image while the profile image is being loaded. If the profile image successfully loads, the avatar image is replaced with the profile image. Otherwise, the avatar image is left as is. All styling set on the profile image will be applied to the avatar image.",
+  "author": "Cerner Corporation",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git",
     "directory": "packages/terra-profile-image"
   },
-  "keywords": [
-    "Cerner",
-    "Terra",
-    "terra-profile-image",
-    "ProfileImage",
-    "UI"
-  ],
-  "author": "Cerner Corporation",
-  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/cerner/terra-core/issues"
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
+  "license": "Apache-2.0",
+  "keywords": [
+    "Cerner",
+    "ProfileImage",
+    "Terra",
+    "terra-profile-image",
+    "UI"
+  ],
+  "main": "lib/ProfileImage.js",
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "prop-types": "^15.5.8",
+    "terra-image": "^3.39.0",
+    "terra-mixins": "^1.41.0",
+    "terra-theme-context": "^1.0.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5"
+  },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",
     "lint": "npm run lint:js && npm run lint:scss",
@@ -33,16 +44,5 @@
     "wdio-lowlight": "cd ../.. && terra wdio --themes clinical-lowlight-theme",
     "wdio-fusion": "cd ../.. && terra wdio --themes orion-fusion-theme",
     "wdio": "npm run wdio-default && npm run wdio-lowlight && npm run wdio-fusion"
-  },
-  "peerDependencies": {
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5"
-  },
-  "dependencies": {
-    "classnames": "^2.2.5",
-    "prop-types": "^15.5.8",
-    "terra-image": "^3.38.0",
-    "terra-mixins": "^1.40.0",
-    "terra-theme-context": "^1.0.0"
   }
 }

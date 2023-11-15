@@ -3,13 +3,15 @@ import PropTypes from 'prop-types';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import { polyfill } from 'react-lifecycles-compat';
-import { injectIntl } from 'react-intl';
+import { injectIntl, FormattedMessage } from 'react-intl';
 import * as KeyCode from 'keycode-js';
 import AddOption from '../shared/_AddOption';
 import ClearOption from '../shared/_ClearOption';
 import MenuUtil from '../shared/_MenuUtil';
 import SharedUtil from '../shared/_SharedUtil';
+import SearchResults from '../shared/_SearchResults';
 import styles from '../shared/_Menu.module.scss';
+import NoResults from '../shared/_NoResults';
 
 const cx = classNamesBind.bind(styles);
 
@@ -119,15 +121,20 @@ class Menu extends React.Component {
    */
   static getDerivedStateFromProps(props, state) {
     const {
-      clearOptionDisplay, searchValue,
+      clearOptionDisplay, searchValue, noResultContent,
     } = props;
 
-    const hasNoResults = false;
+    let hasNoResults = false;
     const hasMaxSelection = false;
     let hasAddOption = false;
 
     let children = MenuUtil.filter(props.children, props.searchValue, props.optionFilter);
     children = MenuUtil.updateSelectionState(children, props);
+
+    if (!children.length) {
+      children.push(<NoResults noResultContent={noResultContent} value={searchValue} />);
+      hasNoResults = true;
+    }
 
     if (Menu.shouldAllowFreeText(props, children)) {
       children.push(<AddOption value={searchValue} />);
@@ -138,6 +145,12 @@ class Menu extends React.Component {
       clearOptionDisplay, searchValue, hasAddOption, hasNoResults,
     })) {
       children.unshift(<ClearOption display={clearOptionDisplay} value="" />);
+    }
+
+    if (children.map(x => x.key).filter(x => x != null).length && !hasNoResults) {
+      if (searchValue.trim().length > 0) {
+        children.unshift(<SearchResults searchResultContent={<FormattedMessage id="Terra.form.select.resultsText" values={{ text: searchValue }} />} />);
+      }
     }
 
     return {
@@ -342,7 +355,7 @@ class Menu extends React.Component {
     // Detects if option is an "Add option" and provides accessible text
     const active = this.menu.querySelector('[data-select-active]');
     if (active && active.hasAttribute('data-terra-select-add-option')) {
-      const display = active.querySelector("[class*='display']").innerText;
+      const display = active.querySelector('[data-terra-add-option]') ? active.querySelector('[data-terra-add-option]').innerText : null;
       visuallyHiddenComponent.current.innerText = display;
     }
 

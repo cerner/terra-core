@@ -2,6 +2,21 @@
 
 ## Unreleased
 
+## 3.71.0 - (November 13, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.70.0 - (November 2, 2023)
+
+* Changed
+  * Added support to programmatically set selection state for Fusion-Button
+
+## 3.69.0 - (October 23, 2023)
+
+* Changed
+  * Added support of selection state for Fusion-Button
+
 ## 3.68.2 - (October 3, 2023)
 
 * Fixed

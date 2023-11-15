@@ -853,6 +853,40 @@ Terra.describeViewports('Select', ['tiny'], () => {
     });
   });
 
+  describe('Combobox uncontrolled no results', () => {
+    before(() => {
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/uncontrolled-combobox');
+    });
+    it('should display no results on search', () => {
+      $('[data-terra-select] input').setValue('John');
+      Terra.validates.element('combobox no results displayed on search', { selector: '#root' });
+    });
+  });
+
+  describe('Combobox UnControlled Search Results', () => {
+    before(() => {
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/uncontrolled-combobox');
+    });
+    it('should display results on search', () => {
+      $('[data-terra-select] input').setValue('Blue');
+      Terra.validates.element('[combobox] Results displayed on search', { selector: '#root' });
+    });
+  });
+
+  describe('Combobox uncontrolled free text clear by escape key press', () => {
+    before(() => {
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/uncontrolled-combobox');
+    });
+    it('should enter a free text entry in combobox and close list item by pressing escape and clear the free text by pressing again escape', () => {
+      $('[data-terra-select] input').setValue('Black');
+      Terra.validates.element('combobox displayed Add button with typed free text', { selector: '#root' });
+      browser.keys('Escape');
+      Terra.validates.element('combobox dropdown list close by first escape', { selector: '#root' });
+      browser.keys('Escape');
+      Terra.validates.element('combobox cleared entered text by second escape', { selector: '#root' });
+    });
+  });
+
   describe('Combobox Variant - controlled', () => {
     describe('combobox controlled should select an option by click', () => {
       before(() => {
@@ -1520,6 +1554,15 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
       it('should display toggle closed dropdown', () => {
         Terra.validates.element('search close on outside click after toggle open', { selector: '#root' });
+      });
+
+      it('should enter a free text entry in search select and close list item by pressing escape and clear the free text by pressing again escape', () => {
+        $('[data-terra-select] input').setValue('Black');
+        Terra.validates.element('search select displayed displayed typed text', { selector: '#root' });
+        browser.keys('Escape');
+        Terra.validates.element('search select dropdown list close by first escape', { selector: '#root' });
+        browser.keys('Escape');
+        Terra.validates.element('search select cleared entered text by second escape', { selector: '#root' });
       });
     });
 
@@ -2515,6 +2558,21 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
 
       after(() => $('#root').click());
+    });
+  });
+
+  describe('Combobox Add New Option', () => {
+    before(() => {
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/is-touch-accessible-combobox');
+    });
+
+    it('should add new option in combo box', () => {
+      $('[data-terra-select]').click();
+      browser.keys(['N', 'e', 'w']);
+      $('[data-terra-add-option]').click();
+      expect($('[data-terra-add-option]')).toHaveTextContaining('Add "New"');
+      $('[data-terra-select]').click();
+      Terra.validates.element('Add New Option in combo box', { selector: '#root' });
     });
   });
 });

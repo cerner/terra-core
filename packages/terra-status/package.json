@@ -1,26 +1,37 @@
 {
   "name": "terra-status",
-  "main": "lib/Status.js",
-  "version": "4.60.0",
+  "version": "4.62.0",
   "description": "The status component provides a customizable color indictor to signify a specific condition.",
+  "author": "Cerner Corporation",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git",
     "directory": "packages/terra-status"
   },
-  "keywords": [
-    "Cerner",
-    "Terra",
-    "terra-status",
-    "Status",
-    "UI"
-  ],
-  "author": "Cerner Corporation",
-  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/cerner/terra-core/issues"
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
+  "license": "Apache-2.0",
+  "keywords": [
+    "Cerner",
+    "Status",
+    "Terra",
+    "terra-status",
+    "UI"
+  ],
+  "main": "lib/Status.js",
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "prop-types": "^15.5.8",
+    "terra-arrange": "^3.55.0",
+    "terra-icon": "^3.59.0",
+    "terra-visually-hidden-text": "^2.37.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5"
+  },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",
     "lint": "npm run lint:js && npm run lint:scss",
@@ -33,16 +44,5 @@
     "wdio-lowlight": "cd ../.. && terra wdio --themes clinical-lowlight-theme",
     "wdio-fusion": "cd ../.. && terra wdio --themes orion-fusion-theme",
     "wdio": "npm run wdio-default && npm run wdio-lowlight && npm run wdio-fusion"
-  },
-  "peerDependencies": {
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5"
-  },
-  "dependencies": {
-    "classnames": "^2.2.5",
-    "prop-types": "^15.5.8",
-    "terra-arrange": "^3.53.0",
-    "terra-icon": "^3.58.0",
-    "terra-visually-hidden-text": "^2.36.0"
   }
 }

@@ -1,33 +1,33 @@
 {
   "name": "terra-scroll",
-  "main": "lib/Scroll.js",
-  "version": "2.35.0",
+  "version": "2.36.0",
   "description": "The terra-scroll is a content view that hides data accessible with scrolling and provides a refCallback.",
+  "author": "Cerner Corporation",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git",
     "directory": "packages/terra-scroll"
   },
-  "keywords": [
-    "Cerner",
-    "Terra",
-    "terra-scroll",
-    "Scroll",
-    "UI"
-  ],
-  "author": "Cerner Corporation",
-  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/cerner/terra-core/issues"
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
-  "peerDependencies": {
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5"
-  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "Cerner",
+    "Scroll",
+    "Terra",
+    "terra-scroll",
+    "UI"
+  ],
+  "main": "lib/Scroll.js",
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8"
+  },
+  "peerDependencies": {
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",

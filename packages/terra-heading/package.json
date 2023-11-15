@@ -1,35 +1,35 @@
 {
   "name": "terra-heading",
-  "main": "lib/Heading.js",
-  "version": "4.52.0",
+  "version": "4.54.0",
   "description": "Terra includes styling for all standard headings `h1` through `h6`, as well as styles that match the size of their respective heading.",
+  "author": "Cerner Corporation",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git",
     "directory": "packages/terra-heading"
   },
-  "keywords": [
-    "Cerner",
-    "Terra",
-    "terra-heading",
-    "Heading",
-    "Type",
-    "UI"
-  ],
-  "author": "Cerner Corporation",
-  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/cerner/terra-core/issues"
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
-  "peerDependencies": {
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5"
-  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "Cerner",
+    "Heading",
+    "Terra",
+    "terra-heading",
+    "Type",
+    "UI"
+  ],
+  "main": "lib/Heading.js",
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-arrange": "^3.53.0"
+    "terra-arrange": "^3.55.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",

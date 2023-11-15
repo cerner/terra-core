@@ -23,6 +23,17 @@
     padding-top: var(--terra-section-header-padding-top, 0.5rem);
     width: 100%;
 
+    &:focus-within {
+      background: var(--terra-section-header-focus-background, #e8e9ea);
+      color: var(--terra-section-header-focus-color, #1c1f21);
+      outline: var(--terra-section-header-focus-within-outline, 3px dashed #000);
+      outline-offset: var(--terra-section-header-focus-within-outline-offset, -2px);
+    }
+
+    &.is-transparent:focus-within {
+      background: var(--terra-section-header-transparent-focus-background, rgba(0, 0, 0, 0.07));
+    }
+
     &.is-interactable {
       @include terra-padding-start(var(--terra-section-header-accordion-padding-start, 0.5rem));
       cursor: pointer;
@@ -35,17 +46,6 @@
         border-top: var(--terra-section-header-hover-border-top, 0 none);
         box-shadow: var(--terra-section-header-hover-box-shadow, none);
         color: var(--terra-section-header-hover-color, #1c1f21);
-      }
-
-      &:focus {
-        background: var(--terra-section-header-focus-background, #e8e9ea);
-        border-bottom: var(--terra-section-header-focus-border-bottom, 1px solid #c8cacb);
-        border-left: var(--terra-section-header-focus-border-left, 0 none);
-        border-right: var(--terra-section-header-focus-border-right, 0 none);
-        border-top: var(--terra-section-header-focus-border-top, 0 none);
-        box-shadow: var(--terra-section-header-focus-box-shadow, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35));
-        color: var(--terra-section-header-focus-color, #1c1f21);
-        outline: none;
       }
 
       &:active,
@@ -75,17 +75,6 @@
         border-top: var(--terra-section-header-transparent-hover-border-top, 0 none);
         box-shadow: var(--terra-section-header-transparent-hover-box-shadow, none);
         color: var(--terra-section-header-transparent-hover-color, #1c1f21);
-      }
-
-      &:focus {
-        background: var(--terra-section-header-transparent-focus-background, rgba(0, 0, 0, 0.07));
-        border-bottom: var(--terra-section-header-transparent-focus-border-bottom, 0 none);
-        border-left: var(--terra-section-header-transparent-focus-border-left, 0 none);
-        border-right: var(--terra-section-header-transparent-focus-border-right, 0 none);
-        border-top: var(--terra-section-header-transparent-focus-border-top, 0 none);
-        box-shadow: var(--terra-section-header-transparent-focus-box-shadow, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35));
-        color: var(--terra-section-header-transparent-focus-color, #1c1f21);
-        outline: none;
       }
 
       &:active,

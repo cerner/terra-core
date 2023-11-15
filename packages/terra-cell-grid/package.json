@@ -1,34 +1,34 @@
 {
   "name": "terra-cell-grid",
-  "main": "lib/index.js",
-  "version": "1.13.0",
+  "version": "1.14.0",
   "description": "The terra-cell-grid is a structural row based layout for aligning column cells within 100% width of its parent",
+  "author": "Cerner Corporation",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git",
     "directory": "packages/terra-cell-grid"
   },
-  "keywords": [
-    "Cerner",
-    "Terra",
-    "terra-cell-grid",
-    "CellGrid",
-    "UI"
-  ],
-  "author": "Cerner Corporation",
-  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/cerner/terra-core/issues"
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
-  "peerDependencies": {
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5"
-  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "CellGrid",
+    "Cerner",
+    "Terra",
+    "terra-cell-grid",
+    "UI"
+  ],
+  "main": "lib/index.js",
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "terra-theme-context": "^1.0.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",

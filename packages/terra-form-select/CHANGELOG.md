@@ -2,11 +2,26 @@
 
 ## Unreleased
 
+## 6.50.0 - (November 13, 2023)
+
+* Changed
+  * Changed role from application to combobox in `terra-form-select-combobox`.
+  * Updated keydown handler to clear the text on `ESC` key press in `terra-form-select-combobox`.
+
+* Added
+  * Added results that contain in `terra-form-select-combobox`.
+  * Added No results found text in `terra-form-select-combobox`.
+
+## 6.49.0 - (October 23, 2023)
+
+* Changed
+  * Changed `class` selector used for accessing input text with data-attribute in form select `combobox` and `tag`.
+
 ## 6.48.0 - (October 16, 2023)
 
 * Changed
   * Fixed Cyclic navigation and added aria-required to single select.
-  * Added relevant roles to fix a11y issues. 
+  * Added relevant roles to fix a11y issues.
 
 ## 6.47.0 - (September 21, 2023)
 

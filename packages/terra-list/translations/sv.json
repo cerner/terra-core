@@ -5,5 +5,5 @@
   "Terra.list.drag": "Du har flyttat objektet från plats {startPosition} till plats {endPosition}",
   "Terra.list.cancelDrag": "Förflyttningen avbröts. Objektet har återgått till startplats {startPosition}",
   "Terra.list.drop": "Du har tappat objektet. Du har flyttat objektet från plats {startPosition} till plats {endPosition}",
-  "Terra.list.focus": "Börja dra genom att trycka på blankstegstangenten. När du drar kan du flytta objektet genom att använda piltangenterna och avbryta genom att trycka på Esc-tangenten. Se till att skärmläsaren är i fokusläge eller formulärläge"
+  "Terra.list.focus": "Börja dra genom att trycka på blankstegstangenten. När du drar kan du flytta objektet genom att använda piltangenterna och avbryta genom att trycka på Esc-tangenten"
 }

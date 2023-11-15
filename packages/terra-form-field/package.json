@@ -1,36 +1,36 @@
 {
   "name": "terra-form-field",
-  "main": "lib/Field.js",
-  "version": "4.30.0",
+  "version": "4.31.0",
   "description": "The Form Field component handles the layout of the label, help text and error text associated with a form element.",
+  "author": "Cerner Corporation",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git",
     "directory": "packages/terra-form-field"
   },
-  "keywords": [
-    "Cerner",
-    "Terra",
-    "terra-form-field",
-    "Field",
-    "UI"
-  ],
-  "author": "Cerner Corporation",
-  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/cerner/terra-core/issues"
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
+  "license": "Apache-2.0",
+  "keywords": [
+    "Cerner",
+    "Field",
+    "Terra",
+    "terra-form-field",
+    "UI"
+  ],
+  "main": "lib/Field.js",
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "prop-types": "^15.5.8",
+    "terra-icon": "^3.59.0",
+    "terra-theme-context": "^1.0.0"
+  },
   "peerDependencies": {
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
     "react-intl": ">=2.8.0 <6.0.0"
-  },
-  "dependencies": {
-    "classnames": "^2.2.5",
-    "prop-types": "^15.5.8",
-    "terra-icon": "^3.58.0",
-    "terra-theme-context": "^1.0.0"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",

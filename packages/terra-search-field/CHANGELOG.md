@@ -5,6 +5,21 @@
 * Added
   * Added Syles for invalid Search Field components.
 
+## 3.97.0 - (November 13, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.96.0 - (November 2, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.95.0 - (October 23, 2023)
+
+* Changed
+  * Minor dependency version bump
+
 ## 3.94.0 - (October 16, 2023)
 
 * Changed

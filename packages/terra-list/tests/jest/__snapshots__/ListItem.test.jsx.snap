@@ -187,3 +187,23 @@ exports[`should render with selected 1`] = `
   />
 </li>
 `;
+
+exports[`should render with tabindex -1 when isTabFocusDisabled is set to true 1`] = `
+<li
+  aria-selected={false}
+  className="list-item is-selectable"
+  data-item-show-focus="true"
+  onBlur={[Function]}
+  onClick={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  role="option"
+  tabIndex="-1"
+  title="test"
+>
+  <div
+    className="item-fill"
+    key="item-fill"
+  />
+</li>
+`;

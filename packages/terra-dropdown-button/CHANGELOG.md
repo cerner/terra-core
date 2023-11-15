@@ -2,6 +2,22 @@
 
 ## Unreleased
 
+## 1.39.0 - (November 13, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 1.38.0 - (November 2, 2023)
+
+* Added
+  * Added 'aria-haspoup' and 'aria-controls' attributes for dropdown button.
+  * Added customClass support for dropdown item.
+
+## 1.37.0 - (October 26, 2023)
+
+* Changed
+  * Updated focus border as dashed border in `dropdown-split-button`.
+
 ## 1.36.0 - (August 8, 2023)
 
 * Added

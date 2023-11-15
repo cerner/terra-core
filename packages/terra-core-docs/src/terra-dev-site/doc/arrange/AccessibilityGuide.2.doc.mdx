@@ -10,7 +10,7 @@ import { Badge } from 'terra-arrange/package.json?dev-site-package';
 >
 > Making the DOM order same as visual order will help the assistive technology users to get the correct reading order. 
 >
-> Arrange may also have interactive elements which need to be keyboard focusable and interactable using the `Enter` or `Space` keys.  
+> Arrange may also have interactive elements which need to be keyboard focusable and acted upon using the standard expected keyboard behaviors. 
 >
 >&nbsp;&nbsp;
 - **Screen reader users** do not necessarily interact with the page in a linear fashion and can use Arrange out of context. Hence, a descriptive label is necessary for each interactive element.
@@ -24,9 +24,12 @@ import { Badge } from 'terra-arrange/package.json?dev-site-package';
 - Ensure the content in the arrange component is reading in logical manner in assistive technology. The DOM structure needs to be in the form the UI order. 
 - Ensure the interactive elements are receiving TAB focus and user able to interact with it. 
 - Ensure the content is available in 200% text only zoom. Except for captions and images of text, text can be resized without assistive technology up to 200 percent without loss of content or functionality. 
-- Ensure the content can be presented without loss of information or functionality, and without requiring scrolling in two dimensions for: Vertical scrolling content at a width equivalent to 320 CSS pixels; Horizontal scrolling content at a height when window is resized to 400%. 
+- Ensure the content can be presented without loss of information or functionality, and without requiring scrolling in two dimensions for: Vertical scrolling content at a width equivalent to 320 CSS pixels; Horizontal scrolling content at a height when window is resized to 400%.
+- Ensure Terra Arrange is not used to create and arrange tabular data that has relationships to columns and rows. Instead, use Terra Table or Terra HTML Table.
 
 ### Content Considerations: What do content creators need to do? 
+- Terra Arrange must not be used to create and arrange tabular data that has relationships to columns and rows. That is to say do not use 
+   Terra arrange to create visible tables. Instead, use Terra Table or Terra HTML Table. 
 - Ensure all interactive elements have descriptive labels that describe their purpose. 
   - For each interactive element within Arrange, provide the engineers with a meaningful label. 
   - Ensure each interactive element label is unique to the page. 
@@ -40,20 +43,21 @@ import { Badge } from 'terra-arrange/package.json?dev-site-package';
   - Any purely decorative icon (does NOT convey any meaning) within a button must be marked as decorative. 
 - Consider how content will adjust to resizing text or reflowing content at different viewpoints. Users may have settings that change the font size, style, or other text attributes. They may also resize a window or zoom into the content. All these things can cause content to resize or reflow, and when it does, content must not overlap, be cut off, or become unusable. 
 - Ensure all content is perceivable by meeting all the color contrast requirements. 
-- After development, ensure the Arrange and its content is keyboard accessible and works as expected. 
-  - Ensure the Arrange has a visible keyboard focus when accessed using the keyboard. 
+- After development, ensure all actionable elements inside of Arrange is keyboard accessible and work as expected. 
+  - Ensure actionable elements inside Arrange has a visible keyboard focus when accessed using the keyboard. 
   - Ensure the Arrange does not cause a keyboard trap. 
 
 ## Usability Expectations:
 
 ### Interaction Details
-- The buttons/icons which are available in the start and end of the component need to be focused via keyboard and proper labelling should be announced in screen reader. 
+- Terra Arrange has no interactions in and of itself. However, it may contain actionable elements. All actionable elements within Terra Arrange must be able to be focused via keyboard and follow the expected keyboard behavior per actionable element, and proper labeling should be announced in the screen reader.  
 
 ### Usability Expectations:
 - The user expects the button would be performing an action indicated in the button label. 
 
 
 ### Keyboard Expectations
+- Terra Arrange has no expected keyboard behaviors itself. However, the content within it will follow the basic keyboard behaviors. 
 
 | Key Sequence | Expectation |
 |---|---|

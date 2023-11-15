@@ -1,5 +1,6 @@
 import { Badge } from 'terra-badge/package.json?dev-site-package';
 
+import { Notice } from "@cerner/terra-docs";
 import BadgeIntent from './example/BadgeIntent?dev-site-example';
 import BadgeSize from './example/BadgeSize?dev-site-example';
 import BadgeIcon from './example/BadgeIcon?dev-site-example';
@@ -8,11 +9,12 @@ import BadgeInTable from './example/BadgeInTable?dev-site-example';
 
 import BadgePropsTable from 'terra-badge/lib/Badge?dev-site-props-table';
 
+import BadgeInDoc from './example/BadgeInDoc';
 <Badge />
 
 # Terra Badge
 
-The badge component displays content classification.
+The badge component displays content classification. Badges are used to represent counts (e.g., number of unread items) or to represent a status. If you need a selectable annotation consider using [`Terra Popup`](https://engineering.cerner.com/terra-ui/components/cerner-terra-framework-docs/popup/popup) or another control instead.
 
 ## Getting Started
 
@@ -42,6 +44,60 @@ The Badge component must be composed inside the [Base][1] component with a local
 ```jsx
 import Badge from 'terra-badge';
 ```
+
+<Notice variant="important" ariaLevel="2">
+
+### Accessibility Guidance: Badge Color
+To implement an accessible terra badge:
+
+- Ensure the words used within the badge (the text provided as text prop) or the icon conveys the purpose of the badge. Badge color must always be used as a secondary or supportive method to understand meaning.
+  - Color must never be the only method used to convey badge meaning. 
+     - A good example where words convey the meaning and color is supportive: 
+        - Heart Rate: <BadgeInDoc text='High' intent='warning' visuallyHiddenText="Heart Rate" />
+        - Blood Pressure: <BadgeInDoc text='Critical' intent='negative' visuallyHiddenText="Blood Pressure"/>
+     - A bad example where color alone is used to convey meaning:
+        - <BadgeInDoc text='Heart Rate' intent='warning' />
+        - <BadgeInDoc text='Blood Pressure' intent='negative' />
+- When using the intent prop to set badge colors, choose the appropriate intent prop type value that matches the purpose and intent of the badge(s). And, be consistent in the use of color per the meaning of the words.
+  - Do not use one color with different meanings. For example, do not have 2 or more badges using the same color each with a different meaning.
+
+### Accessibility Guidance: Visually Hidden Text
+Because Badges should always use text that provides the proper context and meaning of the badge, badges should generally make sense on their own. Additionally, Badges are usually placed next to or in very close proximity to the text they are referring to. However, there may be times we want to provide a little extra context for people that use Assistive Technologies (AT), like screen readers. 
+
+Use visually-hidden-text when:
+
+- **Ensure Programmatic Context**: The visible relationship of the Badge is not also semantically connected or represented in code.
+  - For example, a Badge placed visibly next to one word within a string of words but the one word and Badge pairing is not coded as a semantic group and would not easily be associated together. See the good example underneath the Accessibility Guidance: Badge Color section above.
+
+```jsx
+import Badge from 'terra-badge';
+
+<div>
+  <span> Heart Rate: </span> <Badge text='High' intent='warning' visuallyHiddenText="Heart Rate" /> <br />
+  <span> Blood Pressure: </span> <Badge text='Critical' intent='negative' visuallyHiddenText="Blood Pressure"/>
+</div>
+```
+
+- **Add Additional Context**: The visible presentation provides visible context but we want to ensure more meaningful text for a screen reader user.
+  - For example, a mailbox icon with a Badge count of 20 can easily be interpreted by sighted users a 20 unread messages. It would best to provide more context for AT users. In this instance we could have the Badge include the count and visually hidden text “unread messages” so a screen reader would read “20 unread messages” instead of just “20.”
+
+Other helpful hints in using visually-hidden-text:
+
+- Avoid using visually-hidden-text in a way that creates redundancy of words. For example, a badge titled “High” with visually hidden text “High Risk Factor” – in this example the word High would be read twice. It is unnecessary and the redundancy could cause confusion.
+- Keep visually-hidden-text to a minimum in length. It should be short, simple, and to the point.
+- Do not use visually-hidden-text when the text is sufficient to convey information of badge.
+
+**Remember the point of accessibility is to provide an equitable experience to all.** We do not want to give any user more information than another regardless of abilities.
+
+### Accessibility Guidance: Icons
+
+For icons to be effective within user interfaces, the icon used must make sense, be consistent and predictable, have an accessible name, and users must understand their purpose. If not implemented correctly, icons may prevent some of your users from understanding the UI. Refer to the [Terra Icon Accessibility Guide](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/icon/accessibility-guide) for proper guidance when using icons.
+
+</Notice>
+
+- When using Badges inside a larger group (e.g., inside a table or list of items), do not mix and match Badge sizes. Use one only one size of Badge per grouping of content.
+
+- Use only one Badge per item. Multiple Badges should not be used to pair with a singular item, instead use a [`Pill`](https://engineering.cerner.com/terra-ui/components/cerner-terra-framework-docs/pills/filter-pills) or [`Tag`](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/tag/about) but  be sure to use the component that matches the intent of use case. Pills and Tags, while similar, are not the same thing.
 
 ## Component Features
 * [Cross-Browser Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#cross-browser-support)
