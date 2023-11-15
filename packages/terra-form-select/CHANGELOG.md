@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased
+* Added
+  * Added 'aria-invalid' attribute to set to true for error input fields and false when resolving errors. 
 
 ## 6.50.0 - (November 13, 2023)
 

@@ -1,6 +1,10 @@
 # Changelog
 
 ## Unreleased
+* Added
+  * Added visual label and associated with input field using 'for' and 'id'.
+
+
 
 ## 1.50.0 - (November 13, 2023)
 
