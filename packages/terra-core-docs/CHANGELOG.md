@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased
+* Added
+  * Added a invalid example in `terra-search-Field`.
 
 ## 1.45.0 - (October 16, 2023)
 

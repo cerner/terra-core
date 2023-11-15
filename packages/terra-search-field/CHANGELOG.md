@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added Syles for invalid Search Field components.
+
 ## 3.94.0 - (October 16, 2023)
 
 * Changed

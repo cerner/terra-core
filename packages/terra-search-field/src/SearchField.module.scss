@@ -47,6 +47,14 @@
       right: 0;
       top: 0;
 
+      &.error-clear {
+        // Add styles for the clear button when an invalid search occurs
+        // Example: Highlight the background color in red
+        background-color: #e50000;
+        border: 1px dotted #e50000; // Add a dotted red border
+        box-shadow: 0 0 5px #e50000; // Add a red box shadow
+      }
+
       &:active {
         background-color: var(--terra-search-field-clear-active-background-color, transparent);
       }
@@ -107,6 +115,13 @@
   .search-container,
   .search-role-container {
     display: inline;
+
+    &.error-search {
+      // Add styles for the container when an invalid search occurs
+      // Example: Highlight the border in red
+      border: 2px dotted #e50000;
+      box-shadow: 0 0 5px #e50000; // Add a red box shadow
+    }
   }
 
   .input {
@@ -142,6 +157,13 @@
     transition-property: background-size;
     transition-timing-function: ease;
     width: 100%;
+
+    &.error-search {
+      // Add styles for the input when an invalid search occurs
+      // Example: Highlight the border in red
+      border: 2px dotted #e50000;
+      box-shadow: 0 0 5px #e50000; // Add a red box shadow
+    }
 
     &::placeholder {
       color: var(--terra-search-field-input-placeholder-color, rgba(21, 33, 41, 0.62));
