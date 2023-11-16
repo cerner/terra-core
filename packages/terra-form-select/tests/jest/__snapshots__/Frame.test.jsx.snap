@@ -33,6 +33,7 @@ exports[`Frame correctly applies the theme context className for combobox varian
         aria-describedby="terra-select-screen-reader-description-7"
         aria-disabled="false"
         aria-expanded="false"
+        aria-invalid="false"
         aria-label="Terra.form.select.ariaLabel"
         aria-required="false"
         class="search-input"
