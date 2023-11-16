@@ -125,7 +125,7 @@ const List = ({
   const theme = useContext(ThemeContext);
   const [listItem, setlistItem] = useState([]);
   let listNode = useRef();
-  const isDragStarted = useRef();
+  const isListItemDropped = useRef();
   const draggedItemindex = useRef();
 
   useEffect(() => {
@@ -137,12 +137,12 @@ const List = ({
   }, [children]);
 
   useEffect(() => {
-    if (isDragStarted.current) {
+    if (isListItemDropped.current) {
       const listItems = listNode && listNode.querySelectorAll('[data-item-show-focus]');
       if (listItems[draggedItemindex.current]) {
         listItems[draggedItemindex.current].focus();
       }
-      isDragStarted.current = false;
+      isListItemDropped.current = false;
     }
   }, [listItem]);
 
@@ -243,7 +243,7 @@ const List = ({
   };
 
   const handleDragStart = (start, provided) => {
-    isDragStarted.current = true;
+    isListItemDropped.current = true;
     provided.announce(intl.formatMessage({ id: 'Terra.list.lift' }, { startPosition: (start.source.index + 1) }));
   };
 
