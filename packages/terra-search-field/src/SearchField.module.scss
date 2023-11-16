@@ -48,11 +48,8 @@
       top: 0;
 
       &.error-clear {
-        // Add styles for the clear button when an invalid search occurs
-        // Example: Highlight the background color in red
-        background-color: #e50000;
-        border: 1px dotted #e50000; // Add a dotted red border
-        box-shadow: 0 0 5px #e50000; // Add a red box shadow
+        outline: var(--terra-search-field-focus-keyboard-outline, 2px solid rgb(225, 14, 14));
+        outline-offset: var(--terra-search-field-focus-keyboard-outline-offset, 1px);
       }
 
       &:active {
@@ -117,10 +114,8 @@
     display: inline;
 
     &.error-search {
-      // Add styles for the container when an invalid search occurs
-      // Example: Highlight the border in red
-      border: 2px dotted #e50000;
-      box-shadow: 0 0 5px #e50000; // Add a red box shadow
+      outline: var(--terra-search-field-focus-keyboard-outline, 2px solid rgb(225, 14, 14));
+      outline-offset: var(--terra-search-field-focus-keyboard-outline-offset, 1px);
     }
   }
 
@@ -159,10 +154,8 @@
     width: 100%;
 
     &.error-search {
-      // Add styles for the input when an invalid search occurs
-      // Example: Highlight the border in red
-      border: 2px dotted #e50000;
-      box-shadow: 0 0 5px #e50000; // Add a red box shadow
+      outline: var(--terra-search-field-focus-keyboard-outline, 2px solid rgb(225, 14, 14));
+      outline-offset: var(--terra-search-field-focus-keyboard-outline-offset, 1px);
     }
 
     &::placeholder {
