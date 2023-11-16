@@ -125,6 +125,8 @@ const List = ({
   const theme = useContext(ThemeContext);
   const [listItem, setlistItem] = useState([]);
   let listNode = useRef();
+  const isDragStarted = useRef();
+  const draggedItemindex = useRef();
 
   useEffect(() => {
     if (Array.isArray(children)) {
@@ -133,6 +135,16 @@ const List = ({
       setlistItem([children]);
     }
   }, [children]);
+
+  useEffect(() => {
+    if (isDragStarted.current) {
+      const listItems = listNode && listNode.querySelectorAll('[data-item-show-focus]');
+      if (listItems[draggedItemindex.current]) {
+        listItems[draggedItemindex.current].focus();
+      }
+      isDragStarted.current = false;
+    }
+  }, [listItem]);
 
   const listClassNames = classNames(
     cx(
@@ -212,7 +224,6 @@ const List = ({
   };
 
   const handleDragEnd = (result, provided) => {
-    const listItems = listNode && listNode.querySelectorAll('[data-item-show-focus]');
     // dropped outside the list
     if (!result.destination) {
       provided.announce(intl.formatMessage({ id: 'Terra.list.cancelDrag' }, { startPosition: (result.source.index + 1) }));
@@ -224,9 +235,7 @@ const List = ({
       result.destination.index,
     );
     setlistItem(items);
-    if (listItems && listItems[result.source.index]) {
-      listItems[result.source.index].focus();
-    }
+    draggedItemindex.current = result.destination.index;
     provided.announce(intl.formatMessage({ id: 'Terra.list.drop' }, { startPosition: (result.source.index + 1), endPosition: (result.destination.index + 1) }));
     if (onDragEnd) {
       onDragEnd(result, provided);
@@ -234,6 +243,7 @@ const List = ({
   };
 
   const handleDragStart = (start, provided) => {
+    isDragStarted.current = true;
     provided.announce(intl.formatMessage({ id: 'Terra.list.lift' }, { startPosition: (start.source.index + 1) }));
   };
 
