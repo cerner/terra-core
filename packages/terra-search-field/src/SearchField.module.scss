@@ -48,7 +48,7 @@
       top: 0;
 
       &.error-clear {
-        outline: var(--terra-search-field-focus-keyboard-outline, 2px solid rgb(225, 14, 14));
+        outline: var(--terra-search-field-focus-keyboard-outline, 2px solid #e50000);
         outline-offset: var(--terra-search-field-focus-keyboard-outline-offset, 1px);
       }
 
@@ -114,7 +114,7 @@
     display: inline;
 
     &.error-search {
-      outline: var(--terra-search-field-focus-keyboard-outline, 2px solid rgb(225, 14, 14));
+      outline: var(--terra-search-field-focus-keyboard-outline, 2px solid #e50000);
       outline-offset: var(--terra-search-field-focus-keyboard-outline-offset, 1px);
     }
   }
@@ -154,7 +154,7 @@
     width: 100%;
 
     &.error-search {
-      outline: var(--terra-search-field-focus-keyboard-outline, 2px solid rgb(225, 14, 14));
+      outline: var(--terra-search-field-focus-keyboard-outline, 2px solid #e50000);
       outline-offset: var(--terra-search-field-focus-keyboard-outline-offset, 1px);
     }
 
