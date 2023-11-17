@@ -1,8 +1,11 @@
 // Themes
 @import './clinical-lowlight-theme/DropdownList.module';
 @import './orion-fusion-theme/DropdownList.module';
+@import './redwood-theme/DropdownList.module';
+
 @import './clinical-lowlight-theme/Item.module';
 @import './orion-fusion-theme/Item.module';
+@import './redwood-theme/Item.module';
 
 :local {
   .dropdown-list {
