@@ -536,11 +536,6 @@ Terra.describeViewports('Select', ['tiny'], () => {
         Terra.validates.element('[combobox-spacebar]open-dropdown', { selector: '#root' });
       });
 
-      it('should display no results on search', () => {
-        $('[data-terra-select] input').setValue('John');
-        Terra.validates.element('combobox no results displayed on search', { selector: '#root' });
-      });
-
       after(() => {
         // remove backspace that is added to the input. Bug logged here: https://github.com/cerner/terra-core/issues/2414
         browser.keys('Backspace');
@@ -855,6 +850,40 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
 
       after(() => $('#root').click());
+    });
+  });
+
+  describe('Combobox uncontrolled no results', () => {
+    before(() => {
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/uncontrolled-combobox');
+    });
+    it('should display no results on search', () => {
+      $('[data-terra-select] input').setValue('John');
+      Terra.validates.element('combobox no results displayed on search', { selector: '#root' });
+    });
+  });
+
+  describe('Combobox UnControlled Search Results', () => {
+    before(() => {
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/uncontrolled-combobox');
+    });
+    it('should display results on search', () => {
+      $('[data-terra-select] input').setValue('Blue');
+      Terra.validates.element('[combobox] Results displayed on search', { selector: '#root' });
+    });
+  });
+
+  describe('Combobox uncontrolled free text clear by escape key press', () => {
+    before(() => {
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/uncontrolled-combobox');
+    });
+    it('should enter a free text entry in combobox and close list item by pressing escape and clear the free text by pressing again escape', () => {
+      $('[data-terra-select] input').setValue('Black');
+      Terra.validates.element('combobox displayed Add button with typed free text', { selector: '#root' });
+      browser.keys('Escape');
+      Terra.validates.element('combobox dropdown list close by first escape', { selector: '#root' });
+      browser.keys('Escape');
+      Terra.validates.element('combobox cleared entered text by second escape', { selector: '#root' });
     });
   });
 
@@ -1525,6 +1554,15 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
       it('should display toggle closed dropdown', () => {
         Terra.validates.element('search close on outside click after toggle open', { selector: '#root' });
+      });
+
+      it('should enter a free text entry in search select and close list item by pressing escape and clear the free text by pressing again escape', () => {
+        $('[data-terra-select] input').setValue('Black');
+        Terra.validates.element('search select displayed displayed typed text', { selector: '#root' });
+        browser.keys('Escape');
+        Terra.validates.element('search select dropdown list close by first escape', { selector: '#root' });
+        browser.keys('Escape');
+        Terra.validates.element('search select cleared entered text by second escape', { selector: '#root' });
       });
     });
 

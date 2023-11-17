@@ -43,13 +43,11 @@ exports[`ToggleSectionHeader should render a default toggle section header 1`] =
   <h2
     aria-expanded="false"
     class="section-header is-interactable"
-    tabindex="0"
   >
     <button
       aria-expanded="false"
       aria-label="default title"
       class="arrange-wrapper"
-      tabindex="-1"
       type="button"
     >
       <span
@@ -94,13 +92,11 @@ exports[`ToggleSectionHeader should render an animated toggle section header 1`]
   <h2
     aria-expanded="false"
     class="section-header is-interactable"
-    tabindex="0"
   >
     <button
       aria-expanded="false"
       aria-label="animated title"
       class="arrange-wrapper"
-      tabindex="-1"
       type="button"
     >
       <span
@@ -155,13 +151,11 @@ exports[`ToggleSectionHeader should render an initially open toggle section head
   <h2
     aria-expanded="true"
     class="section-header is-interactable"
-    tabindex="0"
   >
     <button
       aria-expanded="true"
       aria-label="initially open title"
       class="arrange-wrapper"
-      tabindex="-1"
       type="button"
     >
       <span
@@ -214,26 +208,24 @@ exports[`ToggleSectionHeader should render an open toggle section header when cl
 >
   <div>
     <SectionHeader
-      aria-expanded={true}
-      isOpen={true}
+      aria-expanded={false}
+      isOpen={false}
       isTransparent={false}
       level={2}
       onClick={[Function]}
       text="opens on click title"
     >
       <h2
-        aria-expanded={true}
+        aria-expanded={false}
         className="section-header is-interactable"
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        tabIndex="0"
       >
         <button
-          aria-expanded={true}
+          aria-expanded={false}
           aria-label="opens on click title"
           className="arrange-wrapper"
-          tabIndex="-1"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
           type="button"
         >
           <Arrange
@@ -251,7 +243,7 @@ exports[`ToggleSectionHeader should render an open toggle section header when cl
                 className="accordion-icon-wrapper"
               >
                 <span
-                  className="accordion-icon is-open"
+                  className="accordion-icon"
                 />
               </span>
             }
@@ -266,7 +258,7 @@ exports[`ToggleSectionHeader should render an open toggle section header when cl
                   className="accordion-icon-wrapper"
                 >
                   <span
-                    className="accordion-icon is-open"
+                    className="accordion-icon"
                   />
                 </span>
               </span>
@@ -290,14 +282,12 @@ exports[`ToggleSectionHeader should render an open toggle section header when cl
     </SectionHeader>
     <Toggle
       isAnimated={false}
-      isOpen={true}
+      isOpen={false}
     >
       <div
-        aria-hidden={false}
+        aria-hidden={true}
         className="toggle"
-      >
-        opens on click section header
-      </div>
+      />
     </Toggle>
   </div>
 </ToggleSectionHeader>

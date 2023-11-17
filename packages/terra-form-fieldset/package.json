@@ -1,6 +1,6 @@
 {
   "name": "terra-form-fieldset",
-  "version": "2.77.0",
+  "version": "2.78.0",
   "description": "Generic form fieldset component which handles the layout of a standard form fieldset including help text, legend, value and widget placement.",
   "author": "Cerner Corporation",
   "repository": {
@@ -24,8 +24,8 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-form-field": "^4.30.0",
-    "terra-form-input": "^4.28.0",
+    "terra-form-field": "^4.31.0",
+    "terra-form-input": "^4.29.0",
     "terra-theme-context": "^1.0.0",
     "uuid": "3.4.0"
   },

@@ -1,6 +1,6 @@
 {
   "name": "terra-form-select",
-  "version": "6.49.0",
+  "version": "6.50.0",
   "description": "Provides a drop down of selectable options.",
   "author": "Cerner Corporation",
   "repository": {
@@ -29,9 +29,9 @@
     "mutationobserver-shim": "<=0.3.3",
     "prop-types": "^15.5.8",
     "react-lifecycles-compat": "^3.0.2",
-    "terra-form-field": "^4.30.0",
+    "terra-form-field": "^4.31.0",
     "terra-hookshot": "^5.0.0",
-    "terra-mixins": "^1.40.0",
+    "terra-mixins": "^1.41.0",
     "terra-theme-context": "^1.0.0",
     "wicg-inert": "^3.0.2"
   },

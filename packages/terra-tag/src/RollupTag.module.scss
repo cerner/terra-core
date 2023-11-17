@@ -4,29 +4,6 @@
 @import './redwood-theme/RollupTag.module';
 
 :local {
-  .rollup-tag-label {
-    font-family: inherit; // Button reset
-    left: 0; // Button reset for IE
-    min-width: 0;
-    overflow: hidden;
-    position: relative; // Button reset for IE
-    text-overflow: ellipsis;
-    top: 0;  // Button reset for IE
-    white-space: nowrap;  
-  }
-
-  @supports (not (-webkit-hyphens:none)) {
-    .rollup-tag-label {
-      top: var(--terra-tags-rollup-tag-label-not-ms-top, -0.01em); // Text alignment for all but IE + Safari
-    }
-  }
-
-  @supports selector(:-moz-is-html) {
-    .rollup-tag-label { 
-      top: var(--terra-tags-rollup-tag-label-moz-top, -0.02em); // Text alignment for Firefox
-    }
-  }
-
   .rollup-tag:not(.is-active) {
     background-color: var(--terra-tags-rollup-tag-background-color, rgba(28, 31, 33, 0.04));
     border: var(--terra-tags-rollup-tag-border, 1px solid rgba(28, 31, 33, 0.1));

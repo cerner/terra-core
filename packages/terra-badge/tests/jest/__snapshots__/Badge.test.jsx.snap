@@ -97,9 +97,6 @@ exports[`should render a badge component in the order, text and icon with info i
 <span
   className="badge has-icon is-reversed small info"
 >
-  <VisuallyHiddenText
-    text="Terra.badge.intent.info"
-  />
   <span
     className="text"
   >
@@ -128,9 +125,6 @@ exports[`should render a badge component with icon and warning intent 1`] = `
   <img
     alt="Test icon"
   />
-  <VisuallyHiddenText
-    text="Terra.badge.intent.warning"
-  />
 </span>
 `;
 
@@ -150,9 +144,6 @@ exports[`should render a badge component with text and secondary intent 1`] = `
 <span
   className="badge small secondary"
 >
-  <VisuallyHiddenText
-    text="Terra.badge.intent.secondary"
-  />
   <span
     className="text"
   >
