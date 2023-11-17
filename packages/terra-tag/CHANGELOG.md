@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 2.64.1 - (November 16, 2023)
+
+* Fixed
+  * Removed unused `@supports` css rule from terra-tag-list.
+
 ## 2.64.0 - (November 13, 2023)
 
 * Added
