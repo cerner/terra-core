@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import Button from 'terra-button/lib/Button';
 import SearchField from 'terra-search-field';
-import styles from './SearchField.module.scss';
+import styles from './SearchFieldInvalid.module.scss';
 
 const SearchFieldInvalid = () => {
   const [searchText, setSearchText] = useState('');
