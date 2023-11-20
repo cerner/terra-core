@@ -105,6 +105,10 @@ const propTypes = {
    * The id of the input field.
    */
   inputId: PropTypes.string,
+  /**
+   * Used to define a string that labels the select component to screen readers.
+   */
+  ariaLabel: PropTypes.string,
 };
 
 const defaultProps = {
@@ -126,6 +130,7 @@ const defaultProps = {
   required: false,
   value: undefined,
   inputId: undefined,
+  ariaLabel: undefined,
 };
 
 class Combobox extends React.Component {
@@ -208,7 +213,7 @@ class Combobox extends React.Component {
 
   render() {
     const {
-      allowClear, children, defaultValue, onChange, placeholder, required, value, intl, inputId, ...otherProps
+      allowClear, children, defaultValue, onChange, placeholder, required, value, intl, inputId, ariaLabel, ...otherProps
     } = this.props;
 
     const defaultPlaceholder = intl.formatMessage({ id: 'Terra.form.select.defaultComboboxDisplay' });
@@ -237,6 +242,7 @@ class Combobox extends React.Component {
         clearOptionDisplay={clearOptionDisplay}
         inputId={inputId}
         resetComboboxValue={this.handleResetComboboxValue}
+        ariaLabel={ariaLabel}
       >
         {this.state.tags}
         {children}

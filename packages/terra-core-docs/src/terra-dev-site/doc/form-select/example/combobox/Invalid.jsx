@@ -18,7 +18,7 @@ const InvalidExample = () => {
 
   return (
     <>
-      <Combobox placeholder="Select a color" allowClear onSelect={handleOnChange} isInvalid={isInvalid} className={cx('form-select')}>
+      <Combobox placeholder="Select a color" allowClear ariaLabel="Select a color" onSelect={handleOnChange} isInvalid={isInvalid} className={cx('form-select')}>
         <Combobox.Option value="blue" display="Blue" />
         <Combobox.Option value="green" display="Green" />
         <Combobox.Option value="purple" display="Purple" />

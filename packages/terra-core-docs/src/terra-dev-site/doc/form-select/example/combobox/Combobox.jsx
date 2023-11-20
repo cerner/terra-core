@@ -11,7 +11,7 @@ const ComboboxExample = () => (
     label="Colors"
     htmlFor="color-field-1"
   >
-    <Combobox placeholder="Select a color" className={cx('form-select')} inputId="color-field-1">
+    <Combobox placeholder="Select a color" ariaLabel="Select a color" className={cx('form-select')} inputId="color-field-1">
       <Combobox.Option value="blue" display="Blue" />
       <Combobox.Option value="green" display="Green" />
       <Combobox.Option value="purple" display="Purple" />
