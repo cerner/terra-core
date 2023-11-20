@@ -398,12 +398,3 @@
     width: 1px;
   }
 }
-.error-text {
-  color: var(--terra-form-select-error-text-color, #e50000);
-  font-size: var(--terra-form-select-error-text-font-size, 0.857rem);
-  font-weight: var(--terra-form-select-error-text-font-weight, normal);
-  line-height: 1.25;
-  margin-top: var(--terra-form-select-error-text-margin-top, 0.357em);
-  outline: 0;
-  text-align: left;
-}
