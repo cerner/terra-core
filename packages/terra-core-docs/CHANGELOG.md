@@ -3,6 +3,9 @@
 ## Unreleased
 
 * Added
+  * Added a invalid example in `terra-search-Field`.
+
+* Added
   * Added visual label and associated with input field using 'for' and 'id'.
 ## 1.51.0 - (November 16, 2023)
 

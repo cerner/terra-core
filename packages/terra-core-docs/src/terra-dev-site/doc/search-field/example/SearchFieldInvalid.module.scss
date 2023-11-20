@@ -1,0 +1,11 @@
+:local {
+  .error-text {
+    color: var(--terra-core-docs-error-text-color, #e50000);
+    font-size: var(--terra-core-docs-error-text-font-size, 0.857rem);
+    font-weight: var(--terra-core-docs-error-text-font-weight, normal);
+    line-height: 1.25;
+    margin-top: var(--terra-core-docs-error-text-margin-top, 0.357em);
+    outline: 0;
+    text-align: left;
+  }
+}

@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added styles for invalid Search Field components.
+
 ## 3.97.0 - (November 13, 2023)
 
 * Changed
