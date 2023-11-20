@@ -3,7 +3,8 @@
 ## Unreleased
 
 * Added
-  * Added 'aria-invalid' attribute in `terra-form-select-combobox` and `terra-form-select-searchselect` which will be set to true for error input fields and false when resolving errors. 
+  * Added 'aria-invalid' attribute which will be set to true for error input fields and false when resolving errors.
+  * Added 'ariaLabel' attribute in `form-select`.
 
 ## 6.50.0 - (November 13, 2023)
 

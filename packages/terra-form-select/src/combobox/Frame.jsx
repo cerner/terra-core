@@ -139,6 +139,7 @@ const defaultProps = {
   totalOptions: undefined,
   value: undefined,
   inputId: undefined,
+  ariaLabel: undefined,
 };
 
 /* This rule can be removed when eslint-plugin-jsx-a11y is updated to ~> 6.0.0 */
@@ -397,7 +398,7 @@ class Frame extends React.Component {
   getDisplay(ariaDescribedBy, id) {
     const { hasSearchChanged, searchValue } = this.state;
     const {
-      disabled, display, placeholder, required, inputId, isInvalid,
+      disabled, display, placeholder, required, inputId,
     } = this.props;
 
     const inputAttrs = {
@@ -413,7 +414,6 @@ class Frame extends React.Component {
       'aria-disabled': disabled,
       'aria-owns': this.state.isOpen ? id : undefined,
       'aria-expanded': !disabled && this.state.isOpen,
-      'aria-invalid': isInvalid,
       type: 'text',
       className: cx('search-input'),
       required,
@@ -521,18 +521,21 @@ class Frame extends React.Component {
    * Falls back to the string 'Search' if no label is provided
    */
   ariaLabel() {
-    const { ariaLabel, disabled, intl } = this.props;
+    const {
+      ariaLabel,
+      disabled,
+      intl,
+    } = this.props;
 
-    const defaultAriaLabel = intl.formatMessage({ id: 'Terra.form.select.ariaLabel' });
     const dimmed = intl.formatMessage({ id: 'Terra.form.select.dimmed' });
 
     // VO on iOS doesn't do a good job of announcing disabled stated. Here we append the phrase that
     // VO associates with disabled form controls.
     if ('ontouchstart' in window && disabled) {
-      return ariaLabel === undefined ? `${defaultAriaLabel} ${dimmed}` : `${ariaLabel} ${dimmed}`;
+      return `${ariaLabel} ${dimmed}`;
     }
 
-    return ariaLabel === undefined ? defaultAriaLabel : ariaLabel;
+    return ariaLabel;
   }
 
   /**

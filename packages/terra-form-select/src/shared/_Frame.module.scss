@@ -149,6 +149,9 @@
     flex-shrink: 0;
     margin-left: auto;
     padding: var(--terra-form-select-toggle-padding, 0 0.42857rem);
+    position: absolute;
+    right: 0;
+    height: 100%;
   }
 
   .toggle-narrow {
@@ -282,9 +285,8 @@
     }
 
     > .toggle {
-      border: var(--terra-form-select-toggle-border, 1px solid #dedfe0);
+      border-left: var(--terra-form-select-toggle-border, 1px solid #dedfe0);
       border-bottom-right-radius: var(--terra-form-select-border-bottom-right-radius, 3px);
-      border-left: 0;
       border-top-right-radius: var(--terra-form-select-border-top-right-radius, 3px);
 
       &:hover {
