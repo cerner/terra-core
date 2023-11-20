@@ -388,7 +388,7 @@ class Frame extends React.Component {
   getDisplay(ariaDescribedBy, id) {
     const { hasSearchChanged, searchValue } = this.state;
     const {
-      disabled, display, placeholder, required, inputId,
+      disabled, display, placeholder, required, inputId, isInvalid,
     } = this.props;
 
     const inputAttrs = {
@@ -410,6 +410,7 @@ class Frame extends React.Component {
       'aria-required': required,
       id: inputId,
       role: 'combobox',
+      'aria-invalid': isInvalid,
     };
     const value = hasSearchChanged ? searchValue : display;
 

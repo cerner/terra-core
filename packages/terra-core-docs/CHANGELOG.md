@@ -6,6 +6,11 @@
   * Added visual label and associated with input field using 'for' and 'id'.
   * Added 'ariaLabel' attribute for `terra-form-select` examples.
 
+## 1.51.0 - (November 16, 2023)
+
+* Changed
+  * Minor dependency version bump
+
 ## 1.50.0 - (November 13, 2023)
 
 * Added
