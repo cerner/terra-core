@@ -126,6 +126,7 @@ const defaultProps = {
   isTouchAccessible: false,
   value: undefined,
   inputId: undefined,
+  onFocus: undefined,
 };
 
 class SearchSelect extends React.Component {

@@ -67,6 +67,7 @@
     --terra-form-select-toggle-invalid-box-shadow: 0 0 0 1px #fb4c4c;
     --terra-form-select-toggle-invalid-focus-border-color: #004c76;
     --terra-form-select-toggle-invalid-focus-box-shadow: 0 0 0 1px #004c76, 0 0 0 1px #004c76;
+    --terra-form-select-error-text-color: #fb4c4c;
 
     @include terra-inline-svg-var('--terra-form-select-arrow-background', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#b2b5b6" d="M48 12L24 36 0 12h48z"/></svg>');
     @include terra-inline-svg-var('--terra-form-select-disabled-arrow-background', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#b2b5b6" d="M48 12L24 36 0 12h48z"/></svg>');
