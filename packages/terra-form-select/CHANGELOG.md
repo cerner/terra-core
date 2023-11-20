@@ -3,6 +3,9 @@
 ## Unreleased
 
 * Added
+  * Added visual focus dashed border for `terra-form-select` list options.
+
+* Added
   * Added 'aria-invalid' attribute which will be set to true for error input fields and false when resolving errors. 
 
 ## 6.50.0 - (November 13, 2023)
