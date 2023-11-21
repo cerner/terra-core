@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added the ability to fix the position of the title of the `terra-section-header`.
+
 ## 2.64.0 - (November 13, 2023)
 
   * Changed

@@ -142,4 +142,17 @@ describe('SectionHeader', () => {
     const sectionHeader = wrapper.find('.section-header').at(0);
     expect(sectionHeader.props().tabIndex).toBe('-1');
   });
+
+  it('verifies that section header with a fixed title has appropriate classes', () => {
+    const wrapper = shallow(
+      <SectionHeader
+        text="foo"
+        level={2}
+        isTitleFixed
+      />,
+    );
+
+    const sectionHeader = wrapper.find('.arrange-wrapper.title-fixed').at(0);
+    expect(sectionHeader).toHaveLength(1);
+  });
 });

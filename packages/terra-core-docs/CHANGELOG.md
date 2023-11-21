@@ -3,6 +3,9 @@
 ## Unreleased
 
 * Added
+  * Added test to `terra-section-header` for the fixed section header title.
+
+* Added
   * Added visual label and associated with input field using 'for' and 'id'.
 ## 1.51.0 - (November 16, 2023)
 
