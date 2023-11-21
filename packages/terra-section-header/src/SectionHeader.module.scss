@@ -151,5 +151,10 @@
     &:focus {
       outline: none;
     }
+
+    // Fix the position of the section header title
+    &.title-fixed {
+      position: absolute;
+    }
   }
 }
