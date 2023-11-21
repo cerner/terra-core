@@ -510,18 +510,24 @@ class Frame extends React.Component {
    * Falls back to the string 'Search' if no label is provided
    */
   ariaLabel() {
-    const { ariaLabel, disabled, intl } = this.props;
+    const {
+      ariaLabel, disabled, intl, placeholder,
+    } = this.props;
 
     const defaultAriaLabel = intl.formatMessage({ id: 'Terra.form.select.ariaLabel' });
     const dimmed = intl.formatMessage({ id: 'Terra.form.select.dimmed' });
+    const isChrome = navigator.userAgent.indexOf('Chrome') !== -1;
 
     // VO on iOS doesn't do a good job of announcing disabled stated. Here we append the phrase that
     // VO associates with disabled form controls.
     if ('ontouchstart' in window && disabled) {
-      return ariaLabel === undefined ? `${defaultAriaLabel} ${dimmed}` : `${ariaLabel} ${dimmed}`;
+      return ariaLabel === undefined
+        ? `${defaultAriaLabel} ${isChrome ? `${placeholder}` : ''} ${dimmed}`
+        : `${ariaLabel} ${isChrome ? `${placeholder}` : ''} ${dimmed}`;
     }
-
-    return ariaLabel === undefined ? defaultAriaLabel : ariaLabel;
+    return ariaLabel === undefined
+      ? `${defaultAriaLabel} ${isChrome ? `${placeholder}` : ''}`
+      : `${ariaLabel} ${isChrome ? `${placeholder}` : ''}`;
   }
 
   /**
