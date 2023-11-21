@@ -27,7 +27,6 @@ class ControlledCombobox extends React.Component {
           required
           value={this.state.value}
           variant="combobox"
-          ariaLabel="Select a color"
         >
           <Select.Option value="blue" display="Blue" />
           <Select.Option value="green" display="Green" />

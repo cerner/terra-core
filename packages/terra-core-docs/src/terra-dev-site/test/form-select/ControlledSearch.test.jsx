@@ -26,7 +26,6 @@ class ControlledSearch extends React.Component {
           placeholder="Select a color"
           value={this.state.value}
           variant="search"
-          ariaLabel="Select a color"
         >
           <Select.Option value="blue" display="Blue" />
           <Select.Option value="green" display="Green" />
