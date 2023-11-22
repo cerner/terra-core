@@ -8,7 +8,6 @@ import * as KeyCode from 'keycode-js';
 import AddOption from '../shared/_AddOption';
 import ClearOption from '../shared/_ClearOption';
 import MenuUtil from '../shared/_MenuUtil';
-import SharedUtil from '../shared/_SharedUtil';
 import SearchResults from '../shared/_SearchResults';
 import styles from '../shared/_Menu.module.scss';
 import NoResults from '../shared/_NoResults';
@@ -239,9 +238,7 @@ class Menu extends React.Component {
         results in reading the display text followed by reading the aria-live message which is
         the display text + 'selected'
         */
-        if (!SharedUtil.isSafari()) {
-          this.props.visuallyHiddenComponent.current.innerText = `${option.props.display} ${selectedTxt}`;
-        }
+        this.props.visuallyHiddenComponent.current.innerText = `${option.props.value} ${selectedTxt}`;
       }
 
       onSelect(option.props.value, option);
