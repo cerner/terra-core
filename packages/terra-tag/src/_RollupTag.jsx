@@ -75,7 +75,6 @@ const RollUpTag = (props) => {
       refCallback={(ref) => { rollUpTagRef.current = ref; }}
       isCompact
       aria-label={rollUpHint}
-      aria-describedby={rollUpHint}
       aria-atomic="true"
       data-terra-rollup-tag-show-focus-styles
       data-terra-rollup-tag
