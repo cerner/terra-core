@@ -511,17 +511,22 @@ class Frame extends React.Component {
    * Falls back to the string 'Search' if no label is provided
    */
   ariaLabel() {
-    const { ariaLabel, disabled, intl } = this.props;
+    const {
+      ariaLabel,
+      disabled,
+      placeholder,
+      intl,
+    } = this.props;
 
     const dimmed = intl.formatMessage({ id: 'Terra.form.select.dimmed' });
 
     // VO on iOS doesn't do a good job of announcing disabled stated. Here we append the phrase that
     // VO associates with disabled form controls.
     if ('ontouchstart' in window && disabled) {
-      return `${ariaLabel} ${dimmed}`;
+      return ariaLabel === undefined ? `${placeholder} ${dimmed}` : `${ariaLabel} ${dimmed}`;
     }
 
-    return ariaLabel;
+    return ariaLabel === undefined ? placeholder : ariaLabel;
   }
 
   /**

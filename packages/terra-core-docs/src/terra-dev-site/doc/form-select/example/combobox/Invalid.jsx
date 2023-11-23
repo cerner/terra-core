@@ -22,7 +22,7 @@ const InvalidExample = () => {
 
   return (
     <>
-      <Combobox placeholder="Select a color" ariaLabel="Select a color" isInvalid={isInvalid} onSelect={handleSelectChange} onFocus={handleFocus} className={cx('form-select')}>
+      <Combobox placeholder="Select a color" isInvalid={isInvalid} onSelect={handleSelectChange} onFocus={handleFocus} className={cx('form-select')}>
         <Combobox.Option value="blue" display="Blue" />
         <Combobox.Option value="green" display="Green" />
         <Combobox.Option value="purple" display="Purple" />

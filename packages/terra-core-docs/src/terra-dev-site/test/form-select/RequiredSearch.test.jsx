@@ -24,7 +24,6 @@ class ControlledSearch extends React.Component {
           id="search"
           onChange={this.handleChange}
           placeholder="Select a color"
-          ariaLabel="Select a color"
           required
           value={this.state.value}
           variant="search"
