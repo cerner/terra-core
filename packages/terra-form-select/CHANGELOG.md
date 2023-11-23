@@ -4,6 +4,7 @@
 
 * Fixed
   * Fixed screen reader response for `terra-form-select-combobox`.
+
 ## 6.51.0 - (November 21, 2023)
 
 * Added
