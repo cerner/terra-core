@@ -103,7 +103,9 @@ class Menu extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      closedViaKeyEvent: false,
+    };
 
     this.clearScrollTimeout = this.clearScrollTimeout.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
@@ -176,7 +178,6 @@ class Menu extends React.Component {
   }
 
   componentDidUpdate() {
-    this.updateNoResultsScreenReader();
     this.updateCurrentActiveScreenReader();
   }
 
@@ -296,30 +297,23 @@ class Menu extends React.Component {
     return this.state.active === this.props.value;
   }
 
-  updateNoResultsScreenReader() {
+  updateNoResultsScreenReader(freeTextValue) {
     if (this.liveRegionTimeOut) {
       clearTimeout(this.liveRegionTimeOut);
     }
 
     this.liveRegionTimeOut = setTimeout(() => {
-      const { hasNoResults } = this.state;
-
       const {
         intl,
         visuallyHiddenComponent,
         searchValue,
       } = this.props;
-
       // Race condition can occur between calling timeout and unmounting this component.
       if (!visuallyHiddenComponent || !visuallyHiddenComponent.current) {
         return;
       }
-
-      if (hasNoResults) {
-        visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.noResults' }, { text: searchValue });
-      } else {
-        visuallyHiddenComponent.current.innerText = '';
-      }
+      const noMatchingResultText = intl.formatMessage({ id: 'Terra.form.select.noResults' }, { text: searchValue });
+      visuallyHiddenComponent.current.innerText = `${noMatchingResultText}, ${freeTextValue}`;
     }, 1000);
   }
 
@@ -331,6 +325,7 @@ class Menu extends React.Component {
     } = this.props;
 
     const clearSelectTxt = intl.formatMessage({ id: 'Terra.form.select.clearSelect' });
+    const { hasNoResults } = this.state;
 
     if (this.menu !== null && this.state.active !== null) {
       this.menu.setAttribute('aria-activedescendant', `terra-select-option-${this.state.active}`);
@@ -343,17 +338,21 @@ class Menu extends React.Component {
 
     // Detects if option is clear option and provides accessible text
     if (clearOptionDisplay) {
-      const active = this.menu.querySelector('[data-select-active]');
+      const active = this.menu && this.menu.querySelector('[data-select-active]');
       if (active && active.hasAttribute('data-terra-select-clear-option')) {
         visuallyHiddenComponent.current.innerText = clearSelectTxt;
       }
     }
 
     // Detects if option is an "Add option" and provides accessible text
-    const active = this.menu.querySelector('[data-select-active]');
+    const active = this.menu && this.menu.querySelector('[data-select-active]');
     if (active && active.hasAttribute('data-terra-select-add-option')) {
       const display = active.querySelector('[data-terra-add-option]') ? active.querySelector('[data-terra-add-option]').innerText : null;
-      visuallyHiddenComponent.current.innerText = display;
+      if (hasNoResults && !this.state.closedViaKeyEvent) {
+        this.updateNoResultsScreenReader(display);
+      } else {
+        visuallyHiddenComponent.current.innerText = display;
+      }
     }
 
     const optGroupElement = MenuUtil.getOptGroupElement(this.props.children, this.state.active);
