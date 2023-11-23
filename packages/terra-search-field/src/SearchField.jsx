@@ -131,9 +131,6 @@ class SearchField extends React.Component {
     this.searchText = this.props.defaultValue || this.props.value;
 
     this.searchBtnRef = React.createRef();
-    this.state = {
-      hasInvalidSearch: false,
-    };
   }
 
   componentDidUpdate() {
@@ -199,25 +196,15 @@ class SearchField extends React.Component {
     }
   }
 
-  handleInvalidSearch(searchText) {
-    this.clearSearchTimeout();
-    this.setState({ hasInvalidSearch: true });
-    // You can perform additional actions for invalid search if needed
-    if (this.props.onInvalidSearch) {
-      this.props.onInvalidSearch(searchText);
-    }
-  }
-
   handleSearch() {
     this.clearSearchTimeout();
 
     const searchText = this.searchText || '';
 
     if (searchText.length >= this.props.minimumSearchTextLength && this.props.onSearch) {
-      this.setState({ hasInvalidSearch: false });
       this.props.onSearch(searchText);
-    } else {
-      this.handleInvalidSearch(searchText);
+    } else if (this.props.onInvalidSearch) {
+      this.props.onInvalidSearch(searchText);
     }
   }
 
@@ -270,7 +257,6 @@ class SearchField extends React.Component {
     const searchContainerClassNames = cx([
       'search-container',
       theme.className,
-      { 'error-search': this.state.hasInvalidSearch }, // Add class for invalid search
     ]);
 
     const searchFieldClassNames = classNames(
@@ -304,12 +290,12 @@ class SearchField extends React.Component {
       ? (
         <Button
           data-terra-search-field-button="Clear"
+          className={cx('clear')}
           onClick={this.handleClear}
           text={clearText}
           variant="utility"
           icon={clearIcon}
           isIconOnly
-          className={cx('clear', { 'error-clear': this.state.hasInvalidSearch })} // Adding class for invalid search
         />
       )
       : undefined;

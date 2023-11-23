@@ -8,4 +8,7 @@
     outline: 0;
     text-align: left;
   }
+  .error-border {
+    outline: var(--terra-search-field-focus-outline, 2px solid #e50000);
+  }
 }

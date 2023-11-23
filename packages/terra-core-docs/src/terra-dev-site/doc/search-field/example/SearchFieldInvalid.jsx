@@ -29,6 +29,9 @@ const SearchFieldInvalid = () => {
   const handleInvalidSearch = (value) => {
     setSearchText(value);
     setMessage('INVALID Search Text: ');
+    if (inputRef.current) {
+      inputRef.current.classList.add(styles['error-border']); // Add red border on invalid search
+    }
   };
 
   const handleChange = (event, value) => {
@@ -42,6 +45,9 @@ const SearchFieldInvalid = () => {
   const handleSearch = (value) => {
     setSearchText(value);
     setMessage('Search Text: ');
+    if (inputRef.current) {
+      inputRef.current.classList.remove(styles['error-border']); // Remove red border on valid search
+    }
   };
 
   return (
