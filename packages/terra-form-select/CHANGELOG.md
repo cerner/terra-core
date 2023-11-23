@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Added
-  * Added Chrome-specific condition to announce the placeholder.
+  * Added condition to announce the placeholder across all browsers.
 
 ## 6.51.0 - (November 21, 2023)
 
