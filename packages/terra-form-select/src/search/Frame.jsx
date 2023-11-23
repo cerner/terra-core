@@ -516,18 +516,17 @@ class Frame extends React.Component {
 
     const defaultAriaLabel = intl.formatMessage({ id: 'Terra.form.select.ariaLabel' });
     const dimmed = intl.formatMessage({ id: 'Terra.form.select.dimmed' });
-    const isChrome = navigator.userAgent.indexOf('Chrome') !== -1;
 
     // VO on iOS doesn't do a good job of announcing disabled stated. Here we append the phrase that
     // VO associates with disabled form controls.
     if ('ontouchstart' in window && disabled) {
       return ariaLabel === undefined
-        ? `${defaultAriaLabel} ${isChrome ? `${placeholder}` : ''} ${dimmed}`
-        : `${ariaLabel} ${isChrome ? `${placeholder}` : ''} ${dimmed}`;
+        ? `${defaultAriaLabel} ${placeholder} ${dimmed}`
+        : `${ariaLabel} ${placeholder} ${dimmed}`;
     }
     return ariaLabel === undefined
-      ? `${defaultAriaLabel} ${isChrome ? `${placeholder}` : ''}`
-      : `${ariaLabel} ${isChrome ? `${placeholder}` : ''}`;
+      ? `${defaultAriaLabel} ${placeholder}`
+      : `${ariaLabel} ${placeholder}`;
   }
 
   /**
@@ -660,7 +659,6 @@ class Frame extends React.Component {
       customProps.className,
     );
 
-    const labelId = `terra-select-screen-reader-label-${uniqueid()}`;
     const descriptionId = `terra-select-screen-reader-description-${uniqueid()}`;
     const customAriaDescribedbyIds = customProps['aria-describedby'];
     const ariaDescribedBy = customAriaDescribedbyIds ? `${descriptionId} ${customAriaDescribedbyIds}` : descriptionId;
@@ -698,8 +696,6 @@ class Frame extends React.Component {
         ref={(select) => { this.select = select; }}
       >
         <div className={cx('visually-hidden-component')} hidden>
-          {/* Hidden attribute used to prevent VoiceOver on desktop from announcing this content twice */}
-          <span id={labelId}>{this.ariaLabel()}</span>
           <span id={descriptionId}>{this.renderDescriptionText()}</span>
         </div>
         <div className={cx('display')}>
