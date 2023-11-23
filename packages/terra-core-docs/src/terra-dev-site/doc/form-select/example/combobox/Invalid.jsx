@@ -8,11 +8,9 @@ const cx = classNames.bind(styles);
 
 const InvalidExample = () => {
   const [isInvalid, setIsInvalid] = useState(true);
-  const [selectedValue, setSelectedValue] = useState('');
   const [invalidText, setInvalidText] = useState(null);
 
   const handleSelectChange = (value) => {
-    setSelectedValue(value);
     if (value == null || value === '') {
       setInvalidText('Please select a color');
       setIsInvalid(true);
@@ -37,8 +35,6 @@ const InvalidExample = () => {
       </Combobox>
       {isInvalid && (
         <p className={cx('error-text')}>
-          {selectedValue}
-          {' '}
           Please select a color
         </p>
       )}
