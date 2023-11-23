@@ -74,7 +74,6 @@ const RollUpTag = (props) => {
       onBlur={handleOnBlur}
       refCallback={(ref) => { rollUpTagRef.current = ref; }}
       isCompact
-      aria-live={(navigator.userAgent.indexOf('Edg') === -1 && isCollapsed && !/^(?=.*\bSafari\b)(?!.*\bChrome\b).*/i.test(navigator.userAgent)) ? 'polite' : 'off'}
       aria-label={rollUpHint}
       aria-describedby={rollUpHint}
       aria-atomic="true"
