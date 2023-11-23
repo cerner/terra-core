@@ -12,17 +12,23 @@ const InvalidExample = () => {
   const [invalidText, setInvalidText] = useState(null);
 
   const handleSelectChange = (value) => {
-    setIsInvalid(false);
     setSelectedValue(value);
+    if (value == null || value === '') {
+      setInvalidText('Please select a color');
+      setIsInvalid(true);
+    } else {
+      setIsInvalid(false);
+      setInvalidText(null);
+    }
   };
 
   const handleFocus = () => {
-    setInvalidText('Please select a color');
+    if (isInvalid) setInvalidText('Please select a color');
   };
 
   return (
     <>
-      <Combobox placeholder="Select a color" isInvalid={isInvalid} onSelect={handleSelectChange} onFocus={handleFocus} className={cx('form-select')}>
+      <Combobox placeholder="Select a color" isInvalid={isInvalid} allowClear onSelect={handleSelectChange} onFocus={handleFocus} className={cx('form-select')}>
         <Combobox.Option value="blue" display="Blue" />
         <Combobox.Option value="green" display="Green" />
         <Combobox.Option value="purple" display="Purple" />
