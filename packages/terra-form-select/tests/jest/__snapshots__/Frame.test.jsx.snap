@@ -194,7 +194,9 @@ exports[`Frame correctly applies the theme context className for search variant 
   >
     <span
       id="terra-select-screen-reader-label-13"
-    />
+    >
+      Terra.form.select.ariaLabel
+    </span>
     <span
       id="terra-select-screen-reader-description-14"
     >
@@ -212,6 +214,7 @@ exports[`Frame correctly applies the theme context className for search variant 
         aria-disabled="false"
         aria-expanded="false"
         aria-invalid="false"
+        aria-label="Terra.form.select.ariaLabel"
         aria-required="false"
         class="search-input"
         role="combobox"
