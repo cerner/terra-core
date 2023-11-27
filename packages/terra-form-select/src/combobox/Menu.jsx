@@ -239,7 +239,9 @@ class Menu extends React.Component {
         results in reading the display text followed by reading the aria-live message which is
         the display text + 'selected'
         */
-        this.props.visuallyHiddenComponent.current.innerText = `${option.props.value} ${selectedTxt}`;
+        if (option.props.value) {
+          this.props.visuallyHiddenComponent.current.innerText = `${option.props.value} ${selectedTxt}`;
+        }
       }
 
       onSelect(option.props.value, option);

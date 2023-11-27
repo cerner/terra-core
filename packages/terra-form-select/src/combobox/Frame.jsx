@@ -120,6 +120,10 @@ const propTypes = {
    * Callback function to reset input value after search
    */
   resetComboboxValue: PropTypes.func,
+  /**
+   * Whether a clear option is available to clear the selection, will use placeholder text if provided.
+   */
+  allowClear: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -139,6 +143,7 @@ const defaultProps = {
   totalOptions: undefined,
   value: undefined,
   inputId: undefined,
+  allowClear: false,
 };
 
 /* This rule can be removed when eslint-plugin-jsx-a11y is updated to ~> 6.0.0 */
@@ -263,6 +268,7 @@ class Frame extends React.Component {
    * @param {event} event - The onKeyDown event.
    */
   handleKeyDown(event) {
+    const { intl } = this.props;
     const { keyCode, target } = event;
 
     if (keyCode === KeyCode.KEY_SPACE && target !== this.input) {
@@ -284,6 +290,17 @@ class Frame extends React.Component {
         hasSearchChanged: false,
         searchValue: '',
       });
+      event.stopPropagation();
+    } else if (keyCode === KeyCode.KEY_ESCAPE && this.props.allowClear) {
+      this.hasEscPressed = false;
+      if (this.props.resetComboboxValue) {
+        this.props.resetComboboxValue();
+      }
+      this.setState({
+        hasSearchChanged: false,
+        searchValue: '',
+      });
+      this.visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.selectCleared' });
       event.stopPropagation();
     }
   }
