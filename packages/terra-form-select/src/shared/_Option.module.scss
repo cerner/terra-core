@@ -78,7 +78,7 @@
   .is-active {
     background-color: var(--terra-form-select-option-active-background-color, #ebf6fd);
     outline: var(--terra-form-select-option-active-color-outline, 2px dashed #000);
-    outline-offset: var(--terra-form-select-option-active-color-outline-offset, -2px);
+    outline-offset: -2px;
   }
 
   .is-disabled {
