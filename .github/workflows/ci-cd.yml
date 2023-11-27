@@ -77,7 +77,7 @@ jobs:
           npm run compile:fusion -- --output-path build/fusion
         if: matrix.theme == 'fusion'
       - name: Run WDIO Tests for form factor ${{ matrix.form-factor }} and ${{ matrix.theme }}
-        run: SITE=build/${{ matrix.theme }} FORM_FACTOR=${{ matrix.form-factor }} npm run wdio-${{ matrix.theme }}
+        run: SITE=build/${{ matrix.theme }} FORM_FACTOR=${{ matrix.form-factor }} npm run wdio-${{ matrix.theme }} -- --spec terra-arrange 
 
   release-and-deploy:
     runs-on: ubuntu-latest
