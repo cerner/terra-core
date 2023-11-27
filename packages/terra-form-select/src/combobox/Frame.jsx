@@ -537,7 +537,7 @@ class Frame extends React.Component {
       return ariaLabel === undefined ? `${placeholder} ${dimmed}` : `${ariaLabel} ${dimmed}`;
     }
 
-    return ariaLabel === undefined ? placeholder : ariaLabel;
+    return ariaLabel === undefined ? placeholder : `${ariaLabel}, ${placeholder}`;
   }
 
   /**
