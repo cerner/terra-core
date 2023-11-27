@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added a invalid example in `terra-search-Field`.
+
 ## 1.52.0 - (November 21, 2023)
 
 * Added
