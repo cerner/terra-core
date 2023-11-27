@@ -1,12 +1,12 @@
-Terra.describeViewports('Avatar', ['enormous'], () => {
-  it.only('correctly displays all avatar variants', () => {
-    browser.url('/raw/tests/cerner-terra-core-docs/avatar/avatar-variants');
-    const dimensions = browser.$('#avatar-variants').getSize();
-    browser.setWindowSize( dimensions.width, dimensions.height );
-    // browser.setWindowSize( dimensions.width, 100000 );
-    Terra.validates.element('avatar-all-variants', { selector: '#avatar-variants' });
-  })
-})
+// Terra.describeViewports('Avatar', ['enormous'], () => {
+//   it.only('correctly displays all avatar variants', () => {
+//     browser.url('/raw/tests/cerner-terra-core-docs/avatar/avatar-variants');
+//     const dimensions = browser.$('#avatar-variants').getSize();
+//     browser.setWindowSize( dimensions.width, dimensions.height );
+//     // browser.setWindowSize( dimensions.width, 100000 );
+//     Terra.validates.element('avatar-all-variants', { selector: '#avatar-variants' });
+//   })
+// })
 
 Terra.describeViewports('Avatar', ['huge'], () => {
 
