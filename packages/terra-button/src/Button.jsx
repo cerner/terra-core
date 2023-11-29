@@ -315,6 +315,8 @@ class Button extends React.Component {
       ComponentType = 'a';
       customProps.role = 'button';
     }
+    delete customProps?.isSelectable;
+    delete customProps?.isSelected;
 
     return (
       <ComponentType

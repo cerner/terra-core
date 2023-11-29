@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Removed
+  * Removed `ariaDescription` prop from list
+
 ## 4.67.0 - (November 13, 2023)
 
 * Changed

@@ -34,18 +34,6 @@ const propTypes = {
     * compared to `aria-describedby`, this prop should only be used in cases where
     * `aria-describedby` is not sufficient.
     */
-  ariaDescription: PropTypes.string,
-  /**
-   * References a visible or visually hidden text element
-   * on the page that conveys information about the list
-   * and how to interact with it. Maps to
-   * [aria-details](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details).
-   * Can be used alongside `ariaDescribedBy` or `ariaDescription`.
-   * `aria-details` is not supported in all screen reader/browser
-   * combinations. Consumers should test for different screen
-   * reader/browser combinations to ensure that instructions
-   * are consistently read.
-   */
   ariaDetails: PropTypes.string,
   /**
    * The children list items passed to the component.
@@ -108,7 +96,6 @@ const defaultProps = {
 
 const List = ({
   ariaDescribedBy,
-  ariaDescription,
   ariaDetails,
   children,
   intl,
@@ -261,8 +248,6 @@ const List = ({
       {...customProps}
       {...attrSpread}
       aria-describedby={ariaDescribedBy}
-       // eslint-disable-next-line jsx-a11y/aria-props
-      aria-description={ariaDescription}
       aria-details={ariaDetails}
       className={listClassNames}
       ref={handleListRef}
@@ -287,8 +272,6 @@ const List = ({
             {...customProps}
             {...attrSpread}
             aria-describedby={ariaDescribedBy}
-            // eslint-disable-next-line jsx-a11y/aria-props
-            aria-description={ariaDescription}
             aria-details={ariaDetails}
             className={listClassNames}
             ref={(refobj) => {
