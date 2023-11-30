@@ -11,7 +11,7 @@ const SearchFieldInvalid = () => {
 
   const setTextClick = () => {
     if (inputRef.current) {
-      inputRef.current.value = 'IpsumLorem';
+      inputRef.current.value = 'Ip';
       let customEvent;
       if (typeof (Event) === 'function') {
         customEvent = new Event('input', {
@@ -52,7 +52,7 @@ const SearchFieldInvalid = () => {
 
   return (
     <div>
-      <Button text="Set search field text" onClick={setTextClick} id="search-field-set-text-button" />
+      <Button text="Set Invalid search text" onClick={setTextClick} id="search-field-set-text-button" />
       <p>Minimum Search Length is 3</p>
       <SearchField
         id="searchfield"
