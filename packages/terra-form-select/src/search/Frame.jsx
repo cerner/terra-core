@@ -402,6 +402,7 @@ class Frame extends React.Component {
       'aria-describedby': ariaDescribedBy,
       'aria-disabled': disabled,
       'aria-owns': this.state.isOpen ? id : undefined,
+      'aria-controls': this.state.isOpen ? id : undefined,
       'aria-expanded': !disabled && this.state.isOpen,
       type: 'text',
       className: cx('search-input', { 'is-hidden': FrameUtil.shouldHideSearch(this.props, this.state) }),
