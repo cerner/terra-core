@@ -8,6 +8,8 @@
 ## 6.51.0 - (November 21, 2023)
 
 * Added
+  * Added 'aria-invalid' attribute for `terra-form-select-combobox`.
+  * Updated auto assign placeholder text to `aria-label` in `terra-form-select-combobox` and `terra-form-search-select`.
   * Added 'aria-invalid' attribute for `terra-form-select-combobox`
 
 ## 6.50.0 - (November 13, 2023)
