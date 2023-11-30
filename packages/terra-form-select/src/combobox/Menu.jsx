@@ -8,7 +8,6 @@ import * as KeyCode from 'keycode-js';
 import AddOption from '../shared/_AddOption';
 import ClearOption from '../shared/_ClearOption';
 import MenuUtil from '../shared/_MenuUtil';
-import SharedUtil from '../shared/_SharedUtil';
 import SearchResults from '../shared/_SearchResults';
 import styles from '../shared/_Menu.module.scss';
 import NoResults from '../shared/_NoResults';
@@ -104,7 +103,9 @@ class Menu extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      closedViaKeyEvent: false,
+    };
 
     this.clearScrollTimeout = this.clearScrollTimeout.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
@@ -177,7 +178,6 @@ class Menu extends React.Component {
   }
 
   componentDidUpdate() {
-    this.updateNoResultsScreenReader();
     this.updateCurrentActiveScreenReader();
   }
 
@@ -239,8 +239,8 @@ class Menu extends React.Component {
         results in reading the display text followed by reading the aria-live message which is
         the display text + 'selected'
         */
-        if (!SharedUtil.isSafari()) {
-          this.props.visuallyHiddenComponent.current.innerText = `${option.props.display} ${selectedTxt}`;
+        if (option.props.value) {
+          this.props.visuallyHiddenComponent.current.innerText = `${option.props.value} ${selectedTxt}`;
         }
       }
 
@@ -299,30 +299,23 @@ class Menu extends React.Component {
     return this.state.active === this.props.value;
   }
 
-  updateNoResultsScreenReader() {
+  updateNoResultsScreenReader(freeTextValue) {
     if (this.liveRegionTimeOut) {
       clearTimeout(this.liveRegionTimeOut);
     }
 
     this.liveRegionTimeOut = setTimeout(() => {
-      const { hasNoResults } = this.state;
-
       const {
         intl,
         visuallyHiddenComponent,
         searchValue,
       } = this.props;
-
       // Race condition can occur between calling timeout and unmounting this component.
       if (!visuallyHiddenComponent || !visuallyHiddenComponent.current) {
         return;
       }
-
-      if (hasNoResults) {
-        visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.noResults' }, { text: searchValue });
-      } else {
-        visuallyHiddenComponent.current.innerText = '';
-      }
+      const noMatchingResultText = intl.formatMessage({ id: 'Terra.form.select.noResults' }, { text: searchValue });
+      visuallyHiddenComponent.current.innerText = `${noMatchingResultText}, ${freeTextValue}`;
     }, 1000);
   }
 
@@ -333,7 +326,7 @@ class Menu extends React.Component {
       visuallyHiddenComponent,
     } = this.props;
 
-    const clearSelectTxt = intl.formatMessage({ id: 'Terra.form.select.clearSelect' });
+    const { hasNoResults } = this.state;
 
     if (this.menu !== null && this.state.active !== null) {
       this.menu.setAttribute('aria-activedescendant', `terra-select-option-${this.state.active}`);
@@ -346,17 +339,22 @@ class Menu extends React.Component {
 
     // Detects if option is clear option and provides accessible text
     if (clearOptionDisplay) {
-      const active = this.menu.querySelector('[data-select-active]');
+      const active = this.menu && this.menu.querySelector('[data-select-active]');
       if (active && active.hasAttribute('data-terra-select-clear-option')) {
-        visuallyHiddenComponent.current.innerText = clearSelectTxt;
+        // To match visual label and the text exposed by screen reader
+        visuallyHiddenComponent.current.innerText = clearOptionDisplay;
       }
     }
 
     // Detects if option is an "Add option" and provides accessible text
-    const active = this.menu.querySelector('[data-select-active]');
+    const active = this.menu && this.menu.querySelector('[data-select-active]');
     if (active && active.hasAttribute('data-terra-select-add-option')) {
       const display = active.querySelector('[data-terra-add-option]') ? active.querySelector('[data-terra-add-option]').innerText : null;
-      visuallyHiddenComponent.current.innerText = display;
+      if (hasNoResults && !this.state.closedViaKeyEvent) {
+        this.updateNoResultsScreenReader(display);
+      } else {
+        visuallyHiddenComponent.current.innerText = display;
+      }
     }
 
     const optGroupElement = MenuUtil.getOptGroupElement(this.props.children, this.state.active);
@@ -376,7 +374,7 @@ class Menu extends React.Component {
       if (element.props.display === '' && element.props.value === '') {
         // Used for case where users selects clear option and opens
         // dropdown again and navigates to clear option
-        visuallyHiddenComponent.current.innerText = clearSelectTxt;
+        visuallyHiddenComponent.current.innerText = clearOptionDisplay;
       } else if (this.isActiveSelected()) {
         visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.selectedText' }, { text: displayText, index, totalOptions });
       } else {

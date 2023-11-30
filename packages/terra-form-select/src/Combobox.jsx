@@ -237,6 +237,7 @@ class Combobox extends React.Component {
         clearOptionDisplay={clearOptionDisplay}
         inputId={inputId}
         resetComboboxValue={this.handleResetComboboxValue}
+        allowClear={allowClear}
       >
         {this.state.tags}
         {children}

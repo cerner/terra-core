@@ -8,7 +8,6 @@ import * as KeyCode from 'keycode-js';
 import ClearOption from '../shared/_ClearOption';
 import NoResults from '../shared/_NoResults';
 import MenuUtil from '../shared/_MenuUtil';
-import SharedUtil from '../shared/_SharedUtil';
 import styles from '../shared/_Menu.module.scss';
 
 const cx = classNamesBind.bind(styles);
@@ -214,7 +213,7 @@ class Menu extends React.Component {
         results in reading the display text followed by reading the aria-live message which is
         the display text + 'selected'
         */
-      if (!SharedUtil.isSafari()) {
+      if (option.props.display !== this.props.input.placeholder) {
         this.props.visuallyHiddenComponent.current.innerText = `${option.props.display} ${selectedTxt}`;
       }
       onSelect(option.props.value, option);
@@ -303,8 +302,6 @@ class Menu extends React.Component {
       visuallyHiddenComponent,
     } = this.props;
 
-    const clearSelectTxt = intl.formatMessage({ id: 'Terra.form.select.clearSelect' });
-
     if (this.menu !== null && this.state.active !== null) {
       this.menu.setAttribute('aria-activedescendant', `terra-select-option-${this.state.active}`);
     }
@@ -318,7 +315,7 @@ class Menu extends React.Component {
     if (clearOptionDisplay) {
       const active = this.menu.querySelector('[data-select-active]');
       if (active && active.hasAttribute('data-terra-select-clear-option')) {
-        visuallyHiddenComponent.current.innerText = clearSelectTxt;
+        visuallyHiddenComponent.current.innerText = clearOptionDisplay;
       }
     }
 
@@ -339,7 +336,7 @@ class Menu extends React.Component {
       if (element.props.display === '' && element.props.value === '') {
         // Used for case where users selects clear option and opens
         // dropdown again and navigates to clear option
-        visuallyHiddenComponent.current.innerText = clearSelectTxt;
+        visuallyHiddenComponent.current.innerText = clearOptionDisplay;
       } else if (this.isActiveSelected()) {
         visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.selectedText' }, { text: displayText, index, totalOptions });
       } else {

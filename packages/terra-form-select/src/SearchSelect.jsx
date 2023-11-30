@@ -231,6 +231,7 @@ class SearchSelect extends React.Component {
         clearOptionDisplay={clearOptionDisplay}
         inputId={inputId}
         resetComboboxValue={this.handleResetComboboxValue}
+        allowClear={allowClear}
       >
         {children}
       </Frame>

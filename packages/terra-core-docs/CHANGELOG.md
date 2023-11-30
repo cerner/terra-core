@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 1.52.0 - (November 21, 2023)
+
+* Added
+  * Added test to `terra-section-header` for the fixed section header title.
+
 * Added
   * Added visual label and associated with input field using 'for' and 'id'.
   * Added 'ariaLabel' attribute for `terra-form-select` examples.
