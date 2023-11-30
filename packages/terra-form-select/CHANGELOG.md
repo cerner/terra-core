@@ -2,8 +2,15 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed screen reader response for `terra-form-select-combobox`.
+
+## 6.51.0 - (November 21, 2023)
+
 * Added
-  * Added 'aria-invalid' attribute which will be set to true for error input fields and false when resolving errors. 
+  * Added 'aria-invalid' attribute for `terra-form-select-combobox`.
+  * Updated auto assign placeholder text to `aria-label` in `terra-form-select-combobox` and `terra-form-search-select`.
+  * Added 'aria-invalid' attribute for `terra-form-select-combobox`
 
 ## 6.50.0 - (November 13, 2023)
 

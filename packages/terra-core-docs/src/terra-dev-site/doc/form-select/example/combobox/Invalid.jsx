@@ -24,5 +24,5 @@ const InvalidExample = () => {
     </>
   );
 };
-export default InvalidExample;
 
+export default InvalidExample;

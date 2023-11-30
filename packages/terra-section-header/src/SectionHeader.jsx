@@ -42,6 +42,11 @@ const propTypes = {
    * Sets the background of the section header to transparent.
    */
   isTransparent: PropTypes.bool,
+  /**
+   * @private
+   * Specifies whether the section header title position should be fixed
+   */
+  isTitleFixed: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -100,6 +105,7 @@ class SectionHeader extends React.Component {
       isOpen,
       isTransparent,
       level,
+      isTitleFixed,
       ...customProps
     } = this.props;
 
@@ -159,7 +165,7 @@ class SectionHeader extends React.Component {
 
     return (
       <Element {...headerAttributes} className={sectionHeaderClassNames} aria-label={!onClick ? headerText : undefined}>
-        <ArrangeWrapper {...buttonAttributes} className={cx('arrange-wrapper')}>
+        <ArrangeWrapper {...buttonAttributes} className={cx('arrange-wrapper', { 'title-fixed': isTitleFixed })}>
           <Arrange
             fitStart={onClick && accordionIcon}
             fill={<span aria-hidden={(onClick !== undefined)} className={cx('title')}>{headerText}</span>}
