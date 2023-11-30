@@ -1562,11 +1562,13 @@ exports[`should render an invalid and required field with a Select 1`] = `
       </label>
     </div>
     <Select
+      aria-invalid={true}
       isInvalid={true}
       key=".0"
       required={true}
     >
       <select
+        aria-invalid={true}
         invalid="true"
         required={true}
       />
@@ -1707,11 +1709,13 @@ exports[`should render an invalid and required field with a Textarea 1`] = `
       </label>
     </div>
     <Textarea
+      aria-invalid={true}
       isInvalid={true}
       key=".0"
       required={true}
     >
       <textarea
+        aria-invalid={true}
         invalid="true"
         required={true}
       />
@@ -1852,11 +1856,13 @@ exports[`should render an invalid and required field with an Input 1`] = `
       </label>
     </div>
     <Input
+      aria-invalid={true}
       isInvalid={true}
       key=".0"
       required={true}
     >
       <input
+        aria-invalid={true}
         invalid="true"
         required={true}
       />
@@ -1991,10 +1997,12 @@ exports[`should render an invalid field with a Select 1`] = `
       </label>
     </div>
     <Select
+      aria-invalid={true}
       isInvalid={true}
       key=".0"
     >
       <select
+        aria-invalid={true}
         invalid="true"
       />
     </Select>
@@ -2128,10 +2136,12 @@ exports[`should render an invalid field with an Input 1`] = `
       </label>
     </div>
     <Input
+      aria-invalid={true}
       isInvalid={true}
       key=".0"
     >
       <input
+        aria-invalid={true}
         invalid="true"
       />
     </Input>
@@ -2265,10 +2275,12 @@ exports[`should render an invalid field with an Textarea 1`] = `
       </label>
     </div>
     <Textarea
+      aria-invalid={true}
       isInvalid={true}
       key=".0"
     >
       <textarea
+        aria-invalid={true}
         invalid="true"
       />
     </Textarea>
