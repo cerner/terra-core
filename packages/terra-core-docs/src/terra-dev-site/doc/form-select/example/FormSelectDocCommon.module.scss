@@ -13,10 +13,10 @@
   
   .error-text {
     color: var(--terra-core-docs-form-select-error-text-color, #e50000);
-    font-size: var(--terra-core-docs-form-select-error-text-font-size, 0.857rem);
-    font-weight: var(--terra-core-docs-form-select-error-text-font-weight, normal);
+    font-size: 0.857rem;
+    font-weight: normal;
     line-height: 1.25;
-    margin-top: var(--terra-core-docs-form-select-error-text-margin-top, 0.357em);
+    margin-top: 0.357em;
     outline: 0;
     text-align: left;
   }
