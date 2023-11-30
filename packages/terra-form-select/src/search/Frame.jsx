@@ -651,6 +651,8 @@ class Frame extends React.Component {
       required,
       totalOptions,
       value,
+      allowClear,
+      resetComboboxValue,
       ...customProps
     } = this.props;
 

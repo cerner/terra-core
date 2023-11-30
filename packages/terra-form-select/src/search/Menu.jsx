@@ -302,8 +302,6 @@ class Menu extends React.Component {
       visuallyHiddenComponent,
     } = this.props;
 
-    const clearSelectTxt = intl.formatMessage({ id: 'Terra.form.select.clearSelect' });
-
     if (this.menu !== null && this.state.active !== null) {
       this.menu.setAttribute('aria-activedescendant', `terra-select-option-${this.state.active}`);
     }
@@ -317,7 +315,7 @@ class Menu extends React.Component {
     if (clearOptionDisplay) {
       const active = this.menu.querySelector('[data-select-active]');
       if (active && active.hasAttribute('data-terra-select-clear-option')) {
-        visuallyHiddenComponent.current.innerText = clearSelectTxt;
+        visuallyHiddenComponent.current.innerText = clearOptionDisplay;
       }
     }
 
@@ -338,7 +336,7 @@ class Menu extends React.Component {
       if (element.props.display === '' && element.props.value === '') {
         // Used for case where users selects clear option and opens
         // dropdown again and navigates to clear option
-        visuallyHiddenComponent.current.innerText = clearSelectTxt;
+        visuallyHiddenComponent.current.innerText = clearOptionDisplay;
       } else if (this.isActiveSelected()) {
         visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.selectedText' }, { text: displayText, index, totalOptions });
       } else {
