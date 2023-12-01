@@ -14,5 +14,4 @@ const InvalidExample = () => (
     <Combobox.Option value="violet" display="Violet" />
   </Combobox>
 );
-
 export default InvalidExample;
