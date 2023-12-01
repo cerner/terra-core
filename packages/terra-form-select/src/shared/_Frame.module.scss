@@ -38,8 +38,6 @@
       background-position: 0 100%;
       background-repeat: no-repeat;
       background-size: var(--terra-form-select-focus-background-size, 0 0);
-      border-color: var(--terra-form-select-focus-border-color, #4cb2e9);
-      box-shadow: var(--terra-form-select-focus-box-shadow, 0 0 0 2px rgba(76, 178, 233, 0.25));
       outline: none;
       transition-duration: var(--terra-form-select-focus-transition-duration, 0s);
       transition-property: background-size;
@@ -64,10 +62,6 @@
     &:hover {
       border-color: var(--terra-form-select-hover-border-color, #dedfe0);
       color: var(--terra-form-select-hover-color);
-    }
-
-    &.is-focused:hover {
-      border-color: var(--terra-form-select-focus-hover-border-color, #4cb2e9);
     }
 
     &.is-incomplete {
@@ -308,8 +302,6 @@
         background-position: 0 100%;
         background-repeat: no-repeat;
         background-size: var(--terra-form-select-focus-background-size, 0 0);
-        border-color: var(--terra-form-select-focus-border-color, #4cb2e9);
-        box-shadow: var(--terra-form-select-focus-box-shadow, 0 0 0 2px rgba(76, 178, 233, 0.25));
         outline: none;
         transition-duration: var(--terra-form-select-focus-transition-duration, 0s);
         transition-property: background-size;
@@ -338,10 +330,6 @@
         border-bottom-right-radius: var(--terra-form-select-above-border-bottom-right-radius, 3px);
         border-top-right-radius: 0;
       }
-    }
-
-    &.is-focused:hover > .display {
-      border-color: var(--terra-form-select-focus-hover-border-color, #4cb2e9);
     }
 
     &.is-incomplete > .display {
@@ -397,4 +385,16 @@
     white-space: nowrap; /* Ensures words  are not read one at a time on screen readers*/
     width: 1px;
   }
+
+  .tag,
+  .search,
+  .combobox,
+  .multiple,
+  .single,
+  .select {
+    &.is-focused {
+      outline: var(--terra-form-select-outline, 2px dashed #000);
+    }
+  }
+
 }
