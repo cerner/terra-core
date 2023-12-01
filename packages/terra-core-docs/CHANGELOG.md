@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added new Accessibility and Implementation guide for Terra Search Field
+
 ## 1.52.0 - (November 21, 2023)
 
 * Added
