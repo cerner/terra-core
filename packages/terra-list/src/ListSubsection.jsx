@@ -1,4 +1,3 @@
-/* eslint-disable no-param-reassign */
 import React, {
   useRef, useContext, useState, useEffect,
 } from 'react';
@@ -82,6 +81,7 @@ const ListSubsection = ({
 }) => {
   const [listItemNodes, setlistItemNodes] = useState(children);
   let listSubSectionItemNode = useRef();
+  /* eslint-disable-next-line */
   delete customProps?.isTabFocusDisabled;
   useEffect(() => {
     if (!isCollapsible || !isCollapsed) {

@@ -1,4 +1,3 @@
-/* eslint-disable no-param-reassign */
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -108,6 +107,7 @@ const ListSubsectionHeader = ({
     attrSpread.onBlur = ListUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-item-show-focus', 'true'));
     attrSpread.onMouseDown = ListUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-item-show-focus', 'false'));
   }
+  /* eslint-disable-next-line */
   delete customProps?.isTabFocusDisabled;
   return (
     <li {...customProps} className={cx('list-item', theme.className)}>
