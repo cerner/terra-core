@@ -1,33 +1,19 @@
 import React, { useState, useRef } from 'react';
-import Button from 'terra-button/lib/Button';
 import SearchField from 'terra-search-field';
+import classNames from 'classnames/bind';
 import styles from './SearchFieldInvalid.module.scss';
 
+const cx = classNames.bind(styles);
+
 const SearchFieldInvalid = () => {
-  const [searchText, setSearchText] = useState('');
+  const [isInvalid, setInvalid] = useState(false);
   const [message, setMessage] = useState('');
   const [text, setText] = useState('');
   const inputRef = useRef(null);
 
-  const setTextClick = () => {
-    if (inputRef.current) {
-      inputRef.current.value = 'Ip';
-      let customEvent;
-      if (typeof (Event) === 'function') {
-        customEvent = new Event('input', {
-          bubbles: true,
-          cancelable: false,
-        });
-      } else {
-        customEvent = document.createEvent('Event');
-        customEvent.initEvent('input', true, false);
-      }
-      inputRef.current.dispatchEvent(customEvent);
-    }
-  };
-
   const handleInvalidSearch = (value) => {
-    setSearchText(value);
+    setText(value);
+    setInvalid(true);
     setMessage('INVALID Search Text: ');
     if (inputRef.current) {
       inputRef.current.classList.add(styles['error-border']); // Add red border on invalid search
@@ -36,6 +22,7 @@ const SearchFieldInvalid = () => {
 
   const handleChange = (event, value) => {
     setText(value);
+    setInvalid(false);
   };
 
   const handleInput = (event) => {
@@ -43,7 +30,7 @@ const SearchFieldInvalid = () => {
   };
 
   const handleSearch = (value) => {
-    setSearchText(value);
+    setText(value);
     setMessage('Search Text: ');
     if (inputRef.current) {
       inputRef.current.classList.remove(styles['error-border']); // Remove red border on valid search
@@ -52,10 +39,10 @@ const SearchFieldInvalid = () => {
 
   return (
     <div>
-      <Button text="Set Invalid search text" onClick={setTextClick} id="search-field-set-text-button" />
       <p>Minimum Search Length is 3</p>
       <SearchField
         id="searchfield"
+        inputAttributes={{ 'aria-invalid': isInvalid, 'aria-describedby': 'search-callback-text' }}
         onSearch={handleSearch}
         onInvalidSearch={handleInvalidSearch}
         onChange={handleChange}
@@ -63,10 +50,11 @@ const SearchFieldInvalid = () => {
         minimumSearchTextLength={3}
         value={text}
         inputRefCallback={(ref) => { inputRef.current = ref; }}
+        searchDelay={500}
       />
-      <div id="search-callback-text" className={(!searchText || text.length === 0) ? styles['error-text'] : ''}>
+      <div id="search-callback-text" className={isInvalid ? cx('error-text') : ''}>
         {message}
-        {searchText}
+        {text}
       </div>
     </div>
   );
