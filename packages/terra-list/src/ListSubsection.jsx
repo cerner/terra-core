@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import React, {
   useRef, useContext, useState, useEffect,
 } from 'react';
@@ -81,7 +82,7 @@ const ListSubsection = ({
 }) => {
   const [listItemNodes, setlistItemNodes] = useState(children);
   let listSubSectionItemNode = useRef();
-
+  delete customProps?.isTabFocusDisabled;
   useEffect(() => {
     if (!isCollapsible || !isCollapsed) {
       if (Array.isArray(children)) {
@@ -232,7 +233,6 @@ const ListSubsection = ({
       </Droppable>
     </DragDropContext>
   );
-
   return (
     (isDraggable) ? renderDraggableListDom() : renderSubSectionListItemsDom()
   );

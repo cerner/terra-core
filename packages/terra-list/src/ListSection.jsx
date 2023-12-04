@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import React, {
   useRef, useContext, useState, useEffect,
 } from 'react';
@@ -177,6 +178,8 @@ const ListSection = ({
     ...provider.draggableProps,
     ...provider.dragHandleProps,
   });
+
+  delete customProps?.isTabFocusDisabled;
 
   const renderSectionListItemsDom = () => (
     /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
