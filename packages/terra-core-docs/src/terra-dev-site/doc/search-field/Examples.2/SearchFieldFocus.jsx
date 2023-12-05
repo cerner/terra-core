@@ -7,7 +7,7 @@ const SearchFieldFocus = () => {
 
   const handleButtonClick = () => {
     if (searchElement) {
-      searchElement.focus();
+      searchElement.current.focus();
     }
   };
 
@@ -15,7 +15,7 @@ const SearchFieldFocus = () => {
     <div>
       <Button text="Focus Me" onClick={handleButtonClick} id="search-field-focus-button" />
       <SearchField
-        inputRefCallback={(inputRef) => { searchElement = inputRef; }}
+        inputRefCallback={(inputRef) => { searchElement.current = inputRef; }}
       />
     </div>
   );
