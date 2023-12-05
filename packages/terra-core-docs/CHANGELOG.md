@@ -2,8 +2,8 @@
 
 ## Unreleased
 
-* Removed
-  * Removed `ariaDescription` prop from list
+* Changed
+  * Removed `ariaDescription` example added for terra-list
 
 ## 1.52.0 - (November 21, 2023)
 
