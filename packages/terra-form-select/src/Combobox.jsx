@@ -89,7 +89,7 @@ const propTypes = {
    */
   optionFilter: PropTypes.func,
   /**
-   * Placeholder text. defaults to 'Select or Enter'
+   * Placeholder prop has been deperecated and will be updated on next major version relase, placeholder can be only visual text.
    */
   placeholder: PropTypes.string,
   /**

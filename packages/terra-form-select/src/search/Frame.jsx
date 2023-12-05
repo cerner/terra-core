@@ -100,7 +100,7 @@ const propTypes = {
    */
   optionFilter: PropTypes.func,
   /**
-   * Placeholder text.
+   * Placeholder prop has been deperecated and will be updated on next major version relase, placeholder can be only visual text.
    */
   placeholder: PropTypes.string,
   /**
@@ -529,15 +529,18 @@ class Frame extends React.Component {
    */
   ariaLabel() {
     const {
-      ariaLabel, disabled, intl, placeholder,
+      ariaLabel, disabled, intl,
     } = this.props;
     const defaultAriaLabel = intl.formatMessage({ id: 'Terra.form.select.ariaLabel' });
     const dimmed = intl.formatMessage({ id: 'Terra.form.select.dimmed' });
 
-    const baseLabel = ariaLabel === undefined ? defaultAriaLabel : ariaLabel;
-    const modifiedAriaLabel = disabled && 'ontouchstart' in window ? `${baseLabel} ${dimmed}` : baseLabel;
+    // VO on iOS doesn't do a good job of announcing disabled stated. Here we append the phrase that
+    // VO associates with disabled form controls.
+    if ('ontouchstart' in window && disabled) {
+      return ariaLabel === undefined ? `${defaultAriaLabel} ${dimmed}` : `${ariaLabel} ${dimmed}`;
+    }
 
-    return placeholder ? `${modifiedAriaLabel}, ${placeholder}` : modifiedAriaLabel;
+    return ariaLabel === undefined ? defaultAriaLabel : ariaLabel;
   }
 
   /**
