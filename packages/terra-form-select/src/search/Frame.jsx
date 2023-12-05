@@ -100,7 +100,8 @@ const propTypes = {
    */
   optionFilter: PropTypes.func,
   /**
-   * Placeholder text.
+   * ![IMPORTANT](https://badgen.net/badge/prop/deprecated/red)
+   * Placeholder prop has been deprecated and will be Removed on next major version release, Visual label should be used instead for better Accessibility experience.
    */
   placeholder: PropTypes.string,
   /**
@@ -528,8 +529,9 @@ class Frame extends React.Component {
    * Falls back to the string 'Search' if no label is provided
    */
   ariaLabel() {
-    const { ariaLabel, disabled, intl } = this.props;
-
+    const {
+      ariaLabel, disabled, intl,
+    } = this.props;
     const defaultAriaLabel = intl.formatMessage({ id: 'Terra.form.select.ariaLabel' });
     const dimmed = intl.formatMessage({ id: 'Terra.form.select.dimmed' });
 
@@ -674,7 +676,6 @@ class Frame extends React.Component {
       customProps.className,
     );
 
-    const labelId = `terra-select-screen-reader-label-${uniqueid()}`;
     const descriptionId = `terra-select-screen-reader-description-${uniqueid()}`;
     const customAriaDescribedbyIds = customProps['aria-describedby'];
     const ariaDescribedBy = customAriaDescribedbyIds ? `${descriptionId} ${customAriaDescribedbyIds}` : descriptionId;
@@ -712,8 +713,6 @@ class Frame extends React.Component {
         ref={(select) => { this.select = select; }}
       >
         <div className={cx('visually-hidden-component')} hidden>
-          {/* Hidden attribute used to prevent VoiceOver on desktop from announcing this content twice */}
-          <span id={labelId}>{this.ariaLabel()}</span>
           <span id={descriptionId}>{this.renderDescriptionText()}</span>
         </div>
         <div className={cx('display')}>

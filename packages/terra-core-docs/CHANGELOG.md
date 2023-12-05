@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added aria-label to announce the visual label.
+
 ## 1.52.0 - (November 21, 2023)
 
 * Added
