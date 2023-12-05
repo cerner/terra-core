@@ -2,12 +2,15 @@
 
 ## Unreleased
 
+* Added
+  * Added condition to announce the placeholder across all browsers.
+  * Added visual focus dashed border for `terra-form-select` list options.
+
 * Fixed
   * Fixed screen reader response for `terra-form-select-combobox`.
 
 ## 6.51.0 - (November 21, 2023)
 
-* Added
   * Added 'aria-invalid' attribute for `terra-form-select-combobox`.
   * Updated auto assign placeholder text to `aria-label` in `terra-form-select-combobox` and `terra-form-search-select`.
   * Added 'aria-invalid' attribute for `terra-form-select-combobox`

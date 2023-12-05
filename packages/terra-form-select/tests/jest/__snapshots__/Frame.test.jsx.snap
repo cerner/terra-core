@@ -193,12 +193,7 @@ exports[`Frame correctly applies the theme context className for search variant 
     hidden=""
   >
     <span
-      id="terra-select-screen-reader-label-13"
-    >
-      Terra.form.select.ariaLabel
-    </span>
-    <span
-      id="terra-select-screen-reader-description-14"
+      id="terra-select-screen-reader-description-13"
     >
       Terra.form.select.listOfTotalOptions Terra.form.select.searchUsageGuidance
     </span>
@@ -210,7 +205,7 @@ exports[`Frame correctly applies the theme context className for search variant 
       class="content"
     >
       <input
-        aria-describedby="terra-select-screen-reader-description-14"
+        aria-describedby="terra-select-screen-reader-description-13"
         aria-disabled="false"
         aria-expanded="false"
         aria-invalid="false"
@@ -241,7 +236,7 @@ exports[`Frame correctly applies the theme context className for search variant 
 
 exports[`Frame correctly applies the theme context className for tag variant 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-18"
+  aria-describedby="terra-select-screen-reader-description-17"
   aria-disabled="false"
   aria-expanded="false"
   aria-haspopup="true"
@@ -255,12 +250,12 @@ exports[`Frame correctly applies the theme context className for tag variant 1`]
     hidden=""
   >
     <span
-      id="terra-select-screen-reader-label-16"
+      id="terra-select-screen-reader-label-15"
     >
       Terra.form.select.ariaLabel
     </span>
     <span
-      id="terra-select-screen-reader-description-18"
+      id="terra-select-screen-reader-description-17"
     >
       Terra.form.select.listOfTotalOptions Terra.form.select.multiSelectUsageGuidance
     </span>
@@ -276,7 +271,7 @@ exports[`Frame correctly applies the theme context className for tag variant 1`]
         class="search-wrapper"
       >
         <input
-          aria-describedby="terra-select-screen-reader-display-17 terra-select-screen-reader-description-18"
+          aria-describedby="terra-select-screen-reader-display-16 terra-select-screen-reader-description-17"
           aria-disabled="false"
           aria-label="Terra.form.select.ariaLabel"
           aria-required="false"
