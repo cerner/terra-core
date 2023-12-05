@@ -3,7 +3,7 @@ import SearchField from 'terra-search-field';
 import Button from 'terra-button';
 
 const SearchFieldFocus = () => {
-  let searchElement = useRef(null);
+  const searchElement = useRef(null);
 
   const handleButtonClick = () => {
     if (searchElement) {
