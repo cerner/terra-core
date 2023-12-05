@@ -178,7 +178,7 @@ const ListSection = ({
     ...provider.dragHandleProps,
   });
 
-  /* eslint-disable-next-line */
+  /* eslint-disable-next-line no-param-reassign */
   delete customProps?.isTabFocusDisabled;
 
   const renderSectionListItemsDom = () => (

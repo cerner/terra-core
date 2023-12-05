@@ -81,7 +81,7 @@ const ListSubsection = ({
 }) => {
   const [listItemNodes, setlistItemNodes] = useState(children);
   let listSubSectionItemNode = useRef();
-  /* eslint-disable-next-line */
+  /* eslint-disable-next-line no-param-reassign */
   delete customProps?.isTabFocusDisabled;
   useEffect(() => {
     if (!isCollapsible || !isCollapsed) {
