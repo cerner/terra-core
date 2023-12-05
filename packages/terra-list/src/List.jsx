@@ -253,12 +253,21 @@ const List = ({
     }
   };
 
-  const cloneListItem = (ListItem, provider) => React.cloneElement(ListItem, {
+  const getStyleforDrag = (ListItem, snapshot, provider) => {
+    const styleProperties = provider?.draggableProps?.style;
+    if (styleProperties && snapshot && snapshot.isDragging) {
+      styleProperties['z-index'] = ListItem?.props?.zIndex ? `${ListItem.props.zIndex}` : '6001';
+    }
+    return styleProperties;
+  };
+
+  const cloneListItem = (ListItem, provider, snapshot) => React.cloneElement(ListItem, {
     isDraggable: ListItem?.props?.isSelectable,
     isTabFocusDisabled,
     refCallback: provider.innerRef,
     ...provider.draggableProps,
     ...provider.dragHandleProps,
+    style: getStyleforDrag(ListItem, snapshot, provider),
   });
 
   const clone = (object) => React.Children.map(object, (listitem) => React.cloneElement(listitem, {
@@ -282,12 +291,14 @@ const List = ({
     </ul>
   );
 
+  window['__react-beautiful-dnd-disable-dev-warnings'] = true;
+
   const renderDraggableListDom = () => (
     <DragDropContext onDragEnd={handleDragEnd} onDragStart={handleDragStart} onDragUpdate={handleDragUpdate}>
       <Droppable
         droppableId="ListItem"
         renderClone={(provided, snapshot, rubric) => (
-          cloneListItem(listItem[rubric.source.index], provided)
+          cloneListItem(listItem[rubric.source.index], provided, snapshot)
         )}
       >
         {(provided) => (
@@ -309,8 +320,8 @@ const List = ({
           >
             {listItem.map((item, index) => (
               <Draggable isDragDisabled={!(item?.props?.isSelectable)} key={item.key} draggableId={item.key} index={index}>
-                {(provider) => (
-                  cloneListItem(item, provider)
+                {(provider, snapshot) => (
+                  cloneListItem(item, provider, snapshot)
                 )}
               </Draggable>
             ))}

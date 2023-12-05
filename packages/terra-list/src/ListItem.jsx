@@ -65,6 +65,10 @@ const propTypes = {
    * The intl object to be injected for translations.
    */
   intl: PropTypes.shape({ formatMessage: PropTypes.func }),
+  /**
+   * zIndex value for the li element.
+   */
+  zIndex: PropTypes.number,
 };
 
 const defaultProps = {
@@ -72,6 +76,7 @@ const defaultProps = {
   hasChevron: false,
   isSelected: false,
   isSelectable: false,
+  zIndex: 6001,
 };
 
 const ListItem = ({
@@ -87,6 +92,7 @@ const ListItem = ({
   onSelect,
   refCallback,
   intl,
+  zIndex,
   ...customProps
 }) => {
   const theme = React.useContext(ThemeContext);

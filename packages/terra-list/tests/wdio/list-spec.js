@@ -118,4 +118,16 @@ Terra.describeViewports('List', ['medium'], () => {
       Terra.validates.element('second list item focused', { selector: '#root' });
     });
   });
+
+  describe('ListItem Drag and Drop with mouse interaction', () => {
+    before(() => browser.url('raw/tests/cerner-terra-core-docs/list/modal-manager-draggable-list'));
+
+    it('should perform drag and drop operation in Modal Manager', () => {
+      $('#small').click();
+      browser.keys(['Tab', 'Tab']);
+      Terra.validates.element('before drop in modal manager', { selector: '#root' });
+      browser.keys(['Space', 'ArrowDown', 'Space']);
+      Terra.validates.element('after drop in modal manager', { selector: '#root' });
+    });
+  });
 });

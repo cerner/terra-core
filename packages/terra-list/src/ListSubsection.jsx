@@ -81,6 +81,8 @@ const ListSubsection = ({
 }) => {
   const [listItemNodes, setlistItemNodes] = useState(children);
   let listSubSectionItemNode = useRef();
+  const isListItemDropped = useRef();
+  const draggedItemindex = useRef();
 
   useEffect(() => {
     if (!isCollapsible || !isCollapsed) {
@@ -93,6 +95,16 @@ const ListSubsection = ({
       setlistItemNodes([]);
     }
   }, [children, isCollapsible, isCollapsed]);
+
+  useEffect(() => {
+    if (isListItemDropped.current) {
+      const listItems = listSubSectionItemNode && listSubSectionItemNode.querySelectorAll('[data-item-show-focus]');
+      if (listItems[draggedItemindex.current]) {
+        listItems[draggedItemindex.current].focus();
+      }
+      isListItemDropped.current = false;
+    }
+  }, [listItemNodes]);
 
   const theme = useContext(ThemeContext);
   const listClassNames = classNames(
@@ -154,12 +166,7 @@ const ListSubsection = ({
       result.destination.index,
     );
     setlistItemNodes(items);
-    if (listSubSectionItemNode) {
-      const listitems = listSubSectionItemNode.querySelectorAll('[data-item-show-focus]');
-      if (listitems && listitems[result.source.index]) {
-        listitems[result.source.index].focus();
-      }
-    }
+    draggedItemindex.current = result.destination.index;
     provided.announce(intl.formatMessage({ id: 'Terra.list.drop' }, { startPosition: (result.source.index + 1), endPosition: (result.destination.index + 1) }));
     if (onDragEnd) {
       onDragEnd(result, provided);
@@ -167,6 +174,7 @@ const ListSubsection = ({
   };
 
   const handleDragStart = (start, provided) => {
+    isListItemDropped.current = true;
     provided.announce(intl.formatMessage({ id: 'Terra.list.lift' }, { startPosition: (start.source.index + 1) }));
   };
 
@@ -176,13 +184,22 @@ const ListSubsection = ({
     }
   };
 
-  const cloneListItem = (ListItem, provider) => React.cloneElement(ListItem, {
+  const getStyleforDrag = (ListItem, snapshot, provider) => {
+    const styleProperties = provider.draggableProps.style;
+    if (styleProperties && snapshot && snapshot.isDragging) {
+      styleProperties['z-index'] = ListItem?.props?.zIndex ? `${ListItem.props.zIndex}` : '6000';
+    }
+    return styleProperties;
+  };
+
+  const cloneListItem = (ListItem, provider, snapshot) => React.cloneElement(ListItem, {
     isDraggable: ListItem?.props?.isSelectable,
     refCallback: (refobj) => {
       provider.innerRef(refobj);
     },
     ...provider.draggableProps,
     ...provider.dragHandleProps,
+    style: getStyleforDrag(ListItem, snapshot, provider),
   });
 
   const renderSubSectionListItemsDom = () => (
@@ -199,12 +216,14 @@ const ListSubsection = ({
     </>
   );
 
+  window['__react-beautiful-dnd-disable-dev-warnings'] = true;
+
   const renderDraggableListDom = () => (
     <DragDropContext onDragEnd={handleDragEnd} onDragStart={handleDragStart} onDragUpdate={handleDragUpdate}>
       <Droppable
         droppableId="listSubSection"
         renderClone={(provided, snapshot, rubric) => (
-          cloneListItem(listItemNodes[rubric.source.index], provided)
+          cloneListItem(listItemNodes[rubric.source.index], provided, snapshot)
         )}
       >
         {(provided) => (
@@ -219,8 +238,8 @@ const ListSubsection = ({
               >
                 {listItemNodes.map((item, index) => (
                   <Draggable isDragDisabled={!(item?.props?.isSelectable)} key={item.key} draggableId={item.key} index={index}>
-                    {(provider) => (
-                      cloneListItem(item, provider)
+                    {(provider, snapshot) => (
+                      cloneListItem(item, provider, snapshot)
                     )}
                   </Draggable>
                 ))}
