@@ -170,7 +170,7 @@ const Field = (props) => {
     if ((required || isInvalid) && child && (child.type.isInput || child.type.isSelect || child.type.isTextarea)) {
       return React.cloneElement(child, {
         ...required && { required: true },
-        ...isInvalid && { isInvalid: true },
+        ...isInvalid && { isInvalid: true, 'aria-invalid': true },
       });
     }
     return child;

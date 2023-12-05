@@ -18,6 +18,7 @@
     --terra-form-select-option-icon-width: 1.143rem;
     --terra-form-select-option-active-background-color: #1e3a49;
     --terra-form-select-option-disabled-color: #404344;
+    --terra-form-select-option-active-color-outline: 2px dashed #b2b5b6;
 
 
     @include terra-inline-svg-var('--terra-form-select-option-icon-add-background', '<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#0092e0" d="M48 21H27V0h-6v21H0v6h21v21h6V27h21z"/></svg>');
