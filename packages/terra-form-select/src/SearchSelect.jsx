@@ -89,7 +89,8 @@ const propTypes = {
    */
   optionFilter: PropTypes.func,
   /**
-   * Placeholder prop has been deperecated and will be updated on next major version relase, placeholder can be only visual text.
+   * ![IMPORTANT](https://badgen.net/badge/prop/deprecated/red)
+   * Placeholder prop has been deprecated and will be Removed on next major version release, Visual label should be used instead for better Accessibility experience.
    */
   placeholder: PropTypes.string,
   /**
