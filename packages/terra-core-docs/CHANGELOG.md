@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added a test case for `terra-list` to support drag and drop in `terra-modal-manager`.
+
 ## 1.52.0 - (November 21, 2023)
 
 * Added

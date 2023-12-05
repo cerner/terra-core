@@ -284,6 +284,7 @@ exports[`should render List with items 1`] = `
                                 }
                               }
                               tabIndex={0}
+                              zIndex={6001}
                             >
                               <li
                                 aria-describedby="terra-hidden-tab-pane-response=0.5"
@@ -533,6 +534,7 @@ exports[`should render List with items 1`] = `
                                 }
                               }
                               tabIndex={0}
+                              zIndex={6001}
                             >
                               <li
                                 aria-describedby="terra-hidden-tab-pane-response=0.5"
@@ -1000,6 +1002,7 @@ exports[`should render Section with items 1`] = `
                                     }
                                   }
                                   tabIndex={0}
+                                  zIndex={6001}
                                 >
                                   <li
                                     aria-describedby="terra-hidden-tab-pane-response=0.5"
@@ -1247,6 +1250,7 @@ exports[`should render Section with items 1`] = `
                                     }
                                   }
                                   tabIndex={0}
+                                  zIndex={6001}
                                 >
                                   <li
                                     aria-describedby="terra-hidden-tab-pane-response=0.5"
@@ -1692,6 +1696,7 @@ exports[`should render subsection with items 1`] = `
                                     }
                                   }
                                   tabIndex={0}
+                                  zIndex={6001}
                                 >
                                   <li
                                     aria-describedby="terra-hidden-tab-pane-response=0.5"
@@ -1939,6 +1944,7 @@ exports[`should render subsection with items 1`] = `
                                     }
                                   }
                                   tabIndex={0}
+                                  zIndex={6001}
                                 >
                                   <li
                                     aria-describedby="terra-hidden-tab-pane-response=0.5"
@@ -2186,6 +2192,7 @@ exports[`should render subsection with items 1`] = `
                                     }
                                   }
                                   tabIndex={0}
+                                  zIndex={6001}
                                 >
                                   <li
                                     aria-describedby="terra-hidden-tab-pane-response=0.5"

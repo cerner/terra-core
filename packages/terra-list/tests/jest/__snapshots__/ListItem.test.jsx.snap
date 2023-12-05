@@ -67,6 +67,7 @@ exports[`correctly applies the theme context className 1`] = `
       }
       isSelectable={false}
       isSelected={false}
+      zIndex={6001}
     >
       <li
         className="list-item orion-fusion-theme"
