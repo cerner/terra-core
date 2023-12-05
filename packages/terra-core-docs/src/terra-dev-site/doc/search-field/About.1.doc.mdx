@@ -76,6 +76,8 @@ List of keyboard interactions supported by Search Field
   * aria-label default value is set to 'search' for the basic search field.
   * When '[_groupName_](/components/cerner-terra-core-docs/search-field/about#search-field-props)' prop is passed in, the prop value will be used as a custom aria-label.
   * A custom aria-label value can also be passed in through '[inputAttributes](/components/cerner-terra-core-docs/search-field/about#search-field-props)' prop.
+  * Consumers should provide a group name whenever possible. "Patient Search", "Global Search", "Location Search", "Find Person", etc to provide proper context to screen reader users.
+  * Consumers should also make the label visible whenever possible. Hidden label for this component is a special allowance, but is not ideal.
 
 ## Implementation
 
