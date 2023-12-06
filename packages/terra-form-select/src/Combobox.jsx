@@ -89,7 +89,8 @@ const propTypes = {
    */
   optionFilter: PropTypes.func,
   /**
-   * Placeholder text. defaults to 'Select or Enter'
+   * ![IMPORTANT](https://badgen.net/badge/prop/deprecated/red)
+   * Placeholder prop has been deprecated and will be Removed on next major version release, Visual label should be used instead for better Accessibility experience.
    */
   placeholder: PropTypes.string,
   /**
@@ -237,6 +238,7 @@ class Combobox extends React.Component {
         clearOptionDisplay={clearOptionDisplay}
         inputId={inputId}
         resetComboboxValue={this.handleResetComboboxValue}
+        allowClear={allowClear}
       >
         {this.state.tags}
         {children}

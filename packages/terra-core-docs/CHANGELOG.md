@@ -4,6 +4,7 @@
 
 * Added
   * Added a invalid example in `terra-search-Field`.
+  * Added aria-label to announce the visual label for `terra-form-select`.
 
 ## 1.52.0 - (November 21, 2023)
 
@@ -11,7 +12,12 @@
   * Added test to `terra-section-header` for the fixed section header title.
 
 * Added
+  * Added error message for `terra-form-search-select` invalid example.
+
+* Added
   * Added visual label and associated with input field using 'for' and 'id'.
+  * Added 'ariaLabel' attribute for `terra-form-select` examples.
+
 ## 1.51.0 - (November 16, 2023)
 
 * Changed

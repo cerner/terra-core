@@ -18,6 +18,8 @@
     --terra-form-select-option-icon-width: 1rem;
     --terra-form-select-option-active-background-color: #ebf6fd;
     --terra-form-select-option-disabled-color: rgba(28, 31, 33, 0.25);
+    --terra-form-select-option-active-color-outline: 2px dashed #000;
+
 
     @include terra-inline-svg-var('--terra-form-select-option-icon-active-background', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" rx="6" ry="6" fill="#a3dcfd" opacity="0.5"/><path d="M20,36.4,6.7,23.1l3.6-3.6L20,29.4,37.7,11.5l3.6,3.6Z" fill="#0079be"/></svg>');
     @include terra-inline-svg-var('--terra-form-select-option-checkable-active-icon-background', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" rx="6" ry="6" fill="#a3dcfd" opacity="0.8"/><path d="M20,36.4,6.7,23.1l3.6-3.6L20,29.4,37.7,11.5l3.6,3.6Z" fill="#0079be"/></svg>');
