@@ -39,6 +39,7 @@ const propTypes = {
    * and how to interact with it. Maps to
    * [aria-details](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details).
    * `aria-details` is not supported in all screen reader/browser
+   */
   ariaDetails: PropTypes.string,
   /**
    * The children list items passed to the component.
