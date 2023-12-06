@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added `aria-invalid` for invalid entry.
+
 ## 4.31.0 - (November 13, 2023)
 
 * Changed
