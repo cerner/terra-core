@@ -86,7 +86,7 @@ const ListSubsection = ({
 
   /* eslint-disable-next-line no-param-reassign */
   delete customProps?.isTabFocusDisabled;
- 
+
   useEffect(() => {
     if (!isCollapsible || !isCollapsed) {
       if (Array.isArray(children)) {
@@ -190,7 +190,7 @@ const ListSubsection = ({
   const getStyleforDrag = (ListItem, snapshot, provider) => {
     const styleProperties = provider.draggableProps.style;
     if (styleProperties && snapshot && snapshot.isDragging) {
-      styleProperties['z-index'] = ListItem?.props?.zIndex ? `${ListItem.props.zIndex}` : '6000';
+      styleProperties.zIndex = ListItem?.props?.zIndex ? `${ListItem.props.zIndex}` : '6000';
     }
     return styleProperties;
   };

@@ -66,7 +66,7 @@ const propTypes = {
    */
   intl: PropTypes.shape({ formatMessage: PropTypes.func }),
   /**
-   * z-index value for the li element while dragged by default it is 6001 where terra modal manager has z-index value of 6000.
+   * z-index value for the list item (li element). Defaults to 6001 which is greater value than terra-modal-manager z-index value.
    */
   zIndex: PropTypes.number,
 };

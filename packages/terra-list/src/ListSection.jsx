@@ -179,7 +179,7 @@ const ListSection = ({
   const getStyleforDrag = (ListItem, snapshot, provider) => {
     const styleProperties = provider.draggableProps.style;
     if (styleProperties && snapshot && snapshot.isDragging) {
-      styleProperties['z-index'] = ListItem?.props?.zIndex ? `${ListItem.props.zIndex}` : '6001';
+      styleProperties.zIndex = ListItem?.props?.zIndex ? `${ListItem.props.zIndex}` : '6001';
     }
     return styleProperties;
   };
