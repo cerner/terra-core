@@ -1,3 +1,7 @@
+// import themes
+@import './clinical-lowlight-theme/FormSelectDocCommon.module';
+@import './orion-fusion-theme/FormSelectDocCommon.module';
+
 :local {
   .form-select {
     max-width: 300px;
@@ -5,5 +9,15 @@
 
   .controlled-button {
     margin: 5px;
+  }
+  
+  .error-text {
+    color: var(--terra-core-docs-form-select-error-text-color, #e50000);
+    font-size: 0.857rem;
+    font-weight: normal;
+    line-height: 1.25;
+    margin-top: 0.357em;
+    outline: 0;
+    text-align: left;
   }
 }

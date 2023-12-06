@@ -100,7 +100,8 @@ const propTypes = {
    */
   optionFilter: PropTypes.func,
   /**
-   * Placeholder text.
+   * ![IMPORTANT](https://badgen.net/badge/prop/deprecated/red)
+   * Placeholder prop has been deprecated and will be Removed on next major version release, Visual label should be used instead for better Accessibility experience.
    */
   placeholder: PropTypes.string,
   /**
@@ -120,6 +121,10 @@ const propTypes = {
    * Callback function to reset input value after search
    */
   resetComboboxValue: PropTypes.func,
+  /**
+   * Whether a clear option is available to clear the selection, will use placeholder text if provided.
+   */
+  allowClear: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -139,6 +144,8 @@ const defaultProps = {
   totalOptions: undefined,
   value: undefined,
   inputId: undefined,
+  ariaLabel: undefined,
+  allowClear: false,
 };
 
 /* This rule can be removed when eslint-plugin-jsx-a11y is updated to ~> 6.0.0 */
@@ -263,6 +270,7 @@ class Frame extends React.Component {
    * @param {event} event - The onKeyDown event.
    */
   handleKeyDown(event) {
+    const { intl } = this.props;
     const { keyCode, target } = event;
 
     if (keyCode === KeyCode.KEY_SPACE && target !== this.input) {
@@ -284,6 +292,17 @@ class Frame extends React.Component {
         hasSearchChanged: false,
         searchValue: '',
       });
+      event.stopPropagation();
+    } else if (keyCode === KeyCode.KEY_ESCAPE && this.props.allowClear) {
+      this.hasEscPressed = false;
+      if (this.props.resetComboboxValue) {
+        this.props.resetComboboxValue();
+      }
+      this.setState({
+        hasSearchChanged: false,
+        searchValue: '',
+      });
+      this.visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.selectCleared' });
       event.stopPropagation();
     }
   }
@@ -397,7 +416,7 @@ class Frame extends React.Component {
   getDisplay(ariaDescribedBy, id) {
     const { hasSearchChanged, searchValue } = this.state;
     const {
-      disabled, display, placeholder, required, inputId,
+      disabled, display, placeholder, required, inputId, isInvalid,
     } = this.props;
 
     const inputAttrs = {
@@ -412,7 +431,9 @@ class Frame extends React.Component {
       'aria-describedby': ariaDescribedBy,
       'aria-disabled': disabled,
       'aria-owns': this.state.isOpen ? id : undefined,
+      'aria-controls': this.state.isOpen ? id : undefined,
       'aria-expanded': !disabled && this.state.isOpen,
+      'aria-invalid': isInvalid,
       type: 'text',
       className: cx('search-input'),
       required,
@@ -520,18 +541,22 @@ class Frame extends React.Component {
    * Falls back to the string 'Search' if no label is provided
    */
   ariaLabel() {
-    const { ariaLabel, disabled, intl } = this.props;
+    const {
+      ariaLabel,
+      disabled,
+      placeholder,
+      intl,
+    } = this.props;
 
-    const defaultAriaLabel = intl.formatMessage({ id: 'Terra.form.select.ariaLabel' });
     const dimmed = intl.formatMessage({ id: 'Terra.form.select.dimmed' });
 
     // VO on iOS doesn't do a good job of announcing disabled stated. Here we append the phrase that
     // VO associates with disabled form controls.
     if ('ontouchstart' in window && disabled) {
-      return ariaLabel === undefined ? `${defaultAriaLabel} ${dimmed}` : `${ariaLabel} ${dimmed}`;
+      return ariaLabel === undefined ? `${placeholder}, ${dimmed}` : `${ariaLabel}, ${dimmed}`;
     }
 
-    return ariaLabel === undefined ? defaultAriaLabel : ariaLabel;
+    return ariaLabel === undefined ? placeholder : ariaLabel;
   }
 
   /**
@@ -646,6 +671,8 @@ class Frame extends React.Component {
       required,
       totalOptions,
       value,
+      allowClear,
+      resetComboboxValue,
       ...customProps
     } = this.props;
 
