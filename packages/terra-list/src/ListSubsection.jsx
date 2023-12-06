@@ -84,6 +84,9 @@ const ListSubsection = ({
   const isListItemDropped = useRef();
   const draggedItemindex = useRef();
 
+  /* eslint-disable-next-line no-param-reassign */
+  delete customProps?.isTabFocusDisabled;
+ 
   useEffect(() => {
     if (!isCollapsible || !isCollapsed) {
       if (Array.isArray(children)) {
@@ -251,7 +254,6 @@ const ListSubsection = ({
       </Droppable>
     </DragDropContext>
   );
-
   return (
     (isDraggable) ? renderDraggableListDom() : renderSubSectionListItemsDom()
   );

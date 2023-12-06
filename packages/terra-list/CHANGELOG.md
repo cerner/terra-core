@@ -5,6 +5,9 @@
 * Fixed
   * Focus is not maintained on Dropped list item when using Drag and Drop.
 
+* Removed
+  * Removed `ariaDescription` prop from list
+
 ## 4.67.0 - (November 13, 2023)
 
 * Changed
