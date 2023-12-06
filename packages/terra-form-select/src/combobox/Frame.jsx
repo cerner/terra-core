@@ -100,7 +100,8 @@ const propTypes = {
    */
   optionFilter: PropTypes.func,
   /**
-   * Placeholder text.
+   * ![IMPORTANT](https://badgen.net/badge/prop/deprecated/red)
+   * Placeholder prop has been deprecated and will be Removed on next major version release, Visual label should be used instead for better Accessibility experience.
    */
   placeholder: PropTypes.string,
   /**
@@ -552,10 +553,10 @@ class Frame extends React.Component {
     // VO on iOS doesn't do a good job of announcing disabled stated. Here we append the phrase that
     // VO associates with disabled form controls.
     if ('ontouchstart' in window && disabled) {
-      return ariaLabel === undefined ? `${placeholder}, ${dimmed}` : `${ariaLabel}, ${placeholder}, ${dimmed}`;
+      return ariaLabel === undefined ? `${placeholder}, ${dimmed}` : `${ariaLabel}, ${dimmed}`;
     }
 
-    return ariaLabel === undefined ? placeholder : `${ariaLabel}, ${placeholder}`;
+    return ariaLabel === undefined ? placeholder : ariaLabel;
   }
 
   /**
