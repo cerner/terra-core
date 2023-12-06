@@ -3,8 +3,13 @@
 ## Unreleased
 
 * Added
+
   * Added new Accessibility and Implementation guide for Terra Search Field
-  * Added aria-label to announce the visual label.
+  * Added a invalid example in `terra-search-Field`.
+  * Added aria-label to announce the visual label for `terra-form-select`.
+
+* Changed
+  * Removed `ariaDescription` example added for terra-list
 
 ## 1.52.0 - (November 21, 2023)
 
