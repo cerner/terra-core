@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Removed `ariaDescription` example added for terra-list
+
 * Added
   * Added a invalid example in `terra-search-Field`.
   * Added aria-label to announce the visual label for `terra-form-select`.
