@@ -3,7 +3,8 @@
 ## Unreleased
 
 * Added
-  * Added aria-label to announce the visual label.
+  * Added a invalid example in `terra-search-Field`.
+  * Added aria-label to announce the visual label for `terra-form-select`.
 
 ## 1.52.0 - (November 21, 2023)
 
