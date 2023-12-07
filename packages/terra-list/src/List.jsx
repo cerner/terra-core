@@ -85,6 +85,10 @@ const propTypes = {
    * @param {Object} provided provided
    */
   onDragEnd: PropTypes.func,
+  /**
+   * z-index value for the list item (li element). Defaults to 6001 which is greater value than terra-modal-manager z-index value.
+   */
+  zIndex: PropTypes.number,
 };
 
 const defaultProps = {
@@ -94,6 +98,7 @@ const defaultProps = {
   isTabFocusDisabled: false,
   paddingStyle: 'none',
   role: 'none',
+  zIndex: 6001,
 };
 
 const List = ({
@@ -109,6 +114,7 @@ const List = ({
   isDraggable,
   isTabFocusDisabled,
   onDragEnd,
+  zIndex,
   ...customProps
 }) => {
   const theme = useContext(ThemeContext);
@@ -245,7 +251,7 @@ const List = ({
   const getStyleforDrag = (ListItem, snapshot, provider) => {
     const styleProperties = provider?.draggableProps?.style;
     if (styleProperties && snapshot && snapshot.isDragging) {
-      styleProperties.zIndex = ListItem?.props?.zIndex ? `${ListItem.props.zIndex}` : '6001';
+      styleProperties.zIndex = zIndex;
     }
     return styleProperties;
   };

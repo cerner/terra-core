@@ -61,6 +61,10 @@ const propTypes = {
    * The intl object to be injected for translations.
    */
   intl: PropTypes.shape({ formatMessage: PropTypes.func }),
+  /**
+   * z-index value for the list item (li element). Defaults to 6001 which is greater value than terra-modal-manager z-index value.
+   */
+  zIndex: PropTypes.number,
 };
 
 const defaultProps = {
@@ -68,6 +72,7 @@ const defaultProps = {
   isCollapsed: false,
   isCollapsible: false,
   level: 2,
+  zIndex: 6001,
 };
 
 const ListSubsection = ({
@@ -77,6 +82,7 @@ const ListSubsection = ({
   isDraggable,
   onDragEnd,
   intl,
+  zIndex,
   ...customProps
 }) => {
   const [listItemNodes, setlistItemNodes] = useState(children);
@@ -190,7 +196,7 @@ const ListSubsection = ({
   const getStyleforDrag = (ListItem, snapshot, provider) => {
     const styleProperties = provider.draggableProps.style;
     if (styleProperties && snapshot && snapshot.isDragging) {
-      styleProperties.zIndex = ListItem?.props?.zIndex ? `${ListItem.props.zIndex}` : '6000';
+      styleProperties.zIndex = zIndex;
     }
     return styleProperties;
   };

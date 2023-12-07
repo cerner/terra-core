@@ -65,10 +65,6 @@ const propTypes = {
    * The intl object to be injected for translations.
    */
   intl: PropTypes.shape({ formatMessage: PropTypes.func }),
-  /**
-   * z-index value for the list item (li element). Defaults to 6001 which is greater value than terra-modal-manager z-index value.
-   */
-  zIndex: PropTypes.number,
 };
 
 const defaultProps = {
@@ -76,7 +72,6 @@ const defaultProps = {
   hasChevron: false,
   isSelected: false,
   isSelectable: false,
-  zIndex: 6001,
 };
 
 const ListItem = ({
@@ -92,7 +87,6 @@ const ListItem = ({
   onSelect,
   refCallback,
   intl,
-  zIndex,
   ...customProps
 }) => {
   const theme = React.useContext(ThemeContext);
