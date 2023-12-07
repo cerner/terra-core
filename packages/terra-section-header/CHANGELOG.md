@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Fixed
-  * Fixed issue where onClick callback was called twice when using spaebar key.
+  * Fixed issue where onClick callback was called twice when using spacebar key.
 
 ## 2.65.0 - (November 21, 2023)
 
