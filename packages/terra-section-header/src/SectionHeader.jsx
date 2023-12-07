@@ -75,6 +75,7 @@ class SectionHeader extends React.Component {
         // Call the same function the user provides for a click event
         if (this.props.onClick) {
           this.props.onClick(event);
+          event.preventDefault();
         }
       }
 
