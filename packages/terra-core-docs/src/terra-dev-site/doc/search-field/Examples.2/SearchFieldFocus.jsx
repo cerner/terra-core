@@ -3,11 +3,11 @@ import SearchField from 'terra-search-field';
 import Button from 'terra-button';
 
 const SearchFieldFocus = () => {
-  let searchElement = useRef(null);
+  const searchElement = useRef(null);
 
   const handleButtonClick = () => {
     if (searchElement) {
-      searchElement.focus();
+      searchElement.current.focus();
     }
   };
 
@@ -15,7 +15,7 @@ const SearchFieldFocus = () => {
     <div>
       <Button text="Focus Me" onClick={handleButtonClick} id="search-field-focus-button" />
       <SearchField
-        inputRefCallback={(inputRef) => { searchElement = inputRef; }}
+        inputRefCallback={(inputRef) => { searchElement.current = inputRef; }}
       />
     </div>
   );
