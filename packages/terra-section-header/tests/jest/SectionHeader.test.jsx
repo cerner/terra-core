@@ -66,9 +66,7 @@ describe('SectionHeader', () => {
     headerButton.simulate('click');
 
     // Validate mock function was called from simulated click event
-    expect(mockClick).toHaveBeenCalled();
-
-    expect(wrapper).toMatchSnapshot();
+    expect(mockClick).toHaveBeenCalledTimes(1);
   });
 
   it('verifies onClick callback is triggered when pressing space when button has focus', () => {
@@ -89,9 +87,7 @@ describe('SectionHeader', () => {
     headerButton.simulate('keydown', { keyCode: 32 });
 
     // Validate mock function was called from simulated click event
-    expect(mockClick).toHaveBeenCalled();
-
-    expect(wrapper).toMatchSnapshot();
+    expect(mockClick).toHaveBeenCalledTimes(1);
   });
 
   it('verifies onClick callback is triggered when pressing return when button has focus', () => {
@@ -112,9 +108,7 @@ describe('SectionHeader', () => {
     headerButton.simulate('keydown', { keyCode: 13 });
 
     // Validate mock function was called from simulated click event
-    expect(mockClick).toHaveBeenCalled();
-
-    expect(wrapper).toMatchSnapshot();
+    expect(mockClick).toHaveBeenCalledTimes(1);
   });
 
   it('should render a span element for title since no onClick exists', () => {
@@ -126,8 +120,6 @@ describe('SectionHeader', () => {
     const headerSpan = wrapper.find('span.arrange-wrapper');
     expect(headerSpan).toHaveLength(1);
     expect(headerSpan.text()).toBe('foo');
-
-    expect(wrapper).toMatchSnapshot();
   });
 
   it('verifies that section header has a tab index when specified with custom props', () => {

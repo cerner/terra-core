@@ -65,6 +65,7 @@ exports[`should render List with items 1`] = `
     isTabFocusDisabled={false}
     paddingStyle="none"
     role="none"
+    zIndex={6001}
   >
     <DragDropContext
       onDragEnd={[Function]}
@@ -758,6 +759,7 @@ exports[`should render Section with items 1`] = `
     isDraggable={true}
     level={2}
     title="test"
+    zIndex={6001}
   >
     <DragDropContext
       onDragEnd={[Function]}
@@ -1450,6 +1452,7 @@ exports[`should render subsection with items 1`] = `
     isDraggable={true}
     level={2}
     title="subsection"
+    zIndex={6001}
   >
     <DragDropContext
       onDragEnd={[Function]}

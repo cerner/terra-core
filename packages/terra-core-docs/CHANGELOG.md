@@ -5,6 +5,7 @@
 * Added
 
   * Added new Accessibility and Implementation guide for Terra Search Field
+  * Added a test case for `terra-list` to support drag and drop in `terra-modal-manager`.
   * Added a invalid example in `terra-search-Field`.
   * Added aria-label to announce the visual label for `terra-form-select`.
 

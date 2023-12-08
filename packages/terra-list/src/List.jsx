@@ -85,6 +85,10 @@ const propTypes = {
    * @param {Object} provided provided
    */
   onDragEnd: PropTypes.func,
+  /**
+   * z-index value for the list item (li element). Defaults to 6001 which is greater value than terra-modal-manager z-index value.
+   */
+  zIndex: PropTypes.number,
 };
 
 const defaultProps = {
@@ -94,6 +98,7 @@ const defaultProps = {
   isTabFocusDisabled: false,
   paddingStyle: 'none',
   role: 'none',
+  zIndex: 6001,
 };
 
 const List = ({
@@ -109,11 +114,14 @@ const List = ({
   isDraggable,
   isTabFocusDisabled,
   onDragEnd,
+  zIndex,
   ...customProps
 }) => {
   const theme = useContext(ThemeContext);
   const [listItem, setlistItem] = useState([]);
   let listNode = useRef();
+  const isListItemDropped = useRef();
+  const draggedItemindex = useRef();
 
   useEffect(() => {
     if (Array.isArray(children)) {
@@ -122,6 +130,16 @@ const List = ({
       setlistItem([children]);
     }
   }, [children]);
+
+  useEffect(() => {
+    if (isListItemDropped.current) {
+      const listItems = listNode && listNode.querySelectorAll('[data-item-show-focus]');
+      if (listItems[draggedItemindex.current]) {
+        listItems[draggedItemindex.current].focus();
+      }
+      isListItemDropped.current = false;
+    }
+  }, [listItem]);
 
   const listClassNames = classNames(
     cx(
@@ -201,7 +219,6 @@ const List = ({
   };
 
   const handleDragEnd = (result, provided) => {
-    const listItems = listNode && listNode.querySelectorAll('[data-item-show-focus]');
     // dropped outside the list
     if (!result.destination) {
       provided.announce(intl.formatMessage({ id: 'Terra.list.cancelDrag' }, { startPosition: (result.source.index + 1) }));
@@ -213,9 +230,7 @@ const List = ({
       result.destination.index,
     );
     setlistItem(items);
-    if (listItems && listItems[result.source.index]) {
-      listItems[result.source.index].focus();
-    }
+    draggedItemindex.current = result.destination.index;
     provided.announce(intl.formatMessage({ id: 'Terra.list.drop' }, { startPosition: (result.source.index + 1), endPosition: (result.destination.index + 1) }));
     if (onDragEnd) {
       onDragEnd(result, provided);
@@ -223,6 +238,7 @@ const List = ({
   };
 
   const handleDragStart = (start, provided) => {
+    isListItemDropped.current = true;
     provided.announce(intl.formatMessage({ id: 'Terra.list.lift' }, { startPosition: (start.source.index + 1) }));
   };
 
@@ -232,12 +248,21 @@ const List = ({
     }
   };
 
-  const cloneListItem = (ListItem, provider) => React.cloneElement(ListItem, {
+  const getStyleforDrag = (ListItem, snapshot, provider) => {
+    const styleProperties = provider?.draggableProps?.style;
+    if (styleProperties && snapshot && snapshot.isDragging) {
+      styleProperties.zIndex = zIndex;
+    }
+    return styleProperties;
+  };
+
+  const cloneListItem = (ListItem, provider, snapshot) => React.cloneElement(ListItem, {
     isDraggable: ListItem?.props?.isSelectable,
     isTabFocusDisabled,
     refCallback: provider.innerRef,
     ...provider.draggableProps,
     ...provider.dragHandleProps,
+    style: getStyleforDrag(ListItem, snapshot, provider),
   });
 
   const clone = (object) => React.Children.map(object, (listitem) => React.cloneElement(listitem, {
@@ -259,12 +284,14 @@ const List = ({
     </ul>
   );
 
+  window['__react-beautiful-dnd-disable-dev-warnings'] = true;
+
   const renderDraggableListDom = () => (
     <DragDropContext onDragEnd={handleDragEnd} onDragStart={handleDragStart} onDragUpdate={handleDragUpdate}>
       <Droppable
         droppableId="ListItem"
         renderClone={(provided, snapshot, rubric) => (
-          cloneListItem(listItem[rubric.source.index], provided)
+          cloneListItem(listItem[rubric.source.index], provided, snapshot)
         )}
       >
         {(provided) => (
@@ -284,8 +311,8 @@ const List = ({
           >
             {listItem.map((item, index) => (
               <Draggable isDragDisabled={!(item?.props?.isSelectable)} key={item.key} draggableId={item.key} index={index}>
-                {(provider) => (
-                  cloneListItem(item, provider)
+                {(provider, snapshot) => (
+                  cloneListItem(item, provider, snapshot)
                 )}
               </Draggable>
             ))}
