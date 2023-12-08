@@ -33,7 +33,7 @@ Supports:
 * Disabling the Auto Formatting.
 * Numeric filtering when search text is entered. 
 * Programatically setting the search text to a certain value.  
-* Mangement of invalid search text states.
+* Management of invalid search text states.
 * [Cross-Browser Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#cross-browser-support)
 * [Responsive Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#responsive-support)
 * [Mobile Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#mobile-support)
@@ -44,21 +44,21 @@ Refer to the [examples](/components/cerner-terra-core-docs/search-field/about#ex
 |Link to Example| Description|
 |-|-|
 |[BasicSearchField](/components/cerner-terra-core-docs/search-field/examples/search-field-basic)|An example of basic search field.|
-|[SearchFieldWithDefaultLabel](/components/cerner-terra-core-docs/search-field/examples/search-field-with-default-label)|An example demonstrating search field with default label.|
-|[SearchFieldWithCustomLabel](/components/cerner-terra-core-docs/search-field/examples/search-field-with-custom-label)|An example demonstrating search field with a custom label.|
-|[SearchFieldWithNoLabel](/components/cerner-terra-core-docs/search-field/examples/search-field-with-no-label)|An example demonstrating search field with no label.|
-|[SearchFieldPlaceholder](/components/cerner-terra-core-docs/search-field/examples/search-field-placeholder)|An example demonstrating search field with a placeholder.|
-|[SearchFieldMinimumLength](/components/cerner-terra-core-docs/search-field/examples/search-field-minimum-length)|An example demonstrating search field with a minimum search text length set.|
-|[SearchFieldDelayed](/components/cerner-terra-core-docs/search-field/examples/search-field-delayed)|An example demonstrating search field with a search delay.|
-|[SearchFieldDefaultValue](/components/cerner-terra-core-docs/search-field/examples/search-field-default-value)|An example demonstrating search field with a default search text value.|
-|[SearchFieldDisabled](/components/cerner-terra-core-docs/search-field/examples/search-field-disabled)|An example demonstrating disabled search field.|
-|[SearchFieldDisabledAutoFormatAttrs](/components/cerner-terra-core-docs/search-field/examples/search-field-disable-auto-format-attrs)|An example demonstrating search field with disabled autoformat attributes.|
-|[SearchFieldBlock](/components/cerner-terra-core-docs/search-field/examples/search-field-block)|An example demonstrating search field with block style|
-|[SearchFieldDisableAutoSearch](/components/cerner-terra-core-docs/search-field/examples/search-field-disable-auto-search)|An example demonstrating search field with autosearch disabled.|
-|[SearchFieldFilterNumeric](/components/cerner-terra-core-docs/search-field/examples/search-field-filter-numeric)|An example demonstrating search field with numeric filtering.|
-|[SearchFieldFocus](/components/cerner-terra-core-docs/search-field/examples/search-field-focus)|An example demonstrating search field with focus.|
-|[SearchFieldProgrammaticSet](/components/cerner-terra-core-docs/search-field/examples/search-field-programmatic-set)|An example demonstrating search field with search text set programmatically.|
-|[SearchFieldInvalid](/components/cerner-terra-core-docs/search-field/examples/search-field-invalid)|An example demonstrating search field with invalid text.|
+|[SearchFieldWithDefaultLabel](/components/cerner-terra-core-docs/search-field/examples/search-field-with-default-label)|An example demonstrating search field with default label using the 'isLabelVisible' prop.|
+|[SearchFieldWithCustomLabel](/components/cerner-terra-core-docs/search-field/examples/search-field-with-custom-label)|An example demonstrating search field with a custom label using the 'groupName' and 'isLabelVisible' props.|
+|[SearchFieldWithNoLabel](/components/cerner-terra-core-docs/search-field/examples/search-field-with-no-label)|An example demonstrating search field with no label using the 'groupName' and 'isLabelVisible' props.|
+|[SearchFieldPlaceholder](/components/cerner-terra-core-docs/search-field/examples/search-field-placeholder)|An example demonstrating search field with a placeholder using the 'placeholder' prop.|
+|[SearchFieldMinimumLength](/components/cerner-terra-core-docs/search-field/examples/search-field-minimum-length)|An example demonstrating search field with a minimum search text length set using the 'minimumSearchTextLength' prop.|
+|[SearchFieldDelayed](/components/cerner-terra-core-docs/search-field/examples/search-field-delayed)|An example demonstrating search field with a search delay using 'searchDelay' prop.|
+|[SearchFieldDefaultValue](/components/cerner-terra-core-docs/search-field/examples/search-field-default-value)|An example demonstrating search field with a default search text value using the 'defaultValue' prop.|
+|[SearchFieldDisabled](/components/cerner-terra-core-docs/search-field/examples/search-field-disabled)|An example demonstrating disabled search field using 'isDisabled' prop.|
+|[SearchFieldDisabledAutoFormatAttrs](/components/cerner-terra-core-docs/search-field/examples/search-field-disable-auto-format-attrs)|An example demonstrating search field with disabled autoformat attributes using 'inputAttributes' prop.|
+|[SearchFieldBlock](/components/cerner-terra-core-docs/search-field/examples/search-field-block)|An example demonstrating search field with block style using the 'isBlock' prop.|
+|[SearchFieldDisableAutoSearch](/components/cerner-terra-core-docs/search-field/examples/search-field-disable-auto-search)|An example demonstrating search field with autosearch disabled using the 'disableAutoSearch' prop.|
+|[SearchFieldFilterNumeric](/components/cerner-terra-core-docs/search-field/examples/search-field-filter-numeric)|An example demonstrating search field with numeric filtering using the 'onChange' callback prop.|
+|[SearchFieldFocus](/components/cerner-terra-core-docs/search-field/examples/search-field-focus)|An example demonstrating search field with focus using the 'inputRefCallback' callback ref prop.|
+|[SearchFieldProgrammaticSet](/components/cerner-terra-core-docs/search-field/examples/search-field-programmatic-set)|An example demonstrating search field with search text set programmatically using the 'inputRefCallback' callback ref prop.|
+|[SearchFieldInvalid](/components/cerner-terra-core-docs/search-field/examples/search-field-invalid)|An example demonstrating search field with invalid text using the 'onInvalidSearch' prop.|
 
 ## Accessibility
 ### Keyboard Interactions
@@ -80,6 +80,15 @@ List of keyboard interactions supported by Search Field
   * A custom aria-label value can also be passed in through '[inputAttributes](/components/cerner-terra-core-docs/search-field/about#search-field-props)' prop.
   * Consumers should provide a group name whenever possible. "Patient Search", "Global Search", "Location Search", "Find Person", etc to provide proper context to screen reader users.
   * Consumers should also make the label visible whenever possible. Hidden label for this component is a special allowance, but is not ideal.
+
+#### Placeholder text
+
+* Placeholder text is italicized text that lives within the input field but disappears when the user starts typing inside the form field.
+* Placeholder text should not be relied on in order to prevent errors from occurring later, instead use masked entry, helper text, or a combination of both.
+* Placeholder text is only appropriate when the information it conveys is not vital to the completion of the form, as such, placeholder text is reserved for specific components to provide additional details as to the type of input field:
+  * Dropdown
+  * Search
+
 
 ## Implementation
 
