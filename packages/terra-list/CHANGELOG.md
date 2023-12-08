@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * After drag and drop in `terra-modal-manager` the dropped list item does not receive focus.
+
 * Removed
   * Removed `ariaDescription` prop from list
 

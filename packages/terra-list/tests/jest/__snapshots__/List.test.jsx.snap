@@ -69,6 +69,7 @@ exports[`correctly applies the theme context className 1`] = `
       isTabFocusDisabled={false}
       paddingStyle="none"
       role="none"
+      zIndex={6001}
     >
       <ul
         className="list orion-fusion-theme"

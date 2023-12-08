@@ -6,6 +6,7 @@
   * Removed `ariaDescription` example added for terra-list
 
 * Added
+  * Added a test case for `terra-list` to support drag and drop in `terra-modal-manager`.
   * Added a invalid example in `terra-search-Field`.
   * Added aria-label to announce the visual label for `terra-form-select`.
 
