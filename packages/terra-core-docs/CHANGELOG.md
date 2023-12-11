@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+ * Changed 
+   * Reverted `Removed ariaDescription prop from list`.
+
 * Added
 
   * Added new Accessibility and Implementation guide for Terra Search Field
