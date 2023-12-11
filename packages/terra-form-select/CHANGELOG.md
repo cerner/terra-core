@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 6.52.0 - (December 11, 2023)
+
 * Added
   * Added condition to announce the placeholder across all browsers.
   * Added visual focus dashed border for `terra-form-select` list options.

@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 2.64.2 - (December 11, 2023)
+
 * Fixed
   * Fixed Terra-Tag SR announces instructions twice with VPC ON Mode
 

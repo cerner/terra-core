@@ -1,6 +1,6 @@
 {
   "name": "terra-form-field",
-  "version": "4.31.0",
+  "version": "4.32.0",
   "description": "The Form Field component handles the layout of the label, help text and error text associated with a form element.",
   "author": "Cerner Corporation",
   "repository": {
