@@ -1,6 +1,6 @@
 {
   "name": "terra-toggle-section-header",
-  "version": "2.73.0",
+  "version": "2.74.0",
   "description": "Toggle section header component that transitions content in and out with a click on the header.",
   "author": "Cerner Corporation",
   "repository": {
@@ -25,7 +25,7 @@
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "terra-mixins": "^1.41.0",
-    "terra-section-header": "^2.65.0",
+    "terra-section-header": "^2.65.1",
     "terra-toggle": "^3.61.0"
   },
   "peerDependencies": {

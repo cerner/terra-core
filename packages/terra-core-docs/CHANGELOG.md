@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.53.0 - (December 11, 2023)
+
  * Changed 
    * Reverted `Removed ariaDescription prop from list`.
 

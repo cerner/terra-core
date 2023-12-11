@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.72.0 - (December 11, 2023)
+
 *  Removed
   * Removed `isSelectable` & `isSelected` custom prop from Button
 
