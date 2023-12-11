@@ -199,6 +199,8 @@ const ListSection = ({
     ...provider.dragHandleProps,
     style: getStyleforDrag(ListItem, snapshot, provider),
   });
+  /* eslint-disable-next-line no-param-reassign */
+  delete customProps?.isTabFocusDisabled;
 
   const renderSectionListItemsDom = () => (
     /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */

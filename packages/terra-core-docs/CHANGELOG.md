@@ -1,8 +1,8 @@
 # Changelog
 
 ## Unreleased
- * Updated
-  * Added `ariaDescription` example added for terra-list
+ * Updated 
+   * Added `ariaDescription` prop in list
 
 * Added
 
