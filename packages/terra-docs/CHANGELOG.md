@@ -1,8 +1,6 @@
 # ChangeLog
 
 ## Unreleased
- * Updated
-  * Added `ariaDescription` example added for terra-list
 
 ## 1.10.0 - (November 13, 2023)
 

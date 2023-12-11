@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased
+ * Updated
+  * Added `ariaDescription` example added for terra-list
 
 * Added
 
