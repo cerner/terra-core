@@ -109,10 +109,7 @@ const ListSectionHeader = ({
     attrSpread['data-item-show-focus'] = 'true';
     attrSpread.onBlur = ListUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-item-show-focus', 'true'));
     attrSpread.onMouseDown = ListUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-item-show-focus', 'false'));
-  }
-  /* eslint-disable-next-line no-param-reassign */
-  delete customProps?.isTabFocusDisabled;
-  return (
+  } return (
     <li {...customProps} className={cx('list-item', theme.className)}>
       <Element className={cx('title')}>
         <div {...attrSpread} className={sectionHeaderClassNames} ref={refCallback}>

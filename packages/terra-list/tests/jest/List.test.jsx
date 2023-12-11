@@ -81,6 +81,18 @@ it('should render with ariaDescribedBy', () => {
   expect(shallowComponent).toMatchSnapshot();
 });
 
+it('should render with ariaDescription', () => {
+  const item1 = <Item key="123" />;
+  const item2 = <Item key="124" />;
+  const item3 = <Item key="125" />;
+  const item4 = <Item key="126" />;
+  const item5 = <Item key="127" />;
+  const items = [item1, item2, item3, item4, item5];
+  const shallowComponent = shallowWithIntl(
+    <List ariaDescription="Navigate this list using the arrow keys.">{items}</List>,
+  ).dive();
+  expect(shallowComponent).toMatchSnapshot();
+});
 it('should render with ariaDetails', () => {
   const item1 = <Item key="123" />;
   const item2 = <Item key="124" />;
@@ -110,6 +122,19 @@ it('should render with ariaDescribedBy', () => {
       <List ariaDescribedBy="list-help">{items}</List>
     </div>,
   );
+  expect(shallowComponent).toMatchSnapshot();
+});
+
+it('should render with ariaDescription', () => {
+  const item1 = <Item key="123" />;
+  const item2 = <Item key="124" />;
+  const item3 = <Item key="125" />;
+  const item4 = <Item key="126" />;
+  const item5 = <Item key="127" />;
+  const items = [item1, item2, item3, item4, item5];
+  const shallowComponent = shallowWithIntl(
+    <List ariaDescription="Navigate this list using the arrow keys.">{items}</List>,
+  ).dive();
   expect(shallowComponent).toMatchSnapshot();
 });
 
