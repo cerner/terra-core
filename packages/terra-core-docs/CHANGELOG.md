@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added instruction note for invalid example in `terra-search-select` and `terra-combo-box`.
+
 ## 1.53.0 - (December 11, 2023)
 
  * Changed 
