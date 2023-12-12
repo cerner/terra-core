@@ -21,6 +21,7 @@ const InvalidExample = () => {
         <Combobox.Option value="violet" display="Violet" />
       </Combobox>
       {isInvalid && <span className={cx('error-text')}>Please select a color</span>}
+      <p>Required: Please select a color from above list</p>
     </>
   );
 };
