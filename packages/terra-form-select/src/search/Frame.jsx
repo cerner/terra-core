@@ -261,18 +261,29 @@ class Frame extends React.Component {
   handleKeyDown(event) {
     const { intl } = this.props;
     const { keyCode, target } = event;
-
     if (keyCode === KeyCode.KEY_SPACE && target !== this.input) {
       event.preventDefault();
       this.openDropdown(event);
     } else if (keyCode === KeyCode.KEY_UP || keyCode === KeyCode.KEY_DOWN) {
       event.preventDefault();
       this.openDropdown(event);
-    } else if (this.state.isOpen && keyCode === KeyCode.KEY_ESCAPE) {
+    } else if (this.state.isOpen && keyCode === KeyCode.KEY_ESCAPE && this.state.searchValue.trim() !== '') {
       this.hasEscPressed = true;
       event.stopPropagation();
       this.closeDropdown();
+    } else if (this.state.isOpen && keyCode === KeyCode.KEY_ESCAPE && !this.hasEscPressed) {
+      this.hasEscPressed = false;
+      if (this.props.resetComboboxValue) {
+        this.props.resetComboboxValue();
+      }
+      this.setState({
+        hasSearchChanged: false,
+        searchValue: '',
+      });
+      event.stopPropagation();
+      this.closeDropdown();
     } else if (!this.state.isOpen && keyCode === KeyCode.KEY_ESCAPE && this.hasEscPressed) {
+      console.log('searchValue 3', this.state.searchValue);
       this.hasEscPressed = false;
       if (this.props.resetComboboxValue) {
         this.props.resetComboboxValue();
