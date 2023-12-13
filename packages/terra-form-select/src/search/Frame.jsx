@@ -283,7 +283,6 @@ class Frame extends React.Component {
       event.stopPropagation();
       this.closeDropdown();
     } else if (!this.state.isOpen && keyCode === KeyCode.KEY_ESCAPE && this.hasEscPressed) {
-      console.log('searchValue 3', this.state.searchValue);
       this.hasEscPressed = false;
       if (this.props.resetComboboxValue) {
         this.props.resetComboboxValue();
