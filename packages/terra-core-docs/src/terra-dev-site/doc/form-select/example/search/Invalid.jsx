@@ -12,7 +12,7 @@ const InvalidExample = () => {
   };
   return (
     <>
-      <SearchSelect placeholder="Select a color" isInvalid={isInvalid} ariaLabel={(isInvalid) ? 'Please select a color' : undefined} className={cx('form-select')} onSearch={handleOnChange} onChange={handleOnChange}>
+      <SearchSelect placeholder="Select a color" required isInvalid={isInvalid} ariaLabel={(isInvalid) ? 'Please select a color' : undefined} className={cx('form-select')} onSearch={handleOnChange} onChange={handleOnChange}>
         <SearchSelect.Option value="blue" display="Blue" />
         <SearchSelect.Option value="green" display="Green" />
         <SearchSelect.Option value="purple" display="Purple" />
