@@ -199,7 +199,6 @@ class Frame extends React.Component {
     this.visuallyHiddenComponent = React.createRef();
     this.setSelectMenuRef = this.setSelectMenuRef.bind(this);
     this.shouldFocusDropdown = false;
-    this.hasEscPressed = false;
   }
 
   componentDidMount() {
@@ -272,6 +271,7 @@ class Frame extends React.Component {
   handleKeyDown(event) {
     const { intl } = this.props;
     const { keyCode, target } = event;
+    const hasValue = !!((this.state.searchValue.trim().length || this.props.value));
 
     if (keyCode === KeyCode.KEY_SPACE && target !== this.input) {
       event.preventDefault();
@@ -279,33 +279,10 @@ class Frame extends React.Component {
     } else if (keyCode === KeyCode.KEY_UP || keyCode === KeyCode.KEY_DOWN) {
       event.preventDefault();
       this.openDropdown(event);
-    } else if (this.state.isOpen && keyCode === KeyCode.KEY_ESCAPE && this.state.searchValue.trim() !== '') {
-      this.hasEscPressed = true;
+    } else if (this.state.isOpen && keyCode === KeyCode.KEY_ESCAPE) {
       event.stopPropagation();
       this.closeDropdown();
-    } else if (this.state.isOpen && keyCode === KeyCode.KEY_ESCAPE && !this.hasEscPressed) {
-      this.hasEscPressed = false;
-      if (this.props.resetComboboxValue) {
-        this.props.resetComboboxValue();
-      }
-      this.setState({
-        hasSearchChanged: false,
-        searchValue: '',
-      });
-      event.stopPropagation();
-      this.closeDropdown();
-    } else if (!this.state.isOpen && keyCode === KeyCode.KEY_ESCAPE && this.hasEscPressed) {
-      this.hasEscPressed = false;
-      if (this.props.resetComboboxValue) {
-        this.props.resetComboboxValue();
-      }
-      this.setState({
-        hasSearchChanged: false,
-        searchValue: '',
-      });
-      event.stopPropagation();
-    } else if (keyCode === KeyCode.KEY_ESCAPE && this.props.allowClear) {
-      this.hasEscPressed = false;
+    } else if (keyCode === KeyCode.KEY_ESCAPE && this.props.allowClear && hasValue) {
       if (this.props.resetComboboxValue) {
         this.props.resetComboboxValue();
       }
