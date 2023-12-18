@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+*Addded
+ *Added a new Example for `terra-list` Draggable List Item With Interactive Elements
+
+
 * Added
 
   * Added new Accessibility and Implementation guide for Terra Search Field
