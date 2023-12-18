@@ -13,7 +13,7 @@ const InvalidExample = () => {
   };
   return (
     <>
-      <Combobox placeholder="Select a color" isInvalid={isInvalid} ariaLabel={(isInvalid) ? 'Please select a color' : undefined} className={cx('form-select')} onSearch={handleOnChange} onChange={handleOnChange}>
+      <Combobox placeholder="Select a color" required isInvalid={isInvalid} ariaLabel={(isInvalid) ? 'Please select a color' : undefined} className={cx('form-select')} onSearch={handleOnChange} onChange={handleOnChange}>
         <Combobox.Option value="blue" display="Blue" />
         <Combobox.Option value="green" display="Green" />
         <Combobox.Option value="purple" display="Purple" />
@@ -21,6 +21,7 @@ const InvalidExample = () => {
         <Combobox.Option value="violet" display="Violet" />
       </Combobox>
       {isInvalid && <span className={cx('error-text')}>Please select a color</span>}
+      <p>Required: Please select a color from above list</p>
     </>
   );
 };
