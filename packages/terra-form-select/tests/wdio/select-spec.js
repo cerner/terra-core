@@ -1555,6 +1555,10 @@ Terra.describeViewports('Select', ['tiny'], () => {
       it('should display toggle closed dropdown', () => {
         Terra.validates.element('search close on outside click after toggle open', { selector: '#root' });
       });
+
+      after(() => {
+        browser.refresh(); // remove selected option
+      });
     });
 
     describe('search should close when pressing tab key to shift focus away from select', () => {
@@ -1612,7 +1616,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         Terra.validates.element('search toggle icon closes dropdown', { selector: '#root' });
       });
 
-      after(() => $('#root').click());
+      after(() => {
+        browser.refresh(); // remove selected option
+      });
     });
 
     describe('search should select an option by keyboard interaction', () => {
