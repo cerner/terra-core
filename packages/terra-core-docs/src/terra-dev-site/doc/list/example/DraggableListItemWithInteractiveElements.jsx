@@ -1,9 +1,9 @@
 import React from 'react';
 import List, { Item } from 'terra-list/lib/index';
-import { Placeholder } from '@cerner/terra-docs';
 import classNames from 'classnames/bind';
-import styles from './ListDocCommon.module.scss';
 import Checkbox from 'terra-form-checkbox';
+import styles from './ListDocCommon.module.scss';
+
 const cx = classNames.bind(styles);
 
 const ListDraggableCheckboxExample = () => (
@@ -17,34 +17,25 @@ const ListDraggableCheckboxExample = () => (
         isSelectable
         isSelected
       >
-
-<Checkbox id="defaultCheckbox_1" className={'list-item' } labelText="John Smith"/>
-{/* <Placeholder title="John Smith" className={cx('placeholder')} /> */}
-
-
+        <Checkbox id="defaultCheckbox_1" className={cx('list-item')} labelText="John Smith" />
       </Item>
       <Item
         key="2"
         isSelectable
       >
-        <Checkbox id="defaultCheckbox_2" className={'list-item' } labelText="Mary Jones"  />
-        {/* <Placeholder title="Mary Jones" className={cx('placeholder')} /> */}
-
+        <Checkbox id="defaultCheckbox_2" className={cx('list-item')} labelText="Mary Jones" />
       </Item>
       <Item
         key="3"
         isSelectable
       >
-         <Checkbox id="defaultCheckbox_3" className={'list-item' } labelText="Sam Brown"  />
-        {/* <Placeholder title="Sam Brown" className={cx('placeholder')} /> */}
-       
+        <Checkbox id="defaultCheckbox_3" className={cx('list-item')} labelText="Sam Brown" />
       </Item>
       <Item
         key="4"
         isSelectable
       >
-        <Checkbox id="defaultCheckbox_4" className={'list-item' } labelText="John David" />
-        {/* <Placeholder title="John David" className={cx('placeholder')} /> */}
+        <Checkbox id="defaultCheckbox_4" className={cx('list-item')} labelText="John David" />
       </Item>
     </List>
   </>
