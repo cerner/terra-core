@@ -1,13 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CardBody correctly applies the theme context className 1`] = `
-<div
-  className="vertical-padding horizontal-padding orion-fusion-theme"
-/>
+<Spacer
+  className="orion-fusion-theme"
+  isInlineBlock={false}
+  marginBottom="none"
+  marginLeft="none"
+  marginRight="none"
+  marginTop="none"
+  paddingBottom="medium"
+  paddingLeft="medium"
+  paddingRight="medium"
+  paddingTop="medium"
+>
+  <div
+    className="card-body"
+  />
+</Spacer>
 `;
 
 exports[`CardBody should render a default component 1`] = `
-<div
-  className="vertical-padding horizontal-padding"
-/>
+<Spacer
+  isInlineBlock={false}
+  marginBottom="none"
+  marginLeft="none"
+  marginRight="none"
+  marginTop="none"
+  paddingBottom="medium"
+  paddingLeft="medium"
+  paddingRight="medium"
+  paddingTop="medium"
+>
+  <div
+    className="card-body"
+  />
+</Spacer>
 `;

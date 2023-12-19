@@ -43,13 +43,13 @@ const CardBody = ({
   const theme = React.useContext(ThemeContext);
   const cardBodyClasses = classNames(
     cx([
-      { 'center-content': isContentCentered },
-      theme.className,
+      'card-body', { 'center-content': isContentCentered },
     ]),
     customProps.className,
   );
   return (
     <Spacer
+      className={theme.className}
       paddingTop={hasPaddingVertical ? 'medium' : undefined}
       paddingBottom={hasPaddingVertical ? 'medium' : undefined}
       paddingLeft={hasPaddingHorizontal ? 'medium' : undefined}

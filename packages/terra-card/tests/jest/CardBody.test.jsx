@@ -10,20 +10,26 @@ describe('CardBody', () => {
   });
 
   it('should contain the class to apply horizontal padding', () => {
-    expect(shallowRender.prop('className')).toContain('horizontal-padding');
+    const spacerElement = shallowRender.find('Spacer');
+    expect(spacerElement.props().paddingLeft).toBe('medium');
+    expect(spacerElement.props().paddingRight).toBe('medium');
   });
 
   it('should contain the class to apply vertical padding', () => {
-    expect(shallowRender.prop('className')).toContain('vertical-padding');
+    const spacerElement = shallowRender.find('Spacer');
+    expect(spacerElement.props().paddingTop).toBe('medium');
+    expect(spacerElement.props().paddingBottom).toBe('medium');
   });
 
   it('should contain the class to center content when prop to center content is passed', () => {
-    const contentCenteredCard = shallow(<CardBody isContentCentered />);
+    const wrapper = shallow(<CardBody isContentCentered />);
+    const contentCenteredCard = wrapper.find('.card-body');
     expect(contentCenteredCard.prop('className')).toContain('center-content');
   });
 
   it('should not contain the class to center content when prop to center content is not passed', () => {
-    expect(shallowRender.prop('className')).not.toContain('center-content');
+    const cardBody = shallowRender.find('.card-body');
+    expect(cardBody.prop('className')).not.toContain('center-content');
   });
 
   it('correctly applies the theme context className', () => {
