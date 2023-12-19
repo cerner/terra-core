@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Removed unused modules.
+
 ## 2.36.0 - (November 13, 2023)
 
 * Changed

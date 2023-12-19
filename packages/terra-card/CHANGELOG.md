@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated the Card to leverage the `terra-spacer` component to improve Terra component reuse.
+
 ## 3.46.0 - (November 13, 2023)
 
 * Changed

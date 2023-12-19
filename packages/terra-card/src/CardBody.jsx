@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
+import Spacer from '../../terra-spacer/src/Spacer';
 import styles from './CardBody.module.scss';
 
 const cx = classNamesBind.bind(styles);
@@ -42,14 +43,21 @@ const CardBody = ({
   const theme = React.useContext(ThemeContext);
   const cardBodyClasses = classNames(
     cx([
-      { 'vertical-padding': hasPaddingVertical },
-      { 'horizontal-padding': hasPaddingHorizontal },
       { 'center-content': isContentCentered },
       theme.className,
     ]),
     customProps.className,
   );
-  return <div {...customProps} className={cardBodyClasses}>{children}</div>;
+  return (
+    <Spacer
+      paddingTop={hasPaddingVertical ? 'medium' : undefined}
+      paddingBottom={hasPaddingVertical ? 'medium' : undefined}
+      paddingLeft={hasPaddingHorizontal ? 'medium' : undefined}
+      paddingRight={hasPaddingHorizontal ? 'medium' : undefined}
+    >
+      <div {...customProps} className={cardBodyClasses}>{children}</div>
+    </Spacer>
+  );
 };
 
 CardBody.propTypes = propTypes;

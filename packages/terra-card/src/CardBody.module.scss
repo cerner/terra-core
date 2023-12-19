@@ -1,18 +1,5 @@
-// Themes
-@import './orion-fusion-theme/CardBody.module';
-@import './clinical-lowlight-theme/CardBody.module';
 
 :local {
-  .vertical-padding {
-    padding-bottom: var(--terra-card-padding-bottom, 10px);
-    padding-top: var(--terra-card-padding-top, 10px);
-  }
-
-  .horizontal-padding {
-    padding-left: var(--terra-card-padding-left, 10px);
-    padding-right: var(--terra-card-padding-right, 10px);
-  }
-
   .center-content {
     text-align: center;
   }
