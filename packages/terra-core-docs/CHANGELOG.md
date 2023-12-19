@@ -2,12 +2,10 @@
 
 ## Unreleased
 
-*Addded
- *Added a new Example for `terra-list` Draggable List Item With Interactive Elements
-
+* Added
+ * Added a new example for `terra-list` with interactive elements as a list items.
 
 * Added
-
   * Added new Accessibility and Implementation guide for Terra Search Field
   * Added a test case for `terra-list` to support drag and drop in `terra-modal-manager`.
   * Added a invalid example in `terra-search-Field`.

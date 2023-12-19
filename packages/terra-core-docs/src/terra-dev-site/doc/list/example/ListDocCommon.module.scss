@@ -7,3 +7,12 @@
 .list-item {
   padding: 10px 0;
 }
+
+.list-item-focus {
+  padding: 10px 0;
+}
+
+.list-item-focus:focus {
+  outline: 2px dashed #000;
+  outline-offset: -2px;
+}

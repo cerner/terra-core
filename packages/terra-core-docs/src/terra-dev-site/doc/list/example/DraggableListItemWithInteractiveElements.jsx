@@ -40,17 +40,13 @@ const ListDraggableCheckboxExample = () => {
         </Item>
         <Item
           key="3"
-          isSelectable
-          isSelected={checkedItems.includes('Sam Brown')}
         >
-          <Checkbox id="defaultCheckbox_3" className={cx('list-item')} labelText="Sam Brown" value="Sam Brown" onChange={handleCheckboxChange} />
+          <Checkbox id="defaultCheckbox_3" className={cx('list-item-focus')} labelText="Sam Brown" value="Sam Brown" />
         </Item>
         <Item
           key="4"
-          isSelectable
-          isSelected={checkedItems.includes('John David')}
         >
-          <Checkbox id="defaultCheckbox_4" className={cx('list-item')} labelText="John David" value="John David" onChange={handleCheckboxChange} />
+          <Checkbox id="defaultCheckbox_4" className={cx('list-item-focus')} labelText="John David" value="John David" />
         </Item>
       </List>
     </>
