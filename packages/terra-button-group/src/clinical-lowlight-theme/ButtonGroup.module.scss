@@ -13,8 +13,9 @@
 
     --terra-button-group-button-focus-background-color: #1a2023;
     --terra-button-group-button-focus-border-color: #181b1d;
-    --terra-button-group-button-focus-box-shadow: 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35);
-
+    --terra-button-group-button-focus-box-shadow: none;
+    --terra-button-group-button-focus-outline: 2px dashed #b2b5b6;
+    
     --terra-button-group-button-hover-background-color: #1e272b;
     --terra-button-group-button-hover-color: #9b9b9b;
 
@@ -27,7 +28,7 @@
 
     --terra-button-group-button-selected-and-focus-background-color: #1a2023;
     --terra-button-group-button-selected-and-focus-border-color: #181b1d;
-    --terra-button-group-button-selected-and-focus-box-shadow: 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35);
+    --terra-button-group-button-selected-and-focus-box-shadow: none;
     --terra-button-group-button-selected-and-focus-color: #9b9b9b;
     
     --terra-button-group-button-selected-and-hover-background-color: #121517;

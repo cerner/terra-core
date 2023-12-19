@@ -27,11 +27,17 @@
       opacity: var(--terra-button-group-button-disabled-opacity, 0.3);
     }
 
+    &:focus {
+      outline: var(--terra-button-group-button-focus-outline, 2px dashed #000);
+      box-shadow: var(--terra-button-group-button-focus-box-shadow);
+    }
+
     &.is-focused {
       background-color: var(--terra-button-group-button-focus-background-color, #dedfe0);
       border-color: var(--terra-button-group-button-focus-border-color, #c8cacb);
       // A z-index needs to be added on focus so that the focus ring does not get hidden behind adjacent buttons
       z-index: 1000;
+      box-shadow: var(--terra-button-group-button-focus-box-shadow, none);
     }
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (hover: hover) and (pointer: fine) {
       &:hover {
@@ -51,6 +57,7 @@
       background-color: var(--terra-button-group-button-selected-and-focus-background-color, #52585b);
       border-color: var(--terra-button-group-button-selected-and-focus-border-color, #52585b);
       color: var(--terra-button-group-button-selected-and-focus-color, #fff);
+      box-shadow: var(--terra-button-group-button-selected-and-focus-box-shadow, none);
     }
 
     &.is-selected {

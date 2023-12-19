@@ -63,10 +63,6 @@
       padding: 0;
     }
 
-    &:focus {
-      outline: 2px dashed #000;
-    }
-
     &:active {
       outline: none;
       -webkit-tap-highlight-color: transparent;
