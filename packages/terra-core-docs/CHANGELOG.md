@@ -4,6 +4,7 @@
 
 * Added
   * Added instruction note for invalid example in `terra-search-select` and `terra-combo-box`.
+  * Added accessibility note for selectable button in `terra-button`
 
 ## 1.53.0 - (December 11, 2023)
 
