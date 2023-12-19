@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Removed
+   * Removed 'focus-box-shadow' property in terra-button.
+
 ## 3.72.0 - (December 11, 2023)
 
 *  Removed
