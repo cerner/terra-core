@@ -875,7 +875,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
   describe('Combobox uncontrolled free text clear by escape key press', () => {
     before(() => {
-      browser.url('/raw/tests/cerner-terra-core-docs/form-select/uncontrolled-combobox');
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/allow-clear');
     });
     it('should enter a free text entry in combobox and close list item by pressing escape and clear the free text by pressing again escape', () => {
       $('[data-terra-select] input').setValue('Black');
@@ -1556,13 +1556,8 @@ Terra.describeViewports('Select', ['tiny'], () => {
         Terra.validates.element('search close on outside click after toggle open', { selector: '#root' });
       });
 
-      it('should enter a free text entry in search select and close list item by pressing escape and clear the free text by pressing again escape', () => {
-        $('[data-terra-select] input').setValue('Black');
-        Terra.validates.element('search select displayed displayed typed text', { selector: '#root' });
-        browser.keys('Escape');
-        Terra.validates.element('search select dropdown list close by first escape', { selector: '#root' });
-        browser.keys('Escape');
-        Terra.validates.element('search select cleared entered text by second escape', { selector: '#root' });
+      after(() => {
+        browser.refresh(); // remove selected option
       });
     });
 
@@ -1621,7 +1616,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         Terra.validates.element('search toggle icon closes dropdown', { selector: '#root' });
       });
 
-      after(() => $('#root').click());
+      after(() => {
+        browser.refresh(); // remove selected option
+      });
     });
 
     describe('search should select an option by keyboard interaction', () => {
@@ -2573,6 +2570,20 @@ Terra.describeViewports('Select', ['tiny'], () => {
       expect($('[data-terra-add-option]')).toHaveTextContaining('Add "New"');
       $('[data-terra-select]').click();
       Terra.validates.element('Add New Option in combo box', { selector: '#root' });
+    });
+  });
+
+  describe('Search clears value when allowClear is set to true', () => {
+    before(() => {
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/allow-clear-search');
+    });
+    it('should enter a free text entry in search select and close list item by pressing escape and clear the free text by pressing again escape', () => {
+      $('[data-terra-select] input').setValue('Black');
+      Terra.validates.element('search select displayed displayed typed text', { selector: '#root' });
+      browser.keys('Escape');
+      Terra.validates.element('search select dropdown list close by first escape', { selector: '#root' });
+      browser.keys('Escape');
+      Terra.validates.element('search select cleared entered text by second escape', { selector: '#root' });
     });
   });
 });

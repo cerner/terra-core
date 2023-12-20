@@ -4,12 +4,13 @@
 
 * Added
  * Added a new example for `terra-list` with interactive elements as a list items.
+  * Added new test example for `terra-form-search-select`
   * Added instruction note for invalid example in `terra-search-select` and `terra-combo-box`.
   * Added accessibility note for selectable button in `terra-button`
 
 ## 1.53.0 - (December 11, 2023)
 
- * Changed 
+* Changed 
    * Reverted `Removed ariaDescription prop from list`.
 
 * Added
