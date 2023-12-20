@@ -64,7 +64,7 @@
     }
 
     &:focus {
-      outline: none;
+      outline: var(--terra-button-group-button-focus-outline, 2px dashed #000); 
     }
 
     &:active {

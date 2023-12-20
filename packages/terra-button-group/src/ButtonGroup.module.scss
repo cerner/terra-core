@@ -27,10 +27,6 @@
       opacity: var(--terra-button-group-button-disabled-opacity, 0.3);
     }
 
-    &:focus {
-      outline: var(--terra-button-group-button-focus-outline, 2px dashed #000); 
-    }
-
     &.is-focused {
       background-color: var(--terra-button-group-button-focus-background-color, #dedfe0);
       border-color: var(--terra-button-group-button-focus-border-color, #c8cacb);
