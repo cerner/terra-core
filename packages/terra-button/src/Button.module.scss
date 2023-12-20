@@ -64,7 +64,7 @@
     }
 
     &:focus {
-      outline: var(--terra-button-group-button-focus-outline, 2px dashed #000); 
+      outline: var(--terra-button-focus-outline, 2px dashed #000); 
     }
 
     &:active {
@@ -77,6 +77,11 @@
       cursor: default;
       opacity: var(--terra-button-disabled-opacity, 0.3);
       pointer-events: none; // prevent pointer interaction for anchor elements
+    }
+
+    &.is-focused {
+      border-color: var(--terra-button-focus-border-color, #000);
+      box-shadow: var(--terra-button-focus-box-shadow-neutral, none);
     }
 
     &.is-selected.is-focused {
