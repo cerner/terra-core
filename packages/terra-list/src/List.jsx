@@ -26,6 +26,16 @@ const propTypes = {
    */
   ariaDescribedBy: PropTypes.string,
   /**
+    * String that provides information about the list and how to interact
+    * with it. Maps to [aria-description](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-description).
+    * When used with the `ariaDescribedBy` prop, `ariaDescribedBy`
+    * takes precedence in defining the accessible description property.
+    * Because `aria-description` still has limited screen reader support
+    * compared to `aria-describedby`, this prop should only be used in cases where
+    * `aria-describedby` is not sufficient.
+    */
+  ariaDescription: PropTypes.string,
+  /**
    * References a visible or visually hidden text element
    * on the page that conveys information about the list
    * and how to interact with it. Maps to
@@ -103,6 +113,7 @@ const defaultProps = {
 
 const List = ({
   ariaDescribedBy,
+  ariaDescription,
   ariaDetails,
   children,
   intl,
@@ -275,6 +286,8 @@ const List = ({
       {...customProps}
       {...attrSpread}
       aria-describedby={ariaDescribedBy}
+        // eslint-disable-next-line jsx-a11y/aria-props
+      aria-description={ariaDescription}
       aria-details={ariaDetails}
       className={listClassNames}
       ref={handleListRef}
@@ -301,6 +314,8 @@ const List = ({
             {...customProps}
             {...attrSpread}
             aria-describedby={ariaDescribedBy}
+               // eslint-disable-next-line jsx-a11y/aria-props
+            aria-description={ariaDescription}
             aria-details={ariaDetails}
             className={listClassNames}
             ref={(refobj) => {

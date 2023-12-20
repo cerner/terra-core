@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 4.68.0 - (December 11, 2023)
+
+ * Changed 
+   * Reverted `Removed ariaDescription prop from list`.
+
 * Fixed
   * After drag and drop in `terra-modal-manager` the dropped list item does not receive focus.
 

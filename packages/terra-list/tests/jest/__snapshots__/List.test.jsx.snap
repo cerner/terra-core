@@ -195,6 +195,66 @@ exports[`should render with ariaDescribedBy 2`] = `
 </div>
 `;
 
+exports[`should render with ariaDescription 1`] = `
+<ul
+  aria-description="Navigate this list using the arrow keys."
+  className="list"
+  onKeyDown={[Function]}
+  role="list"
+>
+  <InjectIntl(ListItem)
+    isTabFocusDisabled={false}
+    key=".$123"
+  />
+  <InjectIntl(ListItem)
+    isTabFocusDisabled={false}
+    key=".$124"
+  />
+  <InjectIntl(ListItem)
+    isTabFocusDisabled={false}
+    key=".$125"
+  />
+  <InjectIntl(ListItem)
+    isTabFocusDisabled={false}
+    key=".$126"
+  />
+  <InjectIntl(ListItem)
+    isTabFocusDisabled={false}
+    key=".$127"
+  />
+</ul>
+`;
+
+exports[`should render with ariaDescription 2`] = `
+<ul
+  aria-description="Navigate this list using the arrow keys."
+  className="list"
+  onKeyDown={[Function]}
+  role="list"
+>
+  <InjectIntl(ListItem)
+    isTabFocusDisabled={false}
+    key=".$123"
+  />
+  <InjectIntl(ListItem)
+    isTabFocusDisabled={false}
+    key=".$124"
+  />
+  <InjectIntl(ListItem)
+    isTabFocusDisabled={false}
+    key=".$125"
+  />
+  <InjectIntl(ListItem)
+    isTabFocusDisabled={false}
+    key=".$126"
+  />
+  <InjectIntl(ListItem)
+    isTabFocusDisabled={false}
+    key=".$127"
+  />
+</ul>
+`;
+
 exports[`should render with ariaDetails 1`] = `
 <div
   intl={
