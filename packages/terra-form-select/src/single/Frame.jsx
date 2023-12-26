@@ -125,6 +125,7 @@ class Frame extends React.Component {
       isInputFocused: false,
       isPositioned: false,
       hasSearchChanged: false,
+      isSelect: false,
     };
 
     this.ariaLabel = this.ariaLabel.bind(this);
@@ -287,6 +288,7 @@ class Frame extends React.Component {
     this.setState({
       isOpen: false,
       isAbove: false,
+      isSelect: true,
     });
 
     if (this.props.onSelect) {
@@ -530,11 +532,14 @@ class Frame extends React.Component {
           {this.getDisplay(displayId, placeholderId)}
         </div>
         {this.renderToggleButton()}
-        <span
-          aria-live={SharedUtil.isSafari() ? 'polite' : 'off'}
-          className={cx('visually-hidden-component')}
-          ref={this.visuallyHiddenComponent}
-        />
+        {/* Added below condition to prevent VO from announcing selected item name twice in Safari.*/}
+        {(!this.state.isSelect || this.state.isOpen) &&
+          <span
+            aria-live={SharedUtil.isSafari() ? 'polite' : 'off'}
+            className={cx('visually-hidden-component')}
+            ref={this.visuallyHiddenComponent}
+          />
+        }
         {this.state.isOpen && (
           <Dropdown
             {...dropdownAttrs}
