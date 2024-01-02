@@ -19,7 +19,9 @@ $terra-button-neutral-color-scheme: (
   font-weight: var(--terra-button-font-weight-neutral, 400),
   hover-background-color: var(--terra-button-hover-background-color-neutral, #b9bbbc),
   hover-border-color: var(--terra-button-hover-border-color-neutral, #c8cacb),
-  hover-color: var(--terra-button-hover-color-neutral, #000)
+  hover-color: var(--terra-button-hover-color-neutral, #000),
+  outline: var(--terra-button-outline-neutral, 2px dashed #000),
+  outline-offset: var(--terra-button-outline-offset-neutral, 1px)
 );
 
 $terra-button-emphasis-color-scheme: (
@@ -42,7 +44,9 @@ $terra-button-emphasis-color-scheme: (
   font-weight: var(--terra-button-font-weight-emphasis, 400),
   hover-background-color: var(--terra-button-hover-background-color-emphasis, #0065a3),
   hover-border-color: var(--terra-button-hover-border-color-emphasis, #01639e),
-  hover-color: var(--terra-button-hover-color-emphasis, #fff)
+  hover-color: var(--terra-button-hover-color-emphasis, #fff),
+  outline: var(--terra-button-outline-emphasis, 2px dashed #000),
+  outline-offset: var(--terra-button-outline-offset-emphasis, 1px)
 );
 
 $terra-button-ghost-color-scheme: (
@@ -65,7 +69,9 @@ $terra-button-ghost-color-scheme: (
   font-weight: var(--terra-button-font-weight-ghost, 400),
   hover-background-color: var(--terra-button-hover-background-color-ghost, rgba(0, 0, 0, 0.05)),
   hover-border-color: var(--terra-button-hover-border-color-ghost, rgba(28, 31, 33, 0.25)),
-  hover-color: var(--terra-button-hover-color-ghost, #000)
+  hover-color: var(--terra-button-hover-color-ghost, #000),
+  outline: var(--terra-button-outline-ghost, 2px dashed #000),
+  outline-offset: var(--terra-button-outline-offset-ghost, 1px)
 );
 
 $terra-button-de-emphasis-color-scheme: (
@@ -88,7 +94,9 @@ $terra-button-de-emphasis-color-scheme: (
   font-weight: var(--terra-button-font-weight-de-emphasis, 400),
   hover-background-color: var(--terra-button-hover-background-color-de-emphasis, transparent),
   hover-border-color: var(--terra-button-hover-border-color-de-emphasis, transparent),
-  hover-color: var(--terra-button-hover-color-de-emphasis, #001f67)
+  hover-color: var(--terra-button-hover-color-de-emphasis, #001f67),
+  outline: var(--terra-button-outline-de-emphasis, 2px dashed #000),
+  outline-offset: var(--terra-button-outline-offset-de-emphasis, 1px)
 );
 
 $terra-button-action-color-scheme: (
@@ -111,7 +119,9 @@ $terra-button-action-color-scheme: (
   font-weight: var(--terra-button-font-weight-action, 400),
   hover-background-color: var(--terra-button-hover-background-color-action, #0065a3),
   hover-border-color: var(--terra-button-hover-border-color-action, transparent),
-  hover-color: var(--terra-button-hover-color-action, #fff)
+  hover-color: var(--terra-button-hover-color-action, #fff),
+  outline: var(--terra-button-outline-action, 2px dashed #000),
+  outline-offset: var(--terra-button-outline-offset-action, 1px)
 );
 
 $terra-button-utility-color-scheme: (
@@ -134,5 +144,7 @@ $terra-button-utility-color-scheme: (
   font-weight: var(--terra-button-font-weight-utility, 400),
   hover-background-color: var(--terra-button-hover-background-color-utility),
   hover-border-color: var(--terra-button-hover-border-color-utility, transparent),
-  hover-color: var(--terra-button-hover-color-utility, #1c1f21)
+  hover-color: var(--terra-button-hover-color-utility, #1c1f21),
+  outline: var(--terra-button-outline-utility, 2px dashed #000),
+  outline-offset: var(--terra-button-outline-offset-utility, 1px)
 );
