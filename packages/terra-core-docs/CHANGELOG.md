@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.54.0 - (January 2, 2024)
+
 * Added
  * Added a new example for `terra-list` with interactive elements as a list items.
   * Added new test example for `terra-form-search-select`
