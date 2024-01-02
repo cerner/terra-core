@@ -532,7 +532,7 @@ class Frame extends React.Component {
           {this.getDisplay(displayId, placeholderId)}
         </div>
         {this.renderToggleButton()}
-        {(!this.state.isSelect || this.state.isOpen) && <span aria-live={SharedUtil.isSafari() ? 'polite' : 'off'} className={cx('visually-hidden-component')} ref={this.visuallyHiddenComponent} />}
+        {this.state.isOpen && <span aria-live={SharedUtil.isSafari() ? 'polite' : 'off'} className={cx('visually-hidden-component')} ref={this.visuallyHiddenComponent} />}
         {this.state.isOpen && (
           <Dropdown
             {...dropdownAttrs}
