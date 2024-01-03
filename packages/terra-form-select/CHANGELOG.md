@@ -2,12 +2,15 @@
 
 ## Unreleased
 
+## 6.53.0 - (January 2, 2024)
+
+* Changed
+  * Minor dependency version bump
+
 ## 6.52.0 - (December 11, 2023)
 
 * Added
   * Added a condition to manage empty input field when the combobox is in focus.
-
-* Added
   * Added condition to announce the placeholder across all browsers.
   * Added visual focus dashed border for `terra-form-select` list options.
 
