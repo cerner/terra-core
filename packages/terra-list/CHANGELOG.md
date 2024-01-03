@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Added valid element check in clone method to avoid application crash.
+
 ## 4.68.0 - (December 11, 2023)
 
  * Changed 
