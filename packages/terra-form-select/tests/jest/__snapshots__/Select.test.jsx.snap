@@ -34,7 +34,6 @@ exports[`Select correctly applies the theme context className for default varian
   </div>
   <div
     aria-hidden="false"
-    aria-label=""
     class="display"
   >
     <div
@@ -53,10 +52,6 @@ exports[`Select correctly applies the theme context className for default varian
       class="arrow-icon"
     />
   </div>
-  <span
-    aria-live="off"
-    class="visually-hidden-component"
-  />
 </div>
 `;
 
@@ -658,7 +653,6 @@ exports[`Select should render a select with an optgroup and an option 1`] = `
   </div>
   <div
     aria-hidden="false"
-    aria-label=""
     class="display"
   >
     <div
@@ -677,10 +671,6 @@ exports[`Select should render a select with an optgroup and an option 1`] = `
       class="arrow-icon"
     />
   </div>
-  <span
-    aria-live="off"
-    class="visually-hidden-component"
-  />
 </div>
 `;
 
@@ -718,7 +708,6 @@ exports[`Select should render a select with an optgroup and multiple options 1`]
   </div>
   <div
     aria-hidden="false"
-    aria-label=""
     class="display"
   >
     <div
@@ -737,10 +726,6 @@ exports[`Select should render a select with an optgroup and multiple options 1`]
       class="arrow-icon"
     />
   </div>
-  <span
-    aria-live="off"
-    class="visually-hidden-component"
-  />
 </div>
 `;
 
@@ -778,7 +763,6 @@ exports[`Select should render a select with an option 1`] = `
   </div>
   <div
     aria-hidden="false"
-    aria-label=""
     class="display"
   >
     <div
@@ -797,10 +781,6 @@ exports[`Select should render a select with an option 1`] = `
       class="arrow-icon"
     />
   </div>
-  <span
-    aria-live="off"
-    class="visually-hidden-component"
-  />
 </div>
 `;
 
@@ -838,7 +818,6 @@ exports[`Select should render a select with multiple options 1`] = `
   </div>
   <div
     aria-hidden="false"
-    aria-label=""
     class="display"
   >
     <div
@@ -857,10 +836,6 @@ exports[`Select should render a select with multiple options 1`] = `
       class="arrow-icon"
     />
   </div>
-  <span
-    aria-live="off"
-    class="visually-hidden-component"
-  />
 </div>
 `;
 

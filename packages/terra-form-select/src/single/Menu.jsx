@@ -396,7 +396,7 @@ class Menu extends React.Component {
           variant: 'default',
           totalOptions: object.length,
           index: object.indexOf(option) + 1,
-          expandedStateText: this.state.expandedStateText,
+          expandedStateText: !(navigator.userAgent.indexOf('Edg') !== -1) ? this.state.expandedStateText : '',
           ofText: this.props.intl.formatMessage({ id: 'Terra.form.select.of' }),
           onMouseDown: () => { this.downOption = option; },
           onMouseUp: event => this.handleOptionClick(event, option),

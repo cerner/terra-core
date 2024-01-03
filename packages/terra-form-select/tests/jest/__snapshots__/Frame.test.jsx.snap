@@ -89,7 +89,6 @@ exports[`Frame correctly applies the theme context className for default variant
   </div>
   <div
     aria-hidden="false"
-    aria-label=""
     class="display"
   >
     <div
@@ -108,10 +107,6 @@ exports[`Frame correctly applies the theme context className for default variant
       class="arrow-icon"
     />
   </div>
-  <span
-    aria-live="off"
-    class="visually-hidden-component"
-  />
 </div>
 `;
 
