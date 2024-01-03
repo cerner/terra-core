@@ -125,7 +125,6 @@ class Frame extends React.Component {
       isInputFocused: false,
       isPositioned: false,
       hasSearchChanged: false,
-      isSelect: false,
     };
 
     this.ariaLabel = this.ariaLabel.bind(this);
@@ -288,7 +287,6 @@ class Frame extends React.Component {
     this.setState({
       isOpen: false,
       isAbove: false,
-      isSelect: true,
     });
 
     if (this.props.onSelect) {
@@ -508,7 +506,6 @@ class Frame extends React.Component {
         aria-label={this.mainLabel()}
         aria-haspopup={!disabled ? 'true' : undefined}
         aria-describedby={ariaDescribedBy}
-        aria-owns={this.state.isOpen ? selectMenuId : undefined}
         aria-required={required}
         className={selectClasses}
         onBlur={this.handleBlur}
@@ -528,7 +525,7 @@ class Frame extends React.Component {
           <span id={descriptionId}>{this.renderDescriptionText()}</span>
         </div>
         {/* Added aria label to avoid announcing empty group by voice over in safari browser */}
-        <div className={cx('display')} aria-label={this.ariaLabel()} aria-hidden={disabled}>
+        <div className={cx('display')} aria-hidden={disabled}>
           {this.getDisplay(displayId, placeholderId)}
         </div>
         {this.renderToggleButton()}
