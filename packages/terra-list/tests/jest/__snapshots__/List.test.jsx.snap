@@ -466,6 +466,53 @@ exports[`should render with no items 1`] = `
 />
 `;
 
+exports[`should render with sections 1`] = `
+<List
+  ariaSelectionStyle="none"
+  dividerStyle="standard"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isTabFocusDisabled={false}
+  paddingStyle="none"
+  role="listbox"
+  zIndex={6001}
+>
+  <InjectIntl(ListSection)
+    isCollapsed={true}
+    title="section 1"
+  />
+  <InjectIntl(ListSection)
+    isCollapsed={true}
+    title="section 2"
+  />
+</List>
+`;
+
 exports[`should render with single select aria attributes with ariaSelectionStyle single-select 1`] = `
 <ul
   aria-label="Terra.list.singleSelect"

@@ -2,7 +2,7 @@ import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
-import List, { Item } from '../../src/index';
+import List, { Item, Section } from '../../src/index';
 
 // Snapshot Tests
 it('should render with items', () => {
@@ -177,6 +177,21 @@ it('should render with mutli select aria attributes with ariaSelectionStyle mutl
   const shallowComponent = shallowWithIntl(
     <List ariaSelectionStyle="multi-select">{items}</List>,
   ).dive();
+  expect(shallowComponent).toMatchSnapshot();
+});
+
+it('should render with sections', () => {
+  const shallowComponent = shallowWithIntl(
+    <List dividerStyle="standard" role="listbox">
+      <Section title="section 1" isCollapsed />
+      <Section title="section 2" isCollapsed />
+      { null }
+    </List>,
+  );
+  const listSection = shallowComponent.find('ListSection');
+  const list = shallowComponent.find('List');
+  expect(listSection).toBeDefined();
+  expect(list.children().length).toBe(2);
   expect(shallowComponent).toMatchSnapshot();
 });
 
