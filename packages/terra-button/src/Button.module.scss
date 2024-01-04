@@ -68,10 +68,6 @@
       -webkit-tap-highlight-color: transparent;
     }
 
-    &.is-focused {
-      box-shadow: var(--terra-button-focus-neutral-box-shadow, none);
-    }
-
     &:disabled,
     &.is-disabled {
       cursor: default;
