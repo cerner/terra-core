@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 6.53.1 - (January 4, 2024)
+
 * Fixed
   * Fixed VoiceOver reading the selected item twice in `terra-form-single-select`.
 
