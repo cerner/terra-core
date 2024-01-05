@@ -13,6 +13,8 @@
     background-color: map-get($color-map, focus-background-color);
     border-color: map-get($color-map, focus-border-color);
     box-shadow: map-get($color-map, focus-box-shadow);
+    outline: map-get($color-map, outline);
+    outline-offset: map-get($color-map, outline-offset);
   }
 
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (hover: hover) and (pointer: fine) {
