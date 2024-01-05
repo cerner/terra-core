@@ -169,6 +169,7 @@ const ComboboxField = ({
       ariaDescriptionIds = `${selectId}-error`;
     }
   }
+  const ariaLabelValue = selectAttrs && selectAttrs['aria-label'] ? selectAttrs['aria-label'] : label;
 
   return (
     <Field
@@ -188,7 +189,7 @@ const ComboboxField = ({
     >
       <Combobox
         {...selectAttrs}
-        ariaLabel={label}
+        ariaLabel={ariaLabelValue}
         allowClear={allowClear}
         aria-describedby={ariaDescriptionIds}
         disabled={selectAttrs.disabled || disabled}

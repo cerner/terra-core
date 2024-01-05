@@ -163,6 +163,7 @@ const SingleSelectField = ({
       ariaDescriptionIds = `${selectId}-error`;
     }
   }
+  const ariaLabelValue = selectAttrs && selectAttrs['aria-label'] ? selectAttrs['aria-label'] : label;
 
   return (
     <Field
@@ -182,7 +183,7 @@ const SingleSelectField = ({
     >
       <SingleSelect
         {...selectAttrs}
-        ariaLabel={label}
+        ariaLabel={ariaLabelValue}
         allowClear={allowClear}
         aria-describedby={ariaDescriptionIds}
         disabled={selectAttrs.disabled || disabled}

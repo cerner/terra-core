@@ -143,7 +143,7 @@ const NativeSelectField = ({
       ariaDescriptionIds = `${selectId}-error`;
     }
   }
-
+  const ariaLabelValue = selectAttrs && selectAttrs['aria-label'] ? selectAttrs['aria-label'] : label;
   return (
     <Field
       {...customProps}
@@ -164,7 +164,7 @@ const NativeSelectField = ({
         attrs={selectAttrs}
         id={selectId}
         ariaDescribedBy={ariaDescriptionIds}
-        ariaLabel={label}
+        ariaLabel={ariaLabelValue}
         disabled={disabled}
         isIncomplete={isIncomplete}
         isInvalid={isInvalid}

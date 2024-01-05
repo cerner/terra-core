@@ -194,6 +194,7 @@ const TagSelectField = ({
     }
   }
 
+  const ariaLabelValue = selectAttrs && selectAttrs['aria-label'] ? selectAttrs['aria-label'] : label;
   return (
     <Field
       {...customProps}
@@ -212,7 +213,7 @@ const TagSelectField = ({
     >
       <TagSelect
         {...selectAttrs}
-        ariaLabel={label}
+        ariaLabel={ariaLabelValue}
         aria-describedby={ariaDescriptionIds}
         disabled={selectAttrs.disabled || disabled}
         inputId={selectId}

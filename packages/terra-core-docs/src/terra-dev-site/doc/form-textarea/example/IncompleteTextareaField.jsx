@@ -9,6 +9,7 @@ const DefaultTextAreaField = () => (
     required
     isIncomplete
     inputAttrs={{
+      'aria-label': 'Testing This Field',
       name: 'requiredTextarea',
     }}
   />

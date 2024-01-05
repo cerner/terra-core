@@ -214,6 +214,8 @@ const SelectField = ({
       ariaDescriptionIds = `${selectId}-error`;
     }
   }
+  const ariaLabelValue = selectAttrs && selectAttrs['aria-label'] ? selectAttrs['aria-label'] : label;
+
 
   return (
     <Field
@@ -233,7 +235,7 @@ const SelectField = ({
     >
       <Select
         {...selectAttrs}
-        ariaLabel={label}
+        ariaLabel={ariaLabelValue}
         allowClear={allowClear}
         aria-describedby={ariaDescriptionIds}
         disabled={selectAttrs.disabled || disabled}

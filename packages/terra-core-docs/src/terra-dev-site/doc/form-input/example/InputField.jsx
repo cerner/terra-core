@@ -8,6 +8,7 @@ const DefaultInputField = () => (
     help="Note: This can not be changed in the future"
     type="text"
     inputAttrs={{
+      'aria-label': 'Testing this InputField',
       name: 'profile',
     }}
   />

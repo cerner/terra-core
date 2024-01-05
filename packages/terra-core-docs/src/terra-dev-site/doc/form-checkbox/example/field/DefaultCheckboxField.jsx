@@ -27,6 +27,7 @@ class DefaultCheckboxField extends React.Component {
             error={errorMessage}
             isInvalid={this.state.isInvalid}
             legend="Do you have experience with any of the following?"
+            legendAttrs={{ 'aria-label': 'Testing this CHECK' }}
           >
             <Checkbox id="experience-indesign" name="experience[]" labelText="InDesign" />
             <Checkbox id="experience-photoshop" name="experience[]" labelText="Photoshop" />

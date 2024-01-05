@@ -193,6 +193,7 @@ const MultiSelectField = ({
       ariaDescriptionIds = `${selectId}-error`;
     }
   }
+  const ariaLabelValue = selectAttrs && selectAttrs['aria-label'] ? selectAttrs['aria-label'] : label;
 
   return (
     <Field
@@ -212,7 +213,7 @@ const MultiSelectField = ({
     >
       <MultiSelect
         {...selectAttrs}
-        ariaLabel={label}
+        ariaLabel={ariaLabelValue}
         aria-describedby={ariaDescriptionIds}
         disabled={selectAttrs.disabled || disabled}
         inputId={selectId}

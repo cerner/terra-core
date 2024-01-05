@@ -16,6 +16,7 @@ const DefaultFieldExample = () => (
     ]}
     selectId="default-example"
     className={cx('form-select')}
+    selectAttrs={{ 'aria-label': 'Testing label Text' }}
   />
 );
 
