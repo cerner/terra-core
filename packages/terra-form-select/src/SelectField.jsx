@@ -216,7 +216,6 @@ const SelectField = ({
   }
   const ariaLabelValue = selectAttrs && selectAttrs['aria-label'] ? selectAttrs['aria-label'] : label;
 
-
   return (
     <Field
       {...customProps}
