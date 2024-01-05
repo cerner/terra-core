@@ -466,7 +466,7 @@ exports[`should render with no items 1`] = `
 />
 `;
 
-exports[`should render with sections 1`] = `
+exports[`should render with null sections 1`] = `
 <List
   ariaSelectionStyle="none"
   dividerStyle="standard"
