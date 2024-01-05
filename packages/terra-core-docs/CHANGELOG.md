@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added the example changes for Custom label in `terra-form` components.
+
 ## 1.55.0 - (January 4, 2024)
 
 * Changed

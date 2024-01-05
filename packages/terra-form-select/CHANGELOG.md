@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added the fix for CustomLabel.
+
 ## 6.53.1 - (January 4, 2024)
 
 * Fixed
