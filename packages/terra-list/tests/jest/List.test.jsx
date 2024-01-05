@@ -180,7 +180,7 @@ it('should render with mutli select aria attributes with ariaSelectionStyle mutl
   expect(shallowComponent).toMatchSnapshot();
 });
 
-it('should render with sections', () => {
+it('should render with null sections', () => {
   const shallowComponent = shallowWithIntl(
     <List dividerStyle="standard" role="listbox">
       <Section title="section 1" isCollapsed />
