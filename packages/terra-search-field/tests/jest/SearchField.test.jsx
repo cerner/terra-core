@@ -159,6 +159,7 @@ describe('Auto Search', () => {
 
   afterAll(() => {
     jest.useRealTimers();
+    jest.restoreAllMocks();
   });
 
   it('triggers search after delay on text change', () => {
