@@ -159,6 +159,7 @@ describe('Auto Search', () => {
 
   afterAll(() => {
     jest.useRealTimers();
+    jest.restoreAllMocks();
   });
 
   it('triggers search after delay on text change', () => {
@@ -213,12 +214,16 @@ describe('Auto Search', () => {
   });
 
   it('uses standard timeout for search delay when not provided', () => {
+    jest.useFakeTimers();
+    jest.spyOn(global, 'setTimeout');
     const searchField = shallowWithIntl(<SearchField />).dive();
     searchField.find('.input').simulate('change', { target: {} });
     expect(setTimeout).toBeCalledWith(expect.anything(), 2500);
   });
 
   it('uses custom timeout for search delay when provided', () => {
+    jest.useFakeTimers();
+    jest.spyOn(global, 'setTimeout');
     const onSearch = jest.fn();
     const searchField = shallowWithIntl(<SearchField searchDelay={1000} onSearch={onSearch} />).dive();
 
