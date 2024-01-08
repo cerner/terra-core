@@ -276,9 +276,9 @@ const List = ({
     style: getStyleforDrag(ListItem, snapshot, provider),
   });
 
-  const clone = (object) => React.Children.map(object, (listitem) => React.cloneElement(listitem, {
+  const clone = (object) => React.Children.map(object, (listitem) => ((React.isValidElement(listitem)) ? React.cloneElement(listitem, {
     isTabFocusDisabled,
-  }));
+  }) : null));
 
   const renderListDom = () => (
     // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions, jsx-a11y/role-supports-aria-props

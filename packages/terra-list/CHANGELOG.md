@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed runtime exception that occurred when children on the terra-list were rendered with a `null` value.
+
 ## 4.68.0 - (December 11, 2023)
 
  * Changed 
