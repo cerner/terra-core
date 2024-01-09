@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Reverted changes to announce selected state in `native-select`.
+
 ## 6.53.1 - (January 4, 2024)
 
 * Fixed
