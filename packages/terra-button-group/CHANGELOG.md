@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.75.0 - (January 9, 2024)
+
 * Added
   * Added border styles to buttons within the 'terra-button-group'.
 

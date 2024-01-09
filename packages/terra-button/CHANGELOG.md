@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.73.0 - (January 9, 2024)
+
 * Added
    * Added Dotted focus border for terra-button.
 
