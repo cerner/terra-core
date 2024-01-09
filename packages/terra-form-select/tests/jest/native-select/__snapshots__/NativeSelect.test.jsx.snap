@@ -1723,7 +1723,7 @@ exports[`NativeSelect should render a NativeSelect with options and defaultValue
         </div>
       </div>
       <select
-        aria-label="test-label, Terra.form.select.selected"
+        aria-label="test-label"
         className="select"
         disabled={false}
         onBlur={[Function]}
@@ -1898,7 +1898,7 @@ exports[`NativeSelect should render a NativeSelect with options and value 1`] = 
         </div>
       </div>
       <select
-        aria-label="test-label, Terra.form.select.selected"
+        aria-label="test-label"
         className="select"
         disabled={false}
         onBlur={[Function]}

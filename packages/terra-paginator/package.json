@@ -1,6 +1,6 @@
 {
   "name": "terra-paginator",
-  "version": "2.88.0",
+  "version": "2.89.0",
   "description": "Paginator to be used for data sets of known and unknown size. Provides first, last, previous, next, and paged functionality.",
   "author": "Cerner Corporation",
   "repository": {

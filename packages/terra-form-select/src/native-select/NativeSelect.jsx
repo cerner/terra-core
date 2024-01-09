@@ -216,23 +216,9 @@ const NativeSelect = ({
     currentValue = getFirstValue(options, isFilterStyle);
     currentDisplay = getDisplay(currentValue, options, isFilterStyle, intl);
   }
-  const groupHeading = options.filter(groupValue => (groupValue.options)).find(element => element.options.find(childElement => childElement.value === currentValue));
-
-  const selectedText = intl.formatMessage({ id: 'Terra.form.select.selected' });
-
-  let displayText;
-  if (currentValue) {
-    if (groupHeading) {
-      displayText = intl.formatMessage({ id: 'Terra.form.select.optGroup' }, { text: `${groupHeading.display}, ${ariaLabel}, ${selectedText}` });
-    } else {
-      displayText = `${ariaLabel}, ${selectedText}`;
-    }
-  } else {
-    displayText = ariaLabel;
-  }
   const selectAttrs = {
     'aria-describedby': ariaDescribedBy,
-    'aria-label': displayText,
+    'aria-label': ariaLabel,
     id,
     disabled,
     'aria-invalid': isInvalid || undefined,
