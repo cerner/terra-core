@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Updated
+  * Updated Draggable list item example for selection state in `terra-list`.
+
 ## 1.55.0 - (January 4, 2024)
 
 * Changed
