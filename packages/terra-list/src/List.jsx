@@ -262,7 +262,9 @@ const List = ({
   const getStyleforDrag = (ListItem, snapshot, provider) => {
     const styleProperties = provider?.draggableProps?.style;
     if (styleProperties && snapshot && snapshot.isDragging) {
-      styleProperties.zIndex = zIndex;
+      if (styleProperties.zIndex && styleProperties.zIndex !== zIndex) {
+        styleProperties.zIndex = zIndex;
+      }
     }
     return styleProperties;
   };
