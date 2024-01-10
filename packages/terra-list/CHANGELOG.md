@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Updated
+  * Added check for the position loss issue while dragging list item for `terra-list` inside `terra-slide-panel`.
+
 ## 4.69.0 - (January 9, 2024)
 
 * Fixed
