@@ -6,6 +6,7 @@
   * Updated Draggable list item example for selection state in `terra-list`.
   * Updated `terra-cell-grid` with deprecation notice and badge.
   * Updated `terra-html-table` with deprecation notice and badge.
+  * Updated `terra-status` with deprecation notice and badge.
 
 
 ## 1.56.0 - (January 9, 2024)
