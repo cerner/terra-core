@@ -13,7 +13,7 @@ const TagDisabledExample = () => {
       <MultiSelect placeholder="Select a Fruit" value={value} isTagDisabled ariaLabel="Selected Fruits" onChange={setValue} className={cx('form-select')}>
         <MultiSelect.Option value="banana" display="Banana" />
         <MultiSelect.Option value="grape" display="Grape" />
-        <MultiSelect.Option value="pineapple" display="Pinea    pple" />
+        <MultiSelect.Option value="pineapple" display="Pineapple" />
         <MultiSelect.Option value="kiwi" display="Kiwi" />
         <MultiSelect.Option value="avocado" display="Avocado" />
         <MultiSelect.Option value="watermelon" display="Water Melon" />

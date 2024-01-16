@@ -13,7 +13,7 @@ const TagDisabledFieldExample = () => {
       <MultiSelectField placeholder="Select a Fruit" value={value} isTagDisabled ariaLabel="Selected Fruits" onChange={setValue} className={cx('form-select')}>
         <MultiSelectField.Option value="banana" display="Banana" />
         <MultiSelectField.Option value="grape" display="Grape" />
-        <MultiSelectField.Option value="pineapple" display="Pinea    pple" />
+        <MultiSelectField.Option value="pineapple" display="Pineapple" />
         <MultiSelectField.Option value="kiwi" display="Kiwi" />
         <MultiSelectField.Option value="avocado" display="Avocado" />
         <MultiSelectField.Option value="watermelon" display="Water Melon" />

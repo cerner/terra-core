@@ -200,20 +200,21 @@ class MultiSelect extends React.Component {
 
     if (this.props.isTagDisabled) {
       return (
-      <FilterPills
-        isCollapsible
-        ariaLabel={ariaLabel}
-        onRemove={this.handleDeselect}
-      >
-        {selectValue.map((pill, index) => (
-          <Pill
-            label={SelectUtil.valueDisplay(this.props, pill)}
-            id={pill}
-            key={pill}
-            metaData={{ index }}
-          />
-        ))}
-      </FilterPills>);
+        <FilterPills
+          isCollapsible
+          ariaLabel={ariaLabel}
+          onRemove={this.handleDeselect}
+        >
+          {selectValue.map((pill, index) => (
+            <Pill
+              label={SelectUtil.valueDisplay(this.props, pill)}
+              id={pill}
+              key={pill}
+              metaData={{ index }}
+            />
+          ))}
+        </FilterPills>
+      );
     }
 
     return selectValue.map(tag => (
@@ -230,7 +231,7 @@ class MultiSelect extends React.Component {
 
     const defaultPlaceholder = intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' });
     const selectPlaceholder = placeholder === undefined ? defaultPlaceholder : placeholder;
-    const ariaLabel = otherProps['ariaLabel'] || otherProps['aria-label'];
+    const ariaLabel = otherProps?.ariaLabel || otherProps['aria-label'];
 
     return (
       <Frame
