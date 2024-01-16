@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import List, { Item } from 'terra-list/lib/index';
 import { Placeholder } from '@cerner/terra-docs';
 import classNames from 'classnames/bind';
@@ -6,39 +6,78 @@ import styles from './ListDocCommon.module.scss';
 
 const cx = classNames.bind(styles);
 
-const ListDraggableExample = () => (
-  <>
-    <p id="list-help">
-      Select a patient from the list to view patient details.
-    </p>
-    <List role="listbox" ariaDescribedBy="list-help" aria-label="list of patient" isDraggable>
-      <Item
-        key="1"
-        isSelectable
-        isSelected
-      >
-        <Placeholder title="John Smith" className={cx('placeholder')} />
-      </Item>
-      <Item
-        key="2"
-        isSelectable
-      >
-        <Placeholder title="Mary Jones" className={cx('placeholder')} />
-      </Item>
-      <Item
-        key="3"
-        isSelectable
-      >
-        <Placeholder title="Sam Brown" className={cx('placeholder')} />
-      </Item>
-      <Item
-        key="4"
-        isSelectable
-      >
-        <Placeholder title="John David" className={cx('placeholder')} />
-      </Item>
-    </List>
-  </>
-);
+const ListDraggableExample = () => {
+  const mockData = [
+    {
+      title: 'John Smith',
+      key: 'unique-0',
+    },
+    {
+      title: 'Mary Jones',
+      key: 'unique-1',
+    },
+    {
+      title: 'Sam Brown',
+      key: 'unique-2',
+    },
+    {
+      title: 'John David',
+      key: 'unique-3',
+    },
+  ];
+
+  const [dataList, setDataList] = useState(mockData);
+  const [selectedKey, setselectedKey] = useState('unique-0');
+  const listNode = useRef(null);
+
+  const reorderListItems = (list, startIndex, endIndex) => {
+    const result = Array.from(list);
+    const [removed] = result.splice(startIndex, 1);
+    result.splice(endIndex, 0, removed);
+    return result;
+  };
+
+  const handleRef = (node) => {
+    listNode.current = node;
+  };
+
+  const handleDragAndDrop = (draggedElement) => {
+    const result = reorderListItems(dataList, draggedElement.source.index, draggedElement.destination.index);
+    setDataList(result);
+    setselectedKey(draggedElement.draggableId);
+  };
+
+  const handleItemSelection = (event, metaData) => {
+    event.preventDefault();
+    if (selectedKey !== metaData.key) {
+      setselectedKey(metaData.key);
+    }
+  };
+
+  const createListItem = (itemData) => (
+    <Item
+      key={itemData.key}
+      isSelectable
+      isSelected={selectedKey === itemData.key}
+      metaData={{ key: itemData.key }}
+      onSelect={handleItemSelection}
+    >
+      <Placeholder title={itemData.title} className={cx('placeholder')} />
+    </Item>
+  );
+
+  const createListItems = (data) => data.map((childItem, index) => createListItem(childItem, index));
+
+  return (
+    <>
+      <p id="list-help">
+        Select a patient from the list to view patient details.
+      </p>
+      <List role="listbox" ariaDescribedBy="list-help" aria-label="list of patient" isDraggable onDragEnd={handleDragAndDrop} refCallback={(node) => handleRef(node)}>
+        {createListItems(dataList)}
+      </List>
+    </>
+  );
+};
 
 export default ListDraggableExample;
