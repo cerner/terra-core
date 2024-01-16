@@ -58,6 +58,10 @@ const propTypes = {
    */
   isInvalid: PropTypes.bool,
   /**
+   * Whether the select displays tag for selected item. Tags are not created for selected items when set to true.
+   */
+  isTagDisabled: PropTypes.bool,
+  /**
    * Ensures touch accessibility by rendering the dropdown inline without a portal.
    *
    * Note: When enabled the dropdown will clip if rendered within a container that has an overflow: hidden ancestor.
@@ -128,6 +132,7 @@ const defaultProps = {
   dropdownAttrs: undefined,
   isIncomplete: false,
   isInvalid: false,
+  isTagDisabled: false,
   isTouchAccessible: false,
   maxSelectionCount: undefined,
   noResultContent: undefined,
@@ -399,13 +404,13 @@ class Frame extends React.Component {
     this.selectMenu = element;
   }
 
-  getDisplay(displayId, ariaDescribedBy, id) {
+  getDisplay(displayId, ariaDescribedBy, id, isTagDisabled) {
     const { searchValue, isFocused } = this.state;
     const {
       disabled, display, placeholder, required, value, inputId,
     } = this.props;
 
-    const isHidden = !isFocused && value && value.length > 0;
+    const isHidden = !isFocused && value && value.length > 0 && !isTagDisabled;
 
     const inputAttrs = {
       disabled,
@@ -432,7 +437,7 @@ class Frame extends React.Component {
           ? (
             <li>
               <ul id={displayId} className={cx('display-content')}>
-                {display}
+                {!isTagDisabled && display}
                 <li className={cx('visually-hidden-component')}>
                   <FormattedMessage id="Terra.form.select.selected" />
                 </li>
@@ -669,6 +674,7 @@ class Frame extends React.Component {
       inputId,
       intl,
       isIncomplete,
+      isTagDisabled,
       isTouchAccessible,
       isInvalid,
       maxHeight,
@@ -725,43 +731,45 @@ class Frame extends React.Component {
     };
 
     return (
-      <div
-        {...customProps}
-        role={this.role()}
-        data-terra-select-combobox
-        aria-controls={!disabled && this.state.isOpen ? this.menuId : undefined}
-        aria-disabled={!!disabled}
-        aria-expanded={!!disabled && !!this.state.isOpen}
-        aria-haspopup={!disabled ? 'true' : undefined}
-        aria-describedby={ariaDescribedBy}
-        aria-owns={this.state.isOpen ? this.menuId : undefined}
-        className={selectClasses}
-        onBlur={this.handleBlur}
-        onClick={this.handleClick}
-        onFocus={this.handleFocus}
-        onKeyDown={this.handleKeyDown}
-        onMouseDown={Frame.handleMouseDown}
-        onTouchStart={this.handleTouchStart}
-        tabIndex="-1"
-        ref={(select) => { this.select = select; }}
-      >
-        <div className={cx('visually-hidden-component')} hidden>
-          {/* Hidden attribute used to prevent VoiceOver on desktop from announcing this content twice */}
-          <span id={labelId}>{this.ariaLabel()}</span>
-          <span id={descriptionId}>{this.renderDescriptionText()}</span>
-        </div>
-        <div className={cx('display')}>
-          {this.getDisplay(displayId, ariaDescribedBy, this.menuId)}
-        </div>
-        {this.renderToggleButton()}
-        <span
-          aria-atomic="true"
-          aria-live="assertive"
-          aria-relevant="additions text"
-          className={cx('visually-hidden-component')}
-          ref={this.visuallyHiddenComponent}
-        />
-        {this.state.isOpen
+      <>
+        {isTagDisabled && (display)}
+        <div
+          {...customProps}
+          role={this.role()}
+          data-terra-select-combobox
+          aria-controls={!disabled && this.state.isOpen ? this.menuId : undefined}
+          aria-disabled={!!disabled}
+          aria-expanded={!!disabled && !!this.state.isOpen}
+          aria-haspopup={!disabled ? 'true' : undefined}
+          aria-describedby={ariaDescribedBy}
+          aria-owns={this.state.isOpen ? this.menuId : undefined}
+          className={selectClasses}
+          onBlur={this.handleBlur}
+          onClick={this.handleClick}
+          onFocus={this.handleFocus}
+          onKeyDown={this.handleKeyDown}
+          onMouseDown={Frame.handleMouseDown}
+          onTouchStart={this.handleTouchStart}
+          tabIndex="-1"
+          ref={(select) => { this.select = select; }}
+        >
+          <div className={cx('visually-hidden-component')} hidden>
+            {/* Hidden attribute used to prevent VoiceOver on desktop from announcing this content twice */}
+            <span id={labelId}>{this.ariaLabel()}</span>
+            <span id={descriptionId}>{this.renderDescriptionText()}</span>
+          </div>
+          <div className={cx('display')}>
+            {this.getDisplay(displayId, ariaDescribedBy, this.menuId, isTagDisabled)}
+          </div>
+          {this.renderToggleButton()}
+          <span
+            aria-atomic="true"
+            aria-live="assertive"
+            aria-relevant="additions text"
+            className={cx('visually-hidden-component')}
+            ref={this.visuallyHiddenComponent}
+          />
+          {this.state.isOpen
           && (
           <Dropdown
             {...dropdownAttrs}
@@ -779,7 +787,8 @@ class Frame extends React.Component {
             </Menu>
           </Dropdown>
           )}
-      </div>
+        </div>
+      </>
     );
   }
 }

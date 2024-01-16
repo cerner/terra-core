@@ -350,6 +350,7 @@ exports[`Select should render a disabled multiple variant 1`] = `
   }
   isIncomplete={false}
   isInvalid={false}
+  isTagDisabled={false}
   isTouchAccessible={false}
   required={false}
 />
@@ -462,6 +463,7 @@ exports[`Select should render a multiple variant 1`] = `
   }
   isIncomplete={false}
   isInvalid={false}
+  isTagDisabled={false}
   isTouchAccessible={false}
   required={false}
 />
@@ -499,6 +501,7 @@ exports[`Select should render a multiple variant with a placeholder 1`] = `
   }
   isIncomplete={false}
   isInvalid={false}
+  isTagDisabled={false}
   isTouchAccessible={false}
   placeholder="Placeholder"
   required={false}
@@ -1021,6 +1024,7 @@ exports[`Select should render an incomplete multiple variant 1`] = `
   }
   isIncomplete={true}
   isInvalid={false}
+  isTagDisabled={false}
   isTouchAccessible={false}
   required={false}
 />
@@ -1208,6 +1212,7 @@ exports[`Select should render an invalid multiple variant 1`] = `
   }
   isIncomplete={false}
   isInvalid={true}
+  isTagDisabled={false}
   isTouchAccessible={false}
   required={false}
 />

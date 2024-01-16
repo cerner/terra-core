@@ -24,12 +24,17 @@ const propTypes = {
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 const Tag = ({ children, onDeselect, value }) => {
   const theme = React.useContext(ThemeContext);
+
+  const handleOnRemove = () => {
+    onDeselect(value);
+  };
+
   return (
     <li className={cx('tag', theme.className)}>
       <span className={cx('display')}>
         {children}
       </span>
-      <span className={cx('deselect')} onClick={() => { onDeselect(value); }} role="presentation">
+      <span className={cx('deselect')} onClick={handleOnRemove} role="presentation">
         <span className={cx('icon')} />
       </span>
     </li>

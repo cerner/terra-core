@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl } from 'react-intl';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import FilterPills, { Pill } from '@cerner/terra-pills';
 import Frame from './multiple/Frame';
 import Option from './shared/_Option';
 import OptGroup from './shared/_OptGroup';
@@ -38,6 +40,10 @@ const propTypes = {
    * Whether the select displays as Invalid. Use when value does not meet validation pattern.
    */
   isInvalid: PropTypes.bool,
+  /**
+   * Whether the select displays tag for selected item. Tags are not created for selected items when set to true.
+   */
+  isTagDisabled: PropTypes.bool,
   /**
    * Ensures touch accessibility by rendering the dropdown inline without a portal.
    *
@@ -115,6 +121,7 @@ const defaultProps = {
   dropdownAttrs: undefined,
   isIncomplete: false,
   isInvalid: false,
+  isTagDisabled: false,
   isTouchAccessible: false,
   maxSelectionCount: undefined,
   noResultContent: undefined,
@@ -188,8 +195,26 @@ class MultiSelect extends React.Component {
   /**
    * Returns the appropriate variant display
    */
-  display() {
+  display(ariaLabel) {
     const selectValue = SelectUtil.value(this.props, this.state);
+
+    if (this.props.isTagDisabled) {
+      return (
+      <FilterPills
+        isCollapsible
+        ariaLabel={ariaLabel}
+        onRemove={this.handleDeselect}
+      >
+        {selectValue.map((pill, index) => (
+          <Pill
+            label={SelectUtil.valueDisplay(this.props, pill)}
+            id={pill}
+            key={pill}
+            metaData={{ index }}
+          />
+        ))}
+      </FilterPills>);
+    }
 
     return selectValue.map(tag => (
       <Tag value={tag} key={tag} onDeselect={this.handleDeselect}>
@@ -205,13 +230,14 @@ class MultiSelect extends React.Component {
 
     const defaultPlaceholder = intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' });
     const selectPlaceholder = placeholder === undefined ? defaultPlaceholder : placeholder;
+    const ariaLabel = otherProps['ariaLabel'] || otherProps['aria-label'];
 
     return (
       <Frame
         {...otherProps}
         data-terra-select
         value={SelectUtil.value(this.props, this.state)}
-        display={this.display()}
+        display={this.display(ariaLabel)}
         onDeselect={this.handleDeselect}
         onSelect={this.handleSelect}
         placeholder={selectPlaceholder}

@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added tag disabled examples for `terra-form-multi-select` and `terra-form-multi-select-field`.
+
 ## 1.56.0 - (January 9, 2024)
 
 * Changed

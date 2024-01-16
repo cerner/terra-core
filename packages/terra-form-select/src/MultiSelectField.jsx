@@ -57,6 +57,10 @@ const propTypes = {
    */
   isLabelHidden: PropTypes.bool,
   /**
+   * Whether the select displays tag for selected item. Tags are not created for selected items when set to true.
+   */
+  isTagDisabled: PropTypes.bool,
+  /**
    * Ensures touch accessibility by rendering the dropdown inline without a portal.
    *
    * Note: When enabled the dropdown will clip if rendered within a container that has an overflow: hidden ancestor.
@@ -123,6 +127,7 @@ const defaultProps = {
   isInline: false,
   isInvalid: false,
   isLabelHidden: false,
+  isTagDisabled: false,
   isTouchAccessible: false,
   labelAttrs: {},
   maxHeight: undefined,
@@ -148,6 +153,7 @@ const MultiSelectField = ({
   isInline,
   isInvalid,
   isLabelHidden,
+  isTagDisabled,
   isTouchAccessible,
   label,
   labelAttrs,
@@ -218,6 +224,7 @@ const MultiSelectField = ({
         inputId={selectId}
         isIncomplete={isIncomplete}
         isInvalid={isInvalid}
+        isTagDisabled={isTagDisabled}
         isTouchAccessible={isTouchAccessible}
         defaultValue={defaultValue}
         maxHeight={maxHeight || selectAttrs.maxHeight}

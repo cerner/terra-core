@@ -119,6 +119,7 @@ exports[`should render the selectId to the input field in MultiSelectField compo
     inputId="select-id"
     isIncomplete={false}
     isInvalid={false}
+    isTagDisabled={false}
     isTouchAccessible={false}
     key=".0"
     required={false}

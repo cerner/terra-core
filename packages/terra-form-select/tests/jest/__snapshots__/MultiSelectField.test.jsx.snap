@@ -29,6 +29,7 @@ exports[`should render MultiSelectField component with max height 1`] = `
     inputId="select-id"
     isIncomplete={false}
     isInvalid={false}
+    isTagDisabled={false}
     isTouchAccessible={false}
     key=".0"
     maxHeight={100}

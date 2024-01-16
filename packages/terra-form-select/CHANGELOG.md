@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added `isTagDisabled` prop to disable tag for selected items.
+
 ## 6.54.0 - (January 9, 2024)
 
 * Changed

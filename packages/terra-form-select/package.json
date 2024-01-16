@@ -23,6 +23,7 @@
   ],
   "main": "lib/Select.js",
   "dependencies": {
+    "@cerner/terra-pills": "^1.16.1",
     "classnames": "^2.2.5",
     "keycode-js": "^3.1.0",
     "lodash.uniqueid": "^4.0.1",
