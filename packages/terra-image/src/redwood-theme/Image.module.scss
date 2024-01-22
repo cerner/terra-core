@@ -1,0 +1,16 @@
+:local {
+  .redwood-theme {
+    --terra-image-rounded-border-radius: var(--image-rounded-border-radius);
+    --terra-image-circle-border-radius: var(--image-circle-border-radius);
+    --terra-image-thumbnail-background-color: var(--image-thumbnail-background-color);
+    --terra-image-thumbnail-border-color: var(--image-thumbnail-border-color);
+    --terra-image-thumbnail-border-radius: var(--image-thumbnail-border-radius);
+    --terra-image-thumbnail-border-style: solid;
+    --terra-image-thumbnail-border-width: var(--image-thumbmnail-border-width);
+    --terra-image-thumbnail-padding-bottom: var(--image-thumbnail-bottom-padding);
+    --terra-image-thumbnail-padding-left: var(--image-thumbnail-left-padding);
+    --terra-image-thumbnail-padding-right: var(--image-thumbnail-right-padding);
+    --terra-image-thumbnail-padding-top: var(--image-thumbnail-top-padding);
+  }
+}
+

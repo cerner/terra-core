@@ -1,0 +1,32 @@
+:local {
+  .redwood-theme {
+    --terra-overlay-light-background: var(--overlay-subtle-background-color);
+    --terra-overlay-light-background-image: none;
+    --terra-overlay-light-content-color: var(--overlay-subtle-text-color);
+    --terra-overlay-light-content-text-shadow: none;
+    --terra-overlay-dark-background: var(--overlay-strong-background-color);
+    --terra-overlay-dark-background-image: none;
+    --terra-overlay-dark-content-color: var(--overlay-strong-text-color);
+    --terra-overlay-dark-content-text-shadow: none;
+    --terra-overlay-content-color: inherit;
+    --terra-overlay-content-padding-bottom: 0.5rem;
+    --terra-overlay-content-padding-left: 0.5rem;
+    --terra-overlay-content-padding-right: 0.5rem;
+    --terra-overlay-content-padding-top: 0.5rem;
+
+    &.overlay {
+      .content {
+        font-size: var(--overlay-font-size);
+      }
+
+      .icon {
+        height: var(--overlay-icon-height) !important;
+        width: var(--overlay-icon-width) !important;
+      }
+
+      .message {
+        padding: var(--overlay-vertical-gap-spacing);
+      }
+    }
+  }
+}
