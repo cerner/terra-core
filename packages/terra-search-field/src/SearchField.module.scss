@@ -177,4 +177,9 @@
       color: var(--terra-search-field-input-focus-color);
     }
   }
+  @media (max-width: 320px), (max-height: 256px) {
+    .search-field {
+         width: var(--terra-search-field-resize-max-width, 14.5rem);
+    }
+  }
 }
