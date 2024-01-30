@@ -268,7 +268,6 @@ class SearchField extends React.Component {
     );
 
     const inputAriaLabelText = inputAttributes && Object.prototype.hasOwnProperty.call(inputAttributes, 'aria-label') ? inputAttributes['aria-label'] : intl.formatMessage({ id: 'Terra.searchField.search' });
-    const groupNameValue = groupName === 'Search' ? intl.formatMessage({ id: 'Terra.searchField.search' }) : groupName;
     const buttonText = intl.formatMessage({ id: 'Terra.searchField.submit-search' });
     const clearText = intl.formatMessage({ id: 'Terra.searchField.clear' });
     const additionalInputAttributes = { ...inputAttributes };
@@ -306,9 +305,10 @@ class SearchField extends React.Component {
         && (
         <label className={cx('label')}>{groupName}</label>
         )}
-        <div role="search" className={cx('search-role-container')} aria-label={intl.formatMessage({ id: 'Terra.searchField.search' })}>
-          <div role="group" aria-label={groupNameValue} {...customProps} className={searchFieldClassNames}>
+        <div className={cx('search-role-container')}>
+          <div {...customProps} className={searchFieldClassNames}>
             <div className={cx('input-group')}>
+              {/* <p id="test">minimum Length is 5</p> */}
               <input
                 {...additionalInputAttributes}
                 className={inputClass}
@@ -321,6 +321,7 @@ class SearchField extends React.Component {
                 onKeyDown={this.handleKeyDown}
                 onInput={this.handleInput}
                 ref={this.setInputRef}
+                aria-describedby="test"
               />
               {clearButton}
             </div>
