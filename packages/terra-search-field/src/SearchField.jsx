@@ -104,7 +104,7 @@ const propTypes = {
 const defaultProps = {
   defaultValue: undefined,
   disableAutoSearch: false,
-  groupName: 'Search',
+  groupName: 'Search a clinic',
   isBlock: false,
   isDisabled: false,
   isLabelVisible: false,
@@ -267,7 +267,7 @@ class SearchField extends React.Component {
       customProps.className,
     );
 
-    const inputAriaLabelText = inputAttributes && Object.prototype.hasOwnProperty.call(inputAttributes, 'aria-label') ? inputAttributes['aria-label'] : intl.formatMessage({ id: 'Terra.searchField.search' });
+    const inputAriaLabelText = inputAttributes && Object.prototype.hasOwnProperty.call(inputAttributes, 'aria-label') ? inputAttributes['aria-label'] : groupName;
     const buttonText = intl.formatMessage({ id: 'Terra.searchField.submit-search' });
     const clearText = intl.formatMessage({ id: 'Terra.searchField.clear' });
     const additionalInputAttributes = { ...inputAttributes };
@@ -306,11 +306,12 @@ class SearchField extends React.Component {
         <label className={cx('label')}>{groupName}</label>
         )}
         <div className={cx('search-role-container')}>
-          <div {...customProps} className={searchFieldClassNames}>
+          <div aria-label={intl.formatMessage({ id: 'Terra.searchField.search' })} {...customProps} className={searchFieldClassNames}>
             <div className={cx('input-group')}>
               <input
                 {...additionalInputAttributes}
                 className={inputClass}
+                type="search"
                 placeholder={placeholder}
                 onChange={this.handleTextChange}
                 disabled={isDisabled}

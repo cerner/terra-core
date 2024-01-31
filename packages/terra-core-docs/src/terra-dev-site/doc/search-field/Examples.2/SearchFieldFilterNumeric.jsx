@@ -17,7 +17,7 @@ const SearchFieldFilterNumeric = () => {
   };
 
   return (
-    <SearchField onSearch={handleSearchText} onChange={handleChange} value={state.searchText} />
+    <SearchField onSearch={handleSearchText} onChange={handleChange} value={state.searchText} isLabelVisible />
   );
 };
 

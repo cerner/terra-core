@@ -38,7 +38,7 @@ exports[`Snapshots correctly applies the theme context className 1`] = `
   <InjectIntl(SearchField)>
     <SearchField
       disableAutoSearch={false}
-      groupName="Search"
+      groupName="Search a clinic"
       intl={
         Object {
           "defaultFormats": Object {},
@@ -80,6 +80,7 @@ exports[`Snapshots correctly applies the theme context className 1`] = `
           className="search-role-container"
         >
           <div
+            aria-label="Terra.searchField.search"
             className="search-field"
           >
             <div
@@ -87,13 +88,14 @@ exports[`Snapshots correctly applies the theme context className 1`] = `
             >
               <input
                 aria-disabled={false}
-                aria-label="Terra.searchField.search"
+                aria-label="Search a clinic"
                 className="input"
                 disabled={false}
                 onChange={[Function]}
                 onInput={[Function]}
                 onKeyDown={[Function]}
                 placeholder=""
+                type="search"
               />
             </div>
             <Button
@@ -186,16 +188,17 @@ exports[`Snapshots correctly applies the theme context className 1`] = `
 exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Input component 1`] = `
 <SearchField
   disableAutoSearch={false}
-  groupName="Search"
+  groupName="Search a clinic"
   inputRefCallback={
     [MockFunction] {
       "calls": Array [
         Array [
           <input
             aria-disabled="false"
-            aria-label="Terra.searchField.search"
+            aria-label="Search a clinic"
             class="input"
             placeholder=""
+            type="search"
             value=""
           />,
         ],
@@ -249,6 +252,7 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
       className="search-role-container"
     >
       <div
+        aria-label="Terra.searchField.search"
         className="search-field"
       >
         <div
@@ -256,13 +260,14 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
         >
           <input
             aria-disabled={false}
-            aria-label="Terra.searchField.search"
+            aria-label="Search a clinic"
             className="input"
             disabled={false}
             onChange={[Function]}
             onInput={[Function]}
             onKeyDown={[Function]}
             placeholder=""
+            type="search"
           />
         </div>
         <Button
@@ -358,6 +363,7 @@ exports[`Snapshots renders a basic search field 1`] = `
     className="search-role-container"
   >
     <div
+      aria-label="Terra.searchField.search"
       className="search-field"
     >
       <div
@@ -365,13 +371,14 @@ exports[`Snapshots renders a basic search field 1`] = `
       >
         <input
           aria-disabled={false}
-          aria-label="Terra.searchField.search"
+          aria-label="Search a clinic"
           className="input"
           disabled={false}
           onChange={[Function]}
           onInput={[Function]}
           onKeyDown={[Function]}
           placeholder=""
+          type="search"
         />
       </div>
       <Button
@@ -408,6 +415,7 @@ exports[`Snapshots renders a disabled search field with a value 1`] = `
     className="search-role-container"
   >
     <div
+      aria-label="Terra.searchField.search"
       className="search-field"
     >
       <div
@@ -415,13 +423,14 @@ exports[`Snapshots renders a disabled search field with a value 1`] = `
       >
         <input
           aria-disabled={true}
-          aria-label="Terra.searchField.search"
+          aria-label="Search a clinic"
           className="input"
           disabled={true}
           onChange={[Function]}
           onInput={[Function]}
           onKeyDown={[Function]}
           placeholder=""
+          type="search"
         />
       </div>
       <Button
@@ -458,6 +467,7 @@ exports[`Snapshots renders a search field such that custom styles are applied 1`
     className="search-role-container"
   >
     <div
+      aria-label="Terra.searchField.search"
       className="search-field"
     >
       <div
@@ -465,13 +475,14 @@ exports[`Snapshots renders a search field such that custom styles are applied 1`
       >
         <input
           aria-disabled={false}
-          aria-label="Terra.searchField.search"
+          aria-label="Search a clinic"
           className="input test-class"
           disabled={false}
           onChange={[Function]}
           onInput={[Function]}
           onKeyDown={[Function]}
           placeholder=""
+          type="search"
         />
       </div>
       <Button
@@ -508,6 +519,7 @@ exports[`Snapshots renders a search field that displays as a block to fill its c
     className="search-role-container"
   >
     <div
+      aria-label="Terra.searchField.search"
       className="search-field block"
     >
       <div
@@ -515,13 +527,14 @@ exports[`Snapshots renders a search field that displays as a block to fill its c
       >
         <input
           aria-disabled={false}
-          aria-label="Terra.searchField.search"
+          aria-label="Search a clinic"
           className="input"
           disabled={false}
           onChange={[Function]}
           onInput={[Function]}
           onKeyDown={[Function]}
           placeholder=""
+          type="search"
         />
         <Button
           className="clear"
@@ -576,6 +589,7 @@ exports[`Snapshots renders a search field with a defaulted value 1`] = `
     className="search-role-container"
   >
     <div
+      aria-label="Terra.searchField.search"
       className="search-field"
     >
       <div
@@ -583,7 +597,7 @@ exports[`Snapshots renders a search field with a defaulted value 1`] = `
       >
         <input
           aria-disabled={false}
-          aria-label="Terra.searchField.search"
+          aria-label="Search a clinic"
           className="input"
           defaultValue="Default"
           disabled={false}
@@ -591,6 +605,7 @@ exports[`Snapshots renders a search field with a defaulted value 1`] = `
           onInput={[Function]}
           onKeyDown={[Function]}
           placeholder=""
+          type="search"
         />
         <Button
           className="clear"
@@ -650,6 +665,7 @@ exports[`Snapshots renders a search field with a label 1`] = `
     className="search-role-container"
   >
     <div
+      aria-label="Terra.searchField.search"
       className="search-field"
     >
       <div
@@ -657,13 +673,14 @@ exports[`Snapshots renders a search field with a label 1`] = `
       >
         <input
           aria-disabled={false}
-          aria-label="Terra.searchField.search"
+          aria-label="TestGroup"
           className="input"
           disabled={false}
           onChange={[Function]}
           onInput={[Function]}
           onKeyDown={[Function]}
           placeholder=""
+          type="search"
         />
       </div>
       <Button
@@ -700,6 +717,7 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
     className="search-role-container"
   >
     <div
+      aria-label="Terra.searchField.search"
       className="search-field"
     >
       <div
@@ -707,13 +725,14 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
       >
         <input
           aria-disabled={false}
-          aria-label="Terra.searchField.search"
+          aria-label="Search a clinic"
           className="input"
           disabled={false}
           onChange={[Function]}
           onInput={[Function]}
           onKeyDown={[Function]}
           placeholder="Test"
+          type="search"
         />
       </div>
       <Button
@@ -750,6 +769,7 @@ exports[`Snapshots renders a search field with a value 1`] = `
     className="search-role-container"
   >
     <div
+      aria-label="Terra.searchField.search"
       className="search-field"
     >
       <div
@@ -757,13 +777,14 @@ exports[`Snapshots renders a search field with a value 1`] = `
       >
         <input
           aria-disabled={false}
-          aria-label="Terra.searchField.search"
+          aria-label="Search a clinic"
           className="input"
           disabled={false}
           onChange={[Function]}
           onInput={[Function]}
           onKeyDown={[Function]}
           placeholder=""
+          type="search"
           value="Test"
         />
         <Button
@@ -819,6 +840,7 @@ exports[`Snapshots renders a search field with an aria-label 1`] = `
     className="search-role-container"
   >
     <div
+      aria-label="Terra.searchField.search"
       className="search-field"
     >
       <div
@@ -833,6 +855,7 @@ exports[`Snapshots renders a search field with an aria-label 1`] = `
           onInput={[Function]}
           onKeyDown={[Function]}
           placeholder=""
+          type="search"
         />
       </div>
       <Button
@@ -869,6 +892,7 @@ exports[`Snapshots renders a search field with an aria-label using prop 1`] = `
     className="search-role-container"
   >
     <div
+      aria-label="Terra.searchField.search"
       className="search-field"
     >
       <div
@@ -876,7 +900,7 @@ exports[`Snapshots renders a search field with an aria-label using prop 1`] = `
       >
         <input
           aria-disabled={false}
-          aria-label="Terra.searchField.search"
+          aria-label="Search a clinic"
           ariaLabel="Search Field"
           className="input"
           disabled={false}
@@ -884,6 +908,7 @@ exports[`Snapshots renders a search field with an aria-label using prop 1`] = `
           onInput={[Function]}
           onKeyDown={[Function]}
           placeholder=""
+          type="search"
         />
       </div>
       <Button

@@ -3,6 +3,7 @@ import SearchField from 'terra-search-field';
 
 const SearchFieldDisableAutoFormatAttrs = () => (
   <SearchField
+    isLabelVisible
     inputAttributes={{
       autoCorrect: 'off',
       autoComplete: 'off',

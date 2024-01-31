@@ -56,6 +56,7 @@ const SearchFieldProgrammaticSet = () => {
         minimumSearchTextLength={3}
         value={text}
         inputRefCallback={(ref) => { inputRef.current = ref; }}
+        isLabelVisible
       />
       <div id="search-callback-text">
         {message}

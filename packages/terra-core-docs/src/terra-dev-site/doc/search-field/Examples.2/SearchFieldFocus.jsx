@@ -15,6 +15,7 @@ const SearchFieldFocus = () => {
     <div>
       <Button text="Focus Me" onClick={handleButtonClick} id="search-field-focus-button" />
       <SearchField
+        isLabelVisible
         inputRefCallback={(inputRef) => { searchElement.current = inputRef; }}
       />
     </div>
