@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added visual labels for `terra-search-field` examples. 
+
 * Updated
   * Updated Draggable list item example for selection state in `terra-list`.
   * Updated `terra-html-table` documentation with deprecation notice and badge.
