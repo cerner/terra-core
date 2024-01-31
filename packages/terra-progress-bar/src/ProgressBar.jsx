@@ -33,6 +33,9 @@ const propTypes = {
   /**
    * Value passed to aria-valuetext for accessibility. You can view more about this attribute
    * at https://www.w3.org/WAI/PF/aria/states_and_properties#aria-valuetext.
+   * 
+   * ![IMPORTANT](https://badgen.net/badge//IMPORTANT/blue?icon=github)
+   * aria-valuetext attribute defines a text alternative of aria-valuenow attribute for a Progress Bar Component, that can be easily perceived by all AT users.
    */
   valueText: PropTypes.string,
   /**
