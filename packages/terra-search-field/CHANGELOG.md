@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Fixed
-  * Removed unnecessary aria labels and roles to fix redundant announcement of serach group issue.
+  * Removed unnecessary aria labels and roles to fix redundant announcement of search group issue.
 
 ## 3.99.0 - (January 9, 2024)
 

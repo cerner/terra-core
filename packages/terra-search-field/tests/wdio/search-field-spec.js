@@ -21,7 +21,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     });
 
     it('should display Search Field with scrolled text', () => {
-      expect($('input').isFocused()).toBeTruthy();
+      expect($('input[type="search"]').isFocused()).toBeTruthy();
       Terra.validates.element('default scrolled text', { mismatchTolerance: 0.1 });
     });
   });
