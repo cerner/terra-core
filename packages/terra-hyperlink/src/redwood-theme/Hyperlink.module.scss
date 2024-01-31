@@ -1,0 +1,47 @@
+@import 'terra-theme-properties/lib/scss/redwood-mixins';
+
+:local {
+  .redwood-theme {
+    --terra-hyperlink-color: var(--link-color);
+    --terra-hyperlink-text-decoration: var(--hyperlink-text-decoration);
+    --terra-hyperlink-visited-color: var(--link-visited-color);
+    --terra-hyperlink-visited-focus-color: var(--link-visited-color);
+    --terra-hyperlink-hover-background-color: transparent;
+    --terra-hyperlink-hover-color: var(--link-hover-color);
+    --terra-hyperlink-hover-text-decoration: underline;
+    --terra-hyperlink-focus-background-color: var(--hyperlink-text-decoration);
+    --terra-hyperlink-focus-border-radius: 0;
+    --terra-hyperlink-focus-box-shadow: none;
+    --terra-hyperlink-focus-color: var(--link-color);
+    --terra-hyperlink-focus-text-decoration: var(--hyperlink-text-decoration);
+    --terra-hyperlink-active-color: var(--link-active-color);
+    --terra-hyperlink-disabled-color: var(--link-disabled-color);
+    --terra-hyperlink-disabled-text-decoration: none;
+    --terra-hyperlink-underline-hidden-color: var(--link-color);
+    --terra-hyperlink-underline-hidden-focus-color: var(--link-color);
+    --terra-hyperlink-underline-hidden-hover-color: var(--link-hover-color);
+    --terra-hyperlink-underline-hidden-visited-color: var(--link-visited-color);
+    --terra-hyperlink-underline-hidden-visited-focus-color: var(--link-visited-color);
+    --terra-hyperlink-icon-font-size: var(--hyperlink-icon-size);
+    --terra-hyperlink-icon-margin-left: var(--hyperlink-horizontal-gap-padding);
+    --terra-hyperlink-audio-icon-font-size: var(--hyperlink-icon-size);
+    --terra-hyperlink-document-icon-margin-left:  var(--hyperlink-horizontal-gap-padding);
+    --terra-hyperlink-external-icon-bottom: 0;
+    --terra-hyperlink-external-icon-font-size: var(--hyperlink-icon-size);
+    --terra-hyperlink-external-icon-margin-left:  var(--hyperlink-horizontal-gap-padding);
+    --terra-hyperlink-image-icon-bottom: -0.08333em;
+    --terra-hyperlink-video-icon-bottom: -0.08333em;
+
+    &.hyperlink {
+      font-size: var(--hyperlink-font-size);
+      padding-bottom: var(--hyperlink-padding-bottom);
+      padding-left: var(--hyperlink-padding-left);
+      padding-right: var(--hyperlink-padding-right);
+      padding-top: var(--hyperlink-padding-top);
+
+      &:focus {
+        @include terra-focus-indicator();
+      }
+    }
+  }
+}

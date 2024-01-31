@@ -1,0 +1,9 @@
+:global {
+  .redwood-theme {
+    --terra-base-background-color: var(--base-background-color);
+    --terra-base-font-family: var(--base-font-family);
+    --terra-base-font-size: var(--base-font-size);
+    --terra-base-color: var(--base-text-color);
+    --terra-base-line-height: var(--base-line-height);
+  }
+}

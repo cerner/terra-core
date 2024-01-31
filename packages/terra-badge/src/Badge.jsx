@@ -105,9 +105,17 @@ const Badge = ({
     customProps.className,
   );
 
+  let badgeIcon = icon;
+
+  if (icon && theme.className === 'redwood-theme') {
+    badgeIcon = React.cloneElement(icon, {
+      className: classNames(cx('badge-icon')),
+    });
+  }
+
   const textContent = text ? <span className={styles.text}>{text}</span> : null;
   const visuallyHiddenTextContent = visuallyHiddenText ? <VisuallyHiddenText text={visuallyHiddenText} /> : null;
-  const content = isReversed ? [textContent, visuallyHiddenTextContent, icon, customProps.children] : [icon, textContent, visuallyHiddenTextContent, customProps.children];
+  const content = isReversed ? [textContent, visuallyHiddenTextContent, badgeIcon, customProps.children] : [badgeIcon, textContent, visuallyHiddenTextContent, customProps.children];
   return React.createElement('span', { ...customProps, className: badgeClassNames }, ...content);
 };
 
