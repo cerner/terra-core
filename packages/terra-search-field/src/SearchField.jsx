@@ -104,7 +104,7 @@ const propTypes = {
 const defaultProps = {
   defaultValue: undefined,
   disableAutoSearch: false,
-  groupName: 'Search a clinic',
+  groupName: 'Search',
   isBlock: false,
   isDisabled: false,
   isLabelVisible: false,
@@ -306,7 +306,7 @@ class SearchField extends React.Component {
         <label className={cx('label')}>{groupName}</label>
         )}
         <div className={cx('search-role-container')}>
-          <div aria-label={intl.formatMessage({ id: 'Terra.searchField.search' })} {...customProps} className={searchFieldClassNames}>
+          <div role="group" aria-label={intl.formatMessage({ id: 'Terra.searchField.search' })} {...customProps} className={searchFieldClassNames}>
             <div className={cx('input-group')}>
               <input
                 {...additionalInputAttributes}

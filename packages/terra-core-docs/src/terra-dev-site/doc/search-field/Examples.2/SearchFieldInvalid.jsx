@@ -52,6 +52,7 @@ const SearchFieldInvalid = () => {
         inputRefCallback={(ref) => { inputRef.current = ref; }}
         searchDelay={500}
         isLabelVisible
+        groupName="Find a clinic"
       />
       <div id="search-callback-text" className={isInvalid ? cx('error-text') : ''}>
         {message}

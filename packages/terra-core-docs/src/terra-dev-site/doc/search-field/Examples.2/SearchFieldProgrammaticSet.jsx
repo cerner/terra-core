@@ -57,6 +57,7 @@ const SearchFieldProgrammaticSet = () => {
         value={text}
         inputRefCallback={(ref) => { inputRef.current = ref; }}
         isLabelVisible
+        groupName="Find a clinic"
       />
       <div id="search-callback-text">
         {message}

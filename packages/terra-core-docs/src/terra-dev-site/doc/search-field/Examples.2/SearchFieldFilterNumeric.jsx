@@ -17,7 +17,7 @@ const SearchFieldFilterNumeric = () => {
   };
 
   return (
-    <SearchField onSearch={handleSearchText} onChange={handleChange} value={state.searchText} isLabelVisible />
+    <SearchField onSearch={handleSearchText} onChange={handleChange} value={state.searchText} isLabelVisible groupName="Find a clinic" />
   );
 };
 

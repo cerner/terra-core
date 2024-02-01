@@ -4,6 +4,7 @@ import SearchField from 'terra-search-field';
 const SearchFieldDisableAutoFormatAttrs = () => (
   <SearchField
     isLabelVisible
+    groupName="Find a clinic"
     inputAttributes={{
       autoCorrect: 'off',
       autoComplete: 'off',

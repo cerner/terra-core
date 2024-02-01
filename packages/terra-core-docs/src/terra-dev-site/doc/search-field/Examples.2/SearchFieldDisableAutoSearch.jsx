@@ -3,7 +3,7 @@ import SearchField from 'terra-search-field';
 
 const SearchFieldDisableAutoSearch = () => (
   <div>
-    <SearchField disableAutoSearch isLabelVisible />
+    <SearchField disableAutoSearch isLabelVisible groupName="Find a clinic" />
   </div>
 );
 

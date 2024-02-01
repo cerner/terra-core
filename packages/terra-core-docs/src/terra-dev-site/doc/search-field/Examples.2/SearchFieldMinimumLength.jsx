@@ -11,7 +11,7 @@ const SearchFieldMinimumLength = () => {
   return (
     <div>
       <p>{message}</p>
-      <SearchField minimumSearchTextLength={5} onSearch={setSearchText} onInvalidSearch={setSearchText} isLabelVisible />
+      <SearchField minimumSearchTextLength={5} onSearch={setSearchText} onInvalidSearch={setSearchText} isLabelVisible groupName="Find a clinic" />
     </div>
   );
 };
