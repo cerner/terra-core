@@ -28,6 +28,8 @@ class SearchFieldFocus extends React.Component {
           onChange={this.onChange}
           value={this.state.searchText}
           inputRefCallback={(inputRef) => { this.searchInput = inputRef; }}
+          isLabelVisible
+          groupName="Find a clinic"
         />
       </React.Fragment>
     );
