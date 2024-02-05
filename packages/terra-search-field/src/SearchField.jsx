@@ -308,7 +308,6 @@ class SearchField extends React.Component {
         <div className={cx('search-role-container')}>
           <div {...customProps} className={searchFieldClassNames}>
             <div className={cx('input-group')}>
-              {/* <p id="test">minimum Length is 5</p> */}
               <input
                 {...additionalInputAttributes}
                 className={inputClass}

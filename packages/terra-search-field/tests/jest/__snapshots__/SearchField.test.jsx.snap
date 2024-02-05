@@ -77,19 +77,16 @@ exports[`Snapshots correctly applies the theme context className 1`] = `
         className="search-container orion-fusion-theme"
       >
         <div
-          aria-label="Terra.searchField.search"
           className="search-role-container"
-          role="search"
         >
           <div
-            aria-label="Terra.searchField.search"
             className="search-field"
-            role="group"
           >
             <div
               className="input-group"
             >
               <input
+                aria-describedby="test"
                 aria-disabled={false}
                 aria-label="Terra.searchField.search"
                 className="input"
@@ -197,6 +194,7 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
       "calls": Array [
         Array [
           <input
+            aria-describedby="test"
             aria-disabled="false"
             aria-label="Terra.searchField.search"
             class="input"
@@ -252,19 +250,16 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
     className="search-container"
   >
     <div
-      aria-label="Terra.searchField.search"
       className="search-role-container"
-      role="search"
     >
       <div
-        aria-label="Terra.searchField.search"
         className="search-field"
-        role="group"
       >
         <div
           className="input-group"
         >
           <input
+            aria-describedby="test"
             aria-disabled={false}
             aria-label="Terra.searchField.search"
             className="input"
@@ -366,19 +361,16 @@ exports[`Snapshots renders a basic search field 1`] = `
   className="search-container"
 >
   <div
-    aria-label="Terra.searchField.search"
     className="search-role-container"
-    role="search"
   >
     <div
-      aria-label="Terra.searchField.search"
       className="search-field"
-      role="group"
     >
       <div
         className="input-group"
       >
         <input
+          aria-describedby="test"
           aria-disabled={false}
           aria-label="Terra.searchField.search"
           className="input"
@@ -421,19 +413,16 @@ exports[`Snapshots renders a disabled search field with a value 1`] = `
   className="search-container"
 >
   <div
-    aria-label="Terra.searchField.search"
     className="search-role-container"
-    role="search"
   >
     <div
-      aria-label="Terra.searchField.search"
       className="search-field"
-      role="group"
     >
       <div
         className="input-group"
       >
         <input
+          aria-describedby="test"
           aria-disabled={true}
           aria-label="Terra.searchField.search"
           className="input"
@@ -476,19 +465,16 @@ exports[`Snapshots renders a search field such that custom styles are applied 1`
   className="search-container"
 >
   <div
-    aria-label="Terra.searchField.search"
     className="search-role-container"
-    role="search"
   >
     <div
-      aria-label="Terra.searchField.search"
       className="search-field"
-      role="group"
     >
       <div
         className="input-group"
       >
         <input
+          aria-describedby="test"
           aria-disabled={false}
           aria-label="Terra.searchField.search"
           className="input test-class"
@@ -531,19 +517,16 @@ exports[`Snapshots renders a search field that displays as a block to fill its c
   className="search-container"
 >
   <div
-    aria-label="Terra.searchField.search"
     className="search-role-container"
-    role="search"
   >
     <div
-      aria-label="Terra.searchField.search"
       className="search-field block"
-      role="group"
     >
       <div
         className="input-group"
       >
         <input
+          aria-describedby="test"
           aria-disabled={false}
           aria-label="Terra.searchField.search"
           className="input"
@@ -604,19 +587,16 @@ exports[`Snapshots renders a search field with a defaulted value 1`] = `
   className="search-container"
 >
   <div
-    aria-label="Terra.searchField.search"
     className="search-role-container"
-    role="search"
   >
     <div
-      aria-label="Terra.searchField.search"
       className="search-field"
-      role="group"
     >
       <div
         className="input-group"
       >
         <input
+          aria-describedby="test"
           aria-disabled={false}
           aria-label="Terra.searchField.search"
           className="input"
@@ -683,19 +663,16 @@ exports[`Snapshots renders a search field with a label 1`] = `
     TestGroup
   </label>
   <div
-    aria-label="Terra.searchField.search"
     className="search-role-container"
-    role="search"
   >
     <div
-      aria-label="TestGroup"
       className="search-field"
-      role="group"
     >
       <div
         className="input-group"
       >
         <input
+          aria-describedby="test"
           aria-disabled={false}
           aria-label="Terra.searchField.search"
           className="input"
@@ -738,19 +715,16 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
   className="search-container"
 >
   <div
-    aria-label="Terra.searchField.search"
     className="search-role-container"
-    role="search"
   >
     <div
-      aria-label="Terra.searchField.search"
       className="search-field"
-      role="group"
     >
       <div
         className="input-group"
       >
         <input
+          aria-describedby="test"
           aria-disabled={false}
           aria-label="Terra.searchField.search"
           className="input"
@@ -793,19 +767,16 @@ exports[`Snapshots renders a search field with a value 1`] = `
   className="search-container"
 >
   <div
-    aria-label="Terra.searchField.search"
     className="search-role-container"
-    role="search"
   >
     <div
-      aria-label="Terra.searchField.search"
       className="search-field"
-      role="group"
     >
       <div
         className="input-group"
       >
         <input
+          aria-describedby="test"
           aria-disabled={false}
           aria-label="Terra.searchField.search"
           className="input"
@@ -867,19 +838,16 @@ exports[`Snapshots renders a search field with an aria-label 1`] = `
   className="search-container"
 >
   <div
-    aria-label="Terra.searchField.search"
     className="search-role-container"
-    role="search"
   >
     <div
-      aria-label="Terra.searchField.search"
       className="search-field"
-      role="group"
     >
       <div
         className="input-group"
       >
         <input
+          aria-describedby="test"
           aria-disabled={false}
           aria-label="Search Field"
           className="input"
@@ -922,19 +890,16 @@ exports[`Snapshots renders a search field with an aria-label using prop 1`] = `
   className="search-container"
 >
   <div
-    aria-label="Terra.searchField.search"
     className="search-role-container"
-    role="search"
   >
     <div
-      aria-label="Terra.searchField.search"
       className="search-field"
-      role="group"
     >
       <div
         className="input-group"
       >
         <input
+          aria-describedby="test"
           aria-disabled={false}
           aria-label="Terra.searchField.search"
           ariaLabel="Search Field"

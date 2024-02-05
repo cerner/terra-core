@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
 import Button from 'terra-button/lib/Button';
 import SearchField from 'terra-search-field';
-import Field from 'terra-form-field';
 
 const SearchFieldProgrammaticSet = () => {
   const [searchText, setSearchText] = useState('');
@@ -46,7 +45,6 @@ const SearchFieldProgrammaticSet = () => {
 
   return (
     <div>
-      <Field label="Find a clinic" htmlFor="color-field-1" />
       <Button text="Set search field text" onClick={setTextClick} id="search-field-set-text-button" />
       <p>Minimum Search Length is 3</p>
       <SearchField

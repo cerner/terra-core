@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
 import SearchField from 'terra-search-field';
 import classNames from 'classnames/bind';
-import Field from 'terra-form-field';
 import styles from './SearchFieldInvalid.module.scss';
 
 const cx = classNames.bind(styles);
@@ -40,7 +39,6 @@ const SearchFieldInvalid = () => {
 
   return (
     <div>
-      <Field label="Find a clinic" htmlFor="color-field-1" />
       <p>Minimum Search Length is 3</p>
       <SearchField
         id="searchfield"

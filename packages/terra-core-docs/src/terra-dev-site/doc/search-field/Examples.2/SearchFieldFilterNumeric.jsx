@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import SearchField from 'terra-search-field';
-import Field from 'terra-form-field';
 
 const SearchFieldFilterNumeric = () => {
   const [state, setSearchText] = useState({ searchText: '' });
@@ -18,10 +17,7 @@ const SearchFieldFilterNumeric = () => {
   };
 
   return (
-    <>
-      <Field label="Find a clinic" htmlFor="color-field-1" />
-      <SearchField onSearch={handleSearchText} onChange={handleChange} value={state.searchText} />
-    </>
+    <SearchField onSearch={handleSearchText} onChange={handleChange} value={state.searchText} />
   );
 };
 
