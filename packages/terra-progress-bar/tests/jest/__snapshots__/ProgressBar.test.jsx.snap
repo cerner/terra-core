@@ -82,17 +82,6 @@ exports[`correctly applies the theme context className 1`] = `
           tabIndex="-1"
           value={15}
         />
-        <VisuallyHiddenText
-          aria-live="polite"
-          text="Terra.progress.bar.percentage"
-        >
-          <span
-            aria-live="polite"
-            className="visually-hidden-text"
-          >
-            Terra.progress.bar.percentage
-          </span>
-        </VisuallyHiddenText>
       </div>
     </ProgressBar>
   </InjectIntl(ProgressBar)>
@@ -206,10 +195,6 @@ exports[`should render a default component 1`] = `
     max={100}
     tabIndex="-1"
     value={15}
-  />
-  <VisuallyHiddenText
-    aria-live="polite"
-    text="Terra.progress.bar.percentage"
   />
 </div>
 `;

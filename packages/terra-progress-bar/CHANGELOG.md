@@ -2,8 +2,8 @@
 
 ## Unreleased
 
-* Fixed
-  * Added valueText prop to provide context and status update of progress.
+* Added
+  * Added `valueText` prop to provide custom status update of progress.
 
 ## 4.35.0 - (November 13, 2023)
 
