@@ -97,7 +97,7 @@ const ProgressBar = ({
         aria-valuetext={valText}
         tabIndex="-1"
       />
-      {valueText  && <VisuallyHiddenText aria-live="polite" text={valText} />}
+      {valueText && <VisuallyHiddenText aria-live="polite" text={valText} />}
     </div>
   );
 };
