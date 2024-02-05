@@ -320,7 +320,6 @@ class SearchField extends React.Component {
                 onKeyDown={this.handleKeyDown}
                 onInput={this.handleInput}
                 ref={this.setInputRef}
-                aria-describedby="test"
               />
               {clearButton}
             </div>
