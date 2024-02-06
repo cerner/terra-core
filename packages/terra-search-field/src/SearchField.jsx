@@ -25,7 +25,7 @@ const propTypes = {
   disableAutoSearch: PropTypes.bool,
 
   /**
-   * Group name value for search group elements. This value is also used as Label name.
+   * Group name value for search group elements. This value is also used as Label name. Default value Search is being used when no value is provided.
    */
   groupName: PropTypes.string,
 
@@ -267,7 +267,7 @@ class SearchField extends React.Component {
       customProps.className,
     );
 
-    const groupNameValue = groupName === 'Search' ? intl.formatMessage({ id: 'Terra.searchField.search' }) : groupName;
+    const groupNameValue = groupName !== 'Search' ? groupName : '';
     const inputAriaLabelText = inputAttributes && Object.prototype.hasOwnProperty.call(inputAttributes, 'aria-label') ? inputAttributes['aria-label'] : groupNameValue;
     const buttonText = intl.formatMessage({ id: 'Terra.searchField.submit-search' });
     const clearText = intl.formatMessage({ id: 'Terra.searchField.clear' });
