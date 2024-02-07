@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added support for the Redwood theme.
+  
 ## 3.46.0 - (November 13, 2023)
 
 * Changed

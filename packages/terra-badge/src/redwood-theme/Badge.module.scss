@@ -1,0 +1,142 @@
+:local {
+  .redwood-theme {
+    --terra-badge-border: none;
+    --terra-badge-font-weight: var(--badge-font-weight);
+
+    --terra-badge-tiny-font-size: var(--badge-small-font-size);
+    --terra-badge-small-font-size: var(--badge-small-font-size);
+    --terra-badge-medium-font-size: var(--badge-medium-font-size);
+    --terra-badge-large-font-size: var(--badge-large-font-size);
+    --terra-badge-huge-font-size: var(--badge-huge-font-size);
+
+    --terra-badge-background-color-default: var(--badge-neutral-background-color);
+    --terra-badge-color-default: var(--badge-neutral-font-color);
+
+    --terra-badge-background-color-primary:  var(--badge-information-background-color);
+    --terra-badge-color-primary: var(--badge-information-font-color);
+
+    --terra-badge-background-color-secondary: var(--badge-positive-background-color);
+    --terra-badge-color-secondary: var(--badge-positive-font-color);
+
+    --terra-badge-background-color-positive: var(--badge-positive-background-color);
+    --terra-badge-color-positive: var(--badge-positive-font-color);
+
+    --terra-badge-background-color-negative: var(--badge-negative-background-color);
+    --terra-badge-color-negative: var(--badge-negative-font-color);
+
+    --terra-badge-background-color-warning: var(--badge-warning-background-color);
+    --terra-badge-color-warning: var(--badge-warning-font-color);
+    
+    --terra-badge-background-color-info: var(--badge-information-background-color);
+    --terra-badge-color-info: var(--badge-information-font-color);
+
+    &.badge {
+      font-family: var(--badge-font-family);
+    }
+
+    &.tiny {
+      border-radius: var(--badge-tiny-radius);
+      padding-bottom: var(--badge-tiny-padding-bottom);
+      padding-left: var(--badge-tiny-padding-left);
+      padding-right: var(--badge-tiny-padding-right);
+      padding-top: var(--badge-tiny-padding-top);
+
+      &.is-reversed.has-icon .text {
+        margin-right: var(--badge-tiny-horizontal-gap-padding);
+      }
+    
+      &.has-icon:not(.is-reversed) .text {
+        margin-left: var(--badge-tiny-horizontal-gap-padding);
+      }
+
+      .badge-icon {
+        width: var(--badge-tiny-icon-size) !important;
+        height: var(--badge-tiny-icon-size) !important;
+      }
+    }
+  
+    &.small {
+      border-radius: var(--badge-small-radius);
+      padding-bottom: var(--badge-small-padding-bottom);
+      padding-left: var(--badge-small-padding-left);
+      padding-right: var(--badge-small-padding-right);
+      padding-top: var(--badge-small-padding-top);
+
+      &.is-reversed.has-icon .text {
+        margin-right: var(--badge-small-horizontal-gap-padding);
+      }
+    
+      &.has-icon:not(.is-reversed) .text {
+        margin-left: var(--badge-small-horizontal-gap-padding);
+      }
+
+      .badge-icon {
+        width: var(--badge-small-icon-size) !important;
+        height: var(--badge-small-icon-size) !important;
+      }
+    }
+  
+    &.medium {
+      border-radius: var(--badge-medium-radius);
+      padding-bottom: var(--badge-medium-padding-bottom);
+      padding-left: var(--badge-medium-padding-left);
+      padding-right: var(--badge-medium-padding-right);
+      padding-top: var(--badge-medium-padding-top);
+
+      &.is-reversed.has-icon .text {
+        margin-right: var(--badge-medium-horizontal-gap-padding);
+      }
+    
+      &.has-icon:not(.is-reversed) .text {
+        margin-left: var(--badge-medium-horizontal-gap-padding);
+      }
+
+      .badge-icon {
+        width: var(--badge-medium-icon-size) !important;
+        height: var(--badge-medium-icon-size) !important;
+      }
+    }
+  
+    &.large {
+      border-radius: var(--badge-large-radius);
+      padding-bottom: var(--badge-large-padding-bottom);
+      padding-left: var(--badge-large-padding-left);
+      padding-right: var(--badge-large-padding-right);
+      padding-top: var(--badge-large-padding-top);
+
+      &.is-reversed.has-icon .text {
+        margin-right: var(--badge-large-horizontal-gap-padding);
+      }
+    
+      &.has-icon:not(.is-reversed) .text {
+        margin-left: var(--badge-large-horizontal-gap-padding);
+      }
+
+      .badge-icon {
+        width: var(--badge-large-icon-size) !important;
+        height: var(--badge-large-icon-size) !important;
+      }
+    }
+  
+    &.huge {
+      border-radius: var(--badge-huge-radius);
+      padding-bottom: var(--badge-huge-padding-bottom);
+      padding-left: var(--badge-huge-padding-left);
+      padding-right: var(--badge-huge-padding-right);
+      padding-top: var(--badge-huge-padding-top);
+
+      &.is-reversed.has-icon .text {
+        margin-right: var(--badge-huge-horizontal-gap-padding);
+      }
+    
+      &.has-icon:not(.is-reversed) .text {
+        margin-left: var(--badge-huge-horizontal-gap-padding);
+      }
+
+      .badge-icon {
+        width: var(--badge-huge-icon-size) !important;
+        height: var(--badge-huge-icon-size) !important;
+      }
+    }
+  }
+}
