@@ -8,13 +8,13 @@ describe('Divider', () => {
 
   // Snapshot Tests
   it('should render a basic component', () => {
-    const wrapper = shallow(defaultRender);
+    const wrapper = enzyme.shallow(defaultRender);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('it should pass the All the Props', () => {
-    const wrapper = shallow(<SectionDivider id="testDivider" text="custom-text" level={3} />);
-    expect(wrapper).toMatchSnapshot();
+    const wrapper = enzyme.shallow(<SectionDivider id="testDivider" text="custom-text" level={3} />);
+    expect(wrapper).toMatchSnapshogt();
   });
 
   it('should apply the theme context className to the text divider', () => {

@@ -38,7 +38,7 @@ describe('ShowHideFocuser', () => {
 
   it('should throw error for required focusableText prop', () => {
     try {
-      shallow(<MockComponent />);
+      enzyme.shallow(<MockComponent />);
     } catch (e) {
       expect(e.message).toContain('The prop `focusableText` is marked as required');
     }

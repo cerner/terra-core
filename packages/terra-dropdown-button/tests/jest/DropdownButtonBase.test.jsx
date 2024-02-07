@@ -7,7 +7,7 @@ import { Item } from '../../src/DropdownButton';
 
 describe('Dropdown Button Base', () => {
   it('renders a default DropdownButtonBase', () => {
-    const wrapper = shallow(
+    const wrapper = enzyme.shallow(
       <DropdownButtonBase
         items={
           <Item label="1st option" onSelect={() => {}} />
@@ -22,7 +22,7 @@ describe('Dropdown Button Base', () => {
   });
 
   it('renders a disabled DropdownButtonBase', () => {
-    const wrapper = shallow(
+    const wrapper = enzyme.shallow(
       <DropdownButtonBase
         items={
           <Item label="1st option" onSelect={() => {}} />
@@ -38,7 +38,7 @@ describe('Dropdown Button Base', () => {
   });
 
   it('renders a block DropdownButtonBase', () => {
-    const wrapper = shallow(
+    const wrapper = enzyme.shallow(
       <DropdownButtonBase
         items={
           <Item label="1st option" onSelect={() => {}} />
@@ -54,7 +54,7 @@ describe('Dropdown Button Base', () => {
   });
 
   it('renders an open DropdownButtonBase', () => {
-    const wrapper = shallow(
+    const wrapper = enzyme.shallow(
       <DropdownButtonBase
         items={
           <Item label="1st option" onSelect={() => {}} />

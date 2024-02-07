@@ -6,12 +6,12 @@ describe('BlockActionFooter', () => {
   describe('Snapshot Tests', () => {
     it('should render an empty footer', () => {
       const blockActionFooter = <BlockActionFooter />;
-      expect(shallow(blockActionFooter)).toMatchSnapshot();
+      expect(enzyme.shallow(blockActionFooter)).toMatchSnapshot();
     });
 
     it('should render a footer with some actions', () => {
       const blockActionFooter = <BlockActionFooter>Some actions</BlockActionFooter>;
-      expect(shallow(blockActionFooter)).toMatchSnapshot();
+      expect(enzyme.shallow(blockActionFooter)).toMatchSnapshot();
     });
   });
 
@@ -38,7 +38,7 @@ describe('BlockActionFooter', () => {
   // Structure Tests
   describe('Structure Tests', () => {
     describe('without actions', () => {
-      const blockActionFooter = shallow(<BlockActionFooter />);
+      const blockActionFooter = enzyme.shallow(<BlockActionFooter />);
 
       it('should contain the block-action-footer class', () => (
         expect(blockActionFooter.find('.block-action-footer').length).toBe(1)
@@ -55,7 +55,7 @@ describe('BlockActionFooter', () => {
           Some actions
         </BlockActionFooter>
       );
-      const blockActionFooter = shallow(component);
+      const blockActionFooter = enzyme.shallow(component);
 
       it('should contain the block-action-footer class', () => (
         expect(blockActionFooter.find('.block-action-footer').length).toBe(1)

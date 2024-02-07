@@ -16,7 +16,7 @@ afterAll(() => {
 
 it('should render a default component', () => {
   const field = (<Fieldset />);
-  const wrapper = shallow(field);
+  const wrapper = enzyme.shallow(field);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -33,7 +33,7 @@ it('should render a Fieldset when all the possible props are passed into it', ()
     </Fieldset>
   );
 
-  const wrapper = shallow(input);
+  const wrapper = enzyme.shallow(input);
 
   const legendTag = wrapper.find('.healtheintent-legend');
   expect(legendTag.prop('id')).toEqual('terra-fieldset-legend-00000000-0000-0000-0000-000000000000');
@@ -58,7 +58,7 @@ it('should render a Fieldset without legend and helptext', () => {
     </Fieldset>
   );
 
-  const wrapper = shallow(input);
+  const wrapper = enzyme.shallow(input);
   expect(wrapper).toMatchSnapshot();
 });
 

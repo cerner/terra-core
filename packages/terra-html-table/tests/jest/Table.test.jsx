@@ -24,7 +24,7 @@ const header = [headerData1, headerData2, headerData3];
 
 // Snapshot test
 it('should render a default table', () => {
-  const shallowComponent = shallow(
+  const shallowComponent = enzyme.shallow(
     <Table>
       <Header>{header}</Header>
       <Body>{rows}</Body>
@@ -34,7 +34,7 @@ it('should render a default table', () => {
 });
 
 it('should render a table without zebra stripes', () => {
-  const shallowComponent = shallow(
+  const shallowComponent = enzyme.shallow(
     <Table disableStripes>
       <Header>{header}</Header>
       <Body>{rows}</Body>
@@ -44,7 +44,7 @@ it('should render a table without zebra stripes', () => {
 });
 
 it('should render a table without padding', () => {
-  const shallowComponent = shallow(
+  const shallowComponent = enzyme.shallow(
     <Table paddingStyle="none">
       <Header>{header}</Header>
       <Body>{rows}</Body>
@@ -54,7 +54,7 @@ it('should render a table without padding', () => {
 });
 
 it('should render a table with compact padding', () => {
-  const shallowComponent = shallow(
+  const shallowComponent = enzyme.shallow(
     <Table paddingStyle="compact">
       <Header>{header}</Header>
       <Body>{rows}</Body>
@@ -64,7 +64,7 @@ it('should render a table with compact padding', () => {
 });
 
 it('should render a table with standard padding', () => {
-  const shallowComponent = shallow(
+  const shallowComponent = enzyme.shallow(
     <Table paddingStyle="standard">
       <Header>{header}</Header>
       <Body>{rows}</Body>

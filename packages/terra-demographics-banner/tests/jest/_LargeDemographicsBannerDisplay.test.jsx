@@ -5,7 +5,7 @@ import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 import LargeDemographicsBannerDisplay from '../../src/_LargeDemographicsBannerDisplay';
 
 it('renders large banner that contains all valid information', () => {
-  const banner = shallow(<LargeDemographicsBannerDisplay
+  const banner = enzyme.shallow(<LargeDemographicsBannerDisplay
     applicationContent={<span className="risk-score">5%</span>}
     age="25 Years"
     applicationRows={[{ Address: '1501 Walnut St. Apt #123', City: 'Kansas City MO' }, { ZIP: 64108 }]}
@@ -28,7 +28,7 @@ it('renders large banner that contains all valid information', () => {
 });
 
 it('renders the provided person name header level', () => {
-  const banner = shallow(<LargeDemographicsBannerDisplay
+  const banner = enzyme.shallow(<LargeDemographicsBannerDisplay
     personName="Johnathon Doe"
     personNameHeadingLevel={3}
     preferredFirstName="John"

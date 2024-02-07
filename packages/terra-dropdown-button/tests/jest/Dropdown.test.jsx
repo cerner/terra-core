@@ -4,7 +4,7 @@ import { Item } from '../../src/DropdownButton';
 
 describe('Dropdown', () => {
   it('renders a default dropdown', () => {
-    const wrapper = shallow(
+    const wrapper = enzyme.shallow(
       <Dropdown
         requestClose={() => {}}
         targetRef={() => {}}
@@ -17,7 +17,7 @@ describe('Dropdown', () => {
   });
 
   it('renders an open dropdown', () => {
-    const wrapper = shallow(
+    const wrapper = enzyme.shallow(
       <Dropdown
         requestClose={() => {}}
         targetRef={() => {}}
@@ -30,7 +30,7 @@ describe('Dropdown', () => {
   });
 
   it('renders a dropdown with a bounding ref', () => {
-    const wrapper = shallow(
+    const wrapper = enzyme.shallow(
       <Dropdown
         requestClose={() => {}}
         targetRef={() => {}}
@@ -44,7 +44,7 @@ describe('Dropdown', () => {
   });
 
   it('renders a dropdown with a set width', () => {
-    const wrapper = shallow(
+    const wrapper = enzyme.shallow(
       <Dropdown
         requestClose={() => {}}
         targetRef={() => {}}
@@ -58,7 +58,7 @@ describe('Dropdown', () => {
   });
 
   it('renders a dropdown with multiple children', () => {
-    const wrapper = shallow(
+    const wrapper = enzyme.shallow(
       <Dropdown
         requestClose={() => {}}
         targetRef={() => {}}

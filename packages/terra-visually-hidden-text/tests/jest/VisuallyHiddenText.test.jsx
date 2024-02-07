@@ -6,7 +6,7 @@ describe('VisuallyHiddenText', () => {
 
   // Snapshot Tests
   it('should render a default component', () => {
-    const wrapper = shallow(defaultRender);
+    const wrapper = enzyme.shallow(defaultRender);
     expect(wrapper).toMatchSnapshot();
   });
 

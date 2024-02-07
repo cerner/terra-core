@@ -4,12 +4,12 @@ import Button from '../../src/Button';
 describe('Button', () => {
   // Snapshot Tests
   it('should render a default component', () => {
-    const wrapper = shallow(<Button />);
+    const wrapper = enzyme.shallow(<Button />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should show with text', () => {
-    const wrapper = shallow(
+    const wrapper = enzyme.shallow(
       <Button>
         title
       </Button>,
@@ -18,7 +18,7 @@ describe('Button', () => {
   });
 
   it('should adds the onclick', () => {
-    const wrapper = shallow(
+    const wrapper = enzyme.shallow(
       <Button onClick={() => 'function'}>
         title
       </Button>,

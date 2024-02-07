@@ -5,29 +5,29 @@ import ListSectionHeader from '../../src/ListSectionHeader';
 
 // Snapshot Tests
 it('should render default', () => {
-  const shallowComponent = shallow(<ListSectionHeader title="test" />);
+  const shallowComponent = enzyme.shallow(<ListSectionHeader title="test" />);
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render with level', () => {
-  const shallowComponent = shallow(<ListSectionHeader title="test" level={3} />);
+  const shallowComponent = enzyme.shallow(<ListSectionHeader title="test" level={3} />);
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render with isCollapsed', () => {
-  const shallowComponent = shallow(<ListSectionHeader title="test" isCollapsed />);
+  const shallowComponent = enzyme.shallow(<ListSectionHeader title="test" isCollapsed />);
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render with isCollapsible', () => {
-  const shallowComponent = shallow(<ListSectionHeader title="test" isCollapsible />);
+  const shallowComponent = enzyme.shallow(<ListSectionHeader title="test" isCollapsible />);
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render with callback functions', () => {
   const mockCallBack = jest.fn();
 
-  const shallowComponent = shallow(
+  const shallowComponent = enzyme.shallow(
     <ListSectionHeader title="test" level={1} isCollapsible onSelect={mockCallBack} refCallback={jest.fn()} />,
   );
   expect(shallowComponent).toMatchSnapshot();

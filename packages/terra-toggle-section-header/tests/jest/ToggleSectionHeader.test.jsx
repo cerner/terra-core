@@ -34,34 +34,34 @@ describe('ToggleSectionHeader', () => {
 
   it('should call any custom onOpen that is provided by the user correctly when clicked', () => {
     // eslint-disable-next-line no-alert
-    const toggleSectionHeader = shallow(<ToggleSectionHeader title="custom title" onOpen={() => alert('Opened')}>Test</ToggleSectionHeader>);
+    const toggleSectionHeader = enzyme.shallow(<ToggleSectionHeader title="custom title" onOpen={() => alert('Opened')}>Test</ToggleSectionHeader>);
     expect(toggleSectionHeader).toMatchSnapshot();
   });
 
   it('should call any custom onCLose that is provided by the user correctly when clicked', () => {
     // eslint-disable-next-line no-alert
-    const toggleSectionHeader = shallow(<ToggleSectionHeader title="custom title" onClose={() => alert('Closed')}>Test</ToggleSectionHeader>);
+    const toggleSectionHeader = enzyme.shallow(<ToggleSectionHeader title="custom title" onClose={() => alert('Closed')}>Test</ToggleSectionHeader>);
     expect(toggleSectionHeader).toMatchSnapshot();
   });
 
   // Prop Tests
   it('should set sectionHeaderAttrs prop correctly', () => {
     const sectionHeaderAttrProps = { backgroundColor: 'red' };
-    const toggleSectionHeader = shallow(<ToggleSectionHeader sectionHeaderAttrs={sectionHeaderAttrProps} title="sectionHeaderAttrs props test">Test</ToggleSectionHeader>);
+    const toggleSectionHeader = enzyme.shallow(<ToggleSectionHeader sectionHeaderAttrs={sectionHeaderAttrProps} title="sectionHeaderAttrs props test">Test</ToggleSectionHeader>);
     expect(toggleSectionHeader.instance().props.sectionHeaderAttrs).toEqual(sectionHeaderAttrProps);
     expect(toggleSectionHeader).toMatchSnapshot();
   });
 
   it('should set the children prop correctly', () => {
     const children = 'test child';
-    const toggleSectionHeader = shallow(<ToggleSectionHeader title="sectionHeaderAttrs props test">{children}</ToggleSectionHeader>);
+    const toggleSectionHeader = enzyme.shallow(<ToggleSectionHeader title="sectionHeaderAttrs props test">{children}</ToggleSectionHeader>);
     expect(toggleSectionHeader.instance().props.children).toEqual(children);
     expect(toggleSectionHeader).toMatchSnapshot();
   });
 
   it('should set the level prop correctly', () => {
     const level = 1;
-    const toggleSectionHeader = shallow(<ToggleSectionHeader level={level} title="sectionHeaderAttrs props test">Test</ToggleSectionHeader>);
+    const toggleSectionHeader = enzyme.shallow(<ToggleSectionHeader level={level} title="sectionHeaderAttrs props test">Test</ToggleSectionHeader>);
     expect(toggleSectionHeader.instance().props.level).toEqual(level);
     expect(toggleSectionHeader).toMatchSnapshot();
   });

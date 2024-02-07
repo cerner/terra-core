@@ -7,41 +7,41 @@ describe('Toolbar', () => {
   const defaultRender = <Toolbar />;
 
   it('should render a default component', () => {
-    const wrapper = shallow(defaultRender);
+    const wrapper = enzyme.shallow(defaultRender);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.hasClass('align-start'));
   });
 
   it('should render with children', () => {
-    const wrapper = shallow(<Toolbar><div>test</div></Toolbar>);
+    const wrapper = enzyme.shallow(<Toolbar><div>test</div></Toolbar>);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render start aligned component', () => {
-    const wrapper = shallow(<Toolbar align="start" />);
+    const wrapper = enzyme.shallow(<Toolbar align="start" />);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.hasClass('align-start'));
   });
 
   it('should render end aligned component', () => {
-    const wrapper = shallow(<Toolbar align="end" />);
+    const wrapper = enzyme.shallow(<Toolbar align="end" />);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.hasClass('align-end'));
   });
 
   it('should render center aligned component', () => {
-    const wrapper = shallow(<Toolbar align="center" />);
+    const wrapper = enzyme.shallow(<Toolbar align="center" />);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.hasClass('align-center'));
   });
 
   it('should render component with aria-label', () => {
-    const wrapper = shallow(<Toolbar ariaLabel="image tools" />);
+    const wrapper = enzyme.shallow(<Toolbar ariaLabel="image tools" />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render component with aria-labelledby', () => {
-    const wrapper = shallow(
+    const wrapper = enzyme.shallow(
       <div>
         <h4 id="image-tools-id">Test</h4>
         <Toolbar ariaLabelledBy="image-tools-id" />
@@ -51,7 +51,7 @@ describe('Toolbar', () => {
   });
 
   it('should render component with aria-controls', () => {
-    const wrapper = shallow(
+    const wrapper = enzyme.shallow(
       <div>
         <Toolbar ariaControls="test-content-id" />
         <div id="test-content-id">
@@ -63,7 +63,7 @@ describe('Toolbar', () => {
   });
 
   it('should apply custom class', () => {
-    const wrapper = shallow(<Toolbar className="testing" />);
+    const wrapper = enzyme.shallow(<Toolbar className="testing" />);
     expect(wrapper.hasClass('testing'));
   });
 

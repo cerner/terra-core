@@ -7,7 +7,7 @@ describe('SectionHeader', () => {
 
   // Snapshot Tests
   it('should render a default component', () => {
-    const wrapper = shallow(defaultRender);
+    const wrapper = enzyme.shallow(defaultRender);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -19,7 +19,7 @@ describe('SectionHeader', () => {
 
   it("should render with an accordion icon when an 'onClick()' callback is passed", () => {
     const sectionHeader = <SectionHeader text="foo" level={2} onClick={() => {}} />;
-    const wrapper = shallow(sectionHeader);
+    const wrapper = enzyme.shallow(sectionHeader);
 
     const button = wrapper.find('button.arrange-wrapper').at(0);
     expect(button.props()['aria-expanded']).toBe(false);
@@ -30,7 +30,7 @@ describe('SectionHeader', () => {
 
   it("should render with an accordion icon in the open position when an 'onClick()' callback and 'isOpen' is passed", () => {
     const sectionHeader = <SectionHeader text="foo" level={2} onClick={() => {}} isOpen />;
-    const wrapper = shallow(sectionHeader);
+    const wrapper = enzyme.shallow(sectionHeader);
 
     const button = wrapper.find('button.arrange-wrapper').at(0);
     expect(button.props()['aria-expanded']).toBe(true);
@@ -136,7 +136,7 @@ describe('SectionHeader', () => {
   });
 
   it('verifies that section header with a fixed title has appropriate classes', () => {
-    const wrapper = shallow(
+    const wrapper = enzyme.shallow(
       <SectionHeader
         text="foo"
         level={2}
