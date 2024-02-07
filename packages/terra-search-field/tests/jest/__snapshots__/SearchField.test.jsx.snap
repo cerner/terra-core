@@ -89,7 +89,7 @@ exports[`Snapshots correctly applies the theme context className 1`] = `
             >
               <input
                 aria-disabled={false}
-                aria-label=""
+                aria-label={null}
                 className="input"
                 disabled={false}
                 onChange={[Function]}
@@ -196,7 +196,6 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
         Array [
           <input
             aria-disabled="false"
-            aria-label=""
             class="input"
             placeholder=""
             type="search"
@@ -262,7 +261,7 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
         >
           <input
             aria-disabled={false}
-            aria-label=""
+            aria-label={null}
             className="input"
             disabled={false}
             onChange={[Function]}
@@ -374,7 +373,7 @@ exports[`Snapshots renders a basic search field 1`] = `
       >
         <input
           aria-disabled={false}
-          aria-label=""
+          aria-label={null}
           className="input"
           disabled={false}
           onChange={[Function]}
@@ -427,7 +426,7 @@ exports[`Snapshots renders a disabled search field with a value 1`] = `
       >
         <input
           aria-disabled={true}
-          aria-label=""
+          aria-label={null}
           className="input"
           disabled={true}
           onChange={[Function]}
@@ -480,7 +479,7 @@ exports[`Snapshots renders a search field such that custom styles are applied 1`
       >
         <input
           aria-disabled={false}
-          aria-label=""
+          aria-label={null}
           className="input test-class"
           disabled={false}
           onChange={[Function]}
@@ -533,7 +532,7 @@ exports[`Snapshots renders a search field that displays as a block to fill its c
       >
         <input
           aria-disabled={false}
-          aria-label=""
+          aria-label={null}
           className="input"
           disabled={false}
           onChange={[Function]}
@@ -604,7 +603,7 @@ exports[`Snapshots renders a search field with a defaulted value 1`] = `
       >
         <input
           aria-disabled={false}
-          aria-label=""
+          aria-label={null}
           className="input"
           defaultValue="Default"
           disabled={false}
@@ -734,7 +733,7 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
       >
         <input
           aria-disabled={false}
-          aria-label=""
+          aria-label={null}
           className="input"
           disabled={false}
           onChange={[Function]}
@@ -787,7 +786,7 @@ exports[`Snapshots renders a search field with a value 1`] = `
       >
         <input
           aria-disabled={false}
-          aria-label=""
+          aria-label={null}
           className="input"
           disabled={false}
           onChange={[Function]}
@@ -912,7 +911,7 @@ exports[`Snapshots renders a search field with an aria-label using prop 1`] = `
       >
         <input
           aria-disabled={false}
-          aria-label=""
+          aria-label="Search Field"
           ariaLabel="Search Field"
           className="input"
           disabled={false}

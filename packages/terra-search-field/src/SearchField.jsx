@@ -267,8 +267,8 @@ class SearchField extends React.Component {
       customProps.className,
     );
 
-    const groupNameValue = groupName !== 'Search' ? groupName : '';
-    const inputAriaLabelText = inputAttributes && Object.prototype.hasOwnProperty.call(inputAttributes, 'aria-label') ? inputAttributes['aria-label'] : groupNameValue;
+    const inputAriaLabelText = inputAttributes && Object.prototype.hasOwnProperty.call(inputAttributes, 'aria-label') ? inputAttributes['aria-label'] : groupName;
+    const ariaLabel = groupName !== 'Search' ? inputAriaLabelText : null;
     const buttonText = intl.formatMessage({ id: 'Terra.searchField.submit-search' });
     const clearText = intl.formatMessage({ id: 'Terra.searchField.clear' });
     const additionalInputAttributes = { ...inputAttributes };
@@ -316,7 +316,7 @@ class SearchField extends React.Component {
                 placeholder={placeholder}
                 onChange={this.handleTextChange}
                 disabled={isDisabled}
-                aria-label={inputAriaLabelText}
+                aria-label={ariaLabel}
                 aria-disabled={isDisabled}
                 onKeyDown={this.handleKeyDown}
                 onInput={this.handleInput}

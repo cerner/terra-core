@@ -58,14 +58,14 @@ describe('Snapshots', () => {
   });
 
   it('renders a search field with an aria-label', () => {
-    const searchField = shallowWithIntl(<SearchField inputAttributes={{ 'aria-label': 'Search Field' }} />).dive();
+    const searchField = shallowWithIntl(<SearchField inputAttributes={{ 'aria-label': 'Search Field' }} groupName="Search Field" />).dive();
     expect(searchField.find('input').prop('aria-label')).toEqual('Search Field');
     expect(searchField).toMatchSnapshot();
   });
 
   it('renders a search field with an aria-label using prop', () => {
-    const searchField = shallowWithIntl(<SearchField inputAttributes={{ ariaLabel: 'Search Field' }} />).dive();
-    expect(searchField.find('input').prop('aria-label')).toEqual('');
+    const searchField = shallowWithIntl(<SearchField inputAttributes={{ ariaLabel: 'Search Field' }} groupName="Search Field" />).dive();
+    expect(searchField.find('input').prop('aria-label')).toEqual('Search Field');
     expect(searchField).toMatchSnapshot();
   });
 
