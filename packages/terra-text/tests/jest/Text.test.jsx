@@ -113,7 +113,7 @@ describe('Text', () => {
   });
 
   it('correctly applies the theme context className', () => {
-    const tag = mount(
+    const tag = enzyme.mount(
       <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
         <Text>Test</Text>
       </ThemeContextProvider>,

@@ -165,13 +165,13 @@ it('should set the ref when refCallback is passed into the component', () => {
   const refCallback = jest.fn();
 
   const textarea = <Textarea refCallback={refCallback} />;
-  const wrapper = mount(textarea);
+  const wrapper = enzyme.mount(textarea);
 
   expect(refCallback).toHaveBeenCalledWith(wrapper.find('textarea').instance());
 });
 
 it('correctly applies the theme context className', () => {
-  const wrapper = mount(
+  const wrapper = enzyme.mount(
     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
       <Textarea ariaLabel="label" />
     </ThemeContextProvider>,
@@ -206,7 +206,7 @@ it('should set the textarea to incomplete when isIncomplete, required and isInva
 });
 
 it('correctly applies the theme context className when isInvalid', () => {
-  const wrapper = mount(
+  const wrapper = enzyme.mount(
     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
       <Textarea ariaLabel="label" isInvalid />
     </ThemeContextProvider>,

@@ -107,7 +107,7 @@ it('should apply correct role for single select button group', () => {
 });
 
 it('correctly applies the theme context className', () => {
-  const buttonGroup = mount(
+  const buttonGroup = enzyme.mount(
     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
       <ButtonGroup>
         {button1}

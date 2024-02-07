@@ -33,7 +33,7 @@ it('should render a cell grid with refCallback', () => {
 });
 
 it('correctly applies the theme context className', () => {
-  const wrapper = mount(
+  const wrapper = enzyme.mount(
     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
       <CellGrid><Cell /></CellGrid>
     </ThemeContextProvider>,

@@ -61,7 +61,7 @@ describe('Facility', () => {
   });
 
   it('correctly applies the theme context className', () => {
-    const avatar = mount(
+    const avatar = enzyme.mount(
       <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
         <Facility alt="London" />
       </ThemeContextProvider>,

@@ -38,7 +38,7 @@ it('renders the provided person name header level', () => {
 });
 
 it('correctly applies the theme context className', () => {
-  const banner = mount(
+  const banner = enzyme.mount(
     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
       <SmallDemographicsBannerDisplay />
     </ThemeContextProvider>,

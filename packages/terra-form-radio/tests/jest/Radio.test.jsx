@@ -52,7 +52,7 @@ it('should render a ChoiceField with a radio', () => {
 });
 
 it('correctly applies the theme context className', () => {
-  const wrapper = mount(
+  const wrapper = enzyme.mount(
     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
       <Radio labelText="Radio" />
     </ThemeContextProvider>,

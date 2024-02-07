@@ -22,7 +22,7 @@ class Base extends React.Component {
     this.handleLocaleChange = this.handleLocaleChange.bind(this);
   }
 
-  componentDidMount() {
+  componentDidenzyme.mount() {
     i18nLoader(this.props.locale, this.setState, this);
   }
 

@@ -40,7 +40,7 @@ describe('SectionHeader', () => {
   });
 
   it('correctly applies the theme context className', () => {
-    const wrapper = mount(
+    const wrapper = enzyme.mount(
       <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
         <SectionHeader text="foo" level={2} />
       </ThemeContextProvider>,
@@ -51,7 +51,7 @@ describe('SectionHeader', () => {
   it('verifies onClick callback is triggered when clicking a button', () => {
     const mockClick = jest.fn();
 
-    const wrapper = mount(
+    const wrapper = enzyme.mount(
       <SectionHeader
         text="foo"
         level={2}
@@ -72,7 +72,7 @@ describe('SectionHeader', () => {
   it('verifies onClick callback is triggered when pressing space when button has focus', () => {
     const mockClick = jest.fn();
 
-    const wrapper = mount(
+    const wrapper = enzyme.mount(
       <SectionHeader
         text="foo"
         level={2}
@@ -93,7 +93,7 @@ describe('SectionHeader', () => {
   it('verifies onClick callback is triggered when pressing return when button has focus', () => {
     const mockClick = jest.fn();
 
-    const wrapper = mount(
+    const wrapper = enzyme.mount(
       <SectionHeader
         text="foo"
         level={2}
@@ -112,7 +112,7 @@ describe('SectionHeader', () => {
   });
 
   it('should render a span element for title since no onClick exists', () => {
-    const wrapper = mount(defaultRender);
+    const wrapper = enzyme.mount(defaultRender);
 
     const headerButton = wrapper.find('button.arrange-wrapper');
     expect(headerButton).toHaveLength(0);
@@ -123,7 +123,7 @@ describe('SectionHeader', () => {
   });
 
   it('verifies that section header has a tab index when specified with custom props', () => {
-    const wrapper = mount(
+    const wrapper = enzyme.mount(
       <SectionHeader
         text="foo"
         level={2}

@@ -35,7 +35,7 @@ it('should render a ProgressBar component with default heightSize 50% fill and v
 });
 
 it('correctly applies the theme context className', () => {
-  const wrapper = mount(
+  const wrapper = enzyme.mount(
     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
       <ProgressBar value={15} />
     </ThemeContextProvider>,

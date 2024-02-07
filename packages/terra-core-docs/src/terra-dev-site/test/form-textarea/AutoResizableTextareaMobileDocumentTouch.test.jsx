@@ -23,7 +23,7 @@ export default class textarea extends React.Component {
     }
   }
 
-  componentWillUnmount() {
+  componentWillUnenzyme.mount() {
     if (this.resetDocumentTouch) {
       delete window.DocumentTouch;
     }

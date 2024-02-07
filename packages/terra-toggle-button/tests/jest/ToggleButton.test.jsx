@@ -26,7 +26,7 @@ describe('ToggleButton', () => {
 
   // Event Tests
   it('should render an open toggle-button when clicked', () => {
-    const toggleButton = mount(<ToggleButton closedButtonText="Show">Test</ToggleButton>);
+    const toggleButton = enzyme.mount(<ToggleButton closedButtonText="Show">Test</ToggleButton>);
     toggleButton.find('button').simulate('click');
     expect(toggleButton).toMatchSnapshot();
   });

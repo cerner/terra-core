@@ -154,7 +154,7 @@ it('should be disabled when set', () => {
 
 it('should pass in refCallback as the ref prop of the input element', () => {
   const refCallback = jest.fn();
-  const wrapper = mount(<Button text="text" refCallback={refCallback} />);
+  const wrapper = enzyme.mount(<Button text="text" refCallback={refCallback} />);
   expect(refCallback).toBeCalled();
   expect(wrapper).toMatchSnapshot();
 });
@@ -256,7 +256,7 @@ it('should render a button with accessible label', () => {
 });
 
 it('correctly applies the theme context className', () => {
-  const button = mount(
+  const button = enzyme.mount(
     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
       <Button text="neutral" />
     </ThemeContextProvider>,

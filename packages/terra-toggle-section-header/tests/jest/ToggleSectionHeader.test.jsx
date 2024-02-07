@@ -20,14 +20,14 @@ describe('ToggleSectionHeader', () => {
 
   // Event Tests
   it('should render an open toggle section header when clicked', () => {
-    const toggleSectionHeader = mount(<ToggleSectionHeader title="opens on click title">opens on click section header</ToggleSectionHeader>);
+    const toggleSectionHeader = enzyme.mount(<ToggleSectionHeader title="opens on click title">opens on click section header</ToggleSectionHeader>);
     toggleSectionHeader.find('SectionHeader').simulate('click');
     expect(toggleSectionHeader).toMatchSnapshot();
   });
 
   it('should call any custom onClick that is provided by the user correctly when clicked', () => {
     const customOnClick = jest.fn();
-    const toggleSectionHeader = mount(<ToggleSectionHeader sectionHeaderAttrs={{ onClick: customOnClick }} title="custom onClick title">triggers a custom onClick when clicked section header</ToggleSectionHeader>);
+    const toggleSectionHeader = enzyme.mount(<ToggleSectionHeader sectionHeaderAttrs={{ onClick: customOnClick }} title="custom onClick title">triggers a custom onClick when clicked section header</ToggleSectionHeader>);
     toggleSectionHeader.find('button').simulate('click');
     expect(customOnClick).toHaveBeenCalled();
   });

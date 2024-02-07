@@ -52,7 +52,7 @@ it('should render a ChoiceField with a checkbox', () => {
 });
 
 it('correctly applies the theme context className', () => {
-  const wrapper = mount(
+  const wrapper = enzyme.mount(
     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
       <Checkbox
         labelText="Do you have any Children?"

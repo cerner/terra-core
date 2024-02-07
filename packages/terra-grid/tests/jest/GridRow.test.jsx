@@ -28,7 +28,7 @@ it('should throw error for required children', () => {
 });
 
 it('correctly applies the theme context className', () => {
-  const wrapper = mount(
+  const wrapper = enzyme.mount(
     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
       <Row className="test"><Col>Test</Col></Row>
     </ThemeContextProvider>,

@@ -19,11 +19,11 @@ class OverlayExample extends React.Component {
     };
   }
 
-  componentDidMount() {
+  componentDidenzyme.mount() {
     document.addEventListener('overlay.forceUpdateForTest', this.forceUpdateForTest);
   }
 
-  componentWillUnmount() {
+  componentWillUnenzyme.mount() {
     document.removeEventListener('overlay.forceUpdateForTest', this.forceUpdateForTest);
   }
 

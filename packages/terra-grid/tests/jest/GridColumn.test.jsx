@@ -37,7 +37,7 @@ it('should throw error for range', () => {
 });
 
 it('correctly applies the theme context className', () => {
-  const wrapper = mount(
+  const wrapper = enzyme.mount(
     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
       <Col>Test</Col>
     </ThemeContextProvider>,

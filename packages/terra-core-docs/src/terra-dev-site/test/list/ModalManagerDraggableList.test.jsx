@@ -24,7 +24,7 @@ class DisclosureComponent extends React.Component {
     };
   }
 
-  componentDidMount() {
+  componentDidenzyme.mount() {
     const disclosureManager = this.context;
 
     if (disclosureManager && disclosureManager.registerDismissCheck) {

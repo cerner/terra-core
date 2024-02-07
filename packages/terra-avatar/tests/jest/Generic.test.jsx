@@ -118,7 +118,7 @@ describe('Generic', () => {
       .mockReturnValue({
         className: 'orion-fusion-theme',
       });
-    const avatar = mount(<Generic variant="provider" alt="provider" />);
+    const avatar = enzyme.mount(<Generic variant="provider" alt="provider" />);
     expect(avatar).toMatchSnapshot();
   });
 });

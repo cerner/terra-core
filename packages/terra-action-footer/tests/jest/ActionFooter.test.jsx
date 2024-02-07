@@ -61,7 +61,7 @@ describe('ActionFooter', () => {
   // Prop Tests
   describe('Prop Tests', () => {
     describe('without start or end actions', () => {
-      const actionFooter = mount(<ActionFooter />);
+      const actionFooter = enzyme.mount(<ActionFooter />);
 
       it('should display no actions', () => (
         expect(actionFooter).toMatchSnapshot()
@@ -69,7 +69,7 @@ describe('ActionFooter', () => {
     });
 
     describe('with only a start action', () => {
-      const actionFooter = mount(<ActionFooter start="Start Action" />);
+      const actionFooter = enzyme.mount(<ActionFooter start="Start Action" />);
 
       it('should only display a start action', () => (
         expect(actionFooter).toMatchSnapshot()
@@ -77,7 +77,7 @@ describe('ActionFooter', () => {
     });
 
     describe('with only an end action', () => {
-      const actionFooter = mount(<ActionFooter end="End Action" />);
+      const actionFooter = enzyme.mount(<ActionFooter end="End Action" />);
 
       it('should only display an end action', () => (
         expect(actionFooter).toMatchSnapshot()
@@ -85,7 +85,7 @@ describe('ActionFooter', () => {
     });
 
     describe('with both start and end actions', () => {
-      const actionFooter = mount(<ActionFooter start="Start Action" end="End Action" />);
+      const actionFooter = enzyme.mount(<ActionFooter start="Start Action" end="End Action" />);
 
       it('should display both start and end actions', () => (
         expect(actionFooter).toMatchSnapshot()
@@ -165,7 +165,7 @@ describe('ActionFooter', () => {
       .mockReturnValue({
         className: 'orion-fusion-theme',
       });
-    const component = mount(
+    const component = enzyme.mount(
       <ActionFooter
         start={<button type="button">Start Button</button>}
         end={<button type="button">End Button</button>}

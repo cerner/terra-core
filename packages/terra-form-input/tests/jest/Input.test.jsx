@@ -71,7 +71,7 @@ describe('Input', () => {
 
   it('should pass in refCallback as the ref prop of the input element', () => {
     const refCallback = jest.fn();
-    const wrapper = mount(<Input refCallback={refCallback} />);
+    const wrapper = enzyme.mount(<Input refCallback={refCallback} />);
     expect(refCallback).toBeCalled();
     expect(wrapper).toMatchSnapshot();
   });
@@ -89,7 +89,7 @@ describe('Input', () => {
   });
 
   it('correctly applies the theme context className', () => {
-    const input = mount(
+    const input = enzyme.mount(
       <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
         {defaultRender}
       </ThemeContextProvider>,

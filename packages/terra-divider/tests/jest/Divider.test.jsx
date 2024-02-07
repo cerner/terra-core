@@ -25,7 +25,7 @@ describe('Divider', () => {
   });
 
   it('correctly applies the theme context className', () => {
-    const wrapper = mount(
+    const wrapper = enzyme.mount(
       <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
         {defaultRender}
       </ThemeContextProvider>,
@@ -64,7 +64,7 @@ describe('Divider', () => {
   });
 
   it('should apply the theme context className to the hr divider', () => {
-    const wrapper = mount(
+    const wrapper = enzyme.mount(
       <ThemeContextProvider theme={{ className: 'theme-class-name' }}>
         <Divider />
       </ThemeContextProvider>,
@@ -74,7 +74,7 @@ describe('Divider', () => {
   });
 
   it('should apply the theme context className to the text divider', () => {
-    const wrapper = mount(
+    const wrapper = enzyme.mount(
       <ThemeContextProvider theme={{ className: 'theme-class-name' }}>
         <Divider text="custom-text" />
       </ThemeContextProvider>,

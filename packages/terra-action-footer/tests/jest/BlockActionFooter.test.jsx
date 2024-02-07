@@ -18,7 +18,7 @@ describe('BlockActionFooter', () => {
   // Prop Tests
   describe('Prop Tests', () => {
     describe('without actions', () => {
-      const blockActionFooter = mount(<BlockActionFooter />);
+      const blockActionFooter = enzyme.mount(<BlockActionFooter />);
 
       it('should display no actions', () => (
         expect(blockActionFooter).toMatchSnapshot()
@@ -27,7 +27,7 @@ describe('BlockActionFooter', () => {
 
     describe('with actions', () => {
       const content = 'Some content';
-      const blockActionFooter = mount(<BlockActionFooter>{content}</BlockActionFooter>);
+      const blockActionFooter = enzyme.mount(<BlockActionFooter>{content}</BlockActionFooter>);
 
       it('should display no actions', () => (
         expect(blockActionFooter).toMatchSnapshot()
@@ -72,7 +72,7 @@ describe('BlockActionFooter', () => {
       .mockReturnValue({
         className: 'orion-fusion-theme',
       });
-    const component = mount(
+    const component = enzyme.mount(
       <BlockActionFooter
         start={<button type="button">Start Button</button>}
         end={<button type="button">End Button</button>}

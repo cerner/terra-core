@@ -244,7 +244,7 @@ describe('Icon', () => {
       .mockReturnValue({
         className: 'clinical-lowlight-theme',
       });
-    const wrapper = mount(<IconAdd />);
+    const wrapper = enzyme.mount(<IconAdd />);
     expect(wrapper).toMatchSnapshot();
   });
 });

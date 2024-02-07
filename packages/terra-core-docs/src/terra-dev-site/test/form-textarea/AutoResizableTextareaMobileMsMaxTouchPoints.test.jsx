@@ -37,7 +37,7 @@ export default class textarea extends React.Component {
     }
   }
 
-  componentWillUnmount() {
+  componentWillUnenzyme.mount() {
     if (this.resetMsMaxTouchPoints) {
       Object.defineProperty(
         navigator, 'msMaxTouchPoints',

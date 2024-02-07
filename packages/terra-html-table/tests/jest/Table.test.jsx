@@ -74,7 +74,7 @@ it('should render a table with standard padding', () => {
 });
 
 it('correctly applies the theme context className', () => {
-  const input = mount(
+  const input = enzyme.mount(
     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
       <Table>
         <Header>{header}</Header>

@@ -32,7 +32,7 @@ describe('CenteredActionFooter', () => {
   // Prop Tests
   describe('Prop Tests', () => {
     describe('without a center action', () => {
-      const centeredActionFooter = mount(<CenteredActionFooter />);
+      const centeredActionFooter = enzyme.mount(<CenteredActionFooter />);
 
       it('should display no actions', () => (
         expect(centeredActionFooter).toMatchSnapshot()
@@ -40,7 +40,7 @@ describe('CenteredActionFooter', () => {
     });
 
     describe('with a center action', () => {
-      const centeredActionFooter = mount(<CenteredActionFooter center="Center Action" />);
+      const centeredActionFooter = enzyme.mount(<CenteredActionFooter center="Center Action" />);
 
       it('should display a center action', () => (
         expect(centeredActionFooter).toMatchSnapshot()
@@ -80,7 +80,7 @@ describe('CenteredActionFooter', () => {
       .mockReturnValue({
         className: 'orion-fusion-theme',
       });
-    const component = mount(<CenteredActionFooter center="Center Action" />);
+    const component = enzyme.mount(<CenteredActionFooter center="Center Action" />);
     expect(component).toMatchSnapshot();
   });
 });

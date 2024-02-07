@@ -40,7 +40,7 @@ describe('Tag', () => {
   });
 
   it('correctly applies the theme context className', () => {
-    const tag = mount(
+    const tag = enzyme.mount(
       <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
         <Tag text="Normal" />
       </ThemeContextProvider>,

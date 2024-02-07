@@ -21,7 +21,7 @@ export default class textarea extends React.Component {
     }
   }
 
-  componentWillUnmount() {
+  componentWillUnenzyme.mount() {
     if (this.resetontouchstart) {
       delete window.ontouchstart;
     }
