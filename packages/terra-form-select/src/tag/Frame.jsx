@@ -11,6 +11,7 @@ import Menu from './Menu';
 import FrameUtil from '../shared/_FrameUtil';
 import styles from '../shared/_Frame.module.scss';
 import MenuUtil from '../shared/_MenuUtil';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
 import 'mutationobserver-shim';
 import '../shared/_contains-polyfill';
 import '../shared/_matches-polyfill';
@@ -417,7 +418,7 @@ class Frame extends React.Component {
   getDisplay(displayId, ariaDescribedBy, id) {
     const { searchValue, isFocused } = this.state;
     const {
-      disabled, display, placeholder, required, value, inputId, isInvalid,
+      disabled, display, placeholder, required, value, inputId, isInvalid, intl
     } = this.props;
 
     const isHidden = !isFocused && value && value.length > 0;
@@ -443,8 +444,9 @@ class Frame extends React.Component {
       id: inputId,
       'aria-required': (required && !display.length),
       role: 'combobox',
-      'aria-multiselectable': "true",
     };
+
+    const selectedValue = display && display.map(val => val.props.value);
 
     return (
       <ul data-terra-form-select-input className={cx('content')}>
@@ -457,6 +459,11 @@ class Frame extends React.Component {
                   <FormattedMessage id="Terra.form.select.selected" />
                 </li>
               </ul>
+              <VisuallyHiddenText
+                text={intl.formatMessage({ id: 'Terra.form.select.selectedvalue' },
+                  { text: selectedValue })}
+                aria-live={MenuUtil.isMac() ? 'polite' : undefined}
+              />
             </li>
           ) : null}
         <li className={cx('search-wrapper')}>

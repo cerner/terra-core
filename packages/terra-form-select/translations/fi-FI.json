@@ -20,5 +20,6 @@
   "Terra.form.select.multiSelectUsageGuidance": "Syötä tekstiä tai käytä ylä- ja alanuolinäppäimiä selaamalla vaihtoehtoja. Valitse tai poista valinta painamalla enter-näppäintä.",
   "Terra.form.select.searchUsageGuidance": "Syötä tekstiä tai käytä ylä- ja alanuolinäppäimiä selaamalla vaihtoehtoja. Valitse vaihtoehto painamalla Enter.",
   "Terra.form.select.clearSelect": "Tyhjennä valinta",
-  "Terra.form.select.selectCleared": "Valitse poistettu arvo"
+  "Terra.form.select.selectCleared": "Valitse poistettu arvo",
+  "Terra.form.select.selectedvalue": "{text} Valittu"
 }

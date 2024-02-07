@@ -331,6 +331,8 @@ class MenuUtil {
     });
   }
 
+  static isMac () { return navigator.userAgent.indexOf('Mac') !== -1 && navigator.userAgent.indexOf('Win') === -1 };
+
   /**
    * Determines if the menu should show an option to clear the selected result.
    * @param {Object} props - The menu props.
