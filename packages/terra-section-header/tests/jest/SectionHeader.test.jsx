@@ -13,7 +13,7 @@ describe('SectionHeader', () => {
 
   it("should render without an accordion icon when no 'onClick()' is passed", () => {
     const sectionHeader = <SectionHeader text="foo" level={2} />;
-    const wrapper = render(sectionHeader);
+    const wrapper = enzyme.render(sectionHeader);
     expect(wrapper).toMatchSnapshot();
   });
 

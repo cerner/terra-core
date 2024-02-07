@@ -4,17 +4,17 @@ import ToggleSectionHeader from '../../src/ToggleSectionHeader';
 describe('ToggleSectionHeader', () => {
   // Snapshot Tests
   it('should render a default toggle section header', () => {
-    const wrapper = render(<ToggleSectionHeader title="default title">Test</ToggleSectionHeader>);
+    const wrapper = enzyme.render(<ToggleSectionHeader title="default title">Test</ToggleSectionHeader>);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an animated toggle section header', () => {
-    const toggleSectionHeader = render(<ToggleSectionHeader isAnimated title="animated title">Test</ToggleSectionHeader>);
+    const toggleSectionHeader = enzyme.render(<ToggleSectionHeader isAnimated title="animated title">Test</ToggleSectionHeader>);
     expect(toggleSectionHeader).toMatchSnapshot();
   });
 
   it('should render an initially open toggle section header', () => {
-    const toggleSectionHeader = render(<ToggleSectionHeader title="initially open title" isInitiallyOpen>Test</ToggleSectionHeader>);
+    const toggleSectionHeader = enzyme.render(<ToggleSectionHeader title="initially open title" isInitiallyOpen>Test</ToggleSectionHeader>);
     expect(toggleSectionHeader).toMatchSnapshot();
   });
 

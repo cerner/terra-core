@@ -54,6 +54,6 @@ it('should have indicator section of component with correct class, style and typ
 // No Color Provided
 it('should render status with no style', () => {
   const statusNoColor = <Status>{simpleText}</Status>;
-  const wrapper = render(statusNoColor);
+  const wrapper = enzyme.render(statusNoColor);
   expect(wrapper).toMatchSnapshot();
 });

@@ -5,22 +5,22 @@ import ToggleButton from '../../src/ToggleButton';
 describe('ToggleButton', () => {
   // Snapshot Tests
   it('should render a default toggle-button', () => {
-    const toggleButton = render(<ToggleButton closedButtonText="Show">Test</ToggleButton>);
+    const toggleButton = enzyme.render(<ToggleButton closedButtonText="Show">Test</ToggleButton>);
     expect(toggleButton).toMatchSnapshot();
   });
 
   it('should render an animated toggle-button', () => {
-    const toggleButton = render(<ToggleButton closedButtonText="Show" isAnimated>Test</ToggleButton>);
+    const toggleButton = enzyme.render(<ToggleButton closedButtonText="Show" isAnimated>Test</ToggleButton>);
     expect(toggleButton).toMatchSnapshot();
   });
 
   it('should render an initially open toggle-button', () => {
-    const toggleButton = render(<ToggleButton closedButtonText="Show" isInitiallyOpen>Test</ToggleButton>);
+    const toggleButton = enzyme.render(<ToggleButton closedButtonText="Show" isInitiallyOpen>Test</ToggleButton>);
     expect(toggleButton).toMatchSnapshot();
   });
 
   it('should render an icon only toggle-button', () => {
-    const toggleButton = render(<ToggleButton closedButtonText="Show" isIconOnly>Test</ToggleButton>);
+    const toggleButton = enzyme.render(<ToggleButton closedButtonText="Show" isIconOnly>Test</ToggleButton>);
     expect(toggleButton).toMatchSnapshot();
   });
 

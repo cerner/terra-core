@@ -81,7 +81,7 @@ describe('Icon', () => {
         expect(wrapper.prop('a11yLabel')).toEqual(undefined);
       });
       it('should have default role={presentation} when a11yLabel={undefined}', () => {
-        const wrapper = render(<IconAdd role="link" />);
+        const wrapper = enzyme.render(<IconAdd role="link" />);
         expect(wrapper.prop('role')).toEqual('presentation');
         // ensures role = presentation is added.
         expect(wrapper).toMatchSnapshot();
@@ -171,7 +171,7 @@ describe('Icon', () => {
       expect(wrapper).toMatchSnapshot();
     });
     it('should render IconBase with custom-class', () => {
-      const wrapper = render(<IconComment className="custom-class" />);
+      const wrapper = enzyme.render(<IconComment className="custom-class" />);
       expect(wrapper).toMatchSnapshot();
     });
 

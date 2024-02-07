@@ -4,17 +4,17 @@ import Toggle from '../../src/Toggle';
 describe('Toggle', () => {
   // Snapshot Tests
   it('should render a default toggle', () => {
-    const toggle = render(<Toggle>Test</Toggle>);
+    const toggle = enzyme.render(<Toggle>Test</Toggle>);
     expect(toggle).toMatchSnapshot();
   });
 
   it('should render an animated toggle', () => {
-    const toggle = render(<Toggle isAnimated>Test</Toggle>);
+    const toggle = enzyme.render(<Toggle isAnimated>Test</Toggle>);
     expect(toggle).toMatchSnapshot();
   });
 
   it('should render an open toggle', () => {
-    const toggle = render(<Toggle isOpen>Test</Toggle>);
+    const toggle = enzyme.render(<Toggle isOpen>Test</Toggle>);
     expect(toggle).toMatchSnapshot();
   });
 

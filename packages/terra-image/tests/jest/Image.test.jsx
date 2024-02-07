@@ -46,13 +46,13 @@ it('should render a thumbnail image component', () => {
 
 /* Image with fluid behavior */
 it('should render a thumbail image component with fluid behavior', () => {
-  const wrapper = render(<Image src="" variant="thumbnail" alt="thumbnail image" isFluid />);
+  const wrapper = enzyme.render(<Image src="" variant="thumbnail" alt="thumbnail image" isFluid />);
   expect(wrapper).toMatchSnapshot();
 });
 
 /* Image without fluid behavior */
 it('should render a thumbail image component with non-fluid behavior', () => {
-  const wrapper = render(<Image src="" variant="thumbnail" alt="thumbnail image" />);
+  const wrapper = enzyme.render(<Image src="" variant="thumbnail" alt="thumbnail image" />);
   expect(wrapper).toMatchSnapshot();
 });
 
