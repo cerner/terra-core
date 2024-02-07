@@ -148,6 +148,7 @@ class Menu extends React.Component {
 
     this.clearScrollTimeout = this.clearScrollTimeout.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
+    this.handleMouseEnter = this.handleMouseEnter.bind(this);
     this.handleOptionClick = this.handleOptionClick.bind(this);
     this.scrollIntoView = this.scrollIntoView.bind(this);
   }
@@ -320,6 +321,26 @@ class Menu extends React.Component {
     }
   }
 
+  /**
+   * Sets the hovered option as the active value.
+   * @param {event} event - The mouse enter event.
+   * @param {ReactNode} option - The option that received the mouse enter event.
+   */
+  handleMouseEnter(event, option) {
+    // Prevents setting the active option on mouse enter if the keyboard scrolled the view.
+    if (this.scrollTimeout) {
+      return;
+    }
+
+    if (!option.props.disabled) {
+      this.setState({ active: option.props.value });
+    }
+
+    if (option.props.onMouseEnter) {
+      option.props.onMouseEnter(event);
+    }
+  }
+
   isActiveSelected() {
     return this.props.value.includes(this.state.active);
   }
@@ -423,6 +444,7 @@ class Menu extends React.Component {
           variant: 'multiple',
           onMouseDown: () => { this.downOption = option; },
           onMouseUp: event => this.handleOptionClick(event, option),
+          onMouseEnter: event => this.handleMouseEnter(event, option),
           ...(option.props.value === this.state.active) && { 'data-select-active': true },
         });
       } if (option.type.isOptGroup) {
