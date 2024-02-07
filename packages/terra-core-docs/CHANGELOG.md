@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+* Added
+  * Added error message for `terra-form-tag-select` invalid example.
+  * Added visual lebel for `terra-form-tag-select` example.
+
 * Updated
   * Updated Draggable list item example for selection state in `terra-list`.
   * Updated `terra-status` documentation with deprecation notice and badge.
@@ -28,7 +32,7 @@
 
 ## 1.53.0 - (December 11, 2023)
 
-* Changed 
+* Changed
    * Reverted `Removed ariaDescription prop from list`.
 
 * Added

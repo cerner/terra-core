@@ -7,13 +7,6 @@ import styles from '../FormSelectDocCommon.module.scss';
 const cx = classNames.bind(styles);
 
 const TagSelectExample = () => (
-  // <TagSelect placeholder="Select a color" className={cx('form-select')}>
-  //   <TagSelect.Option value="blue" display="Blue" />
-  //   <TagSelect.Option value="green" display="Green" />
-  //   <TagSelect.Option value="purple" display="Purple" />
-  //   <TagSelect.Option value="red" display="Red" />
-  //   <TagSelect.Option value="violet" display="Violet" />
-  // </TagSelect>
   <Field
     label="Colors"
     htmlFor="color-field-1"
