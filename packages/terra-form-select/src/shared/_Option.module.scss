@@ -13,6 +13,21 @@
     outline: none;
     padding: var(--terra-form-select-option-padding, 0.286rem 0.714rem);
     user-select: none;
+
+    &:hover {
+      background-color: var(--terra-form-select-option-hover-background-color, #f4fafe);
+      background-image: var(--terra-form-select-option-hover-background-image, linear-gradient(to bottom, #e1f2fd 2%, #ebf6fe 30%, #f4fafe 80%));
+      box-shadow: var(--terra-form-select-option-hover-box-shadow, inset 0 0 0 1px #e1f2fd);
+      outline: none;
+      z-index: 1;
+    }
+
+    &.is-active {
+      background-color: var(--terra-form-select-option-active-background-color, #ebf6fd);
+      outline: var(--terra-form-select-option-active-color-outline, 2px dashed #000);
+      outline-offset: -2px;
+      z-index: 2;
+    }
   }
 
   .is-default {
@@ -20,12 +35,20 @@
       background-color: var(--terra-form-select-default-option-active-background-color, #0079be);
       color: var(--terra-form-select-default-option-active-color, #fff);
       font-weight: var(--terra-form-select-default-option-active-font-weight, normal);
+      background-image: none;
+      box-shadow: none;
     }
 
     &.is-selected {
       background-color: var(--terra-form-select-default-option-selected-background-color, #0079be);
       color: var(--terra-form-select-default-option-selected-color, #fff);
       font-weight: var(--terra-form-select-default-option-selected-font-weight, normal);
+
+      &:hover {
+        background-color: var(--terra-form-select-default-option-selected-hover-background-color, #0065a3);
+        background-image: none;
+        box-shadow: none;
+      }
     }
 
     &.is-selected.is-active {
@@ -73,12 +96,6 @@
 
   .is-selected > .icon {
     visibility: visible;
-  }
-
-  .is-active {
-    background-color: var(--terra-form-select-option-active-background-color, #ebf6fd);
-    outline: var(--terra-form-select-option-active-color-outline, 2px dashed #000);
-    outline-offset: -2px;
   }
 
   .is-disabled {
