@@ -2,8 +2,9 @@
 
 ## Unreleased
 
-* Updated
-  * Updated visible label for exapmles in `terra-search-field`. 
+* Added
+  *Added condition to announce default values for "search-field-minimum-length" example `terra-search-field`.
+  *Added "aria-label" attribute to announce error message for "search-field-programmatic-set" example for `terra-search-field`.
 
 * Updated
   * Updated Draggable list item example for selection state in `terra-list`.
