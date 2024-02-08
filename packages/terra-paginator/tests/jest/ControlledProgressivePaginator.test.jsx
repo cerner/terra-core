@@ -1,8 +1,6 @@
 import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 
-/* eslint-disable-next-line import/no-extraneous-dependencies */
-import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
 import ControlledProgressivePaginator from '../../src/ControlledProgressivePaginator';
 
 describe('Paginator', () => {
@@ -13,21 +11,21 @@ describe('Paginator', () => {
 
   // Snapshot Tests
   it('should render a Controlled ProgressivePaginator - Tiny', () => {
-    const wrapper = shallowWithIntl(defaultRender).dive();
+    const wrapper = enzymeIntl.shallowWithIntl(defaultRender).dive();
     wrapper.setState({ breakpoint: 'tiny' });
     wrapper.update();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a Controlled ProgressivePaginator - Large', () => {
-    const wrapper = shallowWithIntl(defaultRender).dive();
+    const wrapper = enzymeIntl.shallowWithIntl(defaultRender).dive();
     wrapper.setState({ breakpoint: 'large' });
     wrapper.update();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('correctly applies the theme context className', () => {
-    const wrapper = mountWithIntl(
+    const wrapper = enzymeIntl.mountWithIntl(
       <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
         {defaultRender}
       </ThemeContextProvider>,
@@ -36,7 +34,7 @@ describe('Paginator', () => {
   });
 
   it('should render a Controlled ProgressivePaginator with visually hidden text', () => {
-    const wrapper = shallowWithIntl(renderWithSelectedPage).dive();
+    const wrapper = enzymeIntl.shallowWithIntl(renderWithSelectedPage).dive();
     wrapper.setState({ breakpoint: 'tiny' });
     wrapper.update();
     wrapper.find('PaginatorButton').first().simulate('click', { nativeEvent: { keyCode: null } });
@@ -46,7 +44,7 @@ describe('Paginator', () => {
 
   // Prop Tests
   it('should render a Controlled ProgressivePaginator with heading id - Tiny', () => {
-    const wrapper = shallowWithIntl(renderWithHeadingId).dive();
+    const wrapper = enzymeIntl.shallowWithIntl(renderWithHeadingId).dive();
     wrapper.setState({ breakpoint: 'tiny' });
     wrapper.update();
     expect(wrapper.find('.paginator.progressive').prop('aria-labelledby')).toEqual('paginator_header_id');
@@ -54,7 +52,7 @@ describe('Paginator', () => {
   });
 
   it('should render a Controlled ProgressivePaginator with aria label - Tiny', () => {
-    const wrapper = shallowWithIntl(renderWithAriaLabel).dive();
+    const wrapper = enzymeIntl.shallowWithIntl(renderWithAriaLabel).dive();
     wrapper.setState({ breakpoint: 'tiny' });
     wrapper.update();
     expect(wrapper.find('.paginator.progressive').prop('aria-label')).toEqual('paginator_label');

@@ -1,7 +1,5 @@
 import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
-/* eslint-disable-next-line import/no-extraneous-dependencies */
-import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
 import List, { Item, Section } from '../../src/index';
 
 // Snapshot Tests
@@ -12,12 +10,12 @@ it('should render with items', () => {
   const item4 = <Item key="126" />;
   const item5 = <Item key="127" />;
   const items = [item1, item2, item3, item4, item5];
-  const shallowComponent = shallowWithIntl(<List>{items}</List>).dive();
+  const shallowComponent = enzymeIntl.shallowWithIntl(<List>{items}</List>).dive();
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render with no items', () => {
-  const shallowComponent = shallowWithIntl(<List />).dive();
+  const shallowComponent = enzymeIntl.shallowWithIntl(<List />).dive();
   expect(shallowComponent).toMatchSnapshot();
 });
 
@@ -28,7 +26,7 @@ it('should render with standard divided items', () => {
   const item4 = <Item key="126" />;
   const item5 = <Item key="127" />;
   const items = [item1, item2, item3, item4, item5];
-  const shallowComponent = shallowWithIntl(<List dividerStyle="standard">{items}</List>).dive();
+  const shallowComponent = enzymeIntl.shallowWithIntl(<List dividerStyle="standard">{items}</List>).dive();
   expect(shallowComponent).toMatchSnapshot();
 });
 
@@ -39,7 +37,7 @@ it('should render with bottom only divided items', () => {
   const item4 = <Item key="126" />;
   const item5 = <Item key="127" />;
   const items = [item1, item2, item3, item4, item5];
-  const shallowComponent = shallowWithIntl(<List dividerStyle="bottom-only">{items}</List>).dive();
+  const shallowComponent = enzymeIntl.shallowWithIntl(<List dividerStyle="bottom-only">{items}</List>).dive();
   expect(shallowComponent).toMatchSnapshot();
 });
 
@@ -50,7 +48,7 @@ it('should render with standard padded items', () => {
   const item4 = <Item key="126" />;
   const item5 = <Item key="127" />;
   const items = [item1, item2, item3, item4, item5];
-  const shallowComponent = shallowWithIntl(<List paddingStyle="standard">{items}</List>).dive();
+  const shallowComponent = enzymeIntl.shallowWithIntl(<List paddingStyle="standard">{items}</List>).dive();
   expect(shallowComponent).toMatchSnapshot();
 });
 
@@ -61,7 +59,7 @@ it('should render with thin padded items', () => {
   const item4 = <Item key="126" />;
   const item5 = <Item key="127" />;
   const items = [item1, item2, item3, item4, item5];
-  const shallowComponent = shallowWithIntl(<List paddingStyle="compact">{items}</List>).dive();
+  const shallowComponent = enzymeIntl.shallowWithIntl(<List paddingStyle="compact">{items}</List>).dive();
   expect(shallowComponent).toMatchSnapshot();
 });
 
@@ -72,7 +70,7 @@ it('should render with ariaDescribedBy', () => {
   const item4 = <Item key="126" />;
   const item5 = <Item key="127" />;
   const items = [item1, item2, item3, item4, item5];
-  const shallowComponent = shallowWithIntl(
+  const shallowComponent = enzymeIntl.shallowWithIntl(
     <div>
       <p id="list-help"> Navigate this list using the arrow keys. </p>
       <List ariaDescribedBy="list-help">{items}</List>
@@ -88,7 +86,7 @@ it('should render with ariaDescription', () => {
   const item4 = <Item key="126" />;
   const item5 = <Item key="127" />;
   const items = [item1, item2, item3, item4, item5];
-  const shallowComponent = shallowWithIntl(
+  const shallowComponent = enzymeIntl.shallowWithIntl(
     <List ariaDescription="Navigate this list using the arrow keys.">{items}</List>,
   ).dive();
   expect(shallowComponent).toMatchSnapshot();
@@ -100,7 +98,7 @@ it('should render with ariaDetails', () => {
   const item4 = <Item key="126" />;
   const item5 = <Item key="127" />;
   const items = [item1, item2, item3, item4, item5];
-  const shallowComponent = shallowWithIntl(
+  const shallowComponent = enzymeIntl.shallowWithIntl(
     <div>
       <p id="list-details"> Here is some more information about this list. </p>
       <List ariaDetails="list-details">{items}</List>
@@ -116,7 +114,7 @@ it('should render with ariaDescribedBy', () => {
   const item4 = <Item key="126" />;
   const item5 = <Item key="127" />;
   const items = [item1, item2, item3, item4, item5];
-  const shallowComponent = shallowWithIntl(
+  const shallowComponent = enzymeIntl.shallowWithIntl(
     <div>
       <p id="list-help"> Navigate this list using the arrow keys. </p>
       <List ariaDescribedBy="list-help">{items}</List>
@@ -132,7 +130,7 @@ it('should render with ariaDescription', () => {
   const item4 = <Item key="126" />;
   const item5 = <Item key="127" />;
   const items = [item1, item2, item3, item4, item5];
-  const shallowComponent = shallowWithIntl(
+  const shallowComponent = enzymeIntl.shallowWithIntl(
     <List ariaDescription="Navigate this list using the arrow keys.">{items}</List>,
   ).dive();
   expect(shallowComponent).toMatchSnapshot();
@@ -145,7 +143,7 @@ it('should render with ariaDetails', () => {
   const item4 = <Item key="126" />;
   const item5 = <Item key="127" />;
   const items = [item1, item2, item3, item4, item5];
-  const shallowComponent = shallowWithIntl(
+  const shallowComponent = enzymeIntl.shallowWithIntl(
     <div>
       <p id="list-details"> Here is some more information about this list. </p>
       <List ariaDetails="list-details">{items}</List>
@@ -161,7 +159,7 @@ it('should render with single select aria attributes with ariaSelectionStyle sin
   const item4 = <Item key="126" />;
   const item5 = <Item key="127" />;
   const items = [item1, item2, item3, item4, item5];
-  const shallowComponent = shallowWithIntl(
+  const shallowComponent = enzymeIntl.shallowWithIntl(
     <List ariaSelectionStyle="single-select">{items}</List>,
   ).dive();
   expect(shallowComponent).toMatchSnapshot();
@@ -174,14 +172,14 @@ it('should render with mutli select aria attributes with ariaSelectionStyle mutl
   const item4 = <Item key="126" />;
   const item5 = <Item key="127" />;
   const items = [item1, item2, item3, item4, item5];
-  const shallowComponent = shallowWithIntl(
+  const shallowComponent = enzymeIntl.shallowWithIntl(
     <List ariaSelectionStyle="multi-select">{items}</List>,
   ).dive();
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render with null sections', () => {
-  const shallowComponent = shallowWithIntl(
+  const shallowComponent = enzymeIntl.shallowWithIntl(
     <List dividerStyle="standard" role="listbox">
       <Section title="section 1" isCollapsed />
       <Section title="section 2" isCollapsed />
@@ -196,7 +194,7 @@ it('should render with null sections', () => {
 });
 
 it('correctly applies the theme context className', () => {
-  const wrapper = mountWithIntl(
+  const wrapper = enzymeIntl.mountWithIntl(
     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
       <List />
     </ThemeContextProvider>,
