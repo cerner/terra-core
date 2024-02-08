@@ -6,12 +6,12 @@ import ThemeContext from 'terra-theme-context';
 import { FormattedMessage, injectIntl } from 'react-intl';
 import uniqueid from 'lodash.uniqueid';
 import * as KeyCode from 'keycode-js';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
 import Dropdown from '../shared/_Dropdown';
 import Menu from './Menu';
 import FrameUtil from '../shared/_FrameUtil';
 import styles from '../shared/_Frame.module.scss';
 import MenuUtil from '../shared/_MenuUtil';
-import VisuallyHiddenText from 'terra-visually-hidden-text';
 import 'mutationobserver-shim';
 import '../shared/_contains-polyfill';
 import '../shared/_matches-polyfill';
@@ -418,7 +418,7 @@ class Frame extends React.Component {
   getDisplay(displayId, ariaDescribedBy, id) {
     const { searchValue, isFocused } = this.state;
     const {
-      disabled, display, placeholder, required, value, inputId, isInvalid, intl
+      disabled, display, placeholder, required, value, inputId, isInvalid, intl,
     } = this.props;
 
     const isHidden = !isFocused && value && value.length > 0;
@@ -565,7 +565,12 @@ class Frame extends React.Component {
    * Falls back to the string 'Search' if no label is provided
    */
   ariaLabel() {
-    const { ariaLabel, placeholder, disabled, intl } = this.props;
+    const {
+      ariaLabel,
+      disabled,
+      placeholder,
+      intl,
+    } = this.props;
 
     const dimmed = intl.formatMessage({ id: 'Terra.form.select.dimmed' });
 
