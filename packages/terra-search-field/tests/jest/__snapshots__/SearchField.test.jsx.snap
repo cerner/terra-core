@@ -912,7 +912,7 @@ exports[`Snapshots renders a search field with an aria-label using prop 1`] = `
       >
         <input
           aria-disabled={false}
-          aria-label="Search Field"
+          aria-label=""
           ariaLabel="Search Field"
           className="input"
           disabled={false}
