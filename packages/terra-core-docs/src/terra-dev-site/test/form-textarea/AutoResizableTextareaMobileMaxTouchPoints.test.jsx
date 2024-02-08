@@ -39,7 +39,7 @@ export default class textarea extends React.Component {
     /* eslint-enable compat/compat */
   }
 
-  componentWillUnenzyme.mount() {
+  componentWillUnmount() {
     if (this.resetMaxTouchPoints) {
       Object.defineProperty(
         navigator, 'maxTouchPoints',
