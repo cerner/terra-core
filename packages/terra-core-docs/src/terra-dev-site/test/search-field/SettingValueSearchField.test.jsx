@@ -58,6 +58,8 @@ const SettingValueSearchField = () => {
         minimumSearchTextLength={3}
         value={text}
         inputRefCallback={(ref) => { inputRef.current = ref; }}
+        isLabelVisible
+        groupName="Find a clinic"
       />
       <Button text="Set search field text" onClick={setTextClick} id="search-field-set-text-button" />
       <div id="search-callback-text">

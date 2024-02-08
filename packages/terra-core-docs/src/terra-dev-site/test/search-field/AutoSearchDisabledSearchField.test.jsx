@@ -31,6 +31,8 @@ class AutoSearchDisabledSearchField extends React.Component {
           onSearch={this.handleSearch}
           onInvalidSearch={this.handleInvalidSearch}
           disableAutoSearch
+          isLabelVisible
+          groupName="Find a clinic"
         />
         <div id="search-callback-text">
           {this.state.message}

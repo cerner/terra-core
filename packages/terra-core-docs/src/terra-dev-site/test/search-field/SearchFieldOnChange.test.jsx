@@ -25,6 +25,8 @@ class SearchFieldOnChange extends React.Component {
           id="searchfield"
           onChange={this.onChange}
           value={this.state.searchText}
+          isLabelVisible
+          groupName="Find a clinic"
         />
       </div>
     );
