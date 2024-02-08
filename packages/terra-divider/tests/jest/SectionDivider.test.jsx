@@ -14,7 +14,7 @@ describe('Divider', () => {
 
   it('it should pass the All the Props', () => {
     const wrapper = enzyme.shallow(<SectionDivider id="testDivider" text="custom-text" level={3} />);
-    expect(wrapper).toMatchSnapshogt();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('should apply the theme context className to the text divider', () => {

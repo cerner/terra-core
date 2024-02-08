@@ -110,7 +110,7 @@ describe('ShowHide', () => {
 
   it('should throw error for required intl prop', () => {
     try {
-      render(<ShowHide onChange={e => typeof e}>Full Text</ShowHide>);
+      enzyme.render(<ShowHide onChange={e => typeof e}>Full Text</ShowHide>);
     } catch (e) {
       expect(e.message).toContain('[React Intl] Could not find required `intl` object. <IntlProvider> needs to exist in the component ancestry.');
     }
