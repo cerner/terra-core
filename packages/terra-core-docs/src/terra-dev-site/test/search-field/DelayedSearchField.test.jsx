@@ -18,7 +18,7 @@ class DelayedSearchField extends React.Component {
           {' '}
           {this.state.searchText}
         </div>
-        <SearchField searchDelay={1000} onSearch={(searchText) => { this.setState({ searchText }); }} />
+        <SearchField searchDelay={1000} onSearch={(searchText) => { this.setState({ searchText }); }} isLabelVisible groupName="Find a clinic" />
       </div>
     );
   }
