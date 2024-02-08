@@ -57,6 +57,8 @@ const SearchFieldProgrammaticSet = () => {
         value={text}
         inputRefCallback={(ref) => { inputRef.current = ref; }}
         inputAttributes={{ 'aria-label': message }}
+        isLabelVisible
+        groupName="Find a clinic"
       />
       <div id="search-callback-text">
         {message}

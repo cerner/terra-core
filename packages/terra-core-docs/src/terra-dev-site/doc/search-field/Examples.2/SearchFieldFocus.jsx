@@ -19,6 +19,8 @@ const SearchFieldFocus = () => {
     <div>
       <Button text="Focus Me" onClick={handleButtonClick} className={cx('search-field-focus-button')} id="search-field-focus-button" />
       <SearchField
+        isLabelVisible
+        groupName="Find a clinic"
         inputRefCallback={(inputRef) => { searchElement.current = inputRef; }}
       />
     </div>

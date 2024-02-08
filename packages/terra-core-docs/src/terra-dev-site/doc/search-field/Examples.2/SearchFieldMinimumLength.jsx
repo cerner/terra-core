@@ -15,7 +15,7 @@ const SearchFieldMinimumLength = () => {
   return (
     <div>
       <p>{message}</p>
-      <SearchField minimumSearchTextLength={5} inputAttributes={{ 'aria-label': message }} onSearch={setSearchText} onInvalidSearch={setSearchText} />
+      <SearchField minimumSearchTextLength={5} inputAttributes={{ 'aria-label': message }} onSearch={setSearchText} onInvalidSearch={setSearchText} isLabelVisible groupName="Find a clinic" />
       {(searchText.length > 0 && searchText.length < 5) && (
       <div id="search-callback-text" className={cx('error-text')}>
         INVALID Search Text:

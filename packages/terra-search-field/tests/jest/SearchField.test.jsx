@@ -65,7 +65,7 @@ describe('Snapshots', () => {
 
   it('renders a search field with an aria-label using prop', () => {
     const searchField = shallowWithIntl(<SearchField inputAttributes={{ ariaLabel: 'Search Field' }} />).dive();
-    expect(searchField.find('input').prop('aria-label')).toEqual('Terra.searchField.search');
+    expect(searchField.find('input').prop('aria-label')).toEqual('');
     expect(searchField).toMatchSnapshot();
   });
 

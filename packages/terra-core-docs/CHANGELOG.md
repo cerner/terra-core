@@ -3,11 +3,13 @@
 ## Unreleased
 
 * Added
-  *Added condition to announce default values for "search-field-minimum-length" example `terra-search-field`.
-  *Added "aria-label" attribute to announce error message for "search-field-programmatic-set" example for `terra-search-field`.
+  * Added visual labels for `terra-search-field` examples. 
+  * Added condition to announce default values for "search-field-minimum-length" example `terra-search-field`.
+  * Added "aria-label" attribute to announce error message for "search-field-programmatic-set" example for `terra-search-field`.
 
 * Updated
   * Updated Draggable list item example for selection state in `terra-list`.
+  * Updated `terra-status` documentation with deprecation notice and badge.
   * Updated `terra-html-table` documentation with deprecation notice and badge.
 
 ## 1.56.0 - (January 9, 2024)

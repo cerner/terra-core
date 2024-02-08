@@ -3,8 +3,9 @@
 ## Unreleased
 
 * Fixed
+  * Removed unnecessary aria labels and roles to fix redundant announcement of search group issue.
   * Fixed port resized 320x256 px for `terra-search-field`.
-  *Added styles for "focus me" button for `terra-search-field`.
+  * Added styles for "focus me" button for `terra-search-field`.
 
 ## 3.99.0 - (January 9, 2024)
 
