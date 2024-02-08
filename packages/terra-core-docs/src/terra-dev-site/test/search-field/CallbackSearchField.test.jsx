@@ -31,6 +31,8 @@ class CallbackSearchField extends React.Component {
           onSearch={this.handleSearch}
           onInvalidSearch={this.handleInvalidSearch}
           minimumSearchTextLength={3}
+          isLabelVisible
+          groupName="Find a clinic"
         />
         <div id="search-callback-text">
           {this.state.message}

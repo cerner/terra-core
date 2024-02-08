@@ -25,7 +25,7 @@ const propTypes = {
   disableAutoSearch: PropTypes.bool,
 
   /**
-   * Group name value for search group elements. This value is also used as Label name.
+   * Group name value for search group elements. This value is also used as Label name. Default value Search is being used when no value is provided.
    */
   groupName: PropTypes.string,
 
@@ -267,8 +267,8 @@ class SearchField extends React.Component {
       customProps.className,
     );
 
-    const inputAriaLabelText = inputAttributes && Object.prototype.hasOwnProperty.call(inputAttributes, 'aria-label') ? inputAttributes['aria-label'] : intl.formatMessage({ id: 'Terra.searchField.search' });
-    const groupNameValue = groupName === 'Search' ? intl.formatMessage({ id: 'Terra.searchField.search' }) : groupName;
+    const groupNameValue = groupName !== 'Search' ? groupName : '';
+    const inputAriaLabelText = inputAttributes && Object.prototype.hasOwnProperty.call(inputAttributes, 'aria-label') ? inputAttributes['aria-label'] : groupNameValue;
     const buttonText = intl.formatMessage({ id: 'Terra.searchField.submit-search' });
     const clearText = intl.formatMessage({ id: 'Terra.searchField.clear' });
     const additionalInputAttributes = { ...inputAttributes };
@@ -306,8 +306,8 @@ class SearchField extends React.Component {
         && (
         <label className={cx('label')}>{groupName}</label>
         )}
-        <div role="search" className={cx('search-role-container')} aria-label={intl.formatMessage({ id: 'Terra.searchField.search' })}>
-          <div role="group" aria-label={groupNameValue} {...customProps} className={searchFieldClassNames}>
+        <div className={cx('search-role-container')}>
+          <div role="group" aria-label={intl.formatMessage({ id: 'Terra.searchField.search' })} {...customProps} className={searchFieldClassNames}>
             <div className={cx('input-group')}>
               <input
                 {...additionalInputAttributes}

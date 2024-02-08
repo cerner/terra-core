@@ -1,4 +1,4 @@
 import React from 'react';
 import SearchField from 'terra-search-field';
 
-export default () => <SearchField id="searchfield" isBlock />;
+export default () => <SearchField id="searchfield" isBlock isLabelVisible groupName="Find a clinic" />;
