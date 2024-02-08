@@ -29,7 +29,11 @@
     "extends @cerner/browserslist-config-terra"
   ],
   "eslintConfig": {
-    "extends": "@cerner/terra"
+    "extends": "@cerner/terra",
+    "globals": {
+      "enzyme":"readonly",
+      "enzymeIntl":"readonly"
+    }
   },
   "package-json-lint": {
     "extends": "@cerner/package-json-lint-config-terra/package-json-lint.config.js",
