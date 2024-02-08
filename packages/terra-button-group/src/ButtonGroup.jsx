@@ -170,9 +170,8 @@ class ButtonGroup extends React.Component {
 
     React.Children.forEach(children, (child, index) => {
       const isSelected = selectedKeys.indexOf(child.key) > -1;
-      const shouldTabIndexBeZero = (onChange && !isMultiSelect) && (!isSelected && index === 0);
-      // eslint-disable-next-line no-nested-ternary
-      const tabAttr = { tabIndex: shouldTabIndexBeZero ? '0' : (isSelected ? '0' : '-1') };
+      const shouldTabIndexBeZero = onChange && btnRole === 'radio' && (index === 0 || isSelected);
+      const tabAttr = (onChange && !isMultiSelect) && { tabIndex: shouldTabIndexBeZero ? '0' : '-1' };
       const cloneChild = React.cloneElement(child, {
         role: btnRole || undefined,
         ...tabAttr,
