@@ -19,6 +19,10 @@ const ProgressBarHeightSize = {
 
 const propTypes = {
   /**
+   * String that labels the progress bar for screen readers.
+   */
+  ariaLabel: PropTypes.string,
+  /**
    * Sets the size of the progress-bar from the following values; `tiny`, `small`, `medium`, `large` and `huge`
    */
   heightSize: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
@@ -60,6 +64,7 @@ const defaultProps = {
 };
 
 const ProgressBar = ({
+  ariaLabel,
   heightSize,
   value,
   max,
@@ -88,13 +93,14 @@ const ProgressBar = ({
     <div>
       <progress
         {...customProps}
+        aria-label={ariaLabel}
         className={classes}
         max={100}
         value={normalizedValue}
         aria-valuemax={100}
         aria-valuemin={0}
         aria-valuenow={normalizedValue}
-        aria-valuetext={valText}
+        aria-valuetext={valueText && valText}
         tabIndex="-1"
       />
       {valueText && <VisuallyHiddenText aria-live="polite" text={valText} />}
