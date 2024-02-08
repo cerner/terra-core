@@ -100,7 +100,7 @@ const ProgressBar = ({
         aria-valuemax={100}
         aria-valuemin={0}
         aria-valuenow={normalizedValue}
-        aria-valuetext={valueText && valText}
+        aria-valuetext={valText}
         tabIndex="-1"
       />
       {valueText && <VisuallyHiddenText aria-live="polite" text={valText} />}
