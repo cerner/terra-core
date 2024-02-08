@@ -12,37 +12,37 @@ it('should render with items', () => {
   const item4 = <Item key="126" />;
   const item5 = <Item key="127" />;
   const items = [item1, item2, item3, item4, item5];
-  const shallowComponent = shallowWithIntl(<Section title="test">{items}</Section>).dive();
+  const shallowComponent = enzymeIntl.shallowWithIntl(<Section title="test">{items}</Section>).dive();
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render with no items', () => {
-  const shallowComponent = shallowWithIntl(<Section title="test" />).dive();
+  const shallowComponent = enzymeIntl.shallowWithIntl(<Section title="test" />).dive();
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render with level', () => {
-  const shallowComponent = shallowWithIntl(<Section title="test" level={3} />).dive();
+  const shallowComponent = enzymeIntl.shallowWithIntl(<Section title="test" level={3} />).dive();
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render with isCollapsed', () => {
-  const shallowComponent = shallowWithIntl(<Section title="test" isCollapsed />).dive();
+  const shallowComponent = enzymeIntl.shallowWithIntl(<Section title="test" isCollapsed />).dive();
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render with isCollapsible', () => {
-  const shallowComponent = shallowWithIntl(<Section title="test" isCollapsible />).dive();
+  const shallowComponent = enzymeIntl.shallowWithIntl(<Section title="test" isCollapsible />).dive();
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render with callback functions', () => {
-  const shallowComponent = shallowWithIntl(<Section title="test" refCallback={jest.fn()} onSelect={jest.fn()} />).dive();
+  const shallowComponent = enzymeIntl.shallowWithIntl(<Section title="test" refCallback={jest.fn()} onSelect={jest.fn()} />).dive();
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('correctly applies the theme context className', () => {
-  const wrapper = mountWithIntl(
+  const wrapper = enzymeIntl.mountWithIntl(
     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
       <ListSection title="test" />
     </ThemeContextProvider>,

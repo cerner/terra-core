@@ -12,6 +12,6 @@ it('should render MultiSelectField component with max height', () => {
     </MultiSelectField>
   );
 
-  expect(shallowWithIntl(select).dive().dive()).toMatchSnapshot();
+  expect(enzymeIntl.shallowWithIntl(select).dive().dive()).toMatchSnapshot();
 });
 

@@ -23,7 +23,7 @@ afterAll(() => {
 
 describe('Alert with no props', () => {
   it('should render a default component', () => {
-    const wrapper = mountWithIntl(<Alert />);
+    const wrapper = enzymeIntl.mountWithIntl(<Alert />);
 
     const alert = wrapper.find('Alert');
     expect(alert.prop('customColorClass')).toEqual('custom-default-color');
@@ -33,7 +33,7 @@ describe('Alert with no props', () => {
   });
 
   it('should render a default notification banner with default props', () => {
-    const wrapper = shallowWithIntl(<Alert />).dive();
+    const wrapper = enzymeIntl.shallowWithIntl(<Alert />).dive();
 
     const alertDiv = wrapper.find('div.alert-base');
     const alertFocusDiv = wrapper.find('div.focus-container');
@@ -48,7 +48,7 @@ describe('Alert with no props', () => {
 
 describe('Alert with props', () => {
   it('should render an alert with provided role', () => {
-    const wrapper = shallowWithIntl(<Alert role="status" />).dive();
+    const wrapper = enzymeIntl.shallowWithIntl(<Alert role="status" />).dive();
 
     const alertDiv = wrapper.find('div.alert-base');
     expect(alertDiv.prop('className')).toEqual('alert-base alert wide');
@@ -59,7 +59,7 @@ describe('Alert with props', () => {
   });
 
   it('should render disableAlertActionFocus when provided', () => {
-    const wrapper = mountWithIntl(<Alert disableAlertActionFocus />);
+    const wrapper = enzymeIntl.mountWithIntl(<Alert disableAlertActionFocus />);
 
     const alert = wrapper.find('Alert');
     expect(alert.prop('disableAlertActionFocus')).toEqual(true);
@@ -67,7 +67,7 @@ describe('Alert with props', () => {
   });
 
   it('should render an alert with provided title', () => {
-    const wrapper = shallowWithIntl(<Alert title="Custom Title" />).dive();
+    const wrapper = enzymeIntl.shallowWithIntl(<Alert title="Custom Title" />).dive();
     const alertTitle = wrapper.find('.title');
 
     expect(alertTitle.prop('children')).toEqual(
@@ -84,7 +84,7 @@ describe('Alert with props', () => {
 describe('Dismissible Alert that includes actions section', () => {
   it('should render an alert component with a dismiss button', () => {
     const mockOnDismiss = jest.fn();
-    const wrapper = shallowWithIntl(<Alert onDismiss={mockOnDismiss}>This is a test</Alert>).dive();
+    const wrapper = enzymeIntl.shallowWithIntl(<Alert onDismiss={mockOnDismiss}>This is a test</Alert>).dive();
 
     const dismissButton = wrapper.find(Button);
     expect(wrapper.find('.title').text()).toEqual('Terra.alert.alert');
@@ -99,7 +99,7 @@ describe('Dismissible Alert that includes actions section', () => {
 
 describe('Alert of type alert with text content', () => {
   it('should render an Alert component of type alert', () => {
-    const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.ALERT}>This is a test</Alert>).dive();
+    const wrapper = enzymeIntl.shallowWithIntl(<Alert type={Alert.Opts.Types.ALERT}>This is a test</Alert>).dive();
 
     const alertDiv = wrapper.find('div.alert-base');
     expect(alertDiv.prop('className')).toEqual('alert-base alert wide');
@@ -112,7 +112,7 @@ describe('Alert of type alert with text content', () => {
 
 describe('Alert of type error with text content', () => {
   it('should render an Alert component of type error', () => {
-    const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.ERROR}>This is an error.</Alert>).dive();
+    const wrapper = enzymeIntl.shallowWithIntl(<Alert type={Alert.Opts.Types.ERROR}>This is an error.</Alert>).dive();
 
     const alertDiv = wrapper.find('div.alert-base');
     expect(alertDiv.prop('className')).toEqual('alert-base error wide');
@@ -125,7 +125,7 @@ describe('Alert of type error with text content', () => {
 
 describe('Alert of type warning with text content', () => {
   it('should render an Alert component of type warning', () => {
-    const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.WARNING}>This is an warning.</Alert>).dive();
+    const wrapper = enzymeIntl.shallowWithIntl(<Alert type={Alert.Opts.Types.WARNING}>This is an warning.</Alert>).dive();
 
     const alertDiv = wrapper.find('div.alert-base');
     expect(alertDiv.prop('className')).toEqual('alert-base warning wide');
@@ -138,7 +138,7 @@ describe('Alert of type warning with text content', () => {
 
 describe('Alert of type advisory with text content', () => {
   it('should render an Alert component of type advisory', () => {
-    const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.ADVISORY}>This is an advisory alert.</Alert>).dive();
+    const wrapper = enzymeIntl.shallowWithIntl(<Alert type={Alert.Opts.Types.ADVISORY}>This is an advisory alert.</Alert>).dive();
 
     const alertDiv = wrapper.find('div.alert-base');
     expect(alertDiv.prop('className')).toEqual('alert-base advisory wide');
@@ -150,7 +150,7 @@ describe('Alert of type advisory with text content', () => {
 
 describe('Alert of type unsatisfied', () => {
   it('should render an unsatisfied Alert', () => {
-    const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.UNSATISFIED}>This is an unsatisfied alert.</Alert>).dive();
+    const wrapper = enzymeIntl.shallowWithIntl(<Alert type={Alert.Opts.Types.UNSATISFIED}>This is an unsatisfied alert.</Alert>).dive();
 
     const alertDiv = wrapper.find('div.alert-base');
     expect(alertDiv.prop('className')).toEqual('alert-base unsatisfied wide');
@@ -163,7 +163,7 @@ describe('Alert of type unsatisfied', () => {
 
 describe('Alert of type unverified', () => {
   it('should render an unverified Alert', () => {
-    const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.UNVERIFIED}>This is an unverified alert.</Alert>).dive();
+    const wrapper = enzymeIntl.shallowWithIntl(<Alert type={Alert.Opts.Types.UNVERIFIED}>This is an unverified alert.</Alert>).dive();
 
     const alertDiv = wrapper.find('div.alert-base');
     expect(alertDiv.prop('className')).toEqual('alert-base unverified wide');
@@ -176,7 +176,7 @@ describe('Alert of type unverified', () => {
 
 describe('Alert of type info with text content', () => {
   it('should render an Alert component of type info', () => {
-    const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.INFO}>This is an information alert.</Alert>).dive();
+    const wrapper = enzymeIntl.shallowWithIntl(<Alert type={Alert.Opts.Types.INFO}>This is an information alert.</Alert>).dive();
 
     const alertDiv = wrapper.find('div.alert-base');
     expect(alertDiv.prop('className')).toEqual('alert-base info wide');
@@ -189,7 +189,7 @@ describe('Alert of type info with text content', () => {
 
 describe('Alert of type success with text content', () => {
   it('should render an Alert component of type success', () => {
-    const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.SUCCESS}>This is a success alert.</Alert>).dive();
+    const wrapper = enzymeIntl.shallowWithIntl(<Alert type={Alert.Opts.Types.SUCCESS}>This is a success alert.</Alert>).dive();
 
     const alertDiv = wrapper.find('div.alert-base');
     expect(alertDiv.prop('className')).toEqual('alert-base success wide');
@@ -202,7 +202,7 @@ describe('Alert of type success with text content', () => {
 
 describe('Alert of type custom with custom title and text content', () => {
   it('should render an Alert component of type custom', () => {
-    const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.CUSTOM} title="Help!" customIcon={<IconHelp />} customColorClass="terra-alert-custom-orange-color">This is a custom alert.</Alert>).dive();
+    const wrapper = enzymeIntl.shallowWithIntl(<Alert type={Alert.Opts.Types.CUSTOM} title="Help!" customIcon={<IconHelp />} customColorClass="terra-alert-custom-orange-color">This is a custom alert.</Alert>).dive();
 
     const alertDiv = wrapper.find('div.alert-base');
     expect(alertDiv.prop('className')).toEqual('alert-base custom wide terra-alert-custom-orange-color');
@@ -215,7 +215,7 @@ describe('Alert of type custom with custom title and text content', () => {
 
 describe('Alert of type info with custom title and HTML content', () => {
   it('should render an Alert component of type info with custom title and HTML content', () => {
-    const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.INFO} title="Gettysburg Address"><span>Four score and seven years ago . . .</span></Alert>).dive();
+    const wrapper = enzymeIntl.shallowWithIntl(<Alert type={Alert.Opts.Types.INFO} title="Gettysburg Address"><span>Four score and seven years ago . . .</span></Alert>).dive();
 
     const alertDiv = wrapper.find('div.alert-base');
     expect(alertDiv.prop('className')).toEqual('alert-base info wide');
@@ -236,7 +236,7 @@ describe('Alert of type info with custom title and HTML content', () => {
 describe('Alert of type success with an action button text content', () => {
   it('should render an Alert component of type success with an action button', () => {
     const mockOnClick = jest.fn();
-    const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.SUCCESS} action={<Button text="Action" variant={Button.Opts.Variants.EMPHASIS} onClick={mockOnClick} />}>This is a success alert.</Alert>).dive();
+    const wrapper = enzymeIntl.shallowWithIntl(<Alert type={Alert.Opts.Types.SUCCESS} action={<Button text="Action" variant={Button.Opts.Variants.EMPHASIS} onClick={mockOnClick} />}>This is a success alert.</Alert>).dive();
 
     const alertDiv = wrapper.find('div.alert-base');
     expect(alertDiv.prop('className')).toEqual('alert-base success wide');
@@ -255,7 +255,7 @@ describe('Dismissible Alert of type custom with action button, custom title and 
   it('should render an Alert component of type custom with an action button', () => {
     const mockOnClick = jest.fn();
     const mockOnDismiss = jest.fn();
-    const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.CUSTOM} onDismiss={mockOnDismiss} title="Help!" customIcon={<IconHelp />} customColorClass="terra-alert-custom-orange-color" action={<Button text="Action" variant={Button.Opts.Variants.EMPHASIS} onClick={mockOnClick} />}>This is a custom alert.</Alert>).dive();
+    const wrapper = enzymeIntl.shallowWithIntl(<Alert type={Alert.Opts.Types.CUSTOM} onDismiss={mockOnDismiss} title="Help!" customIcon={<IconHelp />} customColorClass="terra-alert-custom-orange-color" action={<Button text="Action" variant={Button.Opts.Variants.EMPHASIS} onClick={mockOnClick} />}>This is a custom alert.</Alert>).dive();
 
     const alertDiv = wrapper.find('div.alert-base');
     expect(alertDiv.prop('className')).toEqual('alert-base custom wide terra-alert-custom-orange-color');
@@ -281,7 +281,7 @@ describe('Notifications titles', () => {
 
   describe('Custom notification with no title prop', () => {
     beforeEach(() => {
-      wrapper = shallowWithIntl(
+      wrapper = enzymeIntl.shallowWithIntl(
         <Alert
           type={Alert.Opts.Types.CUSTOM}
           onDismiss={() => { }}
@@ -309,7 +309,7 @@ describe('Notifications titles', () => {
 
   describe('Custom notification with custom title', () => {
     beforeEach(() => {
-      wrapper = shallowWithIntl(
+      wrapper = enzymeIntl.shallowWithIntl(
         <Alert
           type={Alert.Opts.Types.CUSTOM}
           title="Help!"
@@ -345,7 +345,7 @@ describe('Notifications titles', () => {
 
   describe('Success notification with no title prop', () => {
     beforeEach(() => {
-      wrapper = shallowWithIntl(
+      wrapper = enzymeIntl.shallowWithIntl(
         <Alert
           type={Alert.Opts.Types.SUCCESS}
           onDismiss={() => { }}
@@ -379,7 +379,7 @@ describe('Notifications titles', () => {
 
   describe('Success notification with blank title', () => {
     beforeEach(() => {
-      wrapper = shallowWithIntl(
+      wrapper = enzymeIntl.shallowWithIntl(
         <Alert
           type={Alert.Opts.Types.SUCCESS}
           title=""
@@ -414,7 +414,7 @@ describe('Notifications titles', () => {
 
   describe('Success notification with title', () => {
     beforeEach(() => {
-      wrapper = shallowWithIntl(
+      wrapper = enzymeIntl.shallowWithIntl(
         <Alert
           type={Alert.Opts.Types.SUCCESS}
           title="Custom Success Title"
@@ -459,7 +459,7 @@ it('correctly applies the theme context className', () => {
       className: 'orion-fusion-theme',
     });
 
-  const wrapper = shallowWithIntl(<Alert type="success" />);
+  const wrapper = enzymeIntl.shallowWithIntl(<Alert type="success" />);
   const headerContainer = wrapper.dive().dive();
   expect(headerContainer).toMatchSnapshot();
 });

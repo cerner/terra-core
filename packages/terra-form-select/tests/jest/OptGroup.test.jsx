@@ -6,7 +6,7 @@ import OptGroup from '../../src/shared/_OptGroup';
 
 describe('OptGroup', () => {
   it('should render a default Option', () => {
-    const wrapper = shallowWithIntl(<OptGroup label="label" />);
+    const wrapper = enzymeIntl.shallowWithIntl(<OptGroup label="label" />);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -16,7 +16,7 @@ describe('OptGroup', () => {
   });
 
   it('correctly applies the theme context className', () => {
-    const wrapper = mountWithIntl(
+    const wrapper = enzymeIntl.mountWithIntl(
       <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
         <OptGroup label="label" />
       </ThemeContextProvider>,

@@ -12,6 +12,6 @@ it('should render SearchSelectField component with max height', () => {
     </SearchSelectField>
   );
 
-  expect(shallowWithIntl(select).dive()).toMatchSnapshot();
+  expect(enzymeIntl.shallowWithIntl(select).dive()).toMatchSnapshot();
 });
 

@@ -3,13 +3,13 @@ import Image from 'terra-image';
 import DemographicsBanner from '../../src/DemographicsBanner';
 
 it('renders a blank banner wrapper', () => {
-  const banner = shallowWithIntl(<DemographicsBanner />);
+  const banner = enzymeIntl.shallowWithIntl(<DemographicsBanner />);
   expect(banner.dive()).toMatchSnapshot();
 });
 
 it('renders the banner wrapper with all props', () => {
   const identifiersLongForm = { MRN: 'Medical Record Number' };
-  const wrapper = shallowWithIntl((
+  const wrapper = enzymeIntl.shallowWithIntl((
     <DemographicsBanner
       applicationContent={<span className="risk-score">5%</span>}
       age="25 Years"

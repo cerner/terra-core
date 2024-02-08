@@ -15,7 +15,7 @@ it('should render the selectId to the input field in ComboboxField component', (
     </ComboboxField>
   );
 
-  expect(shallowWithIntl(select).dive()).toMatchSnapshot();
+  expect(enzymeIntl.shallowWithIntl(select).dive()).toMatchSnapshot();
 });
 
 it('should render the selectId to the input field in MultiSelectField component', () => {
@@ -29,7 +29,7 @@ it('should render the selectId to the input field in MultiSelectField component'
     </MultiSelectField>
   );
 
-  expect(shallowWithIntl(select).dive().dive()).toMatchSnapshot();
+  expect(enzymeIntl.shallowWithIntl(select).dive().dive()).toMatchSnapshot();
 });
 
 it('should render the selectId to the input field in SearchSelectField component', () => {
@@ -43,7 +43,7 @@ it('should render the selectId to the input field in SearchSelectField component
     </SearchSelectField>
   );
 
-  expect(shallowWithIntl(select).dive()).toMatchSnapshot();
+  expect(enzymeIntl.shallowWithIntl(select).dive()).toMatchSnapshot();
 });
 
 it('should render the selectId to the input field in TagSelectField component', () => {
@@ -57,5 +57,5 @@ it('should render the selectId to the input field in TagSelectField component', 
     </TagSelectField>
   );
 
-  expect(shallowWithIntl(select).dive().dive()).toMatchSnapshot();
+  expect(enzymeIntl.shallowWithIntl(select).dive().dive()).toMatchSnapshot();
 });

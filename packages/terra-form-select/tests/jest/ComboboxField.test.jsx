@@ -12,6 +12,6 @@ it('should render ComboboxField component with max height', () => {
     </ComboboxField>
   );
 
-  expect(shallowWithIntl(select).dive()).toMatchSnapshot();
+  expect(enzymeIntl.shallowWithIntl(select).dive()).toMatchSnapshot();
 });
 

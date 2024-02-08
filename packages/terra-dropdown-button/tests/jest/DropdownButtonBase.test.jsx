@@ -67,7 +67,7 @@ describe('Dropdown Button Base', () => {
   });
 
   it('correctly applies the theme context className', () => {
-    const wrapper = mountWithIntl(
+    const wrapper = enzymeIntl.mountWithIntl(
       <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
         <DropdownButtonBase
           items={

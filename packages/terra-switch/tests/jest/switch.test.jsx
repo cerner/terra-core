@@ -6,30 +6,30 @@ describe('Switch', () => {
 
   // Snapshot Tests
   it('should render a default component', () => {
-    const wrapper = shallowWithIntl(defaultRender);
+    const wrapper = enzymeIntl.shallowWithIntl(defaultRender);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render as disabled when set', () => {
-    const button = shallowWithIntl(<Switch labelText="Label" isDisabled />);
+    const button = enzymeIntl.shallowWithIntl(<Switch labelText="Label" isDisabled />);
     expect(button).toMatchSnapshot();
     expect(button.prop('aria-disabled')).toBe(true);
   });
 
   // Prop Tests
   it('should use the default label text when is given', () => {
-    const wrapper = shallowWithIntl(defaultRender);
+    const wrapper = enzymeIntl.shallowWithIntl(defaultRender);
     expect(wrapper.find('.label-text').text()).toEqual('default');
   });
 
   // Structure Tests
   it('should have the class switch', () => {
-    const wrapper = shallowWithIntl(defaultRender);
+    const wrapper = enzymeIntl.shallowWithIntl(defaultRender);
     expect(wrapper.prop('className')).toContain('switch');
   });
 
   it('should render block switch element when isBlock is specified', () => {
-    const wrapper = shallowWithIntl(<Switch labelText="default" isBlock />);
+    const wrapper = enzymeIntl.shallowWithIntl(<Switch labelText="default" isBlock />);
     expect(wrapper.prop('className')).toContain('is-block');
     expect(wrapper).toMatchSnapshot();
   });

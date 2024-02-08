@@ -24,40 +24,40 @@ it('should render a status view with custom glyph, title, message, and two butto
     <StatusView customGlyph={<IconDiamond />} title="Test Title" message="Test Message" buttonAttrs={buttons} />
   );
 
-  const wrapper = mountWithIntl(statusView);
+  const wrapper = enzymeIntl.mountWithIntl(statusView);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a no-data status view with a hidden glyph', () => {
   const statusView = (<StatusView variant={StatusViewVariants.NODATA} isGlyphHidden />);
 
-  const wrapper = mountWithIntl(statusView);
+  const wrapper = enzymeIntl.mountWithIntl(statusView);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a no-matching-results status-view with top alignment', () => {
   const statusView = (<StatusView variant={StatusViewVariants.NOMATCHINGRESULTS} isAlignedTop />);
 
-  const wrapper = mountWithIntl(statusView);
+  const wrapper = enzymeIntl.mountWithIntl(statusView);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a not-authorized status-view', () => {
   const statusView = (<StatusView variant={StatusViewVariants.NOTAUTHORIZED} />);
 
-  const wrapper = mountWithIntl(statusView);
+  const wrapper = enzymeIntl.mountWithIntl(statusView);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render an error status-view', () => {
   const statusView = (<StatusView variant={StatusViewVariants.ERROR} />);
 
-  const wrapper = mountWithIntl(statusView);
+  const wrapper = enzymeIntl.mountWithIntl(statusView);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('correctly applies the theme context className', () => {
-  const wrapper = mountWithIntl(
+  const wrapper = enzymeIntl.mountWithIntl(
     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
       <StatusView />
     </ThemeContextProvider>,

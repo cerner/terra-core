@@ -5,12 +5,12 @@ import ClearOption from '../../src/shared/_ClearOption';
 
 describe('ClearOption', () => {
   it('should render a default ClearOption', () => {
-    const wrapper = shallowWithIntl(<ClearOption value="" display="Clear" />);
+    const wrapper = enzymeIntl.shallowWithIntl(<ClearOption value="" display="Clear" />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('correctly applies the theme context className', () => {
-    const wrapper = mountWithIntl(
+    const wrapper = enzymeIntl.mountWithIntl(
       <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
         <ClearOption value="" display="Clear" />
       </ThemeContextProvider>,

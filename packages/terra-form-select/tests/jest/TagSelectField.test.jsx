@@ -12,5 +12,5 @@ it('should render TagSelectField component with max height', () => {
     </TagSelectField>
   );
 
-  expect(shallowWithIntl(select).dive().dive()).toMatchSnapshot();
+  expect(enzymeIntl.shallowWithIntl(select).dive().dive()).toMatchSnapshot();
 });
