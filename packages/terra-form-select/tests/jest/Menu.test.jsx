@@ -1,8 +1,6 @@
 import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 
-/* eslint-disable-next-line import/no-extraneous-dependencies */
-import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
 import Option from '../../src/shared/_Option';
 import ComboboxMenu from '../../src/combobox/Menu';
 import SingleSelectMenu from '../../src/single/Menu';

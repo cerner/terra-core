@@ -1,5 +1,4 @@
 import React from 'react';
-import { mountWithIntl, shallowWithIntl } from 'terra-enzyme-intl';
 import Badge from '../../src/Badge';
 
 const iconValue = <img alt="Test icon" />;

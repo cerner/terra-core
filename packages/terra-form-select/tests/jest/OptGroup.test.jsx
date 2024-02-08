@@ -2,7 +2,6 @@ import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 
 /* eslint-disable import/no-extraneous-dependencies */
-import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
 import OptGroup from '../../src/shared/_OptGroup';
 
 describe('OptGroup', () => {

@@ -1,6 +1,4 @@
 import React from 'react';
-/* eslint-disable-next-line import/no-extraneous-dependencies */
-import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
 import IconAlert from 'terra-icon/lib/icon/IconAlert';
 import IconDiamondSymbol from 'terra-icon/lib/icon/IconDiamondSymbol';
 import IconError from 'terra-icon/lib/icon/IconError';

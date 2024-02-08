@@ -1,8 +1,6 @@
 import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 
-/* eslint-disable-next-line import/no-extraneous-dependencies */
-import { shallowWithIntl, renderWithIntl } from 'terra-enzyme-intl';
 import Select from '../../src/Select';
 import Option from '../../src/shared/_Option';
 import OptGroup from '../../src/shared/_OptGroup';

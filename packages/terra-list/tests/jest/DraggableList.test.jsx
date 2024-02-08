@@ -1,6 +1,4 @@
 import React from 'react';
-/* eslint-disable-next-line import/no-extraneous-dependencies */
-import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
 import List, { Item, Section, Subsection } from '../../src/index';
 
 Object.defineProperty(Math, 'random', {

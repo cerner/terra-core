@@ -2,8 +2,6 @@ import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 
-/* eslint-disable-next-line import/no-extraneous-dependencies */
-import { mountWithIntl } from 'terra-enzyme-intl';
 import ShowHide from '../../src/ShowHide';
 
 describe('ShowHide', () => {

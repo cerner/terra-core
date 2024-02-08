@@ -1,6 +1,5 @@
 import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
-/* eslint-disable-next-line import/no-extraneous-dependencies */
 import ProgressBar from '../../src/ProgressBar';
 
 // Snapshot Tests

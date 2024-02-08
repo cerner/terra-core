@@ -1,6 +1,4 @@
 import React from 'react';
-/* eslint-disable-next-line import/no-extraneous-dependencies */
-import { mountWithIntl, shallowWithIntl } from 'terra-enzyme-intl';
 import NativeSelect from '../../../src/native-select/NativeSelect';
 
 describe('NativeSelect', () => {
