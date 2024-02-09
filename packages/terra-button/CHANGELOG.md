@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 3.74.0 - (February 9, 2024)
+
+* Changed
+  * Minor dependency version bump.
+
 ## 3.73.0 - (January 9, 2024)
 
 * Added
