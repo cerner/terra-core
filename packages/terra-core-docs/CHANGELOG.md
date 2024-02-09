@@ -9,6 +9,7 @@
   * Updated Draggable list item example for selection state in `terra-list`.
   * Updated `terra-status` documentation with deprecation notice and badge.
   * Updated `terra-html-table` documentation with deprecation notice and badge.
+  * Updated test and doc examples for `terra-progress-bar`
 
 ## 1.56.0 - (January 9, 2024)
 

@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+* Added
+  * Added `valueText` prop to provide custom status update of progress.
+  * Added `ariaLabel` prop that labels the progress bar for screen readers.
+
 ## 4.35.0 - (November 13, 2023)
 
 * Changed
