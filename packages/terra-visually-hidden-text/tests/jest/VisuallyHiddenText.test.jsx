@@ -6,13 +6,13 @@ describe('VisuallyHiddenText', () => {
 
   // Snapshot Tests
   it('should render a default component', () => {
-    const wrapper = shallow(defaultRender);
+    const wrapper = enzyme.shallow(defaultRender);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should pass in refCallback as the ref prop of the input element', () => {
     const refCallback = jest.fn();
-    const wrapper = mount(<VisuallyHiddenText refCallback={refCallback} />);
+    const wrapper = enzyme.mount(<VisuallyHiddenText refCallback={refCallback} />);
     expect(refCallback).toBeCalled();
     expect(wrapper).toMatchSnapshot();
   });
