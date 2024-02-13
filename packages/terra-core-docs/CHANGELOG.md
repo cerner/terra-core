@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added a test example to validate focus when none of the buttons are selected.
+
 * Updated
   * Updated Draggable list item example for selection state in `terra-list`.
   * Updated `terra-status` documentation with deprecation notice and badge.
