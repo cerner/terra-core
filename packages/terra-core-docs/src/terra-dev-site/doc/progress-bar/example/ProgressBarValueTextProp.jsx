@@ -3,7 +3,7 @@ import ProgressBar from 'terra-progress-bar';
 
 const ProgressBarValueTextProp = () => (
   <div>
-    <ProgressBar ariaLabel="Supply Remaining" heightSize="medium" valueText="Completed 3 out of 5 Refills" value={3} max={5} />
+    <ProgressBar ariaLabel="Supply progress" heightSize="medium" valueText="Completed 3 out of 5 Refills" value={3} max={5} />
   </div>
 );
 
