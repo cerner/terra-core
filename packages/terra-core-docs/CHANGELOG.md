@@ -4,6 +4,7 @@
 
 * Added
   * Added visual labels for `terra-search-field` examples. 
+  * Added doc example for `terra-progress-bar`.
 
 * Updated
   * Updated Draggable list item example for selection state in `terra-list`.
