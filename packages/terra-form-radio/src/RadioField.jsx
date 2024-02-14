@@ -118,7 +118,7 @@ const RadioField = (props) => {
   const legendAriaDescriptionId = `terra-radio-field-description-${uniqueid()}`;
   const helpAriaDescriptionId = help ? `terra-radio-field-description-help-${uniqueid()}` : '';
   const errorAriaDescriptionId = error ? `terra-radio-field-description-error-${uniqueid()}` : '';
-  const ariaDescriptionIds = `${legendAriaDescriptionId} ${errorAriaDescriptionId} ${helpAriaDescriptionId}`;
+  const ariaDescriptionIds = `${errorAriaDescriptionId} ${helpAriaDescriptionId}`;
 
   const isSafari = navigator.userAgent.indexOf('Safari') !== -1 && navigator.userAgent.indexOf('Chrome') === -1;
   const isEdge = navigator.userAgent.indexOf('Edg') !== -1;
@@ -199,10 +199,12 @@ const RadioField = (props) => {
 
   return (
     <fieldset id={fieldSetId} {...customProps} required={required} className={radioFieldClasses}>
-      {legendGroup}
-      {content}
-      {isInvalid && error && <div id={errorAriaDescriptionId} className={cx('error-text')}>{error}</div>}
-      {help && <div id={helpAriaDescriptionId} className={cx('help-text')}>{help}</div>}
+      <div aria-labelledby={legendAriaDescriptionId} role="radiogroup">
+        {legendGroup}
+        {content}
+        {isInvalid && error && <div id={errorAriaDescriptionId} className={cx('error-text')}>{error}</div>}
+        {help && <div id={helpAriaDescriptionId} className={cx('help-text')}>{help}</div>}
+      </div>
     </fieldset>
   );
 };

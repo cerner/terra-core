@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed the redundant labeling announcement issue.
+
 ## 4.48.0 - (January 9, 2024)
 
 * Changed
