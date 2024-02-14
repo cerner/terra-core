@@ -2,8 +2,8 @@
 
 ## Unreleased
 
-* Removed
-  * Removed `tabAttr` variable to fix tabbing issue on the button group.
+* Fixed
+  * Fixed tabbing issue for button-group without initial focus.
 
 ## 3.75.0 - (January 9, 2024)
 
