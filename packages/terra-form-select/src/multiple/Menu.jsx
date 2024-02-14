@@ -445,6 +445,7 @@ class Menu extends React.Component {
           onMouseDown: () => { this.downOption = option; },
           onMouseUp: event => this.handleOptionClick(event, option),
           onMouseEnter: event => this.handleMouseEnter(event, option),
+          'aria-multiselectable': true,
           ...(option.props.value === this.state.active) && { 'data-select-active': true },
         });
       } if (option.type.isOptGroup) {
