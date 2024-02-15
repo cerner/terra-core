@@ -1,11 +1,3 @@
-#  "eslintConfig": {
-#    "extends": "@cerner/terra",
-#    "globals": {
-#      "enzyme":"readonly",
-#      "enzymeIntl":"readonly"
-#    }
-#  },
-
 extends: "@cerner/terra"
 globals:
   enzyme: readonly
