@@ -38,7 +38,7 @@
     "react-intl": "2"
   },
   "devDependencies": {
-    "@babel/cli": "^7",
+    "@babel/cli": "7",
     "@babel/core": "7",
     "@babel/preset-env": "7",
     "@babel/preset-react": "7",
@@ -55,9 +55,11 @@
     "@cerner/terra-open-source-scripts": "1",
     "@cerner/webpack-config-terra": "3",
     "danger": "11",
+    "enzyme-adapter-react-16": "1",
     "enzyme-to-json": "3",
     "eslint": "7",
     "gh-pages": "2",
+    "glob": "7",
     "jest": "27",
     "lerna": "6",
     "postcss": "8",
@@ -108,8 +110,5 @@
     "wdio:redwood": "terra wdio --themes redwood-theme",
     "wdio": "terra wdio --themes terra-default-theme clinical-lowlight-theme orion-fusion-theme redwood-theme",
     "wdio:docker": "terra wdio --disableSeleniumService=true --themes terra-default-theme clinical-lowlight-theme orion-fusion-theme"
-  },
-  "dependencies": {
-    "enzyme-adapter-react-16": "^1.15.8"
   }
 }
