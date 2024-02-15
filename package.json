@@ -35,8 +35,6 @@
   "devDependencies": {
     "@babel/cli": "^7.5.0",
     "@babel/core": "^7.5.0",
-    "@babel/plugin-proposal-object-rest-spread": "^7.5.0",
-    "@babel/plugin-transform-object-assign": "^7.2.0",
     "@babel/preset-env": "^7.5.0",
     "@babel/preset-react": "^7.0.0",
     "@cerner/browserslist-config-terra": "^4.0.0",
