@@ -93,5 +93,14 @@
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",
     "lint": "eslint --ext .js,.jsx .",
     "precompile": "rm -rf lib"
-  }
+  },
+  "files": [
+    "lib",
+    "src",
+    "translations",
+    "CHANGELOG.md",
+    "LICENSE",
+    "NOTICE",
+    "README.md"
+  ]
 }

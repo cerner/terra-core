@@ -27,5 +27,14 @@
     "precompile": "rm -rf lib",
     "test": "npm run test:spec",
     "test:spec": "echo \"Warning: no test written\" && exit 0"
-  }
+  },
+  "files": [
+    "lib",
+    "src",
+    "translations",
+    "CHANGELOG.md",
+    "LICENSE",
+    "NOTICE",
+    "README.md"
+  ]
 }
