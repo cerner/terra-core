@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added deprecated icon in props table
+
 ## 5.39.0 - (November 13, 2023)
 
 * Changed
