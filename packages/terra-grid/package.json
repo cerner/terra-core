@@ -1,6 +1,6 @@
 {
   "name": "terra-grid",
-  "version": "6.35.0",
+  "version": "6.36.0",
   "description": "The grid component provides a flexbox based grid system.",
   "author": "Cerner Corporation",
   "repository": {
@@ -24,7 +24,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-breakpoints": "^2.39.0",
+    "terra-breakpoints": "^2.40.0",
     "terra-theme-context": "^1.0.0"
   },
   "peerDependencies": {

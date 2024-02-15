@@ -1,6 +1,6 @@
 {
   "name": "terra-toggle",
-  "version": "3.61.0",
+  "version": "3.62.0",
   "description": "Toggle component that transitions content in and out.",
   "author": "Cerner Corporation",
   "repository": {
@@ -25,7 +25,7 @@
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "react-animate-height": "^2.0.1",
-    "terra-icon": "^3.59.0"
+    "terra-icon": "^3.60.0"
   },
   "peerDependencies": {
     "react": "^16.8.5",

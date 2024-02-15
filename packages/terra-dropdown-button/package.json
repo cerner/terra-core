@@ -1,6 +1,6 @@
 {
   "name": "terra-dropdown-button",
-  "version": "1.39.0",
+  "version": "1.40.0",
   "description": "Provides a dropdown button component and split button component for selecting a single option (action) from a list of options.",
   "author": "Cerner Corporation",
   "repository": {
