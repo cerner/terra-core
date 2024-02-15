@@ -29,7 +29,8 @@
   "peerDependencies": {
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
-    "react-intl": "^2.8.0"
+    "react-intl": "^2.8.0",
+    "terra-theme-provider": "^4.16.0"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",
