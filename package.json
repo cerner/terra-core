@@ -32,21 +32,6 @@
     "extends": "@cerner/package-json-lint-config-terra/package-json-lint.config.js",
     "projectType": "module"
   },
-  "stylelint": {
-    "extends": "@cerner/stylelint-config-terra",
-    "rules": {
-      "scss/at-mixin-pattern": "^(terra-)[a-z]+([a-z0-9-]+[a-z0-9]+)?$"
-    },
-    "overrides": [
-      {
-        "files": ["packages/terra-theme-properties/**/*.scss", "packages/**/redwood-theme/**/*.scss"],
-        "rules": {
-          "terra/custom-property-name": false,
-          "terra/custom-property-namespace": false
-        }
-      }
-    ]
-  },
   "devDependencies": {
     "@babel/cli": "^7.5.0",
     "@babel/core": "^7.5.0",
