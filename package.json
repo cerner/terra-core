@@ -54,21 +54,14 @@
     "@cerner/terra-functional-testing": "4",
     "@cerner/terra-open-source-scripts": "1",
     "@cerner/webpack-config-terra": "3",
-    "core-js": "^3.1.3",
     "danger": "11",
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
-    "enzyme-to-json": "^3.2.2",
+    "enzyme-to-json": "3",
     "eslint": "7",
-    "eslint-plugin-jsx-a11y": "6.7.1",
     "gh-pages": "2",
-    "glob": "7",
     "jest": "27",
-    "ky": "^0.12.0",
     "lerna": "6",
     "postcss": "8",
     "react-test-renderer": "16",
-    "regenerator-runtime": "^0.13.2",
     "stylelint": "15",
     "terra-enzyme-intl": "3",
     "webpack": "5",
@@ -115,5 +108,8 @@
     "wdio:redwood": "terra wdio --themes redwood-theme",
     "wdio": "terra wdio --themes terra-default-theme clinical-lowlight-theme orion-fusion-theme redwood-theme",
     "wdio:docker": "terra wdio --disableSeleniumService=true --themes terra-default-theme clinical-lowlight-theme orion-fusion-theme"
+  },
+  "dependencies": {
+    "enzyme-adapter-react-16": "^1.15.8"
   }
 }
