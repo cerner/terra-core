@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.76.0 - (February 15, 2024)
+
 * Fixed
   * Fixed tabbing issue for button-group without initial focus.
 
