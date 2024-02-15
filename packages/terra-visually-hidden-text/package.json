@@ -1,6 +1,6 @@
 {
   "name": "terra-visually-hidden-text",
-  "version": "2.37.0",
+  "version": "2.38.0",
   "description": "Text that is designed to only be read by a screen reader.",
   "author": "Cerner Corporation",
   "repository": {

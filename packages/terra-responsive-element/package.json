@@ -1,6 +1,6 @@
 {
   "name": "terra-responsive-element",
-  "version": "5.39.0",
+  "version": "5.40.0",
   "description": "The terra-responsive-element conditionally renders components based on viewport size",
   "author": "Cerner Corporation",
   "repository": {
@@ -22,11 +22,11 @@
   ],
   "main": "lib/ResponsiveElement.js",
   "dependencies": {
-    "@cerner/terra-docs": "^1.10.0",
+    "@cerner/terra-docs": "^1.11.0",
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "resize-observer-polyfill": "^1.4.1",
-    "terra-breakpoints": "^2.39.0"
+    "terra-breakpoints": "^2.40.0"
   },
   "peerDependencies": {
     "react": "^16.8.5",

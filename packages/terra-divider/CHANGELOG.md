@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.40.0 - (February 15, 2024)
+
 * Added
   * Added support for the Redwood theme.
 
