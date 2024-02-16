@@ -8,4 +8,3 @@ overrides:
     rules:
       terra/custom-property-name: false
       terra/custom-property-namespace: false
-  
