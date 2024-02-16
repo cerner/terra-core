@@ -6,13 +6,5 @@ module.exports = (api) => {
     ['@babel/preset-env', { useBuiltIns: 'entry', corejs: { version: 3.6, proposals: true } }],
     '@babel/preset-react',
   ];
-  const plugins = [
-    '@babel/plugin-transform-object-assign',
-    '@babel/plugin-proposal-object-rest-spread',
-  ];
-
-  return {
-    presets,
-    plugins,
-  };
+  return { presets };
 };
