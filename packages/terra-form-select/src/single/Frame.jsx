@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/control-has-associated-label */
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -519,6 +517,7 @@ class Frame extends React.Component {
         aria-invalid={isInvalid}
       >
         {/* Added this label and input to avoid accessibility violations after changing the role from button to combobox */}
+        {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
         <label hidden>
           <input type="text" />
         </label>
