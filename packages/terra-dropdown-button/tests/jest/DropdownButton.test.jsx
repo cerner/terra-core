@@ -1,12 +1,8 @@
 import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 import { IntlProvider } from 'react-intl';
-/* eslint-disable-next-line import/no-extraneous-dependencies */
-import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { v4 as uuidv4 } from 'uuid';
 import translationsFile from '../../translations/en.json';
-/* eslint-disable-next-line import/no-extraneous-dependencies */
 import DropdownButton, { Item, Variants } from '../../src/DropdownButton';
 
 let mockSpyUuid;
@@ -20,7 +16,7 @@ afterAll(() => {
 
 describe('Dropdown Button', () => {
   it('should render a default dropdown type', () => {
-    const wrapper = shallowWithIntl(
+    const wrapper = enzymeIntl.shallowWithIntl(
       <DropdownButton label="Primary Option">
         <Item label="1st Option" onSelect={() => {}} />
       </DropdownButton>,
@@ -29,7 +25,7 @@ describe('Dropdown Button', () => {
   });
 
   it('should render a split type with multiple children', () => {
-    const wrapper = shallowWithIntl(
+    const wrapper = enzymeIntl.shallowWithIntl(
       <DropdownButton label="Primary Option" onSelect={() => {}}>
         <Item label="1st Option" onSelect={() => {}} />
         <Item label="2nd Option" onSelect={() => {}} />
@@ -40,7 +36,7 @@ describe('Dropdown Button', () => {
   });
 
   it('should render an emphasis dropdown type', () => {
-    const wrapper = shallowWithIntl(
+    const wrapper = enzymeIntl.shallowWithIntl(
       <DropdownButton label="Primary Option" variant={Variants.EMPHASIS}>
         <Item label="1st Option" onSelect={() => {}} />
       </DropdownButton>,
@@ -49,7 +45,7 @@ describe('Dropdown Button', () => {
   });
 
   it('should render a disabled dropdown type', () => {
-    const wrapper = shallowWithIntl(
+    const wrapper = enzymeIntl.shallowWithIntl(
       <DropdownButton label="Primary Option" isDisabled>
         <Item label="1st Option" onSelect={() => {}} />
       </DropdownButton>,
@@ -58,7 +54,7 @@ describe('Dropdown Button', () => {
   });
 
   it('should render a block dropdown type', () => {
-    const wrapper = shallowWithIntl(
+    const wrapper = enzymeIntl.shallowWithIntl(
       <DropdownButton label="Primary Option" isBlock>
         <Item label="1st Option" onSelect={() => {}} />
       </DropdownButton>,
@@ -67,7 +63,7 @@ describe('Dropdown Button', () => {
   });
 
   it('should render a compact dropdown type', () => {
-    const wrapper = shallowWithIntl(
+    const wrapper = enzymeIntl.shallowWithIntl(
       <DropdownButton label="Primary Option" isCompact>
         <Item label="1st Option" onSelect={() => {}} />
       </DropdownButton>,
@@ -76,7 +72,7 @@ describe('Dropdown Button', () => {
   });
 
   it('should render an open dropdown', () => {
-    const wrapper = shallowWithIntl(
+    const wrapper = enzymeIntl.shallowWithIntl(
       <DropdownButton label="Primary Option">
         <Item label="1st Option" onSelect={() => {}} />
       </DropdownButton>,
@@ -87,7 +83,7 @@ describe('Dropdown Button', () => {
   });
 
   it('should render a split type with custom attributes', () => {
-    const wrapper = shallowWithIntl(
+    const wrapper = enzymeIntl.shallowWithIntl(
       <DropdownButton label="Primary Option" test-custom-attribute other-custom-attribute="purple">
         <Item label="1st Option" onSelect={() => {}} />
       </DropdownButton>,
@@ -96,7 +92,7 @@ describe('Dropdown Button', () => {
   });
 
   it('correctly applies the theme context className', () => {
-    const wrapper = mountWithIntl(
+    const wrapper = enzymeIntl.mountWithIntl(
       <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
         <DropdownButton label="Primary Option" id="dropDown">
           <Item label="1st Option" onSelect={() => {}} />
@@ -110,7 +106,7 @@ describe('Dropdown Button', () => {
     const buttonAttrs = {
       'aria-label': 'Button Aria Label',
     };
-    const wrapper = shallowWithIntl(
+    const wrapper = enzymeIntl.shallowWithIntl(
       <IntlProvider locale="en" messages={translationsFile}>
         <DropdownButton label="Primary Option" buttonAttrs={buttonAttrs} id="dropDown">
           <Item label="PDF" onSelect={() => {}} />

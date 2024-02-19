@@ -1,6 +1,4 @@
 import React from 'react';
-/* eslint-disable-next-line import/no-extraneous-dependencies */
-import { shallowWithIntl } from 'terra-enzyme-intl';
 import TagSelectField from '../../src/TagSelectField';
 
 it('should render TagSelectField component with max height', () => {
@@ -14,5 +12,5 @@ it('should render TagSelectField component with max height', () => {
     </TagSelectField>
   );
 
-  expect(shallowWithIntl(select).dive().dive()).toMatchSnapshot();
+  expect(enzymeIntl.shallowWithIntl(select).dive().dive()).toMatchSnapshot();
 });

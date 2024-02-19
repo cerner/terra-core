@@ -11,19 +11,19 @@ it('throws error for missing required locale', () => {
   console.error = jest.fn();
   const messages = { Terra: 'Terra' };
 
-  shallow(<Base customMessages={messages}>String</Base>);
+  enzyme.shallow(<Base customMessages={messages}>String</Base>);
   // eslint-disable-next-line no-console
   expect(console.error).toHaveBeenCalled();
 });
 
 // Snapshot Tests
 it('should support rendering a string', () => {
-  const base = shallow(<Base>String</Base>);
+  const base = enzyme.shallow(<Base>String</Base>);
   expect(base).toMatchSnapshot();
 });
 
 it('should support rendering an array of children', () => {
-  const base = shallow(
+  const base = enzyme.shallow(
     <Base>
       <div>1</div>
       <div>2</div>
@@ -33,7 +33,7 @@ it('should support rendering an array of children', () => {
 });
 
 it('should render with strict mode when strict mode enabled', () => {
-  const base = shallow(<Base strictMode>String</Base>);
+  const base = enzyme.shallow(<Base strictMode>String</Base>);
   expect(base).toMatchSnapshot();
 });
 
@@ -50,7 +50,7 @@ describe('base handles i18n data loading', () => {
 
   it('renders as expected when i18n data loads successfully', () => {
     terraI18n.i18nLoader = jest.fn();
-    expect(() => shallow(<Base locale="en">String</Base>)).not.toThrowError();
+    expect(() => enzyme.shallow(<Base locale="en">String</Base>)).not.toThrowError();
     expect(terraI18n.i18nLoader).toHaveBeenCalled();
     // eslint-disable-next-line no-console
     expect(console.error).not.toHaveBeenCalled();
@@ -60,7 +60,7 @@ describe('base handles i18n data loading', () => {
     terraI18n.i18nLoader = jest.fn(() => {
       throw new Error('failed to load data.');
     });
-    expect(() => shallow(<Base locale="en">String</Base>)).not.toThrowError();
+    expect(() => enzyme.shallow(<Base locale="en">String</Base>)).not.toThrowError();
     expect(terraI18n.i18nLoader).toHaveBeenCalled();
     // eslint-disable-next-line no-console
     expect(console.error).toHaveBeenCalled();
@@ -70,7 +70,7 @@ describe('base handles i18n data loading', () => {
     terraI18n.i18nLoader = jest.fn(() => {
       throw new Error('failed to load data.');
     });
-    expect(() => shallow(<Base locale="en" throwOnI18nLoadError>String</Base>)).toThrowError();
+    expect(() => enzyme.shallow(<Base locale="en" throwOnI18nLoadError>String</Base>)).toThrowError();
     expect(terraI18n.i18nLoader).toHaveBeenCalled();
     // eslint-disable-next-line no-console
     expect(console.error).toHaveBeenCalled();

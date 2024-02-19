@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+* Changed
+  * Minor dependency version bump
+
+## 3.40.0 - (February 15, 2024)
+
 * Added
   * Added support for the Redwood theme.
 

@@ -1,6 +1,4 @@
 import React from 'react';
-/* eslint-disable-next-line import/no-extraneous-dependencies */
-import { shallowWithIntl } from 'terra-enzyme-intl';
 import MultiSelectField from '../../src/MultiSelectField';
 
 it('should render MultiSelectField component with max height', () => {
@@ -14,6 +12,6 @@ it('should render MultiSelectField component with max height', () => {
     </MultiSelectField>
   );
 
-  expect(shallowWithIntl(select).dive().dive()).toMatchSnapshot();
+  expect(enzymeIntl.shallowWithIntl(select).dive().dive()).toMatchSnapshot();
 });
 

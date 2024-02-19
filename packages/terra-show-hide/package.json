@@ -1,6 +1,6 @@
 {
   "name": "terra-show-hide",
-  "version": "2.67.0",
+  "version": "2.68.0",
   "description": "Show/Hide component that previews a small section of content or shows the full content with the click of a button",
   "author": "Cerner Corporation",
   "repository": {
@@ -27,7 +27,7 @@
     "prop-types": "^15.5.8",
     "terra-mixins": "^1.41.0",
     "terra-theme-context": "^1.0.0",
-    "terra-toggle": "^3.61.0",
+    "terra-toggle": "^3.62.0",
     "uuid": "3.4.0"
   },
   "peerDependencies": {
@@ -46,9 +46,18 @@
     "precompile": "rm -rf lib",
     "test": "npm run lint && npm run jest && npm run wdio",
     "jest": "jest --config ../../jest.config.js",
-    "wdio-default": "cd ../.. && terra wdio",
-    "wdio-lowlight": "cd ../.. && terra wdio --themes clinical-lowlight-theme",
-    "wdio-fusion": "cd ../.. && terra wdio --themes orion-fusion-theme",
-    "wdio": "npm run wdio-default && npm run wdio-lowlight && npm run wdio-fusion"
-  }
+    "wdio:default": "cd ../.. && terra wdio",
+    "wdio:lowlight": "cd ../.. && terra wdio --themes clinical-lowlight-theme",
+    "wdio:fusion": "cd ../.. && terra wdio --themes orion-fusion-theme",
+    "wdio": "npm run wdio:default && npm run wdio:lowlight && npm run wdio:fusion"
+  },
+  "files": [
+    "lib",
+    "src",
+    "translations",
+    "CHANGELOG.md",
+    "LICENSE",
+    "NOTICE",
+    "README.md"
+  ]
 }

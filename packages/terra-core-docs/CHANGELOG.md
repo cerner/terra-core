@@ -2,8 +2,12 @@
 
 ## Unreleased
 
+## 1.57.0 - (February 15, 2024)
+
 * Added
-  * Added visual labels for `terra-search-field` examples. 
+  * Added a test example for `terra-button-group` to validate focus when none of the buttons are selected.
+  * Added visual labels for `terra-search-field` examples.
+  * Added doc example for `terra-progress-bar`.
   * Added condition to announce default values for "search-field-minimum-length" example `terra-search-field`.
   * Added "aria-label" attribute to announce error message for "search-field-programmatic-set" example for `terra-search-field`.
 
@@ -11,6 +15,7 @@
   * Updated Draggable list item example for selection state in `terra-list`.
   * Updated `terra-status` documentation with deprecation notice and badge.
   * Updated `terra-html-table` documentation with deprecation notice and badge.
+  * Updated test and doc examples for `terra-progress-bar`
 
 ## 1.56.0 - (January 9, 2024)
 

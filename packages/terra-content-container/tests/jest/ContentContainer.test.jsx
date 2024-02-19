@@ -5,31 +5,31 @@ const defaultVariety = <ContentContainer />;
 
 // Snapshot Tests
 it('should render a default component', () => {
-  const wrapper = shallow(defaultVariety);
+  const wrapper = enzyme.shallow(defaultVariety);
   expect(wrapper).toMatchSnapshot();
 });
 
 // Prop Tests
 it('should have the class terra-ContentContainer', () => {
-  const wrapper = shallow(defaultVariety);
+  const wrapper = enzyme.shallow(defaultVariety);
   expect(wrapper.prop('className')).toContain('content-container');
 });
 
 it('should render a header', () => {
   const container = <ContentContainer header={<p>Header</p>} />;
-  const wrapper = shallow(container);
+  const wrapper = enzyme.shallow(container);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a footer', () => {
   const container = <ContentContainer footer={<p>Footer</p>} />;
-  const wrapper = shallow(container);
+  const wrapper = enzyme.shallow(container);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render header & footer', () => {
   const container = <ContentContainer header={<p>Header</p>} footer={<p>Footer</p>} />;
-  const wrapper = shallow(container);
+  const wrapper = enzyme.shallow(container);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -39,12 +39,12 @@ it('should render content', () => {
       <p>test content</p>
     </ContentContainer>
   );
-  const wrapper = shallow(container);
+  const wrapper = enzyme.shallow(container);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render as fill', () => {
   const container = <ContentContainer fill />;
-  const wrapper = shallow(container);
+  const wrapper = enzyme.shallow(container);
   expect(wrapper).toMatchSnapshot();
 });

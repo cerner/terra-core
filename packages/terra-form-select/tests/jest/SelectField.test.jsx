@@ -1,6 +1,4 @@
 import React from 'react';
-/* eslint-disable-next-line import/no-extraneous-dependencies */
-import { shallowWithIntl } from 'terra-enzyme-intl';
 import SelectField from '../../src/SelectField';
 
 it('should render a default SelectField component', () => {
@@ -14,7 +12,7 @@ it('should render a default SelectField component', () => {
     </SelectField>
   );
 
-  expect(shallowWithIntl(select).dive().dive()).toMatchSnapshot();
+  expect(enzymeIntl.shallowWithIntl(select).dive().dive()).toMatchSnapshot();
 });
 
 it('should render a disabled SelectField component', () => {
@@ -28,7 +26,7 @@ it('should render a disabled SelectField component', () => {
     </SelectField>
   );
 
-  expect(shallowWithIntl(select).dive().dive()).toMatchSnapshot();
+  expect(enzymeIntl.shallowWithIntl(select).dive().dive()).toMatchSnapshot();
 });
 
 it('should render a disabled SelectField component via selectAttrs', () => {
@@ -42,7 +40,7 @@ it('should render a disabled SelectField component via selectAttrs', () => {
     </SelectField>
   );
 
-  expect(shallowWithIntl(select).dive().dive()).toMatchSnapshot();
+  expect(enzymeIntl.shallowWithIntl(select).dive().dive()).toMatchSnapshot();
 });
 
 it('should render a default SelectField component with attributes spread onto the select', () => {
@@ -56,7 +54,7 @@ it('should render a default SelectField component with attributes spread onto th
     </SelectField>
   );
 
-  expect(shallowWithIntl(select).dive().dive()).toMatchSnapshot();
+  expect(enzymeIntl.shallowWithIntl(select).dive().dive()).toMatchSnapshot();
 });
 
 it('should render a multiple SelectField component that limits the selection count', () => {
@@ -70,7 +68,7 @@ it('should render a multiple SelectField component that limits the selection cou
     </SelectField>
   );
 
-  expect(shallowWithIntl(select).dive().dive()).toMatchSnapshot();
+  expect(enzymeIntl.shallowWithIntl(select).dive().dive()).toMatchSnapshot();
 });
 
 it('should render a required SelectField component', () => {
@@ -84,7 +82,7 @@ it('should render a required SelectField component', () => {
     </SelectField>
   );
 
-  expect(shallowWithIntl(select).dive().dive()).toMatchSnapshot();
+  expect(enzymeIntl.shallowWithIntl(select).dive().dive()).toMatchSnapshot();
 });
 
 it('should render a max height SelectField component', () => {
@@ -98,7 +96,7 @@ it('should render a max height SelectField component', () => {
     </SelectField>
   );
 
-  expect(shallowWithIntl(select).dive().dive()).toMatchSnapshot();
+  expect(enzymeIntl.shallowWithIntl(select).dive().dive()).toMatchSnapshot();
 });
 
 it('should render an incomplete SelectField component', () => {
@@ -112,5 +110,5 @@ it('should render an incomplete SelectField component', () => {
     </SelectField>
   );
 
-  expect(shallowWithIntl(select).dive().dive()).toMatchSnapshot();
+  expect(enzymeIntl.shallowWithIntl(select).dive().dive()).toMatchSnapshot();
 });

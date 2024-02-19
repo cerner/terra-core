@@ -1,6 +1,6 @@
 {
   "name": "terra-form-select",
-  "version": "6.54.0",
+  "version": "6.55.0",
   "description": "Provides a drop down of selectable options.",
   "author": "Cerner Corporation",
   "repository": {
@@ -29,7 +29,7 @@
     "mutationobserver-shim": "<=0.3.3",
     "prop-types": "^15.5.8",
     "react-lifecycles-compat": "^3.0.2",
-    "terra-form-field": "^4.32.0",
+    "terra-form-field": "^4.33.0",
     "terra-hookshot": "^5.0.0",
     "terra-mixins": "^1.41.0",
     "terra-theme-context": "^1.0.0",
@@ -48,9 +48,18 @@
     "precompile": "rm -rf lib",
     "test": "npm run lint && npm run jest && npm run wdio",
     "jest": "jest --config ../../jest.config.js",
-    "wdio-default": "cd ../.. && terra wdio",
-    "wdio-lowlight": "cd ../.. && terra wdio --themes clinical-lowlight-theme",
-    "wdio-fusion": "cd ../.. && terra wdio --themes orion-fusion-theme",
-    "wdio": "npm run wdio-default && npm run wdio-lowlight && npm run wdio-fusion"
-  }
+    "wdio:default": "cd ../.. && terra wdio",
+    "wdio:lowlight": "cd ../.. && terra wdio --themes clinical-lowlight-theme",
+    "wdio:fusion": "cd ../.. && terra wdio --themes orion-fusion-theme",
+    "wdio": "npm run wdio:default && npm run wdio:lowlight && npm run wdio:fusion"
+  },
+  "files": [
+    "lib",
+    "src",
+    "translations",
+    "CHANGELOG.md",
+    "LICENSE",
+    "NOTICE",
+    "README.md"
+  ]
 }
