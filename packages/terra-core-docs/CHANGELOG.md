@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Added
-  * Added implementation page documentation regarding consumers responsibility to ensure the accessibility of the `terra-signature`.  
+  * Added implementation page documentation regarding consumers responsibility to ensure the accessibility for `terra-signature`.  
 
 ## 1.57.0 - (February 15, 2024)
 
