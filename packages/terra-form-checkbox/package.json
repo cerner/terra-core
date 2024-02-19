@@ -1,6 +1,6 @@
 {
   "name": "terra-form-checkbox",
-  "version": "4.22.0",
+  "version": "4.23.0",
   "description": "The Terra Form Checkbox is a responsive input component rendered as a box. When activated, a check mark shall appear. Focus can be activated through tabbing and the checked state can be toggled with the space bar.",
   "author": "Cerner Corporation",
   "repository": {
@@ -27,7 +27,7 @@
     "prop-types": "^15.5.8",
     "terra-mixins": "^1.41.0",
     "terra-theme-context": "^1.0.0",
-    "terra-visually-hidden-text": "^2.37.0"
+    "terra-visually-hidden-text": "^2.38.0"
   },
   "peerDependencies": {
     "react": "^16.8.5",
@@ -42,9 +42,18 @@
     "precompile": "rm -rf lib",
     "test": "npm run lint && npm run jest && npm run wdio",
     "jest": "jest --config ../../jest.config.js",
-    "wdio-default": "cd ../.. && terra wdio",
-    "wdio-lowlight": "cd ../.. && terra wdio --themes clinical-lowlight-theme",
-    "wdio-fusion": "cd ../.. && terra wdio --themes orion-fusion-theme",
-    "wdio": "npm run wdio-default && npm run wdio-lowlight && npm run wdio-fusion"
-  }
+    "wdio:default": "cd ../.. && terra wdio",
+    "wdio:lowlight": "cd ../.. && terra wdio --themes clinical-lowlight-theme",
+    "wdio:fusion": "cd ../.. && terra wdio --themes orion-fusion-theme",
+    "wdio": "npm run wdio:default && npm run wdio:lowlight && npm run wdio:fusion"
+  },
+  "files": [
+    "lib",
+    "src",
+    "translations",
+    "CHANGELOG.md",
+    "LICENSE",
+    "NOTICE",
+    "README.md"
+  ]
 }

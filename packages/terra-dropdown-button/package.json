@@ -1,6 +1,6 @@
 {
   "name": "terra-dropdown-button",
-  "version": "1.39.0",
+  "version": "1.40.0",
   "description": "Provides a dropdown button component and split button component for selecting a single option (action) from a list of options.",
   "author": "Cerner Corporation",
   "repository": {
@@ -44,9 +44,18 @@
     "precompile": "rm -rf lib",
     "test": "npm run lint && npm run jest && npm run wdio",
     "jest": "jest --config ../../jest.config.js",
-    "wdio-default": "cd ../.. && terra wdio",
-    "wdio-lowlight": "cd ../.. && terra wdio --themes clinical-lowlight-theme",
-    "wdio-fusion": "cd ../.. && terra wdio --themes orion-fusion-theme",
-    "wdio": "npm run wdio-default && npm run wdio-lowlight && npm run wdio-fusion"
-  }
+    "wdio:default": "cd ../.. && terra wdio",
+    "wdio:lowlight": "cd ../.. && terra wdio --themes clinical-lowlight-theme",
+    "wdio:fusion": "cd ../.. && terra wdio --themes orion-fusion-theme",
+    "wdio": "npm run wdio:default && npm run wdio:lowlight && npm run wdio:fusion"
+  },
+  "files": [
+    "lib",
+    "src",
+    "translations",
+    "CHANGELOG.md",
+    "LICENSE",
+    "NOTICE",
+    "README.md"
+  ]
 }

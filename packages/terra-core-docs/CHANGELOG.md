@@ -2,8 +2,12 @@
 
 ## Unreleased
 
+## 1.57.0 - (February 15, 2024)
+
 * Added
+  * Added a test example for `terra-button-group` to validate focus when none of the buttons are selected.
   * Added visual labels for `terra-search-field` examples. 
+  * Added doc example for `terra-progress-bar`.
 
 * Updated
   * Updated Draggable list item example for selection state in `terra-list`.
