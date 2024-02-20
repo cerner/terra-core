@@ -1,6 +1,6 @@
 {
   "name": "terra-base",
-  "version": "5.52.0",
+  "version": "5.53.0",
   "description": "The base component sets minimal global styles for an application.",
   "author": "Cerner Corporation",
   "repository": {
