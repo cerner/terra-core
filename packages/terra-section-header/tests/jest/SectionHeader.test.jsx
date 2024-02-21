@@ -147,4 +147,17 @@ describe('SectionHeader', () => {
     const sectionHeader = wrapper.find('.arrange-wrapper.title-fixed').at(0);
     expect(sectionHeader).toHaveLength(1);
   });
+
+  it('verifies that section header with a sticky title has appropriate classes', () => {
+    const wrapper = enzyme.shallow(
+      <SectionHeader
+        text="foo"
+        level={2}
+        isTitleSticky
+      />,
+    );
+
+    const sectionHeader = wrapper.find('.arrange-wrapper.title-sticky').at(0);
+    expect(sectionHeader).toHaveLength(1);
+  });
 });
