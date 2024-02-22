@@ -15,7 +15,9 @@ const tableData = {
     {
       id: '1',
       cells: [
-        { content: <>Fleck, Arthur {buttonCell}</> },
+        { content: <>
+        Fleck, Arthur 
+        {buttonCell}</> },
         { content: '1007-MTN' },
         { content: 'Unstable' },
         { content: 'Inpatient, 2 months' },
@@ -24,7 +26,9 @@ const tableData = {
     {
       id: '2',
       cells: [
-        { content: <>Wayne, Bruce {buttonCell}</> },
+        { content: <>
+        Wayne, Bruce
+         {buttonCell}</> },
         { content: '1007-MTN-DR' },
         { content: 'Stable' },
         { content: 'Outpatient, 2 days' },

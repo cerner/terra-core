@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added a test example for `terra-button` to validate focus inside `terra-table`.
+
 ## 1.57.0 - (February 15, 2024)
 
 * Added
