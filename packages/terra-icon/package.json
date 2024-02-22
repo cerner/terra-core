@@ -56,9 +56,18 @@
     "migrate-ocs-icons": "npm run compilescripts && npm run migrate-csv && npm run migrate-svg && npm run generate-json && npm run generate-icons && npm run generate-example",
     "migrate-svg": "node scripts/lib/migrate-svg/index.js",
     "test": "npm run lint && npm run jest && npm run wdio",
-    "wdio": "npm run wdio-default && npm run wdio-lowlight && npm run wdio-fusion",
-    "wdio-default": "cd ../.. && terra wdio",
-    "wdio-fusion": "cd ../.. && terra wdio --themes orion-fusion-theme",
-    "wdio-lowlight": "cd ../.. && terra wdio --themes clinical-lowlight-theme"
-  }
+    "wdio": "npm run wdio:default && npm run wdio:lowlight && npm run wdio:fusion",
+    "wdio:default": "cd ../.. && terra wdio",
+    "wdio:fusion": "cd ../.. && terra wdio --themes orion-fusion-theme",
+    "wdio:lowlight": "cd ../.. && terra wdio --themes clinical-lowlight-theme"
+  },
+  "files": [
+    "lib",
+    "src",
+    "translations",
+    "CHANGELOG.md",
+    "LICENSE",
+    "NOTICE",
+    "README.md"
+  ]
 }

@@ -1,0 +1,10 @@
+extends: "@cerner/stylelint-config-terra"
+rules:
+  scss/at-mixin-pattern: "^(terra-)[a-z]+([a-z0-9-]+[a-z0-9]+)?$"
+overrides:
+  - files:
+      - "packages/terra-theme-properties/**/*.scss"
+      - "packages/**/redwood-theme/**/*.scss"
+    rules:
+      terra/custom-property-name: false
+      terra/custom-property-namespace: false
