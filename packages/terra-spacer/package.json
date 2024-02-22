@@ -1,6 +1,6 @@
 {
   "name": "terra-spacer",
-  "version": "3.63.0",
+  "version": "3.64.0",
   "description": "This component is used to provide margin and/or padding space between two components based on the given values.",
   "author": "Cerner Corporation",
   "repository": {
@@ -24,7 +24,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-image": "^3.40.0",
+    "terra-image": "^3.41.0",
     "terra-theme-context": "^1.0.0"
   },
   "peerDependencies": {
