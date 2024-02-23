@@ -10,8 +10,6 @@ const TableWithButton = () => {
     cols: [
       { id: 'Column-0', displayName: 'Patient' },
       { id: 'Column-1', displayName: 'Location' },
-      { id: 'Column-2', displayName: 'Illness Severity' },
-      { id: 'Column-3', displayName: 'Visit' },
     ],
     rows: [
       {
@@ -25,8 +23,6 @@ const TableWithButton = () => {
             </>,
           },
           { content: '1007-MTN' },
-          { content: 'Unstable' },
-          { content: 'Inpatient, 2 months' },
         ],
       },
       {
@@ -40,8 +36,6 @@ const TableWithButton = () => {
             </div>),
           },
           { content: '1007-MTN-DR' },
-          { content: 'Stable' },
-          { content: 'Outpatient, 2 days' },
         ],
       },
     ],
