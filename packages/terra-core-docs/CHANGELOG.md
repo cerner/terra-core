@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.59.0 - (February 23, 2024)
+
 * Added
   * Added test to `terra-section-header` for the sticky section header title.
 
