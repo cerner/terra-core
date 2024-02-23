@@ -22,6 +22,8 @@ class MinimumLengthSearchField extends React.Component {
           id="searchfieldWithMinimumLength"
           minimumSearchTextLength={5}
           onSearch={(searchText) => { this.setState({ searchText }); }}
+          isLabelVisible
+          groupName="Find a clinic"
         />
       </div>
     );

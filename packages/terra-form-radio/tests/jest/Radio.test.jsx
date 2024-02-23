@@ -7,31 +7,31 @@ window.matchMedia = () => ({ matches: true });
 
 it('should render a radio', () => {
   const radioButton = (<Radio labelText="Radio" />);
-  const wrapper = shallow(radioButton);
+  const wrapper = enzyme.shallow(radioButton);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render an uncontrolled radio', () => {
   const radioButton = (<Radio defaultChecked labelText="Radio" />);
-  const wrapper = shallow(radioButton);
+  const wrapper = enzyme.shallow(radioButton);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a controlled radio', () => {
   const radioButton = (<Radio checked onChange={() => {}} labelText="Radio" />);
-  const wrapper = shallow(radioButton);
+  const wrapper = enzyme.shallow(radioButton);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a disabled radio', () => {
   const radioButton = (<Radio checked onChange={() => {}} labelText="Radio" disabled />);
-  const wrapper = shallow(radioButton);
+  const wrapper = enzyme.shallow(radioButton);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a radio with a hidden label', () => {
   const radioButton = (<Radio checked onChange={() => {}} labelText="Radio" isLabelHidden />);
-  const wrapper = shallow(radioButton);
+  const wrapper = enzyme.shallow(radioButton);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -47,12 +47,12 @@ it('should render a ChoiceField with a radio', () => {
     />
   );
 
-  const wrapper = shallow(choiceField);
+  const wrapper = enzyme.shallow(choiceField);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('correctly applies the theme context className', () => {
-  const wrapper = mount(
+  const wrapper = enzyme.mount(
     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
       <Radio labelText="Radio" />
     </ThemeContextProvider>,

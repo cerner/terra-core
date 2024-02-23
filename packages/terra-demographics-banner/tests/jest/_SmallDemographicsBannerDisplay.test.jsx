@@ -5,7 +5,7 @@ import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 import SmallDemographicsBannerDisplay from '../../src/_SmallDemographicsBannerDisplay';
 
 it('renders small banner that contains all valid information', () => {
-  const banner = shallow(<SmallDemographicsBannerDisplay
+  const banner = enzyme.shallow(<SmallDemographicsBannerDisplay
     applicationContent={<span className="risk-score">5%</span>}
     age="25 Years"
     applicationRows={[{ Address: '1501 Walnut St. Apt #123', City: 'Kansas City MO' }, { ZIP: 64108 }]}
@@ -27,7 +27,7 @@ it('renders small banner that contains all valid information', () => {
 });
 
 it('renders the provided person name header level', () => {
-  const banner = shallow(<SmallDemographicsBannerDisplay
+  const banner = enzyme.shallow(<SmallDemographicsBannerDisplay
     personName="Johnathon Doe"
     personNameHeadingLevel={3}
     preferredFirstName="John"
@@ -38,7 +38,7 @@ it('renders the provided person name header level', () => {
 });
 
 it('correctly applies the theme context className', () => {
-  const banner = mount(
+  const banner = enzyme.mount(
     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
       <SmallDemographicsBannerDisplay />
     </ThemeContextProvider>,

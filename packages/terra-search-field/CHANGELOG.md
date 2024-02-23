@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 3.100.0 - (February 15, 2024)
+
+* Fixed
+  * Removed unnecessary aria labels and roles to fix redundant announcement of search group issue.
+
 ## 3.99.0 - (January 9, 2024)
 
 * Changed

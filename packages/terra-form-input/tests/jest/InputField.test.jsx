@@ -5,32 +5,32 @@ import InputField from '../../src/InputField';
 describe('InputField', () => {
   it('should render a default InputField component', () => {
     const textarea = <InputField inputId="test-input" label="Label" />;
-    const wrapper = shallow(textarea);
+    const wrapper = enzyme.shallow(textarea);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a disabled InputField component', () => {
     const textarea = <InputField disabled inputId="test-input" label="Label" />;
-    const wrapper = shallow(textarea);
+    const wrapper = enzyme.shallow(textarea);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a disabled InputField component via inputAttrs', () => {
     const textarea = <InputField inputId="test-input" inputAttrs={{ disabled: true }} label="Label" />;
-    const wrapper = shallow(textarea);
+    const wrapper = enzyme.shallow(textarea);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render placeholder with null when showMpageFusionPlaceholder is not passed', () => {
     const textarea = <InputField inputId="test-input" label="label" inputAttrs={{ placeholder: 'Enter The Text' }} />;
-    const wrapper = shallow(textarea);
+    const wrapper = enzyme.shallow(textarea);
     const placeholderInput = wrapper.find('#test-input');
     expect(placeholderInput.dive()).toMatchSnapshot();
   });
 
   it('should render placeholder when showMpageFusionPlaceholder is passed', () => {
     const textarea = <InputField inputId="test-input" label="label" inputAttrs={{ placeholder: 'Enter The Text', showMpageFusionPlaceholder: true }} />;
-    const wrapper = shallow(textarea);
+    const wrapper = enzyme.shallow(textarea);
     const placeholderInput = wrapper.find('#test-input');
     expect(placeholderInput.dive()).toMatchSnapshot();
   });
@@ -62,7 +62,7 @@ describe('InputField', () => {
       />
     );
 
-    const wrapper = shallow(textarea);
+    const wrapper = enzyme.shallow(textarea);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -92,7 +92,7 @@ describe('InputField', () => {
       />
     );
 
-    const wrapper = shallow(textarea);
+    const wrapper = enzyme.shallow(textarea);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -123,7 +123,7 @@ describe('InputField', () => {
       />
     );
 
-    const wrapper = shallow(textarea);
+    const wrapper = enzyme.shallow(textarea);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -156,7 +156,7 @@ describe('InputField', () => {
       />
     );
 
-    const wrapper = shallow(textarea);
+    const wrapper = enzyme.shallow(textarea);
     expect(wrapper).toMatchSnapshot();
   });
 });

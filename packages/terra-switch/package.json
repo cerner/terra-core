@@ -1,6 +1,6 @@
 {
   "name": "terra-switch",
-  "version": "1.13.0",
+  "version": "1.14.0",
   "description": "The terra-switch component provides users a way to toggle between state ON and OFF.",
   "author": "Cerner Corporation",
   "repository": {
@@ -40,9 +40,18 @@
     "precompile": "rm -rf lib",
     "test": "npm run jest && npm run lint && npm run wdio",
     "jest": "jest --config ../../jest.config.js",
-    "wdio-default": "cd ../.. && terra wdio",
-    "wdio-lowlight": "cd ../.. && terra wdio --themes clinical-lowlight-theme",
-    "wdio-fusion": "cd ../.. && terra wdio --themes orion-fusion-theme",
-    "wdio": "npm run wdio-default && npm run wdio-fusion && npm run wdio-lowlight"
-  }
+    "wdio:default": "cd ../.. && terra wdio",
+    "wdio:lowlight": "cd ../.. && terra wdio --themes clinical-lowlight-theme",
+    "wdio:fusion": "cd ../.. && terra wdio --themes orion-fusion-theme",
+    "wdio": "npm run wdio:default && npm run wdio:fusion && npm run wdio:lowlight"
+  },
+  "files": [
+    "lib",
+    "src",
+    "translations",
+    "CHANGELOG.md",
+    "LICENSE",
+    "NOTICE",
+    "README.md"
+  ]
 }

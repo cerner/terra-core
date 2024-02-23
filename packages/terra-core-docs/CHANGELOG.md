@@ -2,10 +2,28 @@
 
 ## Unreleased
 
+## 1.59.0 - (February 23, 2024)
+
+* Added
+  * Added test to `terra-section-header` for the sticky section header title.
+
+## 1.58.0 - (February 20, 2024)
+
+* Changed
+  * Minor dependency version bump.
+
+## 1.57.0 - (February 15, 2024)
+
+* Added
+  * Added a test example for `terra-button-group` to validate focus when none of the buttons are selected.
+  * Added visual labels for `terra-search-field` examples. 
+  * Added doc example for `terra-progress-bar`.
+
 * Updated
   * Updated Draggable list item example for selection state in `terra-list`.
   * Updated `terra-status` documentation with deprecation notice and badge.
   * Updated `terra-html-table` documentation with deprecation notice and badge.
+  * Updated test and doc examples for `terra-progress-bar`
 
 ## 1.56.0 - (January 9, 2024)
 

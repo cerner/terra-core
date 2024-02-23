@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
+import { injectIntl } from 'react-intl';
 import ThemeContext from 'terra-theme-context';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
 import styles from './ProgressBar.module.scss';
 
 const cx = classNamesBind.bind(styles);
@@ -17,6 +19,10 @@ const ProgressBarHeightSize = {
 
 const propTypes = {
   /**
+   * String that labels the progress bar for screen readers.
+   */
+  ariaLabel: PropTypes.string,
+  /**
    * Sets the size of the progress-bar from the following values; `tiny`, `small`, `medium`, `large` and `huge`
    */
   heightSize: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
@@ -29,9 +35,11 @@ const propTypes = {
    */
   max: PropTypes.number,
   /**
-   * ![IMPORTANT](https://badgen.net/badge/prop/deprecated/red)
-   * valueText has been deprecated and will be removed on next major version release.
+   * Value passed to aria-valuetext for accessibility. You can view more about this attribute
    * at https://www.w3.org/WAI/PF/aria/states_and_properties#aria-valuetext.
+   *
+   * ![IMPORTANT](https://badgen.net/badge//IMPORTANT/blue?icon=github)
+   * aria-valuetext attribute defines a text alternative of aria-valuenow attribute for a Progress Bar Component, that can be easily perceived by all AT users.
    */
   valueText: PropTypes.string,
   /**
@@ -56,6 +64,7 @@ const defaultProps = {
 };
 
 const ProgressBar = ({
+  ariaLabel,
   heightSize,
   value,
   max,
@@ -78,21 +87,23 @@ const ProgressBar = ({
 
   const normalizedValue = (value / max) * 100;
 
-  const isMac = () => navigator.userAgent.indexOf('Mac') !== -1 && navigator.userAgent.indexOf('Win') === -1;
+  const valText = valueText || intl.formatMessage({ id: 'Terra.progress.bar.percentage' }, { value: normalizedValue });
 
   return (
     <div>
       <progress
         {...customProps}
+        aria-label={ariaLabel}
         className={classes}
         max={100}
         value={normalizedValue}
         aria-valuemax={100}
         aria-valuemin={0}
         aria-valuenow={normalizedValue}
-        aria-valuetext={!isMac() ? `${normalizedValue}%` : undefined}
+        aria-valuetext={valText}
         tabIndex="-1"
       />
+      {valueText && <VisuallyHiddenText aria-live="polite" text={valText} />}
     </div>
   );
 };
@@ -101,5 +112,5 @@ ProgressBar.propTypes = propTypes;
 
 ProgressBar.defaultProps = defaultProps;
 
-export default ProgressBar;
+export default injectIntl(ProgressBar);
 export { ProgressBarHeightSize };

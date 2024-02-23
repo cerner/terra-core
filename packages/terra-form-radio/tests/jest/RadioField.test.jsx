@@ -1,8 +1,6 @@
 import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 import uniqueid from 'lodash.uniqueid';
-/* eslint-disable-next-line import/no-extraneous-dependencies */
-import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
 import RadioField from '../../src/RadioField';
 import Radio from '../../src/Radio';
 
@@ -21,13 +19,13 @@ afterEach(() => {
 
 it('should render a default radio field', () => {
   const radioField = <RadioField legend="Default RadioField" />;
-  const wrapper = shallowWithIntl(radioField);
+  const wrapper = enzymeIntl.shallowWithIntl(radioField);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render radio field with div element for Safari browser or Edg browser', () => {
   userAgentGetter.mockReturnValue('Safari Edg');
-  const wrapper = shallowWithIntl(<RadioField legend="Custom Message RadioField" />).dive();
+  const wrapper = enzymeIntl.shallowWithIntl(<RadioField legend="Custom Message RadioField" />).dive();
   const radioDiv = wrapper.find('fieldset');
   const divExist = radioDiv.find('div');
   expect(divExist).toBeDefined();
@@ -36,7 +34,7 @@ it('should render radio field with div element for Safari browser or Edg browser
 
 it('should render radio field with legend element for Chrome browser', () => {
   userAgentGetter.mockReturnValue('Chrome');
-  const wrapper = shallowWithIntl(<RadioField legend="Custom Message RadioField" />).dive();
+  const wrapper = enzymeIntl.shallowWithIntl(<RadioField legend="Custom Message RadioField" />).dive();
   const radioDiv = wrapper.find('fieldset');
   const legendExist = radioDiv.find('legend');
   expect(legendExist).toBeDefined();
@@ -48,7 +46,7 @@ it('should render a default radio field if it has an undefined child', () => {
   const radioField = (
     <RadioField legend="Default RadioField">{undefinedChild}</RadioField>
   );
-  const wrapper = shallowWithIntl(radioField);
+  const wrapper = enzymeIntl.shallowWithIntl(radioField);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -56,7 +54,7 @@ it('should render an invalid radio field', () => {
   const radioField = (
     <RadioField legend="Invalid RadioField" isInvalid error="Test Error" />
   );
-  const wrapper = shallowWithIntl(radioField);
+  const wrapper = enzymeIntl.shallowWithIntl(radioField);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -67,7 +65,7 @@ it('should render a help message', () => {
       help="This will help up determine how many chairs to request"
     />
   );
-  const wrapper = shallowWithIntl(radioField);
+  const wrapper = enzymeIntl.shallowWithIntl(radioField);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -82,7 +80,7 @@ it('should render onkeydown and onclick event on radio button for safari browser
       <Radio id="firstRadio" labelText="Radio" />
     </RadioField>
   );
-  const wrapper = mountWithIntl(radioField);
+  const wrapper = enzymeIntl.mountWithIntl(radioField);
   expect(wrapper.find('input').prop('onKeyDown')).toBeDefined();
   expect(wrapper.find('input').prop('onClick')).toBeDefined();
   expect(wrapper).toMatchSnapshot();
@@ -98,7 +96,7 @@ it('should not render onkeydown and onclick event on radio button for non-safari
       <Radio id="firstRadio" labelText="Radio" />
     </RadioField>
   );
-  const wrapper = mountWithIntl(radioField);
+  const wrapper = enzymeIntl.mountWithIntl(radioField);
   expect(wrapper.find('input').prop('onKeyDown')).toBeUndefined();
   expect(wrapper.find('input').prop('onClick')).toBeUndefined();
   expect(wrapper).toMatchSnapshot();
@@ -106,13 +104,13 @@ it('should not render onkeydown and onclick event on radio button for non-safari
 
 it('should render an optional part on the label', () => {
   const radioField = <RadioField legend="Optional RadioField" showOptional />;
-  const wrapper = shallowWithIntl(radioField);
+  const wrapper = enzymeIntl.shallowWithIntl(radioField);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render required radio field', () => {
   const radioField = <RadioField legend="Required RadioField" required />;
-  const wrapper = shallowWithIntl(radioField);
+  const wrapper = enzymeIntl.shallowWithIntl(radioField);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -120,7 +118,7 @@ it('should hide the required indicator when requested', () => {
   const radioField = (
     <RadioField legend="Hidden Required RadioField" required hideRequired />
   );
-  const wrapper = shallowWithIntl(radioField);
+  const wrapper = enzymeIntl.shallowWithIntl(radioField);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -131,7 +129,7 @@ it('should render the legend with custom attributes properly', () => {
       legendAttrs={{ class: 'application-legend' }}
     />
   );
-  const wrapper = shallowWithIntl(radioField);
+  const wrapper = enzymeIntl.shallowWithIntl(radioField);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -144,7 +142,7 @@ it('should display the required icon for fields with hideRequired, but have a st
       isInvalid
     />
   );
-  const wrapper = shallowWithIntl(checkBox);
+  const wrapper = enzymeIntl.shallowWithIntl(checkBox);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -156,12 +154,12 @@ it('should hide the legend when requested', () => {
       isLegendHidden
     />
   );
-  const wrapper = shallowWithIntl(radioField);
+  const wrapper = enzymeIntl.shallowWithIntl(radioField);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('correctly applies the theme context className', () => {
-  const wrapper = mountWithIntl(
+  const wrapper = enzymeIntl.mountWithIntl(
     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
       <RadioField legend="Default RadioField" />
     </ThemeContextProvider>,
@@ -182,7 +180,7 @@ it('correctly applies "inputAttrs" property to the Radio component', () => {
       />
     </RadioField>
   );
-  const wrapper = mountWithIntl(radioField);
+  const wrapper = enzymeIntl.mountWithIntl(radioField);
   expect(wrapper.find('input').prop(attrKey)).toBe(attrValue);
   expect(wrapper).toMatchSnapshot();
 });
