@@ -2,7 +2,6 @@
 import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 import IconHelp from 'terra-icon/lib/icon/IconHelp';
-import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
 import Input from './mocks/Input';
 import Select from './mocks/Select';
 import Textarea from './mocks/Textarea';
@@ -15,7 +14,7 @@ it('should render a field label', () => {
       htmlFor="test"
     />
   );
-  const wrapper = shallowWithIntl(field);
+  const wrapper = enzymeIntl.shallowWithIntl(field);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -27,7 +26,7 @@ it('should render an optional field label', () => {
       showOptional
     />
   );
-  const wrapper = shallowWithIntl(field);
+  const wrapper = enzymeIntl.shallowWithIntl(field);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -39,7 +38,7 @@ it('should render a required field label', () => {
       required
     />
   );
-  const wrapper = shallowWithIntl(field);
+  const wrapper = enzymeIntl.shallowWithIntl(field);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -52,7 +51,7 @@ it('should render a required field label with required hidden', () => {
       hideRequired
     />
   );
-  const wrapper = shallowWithIntl(field);
+  const wrapper = enzymeIntl.shallowWithIntl(field);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -64,7 +63,7 @@ it('should render a field with a hidden label', () => {
       isLabelHidden
     />
   );
-  const wrapper = shallowWithIntl(field);
+  const wrapper = enzymeIntl.shallowWithIntl(field);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -77,7 +76,7 @@ it('should render a required field with a hidden label', () => {
       required
     />
   );
-  const wrapper = shallowWithIntl(field);
+  const wrapper = enzymeIntl.shallowWithIntl(field);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -90,7 +89,7 @@ it('should render a field error message', () => {
       error="Error Text"
     />
   );
-  const wrapper = shallowWithIntl(field);
+  const wrapper = enzymeIntl.shallowWithIntl(field);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -103,7 +102,7 @@ it('should render a field help message', () => {
       help="Help Text"
     />
   );
-  const wrapper = shallowWithIntl(field);
+  const wrapper = enzymeIntl.shallowWithIntl(field);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -121,7 +120,7 @@ it('should render an inline field with most of the possible props are passed int
     </Field>
   );
 
-  const wrapper = shallowWithIntl(field);
+  const wrapper = enzymeIntl.shallowWithIntl(field);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -135,7 +134,7 @@ it('should render a field in error', () => {
       isInvalid
     />
   );
-  const wrapper = shallowWithIntl(field);
+  const wrapper = enzymeIntl.shallowWithIntl(field);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -150,7 +149,7 @@ it('should render an optional field in error', () => {
       isInvalid
     />
   );
-  const wrapper = shallowWithIntl(field);
+  const wrapper = enzymeIntl.shallowWithIntl(field);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -165,7 +164,7 @@ it('should render a required field in error', () => {
       isInvalid
     />
   );
-  const wrapper = shallowWithIntl(field);
+  const wrapper = enzymeIntl.shallowWithIntl(field);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -179,7 +178,7 @@ it('should render a field with a hidden label in error', () => {
       isInvalid
     />
   );
-  const wrapper = shallowWithIntl(field);
+  const wrapper = enzymeIntl.shallowWithIntl(field);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -195,7 +194,7 @@ it('should render a required field with a hidden label in error', () => {
       isInvalid
     />
   );
-  const wrapper = shallowWithIntl(field);
+  const wrapper = enzymeIntl.shallowWithIntl(field);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -207,7 +206,7 @@ it('should render a field with a custom error icon', () => {
       errorIcon={<IconHelp />}
     />
   );
-  const wrapper = shallowWithIntl(field);
+  const wrapper = enzymeIntl.shallowWithIntl(field);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -221,7 +220,7 @@ it('should render a required field with an Input', () => {
       <Input />
     </Field>
   );
-  const wrapper = mountWithIntl(field).children();
+  const wrapper = enzymeIntl.mountWithIntl(field).children();
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -235,7 +234,7 @@ it('should render a required field with a Select', () => {
       <Select />
     </Field>
   );
-  const wrapper = mountWithIntl(field).children();
+  const wrapper = enzymeIntl.mountWithIntl(field).children();
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -249,7 +248,7 @@ it('should render a required field with a Textarea', () => {
       <Textarea />
     </Field>
   );
-  const wrapper = mountWithIntl(field).children();
+  const wrapper = enzymeIntl.mountWithIntl(field).children();
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -263,7 +262,7 @@ it('should render an invalid field with an Input', () => {
       <Input />
     </Field>
   );
-  const wrapper = mountWithIntl(field);
+  const wrapper = enzymeIntl.mountWithIntl(field);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -277,7 +276,7 @@ it('should render an invalid field with a Select', () => {
       <Select />
     </Field>
   );
-  const wrapper = mountWithIntl(field);
+  const wrapper = enzymeIntl.mountWithIntl(field);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -291,7 +290,7 @@ it('should render an invalid field with an Textarea', () => {
       <Textarea />
     </Field>
   );
-  const wrapper = mountWithIntl(field);
+  const wrapper = enzymeIntl.mountWithIntl(field);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -306,7 +305,7 @@ it('should render an invalid and required field with an Input', () => {
       <Input />
     </Field>
   );
-  const wrapper = mountWithIntl(field);
+  const wrapper = enzymeIntl.mountWithIntl(field);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -321,7 +320,7 @@ it('should render an invalid and required field with a Select', () => {
       <Select />
     </Field>
   );
-  const wrapper = mountWithIntl(field);
+  const wrapper = enzymeIntl.mountWithIntl(field);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -336,7 +335,7 @@ it('should render an invalid and required field with a Textarea', () => {
       <Textarea />
     </Field>
   );
-  const wrapper = mountWithIntl(field);
+  const wrapper = enzymeIntl.mountWithIntl(field);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -349,7 +348,7 @@ it('should render a field with an Input', () => {
       <Input />
     </Field>
   );
-  const wrapper = mountWithIntl(field).children();
+  const wrapper = enzymeIntl.mountWithIntl(field).children();
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -362,7 +361,7 @@ it('should render a field with a Select', () => {
       <Select />
     </Field>
   );
-  const wrapper = mountWithIntl(field).children();
+  const wrapper = enzymeIntl.mountWithIntl(field).children();
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -375,12 +374,12 @@ it('should render a field with a Textarea', () => {
       <Textarea />
     </Field>
   );
-  const wrapper = mountWithIntl(field).children();
+  const wrapper = enzymeIntl.mountWithIntl(field).children();
   expect(wrapper).toMatchSnapshot();
 });
 
 it('correctly applies the theme context className', () => {
-  const wrapper = mountWithIntl(
+  const wrapper = enzymeIntl.mountWithIntl(
     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
       <Field
         label="Field Label"

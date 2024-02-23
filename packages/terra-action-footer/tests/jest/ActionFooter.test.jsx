@@ -6,12 +6,12 @@ describe('ActionFooter', () => {
   describe('Snapshot Tests', () => {
     it('should render an empty footer', () => {
       const component = <ActionFooter />;
-      expect(shallow(component)).toMatchSnapshot();
+      expect(enzyme.shallow(component)).toMatchSnapshot();
     });
 
     it('should render a footer with only one start-actions button', () => {
       const component = <ActionFooter start={<button type="button">Start Button</button>} />;
-      expect(shallow(component)).toMatchSnapshot();
+      expect(enzyme.shallow(component)).toMatchSnapshot();
     });
 
     it('should render a footer with only two start-actions buttons', () => {
@@ -25,12 +25,12 @@ describe('ActionFooter', () => {
 )}
         />
       );
-      expect(shallow(component)).toMatchSnapshot();
+      expect(enzyme.shallow(component)).toMatchSnapshot();
     });
 
     it('should render a footer with only an end-actions button', () => {
       const component = <ActionFooter end={<button type="button">End Button</button>} />;
-      expect(shallow(component)).toMatchSnapshot();
+      expect(enzyme.shallow(component)).toMatchSnapshot();
     });
 
     it('should render a footer with only two end-actions buttons', () => {
@@ -44,7 +44,7 @@ describe('ActionFooter', () => {
 )}
         />
       );
-      expect(shallow(component)).toMatchSnapshot();
+      expect(enzyme.shallow(component)).toMatchSnapshot();
     });
 
     it('should render a footer with both start and end socket buttons', () => {
@@ -54,14 +54,14 @@ describe('ActionFooter', () => {
           end={<button type="button">End Button</button>}
         />
       );
-      expect(shallow(component)).toMatchSnapshot();
+      expect(enzyme.shallow(component)).toMatchSnapshot();
     });
   });
 
   // Prop Tests
   describe('Prop Tests', () => {
     describe('without start or end actions', () => {
-      const actionFooter = mount(<ActionFooter />);
+      const actionFooter = enzyme.mount(<ActionFooter />);
 
       it('should display no actions', () => (
         expect(actionFooter).toMatchSnapshot()
@@ -69,7 +69,7 @@ describe('ActionFooter', () => {
     });
 
     describe('with only a start action', () => {
-      const actionFooter = mount(<ActionFooter start="Start Action" />);
+      const actionFooter = enzyme.mount(<ActionFooter start="Start Action" />);
 
       it('should only display a start action', () => (
         expect(actionFooter).toMatchSnapshot()
@@ -77,7 +77,7 @@ describe('ActionFooter', () => {
     });
 
     describe('with only an end action', () => {
-      const actionFooter = mount(<ActionFooter end="End Action" />);
+      const actionFooter = enzyme.mount(<ActionFooter end="End Action" />);
 
       it('should only display an end action', () => (
         expect(actionFooter).toMatchSnapshot()
@@ -85,7 +85,7 @@ describe('ActionFooter', () => {
     });
 
     describe('with both start and end actions', () => {
-      const actionFooter = mount(<ActionFooter start="Start Action" end="End Action" />);
+      const actionFooter = enzyme.mount(<ActionFooter start="Start Action" end="End Action" />);
 
       it('should display both start and end actions', () => (
         expect(actionFooter).toMatchSnapshot()
@@ -96,7 +96,7 @@ describe('ActionFooter', () => {
   // Structure Tests
   describe('Structure Tests', () => {
     describe('without start or end actions', () => {
-      const actionFooter = shallow(<ActionFooter />);
+      const actionFooter = enzyme.shallow(<ActionFooter />);
 
       it("should render an 'BlockActionFooter'", () => (
         expect(actionFooter.find('BlockActionFooter').length).toBe(1)
@@ -112,7 +112,7 @@ describe('ActionFooter', () => {
     });
 
     describe('with only a start action', () => {
-      const actionFooter = shallow(<ActionFooter start="Start Action" />);
+      const actionFooter = enzyme.shallow(<ActionFooter start="Start Action" />);
 
       it("should render an 'BlockActionFooter'", () => (
         expect(actionFooter.find('BlockActionFooter').length).toBe(1)
@@ -128,7 +128,7 @@ describe('ActionFooter', () => {
     });
 
     describe('with only an end action', () => {
-      const actionFooter = shallow(<ActionFooter end="End Action" />);
+      const actionFooter = enzyme.shallow(<ActionFooter end="End Action" />);
 
       it("should render an 'BlockActionFooter'", () => (
         expect(actionFooter.find('BlockActionFooter').length).toBe(1)
@@ -144,7 +144,7 @@ describe('ActionFooter', () => {
     });
 
     describe('with both start and end actions', () => {
-      const actionFooter = shallow(<ActionFooter start="Start Action" end="End Action" />);
+      const actionFooter = enzyme.shallow(<ActionFooter start="Start Action" end="End Action" />);
 
       it("should render an 'BlockActionFooter'", () => (
         expect(actionFooter.find('BlockActionFooter').length).toBe(1)
@@ -165,7 +165,7 @@ describe('ActionFooter', () => {
       .mockReturnValue({
         className: 'orion-fusion-theme',
       });
-    const component = mount(
+    const component = enzyme.mount(
       <ActionFooter
         start={<button type="button">Start Button</button>}
         end={<button type="button">End Button</button>}

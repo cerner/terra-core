@@ -8,12 +8,12 @@ const button2 = <ButtonGroup.Button text="Button 2" key="2" />;
 const button3 = <ButtonGroup.Button text="Button 3" key="3" />;
 
 it('should render an empty component', () => {
-  const buttonGroup = shallow(<ButtonGroup />);
+  const buttonGroup = enzyme.shallow(<ButtonGroup />);
   expect(buttonGroup).toMatchSnapshot();
 });
 
 it('should render a button group with children', () => {
-  const buttonGroup = shallow((
+  const buttonGroup = enzyme.shallow((
     <ButtonGroup>
       {button1}
     </ButtonGroup>
@@ -22,7 +22,7 @@ it('should render a button group with children', () => {
 });
 
 it('should render a button group with children selected', () => {
-  const buttonGroup = shallow((
+  const buttonGroup = enzyme.shallow((
     <ButtonGroup selectedKeys={['1']}>
       {button1}
       {button2}
@@ -32,7 +32,7 @@ it('should render a button group with children selected', () => {
 });
 
 it('should only render enabled buttons as toggle buttons', () => {
-  const buttonGroup = shallow((
+  const buttonGroup = enzyme.shallow((
     <ButtonGroup selectedKeys={['1']}>
       {button1}
       {button2}
@@ -43,7 +43,7 @@ it('should only render enabled buttons as toggle buttons', () => {
 });
 
 it('should render a block button group with children', () => {
-  const buttonGroup = shallow((
+  const buttonGroup = enzyme.shallow((
     <ButtonGroup isBlock>
       {button1}
       {button2}
@@ -55,7 +55,7 @@ it('should render a block button group with children', () => {
 
 it('should call onChange when button is selected', () => {
   const onChange = jest.fn();
-  const buttonGroup = shallow((
+  const buttonGroup = enzyme.shallow((
     <ButtonGroup onChange={onChange}>
       {button1}
       {button2}
@@ -70,7 +70,7 @@ it('should call onChange when button is selected', () => {
 });
 
 it('should select a button', () => {
-  const buttonGroup = shallow((
+  const buttonGroup = enzyme.shallow((
     <ButtonGroup>
       {button1}
       {button2}
@@ -86,7 +86,7 @@ it('should select a button', () => {
 
 it('should apply correct role for multiSelect button group', () => {
   const onChange = jest.fn();
-  const buttonGroup = shallow((
+  const buttonGroup = enzyme.shallow((
     <ButtonGroup isMultiSelect onChange={onChange}>
       {button1}
       {button2}
@@ -97,7 +97,7 @@ it('should apply correct role for multiSelect button group', () => {
 
 it('should apply correct role for single select button group', () => {
   const onChange = jest.fn();
-  const buttonGroup = shallow((
+  const buttonGroup = enzyme.shallow((
     <ButtonGroup onChange={onChange}>
       {button1}
       {button2}
@@ -107,7 +107,7 @@ it('should apply correct role for single select button group', () => {
 });
 
 it('correctly applies the theme context className', () => {
-  const buttonGroup = mount(
+  const buttonGroup = enzyme.mount(
     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
       <ButtonGroup>
         {button1}

@@ -2,7 +2,7 @@ import React from 'react';
 import CardBody from '../../src/CardBody';
 
 describe('CardBody', () => {
-  const shallowRender = shallow(<CardBody />);
+  const shallowRender = enzyme.shallow(<CardBody />);
 
   // Snapshot Tests
   it('should render a default component', () => {
@@ -18,7 +18,7 @@ describe('CardBody', () => {
   });
 
   it('should contain the class to center content when prop to center content is passed', () => {
-    const contentCenteredCard = shallow(<CardBody isContentCentered />);
+    const contentCenteredCard = enzyme.shallow(<CardBody isContentCentered />);
     expect(contentCenteredCard.prop('className')).toContain('center-content');
   });
 
@@ -31,7 +31,7 @@ describe('CardBody', () => {
       .mockReturnValue({
         className: 'orion-fusion-theme',
       });
-    const component = shallow(<CardBody />);
+    const component = enzyme.shallow(<CardBody />);
     expect(component).toMatchSnapshot();
   });
 });

@@ -169,7 +169,7 @@ exports[`should apply correct role for single select button group 1`] = `
     onClick={[Function]}
     onKeyDown={[Function]}
     role="radio"
-    tabIndex="-1"
+    tabIndex="0"
     text="Button 1"
   />
   <ButtonGroupButton

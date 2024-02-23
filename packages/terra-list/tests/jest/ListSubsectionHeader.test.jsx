@@ -5,29 +5,29 @@ import ListSubsectionHeader from '../../src/ListSubsectionHeader';
 
 // Snapshot Tests
 it('should render default', () => {
-  const shallowComponent = shallow(<ListSubsectionHeader title="test" />);
+  const shallowComponent = enzyme.shallow(<ListSubsectionHeader title="test" />);
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render with level', () => {
-  const shallowComponent = shallow(<ListSubsectionHeader title="test" level={3} />);
+  const shallowComponent = enzyme.shallow(<ListSubsectionHeader title="test" level={3} />);
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render with isCollapsed', () => {
-  const shallowComponent = shallow(<ListSubsectionHeader title="test" isCollapsed />);
+  const shallowComponent = enzyme.shallow(<ListSubsectionHeader title="test" isCollapsed />);
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render with isCollapsible', () => {
-  const shallowComponent = shallow(<ListSubsectionHeader title="test" isCollapsible />);
+  const shallowComponent = enzyme.shallow(<ListSubsectionHeader title="test" isCollapsible />);
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render with callback functions', () => {
   const mockCallBack = jest.fn();
 
-  const shallowComponent = shallow(
+  const shallowComponent = enzyme.shallow(
     <ListSubsectionHeader title="test" isCollapsible onSelect={mockCallBack} refCallback={jest.fn()} />,
   );
   expect(shallowComponent).toMatchSnapshot();
@@ -38,7 +38,7 @@ it('should render with callback functions', () => {
 });
 
 it('correctly applies the theme context className', () => {
-  const wrapper = mount(
+  const wrapper = enzyme.mount(
     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
       <ListSubsectionHeader title="test" />
     </ThemeContextProvider>,

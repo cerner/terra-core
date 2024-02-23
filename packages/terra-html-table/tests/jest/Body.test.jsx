@@ -12,21 +12,21 @@ const rows = [row1, row2];
 
 // Snapshot test
 it('should render Body tag', () => {
-  const shallowComponent = shallow(<Body>{rows}</Body>);
+  const shallowComponent = enzyme.shallow(<Body>{rows}</Body>);
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render Body with no rows', () => {
-  const shallowComponent = shallow(<Body />);
+  const shallowComponent = enzyme.shallow(<Body />);
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render Body with one row', () => {
-  const shallowComponent = shallow(<Body>{[row1]}</Body>);
+  const shallowComponent = enzyme.shallow(<Body>{[row1]}</Body>);
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render Body with multiple rows', () => {
-  const shallowComponent = shallow(<Body>{rows}</Body>);
+  const shallowComponent = enzyme.shallow(<Body>{rows}</Body>);
   expect(shallowComponent).toMatchSnapshot();
 });

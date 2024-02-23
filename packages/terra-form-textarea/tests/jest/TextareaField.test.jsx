@@ -8,19 +8,19 @@ window.matchMedia = () => ({ matches: true });
 
 it('should render a default TextareaField component', () => {
   const textarea = <TextareaField inputId="test-input" label="Label" />;
-  const wrapper = shallow(textarea);
+  const wrapper = enzyme.shallow(textarea);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a disabled TextareaField component', () => {
   const textarea = <TextareaField disabled inputId="test-input" label="Label" />;
-  const wrapper = shallow(textarea);
+  const wrapper = enzyme.shallow(textarea);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a disabled TextareaField component via inputAttrs', () => {
   const textarea = <TextareaField inputId="test-input" inputAttrs={{ disabled: true }} label="Label" />;
-  const wrapper = shallow(textarea);
+  const wrapper = enzyme.shallow(textarea);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -49,7 +49,7 @@ it('should render a TextareaField with props', () => {
     />
   );
 
-  const wrapper = shallow(textarea);
+  const wrapper = enzyme.shallow(textarea);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -78,12 +78,12 @@ it('should render a valid TextareaField with props', () => {
     />
   );
 
-  const wrapper = shallow(textarea);
+  const wrapper = enzyme.shallow(textarea);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('correctly applies the theme context className', () => {
-  const wrapper = mount(
+  const wrapper = enzyme.mount(
     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
       <TextareaField inputId="test-input" label="Label" />
     </ThemeContextProvider>,

@@ -6,7 +6,7 @@ describe('withActiveBreakpoint', () => {
   it('should render using the provided render function', () => {
     const TestComponent = withActiveBreakpoint(() => <div>I am a test component</div>);
 
-    const wrapper = mount(<TestComponent />);
+    const wrapper = enzyme.mount(<TestComponent />);
     expect(wrapper).toMatchSnapshot();
   });
 });

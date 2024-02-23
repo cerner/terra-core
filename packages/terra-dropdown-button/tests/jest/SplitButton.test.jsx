@@ -1,13 +1,9 @@
 import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 import { IntlProvider } from 'react-intl';
-/* eslint-disable-next-line import/no-extraneous-dependencies */
-import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { v4 as uuidv4 } from 'uuid';
 import translationsFile from '../../translations/en.json';
 
-/* eslint-disable-next-line import/no-extraneous-dependencies */
 import SplitButton, { Item } from '../../src/SplitButton';
 
 let mockSpyUuid;
@@ -21,7 +17,7 @@ afterAll(() => {
 
 describe('Dropdown Button', () => {
   it('should render a default split type', () => {
-    const wrapper = shallowWithIntl(
+    const wrapper = enzymeIntl.shallowWithIntl(
       <SplitButton primaryOptionLabel="Primary Option" onSelect={() => {}}>
         <Item label="1st Option" onSelect={() => {}} />
       </SplitButton>,
@@ -30,7 +26,7 @@ describe('Dropdown Button', () => {
   });
 
   it('should render a split type with multiple children', () => {
-    const wrapper = shallowWithIntl(
+    const wrapper = enzymeIntl.shallowWithIntl(
       <SplitButton primaryOptionLabel="Primary Option" onSelect={() => {}}>
         <Item label="1st Option" onSelect={() => {}} />
         <Item label="2nd Option" onSelect={() => {}} />
@@ -41,7 +37,7 @@ describe('Dropdown Button', () => {
   });
 
   it('should render a disabled split type', () => {
-    const wrapper = shallowWithIntl(
+    const wrapper = enzymeIntl.shallowWithIntl(
       <SplitButton primaryOptionLabel="Primary Option" disabled onSelect={() => {}}>
         <Item label="1st Option" onSelect={() => {}} />
       </SplitButton>,
@@ -50,7 +46,7 @@ describe('Dropdown Button', () => {
   });
 
   it('should render a block split type', () => {
-    const wrapper = shallowWithIntl(
+    const wrapper = enzymeIntl.shallowWithIntl(
       <SplitButton primaryOptionLabel="Primary Option" isBlock onSelect={() => {}}>
         <Item label="1st Option" onSelect={() => {}} />
       </SplitButton>,
@@ -59,7 +55,7 @@ describe('Dropdown Button', () => {
   });
 
   it('should render a compact split type', () => {
-    const wrapper = shallowWithIntl(
+    const wrapper = enzymeIntl.shallowWithIntl(
       <SplitButton primaryOptionLabel="Primary Option" isCompact onSelect={() => {}}>
         <Item label="1st Option" onSelect={() => {}} />
       </SplitButton>,
@@ -68,7 +64,7 @@ describe('Dropdown Button', () => {
   });
 
   it('should render an open split type', () => {
-    const wrapper = shallowWithIntl(
+    const wrapper = enzymeIntl.shallowWithIntl(
       <SplitButton primaryOptionLabel="Primary Option" onSelect={() => {}}>
         <Item label="1st Option" onSelect={() => {}} />
       </SplitButton>,
@@ -79,7 +75,7 @@ describe('Dropdown Button', () => {
   });
 
   it('should render a split type with custom attributes', () => {
-    const wrapper = shallowWithIntl(
+    const wrapper = enzymeIntl.shallowWithIntl(
       <SplitButton primaryOptionLabel="Primary Option" test-custom-attribute other-custom-attribute="purple" onSelect={() => {}}>
         <Item label="1st Option" onSelect={() => {}} />
       </SplitButton>,
@@ -88,7 +84,7 @@ describe('Dropdown Button', () => {
   });
 
   it('correctly applies the theme context className', () => {
-    const wrapper = mountWithIntl(
+    const wrapper = enzymeIntl.mountWithIntl(
       <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
         <SplitButton primaryOptionLabel="Primary Option" onSelect={() => {}}>
           <Item label="1st Option" onSelect={() => {}} />
@@ -102,7 +98,7 @@ describe('Dropdown Button', () => {
     const buttonAttrs = {
       'aria-label': 'Button Aria Label',
     };
-    const wrapper = shallowWithIntl(
+    const wrapper = enzymeIntl.shallowWithIntl(
       <IntlProvider locale="en" messages={translationsFile}>
         <SplitButton label="1st Option" buttonAttrs={buttonAttrs} id="splitDropDown">
           <Item label="PDF" onSelect={() => {}} />

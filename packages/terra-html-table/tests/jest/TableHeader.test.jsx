@@ -9,6 +9,6 @@ const header = [headerData1, headerData2, headerData3];
 
 // Snapshot test
 it('should render table header tag', () => {
-  const shallowComponent = shallow(<Header>{header}</Header>);
+  const shallowComponent = enzyme.shallow(<Header>{header}</Header>);
   expect(shallowComponent).toMatchSnapshot();
 });

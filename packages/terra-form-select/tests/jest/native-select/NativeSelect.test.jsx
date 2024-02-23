@@ -1,11 +1,9 @@
 import React from 'react';
-/* eslint-disable-next-line import/no-extraneous-dependencies */
-import { mountWithIntl, shallowWithIntl } from 'terra-enzyme-intl';
 import NativeSelect from '../../../src/native-select/NativeSelect';
 
 describe('NativeSelect', () => {
   it('should render a default NativeSelect', () => {
-    const wrapper = mountWithIntl(
+    const wrapper = enzymeIntl.mountWithIntl(
       <NativeSelect
         ariaLabel="test-label"
       />,
@@ -14,7 +12,7 @@ describe('NativeSelect', () => {
   });
 
   it('should render a NativeSelect with an id', () => {
-    const wrapper = mountWithIntl(
+    const wrapper = enzymeIntl.mountWithIntl(
       <NativeSelect
         id="test-id"
         ariaLabel="test-label"
@@ -24,7 +22,7 @@ describe('NativeSelect', () => {
   });
 
   it('should render a NativeSelect aria described by', () => {
-    const wrapper = mountWithIntl(
+    const wrapper = enzymeIntl.mountWithIntl(
       <NativeSelect
         ariaLabel="test-label"
         ariaDescribedBy="test-described-id"
@@ -34,7 +32,7 @@ describe('NativeSelect', () => {
   });
 
   it('should render a NativeSelect with options', () => {
-    const wrapper = mountWithIntl(
+    const wrapper = enzymeIntl.mountWithIntl(
       <NativeSelect
         ariaLabel="test-label"
         options={[
@@ -49,7 +47,7 @@ describe('NativeSelect', () => {
   });
 
   it('should render a NativeSelect with options and defaultValue', () => {
-    const wrapper = mountWithIntl(
+    const wrapper = enzymeIntl.mountWithIntl(
       <NativeSelect
         ariaLabel="test-label"
         defaultValue="saab"
@@ -65,7 +63,7 @@ describe('NativeSelect', () => {
   });
 
   it('should render a NativeSelect with options and value', () => {
-    const wrapper = mountWithIntl(
+    const wrapper = enzymeIntl.mountWithIntl(
       <NativeSelect
         ariaLabel="test-label"
         options={[
@@ -81,7 +79,7 @@ describe('NativeSelect', () => {
   });
 
   it('should render a NativeSelect with onChange', () => {
-    const wrapper = mountWithIntl(
+    const wrapper = enzymeIntl.mountWithIntl(
       <NativeSelect
         ariaLabel="test-label"
         onChange={jest.fn()}
@@ -91,7 +89,7 @@ describe('NativeSelect', () => {
   });
 
   it('should render a NativeSelect in filter style', () => {
-    const wrapper = mountWithIntl(
+    const wrapper = enzymeIntl.mountWithIntl(
       <NativeSelect
         ariaLabel="test-label"
         isFilterStyle
@@ -101,7 +99,7 @@ describe('NativeSelect', () => {
   });
 
   it('should render a NativeSelect as invalid', () => {
-    const wrapper = mountWithIntl(
+    const wrapper = enzymeIntl.mountWithIntl(
       <NativeSelect
         ariaLabel="test-label"
         isInvalid
@@ -111,7 +109,7 @@ describe('NativeSelect', () => {
   });
 
   it('should render a NativeSelect as disabled', () => {
-    const wrapper = mountWithIntl(
+    const wrapper = enzymeIntl.mountWithIntl(
       <NativeSelect
         ariaLabel="test-label"
         disabled
@@ -121,7 +119,7 @@ describe('NativeSelect', () => {
   });
 
   it('should render a NativeSelect with opt groups', () => {
-    const wrapper = mountWithIntl(
+    const wrapper = enzymeIntl.mountWithIntl(
       <NativeSelect
         ariaLabel="test-label"
         options={[
@@ -146,7 +144,7 @@ describe('NativeSelect', () => {
   });
 
   it('should render a NativeSelect required', () => {
-    const wrapper = mountWithIntl(
+    const wrapper = enzymeIntl.mountWithIntl(
       <NativeSelect
         ariaLabel="test-label"
         required
@@ -156,7 +154,7 @@ describe('NativeSelect', () => {
   });
 
   it('should render a NativeSelect isIncomplete', () => {
-    const wrapper = mountWithIntl(
+    const wrapper = enzymeIntl.mountWithIntl(
       <NativeSelect
         ariaLabel="test-label"
         isIncomplete
@@ -166,7 +164,7 @@ describe('NativeSelect', () => {
   });
 
   it('should render a NativeSelect required and isIncomplete', () => {
-    const wrapper = mountWithIntl(
+    const wrapper = enzymeIntl.mountWithIntl(
       <NativeSelect
         ariaLabel="test-label"
         isIncomplete
@@ -177,7 +175,7 @@ describe('NativeSelect', () => {
   });
 
   it('should render a NativeSelect with a refCallback', () => {
-    const wrapper = shallowWithIntl(
+    const wrapper = enzymeIntl.shallowWithIntl(
       <NativeSelect
         ariaLabel="test-label"
         refCallback={jest.fn()}
@@ -187,7 +185,7 @@ describe('NativeSelect', () => {
   });
 
   it('should render a NativeSelect with disabled options', () => {
-    const wrapper = mountWithIntl(
+    const wrapper = enzymeIntl.mountWithIntl(
       <NativeSelect
         ariaLabel="test-label"
         options={[

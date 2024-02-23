@@ -6,12 +6,12 @@ describe('CenteredActionFooter', () => {
   describe('Snapshot Tests', () => {
     it('should render an empty footer', () => {
       const component = <CenteredActionFooter />;
-      expect(shallow(component)).toMatchSnapshot();
+      expect(enzyme.shallow(component)).toMatchSnapshot();
     });
 
     it('should render a footer with an anchor', () => {
       const component = <CenteredActionFooter center={<a href="/">Test</a>} />;
-      expect(shallow(component)).toMatchSnapshot();
+      expect(enzyme.shallow(component)).toMatchSnapshot();
     });
 
     it('should render a footer with two buttons', () => {
@@ -25,14 +25,14 @@ describe('CenteredActionFooter', () => {
 )}
         />
       );
-      expect(shallow(component)).toMatchSnapshot();
+      expect(enzyme.shallow(component)).toMatchSnapshot();
     });
   });
 
   // Prop Tests
   describe('Prop Tests', () => {
     describe('without a center action', () => {
-      const centeredActionFooter = mount(<CenteredActionFooter />);
+      const centeredActionFooter = enzyme.mount(<CenteredActionFooter />);
 
       it('should display no actions', () => (
         expect(centeredActionFooter).toMatchSnapshot()
@@ -40,7 +40,7 @@ describe('CenteredActionFooter', () => {
     });
 
     describe('with a center action', () => {
-      const centeredActionFooter = mount(<CenteredActionFooter center="Center Action" />);
+      const centeredActionFooter = enzyme.mount(<CenteredActionFooter center="Center Action" />);
 
       it('should display a center action', () => (
         expect(centeredActionFooter).toMatchSnapshot()
@@ -51,7 +51,7 @@ describe('CenteredActionFooter', () => {
   // Structure Tests
   describe('Structure Tests', () => {
     describe('without a center action', () => {
-      const centeredActionFooter = shallow(<CenteredActionFooter />);
+      const centeredActionFooter = enzyme.shallow(<CenteredActionFooter />);
 
       it('should contain the centered-action-footer class', () => (
         expect(centeredActionFooter.find('.centered-action-footer').length).toBe(1)
@@ -63,7 +63,7 @@ describe('CenteredActionFooter', () => {
     });
 
     describe('with a center action', () => {
-      const centeredActionFooter = shallow(<CenteredActionFooter center="Center Action" />);
+      const centeredActionFooter = enzyme.shallow(<CenteredActionFooter center="Center Action" />);
 
       it('should contain the centered-action-footer class', () => (
         expect(centeredActionFooter.find('.centered-action-footer').length).toBe(1)
@@ -80,7 +80,7 @@ describe('CenteredActionFooter', () => {
       .mockReturnValue({
         className: 'orion-fusion-theme',
       });
-    const component = mount(<CenteredActionFooter center="Center Action" />);
+    const component = enzyme.mount(<CenteredActionFooter center="Center Action" />);
     expect(component).toMatchSnapshot();
   });
 });

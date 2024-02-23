@@ -62,6 +62,14 @@ Terra.describeViewports('Button Group', ['huge'], () => {
     });
   });
 
+  describe('Single-Select with no selected item', () => {
+    before(() => browser.url('/#/raw/tests/cerner-terra-core-docs/button-group/button-group-single-select-with-no-selected-item'));
+    it('should shift focus to the first button', () => {
+      browser.keys('Tab');
+      Terra.validates.element('single select first button focused');
+    });
+  });
+
   describe('Multi-Select', () => {
     before(() => browser.url('/#/raw/tests/cerner-terra-core-docs/button-group/button-group-multi-select'));
     it('should select the first button', () => {

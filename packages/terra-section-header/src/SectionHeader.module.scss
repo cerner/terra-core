@@ -156,5 +156,12 @@
     &.title-fixed {
       position: absolute;
     }
+
+    // Make the section header title sticky
+    &.title-sticky {
+      position: sticky;
+      left: 12px;
+      width: auto;
+    }
   }
 }

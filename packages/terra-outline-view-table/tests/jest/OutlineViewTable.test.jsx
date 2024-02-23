@@ -5,7 +5,7 @@ import OutlineViewTable from '../../src/OutlineViewTable';
 describe('OutlineViewTable', () => {
   // Snapshot Tests
   it('should passthrough props to Table', () => {
-    const shallowComponent = shallow(
+    const shallowComponent = enzyme.shallow(
       <OutlineViewTable
         bodyData={[
           {

@@ -8,24 +8,24 @@ describe('Divider', () => {
 
   // Snapshot Tests
   it('should render a basic component', () => {
-    const wrapper = shallow(defaultRender);
+    const wrapper = enzyme.shallow(defaultRender);
     expect(wrapper).toMatchSnapshot();
   });
 
   // Custom Prop Test
   it('it should pass in a custom prop', () => {
-    const wrapper = shallow(<Divider id="testDivider" text="custom-text" level={3} />);
+    const wrapper = enzyme.shallow(<Divider id="testDivider" text="custom-text" level={3} />);
     expect(wrapper).toMatchSnapshot();
   });
 
   // Inline Custom Text Test
   it('it should pass in a string of text', () => {
-    const wrapper = shallow(<Divider text="Divider Test String" />);
+    const wrapper = enzyme.shallow(<Divider text="Divider Test String" />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('correctly applies the theme context className', () => {
-    const wrapper = mount(
+    const wrapper = enzyme.mount(
       <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
         {defaultRender}
       </ThemeContextProvider>,
@@ -34,37 +34,37 @@ describe('Divider', () => {
   });
 
   it('should spread a custom class onto the hr divider', () => {
-    const wrapper = shallow(<Divider className="custom-class" />);
+    const wrapper = enzyme.shallow(<Divider className="custom-class" />);
 
     expect(wrapper.hasClass('custom-class')).toBe(true);
   });
 
   it('should spread a custom class onto the text divider', () => {
-    const wrapper = shallow(<Divider className="custom-class" text="custom-text" />);
+    const wrapper = enzyme.shallow(<Divider className="custom-class" text="custom-text" />);
 
     expect(wrapper.hasClass('custom-class')).toBe(true);
   });
 
   it('should spread a custom prop onto the hr divider', () => {
-    const wrapper = shallow(<Divider id="custom-id" text="custom-text" level={3} />);
+    const wrapper = enzyme.shallow(<Divider id="custom-id" text="custom-text" level={3} />);
 
     expect(wrapper.is('#custom-id')).toBe(true);
   });
 
   it('should spread a custom prop onto the text divider', () => {
-    const wrapper = shallow(<Divider id="custom-id" text="custom-text" />);
+    const wrapper = enzyme.shallow(<Divider id="custom-id" text="custom-text" />);
 
     expect(wrapper.is('#custom-id')).toBe(true);
   });
 
   it('should spread a custom prop onto the text with level divider', () => {
-    const wrapper = shallow(<Divider id="custom-id" text="custom-text" level={3} />);
+    const wrapper = enzyme.shallow(<Divider id="custom-id" text="custom-text" level={3} />);
 
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should apply the theme context className to the hr divider', () => {
-    const wrapper = mount(
+    const wrapper = enzyme.mount(
       <ThemeContextProvider theme={{ className: 'theme-class-name' }}>
         <Divider />
       </ThemeContextProvider>,
@@ -74,7 +74,7 @@ describe('Divider', () => {
   });
 
   it('should apply the theme context className to the text divider', () => {
-    const wrapper = mount(
+    const wrapper = enzyme.mount(
       <ThemeContextProvider theme={{ className: 'theme-class-name' }}>
         <Divider text="custom-text" />
       </ThemeContextProvider>,

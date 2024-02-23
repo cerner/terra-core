@@ -1,13 +1,11 @@
 import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
-/* eslint-disable-next-line import/no-extraneous-dependencies */
-import { mountWithIntl } from 'terra-enzyme-intl';
 import DropdownButtonBase from '../../src/_DropdownButtonBase';
 import { Item } from '../../src/DropdownButton';
 
 describe('Dropdown Button Base', () => {
   it('renders a default DropdownButtonBase', () => {
-    const wrapper = shallow(
+    const wrapper = enzyme.shallow(
       <DropdownButtonBase
         items={
           <Item label="1st option" onSelect={() => {}} />
@@ -22,7 +20,7 @@ describe('Dropdown Button Base', () => {
   });
 
   it('renders a disabled DropdownButtonBase', () => {
-    const wrapper = shallow(
+    const wrapper = enzyme.shallow(
       <DropdownButtonBase
         items={
           <Item label="1st option" onSelect={() => {}} />
@@ -38,7 +36,7 @@ describe('Dropdown Button Base', () => {
   });
 
   it('renders a block DropdownButtonBase', () => {
-    const wrapper = shallow(
+    const wrapper = enzyme.shallow(
       <DropdownButtonBase
         items={
           <Item label="1st option" onSelect={() => {}} />
@@ -54,7 +52,7 @@ describe('Dropdown Button Base', () => {
   });
 
   it('renders an open DropdownButtonBase', () => {
-    const wrapper = shallow(
+    const wrapper = enzyme.shallow(
       <DropdownButtonBase
         items={
           <Item label="1st option" onSelect={() => {}} />
@@ -69,7 +67,7 @@ describe('Dropdown Button Base', () => {
   });
 
   it('correctly applies the theme context className', () => {
-    const wrapper = mountWithIntl(
+    const wrapper = enzymeIntl.mountWithIntl(
       <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
         <DropdownButtonBase
           items={

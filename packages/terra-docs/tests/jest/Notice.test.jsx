@@ -4,17 +4,17 @@ import Notice from '../../src/Notice';
 describe('Notice', () => {
   // Snapshot Tests
   it('should render a default component', () => {
-    const wrapper = shallow(<Notice />);
+    const wrapper = enzyme.shallow(<Notice />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a higher aria-level', () => {
-    const wrapper = shallow(<Notice ariaLevel="6" />);
+    const wrapper = enzyme.shallow(<Notice ariaLevel="6" />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a deprecation notice with text', () => {
-    const wrapper = shallow(
+    const wrapper = enzyme.shallow(
       <Notice variant="deprecation">
         notice text
       </Notice>,
@@ -23,7 +23,7 @@ describe('Notice', () => {
   });
 
   it('should render a maintenance notice with text', () => {
-    const wrapper = shallow(
+    const wrapper = enzyme.shallow(
       <Notice variant="maintenance">
         notice text
       </Notice>,
@@ -32,7 +32,7 @@ describe('Notice', () => {
   });
 
   it('should render a best practice notice with text', () => {
-    const wrapper = shallow(
+    const wrapper = enzyme.shallow(
       <Notice variant="ux-recommendation">
         notice text
       </Notice>,
@@ -41,7 +41,7 @@ describe('Notice', () => {
   });
 
   it('should render a caution notice with text', () => {
-    const wrapper = shallow(
+    const wrapper = enzyme.shallow(
       <Notice variant="caution">
         notice text
       </Notice>,
@@ -50,7 +50,7 @@ describe('Notice', () => {
   });
 
   it('should render a important notice with text', () => {
-    const wrapper = shallow(
+    const wrapper = enzyme.shallow(
       <Notice variant="important">
         notice text
       </Notice>,
@@ -59,7 +59,7 @@ describe('Notice', () => {
   });
 
   it('should render a important notice with text', () => {
-    const wrapper = shallow(
+    const wrapper = enzyme.shallow(
       <Notice variant="not-supported">
         notice text
       </Notice>,

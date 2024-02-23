@@ -5,17 +5,17 @@ import Item from '../../src/Item';
 
 describe('Item', () => {
   it('renders a default item', () => {
-    const wrapper = shallow(<Item label="1st Option" requestClose={() => {}} onSelect={() => {}} />);
+    const wrapper = enzyme.shallow(<Item label="1st Option" requestClose={() => {}} onSelect={() => {}} />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('renders an active item', () => {
-    const wrapper = shallow(<Item label="1st Option" requestClose={() => {}} onSelect={() => {}} isActive />);
+    const wrapper = enzyme.shallow(<Item label="1st Option" requestClose={() => {}} onSelect={() => {}} isActive />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('correctly applies the theme context className', () => {
-    const wrapper = mount(
+    const wrapper = enzyme.mount(
       <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
         <Item label="1st Option" requestClose={() => {}} onSelect={() => {}} />
       </ThemeContextProvider>,

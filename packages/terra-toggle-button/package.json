@@ -1,6 +1,6 @@
 {
   "name": "terra-toggle-button",
-  "version": "3.83.0",
+  "version": "3.84.0",
   "description": "Toggle button component that transitions content in and out with the click on a button.",
   "author": "Cerner Corporation",
   "repository": {
@@ -24,9 +24,9 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-button": "^3.73.0",
-    "terra-icon": "^3.59.0",
-    "terra-toggle": "^3.61.0"
+    "terra-button": "^3.74.0",
+    "terra-icon": "^3.60.0",
+    "terra-toggle": "^3.62.0"
   },
   "peerDependencies": {
     "react": "^16.8.5",
@@ -40,9 +40,17 @@
     "precompile": "rm -rf lib",
     "test": "npm run lint && npm run jest && npm run wdio",
     "jest": "jest --config ../../jest.config.js",
-    "wdio-default": "cd ../.. && terra wdio",
-    "wdio-lowlight": "cd ../.. && terra wdio --themes clinical-lowlight-theme",
-    "wdio-fusion": "cd ../.. && terra wdio --themes orion-fusion-theme",
-    "wdio": "npm run wdio-default && npm run wdio-lowlight && npm run wdio-fusion"
-  }
+    "wdio:default": "cd ../.. && terra wdio",
+    "wdio:lowlight": "cd ../.. && terra wdio --themes clinical-lowlight-theme",
+    "wdio:fusion": "cd ../.. && terra wdio --themes orion-fusion-theme",
+    "wdio": "npm run wdio:default && npm run wdio:lowlight && npm run wdio:fusion"
+  },
+  "files": [
+    "lib",
+    "src",
+    "CHANGELOG.md",
+    "LICENSE",
+    "NOTICE",
+    "README.md"
+  ]
 }

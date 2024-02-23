@@ -22,23 +22,23 @@ describe('ShowHideFocuser', () => {
 
   // Snapshot Tests
   it('should render divider spans and a span to focus to correctly', () => {
-    const paragraph = render(<MockComponent focusableText={mockFocusableText} />);
+    const paragraph = enzyme.render(<MockComponent focusableText={mockFocusableText} />);
     expect(paragraph).toMatchSnapshot();
   });
 
   it('should render preview text correctly', () => {
-    const paragraph = render(<MockComponent prefix={mockPrefix} focusableText={mockFocusableText} />);
+    const paragraph = enzyme.render(<MockComponent prefix={mockPrefix} focusableText={mockFocusableText} />);
     expect(paragraph).toMatchSnapshot();
   });
 
   it('should render focusable text correctly', () => {
-    const paragraph = render(<MockComponent focusableText={mockFocusableText} />);
+    const paragraph = enzyme.render(<MockComponent focusableText={mockFocusableText} />);
     expect(paragraph).toMatchSnapshot();
   });
 
   it('should throw error for required focusableText prop', () => {
     try {
-      shallow(<MockComponent />);
+      enzyme.shallow(<MockComponent />);
     } catch (e) {
       expect(e.message).toContain('The prop `focusableText` is marked as required');
     }

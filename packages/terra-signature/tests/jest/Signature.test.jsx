@@ -8,28 +8,28 @@ describe('Signature', () => {
 
   // Snapshot Tests
   it('should render a default component', () => {
-    const signature = render(defaultRender);
+    const signature = enzyme.render(defaultRender);
     expect(signature).toMatchSnapshot();
   });
 
   it('should receive line width prop', () => {
-    const signature = render(<Signature lineWidth={Signature.Opts.Width.EXTRA_FINE} />);
+    const signature = enzyme.render(<Signature lineWidth={Signature.Opts.Width.EXTRA_FINE} />);
     expect(signature).toMatchSnapshot();
   });
 
   it('should receive line segments prop', () => {
-    const signature = render(<Signature lineSegments={[]} />);
+    const signature = enzyme.render(<Signature lineSegments={[]} />);
     expect(signature).toMatchSnapshot();
   });
 
   it('should have custom props', () => {
     const singleLine = <Signature id="foo" />;
-    const signature = render(singleLine);
+    const signature = enzyme.render(singleLine);
     expect(signature).toMatchSnapshot();
   });
 
   it('correctly applies the theme context className', () => {
-    const wrapper = render(
+    const wrapper = enzyme.render(
       <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
         <Signature id="foo" />
       </ThemeContextProvider>,

@@ -7,31 +7,31 @@ window.matchMedia = () => ({ matches: true });
 
 it('should render a checkbox', () => {
   const checkBox = (<Checkbox labelText="Checkbox" />);
-  const wrapper = shallow(checkBox);
+  const wrapper = enzyme.shallow(checkBox);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render an uncontrolled checkbox', () => {
   const checkBox = (<Checkbox defaultChecked labelText="Checkbox" />);
-  const wrapper = shallow(checkBox);
+  const wrapper = enzyme.shallow(checkBox);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a controlled checkbox', () => {
   const checkBox = (<Checkbox checked onChange={() => {}} labelText="Checkbox" />);
-  const wrapper = shallow(checkBox);
+  const wrapper = enzyme.shallow(checkBox);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a disabled checkbox', () => {
   const checkBox = (<Checkbox checked onChange={() => {}} labelText="Checkbox" disabled />);
-  const wrapper = shallow(checkBox);
+  const wrapper = enzyme.shallow(checkBox);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a checkbox with a hidden label', () => {
   const checkBox = (<Checkbox checked onChange={() => {}} labelText="Checkbox" isLabelHidden />);
-  const wrapper = shallow(checkBox);
+  const wrapper = enzyme.shallow(checkBox);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -47,12 +47,12 @@ it('should render a ChoiceField with a checkbox', () => {
     />
   );
 
-  const wrapper = shallow(choiceField);
+  const wrapper = enzyme.shallow(choiceField);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('correctly applies the theme context className', () => {
-  const wrapper = mount(
+  const wrapper = enzyme.mount(
     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
       <Checkbox
         labelText="Do you have any Children?"

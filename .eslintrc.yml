@@ -1,0 +1,4 @@
+extends: "@cerner/terra"
+globals:
+  enzyme: readonly
+  enzymeIntl: readonly

@@ -11,11 +11,11 @@ const rowHeaderData = [rowHeader, ...rowData];
 
 // Snapshot test
 it('should render a default table row', () => {
-  const shallowComponent = shallow(<Row>{rowData}</Row>);
+  const shallowComponent = enzyme.shallow(<Row>{rowData}</Row>);
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render a table row with row header', () => {
-  const shallowComponent = shallow(<Row>{rowHeaderData}</Row>);
+  const shallowComponent = enzyme.shallow(<Row>{rowHeaderData}</Row>);
   expect(shallowComponent).toMatchSnapshot();
 });

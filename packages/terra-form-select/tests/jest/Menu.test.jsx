@@ -1,8 +1,6 @@
 import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 
-/* eslint-disable-next-line import/no-extraneous-dependencies */
-import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
 import Option from '../../src/shared/_Option';
 import ComboboxMenu from '../../src/combobox/Menu';
 import SingleSelectMenu from '../../src/single/Menu';
@@ -12,7 +10,7 @@ describe('Menu', () => {
     const liveRegion = { current: document.createElement('div') };
 
     const menu = <SingleSelectMenu onSelect={() => {}} visuallyHiddenComponent={liveRegion} value="value" />;
-    const wrapper = shallowWithIntl(menu);
+    const wrapper = enzymeIntl.shallowWithIntl(menu);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -26,7 +24,7 @@ describe('Menu', () => {
       </SingleSelectMenu>
     );
 
-    const wrapper = shallowWithIntl(menu);
+    const wrapper = enzymeIntl.shallowWithIntl(menu);
 
     jest.useFakeTimers();
 
@@ -46,7 +44,7 @@ describe('Menu', () => {
       </SingleSelectMenu>
     );
 
-    const wrapper = shallowWithIntl(menu);
+    const wrapper = enzymeIntl.shallowWithIntl(menu);
 
     jest.useFakeTimers();
 
@@ -66,7 +64,7 @@ describe('Menu', () => {
       </SingleSelectMenu>
     );
 
-    const wrapper = shallowWithIntl(menu);
+    const wrapper = enzymeIntl.shallowWithIntl(menu);
 
     jest.useFakeTimers();
 
@@ -89,7 +87,7 @@ describe('Menu', () => {
 
     jest.useFakeTimers();
 
-    const wrapper = shallowWithIntl(menu);
+    const wrapper = enzymeIntl.shallowWithIntl(menu);
 
     jest.runOnlyPendingTimers();
 
@@ -98,7 +96,7 @@ describe('Menu', () => {
 
   it('correctly applies the theme context className', () => {
     const liveRegion = { current: document.createElement('div') };
-    const wrapper = mountWithIntl(
+    const wrapper = enzymeIntl.mountWithIntl(
       <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
         <SingleSelectMenu onSelect={() => {}} visuallyHiddenComponent={liveRegion} value="value" searchValue="asdf">
           <Option value="value" display="display" />

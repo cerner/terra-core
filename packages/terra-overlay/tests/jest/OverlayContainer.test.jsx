@@ -12,17 +12,17 @@ describe('OverlayContainer', () => {
   );
 
   it('should render a default component', () => {
-    const wrapper = shallow(defaultRender);
+    const wrapper = enzyme.shallow(defaultRender);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should have the class overlay-container', () => {
-    const wrapper = shallow(defaultRender);
+    const wrapper = enzyme.shallow(defaultRender);
     expect(wrapper.prop('className')).toContain('overlay-container');
   });
 
   it('should render when overlay is provided', () => {
-    const wrapper = shallow(standardRender);
+    const wrapper = enzyme.shallow(standardRender);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -34,12 +34,12 @@ describe('OverlayContainer', () => {
         </div>
       </OverlayContainer>
     );
-    const wrapper = shallow(overlayContainer);
+    const wrapper = enzyme.shallow(overlayContainer);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render the class overlay-container along with user defined class', () => {
-    const wrapper = shallow(standardRender);
+    const wrapper = enzyme.shallow(standardRender);
     expect(wrapper.prop('className')).toContain('overlay-container');
     expect(wrapper.prop('className')).toContain('user-defined-class');
   });
