@@ -266,9 +266,9 @@ Terra.describeViewports('Button', ['tiny'], () => {
 
   describe('Focusable button with in terra-table', () => {
     it('displays focusable button within terra-table', () => {
-      browser.url('/raw/tests/cerner-terra-core-docs/button/button-inside-table');
+      browser.url('/raw/tests/cerner-terra-core-docs/button/button-table');
       browser.keys(['Tab', 'Tab']);
-      Terra.validates.element('button within table', { selector: '#table-button' });
+      Terra.validates.element('button-table', { selector: '#table-button' });
     });
   });
 });
