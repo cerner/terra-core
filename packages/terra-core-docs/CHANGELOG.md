@@ -5,6 +5,11 @@
 * Added
   * Added implementation page documentation regarding consumers responsibility to ensure the accessibility for `terra-signature`.  
 
+## 1.59.0 - (February 23, 2024)
+
+* Added
+  * Added test to `terra-section-header` for the sticky section header title.
+
 ## 1.58.0 - (February 20, 2024)
 
 * Changed
