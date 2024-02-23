@@ -49,6 +49,7 @@ const TableWithButton = () => {
         id="table-button"
         overflowColumns={cols}
         rows={rows}
+        hasVisibleColumnHeaders={false}
         ariaLabel="Table with Focusable Elements"
       />
     </>
