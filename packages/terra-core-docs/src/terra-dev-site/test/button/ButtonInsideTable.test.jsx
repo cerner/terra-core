@@ -3,7 +3,8 @@ import Table from 'terra-table';
 import Button from 'terra-button';
 
 const TableWithButton = () => {
-  const buttonCell = <Button type="button" aria-label="Alert" text="Alert" />;
+  const buttonCell1 = <Button type="button" id="button1" aria-label="Alert" text="Alert 1" />;
+  const buttonCell2 = <Button type="button" id="button2" aria-label="Alert" text="Alert 2" />;
 
   const tableDataJSON = {
     cols: [
@@ -19,7 +20,7 @@ const TableWithButton = () => {
           {
             content: <>
               Fleck, Arthur
-              {buttonCell}
+              {buttonCell1}
               {/* eslint-disable-next-line react/jsx-closing-tag-location */}
             </>,
           },
@@ -31,11 +32,10 @@ const TableWithButton = () => {
       {
         id: '2',
         cells: [
-          { content: 'Wayne, Bruce' },
           {
             content: (<div>
               Wayne, Bruce
-              {buttonCell}
+              {buttonCell2}
               {/* eslint-disable-next-line react/jsx-closing-tag-location */}
             </div>),
           },
@@ -52,7 +52,7 @@ const TableWithButton = () => {
   return (
     <>
       <Table
-        id="table-focusable-cell"
+        id="table-button"
         overflowColumns={cols}
         rows={rows}
         ariaLabel="Table with Focusable Elements"
