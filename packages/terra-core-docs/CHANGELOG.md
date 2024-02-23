@@ -3,7 +3,8 @@
 ## Unreleased
 
 * Added
-  * Added a test example for `terra-button` to validate focus inside `terra-table`.
+  * Added a test example for `terra-button` to validate focus inside table.
+  * Added test to `terra-section-header` for the sticky section header title.
 
 ## 1.58.0 - (February 20, 2024)
 
