@@ -4,7 +4,7 @@
 
 * Added
   * Added error message for `terra-form-tag-select` invalid example.
-  * Added visual lebel for `terra-form-tag-select` example.
+  * Added visual label for `terra-form-tag-select` example.
 
 ## 1.59.0 - (February 23, 2024)
 
