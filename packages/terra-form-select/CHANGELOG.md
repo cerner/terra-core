@@ -5,7 +5,7 @@
 * Changed
   * Changed role from application to combobox in `terra-form-tag-select`.
   * Updated keydown handler to clear the text on `ESC` key press in `terra-form-tag-select`.
-  * 
+
 ## 6.55.0 - (February 15, 2024)
 
 * Changed
