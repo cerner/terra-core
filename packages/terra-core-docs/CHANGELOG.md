@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+* Added
+  * Added error message for `terra-form-tag-select` invalid example.
+  * Added visual label for `terra-form-tag-select` example.
+
 ## 1.59.0 - (February 23, 2024)
 
 * Added
@@ -46,7 +50,7 @@
 
 ## 1.53.0 - (December 11, 2023)
 
-* Changed 
+* Changed
    * Reverted `Removed ariaDescription prop from list`.
 
 * Added

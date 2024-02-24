@@ -2221,6 +2221,20 @@ Terra.describeViewports('Select', ['tiny'], () => {
     });
   });
 
+  describe('Tag uncontrolled free text clear by escape key press', () => {
+    before(() => {
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/uncontrolled-tag');
+    });
+    it('should enter a free text entry in tag and close list item by pressing escape and clear the free text by pressing again escape', () => {
+      $('[data-terra-select] input').setValue('Black');
+      Terra.validates.element('tag displayed Add button with typed free text', { selector: '#root' });
+      browser.keys('Escape');
+      Terra.validates.element('tag dropdown list close by first escape', { selector: '#root' });
+      browser.keys('Escape');
+      Terra.validates.element('tag cleared entered text by second escape', { selector: '#root' });
+    });
+  });
+
   describe('Tag Variant - placeholder', () => {
     before(() => {
       browser.url('/raw/tests/cerner-terra-core-docs/form-select/tag-select-placeholder');

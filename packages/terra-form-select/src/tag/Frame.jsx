@@ -6,6 +6,7 @@ import ThemeContext from 'terra-theme-context';
 import { FormattedMessage, injectIntl } from 'react-intl';
 import uniqueid from 'lodash.uniqueid';
 import * as KeyCode from 'keycode-js';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
 import Dropdown from '../shared/_Dropdown';
 import Menu from './Menu';
 import FrameUtil from '../shared/_FrameUtil';
@@ -197,7 +198,6 @@ class Frame extends React.Component {
     this.handleToggleClick = this.handleToggleClick.bind(this);
     this.handleToggleButtonClick = this.handleToggleButtonClick.bind(this);
     this.handleTouchStart = this.handleTouchStart.bind(this);
-    this.role = this.role.bind(this);
     this.menuId = `terra-select-menu-${uniqueid()}`;
     this.visuallyHiddenComponent = React.createRef();
     this.setSelectMenuRef = this.setSelectMenuRef.bind(this);
@@ -289,6 +289,7 @@ class Frame extends React.Component {
     } = this.props;
 
     const { keyCode, target } = event;
+    const hasValue = !!((this.state.searchValue.trim().length || this.props.value));
 
     if (keyCode === KeyCode.KEY_SPACE && target !== this.input) {
       event.preventDefault();
@@ -311,6 +312,12 @@ class Frame extends React.Component {
     } else if (this.state.isOpen && keyCode === KeyCode.KEY_ESCAPE) {
       event.stopPropagation();
       this.closeDropdown();
+    } else if (keyCode === KeyCode.KEY_ESCAPE && hasValue) {
+      this.setState({
+        hasSearchChanged: false,
+        searchValue: '',
+      });
+      event.stopPropagation();
     }
   }
 
@@ -411,7 +418,7 @@ class Frame extends React.Component {
   getDisplay(displayId, ariaDescribedBy, id) {
     const { searchValue, isFocused } = this.state;
     const {
-      disabled, display, placeholder, required, value, inputId,
+      disabled, display, placeholder, required, value, inputId, isInvalid, intl,
     } = this.props;
 
     const isHidden = !isFocused && value && value.length > 0;
@@ -428,12 +435,18 @@ class Frame extends React.Component {
       'aria-describedby': `${displayId} ${ariaDescribedBy}`,
       'aria-disabled': disabled,
       'aria-owns': this.state.isOpen ? id : undefined,
+      'aria-controls': this.state.isOpen ? id : undefined,
+      'aria-expanded': !disabled && this.state.isOpen,
+      'aria-invalid': isInvalid,
       type: 'text',
       className: cx('search-input', { 'is-hidden': isHidden }),
       required: required && !display.length ? true : undefined,
       id: inputId,
       'aria-required': (required && !display.length),
+      role: 'combobox',
     };
+
+    const selectedValue = display && display.map(val => val.props.value);
 
     return (
       <ul data-terra-form-select-input className={cx('content')}>
@@ -446,6 +459,11 @@ class Frame extends React.Component {
                   <FormattedMessage id="Terra.form.select.selected" />
                 </li>
               </ul>
+              <VisuallyHiddenText
+                text={intl.formatMessage({ id: 'Terra.form.select.selectedvalue' },
+                  { text: selectedValue })}
+                aria-live={MenuUtil.isMac() ? 'polite' : undefined}
+              />
             </li>
           ) : null}
         <li className={cx('search-wrapper')}>
@@ -464,22 +482,7 @@ class Frame extends React.Component {
       isFocused: document.activeElement === this.input || document.activeElement === this.select,
       isOpen: false,
       isPositioned: false,
-      hasSearchChanged: false,
-      searchValue: '',
     });
-
-    // 'Tag' and 'Combobox' variants select the current search value when the component loses focus.
-    const { searchValue } = this.state;
-    if (Frame.shouldAddOptionOnBlur(this.props, this.state)) {
-      // NOTE: Since 'Combobox' does not allow blank strings to be created within the options dropdown,
-      // a blank input string should be explicitly converted into an empty string. This ensures that
-      // on blur, Combobox updates the search field to be an empty string when the user inputs a blank string.
-      // Upon failing to do so, Combobox resets the search field back to a previously selected value.
-      const freeText = searchValue.trim().length === 0 ? '' : searchValue;
-      if (this.props.onSelect) {
-        this.props.onSelect(freeText);
-      }
-    }
   }
 
   /**
@@ -562,27 +565,22 @@ class Frame extends React.Component {
    * Falls back to the string 'Search' if no label is provided
    */
   ariaLabel() {
-    const { ariaLabel, disabled, intl } = this.props;
+    const {
+      ariaLabel,
+      disabled,
+      placeholder,
+      intl,
+    } = this.props;
 
-    const defaultAriaLabel = intl.formatMessage({ id: 'Terra.form.select.ariaLabel' });
     const dimmed = intl.formatMessage({ id: 'Terra.form.select.dimmed' });
 
     // VO on iOS doesn't do a good job of announcing disabled stated. Here we append the phrase that
     // VO associates with disabled form controls.
     if ('ontouchstart' in window && disabled) {
-      return ariaLabel === undefined ? `${defaultAriaLabel} ${dimmed}` : `${ariaLabel} ${dimmed}`;
+      return ariaLabel === undefined ? `${placeholder}, ${dimmed}` : `${ariaLabel}, ${dimmed}`;
     }
 
-    return ariaLabel === undefined ? defaultAriaLabel : ariaLabel;
-  }
-
-  /**
-   * Determines compatible role attribute to apply to select based on active variant and disabled prop
-   */
-  role() {
-    const { disabled } = this.props;
-    // role="application" needed to allow JAWS to work correctly with the select and use our key event listeners
-    return disabled ? undefined : 'application';
+    return ariaLabel === undefined ? placeholder : ariaLabel;
   }
 
   /**
@@ -748,14 +746,10 @@ class Frame extends React.Component {
     return (
       <div
         {...customProps}
-        role={this.role()}
         data-terra-select-combobox
         aria-controls={!disabled && this.state.isOpen ? this.menuId : undefined}
         aria-disabled={!!disabled}
-        aria-expanded={!!disabled && !!this.state.isOpen}
         aria-haspopup={!disabled ? 'true' : undefined}
-        aria-describedby={ariaDescribedBy}
-        aria-owns={this.state.isOpen ? this.menuId : undefined}
         className={selectClasses}
         onBlur={this.handleBlur}
         onClick={this.handleClick}
