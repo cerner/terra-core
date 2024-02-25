@@ -154,11 +154,17 @@ class SectionHeader extends React.Component {
       buttonAttributes.onKeyDown = this.wrapOnKeyDown(headerAttributes.onKeyDown);
       buttonAttributes.onKeyUp = this.wrapOnKeyUp(headerAttributes.onKeyUp);
       buttonAttributes.onClick = onClick;
+      if (headerAttributes.isTitleSticky && headerAttributes.boundedWidth) {
+        buttonAttributes.style = { width: `${headerAttributes.boundedWidth}px` };
+      }
 
       // Specify button element for header content
       ArrangeWrapper = 'button';
     } else {
       headerAttributes.ref = refCallback;
+      if (headerAttributes.isTitleSticky) {
+        buttonAttributes.style = { width: 'auto' };
+      }
 
       // Specify span element for header content
       ArrangeWrapper = 'span';
