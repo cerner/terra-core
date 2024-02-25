@@ -12,12 +12,14 @@ export default () => (
         text="Closed Section Header 1"
         isTitleSticky
         onClick={() => {}}
+        boundedWidth="350px"
       />
       <br />
       <SectionHeader
         text="Closed Section Header 2"
         isTitleSticky
         onClick={() => {}}
+        boundedWidth="350px"
       />
       <br />
       <SectionHeader
