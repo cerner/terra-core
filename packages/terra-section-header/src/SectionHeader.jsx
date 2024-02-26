@@ -154,15 +154,15 @@ class SectionHeader extends React.Component {
       buttonAttributes.onKeyDown = this.wrapOnKeyDown(headerAttributes.onKeyDown);
       buttonAttributes.onKeyUp = this.wrapOnKeyUp(headerAttributes.onKeyUp);
       buttonAttributes.onClick = onClick;
-      if (headerAttributes.isTitleSticky && headerAttributes.boundedWidth) {
-        buttonAttributes.style = { width: `${headerAttributes.boundedWidth}px` };
+      if (customProps.isTitleSticky && customProps.boundedWidth) {
+        buttonAttributes.style = { width: `${customProps.boundedWidth}px` };
       }
 
       // Specify button element for header content
       ArrangeWrapper = 'button';
     } else {
       headerAttributes.ref = refCallback;
-      if (headerAttributes.isTitleSticky) {
+      if (customProps.isTitleSticky) {
         buttonAttributes.style = { width: 'auto' };
       }
 
@@ -170,9 +170,12 @@ class SectionHeader extends React.Component {
       ArrangeWrapper = 'span';
     }
 
+    delete headerAttributes?.boundedWidth;
+    delete headerAttributes?.isTitleSticky;
+
     return (
       <Element {...headerAttributes} className={sectionHeaderClassNames} aria-label={!onClick ? headerText : undefined}>
-        <ArrangeWrapper {...buttonAttributes} className={cx('arrange-wrapper', { 'title-fixed': isTitleFixed, 'title-sticky': headerAttributes.isTitleSticky })}>
+        <ArrangeWrapper {...buttonAttributes} className={cx('arrange-wrapper', { 'title-fixed': isTitleFixed, 'title-sticky': customProps.isTitleSticky })}>
           <Arrange
             fitStart={onClick && accordionIcon}
             fill={<span aria-hidden={(onClick !== undefined)} className={cx('title')}>{headerText}</span>}
