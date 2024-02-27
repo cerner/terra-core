@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.100.1 - (February 27, 2024)
+
 * Fixed
   * Fixed empty aria-label issue.
 
