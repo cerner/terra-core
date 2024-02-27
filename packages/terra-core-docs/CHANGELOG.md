@@ -16,7 +16,6 @@
 
 * Added
   * Added a test example for `terra-button-group` to validate focus when none of the buttons are selected.
-  * Added visual labels for `terra-search-field` examples. 
   * Added doc example for `terra-progress-bar`.
 
 * Updated
