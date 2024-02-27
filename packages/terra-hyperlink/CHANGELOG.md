@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 2.67.0 - (February 20, 2024)
+
 * Changed
   * Minor dependency version bump
 

@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 2.67.0 - (February 23, 2024)
+
+* Changed
+  * Allow the title of the `terra-section-header` to be sticky. 
+
 ## 2.66.0 - (February 15, 2024)
 
 * Changed

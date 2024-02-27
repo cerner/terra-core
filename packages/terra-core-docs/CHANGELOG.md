@@ -2,9 +2,15 @@
 
 ## Unreleased
 
-  * Added visual labels for `terra-search-field` examples.
-  * Added condition to announce default values for "search-field-minimum-length" example `terra-search-field`.
-  * Added "aria-label" attribute to announce error message for "search-field-programmatic-set" example for `terra-search-field`.
+## 1.59.0 - (February 23, 2024)
+
+* Added
+  * Added test to `terra-section-header` for the sticky section header title.
+
+## 1.58.0 - (February 20, 2024)
+
+* Changed
+  * Minor dependency version bump.
 
 ## 1.57.0 - (February 15, 2024)
 

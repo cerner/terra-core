@@ -1,6 +1,6 @@
 {
   "name": "terra-demographics-banner",
-  "version": "3.65.0",
+  "version": "3.66.0",
   "description": "The demographics component is used to display demographic information about a person in a condensed, easy to read format.",
   "author": "Cerner Corporation",
   "repository": {
@@ -24,7 +24,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-image": "^3.40.0",
+    "terra-image": "^3.41.0",
     "terra-responsive-element": "^5.40.0",
     "terra-theme-context": "^1.0.0",
     "terra-visually-hidden-text": "^2.38.0"

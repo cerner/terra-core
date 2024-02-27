@@ -16,5 +16,5 @@ lib
 node_modules
 reports
 **/__snapshots__/latest
-**/__snapshots__/errors
+**/__snapshots__/error
 **/__snapshots__/diff
