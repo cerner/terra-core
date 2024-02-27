@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Fixed
-  * Fixed the redundant labeling announcement issue.
+  * Fixed redundant screenreader label announcements.
 
 ## 4.49.0 - (February 15, 2024)
 
