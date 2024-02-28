@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## 6.56.0 - (February 27, 2024)
+
+* Changed
+  * Changed --terra-form-select-option-padding value to match with the orion-fusion-theme for consistency.
+  * Changed onHover style.
+
 ## 6.55.0 - (February 15, 2024)
 
 * Changed

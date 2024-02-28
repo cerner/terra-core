@@ -166,7 +166,7 @@ class SectionHeader extends React.Component {
 
     return (
       <Element {...headerAttributes} className={sectionHeaderClassNames} aria-label={!onClick ? headerText : undefined}>
-        <ArrangeWrapper {...buttonAttributes} className={cx('arrange-wrapper', { 'title-fixed': isTitleFixed })}>
+        <ArrangeWrapper {...buttonAttributes} className={cx('arrange-wrapper', { 'title-fixed': isTitleFixed, 'title-sticky': headerAttributes.isTitleSticky })}>
           <Arrange
             fitStart={onClick && accordionIcon}
             fill={<span aria-hidden={(onClick !== undefined)} className={cx('title')}>{headerText}</span>}

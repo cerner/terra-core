@@ -5,6 +5,11 @@
 * Fixed
   * Fixed redundant screenreader label announcements.
 
+## 4.50.0 - (February 27, 2024)
+
+* Changed
+  * Minor dependency version bump.
+
 ## 4.49.0 - (February 15, 2024)
 
 * Changed

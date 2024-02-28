@@ -1,6 +1,10 @@
 import React, { useRef } from 'react';
 import SearchField from 'terra-search-field';
 import Button from 'terra-button';
+import classNames from 'classnames/bind';
+import styles from './SearchFieldFocus.module.scss';
+
+const cx = classNames.bind(styles);
 
 const SearchFieldFocus = () => {
   const searchElement = useRef(null);
@@ -13,7 +17,7 @@ const SearchFieldFocus = () => {
 
   return (
     <div>
-      <Button text="Focus Me" onClick={handleButtonClick} id="search-field-focus-button" />
+      <Button text="Focus Me" onClick={handleButtonClick} className={cx('search-field-focus-button')} id="search-field-focus-button" />
       <SearchField
         isLabelVisible
         groupName="Find a clinic"

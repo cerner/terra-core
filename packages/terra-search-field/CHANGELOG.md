@@ -2,10 +2,16 @@
 
 ## Unreleased
 
+## 3.100.1 - (February 27, 2024)
+
+* Fixed
+  * Fixed empty aria-label issue.
+
 ## 3.100.0 - (February 15, 2024)
 
 * Fixed
   * Removed unnecessary aria labels and roles to fix redundant announcement of search group issue.
+  * Fixed port resized 320x256 px for `terra-search-field`.
 
 ## 3.99.0 - (January 9, 2024)
 
