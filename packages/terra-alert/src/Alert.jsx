@@ -66,7 +66,7 @@ const propTypes = {
   /**
    * The unique ID of the alert that is used to identify the alert title and message content.
    * These IDs can be used to associate action elements with the alert via aria-describedby, in the format
-   * `alert-title-${id}` or `alert-message-${id}`.
+   * `alert-title-${id}`.
    * */
   id: PropTypes.string,
   /**
