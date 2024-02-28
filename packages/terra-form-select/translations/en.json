@@ -28,5 +28,6 @@
   "Terra.form.select.optGroup": "Group {text}",
   "Terra.form.select.defaultComboboxDisplay":	"Select or Enter",
   "Terra.form.select.resultsText": "Results that contain \"{text}\"",
-  "Terra.form.select.selectedvalue": "{text} Selected"
+  "Terra.form.select.selectedvalue": "{text} Selected",
+  "Terra.form.select.removable":"Item is removable via Delete or Back Space key."
 }

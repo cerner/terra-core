@@ -6,7 +6,7 @@
 
   * Added error message for `terra-form-tag-select` invalid example.
   * Added visual lebel for `terra-form-tag-select` example.
-  * Added visual labels for `terra-search-field` examples. 
+  * Added visual labels for `terra-search-field` examples.
 
 * Updated
   * Updated Draggable list item example for selection state in `terra-list`.

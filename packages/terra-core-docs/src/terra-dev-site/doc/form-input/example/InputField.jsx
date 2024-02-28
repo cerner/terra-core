@@ -6,6 +6,8 @@ const DefaultInputField = () => (
     inputId="profile-name"
     label="Profile Name"
     help="Note: This can not be changed in the future"
+    isInvalid={true}
+    error="Please enter valid name"
     type="text"
     inputAttrs={{
       name: 'profile',

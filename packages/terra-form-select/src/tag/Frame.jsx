@@ -175,6 +175,7 @@ class Frame extends React.Component {
       isPositioned: false,
       hasSearchChanged: false,
       searchValue: '',
+      lastAddedOption: '',
     };
 
     this.ariaLabel = this.ariaLabel.bind(this);
@@ -297,13 +298,14 @@ class Frame extends React.Component {
     } else if (keyCode === KeyCode.KEY_UP || keyCode === KeyCode.KEY_DOWN) {
       event.preventDefault();
       this.openDropdown(event);
-    } else if (keyCode === KeyCode.KEY_BACK_SPACE && !this.state.searchValue && value.length > 0) {
+    } else if (keyCode === KeyCode.KEY_BACK_SPACE && !this.state.searchValue) {
       const lastOptionValue = value[value.length - 1];
       const lastOption = MenuUtil.findByValue(children, lastOptionValue);
       const lastOptionDisplay = lastOption ? lastOption.props.display : lastOptionValue;
-
-      if (this.visuallyHiddenComponent && this.visuallyHiddenComponent.current) {
-        this.visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.unselectedText' }, { text: lastOptionDisplay });
+      if (value.length > 0) {
+        this.setState({lastAddedOption: lastOptionDisplay});
+      } else {
+        this.setState({lastAddedOption: ''});
       }
 
       if (onDeselect) {
@@ -421,6 +423,9 @@ class Frame extends React.Component {
       disabled, display, placeholder, required, value, inputId, isInvalid, intl,
     } = this.props;
 
+    const removalTetxId = `terra-unselect-screen-reader-label-${uniqueid()}`;
+    const removalTetxLabelId = `terra-unselect-item-screen-reader-label-${uniqueid()}`;
+
     const isHidden = !isFocused && value && value.length > 0;
 
     const inputAttrs = {
@@ -432,7 +437,7 @@ class Frame extends React.Component {
       onBlur: this.handleInputBlur,
       onMouseDown: this.handleInputMouseDown,
       'aria-label': this.ariaLabel(),
-      'aria-describedby': `${displayId} ${ariaDescribedBy}`,
+      'aria-describedby': `${displayId} ${removalTetxId} ${removalTetxLabelId} ${ariaDescribedBy}`,
       'aria-disabled': disabled,
       'aria-owns': this.state.isOpen ? id : undefined,
       'aria-controls': this.state.isOpen ? id : undefined,
@@ -445,6 +450,8 @@ class Frame extends React.Component {
       'aria-required': (required && !display.length),
       role: 'combobox',
     };
+
+    console.log("this.state.lastAddedOption",this.state.lastAddedOption)
 
     const selectedValue = display && display.map(val => val.props.value);
 
@@ -460,12 +467,25 @@ class Frame extends React.Component {
                 </li>
               </ul>
               <VisuallyHiddenText
+                aria-hidden={(this.state.lastAddedOption !== '' && display.length > 0) ? true : false}
                 text={intl.formatMessage({ id: 'Terra.form.select.selectedvalue' },
                   { text: selectedValue })}
                 aria-live={MenuUtil.isMac() ? 'polite' : undefined}
               />
+              <VisuallyHiddenText
+                id={removalTetxId}
+                text={intl.formatMessage({ id: 'Terra.form.select.removable' })}
+                aria-live='polite'
+              />
             </li>
           ) : null}
+          {this.state.lastAddedOption !== '' &&
+            <VisuallyHiddenText
+            id={removalTetxLabelId}
+            text={intl.formatMessage({ id: 'Terra.form.select.unselectedText' }, { text: this.state.lastAddedOption })}
+            aria-live='polite'
+          />
+          }
         <li className={cx('search-wrapper')}>
           <input {...inputAttrs} value={searchValue} />
         </li>
