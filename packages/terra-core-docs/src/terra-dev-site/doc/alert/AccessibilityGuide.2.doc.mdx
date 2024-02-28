@@ -4,6 +4,7 @@ import Whitespace from '../../common/layout-helpers/Whitespace';
 import AlertActionFocusDemo from './example/AlertActionFocusDemo';
 import CustomExample from './example/CustomExample?dev-site-example';
 import CustomExampleNoTitle from './example/CustomExampleNoTitle?dev-site-example';
+import ActionExample from './example/ActionExample?dev-site-example';
 
 import Hyperlink from 'terra-hyperlink';
 
@@ -115,6 +116,19 @@ In combination with the notification criticality, screen reader users should und
 
 <CustomExampleNoTitle title="Bad: Avoid notifications with no titles" />
 <CustomExample title="Good: Titles help users understand notifications" />
+
+#### Actions
+
+- Interactable elements belonging to notification banners (such as dismiss buttons and action elements) must be associated with the banner.
+  This is handled by default for dismiss buttons, but not consumer-defined action elements.
+- Terra provides an optional `id` prop to facilitate associating action elements to the notification banner. Action elements should set
+  `aria-describedby` to the title of the notification banner.
+  - `alert-title-${id}` - The ID of the title of the notification banner (e.g. "Alert", "Error", "Warning", custom titles, etc.)
+
+<ActionExample
+  title="Notification Banner with Action"
+  description="This example uses the id prop and aria-describedby to associate an action element with the notification banner."
+/>
 
 ## Linked References:
 1. ["Accessible Rich Internet Applications (WAI-ARIA) 1.3"](https://w3c.github.io/aria/). World Wide Web Consortium. Last updated 01 May 2023. Retrieved 2 May 2023.

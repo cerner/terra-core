@@ -64,6 +64,12 @@ const propTypes = {
    */
   onDismiss: PropTypes.func,
   /**
+   * The unique ID of the alert that is used to identify the alert title and message content.
+   * These IDs can be used to associate action elements with the alert via aria-describedby, in the format
+   * `alert-title-${id}` or `alert-message-${id}`.
+   * */
+  id: PropTypes.string,
+  /**
    * @private
    * intl object programmatically imported through injectIntl from react-intl.
    * */
@@ -136,6 +142,7 @@ const Alert = ({
   disableAlertActionFocus,
   onDismiss,
   intl,
+  id,
   role,
   title,
   type,
@@ -169,7 +176,7 @@ const Alert = ({
   const focusContainerClassName = cx('focus-container');
   const contentContainerClassName = cx('content-container');
 
-  const alertId = uuidv4();
+  const alertId = id || uuidv4();
   const alertTitleId = `alert-title-${alertId}`;
   const alertMessageId = `alert-message-${alertId}`;
 
