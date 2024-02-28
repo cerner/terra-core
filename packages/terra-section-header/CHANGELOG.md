@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 2.67.1 - (February 28, 2024)
+
 * Fixed
   * Fixed width of arrange wrapper when header is sticky.
 
