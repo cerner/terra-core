@@ -75,63 +75,68 @@ exports[`correctly applies "inputAttrs" property to the Radio component 1`] = `
       id="terra-radio-group-uuid123"
       required={false}
     >
-      <legend
-        className="legend-group"
-        id="terra-radio-field-description-uuid123"
+      <div
+        aria-labelledby="terra-radio-field-description-uuid123"
+        role="radiogroup"
       >
-        <div
-          className="legend"
+        <legend
+          className="legend-group"
+          id="terra-radio-field-description-uuid123"
         >
-          Default RadioField
-          <span
-            className="error-icon-hidden"
-          />
-        </div>
-      </legend>
-      <Radio
-        disabled={false}
-        inputAttrs={
-          Object {
-            "aria-describedby": "terra-radio-field-description-uuid123  ",
-            "data-custom-attr": "attr data",
-          }
-        }
-        isInline={false}
-        isLabelHidden={false}
-        key=".0"
-        labelText="Default label"
-        labelTextAttrs={Object {}}
-        name={null}
-      >
-        <div
-          className="radio"
-        >
-          <label
-            className="label"
+          <div
+            className="legend"
           >
-            <input
-              aria-describedby="terra-radio-field-description-uuid123  "
-              className="native-input"
-              data-custom-attr="attr data"
-              disabled={false}
-              name={null}
-              type="radio"
+            Default RadioField
+            <span
+              className="error-icon-hidden"
             />
-            <span
-              className="outer-ring"
+          </div>
+        </legend>
+        <Radio
+          disabled={false}
+          inputAttrs={
+            Object {
+              "aria-describedby": " ",
+              "data-custom-attr": "attr data",
+            }
+          }
+          isInline={false}
+          isLabelHidden={false}
+          key=".0"
+          labelText="Default label"
+          labelTextAttrs={Object {}}
+          name={null}
+        >
+          <div
+            className="radio"
+          >
+            <label
+              className="label"
             >
-              <span
-                className="inner-ring"
+              <input
+                aria-describedby=" "
+                className="native-input"
+                data-custom-attr="attr data"
+                disabled={false}
+                name={null}
+                type="radio"
               />
-            </span>
-            <span
-              className="label-text"
-            >
-              Default label
-            </span>
-          </label>
-        </div>
-      </Radio>
+              <span
+                className="outer-ring"
+              >
+                <span
+                  className="inner-ring"
+                />
+              </span>
+              <span
+                className="label-text"
+              >
+                Default label
+              </span>
+            </label>
+          </div>
+        </Radio>
+      </div>
     </fieldset>
   </RadioField>
 </InjectIntl(RadioField)>
@@ -219,19 +224,24 @@ exports[`correctly applies the theme context className 1`] = `
         id="terra-radio-group-uuid123"
         required={false}
       >
-        <legend
-          className="legend-group"
-          id="terra-radio-field-description-uuid123"
+        <div
+          aria-labelledby="terra-radio-field-description-uuid123"
+          role="radiogroup"
         >
-          <div
-            className="legend"
+          <legend
+            className="legend-group"
+            id="terra-radio-field-description-uuid123"
           >
-            Default RadioField
-            <span
-              className="error-icon-hidden"
-            />
-          </div>
-        </legend>
+            <div
+              className="legend"
+            >
+              Default RadioField
+              <span
+                className="error-icon-hidden"
+              />
+            </div>
+          </legend>
+        </div>
       </fieldset>
     </RadioField>
   </InjectIntl(RadioField)>
@@ -446,69 +456,74 @@ exports[`should not render onkeydown and onclick event on radio button for non-s
       id="RadioFieldOne"
       required={false}
     >
-      <legend
-        className="legend-group"
-        id="terra-radio-field-description-uuid123"
-      >
-        <div
-          className="legend"
-        >
-          Help RadioField
-          <span
-            className="error-icon-hidden"
-          />
-        </div>
-      </legend>
-      <Radio
-        disabled={false}
-        id="firstRadio"
-        inputAttrs={
-          Object {
-            "aria-describedby": "terra-radio-field-description-uuid123  terra-radio-field-description-help-uuid123",
-          }
-        }
-        isInline={false}
-        isLabelHidden={false}
-        key=".0"
-        labelText="Radio"
-        labelTextAttrs={Object {}}
-        name={null}
-      >
-        <div
-          className="radio"
-        >
-          <label
-            className="label"
-            htmlFor="firstRadio"
-          >
-            <input
-              aria-describedby="terra-radio-field-description-uuid123  terra-radio-field-description-help-uuid123"
-              className="native-input"
-              disabled={false}
-              id="firstRadio"
-              name={null}
-              type="radio"
-            />
-            <span
-              className="outer-ring"
-            >
-              <span
-                className="inner-ring"
-              />
-            </span>
-            <span
-              className="label-text"
-            >
-              Radio
-            </span>
-          </label>
-        </div>
-      </Radio>
       <div
-        className="help-text"
-        id="terra-radio-field-description-help-uuid123"
+        aria-labelledby="terra-radio-field-description-uuid123"
+        role="radiogroup"
       >
-        This will help up determine how many chairs to request
+        <legend
+          className="legend-group"
+          id="terra-radio-field-description-uuid123"
+        >
+          <div
+            className="legend"
+          >
+            Help RadioField
+            <span
+              className="error-icon-hidden"
+            />
+          </div>
+        </legend>
+        <Radio
+          disabled={false}
+          id="firstRadio"
+          inputAttrs={
+            Object {
+              "aria-describedby": " terra-radio-field-description-help-uuid123",
+            }
+          }
+          isInline={false}
+          isLabelHidden={false}
+          key=".0"
+          labelText="Radio"
+          labelTextAttrs={Object {}}
+          name={null}
+        >
+          <div
+            className="radio"
+          >
+            <label
+              className="label"
+              htmlFor="firstRadio"
+            >
+              <input
+                aria-describedby=" terra-radio-field-description-help-uuid123"
+                className="native-input"
+                disabled={false}
+                id="firstRadio"
+                name={null}
+                type="radio"
+              />
+              <span
+                className="outer-ring"
+              >
+                <span
+                  className="inner-ring"
+                />
+              </span>
+              <span
+                className="label-text"
+              >
+                Radio
+              </span>
+            </label>
+          </div>
+        </Radio>
+        <div
+          className="help-text"
+          id="terra-radio-field-description-help-uuid123"
+        >
+          This will help up determine how many chairs to request
+        </div>
       </div>
     </fieldset>
   </RadioField>
@@ -804,72 +819,77 @@ exports[`should render onkeydown and onclick event on radio button for safari br
       required={false}
     >
       <div
-        className="legend-group"
-        id="terra-radio-field-description-uuid123"
+        aria-labelledby="terra-radio-field-description-uuid123"
+        role="radiogroup"
       >
         <div
-          className="legend"
+          className="legend-group"
+          id="terra-radio-field-description-uuid123"
         >
-          Help RadioField
-          <span
-            className="error-icon-hidden"
-          />
-        </div>
-      </div>
-      <Radio
-        disabled={false}
-        id="firstRadio"
-        inputAttrs={
-          Object {
-            "aria-describedby": "terra-radio-field-description-uuid123  terra-radio-field-description-help-uuid123",
-            "onClick": [Function],
-            "onKeyDown": [Function],
-          }
-        }
-        isInline={false}
-        isLabelHidden={false}
-        key=".0"
-        labelText="Radio"
-        labelTextAttrs={Object {}}
-        name={null}
-      >
-        <div
-          className="radio"
-        >
-          <label
-            className="label"
-            htmlFor="firstRadio"
+          <div
+            className="legend"
           >
-            <input
-              aria-describedby="terra-radio-field-description-uuid123  terra-radio-field-description-help-uuid123"
-              className="native-input"
-              disabled={false}
-              id="firstRadio"
-              name={null}
-              onClick={[Function]}
-              onKeyDown={[Function]}
-              type="radio"
+            Help RadioField
+            <span
+              className="error-icon-hidden"
             />
-            <span
-              className="outer-ring"
-            >
-              <span
-                className="inner-ring"
-              />
-            </span>
-            <span
-              className="label-text"
-            >
-              Radio
-            </span>
-          </label>
+          </div>
         </div>
-      </Radio>
-      <div
-        className="help-text"
-        id="terra-radio-field-description-help-uuid123"
-      >
-        This will help up determine how many chairs to request
+        <Radio
+          disabled={false}
+          id="firstRadio"
+          inputAttrs={
+            Object {
+              "aria-describedby": " terra-radio-field-description-help-uuid123",
+              "onClick": [Function],
+              "onKeyDown": [Function],
+            }
+          }
+          isInline={false}
+          isLabelHidden={false}
+          key=".0"
+          labelText="Radio"
+          labelTextAttrs={Object {}}
+          name={null}
+        >
+          <div
+            className="radio"
+          >
+            <label
+              className="label"
+              htmlFor="firstRadio"
+            >
+              <input
+                aria-describedby=" terra-radio-field-description-help-uuid123"
+                className="native-input"
+                disabled={false}
+                id="firstRadio"
+                name={null}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                type="radio"
+              />
+              <span
+                className="outer-ring"
+              >
+                <span
+                  className="inner-ring"
+                />
+              </span>
+              <span
+                className="label-text"
+              >
+                Radio
+              </span>
+            </label>
+          </div>
+        </Radio>
+        <div
+          className="help-text"
+          id="terra-radio-field-description-help-uuid123"
+        >
+          This will help up determine how many chairs to request
+        </div>
       </div>
     </fieldset>
   </RadioField>
@@ -883,16 +903,21 @@ exports[`should render radio field with div element for Safari browser or Edg br
   required={false}
 >
   <div
-    className="legend-group"
-    id="terra-radio-field-description-uuid123"
+    aria-labelledby="terra-radio-field-description-uuid123"
+    role="radiogroup"
   >
     <div
-      className="legend"
+      className="legend-group"
+      id="terra-radio-field-description-uuid123"
     >
-      Custom Message RadioField
-      <span
-        className="error-icon-hidden"
-      />
+      <div
+        className="legend"
+      >
+        Custom Message RadioField
+        <span
+          className="error-icon-hidden"
+        />
+      </div>
     </div>
   </div>
 </fieldset>
@@ -904,19 +929,24 @@ exports[`should render radio field with legend element for Chrome browser 1`] = 
   id="terra-radio-group-uuid123"
   required={false}
 >
-  <legend
-    className="legend-group"
-    id="terra-radio-field-description-uuid123"
+  <div
+    aria-labelledby="terra-radio-field-description-uuid123"
+    role="radiogroup"
   >
-    <div
-      className="legend"
+    <legend
+      className="legend-group"
+      id="terra-radio-field-description-uuid123"
     >
-      Custom Message RadioField
-      <span
-        className="error-icon-hidden"
-      />
-    </div>
-  </legend>
+      <div
+        className="legend"
+      >
+        Custom Message RadioField
+        <span
+          className="error-icon-hidden"
+        />
+      </div>
+    </legend>
+  </div>
 </fieldset>
 `;
 
