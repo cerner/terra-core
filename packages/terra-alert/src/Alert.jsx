@@ -241,6 +241,7 @@ const Alert = ({
     >
       <div
         role={role || defaultRole}
+        id={id}
         {...customProps}
         className={alertClassNames}
       >
