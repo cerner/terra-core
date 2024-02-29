@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added documentation on using new `id` prop with action elements in `terra-alert`.
+
 ## 1.61.0 - (February 28, 2024)
 
 * Updated

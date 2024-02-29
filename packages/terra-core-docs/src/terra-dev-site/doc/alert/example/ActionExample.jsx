@@ -19,6 +19,7 @@ const AlertActionButton = () => {
       customIcon={<IconHazardLow />}
       action={(
         <Button
+          aria-describedby="alert-title-actionAlert"
           text="Action"
           variant="emphasis"
           onClick={action}
