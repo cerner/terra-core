@@ -1,6 +1,6 @@
 {
   "name": "@cerner/terra-core-docs",
-  "version": "1.61.0",
+  "version": "1.62.0",
   "description": "Contains documentation for packages in the terra-core monorepo",
   "author": "Cerner Corporation",
   "repository": {
@@ -38,7 +38,7 @@
     "moment": "^2.29.4",
     "terra-action-footer": "^2.68.0",
     "terra-action-header": "^2.91.0",
-    "terra-alert": "^4.90.0",
+    "terra-alert": "^4.91.0",
     "terra-arrange": "^3.56.0",
     "terra-avatar": "^3.20.0",
     "terra-badge": "^3.61.0",
