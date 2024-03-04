@@ -22,27 +22,33 @@ const propTypes = {
    */
   onResize: PropTypes.func,
   /**
-   * [Deprecated] An element to be displayed at tiny breakpoints.
+   * ![IMPORTANT](https://badgen.net/badge/prop/deprecated/red)
+   * An element to be displayed at tiny breakpoints.
    */
   tiny: PropTypes.element,
   /**
-   * [Deprecated] An element to be displayed at small breakpoints.
+   * ![IMPORTANT](https://badgen.net/badge/prop/deprecated/red)
+   * An element to be displayed at small breakpoints.
    */
   small: PropTypes.element,
   /**
-   * [Deprecated] An element to be displayed at medium breakpoints.
+   * ![IMPORTANT](https://badgen.net/badge/prop/deprecated/red)
+   * An element to be displayed at medium breakpoints.
    */
   medium: PropTypes.element,
   /**
-   * [Deprecated] An element to be displayed at large breakpoints.
+   * ![IMPORTANT](https://badgen.net/badge/prop/deprecated/red)
+   * An element to be displayed at large breakpoints.
    */
   large: PropTypes.element,
   /**
-   * [Deprecated] An element to be displayed at huge breakpoints.
+   * ![IMPORTANT](https://badgen.net/badge/prop/deprecated/red)
+   * An element to be displayed at huge breakpoints.
    */
   huge: PropTypes.element,
   /**
-   * [Deprecated] An element to be displayed at enormous breakpoints.
+   * ![IMPORTANT](https://badgen.net/badge/prop/deprecated/red)
+   * An element to be displayed at enormous breakpoints.
    */
   enormous: PropTypes.element,
   /**

@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added deprecated icon in props documentation.
+
 ## 5.40.0 - (February 15, 2024)
 
 * Changed
