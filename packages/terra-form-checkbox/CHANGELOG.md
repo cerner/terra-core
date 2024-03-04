@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Changed scss variable name to fix an issue with var name collisions.
+
 ## 4.23.0 - (February 15, 2024)
 
 * Changed
