@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+* Updated
   * Updated `terra-responsive-element` document to have correct hyperlink to `terra-breakpoints`.
 
 ## 1.57.0 - (February 15, 2024)
