@@ -1,6 +1,6 @@
 {
   "name": "terra-responsive-element",
-  "version": "5.40.0",
+  "version": "5.41.0",
   "description": "The terra-responsive-element conditionally renders components based on viewport size",
   "author": "Cerner Corporation",
   "repository": {
