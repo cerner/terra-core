@@ -113,9 +113,9 @@ const ListSectionHeader = ({
   /* eslint-disable-next-line no-param-reassign */
   delete customProps?.isTabFocusDisabled;
   return (
-    <li {...customProps} className={cx('list-item', theme.className)}>
+    <li {...customProps} className={cx('list-item', theme.className)} ref={refCallback}>
       <Element className={cx('title')}>
-        <div {...attrSpread} className={sectionHeaderClassNames} ref={refCallback}>
+        <div {...attrSpread} className={sectionHeaderClassNames}>
           {accordionIcon}
           {titleElement}
         </div>
