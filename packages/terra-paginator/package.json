@@ -1,6 +1,6 @@
 {
   "name": "terra-paginator",
-  "version": "2.90.0",
+  "version": "2.91.0",
   "description": "Paginator to be used for data sets of known and unknown size. Provides first, last, previous, next, and paged functionality.",
   "author": "Cerner Corporation",
   "repository": {
@@ -44,9 +44,18 @@
     "props-table": "props-table ./src/Paginator.jsx --out-dir ./docs/props-table",
     "test": "npm run lint && npm run jest && npm run wdio",
     "jest": "jest --config ../../jest.config.js",
-    "wdio-default": "cd ../.. && terra wdio",
-    "wdio-lowlight": "cd ../.. && terra wdio --themes clinical-lowlight-theme",
-    "wdio-fusion": "cd ../.. && terra wdio --themes orion-fusion-theme",
-    "wdio": "npm run wdio-default && npm run wdio-lowlight && npm run wdio-fusion"
-  }
+    "wdio:default": "cd ../.. && terra wdio",
+    "wdio:lowlight": "cd ../.. && terra wdio --themes clinical-lowlight-theme",
+    "wdio:fusion": "cd ../.. && terra wdio --themes orion-fusion-theme",
+    "wdio": "npm run wdio:default && npm run wdio:lowlight && npm run wdio:fusion"
+  },
+  "files": [
+    "lib",
+    "src",
+    "translations",
+    "CHANGELOG.md",
+    "LICENSE",
+    "NOTICE",
+    "README.md"
+  ]
 }

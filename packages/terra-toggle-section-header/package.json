@@ -1,6 +1,6 @@
 {
   "name": "terra-toggle-section-header",
-  "version": "2.75.0",
+  "version": "2.78.0",
   "description": "Toggle section header component that transitions content in and out with a click on the header.",
   "author": "Cerner Corporation",
   "repository": {
@@ -25,7 +25,7 @@
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "terra-mixins": "^1.41.0",
-    "terra-section-header": "^2.66.0",
+    "terra-section-header": "^2.67.1",
     "terra-toggle": "^3.62.0"
   },
   "peerDependencies": {
@@ -40,9 +40,17 @@
     "precompile": "rm -rf lib",
     "test": "npm run lint && npm run jest && npm run wdio",
     "jest": "jest --config ../../jest.config.js",
-    "wdio-default": "cd ../.. && terra wdio",
-    "wdio-lowlight": "cd ../.. && terra wdio --themes clinical-lowlight-theme",
-    "wdio-fusion": "cd ../.. && terra wdio --themes orion-fusion-theme",
-    "wdio": "npm run wdio-default && npm run wdio-lowlight && npm run wdio-fusion"
-  }
+    "wdio:default": "cd ../.. && terra wdio",
+    "wdio:lowlight": "cd ../.. && terra wdio --themes clinical-lowlight-theme",
+    "wdio:fusion": "cd ../.. && terra wdio --themes orion-fusion-theme",
+    "wdio": "npm run wdio:default && npm run wdio:lowlight && npm run wdio:fusion"
+  },
+  "files": [
+    "lib",
+    "src",
+    "CHANGELOG.md",
+    "LICENSE",
+    "NOTICE",
+    "README.md"
+  ]
 }

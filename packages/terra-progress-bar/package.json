@@ -1,6 +1,6 @@
 {
   "name": "terra-progress-bar",
-  "version": "4.36.0",
+  "version": "4.37.0",
   "description": "The progress bar component provides users a way to display the progress of process or activity in a graphical manner.",
   "author": "Cerner Corporation",
   "repository": {
@@ -40,9 +40,18 @@
     "precompile": "rm -rf lib",
     "test": "npm run lint && npm run jest && npm run wdio",
     "jest": "jest --config ../../jest.config.js",
-    "wdio-default": "cd ../.. && terra wdio",
-    "wdio-lowlight": "cd ../.. && terra wdio --themes clinical-lowlight-theme",
-    "wdio-fusion": "cd ../.. && terra wdio --themes orion-fusion-theme",
-    "wdio": "npm run wdio-default && npm run wdio-lowlight && npm run wdio-fusion"
-  }
+    "wdio:default": "cd ../.. && terra wdio",
+    "wdio:lowlight": "cd ../.. && terra wdio --themes clinical-lowlight-theme",
+    "wdio:fusion": "cd ../.. && terra wdio --themes orion-fusion-theme",
+    "wdio": "npm run wdio:default && npm run wdio:lowlight && npm run wdio:fusion"
+  },
+  "files": [
+    "lib",
+    "src",
+    "translations",
+    "CHANGELOG.md",
+    "LICENSE",
+    "NOTICE",
+    "README.md"
+  ]
 }
