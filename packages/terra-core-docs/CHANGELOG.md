@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+  * Updated `terra-responsive-element` document to have correct hyperlink to `terra-breakpoints`.
+
 ## 1.57.0 - (February 15, 2024)
 
 * Added
@@ -14,7 +16,6 @@
   * Updated `terra-status` documentation with deprecation notice and badge.
   * Updated `terra-html-table` documentation with deprecation notice and badge.
   * Updated test and doc examples for `terra-progress-bar`
-  * Updated `terra-responsive-element` document to have correct hyperlink to `terra-breakpoints`
 
 ## 1.56.0 - (January 9, 2024)
 
