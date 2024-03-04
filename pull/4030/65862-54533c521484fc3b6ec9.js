@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkterra_core=self.webpackChunkterra_core||[]).push([[65862],{74687:function(e,t,u){Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var r=a(u(96540)),l=a(u(42104));function a(e){return e&&e.__esModule?e:{default:e}}t.default=function(){return r.default.createElement(l.default,{id:"defaultAlert"},"Default Alert")}}}]);
