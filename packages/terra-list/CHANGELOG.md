@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Changed
-  * Restored the `refCallback` prop for the ListSectionHeader component to be applied to the intended `li` element instead of the inner `div` tag. 
+  * Restored the `refCallback` prop for the ListSectionHeader and ListSubSectionHeader component to be applied to the intended `li` element instead of the inner `div` tag. 
 
 ## 4.71.0 - (February 27, 2024)
 
