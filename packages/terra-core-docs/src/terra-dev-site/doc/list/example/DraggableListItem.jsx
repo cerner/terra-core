@@ -52,6 +52,11 @@ const ListDraggableExample = () => {
     if (selectedKey !== metaData.key) {
       setselectedKey(metaData.key);
     }
+
+    const keyIndex = dataList.findIndex((e) => e?.key === metaData?.key);
+    if (keyIndex >= 0) {
+      listNode?.current?.children[keyIndex]?.focus();
+    }
   };
 
   const createListItem = (itemData) => (
