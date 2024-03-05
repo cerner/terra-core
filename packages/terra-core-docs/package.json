@@ -1,6 +1,6 @@
 {
   "name": "@cerner/terra-core-docs",
-  "version": "1.63.0",
+  "version": "1.64.0",
   "description": "Contains documentation for packages in the terra-core monorepo",
   "author": "Cerner Corporation",
   "repository": {
@@ -59,7 +59,7 @@
     "terra-form-fieldset": "^2.80.0",
     "terra-form-input": "^4.31.0",
     "terra-form-radio": "^4.51.0",
-    "terra-form-select": "^6.56.0",
+    "terra-form-select": "^6.56.1",
     "terra-form-textarea": "^5.32.0",
     "terra-grid": "^6.36.0",
     "terra-heading": "^4.55.0",
@@ -68,7 +68,7 @@
     "terra-i18n": "^4.42.0",
     "terra-icon": "^3.60.0",
     "terra-image": "^3.41.0",
-    "terra-list": "^4.71.0",
+    "terra-list": "^4.72.0",
     "terra-overlay": "^3.82.0",
     "terra-paginator": "^2.92.0",
     "terra-profile-image": "^3.46.0",
