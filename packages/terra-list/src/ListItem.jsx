@@ -118,6 +118,9 @@ const ListItem = ({
     attrSpread.onMouseDown = ListUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-item-show-focus', 'false'));
   }
   if (isDraggable) {
+    attrSpread.onClick = (event) => {
+      event?.currentTarget?.focus();
+    };
     attrSpread['aria-describedby'] = responseId;
   }
 

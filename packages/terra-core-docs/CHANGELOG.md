@@ -2,9 +2,6 @@
 
 ## Unreleased
 
-* Fixed
-  * Fixed the issue where focus was not moving to the selected item when clicked in the draggable list item example in `terra-list`.
-
 ## 1.63.0 - (March 4, 2024)
 
 * Updated

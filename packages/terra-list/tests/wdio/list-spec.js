@@ -97,6 +97,15 @@ Terra.describeViewports('List', ['medium'], () => {
     });
   });
 
+  describe('Drag and Drop ListItem clicked', () => {
+    before(() => browser.url('raw/tests/cerner-terra-core-docs/list/draggable-list-item-click'));
+
+    it('should receive focus when clicked on', () => {
+      $('#selectable-item').click();
+      Terra.validates.element('List item is focussed when clicked', { selector: '#root' });
+    });
+  });
+
   describe('Slidepanel ListItem Drag and Drop', () => {
     before(() => browser.url('raw/tests/cerner-terra-core-docs/list/slide-panel-draggable-list'));
 
