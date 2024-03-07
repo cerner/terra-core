@@ -5,6 +5,11 @@
 * Added
   * Added new test example for `terra-list`.
 
+## 1.64.0 - (March 5, 2024)
+
+* Changed
+  * Minor dependency version bump.
+
 ## 1.63.0 - (March 4, 2024)
 
 * Updated

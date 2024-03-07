@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 6.56.1 - (March 5, 2024)
+
+* Fixed
+  * Fixed native select height for orion-fusion-theme so that it is consistent with other Terra form elements.
+
 ## 6.56.0 - (February 27, 2024)
 
 * Changed
