@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added new test example for `terra-list`.
+
 ## 1.63.0 - (March 4, 2024)
 
 * Updated
