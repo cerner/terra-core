@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added implementation page documentation regarding consumers responsibility to ensure the accessibility for `terra-signature`.  
+
 ## 1.64.0 - (March 5, 2024)
 
 * Changed
