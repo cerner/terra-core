@@ -95,13 +95,8 @@ Terra.describeViewports('List', ['medium'], () => {
       browser.keys('Tab');
       Terra.validates.element('After Drop Focus Next Item', { selector: '#root' });
     });
-  });
-
-  describe('Drag and Drop ListItem clicked', () => {
-    before(() => browser.url('raw/tests/cerner-terra-core-docs/list/draggable-list-item-click'));
-
     it('should receive focus when clicked on', () => {
-      $('#selectable-item').click();
+      $('#selectable-item2').click();
       Terra.validates.element('List item is focussed when clicked', { selector: '#root' });
     });
   });

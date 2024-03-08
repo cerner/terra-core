@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Fixed
-  * Fixed the issue where focus was not moving to the selected item when clicked in the draggable list item example.
+  * Fixed the issue where focus was not moving to the selectable and draggable item when clicked.
 
 ## 4.72.0 - (March 5, 2024)
 
