@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added `id` to the test example to trigger the click event in `terra-list`.
+
 ## 1.64.0 - (March 5, 2024)
 
 * Changed
