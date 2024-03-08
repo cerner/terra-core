@@ -95,6 +95,10 @@ Terra.describeViewports('List', ['medium'], () => {
       browser.keys('Tab');
       Terra.validates.element('After Drop Focus Next Item', { selector: '#root' });
     });
+    it('should receive focus when clicked on', () => {
+      $('#selectable-item2').click();
+      Terra.validates.element('List item is focussed when clicked', { selector: '#root' });
+    });
   });
 
   describe('Slidepanel ListItem Drag and Drop', () => {
