@@ -2,6 +2,20 @@
 
 ## Unreleased
 
+* Fixed
+  * Added left padding to the NativeSelect select element for proper display on Windows devices.
+
+## 6.56.1 - (March 5, 2024)
+
+* Fixed
+  * Fixed native select height for orion-fusion-theme so that it is consistent with other Terra form elements.
+
+## 6.56.0 - (February 27, 2024)
+
+* Changed
+  * Changed --terra-form-select-option-padding value to match with the orion-fusion-theme for consistency.
+  * Changed onHover style.
+
 ## 6.55.0 - (February 15, 2024)
 
 * Changed

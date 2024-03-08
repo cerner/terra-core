@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+## 2.78.0 - (February 28, 2024)
+
+* Changed
+  * Minor dependency version bump.
+
+## 2.77.0 - (February 27, 2024)
+
+* Changed
+  * Minor dependency version bump.
+
 ## 2.76.0 - (February 23, 2024)
 
 * Changed

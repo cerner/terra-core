@@ -97,6 +97,7 @@ Cerner Corporation
 - Quan Le [@leducquan]
 - Yixuan Chen [@chenyixuan625]
 - Madalina Stelea [@MadalinaStelea]
+- Avijit Das [@adavijit]
 
 Community
 
@@ -221,3 +222,4 @@ Community
 [@leducquan]: https://github.com/leducquan
 [@chenyixuan625]: https://github.com/chenyixuan625
 [@MadalinaStelea]: https://github.com/MadalinaStelea
+[@adavijit]: https://github.com/adavijit

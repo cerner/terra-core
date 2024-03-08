@@ -79,6 +79,13 @@ describe('Alert with props', () => {
     expect(alertTitle.text()).toEqual('<VisuallyHiddenText />Custom Title');
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should render an alert with provided id', () => {
+    const wrapper = enzymeIntl.shallowWithIntl(<Alert id="alert-id" />).dive();
+
+    expect(wrapper.find('.title').prop('id')).toEqual('alert-title-alert-id');
+    expect(wrapper.find('.section').prop('id')).toEqual('alert-message-alert-id');
+  });
 });
 
 describe('Dismissible Alert that includes actions section', () => {

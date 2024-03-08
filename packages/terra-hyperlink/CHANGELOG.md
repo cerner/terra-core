@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 2.67.1 - (February 27, 2024)
+
+* Fixed
+  * Fixed scss import path error.
+
 ## 2.67.0 - (February 20, 2024)
 
 * Changed

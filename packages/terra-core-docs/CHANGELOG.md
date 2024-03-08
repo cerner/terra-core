@@ -5,9 +5,35 @@
 * Added
   * Added implementation page documentation regarding consumers responsibility to ensure the accessibility for `terra-signature`.  
 
+## 1.64.0 - (March 5, 2024)
+
+* Changed
+  * Minor dependency version bump.
+
+## 1.63.0 - (March 4, 2024)
+
+* Updated
+  * Updated `terra-responsive-element` document to have correct hyperlink to `terra-breakpoints`.
+
+## 1.62.0 - (February 29, 2024)
+
+* Added
+  * Added documentation on using new `id` prop with action elements in `terra-alert`.
+
+## 1.61.0 - (February 28, 2024)
+
+* Updated
+  * Updated test example in `terra-section-header` for sticky section header title.
+
+## 1.60.0 - (February 27, 2024)
+
+* Changed
+  * Minor dependency version bump.
+
 ## 1.59.0 - (February 23, 2024)
 
 * Added
+  * Added a test example for `terra-button` to validate focus inside table.
   * Added test to `terra-section-header` for the sticky section header title.
 
 ## 1.58.0 - (February 20, 2024)
@@ -19,7 +45,6 @@
 
 * Added
   * Added a test example for `terra-button-group` to validate focus when none of the buttons are selected.
-  * Added visual labels for `terra-search-field` examples. 
   * Added doc example for `terra-progress-bar`.
 
 * Updated
