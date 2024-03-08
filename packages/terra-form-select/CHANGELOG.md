@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 6.57.0 - (March 8, 2024)
+
 * Fixed
   * Added left padding to the NativeSelect select element for proper display on Windows devices.
 
