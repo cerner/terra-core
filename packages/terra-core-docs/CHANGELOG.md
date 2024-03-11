@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated documentation for `terra-form-select`.
+
 ## 1.65.0 - (March 8, 2024)
 
 * Added
