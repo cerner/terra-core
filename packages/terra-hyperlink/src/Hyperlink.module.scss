@@ -8,11 +8,14 @@
     background-color: transparent; // Remove the gray background on active links in IE 10
     color: var(--terra-hyperlink-color, #006fc3);
     cursor: pointer;
-    display: inline-block; // prevents variant icon from breaking onto its own line
+    //display: inline-block; // prevents variant icon from breaking onto its own line
     outline: none;
     text-decoration: var(--terra-hyperlink-text-decoration, underline);
     touch-action: manipulation; // Enable fast tap interaction in webkit browsers; see https://webkit.org/blog/5610/more-responsive-tapping-on-ios/
     vertical-align: baseline;
+    display: inline-flex;
+    max-width: min-content;
+    width: 100%;
 
     &:visited,
     &.is-visited {
@@ -85,6 +88,7 @@
     margin-left: var(--terra-hyperlink-icon-margin-left, 0.28571em);
     overflow: visible;
     position: relative;
+    align-self: flex-end;
   }
 
   .audio {
@@ -129,7 +133,7 @@
     line-height: inherit;
     margin: 0; // reset for Safari, defaults to 2px
     outline: none;
-    overflow: visible; // reset for IE
+    overflow: hidden; // reset for IE
     padding: 0;
     pointer-events: auto;
     position: relative; // reset for IE
@@ -137,6 +141,7 @@
     top: 0;  // reset for IE
     touch-action: manipulation; // Enable fast tap interaction in webkit browsers; see https://webkit.org/blog/5610/more-responsive-tapping-on-ios/
     vertical-align: baseline;
+    width: 100%;
 
     .button-inner {
       font-family: inherit;
@@ -145,6 +150,15 @@
       min-width: 0;
       position: relative; // reset for IE
       top: 0;  // reset for IE
+      display: flex;
+      min-width: 0;
+      max-width: min-content;
     }  
   } 
+
+  .inner-text {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
 }
