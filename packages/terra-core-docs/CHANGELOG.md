@@ -5,6 +5,12 @@
 * Changed
   * Updated documentation for `terra-form-select`.
 
+## 1.65.0 - (March 8, 2024)
+
+* Added
+  * Updated test example for draggable list item in `terra-list`.
+  * Added implementation page documentation regarding consumers responsibility to ensure the accessibility for `terra-signature`.  
+
 ## 1.64.0 - (March 5, 2024)
 
 * Changed

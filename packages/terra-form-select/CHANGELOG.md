@@ -5,6 +5,11 @@
 * Added
   * Added proper exports for all subcomponents. They can now be imported without the subcomponent path inside the module.
 
+## 6.57.0 - (March 8, 2024)
+
+* Fixed
+  * Added left padding to the NativeSelect select element for proper display on Windows devices.
+
 ## 6.56.1 - (March 5, 2024)
 
 * Fixed

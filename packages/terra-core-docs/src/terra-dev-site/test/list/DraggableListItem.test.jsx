@@ -18,6 +18,7 @@ const DraggableListItemTest = () => (
     <Item
       key="selectable2"
       isSelectable
+      id="selectable-item2"
     >
       <p>Radiology</p>
     </Item>

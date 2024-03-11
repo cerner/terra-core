@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 4.73.0 - (March 8, 2024)
+
+* Fixed
+  * Fixed the issue where focus was not moving to the selectable and draggable item when clicked.
+
 ## 4.72.0 - (March 5, 2024)
 
 * Changed
