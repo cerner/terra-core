@@ -1,6 +1,5 @@
 import Select from './Select';
 
-import SelectField from './SelectField';
 import Combobox from './Combobox';
 import ComboboxField from './ComboboxField';
 import MultiSelect from './MultiSelect';
@@ -9,6 +8,7 @@ import NativeSelect from './native-select/NativeSelect';
 import NativeSelectField from './native-select/NativeSelectField';
 import SearchSelect from './SearchSelect';
 import SearchSelectField from './SearchSelectField';
+import SelectField from './SelectField';
 import SingleSelect from './SingleSelect';
 import SingleSelectField from './SingleSelectField';
 import TagSelect from './TagSelect';
