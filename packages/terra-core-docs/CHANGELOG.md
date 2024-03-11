@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Updated
+  * Updated terra list examples.
+
 ## 1.65.0 - (March 8, 2024)
 
 * Added
