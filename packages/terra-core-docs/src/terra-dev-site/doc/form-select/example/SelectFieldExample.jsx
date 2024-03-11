@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from 'terra-card';
-import SelectField from 'terra-form-select/lib/SelectField';
+import {SelectField} from 'terra-form-select';
 import classNames from 'classnames/bind';
 import styles from './FormSelectDocCommon.module.scss';
 

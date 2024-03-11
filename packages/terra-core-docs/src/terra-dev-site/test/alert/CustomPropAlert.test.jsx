@@ -3,8 +3,8 @@ import Alert from 'terra-alert';
 import Button from 'terra-button';
 import { IconHelp } from 'terra-icon';
 import Input from 'terra-form-input';
-import MultiSelect from 'terra-form-select/lib/MultiSelect';
-import NativeSelect from 'terra-form-select/lib/native-select/NativeSelect';
+import {MultiSelect} from 'terra-form-select';
+import {NativeSelect} from 'terra-form-select';
 import classNames from 'classnames/bind';
 import styles from '../../doc/alert/example/colors.module.scss';
 

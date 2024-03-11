@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import StatusView from 'terra-status-view';
-import SingleSelectField from 'terra-form-select/lib/SingleSelectField';
+import {SingleSelectField} from 'terra-form-select';
 import Button from 'terra-button';
 
 const ToggleVariants = () => {

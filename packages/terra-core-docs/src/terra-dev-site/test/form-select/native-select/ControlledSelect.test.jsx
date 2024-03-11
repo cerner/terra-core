@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import classNames from 'classnames/bind';
-import NativeSelect from 'terra-form-select/lib/native-select/NativeSelect';
+import {NativeSelect} from 'terra-form-select';
 import Button from 'terra-button';
 import styles from './NativeSelectTest.module.scss';
 
