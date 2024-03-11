@@ -21,7 +21,7 @@
     "terra-form-select",
     "UI"
   ],
-  "main": "lib/Select.js",
+  "main": "lib/index.js",
   "dependencies": {
     "classnames": "^2.2.5",
     "keycode-js": "^3.1.0",
@@ -38,7 +38,7 @@
   "peerDependencies": {
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
-    "react-intl": ">=2.8.0 <6.0.0"
+    "react-intl": "^2.8.0 || 3 || 4 || 5"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",
