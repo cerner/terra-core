@@ -121,6 +121,7 @@ const ListItem = ({
     if (!onSelect) {
       attrSpread.onClick = (event) => {
         event?.currentTarget?.focus();
+        return onClick;
       };
     }
     attrSpread['aria-describedby'] = responseId;
