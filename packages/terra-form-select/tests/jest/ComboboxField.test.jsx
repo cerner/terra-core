@@ -1,5 +1,5 @@
 import React from 'react';
-import ComboboxField from '../../src/ComboboxField';
+import {ComboboxField} from '../../src/';
 
 it('should render ComboboxField component with max height', () => {
   const select = (

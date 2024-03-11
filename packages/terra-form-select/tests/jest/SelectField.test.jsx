@@ -1,5 +1,5 @@
 import React from 'react';
-import SelectField from '../../src/SelectField';
+import {SelectField} from '../../src';
 
 it('should render a default SelectField component', () => {
   const select = (

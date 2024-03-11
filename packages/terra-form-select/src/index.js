@@ -1,5 +1,6 @@
 import Select from './Select';
 
+import SelectField from './SelectField';
 import Combobox from './Combobox';
 import ComboboxField from './ComboboxField';
 import MultiSelect from './MultiSelect';
@@ -13,7 +14,6 @@ import SingleSelectField from './SingleSelectField';
 import TagSelect from './TagSelect';
 import TagSelectField from './TagSelectField';
 
-
 export default Select;
 export {
   Combobox,
@@ -24,6 +24,7 @@ export {
   NativeSelectField,
   SearchSelect,
   SearchSelectField,
+  SelectField,
   SingleSelect,
   SingleSelectField,
   TagSelect,
