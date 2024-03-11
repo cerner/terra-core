@@ -1,7 +1,6 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import Select from 'terra-form-select';
-import {SelectField} from 'terra-form-select';
+import Select, { SelectField } from 'terra-form-select';
 import styles from './common/Select.test.module.scss';
 
 const cx = classNames.bind(styles);

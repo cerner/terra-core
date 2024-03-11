@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Combobox} from 'terra-form-select';
+import { Combobox } from 'terra-form-select';
 import classNames from 'classnames/bind';
 import styles from '../FormSelectDocCommon.module.scss';
 

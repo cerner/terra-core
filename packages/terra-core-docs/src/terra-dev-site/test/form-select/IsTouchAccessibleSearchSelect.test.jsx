@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import {SearchSelect} from 'terra-form-select';
+import { SearchSelect } from 'terra-form-select';
 import styles from './common/Select.test.module.scss';
 
 const cx = classNames.bind(styles);

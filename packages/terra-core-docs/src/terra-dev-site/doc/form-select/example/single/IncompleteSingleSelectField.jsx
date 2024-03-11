@@ -1,5 +1,5 @@
 import React from 'react';
-import {SingleSelectField} from 'terra-form-select';
+import { SingleSelectField } from 'terra-form-select';
 import classNames from 'classnames/bind';
 import styles from '../FormSelectDocCommon.module.scss';
 

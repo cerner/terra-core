@@ -1,5 +1,5 @@
 import React from 'react';
-import {MultiSelectField} from '../../src';
+import { MultiSelectField } from '../../src';
 
 it('should render MultiSelectField component with max height', () => {
   const select = (

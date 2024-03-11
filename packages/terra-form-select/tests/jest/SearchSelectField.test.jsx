@@ -1,5 +1,5 @@
 import React from 'react';
-import {SearchSelectField} from '../../src';
+import { SearchSelectField } from '../../src';
 
 it('should render SearchSelectField component with max height', () => {
   const select = (
