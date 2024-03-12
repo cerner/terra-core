@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.66.0 - (March 12, 2024)
+
 * Updated
   * Updated terra list examples.
 * Changed
