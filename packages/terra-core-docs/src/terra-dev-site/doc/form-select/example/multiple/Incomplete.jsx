@@ -1,5 +1,5 @@
 import React from 'react';
-import MultiSelect from 'terra-form-select/lib/MultiSelect';
+import { MultiSelect } from 'terra-form-select';
 import classNames from 'classnames/bind';
 import styles from '../FormSelectDocCommon.module.scss';
 

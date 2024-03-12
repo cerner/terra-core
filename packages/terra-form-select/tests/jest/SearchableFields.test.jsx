@@ -1,8 +1,10 @@
 import React from 'react';
-import ComboboxField from '../../src/ComboboxField';
-import MultiSelectField from '../../src/MultiSelectField';
-import SearchSelectField from '../../src/SearchSelectField';
-import TagSelectField from '../../src/TagSelectField';
+import {
+  ComboboxField,
+  MultiSelectField,
+  SearchSelectField,
+  TagSelectField,
+} from '../../src';
 
 it('should render the selectId to the input field in ComboboxField component', () => {
   const select = (
