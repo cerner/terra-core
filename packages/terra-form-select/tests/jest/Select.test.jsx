@@ -1,7 +1,8 @@
 import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 
-import Select from '../../src/Select';
+import Select from '../../src';
+
 import Option from '../../src/shared/_Option';
 import OptGroup from '../../src/shared/_OptGroup';
 

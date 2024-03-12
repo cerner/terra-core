@@ -1,5 +1,5 @@
 import React from 'react';
-import TagSelectField from '../../src/TagSelectField';
+import { TagSelectField } from '../../src';
 
 it('should render TagSelectField component with max height', () => {
   const select = (
