@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 6.58.0 - (March 12, 2024)
+
 * Added
   * Added proper exports for all subcomponents. They can now be imported without the subcomponent path inside the module.
 
