@@ -28,6 +28,7 @@ const ListDraggableExample = () => {
 
   const [dataList, setDataList] = useState(mockData);
   const [selectedKey, setselectedKey] = useState('unique-0');
+  const [selectedData, setSelectedData] = useState('John Smith');
   const listNode = useRef(null);
 
   const reorderListItems = (list, startIndex, endIndex) => {
@@ -51,6 +52,7 @@ const ListDraggableExample = () => {
     event.preventDefault();
     if (selectedKey !== metaData.key) {
       setselectedKey(metaData.key);
+      setSelectedData(metaData.data);
     }
   };
 
@@ -59,7 +61,7 @@ const ListDraggableExample = () => {
       key={itemData.key}
       isSelectable
       isSelected={selectedKey === itemData.key}
-      metaData={{ key: itemData.key }}
+      metaData={{ key: itemData.key, data: itemData.title }}
       onSelect={handleItemSelection}
     >
       <Placeholder title={itemData.title} className={cx('placeholder')} />
@@ -72,6 +74,9 @@ const ListDraggableExample = () => {
     <>
       <p id="list-help">
         Select a patient from the list to view patient details.
+        Selected Item:
+        {' '}
+        {selectedData}
       </p>
       <List role="listbox" ariaDescribedBy="list-help" aria-label="list of patient" isDraggable onDragEnd={handleDragAndDrop} refCallback={(node) => handleRef(node)}>
         {createListItems(dataList)}

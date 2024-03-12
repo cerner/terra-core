@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+* Updated
+  * Updated terra list examples.
 * Changed
   * Updated documentation for `terra-form-select`.
 
