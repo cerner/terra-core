@@ -6,17 +6,27 @@ import Button from 'terra-button';
 const ToggleVariants = () => {
   const [variant, setVariant] = useState('error');
   const [selectValue, setSelectValue] = useState('error');
+  const [statusValue, setStatusValue] = useState('error');
+  const [onStatusClick, setStatusOnClick] = useState(false);
 
-  const handleOnSelect = (value) => setSelectValue(value);
 
-  const handleOnClick = () => setVariant(selectValue);
+  const handleOnSelect = (value) => {
+    setSelectValue(value);
+    setStatusOnClick(false)
+  };
+
+  const handleOnClick = () => {
+    setVariant(selectValue)
+    setStatusValue(selectValue)
+    setStatusOnClick(true);
+  };
 
   return (
     <div>
-      <StatusView variant={variant} />
+      <StatusView id={statusValue} onStatusClick={onStatusClick} variant={variant} />
       <SingleSelectField label="Change Variant" onChange={handleOnSelect} value={selectValue} maxWidth="300px" selectId="change-variant-field" placeholder="Select a Variant">
         <SingleSelectField.Option value="error" display="Error" />
-        <SingleSelectField.Option value="no-data" display="No Results" />
+        <SingleSelectField.Option value="no-data" display="No Result" />
         <SingleSelectField.Option value="no-matching-results" display="No Matching Result" />
         <SingleSelectField.Option value="not-authorized" display="Not Authorized" />
       </SingleSelectField>
