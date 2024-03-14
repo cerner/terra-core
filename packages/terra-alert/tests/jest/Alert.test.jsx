@@ -83,7 +83,24 @@ describe('Alert with props', () => {
   it('should render an alert with provided id', () => {
     const wrapper = enzymeIntl.shallowWithIntl(<Alert id="alert-id" />).dive();
 
+    expect(wrapper.find('.alert-base').prop('id')).toEqual('alert-id');
     expect(wrapper.find('.title').prop('id')).toEqual('alert-title-alert-id');
+    expect(wrapper.find('.section').prop('id')).toEqual('alert-message-alert-id');
+  });
+
+  it('should render an alert with provided titleID', () => {
+    const wrapper = enzymeIntl.shallowWithIntl(<Alert titleID="alertTitleID" />).dive();
+
+    expect(wrapper.find('.alert-base').prop('id')).toBeUndefined();
+    expect(wrapper.find('.title').prop('id')).toEqual('alertTitleID');
+    expect(wrapper.find('.section').prop('id')).toEqual('alert-message-00000000-0000-0000-0000-000000000000');
+  });
+
+  it('should render an alert with provided id and titleID', () => {
+    const wrapper = enzymeIntl.shallowWithIntl(<Alert id="alert-id" titleID="alertTitleID" />).dive();
+
+    expect(wrapper.find('.alert-base').prop('id')).toEqual('alert-id');
+    expect(wrapper.find('.title').prop('id')).toEqual('alertTitleID');
     expect(wrapper.find('.section').prop('id')).toEqual('alert-message-alert-id');
   });
 });
