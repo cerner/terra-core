@@ -1,13 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import { FormattedMessage } from 'react-intl';
 import Button from 'terra-button';
-import VisuallyHiddenText from 'terra-visually-hidden-text';
-import { injectIntl } from 'react-intl';
-import { v4 as uuidv4 } from 'uuid';
 import Divider from 'terra-divider';
 import styles from './StatusView.module.scss';
 
@@ -60,16 +57,6 @@ const propTypes = {
    * `no-matching-results`, `not-authorized`, or `error`
    */
   variant: PropTypes.oneOf(['no-data', 'no-matching-results', 'not-authorized', 'error']),
-  /**
-   * @private
-   * intl object programmatically imported through injectIntl from react-intl.
-   * */
-  intl: PropTypes.shape({ formatMessage: PropTypes.func, locale: PropTypes.string }).isRequired,
-   /**
-    * @private
-   * Determines if the status should be changed while clicking Apply button.
-   */
-   onStatusClick: PropTypes.bool,
 };
 /* eslint-enable react/forbid-foreign-prop-types */
 
@@ -81,7 +68,6 @@ const defaultProps = {
   message: undefined,
   title: undefined,
   variant: undefined,
-  onStatusClick: false,
 };
 
 const generateButtons = (buttonAttrsArray) => {
@@ -92,7 +78,6 @@ const generateButtons = (buttonAttrsArray) => {
   return buttonAttrsArray.map(button => <Button {...button} className={cx(['button', button.className])} />);
 };
 
-
 const StatusView = ({
   buttonAttrs,
   customGlyph,
@@ -101,20 +86,9 @@ const StatusView = ({
   message,
   title,
   variant,
-  intl,
-  onStatusClick,
   ...customProps
 }) => {
   const theme = React.useContext(ThemeContext);
-
-  let visuallyHiddenComponent = null;
-
-  useEffect(() => {
-    if(onStatusClick) {
-      visuallyHiddenComponent.innerText = intl.formatMessage({ id: `Terra.status-view.${variant}`});
-    }
-  },[onStatusClick])
-
 
   let glyphSection;
   if (customGlyph && !isGlyphHidden) {
@@ -133,13 +107,8 @@ const StatusView = ({
 
   let defaultTitle;
   if (variant) {
-    defaultTitle = intl.formatMessage({ id: `Terra.status-view.${variant}`});
+    defaultTitle = <FormattedMessage id={`Terra.status-view.${variant}`} />;
   }
-
-
-  const setVisuallyHiddenComponent = (node) => {
-    visuallyHiddenComponent = node;
-  };
 
   // Custom title takes precedence
   let titleSection;
@@ -193,7 +162,7 @@ const StatusView = ({
   ]);
 
   return (
-    <div {...customProps} className={outerViewClassNames}>
+    <div {...customProps} className={outerViewClassNames} role="alert" aria-live="polite">
       <div className={cx('top-space')} />
       <div className={innerViewClassNames}>
         {glyphSection}
@@ -201,12 +170,6 @@ const StatusView = ({
         {dividerSection}
         {messageSection}
         {actionSection}
-        <VisuallyHiddenText
-          refCallback={setVisuallyHiddenComponent}
-          aria-atomic="true"
-          aria-relevant="all"
-          aria-live="polite"
-        />
       </div>
       <div className={cx('bottom-space')} />
     </div>
@@ -215,5 +178,5 @@ const StatusView = ({
 
 StatusView.propTypes = propTypes;
 StatusView.defaultProps = defaultProps;
-export default injectIntl(StatusView);
+export default StatusView;
 export { StatusViewVariants };
