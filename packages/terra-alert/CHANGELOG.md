@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added `titleID` prop.
+
 ## 4.92.0 - (March 4, 2024)
 
 * Changed
