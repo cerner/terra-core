@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed the issue where the last selected value was not being displayed in the search field.
+
 ## 6.58.0 - (March 12, 2024)
 
 * Added
