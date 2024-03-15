@@ -20,7 +20,7 @@
     "terra-form-checkbox",
     "UI"
   ],
-  "main": "lib/Checkbox.js",
+  "main": "lib/index.js",
   "dependencies": {
     "classnames": "^2.2.5",
     "lodash.uniqueid": "^4.0.1",

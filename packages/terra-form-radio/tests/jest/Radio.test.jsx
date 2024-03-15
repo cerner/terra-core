@@ -1,7 +1,7 @@
 import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 
-import Radio from '../../src/Radio';
+import Radio from '../../src';
 
 window.matchMedia = () => ({ matches: true });
 
