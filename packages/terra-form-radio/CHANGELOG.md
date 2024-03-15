@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added named export for `RadioField`. It can now be imported as `import { RadioField } from 'terra-form-radio';`.
+
 ## 4.51.0 - (February 28, 2024)
 
 * Fixed
