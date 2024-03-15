@@ -20,7 +20,7 @@
     "terra-form-input",
     "UI"
   ],
-  "main": "lib/Input.js",
+  "main": "lib/index.js",
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
