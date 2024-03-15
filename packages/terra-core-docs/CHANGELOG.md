@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Changed `terra responsive element` docs to include reflow details.
+
 ## 1.66.0 - (March 12, 2024)
 
 * Updated
