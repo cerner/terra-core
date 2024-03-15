@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.67.0 - (March 15, 2024)
+
 * Changed
   * Changed `terra responsive element` docs to include reflow details.
   * Updated `terra-alert` example to use `titleID` prop.
