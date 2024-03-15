@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 4.32.0 - (March 15, 2024)
+
 * Added
   * Added named export for `InputField`. It can now be imported as `import { InputField } from 'terra-form-input';`.
 
