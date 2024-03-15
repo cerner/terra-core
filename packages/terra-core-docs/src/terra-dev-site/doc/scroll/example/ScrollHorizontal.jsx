@@ -2,7 +2,7 @@ import React from 'react';
 import Scroll from 'terra-scroll';
 import Button from 'terra-button';
 import classNames from 'classnames/bind';
-import InputField from 'terra-form-input/lib/InputField';
+import { InputField } from 'terra-form-input';
 import styles from './ScrollCommon.module.scss';
 
 const cx = classNames.bind(styles);

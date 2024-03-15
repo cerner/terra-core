@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import Button from 'terra-button';
 import ContentContainer from 'terra-content-container';
-import InputField from 'terra-form-input/lib/InputField';
+import { InputField } from 'terra-form-input';
 import classNames from 'classnames/bind';
 import styles from './ContentContainerDocCommon.module.scss';
 

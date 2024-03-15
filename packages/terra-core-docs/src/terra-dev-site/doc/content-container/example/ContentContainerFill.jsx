@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ContentContainer from 'terra-content-container';
 import Button from 'terra-button';
 import classNames from 'classnames/bind';
-import InputField from 'terra-form-input/lib/InputField';
+import { InputField } from 'terra-form-input';
 import styles from './ContentContainerDocCommon.module.scss';
 
 const cx = classNames.bind(styles);
