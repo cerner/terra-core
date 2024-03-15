@@ -86,6 +86,10 @@ const propTypes = {
    */
   title: PropTypes.string,
   /**
+   * The unique ID that is used to identify the alert title.
+   * */
+  titleID: PropTypes.string,
+  /**
    * The type of notification banner to be rendered. One of `alert`, `error`, `warning`, `unsatisfied`, `unverified`, `advisory`,
    * `info`, `success`, or `custom`.
    * A default title is provided for all notification types except `custom`.
@@ -145,6 +149,7 @@ const Alert = ({
   id,
   role,
   title,
+  titleID,
   type,
   ...customProps
 }) => {
@@ -177,7 +182,7 @@ const Alert = ({
   const contentContainerClassName = cx('content-container');
 
   const alertId = id || uuidv4();
-  const alertTitleId = `alert-title-${alertId}`;
+  const alertTitleId = titleID || `alert-title-${alertId}`;
   const alertMessageId = `alert-message-${alertId}`;
 
   const dismissButtonAriaDescribedBy = (title || defaultTitle) ? alertTitleId : alertMessageId;
