@@ -1,6 +1,5 @@
 import React from 'react';
-import Checkbox from 'terra-form-checkbox';
-import CheckboxField from 'terra-form-checkbox/lib/CheckboxField';
+import Checkbox, { CheckboxField } from 'terra-form-checkbox';
 
 class DefaultCheckboxField extends React.Component {
   constructor(props) {

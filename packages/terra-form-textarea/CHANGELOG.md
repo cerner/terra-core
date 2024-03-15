@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added named export for `TextareaField`. It can now be imported as `import { TextareaField } from 'terra-form-textarea';`.
+
 ## 5.32.0 - (February 15, 2024)
 
 * Changed

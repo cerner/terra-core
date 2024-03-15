@@ -1,6 +1,5 @@
 import React from 'react';
-import Radio from 'terra-form-radio';
-import RadioField from 'terra-form-radio/lib/RadioField';
+import Radio, { RadioField } from 'terra-form-radio';
 import classNames from 'classnames/bind';
 import styles from './RadioFieldCommon.module.scss';
 

@@ -1,8 +1,7 @@
 import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 
-import CheckboxField from '../../src/CheckboxField';
-import Checkbox from '../../src/Checkbox';
+import Checkbox, { CheckboxField } from '../../src';
 
 window.matchMedia = () => ({ matches: true });
 

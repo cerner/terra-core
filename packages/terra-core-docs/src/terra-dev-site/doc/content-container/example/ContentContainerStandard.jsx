@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ContentContainer from 'terra-content-container';
 import classNames from 'classnames/bind';
-import InputField from 'terra-form-input/lib/InputField';
+import { InputField } from 'terra-form-input';
 import Button from 'terra-button';
 import styles from './ContentContainerDocCommon.module.scss';
 
