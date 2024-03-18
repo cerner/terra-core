@@ -1,6 +1,5 @@
 import React from 'react';
-import Radio from 'terra-form-radio';
-import RadioField from 'terra-form-radio/lib/RadioField';
+import Radio, { RadioField } from 'terra-form-radio';
 
 export default class extends React.Component {
   constructor(props) {

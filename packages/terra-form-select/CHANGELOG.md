@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+## 6.59.0 - (March 15, 2024)
+
+* Fixed
+  * Fixed the issue where the last selected value was not being displayed in the search field.
+
+## 6.58.0 - (March 12, 2024)
+
+* Added
+  * Added proper exports for all subcomponents. They can now be imported without the subcomponent path inside the module.
+
 ## 6.57.0 - (March 8, 2024)
 
 * Fixed

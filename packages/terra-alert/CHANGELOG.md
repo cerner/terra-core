@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 4.93.0 - (March 15, 2024)
+
+* Added
+  * Added `titleID` prop so that consumers can specify the ID of the alert title without using the `alert-title-${id}` string.
+
 ## 4.92.0 - (March 4, 2024)
 
 * Changed

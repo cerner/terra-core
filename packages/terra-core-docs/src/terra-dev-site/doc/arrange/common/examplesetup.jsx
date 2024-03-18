@@ -3,8 +3,7 @@ import Button from 'terra-button';
 import classNames from 'classnames/bind';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { KEY_SPACE } from 'keycode-js';
-import Radio from 'terra-form-radio';
-import RadioField from 'terra-form-radio/lib/RadioField';
+import Radio, { RadioField } from 'terra-form-radio';
 import styles from './examplesetup.scss';
 
 const cx = classNames.bind(styles);

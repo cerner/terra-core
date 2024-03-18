@@ -1,6 +1,7 @@
 import React from 'react';
-import IconHelp from 'terra-icon/lib/icon/IconHelp';
-import InputField from '../../src/InputField';
+import { IconHelp } from 'terra-icon';
+
+import { InputField } from '../../src';
 
 describe('InputField', () => {
   it('should render a default InputField component', () => {

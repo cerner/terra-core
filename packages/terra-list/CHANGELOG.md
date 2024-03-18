@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 4.73.1 - (March 12, 2024)
+
+* Fixed
+  * Fixed `onSelect` not triggering when draggable item is clicked.
+
 ## 4.73.0 - (March 8, 2024)
 
 * Fixed

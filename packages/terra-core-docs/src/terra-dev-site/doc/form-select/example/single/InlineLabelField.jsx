@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 import Grid from 'terra-grid';
-import SingleSelectField from 'terra-form-select/lib/SingleSelectField';
+import { SingleSelectField } from 'terra-form-select';
 import styles from '../FormSelectDocCommon.module.scss';
 
 const cx = classNames.bind(styles);

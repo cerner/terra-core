@@ -124,10 +124,11 @@ In combination with the notification criticality, screen reader users should und
 - Terra provides an optional `id` prop to facilitate associating action elements to the notification banner. Action elements should set
   `aria-describedby` to the title of the notification banner.
   - `alert-title-${id}` - The ID of the title of the notification banner (e.g. "Alert", "Error", "Warning", custom titles, etc.)
+- Terra also provides an option `titleID` prop for the same purpose.
 
 <ActionExample
   title="Notification Banner with Action"
-  description="This example uses the id prop and aria-describedby to associate an action element with the notification banner."
+  description="This example uses the titleID prop and aria-describedby to associate an action element with the notification banner."
 />
 
 ## Linked References:

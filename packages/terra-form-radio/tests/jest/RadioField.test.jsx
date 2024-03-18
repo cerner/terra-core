@@ -1,8 +1,8 @@
 import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 import uniqueid from 'lodash.uniqueid';
-import RadioField from '../../src/RadioField';
-import Radio from '../../src/Radio';
+
+import Radio, { RadioField } from '../../src';
 
 window.matchMedia = () => ({ matches: true });
 jest.mock('lodash.uniqueid');

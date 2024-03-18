@@ -2,6 +2,20 @@
 
 ## Unreleased
 
+## 1.67.0 - (March 15, 2024)
+
+* Changed
+  * Changed `terra responsive element` docs to include reflow details.
+  * Updated `terra-alert` example to use `titleID` prop.
+  * Updated usage documentation for terra-form-checkbox, terra-form-input, terra-form-radio & terra-form-textarea.
+
+## 1.66.0 - (March 12, 2024)
+
+* Updated
+  * Updated terra list examples.
+* Changed
+  * Updated documentation for `terra-form-select`.
+
 ## 1.65.0 - (March 8, 2024)
 
 * Added

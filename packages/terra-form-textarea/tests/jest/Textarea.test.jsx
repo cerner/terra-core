@@ -2,7 +2,7 @@
 import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 
-import Textarea from '../../src/Textarea';
+import Textarea from '../../src';
 
 window.matchMedia = () => ({ matches: true });
 

@@ -28,6 +28,7 @@ const wrappedOnClickForItem = (onClick, onSelect, metaData) => {
     return onClick;
   }
   return (event) => {
+    event?.currentTarget?.focus();
     onSelect(event, metaData);
 
     if (onClick) {

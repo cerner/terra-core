@@ -1,6 +1,7 @@
 import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
-import Input from '../../src/Input';
+
+import Input from '../../src';
 
 describe('Input', () => {
   const defaultRender = <Input ariaLabel="label" />;

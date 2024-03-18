@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 4.25.0 - (March 15, 2024)
+
+* Added
+  * Added named export for `CheckboxField`. It can now be imported as `import { CheckboxField } from 'terra-form-checkbox';`.
+
 ## 4.24.0 - (March 4, 2024)
 
 * Changed

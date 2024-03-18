@@ -1,6 +1,6 @@
 {
   "name": "terra-form-radio",
-  "version": "4.51.0",
+  "version": "4.52.0",
   "description": "The Terra Form Radio is a responsive input component rendered as a radio button next to label text. When activated, a dot shall appear. Use the `name` attribute to group radio buttons together. Tabbing switches focus between radio button groups; arrow keys switch between radio buttons of the same group. The checked state can be activated with a space.",
   "author": "Cerner Corporation",
   "repository": {
@@ -20,7 +20,16 @@
     "terra-form-radio",
     "UI"
   ],
-  "main": "lib/Radio.js",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "src",
+    "translations",
+    "CHANGELOG.md",
+    "LICENSE",
+    "NOTICE",
+    "README.md"
+  ],
   "dependencies": {
     "classnames": "^2.2.5",
     "lodash.uniqueid": "^4.0.1",
@@ -33,7 +42,7 @@
   "peerDependencies": {
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
-    "react-intl": ">=2.8.0 <6.0.0"
+    "react-intl": "^2.8.0 || 3 || 4 || 5"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",
@@ -47,14 +56,5 @@
     "wdio:lowlight": "cd ../.. && terra wdio --themes clinical-lowlight-theme",
     "wdio:fusion": "cd ../.. && terra wdio --themes orion-fusion-theme",
     "wdio": "npm run wdio:default && npm run wdio:lowlight && npm run wdio:fusion"
-  },
-  "files": [
-    "lib",
-    "src",
-    "translations",
-    "CHANGELOG.md",
-    "LICENSE",
-    "NOTICE",
-    "README.md"
-  ]
+  }
 }
