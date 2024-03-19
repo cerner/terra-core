@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { v4 as uuidv4 } from 'uuid';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import styles from './Checkbox.module.scss';
@@ -104,6 +105,8 @@ const Checkbox = ({
 }) => {
   const theme = React.useContext(ThemeContext);
 
+  const inputId = id || uuidv4();
+
   const controlInputAttrs = { ...inputAttrs };
 
   if (checked !== undefined) {
@@ -149,11 +152,11 @@ const Checkbox = ({
 
   return (
     <div {...customProps} className={checkboxClasses}>
-      <label htmlFor={id} className={labelClasses}>
+      <label htmlFor={inputId} className={labelClasses}>
         <input
           {...controlInputAttrs}
           type="checkbox"
-          id={id}
+          id={inputId}
           disabled={disabled}
           name={name}
           value={value}

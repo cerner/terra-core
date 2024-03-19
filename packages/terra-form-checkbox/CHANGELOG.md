@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated the Checkbox component to generate an id when not passed so that click on the label controls the selection state.
+
 ## 4.25.0 - (March 15, 2024)
 
 * Added

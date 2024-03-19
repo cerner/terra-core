@@ -1,9 +1,19 @@
 import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 
 import Checkbox, { CheckboxField } from '../../src';
 
 window.matchMedia = () => ({ matches: true });
+
+let mockSpyUuid;
+beforeAll(() => {
+  mockSpyUuid = jest.spyOn(uuidv4, 'v4').mockReturnValue('00000000-0000-0000-0000-000000000000');
+});
+
+afterAll(() => {
+  mockSpyUuid.mockRestore();
+});
 
 let userAgentGetter;
 beforeEach(() => {
