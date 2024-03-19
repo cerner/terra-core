@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added an example for `terra-button` to demonstrate isLeftAligned property.
+
 ## 1.67.0 - (March 15, 2024)
 
 * Changed

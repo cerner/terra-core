@@ -13,6 +13,7 @@ exports[`correctly applies the theme context className 1`] = `
     isCompact={false}
     isDisabled={false}
     isIconOnly={false}
+    isLeftAligned={false}
     isReversed={false}
     text="neutral"
     type="button"
@@ -50,6 +51,7 @@ exports[`should pass in refCallback as the ref prop of the input element 1`] = `
   isCompact={false}
   isDisabled={false}
   isIconOnly={false}
+  isLeftAligned={false}
   isReversed={false}
   refCallback={
     [MockFunction] {

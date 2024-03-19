@@ -55,6 +55,10 @@ const propTypes = {
    */
   isReversed: PropTypes.bool,
   /**
+   * Whether or not the button content should appear as left aligned.
+   */
+  isLeftAligned: PropTypes.bool,
+  /**
    * Callback function triggered when mouse is pressed.
    */
   onMouseDown: PropTypes.func,
@@ -109,6 +113,7 @@ const defaultProps = {
   isDisabled: false,
   isIconOnly: false,
   isReversed: false,
+  isLeftAligned: false,
   refCallback: undefined,
   title: undefined,
   type: ButtonTypes.BUTTON,
@@ -227,6 +232,7 @@ class Button extends React.Component {
       isDisabled,
       isIconOnly,
       isReversed,
+      isLeftAligned,
       text,
       type,
       variant,
@@ -256,6 +262,7 @@ class Button extends React.Component {
         { 'is-disabled': isDisabled },
         { block: isBlock },
         { compact: isCompact },
+        { 'is-left-aligned': isLeftAligned },
         { 'is-active': this.state.active && !isDisabled },
         { 'is-focused': this.state.focused && !isDisabled },
         { 'is-selected': isSelectable && isSelected && !isDisabled },
