@@ -11,7 +11,6 @@ const words = 'Art artisan blog future next level odd park party polaroid truffa
 
 const LongTextButton = () => <Button id="long-text" text={text} />;
 const LongTextBlockButton = () => <Button id="long-text-block" text={text} isBlock />;
-const LongTextBlockLeftAlignedButton = () => <Button id="long-text-block-left-aligned" text={`Left Aligned: ${text}`} isBlock isLeftAligned />;
 
 export default () => (
   <div>
@@ -26,7 +25,5 @@ export default () => (
     <Button icon={<IconSquare />} text={words} />
     <div className={cx('spacing')} />
     <Button icon={<IconSquare />} text={words} isReversed />
-    <div className={cx('spacing')} />
-    <LongTextBlockLeftAlignedButton isLeftAligned />
   </div>
 );

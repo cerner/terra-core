@@ -133,6 +133,12 @@ Terra.describeViewports('Button', ['tiny'], () => {
     Terra.validates.element('long text', { selector: '#long-text' });
   });
 
+  it('displays Button with left aligned text', () => {
+    browser.url('/raw/tests/cerner-terra-core-docs/button/left-aligned-button');
+
+    Terra.validates.element('left-align-text', { selector: '#left-aligned-button' });
+  });
+
   describe('Button Types', () => {
     before(() => {
       browser.url('/raw/tests/cerner-terra-core-docs/button/button-types');
