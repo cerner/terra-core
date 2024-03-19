@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added isLeftAligned property to allow consumers to left align button content.
+
 ## 3.75.0 - (February 27, 2024)
 
 * Changed

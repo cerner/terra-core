@@ -102,6 +102,10 @@
       box-shadow: var(--terra-button-selected-and-hover-box-shadow, none);
       color: var(--terra-button-selected-and-hover-color, #fff);
     }
+
+    &.is-left-aligned {
+      justify-content: start;
+    }
   }
 
   .button-label-mac {
