@@ -1,6 +1,6 @@
 {
   "name": "terra-action-header",
-  "version": "2.91.0",
+  "version": "2.92.0",
   "description": "The terra-action-header component is a header bar containing a title and optional actionable items such as links and buttons.",
   "author": "Cerner Corporation",
   "repository": {
@@ -26,7 +26,7 @@
     "classnames": "^2.2.5",
     "lodash.uniqueid": "^4.0.1",
     "prop-types": "^15.5.8",
-    "terra-button": "^3.75.0",
+    "terra-button": "^3.76.0",
     "terra-mixins": "^1.41.0",
     "terra-theme-context": "^1.0.0",
     "terra-visually-hidden-text": "^2.38.0"
