@@ -34,8 +34,7 @@
   Versioning
 </h3>
 
-When a component reaches v1.0.0., it is considered to be stable and will follow [SemVer](http://semver.org/) for
-versioning.
+When a component reaches v1.0.0., it is considered to be stable and will follow [SemVer](http://semver.org/) for versioning.
 
 1. MAJOR versions represent breaking changes
 2. MINOR versions represent added functionality in a backwards-compatible manner
@@ -43,8 +42,7 @@ versioning.
 
 Consult the component CHANGELOGs, related issues, and PRs for more information.
 
-We view the React.js props API of our components as our main public API. We use this to guide us when versioning
-components.
+We view the React.js props API of our components as our main public API. We use this to guide us when versioning components.
 
 Prior to components reaching v1.0.0, a component is considered to be in a beta stage.
 Components in beta stage may include breaking changes, new features, and bug fixes all within v0.x.x releases.
