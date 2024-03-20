@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.68.0 - (March 20, 2024)
+
 * Added
   * Added an example for `terra-button` to demonstrate isLeftAligned property.
   * Added a test for `terra-form-checkbox` to cover a checkbox without an id property passed.
