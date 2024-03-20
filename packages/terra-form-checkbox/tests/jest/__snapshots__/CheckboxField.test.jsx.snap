@@ -106,12 +106,14 @@ exports[`correctly applies "inputAttrs" property to the Checkbox component 1`] =
         >
           <label
             className="label"
+            htmlFor="00000000-0000-0000-0000-000000000000"
           >
             <input
               aria-describedby="terra-checkbox-field-description-4  "
               className="native-input"
               data-custom-attr="attr data"
               disabled={false}
+              id="00000000-0000-0000-0000-000000000000"
               name={null}
               type="checkbox"
             />
