@@ -393,6 +393,7 @@
   .single,
   .select {
     &.is-focused {
+      box-shadow: var(--terra-form-select-box-shadow, none);
       outline: var(--terra-form-select-outline, 2px dashed #000);
     }
 

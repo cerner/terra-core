@@ -22,7 +22,8 @@
     --terra-form-select-above-border-bottom-left-radius: 3px;
     --terra-form-select-above-border-bottom-right-radius: 3px;
     --terra-form-select-hover-border-color: #dedfe0;
-    --terra-form-select-outline: 2px dashed #000;
+    --terra-form-select-outline: none;
+    --terra-form-select-box-shadow: 0 0 1px 3px rgba(76,178,233,0.5),0 0 7px 4px rgba(76,178,233,0.35);
     --terra-form-select-hover-color: #1c1f21;
     --terra-form-select-incomplete-background-color: #fefd9a;
     --terra-form-select-incomplete-focus-background-color: #fefd9a;
