@@ -109,6 +109,6 @@
     "wdio:fusion": "terra wdio --themes orion-fusion-theme",
     "wdio:redwood": "terra wdio --themes redwood-theme",
     "wdio": "terra wdio --themes terra-default-theme clinical-lowlight-theme orion-fusion-theme redwood-theme",
-    "wdio:docker": "terra wdio --disableSeleniumService=true --themes terra-default-theme clinical-lowlight-theme orion-fusion-theme"
+    "wdio:docker": "terra wdio --disable-selenium-service=true --themes terra-default-theme clinical-lowlight-theme orion-fusion-theme"
   }
 }
