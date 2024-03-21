@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Hyperlink now ellipses when its content should overflow.
+
 ## 2.67.1 - (February 27, 2024)
 
 * Fixed
