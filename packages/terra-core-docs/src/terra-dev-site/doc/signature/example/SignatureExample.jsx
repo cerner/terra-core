@@ -58,11 +58,12 @@ class SignatureExample extends React.Component {
           </Tabs.Pane>
           <Tabs.Pane label="Upload" key={`${this.tabKey}UploadTab`} id={`${this.tabKey}UploadTab`}>
             <br />
-           <ImageSignature />
+            <ImageSignature />
           </Tabs.Pane>
         </Tabs>
         <p>
-          <strong>Note:</strong> In this example Text and Image are created part of signature example. And terra-signature currently supports only Draw Functionality where Text and Image Signature will be part of future releases.
+          <strong>Note:</strong>
+          In this example Text and Image are created part of signature example. And terra-signature currently supports only Draw Functionality where Text and Image Signature will be part of future releases.
         </p>
       </div>
     );
