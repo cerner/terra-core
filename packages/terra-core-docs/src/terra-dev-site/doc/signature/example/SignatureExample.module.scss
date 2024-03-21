@@ -7,9 +7,9 @@
   }
 
   .text-area-style {
-    width: calc(100% - 0.2rem);
+    border: 0;
     height: 88px;
-    border: 0px;
+    width: calc(100% - 0.2rem);
     
     &:focus {
       outline: 2px dotted #000;
