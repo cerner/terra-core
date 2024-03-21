@@ -2,7 +2,31 @@
   .signature-wrapper {
     border: 1px solid rgb(0, 0, 0);
     height: 100px;
-    padding: 5px;
+    padding: 7px;
     width: 100%;
+  }
+
+  .text-area-style {
+    width: calc(100% - 0.2rem);
+    height: 88px;
+    border: 0px;
+    
+    &:focus {
+      outline: 2px dotted #000;
+      outline-offset: -2px;
+    }
+  }
+
+  .clear-button {
+    position: relative;
+    z-index: 0;
+  }
+
+  .add-button {
+    margin: 5px;
+  }
+
+  .input-image {
+    margin: 5px;
   }
 }
