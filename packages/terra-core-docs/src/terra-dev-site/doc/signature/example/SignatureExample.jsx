@@ -15,7 +15,6 @@ class SignatureExample extends React.Component {
     this.state = { lineSegments: [], lineWidth: Signature.Opts.Width.FINE };
     this.handleClear = this.handleClear.bind(this);
     this.handleLineWidth = this.handleLineWidth.bind(this);
-    this.handleTabChange = this.handleTabChange.bind(this);
     this.tabKey = 'compact';
   }
 
