@@ -7,61 +7,36 @@ const cx = classNames.bind(styles);
 
 export default () => (
   <div role="main">
-    <div className={cx('divtag')}>
-      Basic Hyperlink
-      <Hyperlink id="link" href="https://www.cerner.com" text="Default hyperlink that is really long and will get truncated" />
+    <div className={cx('truncated')}>
+      Basic Test
+      <Hyperlink id="basic-hyperlink1" href="https://www.cerner.com" text="Default hyperlink that is really long and will get truncated" />
     </div>
-    <div className={cx('divtag2')}>
-      Basic Hyperlink
-      <Hyperlink id="link" href="https://www.cerner.com" text="Default hyperlink that is really long and will get truncated" />
+    <div className={cx('truncated')}>
+      <Hyperlink id="basic-hyperlink2" href="https://www.cerner.com" text="Default hyperlink that is really long and will get truncated" />
     </div>
-    <div className={cx('divtag')}>
-      <Hyperlink id="link" href="https://www.cerner.com" text="Default hyperlink that is really long and will get truncated" />
+
+    <div className={cx('truncated')}>
+      External Test
+      <Hyperlink id="external-hyperlink1" href="https://www.cerner.com" variant="external" text="External Hyperlink that is really long and will get truncated" />
     </div>
-    <div className={cx('divtag2')}>
-      <Hyperlink id="link" href="https://www.cerner.com" text="Default hyperlink that is really long and will get truncated" />
+    <div className={cx('truncated')}>
+      <Hyperlink id="external-hyperlink2" href="https://www.cerner.com" variant="external" text="External Hyperlink that is really long and will get truncated" />
     </div>
-    <div className={cx('divtag')}>
-      Basic Hyperlink
-      <Hyperlink id="link" href="https://www.cerner.com" variant="external" text="Default hyperlink that is really long and will get truncated" />
+
+    <div className={cx('truncated')}>
+      Button Test
+      <Hyperlink id="button-hyperlink1" href="https://www.cerner.com" onClick={() => {}} text="Button Hyperlink that is really long and will get truncated" />
     </div>
-    <div className={cx('divtag2')}>
-      Basic Hyperlink
-      <Hyperlink id="link" href="https://www.cerner.com" variant="external" text="Default hyperlink that is really long and will get truncated" />
+    <div className={cx('truncated')}>
+      <Hyperlink id="button-hyperlink2" href="https://www.cerner.com" onClick={() => {}} text="Button Hyperlink that is really long and will get truncated" />
     </div>
-    <div className={cx('divtag')}>
-      <Hyperlink id="link" href="https://www.cerner.com" variant="external" text="Default hyperlink that is really long and will get truncated" />
+
+    <div className={cx('truncated')}>
+      Document Test
+      <Hyperlink id="document-hyperlink1" href="https://www.cerner.com" onClick={() => {}} variant="document" text="Document Hyperlink that is really long and will get truncated" />
     </div>
-    <div className={cx('divtag2')}>
-      <Hyperlink id="link" href="https://www.cerner.com" variant="external" text="Default hyperlink that is really long and will get truncated" />
-    </div>
-    <div className={cx('divtag')}>
-      Button
-      <Hyperlink id="link" href="https://www.cerner.com" onClick={() => {}} text="Default hyperlink that is really long and will get truncated" />
-    </div>
-    <div className={cx('divtag2')}>
-      Button
-      <Hyperlink id="link" href="https://www.cerner.com" onClick={() => {}} text="Default hyperlink that is really long and will get truncated" />
-    </div>
-    <div className={cx('divtag')}>
-      <Hyperlink id="link" href="https://www.cerner.com" onClick={() => {}} text="Default hyperlink that is really long and will get truncated" />
-    </div>
-    <div className={cx('divtag2')}>
-      <Hyperlink id="link" href="https://www.cerner.com" onClick={() => {}} text="Default hyperlink that is really long and will get truncated" />
-    </div>
-    <div className={cx('divtag')}>
-      Button
-      <Hyperlink id="link" href="https://www.cerner.com" onClick={() => {}} variant="document" text="Default hyperlink that is really long and will get truncated" />
-    </div>
-    <div className={cx('divtag2')}>
-      Button
-      <Hyperlink id="link" href="https://www.cerner.com" onClick={() => {}} variant="document" text="Default hyperlink that is really long and will get truncated" />
-    </div>
-    <div className={cx('divtag')}>
-      <Hyperlink id="link" href="https://www.cerner.com" onClick={() => {}} variant="document" text="Default hyperlink that is really long and will get truncated" />
-    </div>
-    <div className={cx('divtag2')}>
-      <Hyperlink id="link" href="https://www.cerner.com" onClick={() => {}} variant="document" text="Default hyperlink that is really long and will get truncated" />
+    <div className={cx('truncated')}>
+      <Hyperlink id="document-hyperlink2" href="https://www.cerner.com" onClick={() => {}} variant="document" text="Document Hyperlink that is really long and will get truncated" />
     </div>
   </div>
 );
