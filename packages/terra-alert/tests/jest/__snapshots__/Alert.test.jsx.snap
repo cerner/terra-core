@@ -316,6 +316,7 @@ exports[`Alert of type success with an action button text content should render 
         isCompact={false}
         isDisabled={false}
         isIconOnly={false}
+        isLeftAligned={false}
         isReversed={false}
         onClick={[MockFunction]}
         text="Action"
@@ -966,6 +967,7 @@ exports[`Dismissible Alert of type custom with action button, custom title and t
         isCompact={false}
         isDisabled={false}
         isIconOnly={false}
+        isLeftAligned={false}
         isReversed={false}
         onClick={[MockFunction]}
         text="Action"
@@ -978,6 +980,7 @@ exports[`Dismissible Alert of type custom with action button, custom title and t
         isCompact={false}
         isDisabled={false}
         isIconOnly={false}
+        isLeftAligned={false}
         isReversed={false}
         onClick={[MockFunction]}
         text="Terra.alert.dismiss"
@@ -1039,6 +1042,7 @@ exports[`Dismissible Alert that includes actions section should render an alert 
         isCompact={false}
         isDisabled={false}
         isIconOnly={false}
+        isLeftAligned={false}
         isReversed={false}
         onClick={[MockFunction]}
         text="Terra.alert.dismiss"

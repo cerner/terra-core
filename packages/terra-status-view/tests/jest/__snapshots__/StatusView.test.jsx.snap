@@ -501,6 +501,7 @@ exports[`should render a status view with custom glyph, title, message, and two 
           isCompact={false}
           isDisabled={false}
           isIconOnly={false}
+          isLeftAligned={false}
           isReversed={false}
           key="1"
           text="Action1"
@@ -536,6 +537,7 @@ exports[`should render a status view with custom glyph, title, message, and two 
           isCompact={false}
           isDisabled={false}
           isIconOnly={false}
+          isLeftAligned={false}
           isReversed={false}
           key="2"
           text="Action2"

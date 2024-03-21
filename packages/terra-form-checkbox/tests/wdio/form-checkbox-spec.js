@@ -67,4 +67,13 @@ Terra.describeViewports('Checkbox', ['medium'], () => {
 
     Terra.validates.element('three Checkboxes, first defaulted to checked');
   });
+
+  describe('No Identifier', () => {
+    it('should display checked Checkbox', () => {
+      browser.url('/raw/tests/cerner-terra-core-docs/form-checkbox/checkbox/checkbox-without-id');
+      $('label[class*="label"').click();
+
+      Terra.validates.element('no-id-checked');
+    });
+  });
 });

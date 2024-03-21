@@ -74,6 +74,7 @@ exports[`Rollup Tag should render rollup tag with the label "4 more" 1`] = `
       isCompact={true}
       isDisabled={false}
       isIconOnly={false}
+      isLeftAligned={false}
       isReversed={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -190,6 +191,7 @@ exports[`Rollup Tag should render rollup tag with the label "show less" when isC
       isCompact={true}
       isDisabled={false}
       isIconOnly={false}
+      isLeftAligned={false}
       isReversed={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -306,6 +308,7 @@ exports[`Rollup Tag should render rollup tag with the label "show less" when isC
       isCompact={true}
       isDisabled={false}
       isIconOnly={false}
+      isLeftAligned={false}
       isReversed={false}
       onBlur={[Function]}
       onClick={[Function]}
