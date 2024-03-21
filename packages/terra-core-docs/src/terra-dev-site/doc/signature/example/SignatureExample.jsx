@@ -62,8 +62,8 @@ class SignatureExample extends React.Component {
           </Tabs.Pane>
         </Tabs>
         <p>
-          <strong>Note:</strong>
-          In this example Text and Image are created part of signature example. And terra-signature currently supports only Draw Functionality where Text and Image Signature will be part of future releases.
+          <strong>Note: </strong>
+          This example [terra-signature] currently supports only 'Draw' Functionality. 'Signature Text' and 'Signature Upload Image' functionalities will be part of future enhancement.
         </p>
       </div>
     );
