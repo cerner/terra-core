@@ -8,13 +8,12 @@
     background-color: transparent; // Remove the gray background on active links in IE 10
     color: var(--terra-hyperlink-color, #006fc3);
     cursor: pointer;
-    display: flex;
-    align-items: baseline;
     outline: none;
     text-decoration: var(--terra-hyperlink-text-decoration, underline);
     touch-action: manipulation; // Enable fast tap interaction in webkit browsers; see https://webkit.org/blog/5610/more-responsive-tapping-on-ios/
     vertical-align: baseline;
     display: inline-flex;
+    align-items: baseline;
     max-width: min-content;
     width: 100%;
 
