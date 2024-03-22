@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkterra_core=self.webpackChunkterra_core||[]).push([[1939],{1939:function(e,r,t){Object.defineProperty(r,"__esModule",{value:!0}),r.default=void 0;var a,u=(a=t(96540))&&a.__esModule?a:{default:a},s=t(55801);r.default=function(){return u.default.createElement(s.Generic,{id:"shared-user",variant:"shared-user",alt:"shared user",color:"eight"})}}}]);
