@@ -83,8 +83,11 @@
   }
 
   .icon {
+    display: inline-block;
     font-size: var(--terra-hyperlink-icon-font-size, 1em);
     margin-left: var(--terra-hyperlink-icon-margin-left, 0.28571em);
+    overflow: visible;
+    position: relative;
   }
 
   .audio {
