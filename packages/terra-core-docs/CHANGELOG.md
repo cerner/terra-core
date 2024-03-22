@@ -4,6 +4,8 @@
 
 * Added
   * Added an example for `terra-hyperlink` to demonstrate text ellipses when its content should overflow.
+* Changed
+  * Fixed typos and imports in `terra-list` docs.
 
 ## 1.68.0 - (March 20, 2024)
 
