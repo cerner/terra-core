@@ -1,5 +1,5 @@
 import React from 'react';
-import List, { Item } from 'terra-list/lib/index';
+import List, { Item } from 'terra-list';
 import { Placeholder } from '@cerner/terra-docs';
 import classNames from 'classnames/bind';
 import mockData from './mock-data/mock-select';
@@ -58,7 +58,8 @@ class SingleSelectList extends React.Component {
         <p>
           <b>Note</b>
           {' '}
-          Tab key Navigation is disabled for below list items. Inorder to interact with list-item user should set programmatic focus to one of the list item depending on the required scenario.
+          Tab key navigation is disabled for the below list items.
+          In scenarios where tab key navigation is disabled, consumers should enable interaction by setting programmatic focus to one of the list items.
           {' '}
         </p>
         <button type="button" onClick={this.handleOnClick}>Select Item 0</button>

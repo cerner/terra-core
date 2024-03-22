@@ -1,5 +1,5 @@
 import React from 'react';
-import List, { Item, Utils } from 'terra-list/lib/index';
+import List, { Item, Utils } from 'terra-list';
 import { Placeholder } from '@cerner/terra-docs';
 import classNames from 'classnames/bind';
 import mockData from './mock-data/mock-select';
