@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import List, { Item } from 'terra-list/lib/index';
+import List, { Item } from 'terra-list';
 import classNames from 'classnames/bind';
 import Checkbox from 'terra-form-checkbox';
 import styles from './ListDocCommon.module.scss';
