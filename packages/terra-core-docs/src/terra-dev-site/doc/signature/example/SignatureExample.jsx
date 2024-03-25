@@ -2,9 +2,9 @@ import React from 'react';
 import Signature from 'terra-signature';
 import classNames from 'classnames/bind';
 import Tabs from 'terra-tabs';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
 import TextSignature from './TextSignature';
 import ImageSignature from './ImageSignature';
-import VisuallyHiddenText from 'terra-visually-hidden-text';
 import styles from './SignatureExample.module.scss';
 
 const cx = classNames.bind(styles);
