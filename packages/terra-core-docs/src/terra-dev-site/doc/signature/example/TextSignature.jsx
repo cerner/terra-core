@@ -1,11 +1,14 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 import Signature from 'terra-signature';
+import PropTypes from 'prop-types';
 import styles from './SignatureExample.module.scss';
 
 const cx = classNames.bind(styles);
 
-const TextSignature = () => {
+const propTypes = { onClearSignature: PropTypes.func, onAddSignature: PropTypes.func };
+
+const TextSignature = (props) => {
   const [showTextArea, setshowTextArea] = React.useState(true);
   const textArea = React.useRef();
 
@@ -22,6 +25,7 @@ const TextSignature = () => {
     }
     if (textArea && textArea.current) textArea.current.value = null;
     setshowTextArea(true);
+    props.onClearSignature();
   };
 
   const handleAdd = () => {
@@ -33,6 +37,7 @@ const TextSignature = () => {
         ctx.fillText(textArea.current.value, 100, 50);
         canvas.setAttribute('aria-label', textArea.current.value);
         setshowTextArea(false);
+        props.onAddSignature(true);
       }
     }
   };
@@ -40,7 +45,7 @@ const TextSignature = () => {
   return (
     <div>
       <div className={cx('signature-wrapper')}>
-        {(showTextArea) ? <textarea ref={(node) => { textArea.current = node; }} className={cx('text-area-style')} /> : null}
+        {(showTextArea) ? <textarea aria-label="Enter Name" ref={(node) => { textArea.current = node; }} className={cx('text-area-style')} /> : null}
         <Signature id="text" />
       </div>
       <br />
@@ -51,5 +56,5 @@ const TextSignature = () => {
     </div>
   );
 };
-
+TextSignature.propTypes = propTypes;
 export default TextSignature;

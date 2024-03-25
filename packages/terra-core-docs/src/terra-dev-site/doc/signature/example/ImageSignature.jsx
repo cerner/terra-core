@@ -1,11 +1,14 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 import Signature from 'terra-signature';
+import PropTypes from 'prop-types';
 import styles from './SignatureExample.module.scss';
 
 const cx = classNames.bind(styles);
 
-const ImageSignature = () => {
+const propTypes = { onClearSignature: PropTypes.func };
+
+const ImageSignature = (props) => {
   const handleFileSelect = () => {
     const canvas = document.getElementById('upload');
     if (canvas) {
@@ -26,6 +29,7 @@ const ImageSignature = () => {
       const ctx = canvas.getContext('2d');
       ctx.clearRect(0, 0, 1000, 100);
       document.getElementById('file-select').value = '';
+      props.onClearSignature();
     }
   };
 
@@ -40,5 +44,7 @@ const ImageSignature = () => {
     </div>
   );
 };
+
+ImageSignature.propTypes = propTypes;
 
 export default ImageSignature;
