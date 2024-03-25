@@ -62,7 +62,8 @@ class SignatureExample extends React.Component {
           </Tabs.Pane>
         </Tabs>
         <p>
-          <strong>Note: </strong><br />
+          <strong>Note: </strong>
+          <br />
           <ul>
             <li>This example Terra Signature currently supports only Draw Functionality.</li>
             <li>Signature Text and Signature Upload Image functionalities will be part of future enhancement.</li>
