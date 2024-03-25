@@ -83,7 +83,11 @@ exports[`Hyperlink correctly applies the theme context className 1`] = `
         onKeyUp={[Function]}
         onMouseDown={[Function]}
       >
-        Default hyperlink
+        <span
+          className="inner-text"
+        >
+          Default hyperlink
+        </span>
       </a>
     </Hyperlink>
   </InjectIntl(Hyperlink)>
@@ -97,7 +101,11 @@ exports[`Hyperlink should render a audio hyperlink 1`] = `
   data-focus-styles-enabled="true"
   href="https://www.cerner.com"
 >
-  Audio hyperlink
+  <span
+    class="inner-text"
+  >
+    Audio hyperlink
+  </span>
   <span
     class="icon"
   >
@@ -127,7 +135,11 @@ exports[`Hyperlink should render a default hyperlink 1`] = `
   data-focus-styles-enabled="true"
   href="https://www.cerner.com"
 >
-  Default hyperlink
+  <span
+    class="inner-text"
+  >
+    Default hyperlink
+  </span>
 </a>
 `;
 
@@ -138,7 +150,11 @@ exports[`Hyperlink should render a disabled hyperlink 1`] = `
   data-focus-styles-enabled="true"
   role="link"
 >
-  Disabled hyperlink
+  <span
+    class="inner-text"
+  >
+    Disabled hyperlink
+  </span>
 </a>
 `;
 
@@ -149,7 +165,11 @@ exports[`Hyperlink should render a document hyperlink 1`] = `
   data-focus-styles-enabled="true"
   href="https://www.cerner.com"
 >
-  Document hyperlink
+  <span
+    class="inner-text"
+  >
+    Document hyperlink
+  </span>
   <span
     class="icon"
   >
@@ -182,7 +202,11 @@ exports[`Hyperlink should render a external hyperlink 1`] = `
   rel="noopener noreferrer"
   target="_blank"
 >
-  External hyperlink
+  <span
+    class="inner-text"
+  >
+    External hyperlink
+  </span>
   <span
     class="icon"
   >
@@ -214,7 +238,11 @@ exports[`Hyperlink should render a hyperlink button when oonClick is provided 1`
   <span
     class="button-inner"
   >
-    Default hyperlink button
+    <span
+      class="inner-text"
+    >
+      Default hyperlink button
+    </span>
   </span>
 </button>
 `;
@@ -226,7 +254,11 @@ exports[`Hyperlink should render a image hyperlink 1`] = `
   data-focus-styles-enabled="true"
   href="https://www.cerner.com"
 >
-  Image hyperlink
+  <span
+    class="inner-text"
+  >
+    Image hyperlink
+  </span>
   <span
     class="icon"
   >
@@ -256,7 +288,11 @@ exports[`Hyperlink should render a underline hidden hyperlink 1`] = `
   data-focus-styles-enabled="true"
   href="https://www.cerner.com"
 >
-  Underline hidden hyperlink
+  <span
+    class="inner-text"
+  >
+    Underline hidden hyperlink
+  </span>
 </a>
 `;
 
@@ -267,7 +303,11 @@ exports[`Hyperlink should render a video hyperlink 1`] = `
   data-focus-styles-enabled="true"
   href="https://www.cerner.com"
 >
-  Video hyperlink
+  <span
+    class="inner-text"
+  >
+    Video hyperlink
+  </span>
   <span
     class="icon"
   >
@@ -299,7 +339,11 @@ exports[`Hyperlink should render with custom props 1`] = `
   rel="nofollow"
   target="_self"
 >
-  Custom props hyperlink
+  <span
+    class="inner-text"
+  >
+    Custom props hyperlink
+  </span>
 </a>
 `;
 
@@ -312,7 +356,11 @@ exports[`Hyperlink should render with custom props with external variant 1`] = `
   rel="external"
   target="_parent"
 >
-  Custom target and rel props external hyperlink
+  <span
+    class="inner-text"
+  >
+    Custom target and rel props external hyperlink
+  </span>
   <span
     class="icon"
   >

@@ -85,4 +85,9 @@ Terra.describeViewports('Hyperlink', ['tiny'], () => {
 
     Terra.validates.element('hyperlink-button');
   });
+
+  it('should render Hyperlinks with ellipses when the context should overflow', () => {
+    browser.url('/raw/tests/cerner-terra-core-docs/hyperlink/truncated-hyperlink');
+    Terra.validates.element('truncated');
+  });
 });
