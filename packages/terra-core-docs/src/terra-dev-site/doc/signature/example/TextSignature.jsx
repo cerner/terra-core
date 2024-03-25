@@ -28,9 +28,11 @@ const TextSignature = () => {
     if (textArea && textArea.current.value) {
       const canvas = document.getElementById('text');
       const ctx = canvas?.getContext('2d');
-      if (ctx) {
+      if (ctx && canvas) {
         ctx.font = '30px Arial';
         ctx.fillText(textArea.current.value, 100, 50);
+        canvas.setAttribute('tabIndex', '0');
+        canvas.setAttribute('aria-label', textArea.current.value );
         setshowTextArea(false);
       }
     }
