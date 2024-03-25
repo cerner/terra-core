@@ -31,7 +31,6 @@ const TextSignature = () => {
       if (ctx && canvas) {
         ctx.font = '30px Arial';
         ctx.fillText(textArea.current.value, 100, 50);
-        canvas.setAttribute('tabIndex', '0');
         canvas.setAttribute('aria-label', textArea.current.value);
         setshowTextArea(false);
       }
