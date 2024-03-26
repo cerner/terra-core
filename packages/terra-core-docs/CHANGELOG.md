@@ -6,6 +6,7 @@
   * Added an example for `terra-hyperlink` to demonstrate text ellipses when its content should overflow.
 * Changed
   * Fixed typos and imports in `terra-list` docs.
+  * Updated `terra-signature` example to include text and image signature.
 
 ## 1.68.0 - (March 20, 2024)
 
