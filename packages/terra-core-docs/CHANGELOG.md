@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.69.0 - (March 27, 2024)
+
 * Added
   * Added an example for `terra-hyperlink` to demonstrate text ellipses when its content should overflow.
 * Changed
