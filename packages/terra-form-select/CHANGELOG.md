@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 6.60.0 - (March 27, 2024)
+
 * Fixed
   * Fixed focus indicators for orion-fusion-theme.
 

@@ -1,6 +1,6 @@
 {
   "name": "terra-hyperlink",
-  "version": "2.67.1",
+  "version": "2.68.0",
   "description": "The terra hyperlink component allows linking to other web pages, files, locations within the same page, email addresses, or any other URL.",
   "author": "Cerner Corporation",
   "repository": {
