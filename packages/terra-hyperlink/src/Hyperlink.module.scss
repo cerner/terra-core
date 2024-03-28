@@ -39,8 +39,10 @@
     &[data-focus-styles-enabled='true']:focus {
       background-color: var(--terra-hyperlink-focus-background-color, transparent);
       border-radius: var(--terra-hyperlink-focus-border-radius, 0.2142rem);
-      box-shadow: var(--terra-hyperlink-focus-box-shadow, 0 0 0 1px #4cb2e9, 0 0 0 3px rgba(76, 178, 233, 0.25));
+      box-shadow: var(--terra-hyperlink-focus-box-shadow, none);
       color: var(--terra-hyperlink-focus-color, #001f67);
+      outline: var(--terra-hyperlink-focus-outline, 2px dashed #000);
+      outline-offset: var(--terra-hyperlink-focus-outline-offset, 1px);
       text-decoration: var(--terra-hyperlink-focus-text-decoration, underline);
     }
 
