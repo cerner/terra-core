@@ -331,6 +331,26 @@ Terra.describeViewports('Split Button', ['medium'], () => {
     });
   });
 
+  describe('With icon', () => {
+    it('displays a button with icon first', () => {
+      browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/right-icon-split-button');
+
+      Terra.validates.element('icon first');
+    });
+
+    it('displays a button with text first', () => {
+      browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/left-icon-split-button');
+
+      Terra.validates.element('text first');
+    });
+
+    it('displays a button with icon only', () => {
+      browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/icon-only-split-button');
+
+      Terra.validates.element('icon only');
+    });
+  });
+
   it('displays variants of Split Button', () => {
     browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/variant-split-buttons');
     $('#root').moveTo({ xOffset: 1, yOffset: 100 });
