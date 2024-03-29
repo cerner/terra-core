@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkterra_core=self.webpackChunkterra_core||[]).push([[91938],{24493:function(e,t,r){Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var a=u(r(96540)),n=u(r(22745));function u(e){return e&&e.__esModule?e:{default:e}}t.default=function(){return a.default.createElement(n.default,{text:"Transparent Section Header",isTransparent:!0})}}}]);
