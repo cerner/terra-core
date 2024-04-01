@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated default margin value for terra-button.
+
 ## 3.76.0 - (March 20, 2024)
 
 * Added
