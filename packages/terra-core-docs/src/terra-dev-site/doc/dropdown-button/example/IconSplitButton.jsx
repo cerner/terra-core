@@ -1,6 +1,6 @@
 import React from 'react';
 import { Item, SplitButton } from 'terra-dropdown-button';
-import { IconFeaturedOutlineYellow } from 'terra-icon';
+import { IconReply } from 'terra-icon';
 
 import classNames from 'classnames/bind';
 import styles from './IconSplitButton.module.scss';
@@ -11,7 +11,7 @@ const Example = () => (
   <>
     <SplitButton
       primaryOptionLabel="Reply"
-      icon={<IconFeaturedOutlineYellow />}
+      icon={<IconReply />}
       onSelect={() => {}}
       buttonAttrs={{
         'aria-label': 'icon split',
@@ -25,7 +25,7 @@ const Example = () => (
     </SplitButton>
     <SplitButton
       primaryOptionLabel="Reply"
-      icon={<IconFeaturedOutlineYellow />}
+      icon={<IconReply />}
       isReversed
       onSelect={() => {}}
       buttonAttrs={{
@@ -40,7 +40,7 @@ const Example = () => (
     </SplitButton>
     <SplitButton
       primaryOptionLabel="Reply"
-      icon={<IconFeaturedOutlineYellow />}
+      icon={<IconReply />}
       isIconOnly
       onSelect={() => {}}
       buttonAttrs={{
