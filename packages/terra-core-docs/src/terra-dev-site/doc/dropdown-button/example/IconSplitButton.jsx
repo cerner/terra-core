@@ -13,46 +13,46 @@ const Example = () => {
       <SplitButton
         primaryOptionLabel="Reply"
         icon={<IconFeaturedOutlineYellow />}
-        onSelect={() => setMessage('Reply clicked')}
+        onSelect={() => {}}
         buttonAttrs={{
           'aria-label': 'icon split',
         }}
         className={cx('icon-button')}
       >
         <Item label="Reply All" onSelect={() => setMessage('Reply All clicked')} />
-        <Item label="Forward" onSelect={() => setMessage('Forward clicked')} />
-        <Item label="Reply in 10 minutes" onSelect={() => setMessage('Reply in 10 minutes clicked')} />
-        <Item label="Selective Reply" onSelect={() => setMessage('Selective Reply clicked')} />
+        <Item label="Forward" onSelect={() => {}} />
+        <Item label="Reply in 10 minutes" onSelect={() => {}} />
+        <Item label="Selective Reply" onSelect={() => {}} />
       </SplitButton>
       <SplitButton
         primaryOptionLabel="Reply"
         icon={<IconFeaturedOutlineYellow />}
         isReversed
-        onSelect={() => setMessage('Reply clicked')}
+        onSelect={() => {}}
         buttonAttrs={{
           'aria-label': 'reverse icon split',
         }}
         className={cx('icon-button')}
       >
-        <Item label="Reply All" onSelect={() => setMessage('Reply All clicked')} />
-        <Item label="Forward" onSelect={() => setMessage('Forward clicked')} />
-        <Item label="Reply in 10 minutes" onSelect={() => setMessage('Reply in 10 minutes clicked')} />
-        <Item label="Selective Reply" onSelect={() => setMessage('Selective Reply clicked')} />
+        <Item label="Reply All" onSelect={() => {}} />
+        <Item label="Forward" onSelect={() => {}} />
+        <Item label="Reply in 10 minutes" onSelect={() => {}} />
+        <Item label="Selective Reply" onSelect={() => {}} />
       </SplitButton>
       <SplitButton
         primaryOptionLabel="Reply"
         icon={<IconFeaturedOutlineYellow />}
         isIconOnly
-        onSelect={() => setMessage('Reply clicked')}
+        onSelect={() => {}}
         buttonAttrs={{
           'aria-label': 'icon only split',
         }}
         className={cx('icon-button')}
       >
-        <Item label="Reply All" onSelect={() => setMessage('Reply All clicked')} />
-        <Item label="Forward" onSelect={() => setMessage('Forward clicked')} />
-        <Item label="Reply in 10 minutes" onSelect={() => setMessage('Reply in 10 minutes clicked')} />
-        <Item label="Selective Reply" onSelect={() => setMessage('Selective Reply clicked')} />
+        <Item label="Reply All" onSelect={() => {}} />
+        <Item label="Forward" onSelect={() => {}} />
+        <Item label="Reply in 10 minutes" onSelect={() => {}} />
+        <Item label="Selective Reply" onSelect={() => {}} />
       </SplitButton>
     </>
   );
