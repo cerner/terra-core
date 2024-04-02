@@ -323,6 +323,12 @@ describe('MenuUtil', () => {
     });
   });
 
+  it('should return null if there are no options', () => {
+    const options = [];
+
+    expect(MenuUtil.findNext(options, null)).toBeNull();
+  });
+
   describe('findPrevious', () => {
     it('should return the option after the value', () => {
       const options = [
