@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added examples and tests for `terra-dropdown-button` `SplitButton` with icons.
+
 ## 1.69.0 - (March 27, 2024)
 
 * Added
