@@ -250,13 +250,13 @@ class SplitButton extends React.Component {
       theme.className,
     );
 
-    const buttonTextClassnames = cx([
-      { 'text-first': icon && isReversed },
-    ]);
+    const buttonTextClassnames = (icon && isReversed) ? cx([
+      'text-first',
+    ]) : undefined;
 
-    const iconClassnames = cx([
-      { 'icon-first': (!isIconOnly) && !isReversed },
-    ]);
+    const iconClassnames = (!isIconOnly) && !isReversed ? cx([
+      'icon-first',
+    ]) : undefined;
 
     const buttonText = !isIconOnly ? <span className={buttonTextClassnames}>{primaryOptionLabel}</span> : null;
 
