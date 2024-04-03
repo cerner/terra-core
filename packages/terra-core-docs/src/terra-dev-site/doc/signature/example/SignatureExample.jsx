@@ -71,14 +71,6 @@ class SignatureExample extends React.Component {
             <ImageSignature onClearSignature={this.handleLiveRegion} />
           </Tabs.Pane>
         </Tabs>
-        <p>
-          <strong>Note: </strong>
-          <br />
-          <ul>
-            <li>This example Terra Signature currently supports only Draw Functionality.</li>
-            <li>Signature Text and Signature Upload Image functionalities will be part of future enhancement.</li>
-          </ul>
-        </p>
         <VisuallyHiddenText aria-live="polite" text={this.state.message} />
       </div>
     );
