@@ -8,6 +8,7 @@ const cx = classnames.bind(styles);
 
 const RightIconSplitButton = () => (
   <div className={cx('container-spacing-wrapper')}>
+    <h3>Icon Left</h3>
     <div className={cx('button-spacing-wrapper')}>
       <SplitButton
         primaryOptionLabel="Split"
@@ -21,6 +22,7 @@ const RightIconSplitButton = () => (
         <Item id="opt3" label="3rd" metaData={{ key: '3rd Option' }} onSelect={() => {}} />
       </SplitButton>
     </div>
+    <h3>Icon Right</h3>
     <div className={cx('button-spacing-wrapper')}>
       <SplitButton
         primaryOptionLabel="Split"
@@ -35,6 +37,7 @@ const RightIconSplitButton = () => (
         <Item id="opt3" label="3rd" metaData={{ key: '3rd Option' }} onSelect={() => {}} />
       </SplitButton>
     </div>
+    <h3>Icon Only</h3>
     <div className={cx('button-spacing-wrapper')}>
       <SplitButton
         primaryOptionLabel="Split"
