@@ -4,6 +4,7 @@
 
 * Changed
   * Updated documentation for `terra-signature`.
+  * Updated long text example for `terra-button` to show left alignment for wrapping button text.
 
 ## 1.69.0 - (March 27, 2024)
 
