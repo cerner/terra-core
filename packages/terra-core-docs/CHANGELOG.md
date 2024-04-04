@@ -18,7 +18,7 @@
 
 * Added
   * Added an example for `terra-hyperlink` to demonstrate text ellipses when its content should overflow.
-  *
+
 * Changed
   * Fixed typos and imports in `terra-list` docs.
   * Updated `terra-signature` example to include text and image signature.
