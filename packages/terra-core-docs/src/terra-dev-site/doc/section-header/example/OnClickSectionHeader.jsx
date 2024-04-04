@@ -1,14 +1,18 @@
 import React from 'react';
-import SectionHeaderExampleTemplate from './SectionHeaderExampleTemplate';
+import SectionHeader from 'terra-section-header';
 
 const sectionHeaderProps = {
   text: 'I\'m clickable, click me',
   onClick: () => {
-    // eslint-disable-next-line no-alert
     window.alert('The accordion has been clicked!');
   },
 };
 
-const OnClickSectionHeader = () => <SectionHeaderExampleTemplate text="OnClick Section Header" exampleProps={sectionHeaderProps} />;
+const OnClickSectionHeader = () => (
+  <div>
+    <h2>OnClick Section Header</h2>
+    <SectionHeader {...sectionHeaderProps} />
+  </div>
+);
 
 export default OnClickSectionHeader;
