@@ -5,8 +5,11 @@
 * Added
   * Added examples and tests for `terra-dropdown-button` `SplitButton` with icons.
 
+## 1.70.0 - (April 4, 2024)
+
 * Changed
   * Updated documentation for `terra-signature`.
+  * Updated long text example for `terra-button` to show left alignment for wrapping button text.
 
 ## 1.69.0 - (March 27, 2024)
 
