@@ -4,7 +4,6 @@ import SectionHeader from 'terra-section-header';
 const sectionHeaderProps = {
   text: "I'm clickable, click me",
   onClick: () => {
-    // eslint-disable-next-line no-alert
     window.alert('The accordion has been clicked!');
   },
   isTransparent: true,
