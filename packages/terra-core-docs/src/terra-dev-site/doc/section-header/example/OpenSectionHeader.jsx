@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionHeaderExampleTemplate from './SectionHeaderExampleTemplate';
+import SectionHeader from 'terra-section-header';
 
 const sectionHeaderProps = {
   text: 'Open',
@@ -7,6 +7,11 @@ const sectionHeaderProps = {
   onClick: () => {},
 };
 
-const OpenSectionheader = () => <SectionHeaderExampleTemplate text="Open Section Header" exampleProps={sectionHeaderProps} />;
+const OpenSectionheader = () => (
+  <div>
+    <h2>Open Section Header</h2>
+    <SectionHeader {...sectionHeaderProps} />
+  </div>
+);
 
 export default OpenSectionheader;

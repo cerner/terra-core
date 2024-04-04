@@ -1,6 +1,11 @@
 import React from 'react';
-import SectionHeaderExampleTemplate from './SectionHeaderExampleTemplate';
+import SectionHeader from 'terra-section-header';
 
-const DefaultSectionHeader = () => <SectionHeaderExampleTemplate text="Default" exampleProps={{ text: 'Default Section Header' }} />;
+const DefaultSectionHeader = () => (
+  <div>
+    <h2>Default</h2>
+    <SectionHeader text="Default Section Header" />
+  </div>
+);
 
 export default DefaultSectionHeader;

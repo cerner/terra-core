@@ -1,11 +1,16 @@
 import React from 'react';
-import SectionHeaderExampleTemplate from './SectionHeaderExampleTemplate';
+import SectionHeader from 'terra-section-header';
 
 const sectionHeaderProps = {
   text: 'Closed',
   onClick: () => {},
 };
 
-const ClosedSectionHeader = () => <SectionHeaderExampleTemplate text="Closed Section Header" exampleProps={sectionHeaderProps} />;
+const ClosedSectionHeader = () => (
+  <div>
+    <h2>Closed Section Header</h2>
+    <SectionHeader {...sectionHeaderProps} />
+  </div>
+);
 
 export default ClosedSectionHeader;

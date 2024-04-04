@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import AccoordianExampleTemplate from './AccordionExampleTemplate';
+import SectionHeader from 'terra-section-header';
+import Toggle from 'terra-toggle';
 
 const AccordionSectionHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,19 +9,23 @@ const AccordionSectionHeader = () => {
     setIsOpen(!isOpen);
   };
 
-  const sectionHeaderProps = {
-    isOpen,
-    onClick: handleClick,
-  };
-
   return (
-    <AccoordianExampleTemplate text="Patient Allergy details:" heading="Accordion Section Header" sectionHeaderAttrs={sectionHeaderProps}>
-      <p>Allergic to Cats</p>
-      <p>Allergic to Dogs</p>
-      <p>Allergic to Dust</p>
-      <p>Allergic to Mold</p>
-      <p>Allergic to Latex</p>
-    </AccoordianExampleTemplate>
+    <div>
+      <h2>Accordion Section Header</h2>
+      <SectionHeader
+        aria-expanded={isOpen}
+        isOpen={isOpen}
+        onClick={handleClick}
+        text="Patient Allergy details"
+      />
+      <Toggle isOpen={isOpen} isAnimated>
+        <p>Allergic to Cats</p>
+        <p>Allergic to Dogs</p>
+        <p>Allergic to Dust</p>
+        <p>Allergic to Mold</p>
+        <p>Allergic to Latex</p>
+      </Toggle>
+    </div>
   );
 };
 
