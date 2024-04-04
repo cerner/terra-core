@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+## 2.69.0 - (April 4, 2024)
+
+* Fixed
+  * Fixed focus indicator for default and lowlight themes.
+
+## 2.68.0 - (March 27, 2024)
+
+* Changed
+  * Hyperlink now ellipses when its content should overflow.
+
 ## 2.67.1 - (February 27, 2024)
 
 * Fixed

@@ -24,6 +24,10 @@ const propTypes = {
    */
   children: PropTypes.node.isRequired,
   /**
+   * An optional icon. Nested inline with the text when provided.
+   */
+  icon: PropTypes.element,
+  /**
    * Determines whether the component should have block styles applied. The dropdown will match the component's width.
    */
   isBlock: PropTypes.bool,
@@ -35,6 +39,14 @@ const propTypes = {
    * Determines whether the primary button and expanding the dropdown should be disabled.
    */
   isDisabled: PropTypes.bool,
+  /**
+   * Whether or not the button should only display as an icon.
+   */
+  isIconOnly: PropTypes.bool,
+  /**
+   * Reverses the position of the icon and text.
+   */
+  isReversed: PropTypes.bool,
   /**
    * Sets the text that will be shown on the primary button which is outside the dropdown.
    */
@@ -190,9 +202,12 @@ class SplitButton extends React.Component {
   render() {
     const {
       children,
+      isReversed,
+      icon,
       isBlock,
       isCompact,
       isDisabled,
+      isIconOnly,
       primaryOptionLabel,
       onSelect,
       variant,
@@ -235,6 +250,30 @@ class SplitButton extends React.Component {
       theme.className,
     );
 
+    const buttonTextClassnames = (icon && isReversed) ? cx([
+      'text-first',
+    ]) : undefined;
+
+    const iconClassnames = (!isIconOnly) && !isReversed ? cx([
+      'icon-first',
+    ]) : undefined;
+
+    const buttonText = !isIconOnly ? <span className={buttonTextClassnames}>{primaryOptionLabel}</span> : null;
+
+    let buttonIcon = null;
+    if (icon) {
+      const iconSvgClasses = icon.props.className ? `${icon.props.className} ${cx('icon-svg')}` : cx('icon-svg');
+      const cloneIcon = React.cloneElement(icon, { className: iconSvgClasses });
+      buttonIcon = <span className={iconClassnames}>{cloneIcon}</span>;
+    }
+
+    const buttonLabel = (
+      <>
+        {isReversed ? buttonText : buttonIcon}
+        {isReversed ? buttonIcon : buttonText}
+      </>
+    );
+
     let buttonAriaLabel = '';
     const modifiedButtonAttrs = { ...buttonAttrs };
     if (modifiedButtonAttrs && modifiedButtonAttrs['aria-label']) {
@@ -270,8 +309,9 @@ class SplitButton extends React.Component {
           disabled={isDisabled}
           tabIndex={isDisabled ? '-1' : undefined}
           aria-disabled={isDisabled}
+          aria-label={isIconOnly ? primaryOptionLabel : undefined}
         >
-          {primaryOptionLabel}
+          {buttonLabel}
         </button>
         <button
           {...modifiedButtonAttrs}

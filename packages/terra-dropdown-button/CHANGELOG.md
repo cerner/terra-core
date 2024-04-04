@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added support for icons in `SplitButton`.
+
 ## 1.40.0 - (February 15, 2024)
 
 * Changed

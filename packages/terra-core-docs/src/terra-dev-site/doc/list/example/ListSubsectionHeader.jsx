@@ -1,5 +1,5 @@
 import React from 'react';
-import List, { SubsectionHeader } from 'terra-list/lib/index';
+import List, { SubsectionHeader } from 'terra-list';
 
 const ListSubsectionHeaderExample = () => (
   <List>

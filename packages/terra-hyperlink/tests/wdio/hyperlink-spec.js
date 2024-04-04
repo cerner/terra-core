@@ -54,12 +54,6 @@ Terra.describeViewports('Hyperlink', ['tiny'], () => {
     Terra.validates.element('scaled');
   });
 
-  it('should display hyperlink states', () => {
-    browser.url('/raw/tests/cerner-terra-core-docs/hyperlink/states-hyperlink');
-
-    Terra.validates.element('states');
-  });
-
   it('should display Hyperlink with hidden underline', () => {
     browser.url('/raw/tests/cerner-terra-core-docs/hyperlink/underline-hidden-hyperlink');
 
@@ -80,9 +74,8 @@ Terra.describeViewports('Hyperlink', ['tiny'], () => {
     Terra.validates.element('focused hyperlink button');
   });
 
-  it('should render Hyperlink Button states when onClick is provided', () => {
-    browser.url('/raw/tests/cerner-terra-core-docs/hyperlink/states-hyperlink-button');
-
-    Terra.validates.element('hyperlink-button');
+  it('should render Hyperlinks with ellipses when the context should overflow', () => {
+    browser.url('/raw/tests/cerner-terra-core-docs/hyperlink/truncated-hyperlink');
+    Terra.validates.element('truncated');
   });
 });

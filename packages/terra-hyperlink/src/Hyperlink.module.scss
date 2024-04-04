@@ -8,11 +8,14 @@
     background-color: transparent; // Remove the gray background on active links in IE 10
     color: var(--terra-hyperlink-color, #006fc3);
     cursor: pointer;
-    display: inline-block; // prevents variant icon from breaking onto its own line
     outline: none;
     text-decoration: var(--terra-hyperlink-text-decoration, underline);
     touch-action: manipulation; // Enable fast tap interaction in webkit browsers; see https://webkit.org/blog/5610/more-responsive-tapping-on-ios/
     vertical-align: baseline;
+    display: inline-flex;
+    align-items: baseline;
+    max-width: min-content;
+    width: 100%;
 
     &:visited,
     &.is-visited {
@@ -36,8 +39,10 @@
     &[data-focus-styles-enabled='true']:focus {
       background-color: var(--terra-hyperlink-focus-background-color, transparent);
       border-radius: var(--terra-hyperlink-focus-border-radius, 0.2142rem);
-      box-shadow: var(--terra-hyperlink-focus-box-shadow, 0 0 0 1px #4cb2e9, 0 0 0 3px rgba(76, 178, 233, 0.25));
+      box-shadow: var(--terra-hyperlink-focus-box-shadow, none);
       color: var(--terra-hyperlink-focus-color, #001f67);
+      outline: var(--terra-hyperlink-focus-outline, 2px dashed #000);
+      outline-offset: var(--terra-hyperlink-focus-outline-offset, 1px);
       text-decoration: var(--terra-hyperlink-focus-text-decoration, underline);
     }
 
@@ -129,7 +134,7 @@
     line-height: inherit;
     margin: 0; // reset for Safari, defaults to 2px
     outline: none;
-    overflow: visible; // reset for IE
+    overflow: hidden; // reset for IE
     padding: 0;
     pointer-events: auto;
     position: relative; // reset for IE
@@ -137,6 +142,7 @@
     top: 0;  // reset for IE
     touch-action: manipulation; // Enable fast tap interaction in webkit browsers; see https://webkit.org/blog/5610/more-responsive-tapping-on-ios/
     vertical-align: baseline;
+    width: 100%;
 
     .button-inner {
       font-family: inherit;
@@ -145,6 +151,15 @@
       min-width: 0;
       position: relative; // reset for IE
       top: 0;  // reset for IE
+      display: flex;
+      min-width: 0;
+      max-width: min-content;
     }  
   } 
+
+  .inner-text {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
 }

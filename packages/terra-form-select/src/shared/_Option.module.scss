@@ -24,6 +24,7 @@
 
     &.is-active {
       background-color: var(--terra-form-select-option-active-background-color, #ebf6fd);
+      box-shadow: var(--terra-form-select-option-active-box-shadow, none);
       outline: var(--terra-form-select-option-active-color-outline, 2px dashed #000);
       outline-offset: -2px;
       z-index: 2;

@@ -3,6 +3,25 @@
 ## Unreleased
 
 * Added
+  * Added examples and tests for `terra-dropdown-button` `SplitButton` with icons.
+
+## 1.70.0 - (April 4, 2024)
+
+* Changed
+  * Updated documentation for `terra-signature`.
+  * Updated long text example for `terra-button` to show left alignment for wrapping button text.
+
+## 1.69.0 - (March 27, 2024)
+
+* Added
+  * Added an example for `terra-hyperlink` to demonstrate text ellipses when its content should overflow.
+* Changed
+  * Fixed typos and imports in `terra-list` docs.
+  * Updated `terra-signature` example to include text and image signature.
+
+## 1.68.0 - (March 20, 2024)
+
+* Added
   * Added an example for `terra-button` to demonstrate isLeftAligned property.
   * Added a test for `terra-form-checkbox` to cover a checkbox without an id property passed.
 

@@ -131,6 +131,7 @@ Terra.describeViewports('Button', ['tiny'], () => {
     $('#root').moveTo();
 
     Terra.validates.element('long text', { selector: '#long-text' });
+    Terra.validates.element('long text left aligned', { selector: '#long-text-left-block' });
   });
 
   it('displays Button with left aligned text', () => {

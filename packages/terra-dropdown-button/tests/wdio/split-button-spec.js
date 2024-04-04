@@ -331,6 +331,13 @@ Terra.describeViewports('Split Button', ['medium'], () => {
     });
   });
 
+  describe('With icon', () => {
+    it('displays all variants of icon split buttons', () => {
+      browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/icon-split-button');
+      Terra.validates.element('icon variants');
+    });
+  });
+
   it('displays variants of Split Button', () => {
     browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/variant-split-buttons');
     $('#root').moveTo({ xOffset: 1, yOffset: 100 });

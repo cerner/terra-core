@@ -96,4 +96,17 @@
     top: var(--terra-dropdown-button-split-type-caret-top, 0.04em);
     width: var(--terra-dropdown-button-split-type-caret-width, 1em);
   }
+
+  .text-first {
+    margin-right: var(--terra-dropdown-button-split-type-text-first-margin-right, 0.3571rem);
+  }
+
+  .icon-first {
+    margin-right: var(--terra-dropdown-button-split-type-icon-first-margin-right, 0.3571rem);
+  }
+
+  .icon-svg {
+    height: var(--terra-dropdown-button-split-type-icon-height, 1rem);
+    width: var(--terra-dropdown-button-split-type-icon-width, 1rem);
+  }
 }
