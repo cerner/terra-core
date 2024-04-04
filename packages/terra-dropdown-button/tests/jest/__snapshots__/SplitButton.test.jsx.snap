@@ -105,7 +105,9 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
             onKeyUp={[Function]}
             type="button"
           >
-            Primary Option
+            <span>
+              Primary Option
+            </span>
           </button>
           <button
             aria-controls="dropdown-menu-list-00000000-0000-0000-0000-000000000000"
@@ -200,7 +202,9 @@ exports[`Dropdown Button should render a block split type 1`] = `
     onKeyUp={[Function]}
     type="button"
   >
-    Primary Option
+    <span>
+      Primary Option
+    </span>
   </button>
   <button
     aria-controls="dropdown-menu-list-00000000-0000-0000-0000-000000000000"
@@ -250,7 +254,9 @@ exports[`Dropdown Button should render a compact split type 1`] = `
     onKeyUp={[Function]}
     type="button"
   >
-    Primary Option
+    <span>
+      Primary Option
+    </span>
   </button>
   <button
     aria-controls="dropdown-menu-list-00000000-0000-0000-0000-000000000000"
@@ -300,7 +306,9 @@ exports[`Dropdown Button should render a default split type 1`] = `
     onKeyUp={[Function]}
     type="button"
   >
-    Primary Option
+    <span>
+      Primary Option
+    </span>
   </button>
   <button
     aria-controls="dropdown-menu-list-00000000-0000-0000-0000-000000000000"
@@ -351,7 +359,9 @@ exports[`Dropdown Button should render a disabled split type 1`] = `
     onKeyUp={[Function]}
     type="button"
   >
-    Primary Option
+    <span>
+      Primary Option
+    </span>
   </button>
   <button
     aria-controls="dropdown-menu-list-00000000-0000-0000-0000-000000000000"
@@ -403,7 +413,9 @@ exports[`Dropdown Button should render a split type with custom attributes 1`] =
     onKeyUp={[Function]}
     type="button"
   >
-    Primary Option
+    <span>
+      Primary Option
+    </span>
   </button>
   <button
     aria-controls="dropdown-menu-list-00000000-0000-0000-0000-000000000000"
@@ -463,7 +475,9 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
     onKeyUp={[Function]}
     type="button"
   >
-    Primary Option
+    <span>
+      Primary Option
+    </span>
   </button>
   <button
     aria-controls="dropdown-menu-list-00000000-0000-0000-0000-000000000000"
@@ -513,7 +527,9 @@ exports[`Dropdown Button should render an open split type 1`] = `
     onKeyUp={[Function]}
     type="button"
   >
-    Primary Option
+    <span>
+      Primary Option
+    </span>
   </button>
   <button
     aria-controls="dropdown-menu-list-00000000-0000-0000-0000-000000000000"

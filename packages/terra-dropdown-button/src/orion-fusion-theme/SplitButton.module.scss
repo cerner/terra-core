@@ -60,6 +60,11 @@
     --terra-dropdown-button-split-type-caret-focus-outline-ghost: 2px dashed #000;
     --terra-dropdown-button-split-type-caret-hover-box-shadow-ghost: none;
 
+    --terra-dropdown-button-split-type-text-first-margin-right: 0.41667rem;
+    --terra-dropdown-button-split-type-icon-first-margin-right: 0.41667rem;
+    --terra-dropdown-button-split-type-icon-height: 1rem;
+    --terra-dropdown-button-split-type-icon-width: 1rem;
+
     /* Icons */
     @include terra-inline-svg-var('--terra-dropdown-button-caret-background-image-neutral', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="currentColor" d="M24,37.7,0,14.2l3.8-3.9L24,30,44.2,10.3,48,14.2Z"/></svg>');
     @include terra-inline-svg-var('--terra-dropdown-button-caret-active-background-image-neutral','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="currentColor" d="M24,37.7,0,14.2l3.8-3.9L24,30,44.2,10.3,48,14.2Z"/></svg>');

@@ -2,6 +2,7 @@ import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 import { IntlProvider } from 'react-intl';
 import { v4 as uuidv4 } from 'uuid';
+import { IconFeaturedOutlineYellow } from 'terra-icon';
 import translationsFile from '../../translations/en.json';
 
 import SplitButton, { Item } from '../../src/SplitButton';
@@ -72,6 +73,81 @@ describe('Dropdown Button', () => {
     wrapper.setState({ isOpen: true });
 
     expect(wrapper.dive()).toMatchSnapshot();
+  });
+
+  it('renders a split button with icon', () => {
+    const wrapper = enzymeIntl.shallowWithIntl(
+      <SplitButton
+        primaryOptionLabel="Primary Option"
+        icon={<IconFeaturedOutlineYellow />}
+        onSelect={() => {}}
+      >
+        <Item label="1st Option" onSelect={() => {}} />
+      </SplitButton>,
+    );
+
+    const primaryButton = wrapper.dive().find('button.split-button-primary');
+
+    expect(primaryButton.prop('aria-label')).toBeUndefined();
+    expect(primaryButton.children()).toHaveLength(2);
+
+    // expect icon to render first
+    const firstChild = primaryButton.childAt(0);
+    expect(firstChild.prop('className')).toBe('icon-first');
+    expect(firstChild.childAt(0).type()).toBe(IconFeaturedOutlineYellow);
+
+    // expect text to render second
+    const secondChild = primaryButton.childAt(1);
+    expect(secondChild.text()).toBe('Primary Option');
+  });
+
+  it('renders a split button with text first', () => {
+    const wrapper = enzymeIntl.shallowWithIntl(
+      <SplitButton
+        primaryOptionLabel="Primary Option"
+        icon={<IconFeaturedOutlineYellow />}
+        isReversed
+        onSelect={() => {}}
+      >
+        <Item label="1st Option" onSelect={() => {}} />
+      </SplitButton>,
+    );
+
+    const primaryButton = wrapper.dive().find('button.split-button-primary');
+
+    expect(primaryButton.prop('aria-label')).toBeUndefined();
+    expect(primaryButton.children()).toHaveLength(2);
+
+    // expect text to render first
+    const firstChild = primaryButton.childAt(0);
+    expect(firstChild.prop('className')).toBe('text-first');
+    expect(firstChild.text()).toBe('Primary Option');
+
+    // expect icon to render second
+    const secondChild = primaryButton.childAt(1);
+    expect(secondChild.childAt(0).type()).toBe(IconFeaturedOutlineYellow);
+  });
+
+  it('renders a split button with icon only', () => {
+    const wrapper = enzymeIntl.shallowWithIntl(
+      <SplitButton
+        primaryOptionLabel="Primary Option"
+        icon={<IconFeaturedOutlineYellow />}
+        isIconOnly
+        onSelect={() => {}}
+      >
+        <Item label="1st Option" onSelect={() => {}} />
+      </SplitButton>,
+    );
+
+    const primaryButton = wrapper.dive().find('button.split-button-primary');
+
+    expect(primaryButton.prop('aria-label')).toBe('Primary Option');
+    expect(primaryButton.children()).toHaveLength(1);
+
+    // expect icon to render
+    const buttonChild = primaryButton.childAt(0);
+    expect(buttonChild.childAt(0).type()).toBe(IconFeaturedOutlineYellow);
   });
 
   it('should render a split type with custom attributes', () => {
