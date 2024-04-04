@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 2.69.0 - (April 4, 2024)
+
 * Fixed
   * Fixed focus indicator for default and lowlight themes.
 
