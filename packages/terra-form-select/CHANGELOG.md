@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 6.61.0 - (April 4, 2024)
+
 * Fixed
   * Fixed exception thrown when down arrow is pressed on a form select with no options.
 
