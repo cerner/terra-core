@@ -27,5 +27,6 @@
   "Terra.form.select.option": "Options",
   "Terra.form.select.optGroup": "Groupe {text}",
   "Terra.form.select.defaultComboboxDisplay": "Sélectionner ou saisir",
-  "Terra.form.select.resultsText": "Résultats contenant « {text} »"
+  "Terra.form.select.resultsText": "Résultats contenant « {text} »",
+  "Terra.form.select.deselect": "Désélectionner"
 }

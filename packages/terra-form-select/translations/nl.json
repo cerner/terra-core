@@ -27,5 +27,6 @@
   "Terra.form.select.option": "Opties",
   "Terra.form.select.optGroup": "Groeperen {text}",
   "Terra.form.select.defaultComboboxDisplay": "Selecteer of druk op Enter",
-  "Terra.form.select.resultsText": "Resultaten met \"{text}\""
+  "Terra.form.select.resultsText": "Resultaten met \"{text}\"",
+  "Terra.form.select.deselect": "Deselecteren"
 }

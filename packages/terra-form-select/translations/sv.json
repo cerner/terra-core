@@ -27,5 +27,6 @@
   "Terra.form.select.option": "Alternativ",
   "Terra.form.select.optGroup": "Grupp {text}",
   "Terra.form.select.defaultComboboxDisplay": "Välj eller ange",
-  "Terra.form.select.resultsText": "Resultat som innehåller \"{text}\""
+  "Terra.form.select.resultsText": "Resultat som innehåller \"{text}\"",
+  "Terra.form.select.deselect": "Avmarkera"
 }
