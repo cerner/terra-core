@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed accessibility issue in `MultiSelect` component.
+
 ## 6.61.0 - (April 4, 2024)
 
 * Fixed
