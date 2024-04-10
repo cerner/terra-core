@@ -2,3 +2,10 @@ extends: "@cerner/terra"
 globals:
   enzyme: readonly
   enzymeIntl: readonly
+overrides:
+  - files:
+      - packages/terra-core-docs/src/terra-dev-site/doc/section-header/example/OnClickSectionHeader.jsx
+      - packages/terra-core-docs/src/terra-dev-site/doc/section-header/example/TransparentSectionHeader.jsx
+    rules:
+       no-alert: off
+

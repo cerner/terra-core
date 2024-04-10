@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 3.77.0 - (April 4, 2024)
+
+* Changed
+  * Updated styles to ensure span content is left aligned when wrapping.
+
 ## 3.76.0 - (March 20, 2024)
 
 * Added

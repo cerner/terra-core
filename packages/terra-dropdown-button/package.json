@@ -57,5 +57,8 @@
     "LICENSE",
     "NOTICE",
     "README.md"
-  ]
+  ],
+  "devDependencies": {
+    "terra-icon": "^3.60.0"
+  }
 }

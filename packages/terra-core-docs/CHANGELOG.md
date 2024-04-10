@@ -2,13 +2,23 @@
 
 ## Unreleased
 
+* Added
+  * Added examples and tests for `terra-dropdown-button` `SplitButton` with icons.
+
+* Changed
+  * Updated `terra-section-header` examples to be more consumer friendly by removing templates.
+
+## 1.70.0 - (April 4, 2024)
+
 * Changed
   * Updated documentation for `terra-signature`.
+  * Updated long text example for `terra-button` to show left alignment for wrapping button text.
 
 ## 1.69.0 - (March 27, 2024)
 
 * Added
   * Added an example for `terra-hyperlink` to demonstrate text ellipses when its content should overflow.
+
 * Changed
   * Fixed typos and imports in `terra-list` docs.
   * Updated `terra-signature` example to include text and image signature.
@@ -24,13 +34,12 @@
 * Changed
   * Changed `terra responsive element` docs to include reflow details.
   * Updated `terra-alert` example to use `titleID` prop.
-  * Updated usage documentation for terra-form-checkbox, terra-form-input, terra-form-radio & terra-form-textarea.
+  * Updated usage documentation for `terra-form-checkbox`, `terra-form-input`, `terra-form-radio` & `terra-form-textarea`.
 
 ## 1.66.0 - (March 12, 2024)
 
-* Updated
-  * Updated terra list examples.
 * Changed
+  * Updated `terra list` examples.
   * Updated documentation for `terra-form-select`.
 
 ## 1.65.0 - (March 8, 2024)
