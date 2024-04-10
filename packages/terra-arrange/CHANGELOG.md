@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Changed flex property to be compatible with IE.
+
 ## 3.56.0 - (February 15, 2024)
 
 * Changed
