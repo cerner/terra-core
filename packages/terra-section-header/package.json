@@ -1,6 +1,6 @@
 {
   "name": "terra-section-header",
-  "version": "2.67.1",
+  "version": "2.68.0",
   "description": "Section Header component that contains text and can be optionally interacted with.",
   "author": "Cerner Corporation",
   "repository": {
@@ -25,7 +25,7 @@
     "classnames": "^2.2.5",
     "keycode-js": "^3.1.0",
     "prop-types": "^15.5.8",
-    "terra-arrange": "^3.56.0",
+    "terra-arrange": "^3.56.1-alpha.0",
     "terra-mixins": "^1.41.0",
     "terra-theme-context": "^1.0.0"
   },
