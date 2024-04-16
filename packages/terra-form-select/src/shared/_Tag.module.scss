@@ -45,9 +45,9 @@
     }
 
     &:focus {
-      box-shadow: var(--terra-form-select-tag-box-shadow, none);
       outline: var(--terra-form-select-tag-color-outline, 2px dashed #000);
       outline-offset: -2px;
+      box-shadow: var(--terra-form-select-tag-box-shadow, none);
     }
   }
 
