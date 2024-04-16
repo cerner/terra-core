@@ -28,5 +28,5 @@
   "Terra.form.select.optGroup": "Group {text}",
   "Terra.form.select.defaultComboboxDisplay":	"Select or Enter",
   "Terra.form.select.resultsText": "Results that contain \"{text}\"",
-  "Terra.form.select.deselect": "Deselect"
+  "Terra.form.select.deselect": "Deselect {text}"
 }

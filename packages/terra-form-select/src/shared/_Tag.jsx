@@ -63,6 +63,7 @@ const Tag = ({
         {children}
       </span>
       <span
+        id={`terra-tag-deselect-${value}`}
         ref={deselectRef}
         onKeyDown={handleEnterKeyPress}
         className={cx('deselect')}
@@ -70,7 +71,7 @@ const Tag = ({
         // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
         tabIndex={!disabled ? 0 : null}
         role={!disabled ? 'button' : null}
-        aria-label={!disabled ? `${intl.formatMessage({ id: 'Terra.form.select.deselect' })} ${children}` : null}
+        aria-label={!disabled ? intl.formatMessage({ id: 'Terra.form.select.deselect' }, { text: children }) : null}
       >
         <span className={cx('icon')} />
       </span>
