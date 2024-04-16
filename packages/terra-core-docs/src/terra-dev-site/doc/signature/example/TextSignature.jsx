@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 import Signature from 'terra-signature';
+import Button from 'terra-button';
 import PropTypes from 'prop-types';
 import styles from './SignatureExample.module.scss';
 
@@ -50,8 +51,8 @@ const TextSignature = (props) => {
       </div>
       <br />
       <div className={cx('clear-button')}>
-        <button type="button" onClick={handleClear}>Clear</button>
-        <button className={cx('add-button')} type="button" onClick={handleAdd}>Add</button>
+        <Button className={cx('button')} text="Clear" onClick={handleClear} />
+        <Button className={cx('button')} text="Add" onClick={handleAdd} />
       </div>
     </div>
   );

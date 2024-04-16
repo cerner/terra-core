@@ -1,6 +1,8 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 import Signature from 'terra-signature';
+import Button from 'terra-button';
+import Input from 'terra-form-input';
 import PropTypes from 'prop-types';
 import styles from './SignatureExample.module.scss';
 
@@ -39,8 +41,8 @@ const ImageSignature = (props) => {
         <Signature id="upload" />
       </div>
       <br />
-      <button type="button" onClick={handleClear}>Clear</button>
-      <input className={cx('input-image')} id="file-select" type="file" accept="image/*" onChange={handleFileSelect} />
+      <Button className={cx('button')} text="Clear" onClick={handleClear} />
+      <Input className={cx('input-image')} id="file-select" type="file" accept="image/*" ariaLabel="Blank" onChange={handleFileSelect} />
     </div>
   );
 };
