@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated documentation for `terra-signature`.
+
 ## 1.71.0 - (April 10, 2024)
 
 * Added
