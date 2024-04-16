@@ -3,10 +3,10 @@ import Signature from 'terra-signature';
 import classNames from 'classnames/bind';
 import Tabs from 'terra-tabs';
 import VisuallyHiddenText from 'terra-visually-hidden-text';
-import TextSignature from './TextSignature';
-import ImageSignature from './ImageSignature';
 import Button from 'terra-button';
 import { SingleSelect } from 'terra-form-select';
+import TextSignature from './TextSignature';
+import ImageSignature from './ImageSignature';
 import styles from './SignatureExample.module.scss';
 
 const cx = classNames.bind(styles);
