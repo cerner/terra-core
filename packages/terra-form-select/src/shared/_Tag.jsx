@@ -36,35 +36,42 @@ const Tag = ({
   children, onDeselect, value, disabled, intl,
 }) => {
   const theme = React.useContext(ThemeContext);
-  const deselectRef = useRef(null);
+  const tagRef = useRef(null);
 
   const handleEnterKeyPress = (event) => {
-    if (event.key === 'Enter' && !disabled) {
+    if ((event.key === 'Enter' || event.key === 'Backspace') && !disabled) {
+      event.stopPropagation();
       onDeselect(value);
-      const parentUl = deselectRef.current.closest('ul');
-      // Filtering out hidden children
-      const visibleChildrenLis = Array.from(parentUl.children).filter(child => child.tagName === 'LI' && !/visually-hidden-component/.test(child.className));
-      if (visibleChildrenLis.length >= 2) {
-        const secondLastLi = visibleChildrenLis[visibleChildrenLis.length - 2];
-        if (secondLastLi) {
-          const spanChildren = secondLastLi.children;
-          if (spanChildren[1]) {
-            spanChildren[1].focus();
-          }
+      const previousLi = tagRef.current.previousElementSibling;
+
+      if (previousLi) {
+        const deselectElement = previousLi.children[1];
+        if (deselectElement) {
+          deselectElement.focus();
         }
       } else {
-        parentUl.click();
+        const nextLi = tagRef.current.nextElementSibling;
+        const parentUl = tagRef.current.closest('ul');
+        if (nextLi) {
+          const deselectElement = nextLi.children[1];
+          if (deselectElement) {
+            deselectElement.focus();
+          } else {
+            parentUl.click();
+          }
+        } else {
+          parentUl.click();
+        }
       }
     }
   };
   return (
-    <li className={cx('tag', theme.className)}>
+    <li className={cx('tag', theme.className)} ref={tagRef}>
       <span className={cx('display')}>
         {children}
       </span>
       <span
         id={`terra-tag-deselect-${value}`}
-        ref={deselectRef}
         onKeyDown={handleEnterKeyPress}
         className={cx('deselect')}
         onClick={() => { if (!disabled) onDeselect(value); }}
