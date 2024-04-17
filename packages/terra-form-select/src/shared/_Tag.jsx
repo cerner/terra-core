@@ -75,8 +75,7 @@ const Tag = ({
         onKeyDown={handleEnterKeyPress}
         className={cx('deselect')}
         onClick={() => { if (!disabled) onDeselect(value); }}
-        // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
-        tabIndex={!disabled ? 0 : null}
+        tabIndex={!disabled ? 0 : -1}
         role={!disabled ? 'button' : null}
         aria-label={!disabled ? intl.formatMessage({ id: 'Terra.form.select.deselect' }, { text: children }) : null}
       >
