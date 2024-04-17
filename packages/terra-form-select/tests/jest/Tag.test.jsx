@@ -5,12 +5,14 @@ import Tag from '../../src/shared/_Tag';
 
 describe('Tag', () => {
   it('should render a default Tag', () => {
-    const wrapper = enzyme.shallow(<Tag value="value" onDeselect={() => {}}>Content</Tag>);
+    const wrapper = enzymeIntl.shallowWithIntl(
+      <Tag value="value" onDeselect={() => {}}>Content</Tag>,
+    );
     expect(wrapper).toMatchSnapshot();
   });
 
   it('correctly applies the theme context className', () => {
-    const wrapper = enzyme.mount(
+    const wrapper = enzymeIntl.mountWithIntl(
       <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
         <Tag value="value" onDeselect={() => {}}>
           Content

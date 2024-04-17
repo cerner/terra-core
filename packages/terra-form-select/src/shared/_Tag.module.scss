@@ -43,6 +43,12 @@
       background: var(--terra-form-select-tag-deselect-hover-background, #b9bbbc);
       border-bottom: var(--terra-form-select-tag-deselect-hover-border-bottom, 0.14286rem solid #8f8f90);
     }
+
+    &:focus {
+      outline: var(--terra-form-select-tag-focus-outline, 2px dashed #000);
+      outline-offset: -2px;
+      box-shadow: var(--terra-form-select-tag-focus-box-shadow, none);
+    }
   }
 
   .icon {

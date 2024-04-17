@@ -2376,6 +2376,17 @@ Terra.describeViewports('Select', ['tiny'], () => {
       it('should display selected option', () => {
         Terra.validates.element('tag controlled selected option');
       });
+
+      it('should focus on pressing tab key', () => {
+        $('[data-terra-select]').click();
+        $('#terra-select-option-blue').click();
+        $('#terra-select-option-red').click();
+        $('#root').click();
+        browser.keys('Tab');
+        expect($('#terra-tag-deselect-blue')).toBeFocused();
+        browser.keys('Tab');
+        expect($('#terra-tag-deselect-red')).toBeFocused();
+      });
     });
   });
 

@@ -20,6 +20,8 @@
     --terra-form-select-tag-deselect-hover-border-bottom: 1px solid #dedfe0;
     --terra-form-select-tag-icon-height: 0.91667rem;
     --terra-form-select-tag-icon-width: 0.91667rem;
+    --terra-form-select-tag-focus-box-shadow: rgba(76, 178, 233, 0.5) 0 0 1px 3px inset;
+    --terra-form-select-tag-focus-outline: none;
 
     @include terra-inline-svg-var('--terra-form-select-tag-icon-background', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M4.2 48L0 43.8 43.8 0 48 4.2zM43.8 48L0 4.2 4.2 0 48 43.8z"/></svg>');
   }

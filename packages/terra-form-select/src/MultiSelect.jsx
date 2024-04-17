@@ -192,7 +192,7 @@ class MultiSelect extends React.Component {
     const selectValue = SelectUtil.value(this.props, this.state);
 
     return selectValue.map(tag => (
-      <Tag value={tag} key={tag} onDeselect={this.handleDeselect}>
+      <Tag value={tag} key={tag} onDeselect={this.handleDeselect} disabled={this.props.disabled}>
         {SelectUtil.valueDisplay(this.props, tag)}
       </Tag>
     ));
