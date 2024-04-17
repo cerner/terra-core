@@ -76,8 +76,8 @@ const Tag = ({
         className={cx('deselect')}
         onClick={() => { if (!disabled) onDeselect(value); }}
         tabIndex={!disabled ? 0 : -1}
-        role={!disabled ? 'button' : null}
-        aria-label={!disabled ? intl.formatMessage({ id: 'Terra.form.select.deselect' }, { text: children }) : null}
+        role="button"
+        aria-label={intl.formatMessage({ id: 'Terra.form.select.deselect' }, { text: children })}
       >
         <span className={cx('icon')} />
       </span>
