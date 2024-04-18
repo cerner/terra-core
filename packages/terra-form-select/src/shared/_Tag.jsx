@@ -38,12 +38,12 @@ const Tag = ({
   const theme = React.useContext(ThemeContext);
   const tagRef = useRef(null);
 
-  const handleEnterKeyPress = (event) => {
+  const handleKeyPress = (event) => {
     if ((event.key === 'Enter' || event.key === 'Backspace') && !disabled) {
       event.stopPropagation();
       onDeselect(value);
       const previousLi = tagRef.current.previousElementSibling;
-
+      const selectInput = tagRef.current.closest('ul').parentElement.parentElement.children[1].children[0];
       if (previousLi) {
         const deselectElement = previousLi.children[1];
         if (deselectElement) {
@@ -51,16 +51,15 @@ const Tag = ({
         }
       } else {
         const nextLi = tagRef.current.nextElementSibling;
-        const parentUl = tagRef.current.closest('ul');
         if (nextLi) {
           const deselectElement = nextLi.children[1];
           if (deselectElement) {
             deselectElement.focus();
           } else {
-            parentUl.click();
+            selectInput.focus();
           }
         } else {
-          parentUl.click();
+          selectInput.focus();
         }
       }
     }
@@ -72,7 +71,7 @@ const Tag = ({
       </span>
       <span
         id={`terra-tag-deselect-${value}`}
-        onKeyDown={handleEnterKeyPress}
+        onKeyDown={handleKeyPress}
         className={cx('deselect')}
         onClick={() => { if (!disabled) onDeselect(value); }}
         tabIndex={!disabled ? 0 : -1}
