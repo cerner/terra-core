@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added note regarding search field examples.
+
 ## 1.71.0 - (April 10, 2024)
 
 * Added
