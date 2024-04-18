@@ -4,6 +4,8 @@
 
 * Changed
   * Updated documentation for `terra-signature`.
+* Added
+  * Added note regarding search field examples.
 
 ## 1.71.0 - (April 10, 2024)
 
