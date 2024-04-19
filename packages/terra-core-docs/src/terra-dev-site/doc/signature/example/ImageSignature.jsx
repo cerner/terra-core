@@ -42,7 +42,7 @@ const ImageSignature = (props) => {
       </div>
       <br />
       <Button className={cx('button')} text="Clear" onClick={handleClear} />
-      <Input className={cx('input-image')} id="file-select" type="file" accept="image/*" ariaLabel="Blank" onChange={handleFileSelect} />
+      <Input className={cx('input-image')} id="file-select" type="file" accept="image/*" onChange={handleFileSelect} />
     </div>
   );
 };

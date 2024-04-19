@@ -28,6 +28,11 @@
 
   .input-image {
     margin: 5px;
+
+    &:focus {
+      border: 1px solid #4cb2e9;
+      outline: none;
+    }
   }
 
   .button {
