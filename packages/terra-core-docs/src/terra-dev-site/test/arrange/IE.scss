@@ -1,0 +1,49 @@
+// import themes
+
+:local {
+  .header {
+    border-bottom: var(--smartzone-js-notification-card-header-border-bottom, 1px solid #d3d4d5);
+    color: var(--smartzone-js-notification-card-header-color);
+    padding: var(--smartzone-js-notification-card-header-padding, 0.35714rem);
+
+    background-color: var(--notification-card-js-header-background-color, #fff) !important;
+    border-top-style: solid;
+    border-top-width: 3px;
+  }
+
+  .critical {
+    border-top-color: var(--notification-card-js-hazard-high-border-top-color, #ea2f2f);
+  }
+
+  .warning {
+    border-top-color: var(--notification-card-js-hazard-medium-border-top-color, #ffc20a);
+  }
+
+  .information {
+    border-top-color: var(--notification-card-js-hazard-low-border-top-color, #339ad5);
+  }
+
+  .suggestion {
+    border-top-color: var(--notification-card-js-custom-border-top-color, #c8cacb);
+  }
+
+  .title {
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    font-weight: var(--smartzone-js-notification-card-header-title-font-weight, 700);
+    hyphens: auto;
+    margin-bottom: 0;
+    margin-top: 0;
+    overflow-wrap: break-word; /* Modern browsers */
+    padding: var(--smartzone-js-notification-card-header-title-padding, 0.28571rem 0.71428rem 0 0.35714rem);
+    word-wrap: break-word; /* For IE 10 and IE 11 */
+  }
+
+  .header-icon {
+    height: 16px;
+    width: 16px;
+  }
+}
