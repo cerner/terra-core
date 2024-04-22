@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Removed
+  * Reverted the change for a reflow issue when the viewport is resized to 320x256 px.
+
 ## 3.56.1-alpha.0 - (April 10, 2024)
 
 * Changed
