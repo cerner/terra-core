@@ -3,6 +3,8 @@ import Signature from 'terra-signature';
 import classNames from 'classnames/bind';
 import Tabs from 'terra-tabs';
 import VisuallyHiddenText from 'terra-visually-hidden-text';
+import Button from 'terra-button';
+import { SingleSelect } from 'terra-form-select';
 import TextSignature from './TextSignature';
 import ImageSignature from './ImageSignature';
 import styles from './SignatureExample.module.scss';
@@ -26,8 +28,8 @@ class SignatureExample extends React.Component {
     this.handleLiveRegion();
   }
 
-  handleLineWidth(event) {
-    this.setState({ [event.target.name]: event.target.value });
+  handleLineWidth(value) {
+    this.setState({ lineWidth: value });
   }
 
   handleLiveRegion(value) {
@@ -40,7 +42,7 @@ class SignatureExample extends React.Component {
   render() {
     return (
       <div>
-        <Tabs setFocusOnContent defaultActiveKey={`${this.tabKey}DrawTab`} id={this.tabKey}>
+        <Tabs defaultActiveKey={`${this.tabKey}DrawTab`} id={this.tabKey}>
           <Tabs.Pane label="Draw" key={`${this.tabKey}DrawTab`} id={`${this.tabKey}DrawTab`}>
             <br />
             <>
@@ -50,15 +52,15 @@ class SignatureExample extends React.Component {
             </>
             <br />
             <div>
-              <button type="button" onClick={this.handleClear}>Clear </button>
+              <Button className={cx('button')} text="Clear" onClick={this.handleClear} />
               <div>
-                <p><label htmlFor="lineWidth">Select a line width:</label></p>
-                <select id="lineWidth" name="lineWidth" value={this.state.lineWidth} onChange={this.handleLineWidth}>
-                  <option value="1">EXTRAFINE</option>
-                  <option value="2">FINE</option>
-                  <option value="4">MEDIUM</option>
-                  <option value="6">HEAVY</option>
-                </select>
+                <p><label htmlFor="lineWidth">Select a line width</label></p>
+                <SingleSelect className={cx('form-select')} id="lineWidth" name="lineWidth" value={this.state.lineWidth} placeholder="Select lineWidth" onSelect={this.handleLineWidth}>
+                  <SingleSelect.Option value="1" display="EXTRAFINE" />
+                  <SingleSelect.Option value="2" display="FINE" />
+                  <SingleSelect.Option value="4" display="MEDIUM" />
+                  <SingleSelect.Option value="6" display="HEAVY" />
+                </SingleSelect>
               </div>
             </div>
           </Tabs.Pane>

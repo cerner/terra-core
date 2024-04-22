@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+* Changed
+  * Updated documentation for `terra-signature`.
 * Added
   * Added note regarding search field examples.
 
