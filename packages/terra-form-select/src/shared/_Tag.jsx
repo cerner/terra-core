@@ -51,13 +51,8 @@ const Tag = ({
         }
       } else {
         const nextLi = tagRef.current.nextElementSibling;
-        if (nextLi) {
-          const deselectElement = nextLi.children[1];
-          if (deselectElement) {
-            deselectElement.focus();
-          } else {
-            selectInput.focus();
-          }
+        if (nextLi && nextLi.children[1]) {
+            nextLi.children[1].focus();
         } else {
           selectInput.focus();
         }
