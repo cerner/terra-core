@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+* Changed
+  * Added support for `react-intl@5`.
+  * Locked `intl-locales-supported` to `1.8.11` ad `1.8.12` was a bad publish.
+
 ## 4.42.0 - (February 15, 2024)
 
 * Changed

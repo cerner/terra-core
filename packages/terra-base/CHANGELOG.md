@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Added support for `react-intl@5`.
+
 ## 5.53.0 - (February 20, 2024)
 
 * Changed

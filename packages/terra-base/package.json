@@ -22,15 +22,15 @@
   ],
   "main": "lib/Base.js",
   "dependencies": {
-    "classnames": "^2.2.5",
-    "prop-types": "^15.5.8",
+    "classnames": "2",
+    "prop-types": "15",
     "terra-i18n": "^4.42.0"
   },
   "peerDependencies": {
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5",
-    "react-intl": "^2.8.0",
-    "terra-theme-provider": "^4.16.0"
+    "react": "16",
+    "react-dom": "16",
+    "react-intl": "2 || 5",
+    "terra-theme-provider": "4"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",
