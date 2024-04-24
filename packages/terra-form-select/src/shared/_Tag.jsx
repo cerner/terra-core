@@ -73,7 +73,8 @@ const Tag = ({
     }
   };
 
-  const attributes = isInputFocused ? '' : { 'aria-label': intl.formatMessage({ id: 'Terra.form.select.deselect' }, { text: children }) };
+  const attributes = isInputFocused ? { role: 'presentation' }
+    : { role: 'button', 'aria-label': intl.formatMessage({ id: 'Terra.form.select.deselect' }, { text: children }) };
   return (
     <li className={cx('tag', theme.className)} ref={tagRef}>
       <span className={cx('display')}>
