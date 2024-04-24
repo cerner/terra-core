@@ -36,15 +36,15 @@ const propTypes = {
     focus: PropTypes.instanceOf(Element),
   }),
   /**
-   * Specifies whether the tag should have aria-hidden attribute set to true or false.
+   * Specifies whether the input focus is set to true or false.
    * Default is false.
    */
-  ariaHidden: PropTypes.bool,
+  isInputFocused: PropTypes.bool,
 };
 
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 const Tag = ({
-  children, onDeselect, value, disabled, intl, inputRef, ariaHidden,
+  children, onDeselect, value, disabled, intl, inputRef, isInputFocused,
 }) => {
   const theme = React.useContext(ThemeContext);
   const tagRef = useRef(null);
@@ -72,6 +72,8 @@ const Tag = ({
       }
     }
   };
+
+  const attributes = isInputFocused ? '' : { 'aria-label': intl.formatMessage({ id: 'Terra.form.select.deselect' }, { text: children }) };
   return (
     <li className={cx('tag', theme.className)} ref={tagRef}>
       <span className={cx('display')}>
@@ -84,8 +86,7 @@ const Tag = ({
         onClick={() => { if (!disabled) onDeselect(value); }}
         tabIndex={!disabled ? 0 : -1}
         role="button"
-        aria-label={intl.formatMessage({ id: 'Terra.form.select.deselect' }, { text: children })}
-        aria-hidden={ariaHidden}
+        {...attributes}
       >
         <span className={cx('icon')} />
       </span>

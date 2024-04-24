@@ -137,7 +137,7 @@ class MultiSelect extends React.Component {
 
     this.state = {
       value: SelectUtil.defaultValue({ defaultValue, value, multiple: true }),
-      ariaHidden: false,
+      isInputFocused: false,
     };
     this.inputRef = null;
     this.display = this.display.bind(this);
@@ -196,9 +196,9 @@ class MultiSelect extends React.Component {
     }
   }
 
-  handleFocus() { this.setState({ ariaHidden: true }); }
+  handleFocus() { this.setState({ isInputFocused: true }); }
 
-  handleBlur() { this.setState({ ariaHidden: false }); }
+  handleBlur() { this.setState({ isInputFocused: false }); }
 
   /**
    * Receives the reference to the input element from the Frame component.
@@ -227,7 +227,7 @@ class MultiSelect extends React.Component {
         key={tag}
         onDeselect={this.handleDeselect}
         disabled={this.props.disabled}
-        ariaHidden={this.state.ariaHidden}
+        isInputFocused={this.state.isInputFocused}
         inputRef={this.inputRef}
       >
         {SelectUtil.valueDisplay(this.props, tag)}
