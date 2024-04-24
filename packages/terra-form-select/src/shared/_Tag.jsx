@@ -82,7 +82,7 @@ const Tag = ({
         onKeyDown={handleKeyPress}
         className={cx('deselect')}
         onClick={() => { if (!disabled) onDeselect(value); }}
-        tabIndex={!disabled && !ariaHidden ? 0 : -1}
+        tabIndex={!disabled ? 0 : -1}
         role="button"
         aria-label={intl.formatMessage({ id: 'Terra.form.select.deselect' }, { text: children })}
         aria-hidden={ariaHidden}
