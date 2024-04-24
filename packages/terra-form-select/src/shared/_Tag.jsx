@@ -29,11 +29,22 @@ const propTypes = {
    * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
    */
   intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
+  /**
+   * Ref object for accessing the underlying input element of the tag component.
+   */
+  inputRef: PropTypes.shape({
+    focus: PropTypes.instanceOf(Element),
+  }),
+  /**
+   * Specifies whether the tag should have aria-hidden attribute set to true or false.
+   * Default is false.
+   */
+  ariaHidden: PropTypes.bool,
 };
 
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 const Tag = ({
-  children, onDeselect, value, disabled, intl,
+  children, onDeselect, value, disabled, intl, inputRef, ariaHidden,
 }) => {
   const theme = React.useContext(ThemeContext);
   const tagRef = useRef(null);
@@ -43,19 +54,21 @@ const Tag = ({
       event.stopPropagation();
       onDeselect(value);
       const previousLi = tagRef.current.previousElementSibling;
-      const selectInput = tagRef.current.closest('ul').parentElement.parentElement.children[1].children[0];
       if (previousLi) {
-        const deselectElement = previousLi.children[1];
+        const deselectElement = previousLi.querySelector(':scope > :nth-child(2)');
         if (deselectElement) {
           deselectElement.focus();
         }
       } else {
         const nextLi = tagRef.current.nextElementSibling;
-        if (nextLi && nextLi.children[1]) {
-            nextLi.children[1].focus();
-        } else {
-          selectInput.focus();
+        if (nextLi) {
+          const nextFocusableElement = nextLi.querySelector(':scope > :nth-child(2)');
+          if (nextFocusableElement) {
+            nextFocusableElement.focus();
+            return;
+          }
         }
+        inputRef.focus();
       }
     }
   };
@@ -72,6 +85,7 @@ const Tag = ({
         tabIndex={!disabled ? 0 : -1}
         role="button"
         aria-label={intl.formatMessage({ id: 'Terra.form.select.deselect' }, { text: children })}
+        aria-hidden={ariaHidden}
       >
         <span className={cx('icon')} />
       </span>

@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added test example for `terra-form-select`.
+
 ## 1.73.0 - (April 25, 2024)
 
 * Changed
