@@ -5,7 +5,7 @@
 ## 3.56.1 - (April 25, 2024)
 
 * Changed
-  * Minor dependency version bump.
+  * Stable release for v3.56.1.
 
 ## 3.56.1-alpha.1 - (April 24, 2024)
 
