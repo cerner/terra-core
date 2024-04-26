@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/role-supports-aria-props */
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -440,7 +441,13 @@ class Frame extends React.Component {
             </li>
           ) : null}
         <li className={cx('search-wrapper')}>
-          <input {...inputAttrs} value={searchValue} />
+          <input
+            {...inputAttrs}
+            value={searchValue}
+            aria-expanded={this.state.isOpen}
+            role="combobox"
+            aria-controls="terra-select-dropdown"
+          />
         </li>
       </ul>
     );
@@ -653,7 +660,11 @@ class Frame extends React.Component {
        * Key press events will be caught and evaluated by the frame.
        */
       // eslint-disable-next-line jsx-a11y/click-events-have-key-events
-      <div data-terra-form-select-toggle className={toggleClasses} onClick={this.toggleDropdown}>
+      <div
+        data-terra-form-select-toggle
+        className={toggleClasses}
+        onClick={this.toggleDropdown}
+      >
         <span className={cx('arrow-icon')} />
       </div>
     );
