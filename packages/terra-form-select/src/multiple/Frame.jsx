@@ -121,6 +121,10 @@ const propTypes = {
    * The select value.
    */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
+  /**
+   * Returns the input ref to the Parent component.
+   */
+  getInputRef: PropTypes.func,
 };
 
 const defaultProps = {
@@ -202,6 +206,8 @@ class Frame extends React.Component {
       // eslint-disable-next-line global-require
       require('wicg-inert/dist/inert');
     }
+
+    this.props.getInputRef(this.input);
   }
 
   componentDidUpdate(previousProps, previousState) {

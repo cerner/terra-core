@@ -2376,6 +2376,30 @@ Terra.describeViewports('Select', ['tiny'], () => {
       it('should display selected option', () => {
         Terra.validates.element('tag controlled selected option');
       });
+
+      it('should focus deselect on pressing tab key', () => {
+        $('[data-terra-select]').click();
+        $('#terra-select-option-blue').click();
+        $('#terra-select-option-red').click();
+        $('#root').click();
+        browser.keys('Tab');
+        expect($('#terra-tag-deselect-blue')).toBeFocused();
+        browser.keys('Tab');
+        expect($('#terra-tag-deselect-red')).toBeFocused();
+      });
+    });
+  });
+
+  describe('Tag Variant - controlled multiple disabled', () => {
+    before(() => {
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/control-multiple-disabled');
+    });
+    it('should not focus deselect on pressing tab key if disabled', () => {
+      $('#root').click();
+      browser.keys('Tab');
+      expect($('#terra-tag-deselect-blue')).not.toBeFocused();
+      browser.keys('Tab');
+      expect($('#terra-tag-deselect-red')).not.toBeFocused();
     });
   });
 

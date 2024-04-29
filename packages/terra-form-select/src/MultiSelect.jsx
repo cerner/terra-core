@@ -137,12 +137,23 @@ class MultiSelect extends React.Component {
 
     this.state = {
       value: SelectUtil.defaultValue({ defaultValue, value, multiple: true }),
+      isInputFocused: false,
     };
-
+    this.inputRef = null;
     this.display = this.display.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleDeselect = this.handleDeselect.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
+    this.handleFocus = this.handleFocus.bind(this);
+    this.handleBlur = this.handleBlur.bind(this);
+    this.handleInputRef = this.handleInputRef.bind(this);
+  }
+
+  componentWillUnmount() {
+    if (this.inputRef) {
+      this.inputRef.removeEventListener('focus', this.handleFocus);
+      this.inputRef.removeEventListener('blur', this.handleBlur);
+    }
   }
 
   /**
@@ -185,6 +196,25 @@ class MultiSelect extends React.Component {
     }
   }
 
+  handleFocus() { this.setState({ isInputFocused: true }); }
+
+  handleBlur() { this.setState({ isInputFocused: false }); }
+
+  /**
+   * Receives the reference to the input element from the Frame component.
+   * Attaches event listeners to handle focus and blur events, updating the state accordingly.
+   * @param {HTMLElement} ref - Reference to the input element.
+   */
+  handleInputRef(ref) {
+    // Receive the input reference from the Frame
+    this.inputRef = ref;
+
+    if (this.inputRef) {
+      this.inputRef.addEventListener('focus', this.handleFocus);
+      this.inputRef.addEventListener('blur', this.handleBlur);
+    }
+  }
+
   /**
    * Returns the appropriate variant display
    */
@@ -192,7 +222,14 @@ class MultiSelect extends React.Component {
     const selectValue = SelectUtil.value(this.props, this.state);
 
     return selectValue.map(tag => (
-      <Tag value={tag} key={tag} onDeselect={this.handleDeselect}>
+      <Tag
+        value={tag}
+        key={tag}
+        onDeselect={this.handleDeselect}
+        disabled={this.props.disabled}
+        isInputFocused={this.state.isInputFocused}
+        inputRef={this.inputRef}
+      >
         {SelectUtil.valueDisplay(this.props, tag)}
       </Tag>
     ));
@@ -218,6 +255,7 @@ class MultiSelect extends React.Component {
         required={required}
         totalOptions={SelectUtil.getTotalNumberOfOptions(children)}
         inputId={inputId}
+        getInputRef={this.handleInputRef}
       >
         {children}
       </Frame>

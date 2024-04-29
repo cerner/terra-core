@@ -65,7 +65,7 @@ Terra.describeViewports('Alert', ['tiny', 'large'], () => {
     it('alert content is focused when rendered with an action element', () => {
       browser.url('/raw/tests/cerner-terra-core-docs/alert/custom-prop-alert');
 
-      browser.keys(['Tab', 'Tab', 'Tab', 'Tab', 'Enter']);
+      browser.keys(['Tab', 'Tab', 'Tab', 'Tab', 'Tab', 'Tab', 'Enter']);
 
       Terra.validates.element('alert focused');
     });

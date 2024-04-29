@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+* Added
+  * Added visual focus dashed border for `terra-form-select` tags.
+
+* Fixed
+  * Fixed accessibility issue in `MultiSelect` component.
+
 ## 6.61.0 - (April 4, 2024)
 
 * Fixed
