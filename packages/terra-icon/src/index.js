@@ -175,9 +175,11 @@ import IconMediaRecord from './icon/IconMediaRecord';
 import IconMediaRewind from './icon/IconMediaRewind';
 import IconMediaStop from './icon/IconMediaStop';
 import IconMedicationTablet from './icon/IconMedicationTablet';
+import IconMedicationTabletOutline from './icon/IconMedicationTabletOutline';
 import IconMedicationTabletHalf from './icon/IconMedicationTabletHalf';
 import IconMedicationTabletHalfOutline from './icon/IconMedicationTabletHalfOutline';
-import IconMedicationTabletOutline from './icon/IconMedicationTabletOutline';
+import IconMedicationTabletQuarter from './icon/IconMedicationTabletQuarter';
+import IconMedicationTabletQuarterOutline from './icon/IconMedicationTabletQuarterOutline';
 import IconMenu from './icon/IconMenu';
 import IconMerge from './icon/IconMerge';
 import IconMicrophone from './icon/IconMicrophone';
@@ -189,6 +191,7 @@ import IconMissedCall from './icon/IconMissedCall';
 import IconModerate from './icon/IconModerate';
 import IconModerateLowLight from './icon/IconModerateLowLight';
 import IconModified from './icon/IconModified';
+import IconMultipleResultsCorner from './icon/IconMultipleResultsCorner';
 import IconMultipleResultsCritical from './icon/IconMultipleResultsCritical';
 import IconMultipleResultsNormal from './icon/IconMultipleResultsNormal';
 import IconMultipleResultsNotNormal from './icon/IconMultipleResultsNotNormal';
@@ -504,9 +507,11 @@ export {
   IconMediaRewind,
   IconMediaStop,
   IconMedicationTablet,
+  IconMedicationTabletOutline,
   IconMedicationTabletHalf,
   IconMedicationTabletHalfOutline,
-  IconMedicationTabletOutline,
+  IconMedicationTabletQuarter,
+  IconMedicationTabletQuarterOutline,
   IconMenu,
   IconMerge,
   IconMicrophone,
@@ -518,6 +523,7 @@ export {
   IconModerate,
   IconModerateLowLight,
   IconModified,
+  IconMultipleResultsCorner,
   IconMultipleResultsCritical,
   IconMultipleResultsNormal,
   IconMultipleResultsNotNormal,
