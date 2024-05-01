@@ -7,13 +7,13 @@ const SvgIcon = (customProps) => {
 
   return (
     <IconBase {...attributes}>
-      <polygon points="0 0 48 0 48 48 22.29 22.29 0 0" fill="#000" strokeWidth="0" ></polygon>
+      <path d="M0 0h48v48L22.29 22.29 0 0z" ></path>
     </IconBase>
   );
 };
 
 SvgIcon.displayName = "IconMultipleResultsCorner";
-SvgIcon.defaultProps = {"viewBox":"0 0 48 48","xmlns":"http://www.w3.org/2000/svg","id":"a"};
+SvgIcon.defaultProps = {"viewBox":"0 0 48 48","xmlns":"http://www.w3.org/2000/svg"};
 
 export default SvgIcon;
 /* eslint-enable */

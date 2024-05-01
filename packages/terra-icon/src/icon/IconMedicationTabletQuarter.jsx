@@ -7,13 +7,13 @@ const SvgIcon = (customProps) => {
 
   return (
     <IconBase {...attributes}>
-      <path d="M.05,25.5c.74,12.06,10.39,21.7,22.45,22.45v-22.45H.05Z" fill="#231f20" strokeWidth="0" ></path>
+      <path fill="#231f20" d="M.05 25.5C.79 37.56 10.44 47.2 22.5 47.95V25.5H.05Z" ></path>
     </IconBase>
   );
 };
 
-SvgIcon.displayName = "IconMedicationTabletQuarterFill";
-SvgIcon.defaultProps = {"viewBox":"0 0 48 48","xmlns":"http://www.w3.org/2000/svg","id":"a"};
+SvgIcon.displayName = "IconMedicationTabletQuarter";
+SvgIcon.defaultProps = {"viewBox":"0 0 48 48","xmlns":"http://www.w3.org/2000/svg"};
 
 export default SvgIcon;
 /* eslint-enable */
