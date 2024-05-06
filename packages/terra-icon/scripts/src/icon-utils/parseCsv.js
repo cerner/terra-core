@@ -20,7 +20,7 @@ const parseCsv = () => new Promise((resolve) => {
       jsonObj.bidi = (jsonObj.bidi === 'bi-directional');
       jsonObj.spinner = (jsonObj.name === 'IconSpinner');
       jsonObj.syntaxComponent = `<${jsonObj.componentName} height='2em' width='2em' />`;
-      jsonObj.syntaxImport = `import ${jsonObj.componentName} from 'terra-icon/lib/icon/${jsonObj.componentName}';\n`;
+      jsonObj.syntaxImport = `import { ${jsonObj.componentName} } from 'terra-icon';\n`;
       /* eslint-enable  no-param-reassign */
     }).then(jsonObj => resolve(jsonObj));
 });
