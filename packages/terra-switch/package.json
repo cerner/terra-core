@@ -21,16 +21,25 @@
     "UI"
   ],
   "main": "lib/Switch.js",
+  "files": [
+    "lib",
+    "src",
+    "translations",
+    "CHANGELOG.md",
+    "LICENSE",
+    "NOTICE",
+    "README.md"
+  ],
   "dependencies": {
-    "classnames": "^2.2.5",
-    "keycode-js": "^3.1.0",
-    "prop-types": "^15.5.8",
-    "terra-theme-context": "^1.0.0"
+    "classnames": "2",
+    "keycode-js": "3",
+    "prop-types": "15",
+    "terra-theme-context": "1"
   },
   "peerDependencies": {
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5",
-    "react-intl": ">=2.8.0 <6.0.0"
+    "react": "16",
+    "react-dom": "16",
+    "react-intl": "2 || 3 || 4 || 5"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",
@@ -44,14 +53,5 @@
     "wdio:lowlight": "cd ../.. && terra wdio --themes clinical-lowlight-theme",
     "wdio:fusion": "cd ../.. && terra wdio --themes orion-fusion-theme",
     "wdio": "npm run wdio:default && npm run wdio:fusion && npm run wdio:lowlight"
-  },
-  "files": [
-    "lib",
-    "src",
-    "translations",
-    "CHANGELOG.md",
-    "LICENSE",
-    "NOTICE",
-    "README.md"
-  ]
+  }
 }

@@ -21,15 +21,23 @@
     "UI"
   ],
   "main": "lib/Toolbar.js",
+  "files": [
+    "lib",
+    "src",
+    "CHANGELOG.md",
+    "LICENSE",
+    "NOTICE",
+    "README.md"
+  ],
   "dependencies": {
-    "classnames": "^2.2.5",
-    "prop-types": "^15.5.8",
+    "classnames": "2",
+    "prop-types": "15",
     "terra-mixins": "^1.41.0",
-    "terra-theme-context": "^1.0.0"
+    "terra-theme-context": "1"
   },
   "peerDependencies": {
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5"
+    "react": "16",
+    "react-dom": "16"
   },
   "devDependencies": {
     "terra-button": "^3.77.0"
@@ -46,13 +54,5 @@
     "wdio:lowlight": "cd ../.. && terra wdio --themes clinical-lowlight-theme",
     "wdio:fusion": "cd ../.. && terra wdio --themes orion-fusion-theme",
     "wdio": "npm run wdio:default && npm run wdio:lowlight && npm run wdio:fusion"
-  },
-  "files": [
-    "lib",
-    "src",
-    "CHANGELOG.md",
-    "LICENSE",
-    "NOTICE",
-    "README.md"
-  ]
+  }
 }

@@ -20,14 +20,6 @@
     "UI"
   ],
   "main": "lib/Mixins.scss",
-  "scripts": {
-    "compile": "babel --root-mode upward src --out-dir lib --copy-files",
-    "lint": "npm run lint:scss",
-    "lint:scss": "stylelint src/**/*.scss",
-    "precompile": "rm -rf lib",
-    "test": "npm run test:spec",
-    "test:spec": "echo \"Warning: no test written\" && exit 0"
-  },
   "files": [
     "lib",
     "src",
@@ -35,5 +27,13 @@
     "LICENSE",
     "NOTICE",
     "README.md"
-  ]
+  ],
+  "scripts": {
+    "compile": "babel --root-mode upward src --out-dir lib --copy-files",
+    "lint": "npm run lint:scss",
+    "lint:scss": "stylelint src/**/*.scss",
+    "precompile": "rm -rf lib",
+    "test": "npm run test:spec",
+    "test:spec": "echo \"Warning: no test written\" && exit 0"
+  }
 }

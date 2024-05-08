@@ -21,16 +21,25 @@
     "UI"
   ],
   "main": "lib/I18n.js",
+  "files": [
+    "lib",
+    "src",
+    "translations",
+    "CHANGELOG.md",
+    "LICENSE",
+    "NOTICE",
+    "README.md"
+  ],
   "dependencies": {
-    "classnames": "^2.2.5",
-    "intl": "^1.2.5",
+    "classnames": "2",
+    "intl": "1",
     "intl-locales-supported": ">=1.8.4 <1.8.12 || ^1.8.13",
-    "prop-types": "^15.5.8"
+    "prop-types": "15"
   },
   "peerDependencies": {
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5",
-    "react-intl": "^2.8.0"
+    "react": "16",
+    "react-dom": "16",
+    "react-intl": "2"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",
@@ -42,14 +51,5 @@
     "wdio:lowlight": "cd ../.. && terra wdio --themes clinical-lowlight-theme",
     "wdio:fusion": "cd ../.. && terra wdio --themes orion-fusion-theme",
     "wdio": "npm run wdio:default && npm run wdio:lowlight && npm run wdio:fusion"
-  },
-  "files": [
-    "lib",
-    "src",
-    "translations",
-    "CHANGELOG.md",
-    "LICENSE",
-    "NOTICE",
-    "README.md"
-  ]
+  }
 }
