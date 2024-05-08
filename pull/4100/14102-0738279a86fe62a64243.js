@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkterra_core=self.webpackChunkterra_core||[]).push([[14102],{14102:function(e,r,t){Object.defineProperty(r,"__esModule",{value:!0}),r.default=void 0;var a,u=(a=t(96540))&&a.__esModule?a:{default:a},o=t(55801);r.default=function(){return u.default.createElement(o.Generic,{variant:"provider",id:"provider",alt:"provider",color:"seven"})}}}]);
