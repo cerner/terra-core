@@ -1,6 +1,6 @@
 {
   "name": "terra-show-hide",
-  "version": "2.68.0",
+  "version": "2.69.0",
   "description": "Show/Hide component that previews a small section of content or shows the full content with the click of a button",
   "author": "Cerner Corporation",
   "repository": {
@@ -27,7 +27,7 @@
     "prop-types": "^15.5.8",
     "terra-mixins": "^1.41.0",
     "terra-theme-context": "^1.0.0",
-    "terra-toggle": "^3.62.0",
+    "terra-toggle": "^3.63.0",
     "uuid": "3.4.0"
   },
   "peerDependencies": {

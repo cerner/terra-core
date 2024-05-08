@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 6.62.0 - (May 8, 2024)
+
 * Added
   * Added visual focus dashed border for `terra-form-select` tags.
 

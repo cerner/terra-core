@@ -1,6 +1,6 @@
 {
   "name": "terra-list",
-  "version": "4.73.1",
+  "version": "4.74.0",
   "description": "The Terra List is a structural component to arrange content within list/listitems.",
   "author": "Cerner Corporation",
   "repository": {
@@ -27,7 +27,7 @@
     "keycode-js": "^3.1.0",
     "prop-types": "^15.5.8",
     "react-beautiful-dnd": "^13.1.1",
-    "terra-icon": "^3.60.0",
+    "terra-icon": "^3.61.0",
     "terra-mixins": "^1.41.0",
     "terra-theme-context": "^1.0.0",
     "terra-visually-hidden-text": "^2.38.0"
