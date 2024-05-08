@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+* Changed
+  * Updated `one-cerner-style-icons` library to v1.53.0
 * Added
   * Added test example for `terra-form-select`.
 

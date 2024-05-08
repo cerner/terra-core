@@ -125,6 +125,8 @@ import {
   IconMedicationTabletHalf,
   IconMedicationTabletHalfOutline,
   IconMedicationTabletOutline,
+  IconMedicationTabletQuarter,
+  IconMedicationTabletQuarterOutline,
   IconMenu,
   IconMerge,
   IconMicrophone,
@@ -133,6 +135,7 @@ import {
   IconMinus,
   IconMissedCall,
   IconModified,
+  IconMultipleResultsCorner,
   IconMultipleResultsCritical,
   IconMultipleResultsNormal,
   IconMultipleResultsNotNormal,
@@ -1365,6 +1368,24 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconMedicationTabletQuarter height='2em' width='2em' /></td>
+        <td style={cellStyle}>medicationTabletQuarter</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import { IconMedicationTabletQuarter } from 'terra-icon';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconMedicationTabletQuarterOutline height='2em' width='2em' /></td>
+        <td style={cellStyle}>medicationTabletQuarterOutline</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import { IconMedicationTabletQuarterOutline } from 'terra-icon';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td style={cellStyle}><IconMenu height='2em' width='2em' /></td>
         <td style={cellStyle}>menu</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
@@ -1433,6 +1454,15 @@ const IconAll = () => (
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
             import { IconModified } from 'terra-icon';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconMultipleResultsCorner height='2em' width='2em' /></td>
+        <td style={cellStyle}>multipleResultsCorner</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import { IconMultipleResultsCorner } from 'terra-icon';
           </code>
         </td>
       </tr>
