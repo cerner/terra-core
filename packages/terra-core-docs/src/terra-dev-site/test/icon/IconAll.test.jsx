@@ -177,9 +177,11 @@ import {
   IconMediaRewind,
   IconMediaStop,
   IconMedicationTablet,
+  IconMedicationTabletOutline,
   IconMedicationTabletHalf,
   IconMedicationTabletHalfOutline,
-  IconMedicationTabletOutline,
+  IconMedicationTabletQuarter,
+  IconMedicationTabletQuarterOutline,
   IconMenu,
   IconMerge,
   IconMicrophone,
@@ -191,6 +193,7 @@ import {
   IconModerate,
   IconModerateLowLight,
   IconModified,
+  IconMultipleResultsCorner,
   IconMultipleResultsCritical,
   IconMultipleResultsNormal,
   IconMultipleResultsNotNormal,
@@ -511,6 +514,8 @@ const IconAll = () => (
     <IconMedicationTabletOutline className={cx(['icon'])} />
     <IconMedicationTabletHalf className={cx(['icon'])} />
     <IconMedicationTabletHalfOutline className={cx(['icon'])} />
+    <IconMedicationTabletQuarter className={cx(['icon'])} />
+    <IconMedicationTabletQuarterOutline className={cx(['icon'])} />
     <IconMenu className={cx(['icon'])} />
     <IconMerge className={cx(['icon'])} />
     <IconMicrophone className={cx(['icon'])} />
@@ -522,6 +527,7 @@ const IconAll = () => (
     <IconModerate className={cx(['icon'])} />
     <IconModerateLowLight className={cx(['icon'])} />
     <IconModified className={cx(['icon'])} />
+    <IconMultipleResultsCorner className={cx(['icon'])} />
     <IconMultipleResultsNormal className={cx(['icon'])} />
     <IconMultipleResultsNotNormal className={cx(['icon'])} />
     <IconMultipleResultsCritical className={cx(['icon'])} />
