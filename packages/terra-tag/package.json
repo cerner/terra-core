@@ -21,20 +21,29 @@
     "UI"
   ],
   "main": "lib/index.js",
+  "files": [
+    "lib",
+    "src",
+    "translations",
+    "CHANGELOG.md",
+    "LICENSE",
+    "NOTICE",
+    "README.md"
+  ],
   "dependencies": {
-    "classnames": "^2.2.5",
-    "keycode-js": "^3.1.0",
-    "prop-types": "^15.5.8",
-    "resize-observer-polyfill": "^1.4.1",
+    "classnames": "2",
+    "keycode-js": "3",
+    "prop-types": "15",
+    "resize-observer-polyfill": "1",
     "terra-button": "^3.77.0",
     "terra-icon": "^3.61.0",
-    "terra-theme-context": "^1.0.0",
+    "terra-theme-context": "1",
     "terra-visually-hidden-text": "^2.38.0",
     "uuid": "3.4.0"
   },
   "peerDependencies": {
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5",
+    "react": "16",
+    "react-dom": "16",
     "react-intl": "^2.8.0 || 3 || 4 || 5"
   },
   "scripts": {
@@ -49,14 +58,5 @@
     "wdio:lowlight": "cd ../.. && terra wdio --themes clinical-lowlight-theme",
     "wdio:fusion": "cd ../.. && terra wdio --themes orion-fusion-theme",
     "wdio": "npm run wdio:default && npm run wdio:lowlight && npm run wdio:fusion"
-  },
-  "files": [
-    "lib",
-    "src",
-    "translations",
-    "CHANGELOG.md",
-    "LICENSE",
-    "NOTICE",
-    "README.md"
-  ]
+  }
 }

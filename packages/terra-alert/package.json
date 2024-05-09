@@ -31,19 +31,19 @@
     "README.md"
   ],
   "dependencies": {
-    "classnames": "^2.2.5",
-    "prop-types": "^15.5.8",
+    "classnames": "2",
+    "prop-types": "15",
     "terra-button": "^3.77.0",
     "terra-icon": "^3.61.0",
     "terra-responsive-element": "^5.41.0",
-    "terra-theme-context": "^1.0.0",
+    "terra-theme-context": "1",
     "terra-visually-hidden-text": "^2.38.0",
     "uuid": "3.4.0"
   },
   "peerDependencies": {
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5",
-    "react-intl": ">=2.8.0 <6.0.0"
+    "react": "16",
+    "react-dom": "16",
+    "react-intl": "2 || 3 || 4 || 5"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",

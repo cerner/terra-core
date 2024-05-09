@@ -31,17 +31,17 @@
     "README.md"
   ],
   "dependencies": {
-    "classnames": "^2.2.5",
-    "lodash.uniqueid": "^4.0.1",
-    "prop-types": "^15.5.8",
+    "classnames": "2",
+    "lodash.uniqueid": "4",
+    "prop-types": "15",
     "terra-button": "^3.77.0",
     "terra-mixins": "^1.41.0",
-    "terra-theme-context": "^1.0.0",
+    "terra-theme-context": "1",
     "terra-visually-hidden-text": "^2.38.0"
   },
   "peerDependencies": {
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5",
+    "react": "16",
+    "react-dom": "16",
     "react-intl": "^2.8.0 || 3 || 4 || 5"
   },
   "scripts": {
