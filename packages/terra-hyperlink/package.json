@@ -21,18 +21,27 @@
     "UI"
   ],
   "main": "lib/Hyperlink.js",
+  "files": [
+    "lib",
+    "src",
+    "translations",
+    "CHANGELOG.md",
+    "LICENSE",
+    "NOTICE",
+    "README.md"
+  ],
   "dependencies": {
-    "classnames": "^2.2.5",
-    "keycode-js": "^3.1.0",
-    "prop-types": "^15.5.8",
+    "classnames": "2",
+    "keycode-js": "3",
+    "prop-types": "15",
     "terra-icon": "^3.60.0",
     "terra-mixins": "^1.41.0",
-    "terra-theme-context": "^1.0.0"
+    "terra-theme-context": "1"
   },
   "peerDependencies": {
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5",
-    "react-intl": ">=2.8.0 <6.0.0",
+    "react": "16",
+    "react-dom": "16",
+    "react-intl": "2 || 3 || 4 || 5",
     "terra-theme-provider": "^4.16.0"
   },
   "scripts": {
@@ -47,14 +56,5 @@
     "wdio:lowlight": "cd ../.. && terra wdio --themes clinical-lowlight-theme",
     "wdio:fusion": "cd ../.. && terra wdio --themes orion-fusion-theme",
     "wdio": "npm run wdio:default && npm run wdio:lowlight && npm run wdio:fusion"
-  },
-  "files": [
-    "lib",
-    "src",
-    "translations",
-    "CHANGELOG.md",
-    "LICENSE",
-    "NOTICE",
-    "README.md"
-  ]
+  }
 }

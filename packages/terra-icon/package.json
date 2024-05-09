@@ -21,22 +21,31 @@
     "UI"
   ],
   "main": "lib/index.js",
+  "files": [
+    "lib",
+    "src",
+    "translations",
+    "CHANGELOG.md",
+    "LICENSE",
+    "NOTICE",
+    "README.md"
+  ],
   "dependencies": {
-    "classnames": "^2.2.5",
-    "prop-types": "^15.5.8",
-    "terra-theme-context": "^1.0.0"
+    "classnames": "2",
+    "prop-types": "15",
+    "terra-theme-context": "1"
   },
   "peerDependencies": {
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5",
-    "react-intl": ">=2.8.0 <6.0.0"
+    "react": "16",
+    "react-dom": "16",
+    "react-intl": "2 || 3 || 4 || 5"
   },
   "devDependencies": {
-    "csvtojson": "^2.0.8",
-    "jsdom": "^21.0.0",
+    "csvtojson": "2",
+    "jsdom": "21",
     "one-cerner-style-icons": "https://github.com/oracle-samples/one-cerner-style-icons/archive/v1.53.0.tar.gz",
     "shelljs": "^0.8.2",
-    "svgo": "^3.0.2"
+    "svgo": "3"
   },
   "scripts": {
     "clean:all-icons": "find . -name \\all_icons.png -type f -exec rm -f {} \\;",
@@ -60,14 +69,5 @@
     "wdio:default": "cd ../.. && terra wdio",
     "wdio:fusion": "cd ../.. && terra wdio --themes orion-fusion-theme",
     "wdio:lowlight": "cd ../.. && terra wdio --themes clinical-lowlight-theme"
-  },
-  "files": [
-    "lib",
-    "src",
-    "translations",
-    "CHANGELOG.md",
-    "LICENSE",
-    "NOTICE",
-    "README.md"
-  ]
+  }
 }

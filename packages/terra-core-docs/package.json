@@ -35,7 +35,7 @@
   ],
   "dependencies": {
     "@cerner/terra-docs": "^1.11.0",
-    "moment": "^2.29.4",
+    "moment": "2",
     "terra-action-footer": "^2.68.0",
     "terra-action-header": "^2.93.0",
     "terra-alert": "^4.95.0",
@@ -87,7 +87,7 @@
     "terra-tabs": "^7.21.0",
     "terra-tag": "^2.69.0",
     "terra-text": "^4.59.0",
-    "terra-theme-context": "^1.0.0",
+    "terra-theme-context": "1",
     "terra-toggle": "^3.62.0",
     "terra-toggle-button": "^3.87.0",
     "terra-toggle-section-header": "^2.81.0",
