@@ -1,6 +1,6 @@
 {
   "name": "terra-alert",
-  "version": "4.95.0",
+  "version": "4.96.0",
   "description": "The Terra Alert component is a notification banner that can be rendered in your application when there is information that you want to bring to the user's attention. The Alert component supports a number of built-in notification types that render with pre-defined colors and icons that help the user understand the severity and meaning of the notification. A custom notification type is also supported that allows your application to customize an alert that may not fit into the pre-defined types.",
   "author": "Cerner Corporation",
   "repository": {
@@ -34,7 +34,7 @@
     "classnames": "2",
     "prop-types": "15",
     "terra-button": "^3.77.0",
-    "terra-icon": "^3.60.0",
+    "terra-icon": "^3.61.0",
     "terra-responsive-element": "^5.41.0",
     "terra-theme-context": "1",
     "terra-visually-hidden-text": "^2.38.0",
