@@ -688,6 +688,7 @@ class Frame extends React.Component {
       required,
       totalOptions,
       value,
+      getInputRef,
       ...customProps
     } = this.props;
 
