@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkterra_core=self.webpackChunkterra_core||[]).push([[65855],{65855:function(e,t,u){Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var a=c(u(96540)),r=c(u(40890));function c(e){return e&&e.__esModule?e:{default:e}}t.default=function(){return a.default.createElement(r.default,{id:"compactButton",text:"Compact",isCompact:!0})}}}]);
