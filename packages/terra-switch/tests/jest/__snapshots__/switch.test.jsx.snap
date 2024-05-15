@@ -7,8 +7,8 @@ exports[`Switch should render a default component 1`] = `
   className="switch is-enabled"
   data-terra-switch-show-focus-styles={true}
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -17,8 +17,8 @@ exports[`Switch should render a default component 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -54,7 +54,7 @@ exports[`Switch should render a default component 1`] = `
     >
       <FormattedMessage
         id="Terra.switch.switchstatuslabel.off"
-        values={Object {}}
+        values={{}}
       />
     </div>
   </div>
@@ -77,8 +77,8 @@ exports[`Switch should render as disabled when set 1`] = `
   className="switch is-disabled"
   data-terra-switch-show-focus-styles={true}
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -87,8 +87,8 @@ exports[`Switch should render as disabled when set 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -119,7 +119,7 @@ exports[`Switch should render as disabled when set 1`] = `
     >
       <FormattedMessage
         id="Terra.switch.switchstatuslabel.off"
-        values={Object {}}
+        values={{}}
       />
     </div>
   </div>
@@ -141,8 +141,8 @@ exports[`Switch should render block switch element when isBlock is specified 1`]
   className="switch is-enabled is-block"
   data-terra-switch-show-focus-styles={true}
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -151,8 +151,8 @@ exports[`Switch should render block switch element when isBlock is specified 1`]
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -188,7 +188,7 @@ exports[`Switch should render block switch element when isBlock is specified 1`]
     >
       <FormattedMessage
         id="Terra.switch.switchstatuslabel.off"
-        values={Object {}}
+        values={{}}
       />
     </div>
   </div>

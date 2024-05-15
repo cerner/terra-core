@@ -3,8 +3,8 @@
 exports[`ShowHide correctly applies the theme context className 1`] = `
 <ThemeContextProvider
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -13,8 +13,8 @@ exports[`ShowHide correctly applies the theme context className 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -30,7 +30,7 @@ exports[`ShowHide correctly applies the theme context className 1`] = `
     }
   }
   theme={
-    Object {
+    {
       "className": "orion-fusion-theme",
     }
   }
@@ -47,8 +47,8 @@ exports[`ShowHide correctly applies the theme context className 1`] = `
       buttonAlign="start"
       focusRef={null}
       intl={
-        Object {
-          "defaultFormats": Object {},
+        {
+          "defaultFormats": {},
           "defaultLocale": "en",
           "formatDate": [Function],
           "formatHTMLMessage": [Function],
@@ -57,8 +57,8 @@ exports[`ShowHide correctly applies the theme context className 1`] = `
           "formatPlural": [Function],
           "formatRelative": [Function],
           "formatTime": [Function],
-          "formats": Object {},
-          "formatters": Object {
+          "formats": {},
+          "formatters": {
             "getDateTimeFormat": [Function],
             "getMessageFormat": [Function],
             "getNumberFormat": [Function],
@@ -151,8 +151,8 @@ exports[`ShowHide should append data passed in with attributes 1`] = `
 <InjectIntl(ShowHide)
   data-terra-text-mock="MockData"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -161,8 +161,8 @@ exports[`ShowHide should append data passed in with attributes 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -189,8 +189,8 @@ exports[`ShowHide should append data passed in with attributes 1`] = `
     data-terra-text-mock="MockData"
     focusRef={null}
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -199,8 +199,8 @@ exports[`ShowHide should append data passed in with attributes 1`] = `
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
@@ -293,8 +293,8 @@ exports[`ShowHide should append data passed in with attributes 1`] = `
 exports[`ShowHide should append styles passed in with attributes 1`] = `
 <InjectIntl(ShowHide)
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -303,8 +303,8 @@ exports[`ShowHide should append styles passed in with attributes 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -326,7 +326,7 @@ exports[`ShowHide should append styles passed in with attributes 1`] = `
     </p>
   }
   style={
-    Object {
+    {
       "height": "100px",
     }
   }
@@ -335,8 +335,8 @@ exports[`ShowHide should append styles passed in with attributes 1`] = `
     buttonAlign="start"
     focusRef={null}
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -345,8 +345,8 @@ exports[`ShowHide should append styles passed in with attributes 1`] = `
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
@@ -369,14 +369,14 @@ exports[`ShowHide should append styles passed in with attributes 1`] = `
       </p>
     }
     style={
-      Object {
+      {
         "height": "100px",
       }
     }
   >
     <div
       style={
-        Object {
+        {
           "height": "100px",
         }
       }
@@ -449,8 +449,8 @@ exports[`ShowHide should merge classes passed in with attributes 1`] = `
 <InjectIntl(ShowHide)
   className="TestClass"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -459,8 +459,8 @@ exports[`ShowHide should merge classes passed in with attributes 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -487,8 +487,8 @@ exports[`ShowHide should merge classes passed in with attributes 1`] = `
     className="TestClass"
     focusRef={null}
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -497,8 +497,8 @@ exports[`ShowHide should merge classes passed in with attributes 1`] = `
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
@@ -592,8 +592,8 @@ exports[`ShowHide should merge ids passed in with attributes 1`] = `
 <InjectIntl(ShowHide)
   id="TestId"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -602,8 +602,8 @@ exports[`ShowHide should merge ids passed in with attributes 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -630,8 +630,8 @@ exports[`ShowHide should merge ids passed in with attributes 1`] = `
     focusRef={null}
     id="TestId"
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -640,8 +640,8 @@ exports[`ShowHide should merge ids passed in with attributes 1`] = `
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
@@ -735,8 +735,8 @@ exports[`ShowHide should render a center-aligned button show-hide component 1`] 
 <InjectIntl(ShowHide)
   buttonAlign="center"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -745,8 +745,8 @@ exports[`ShowHide should render a center-aligned button show-hide component 1`] 
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -772,8 +772,8 @@ exports[`ShowHide should render a center-aligned button show-hide component 1`] 
     buttonAlign="center"
     focusRef={null}
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -782,8 +782,8 @@ exports[`ShowHide should render a center-aligned button show-hide component 1`] 
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
@@ -874,8 +874,8 @@ exports[`ShowHide should render a center-aligned button show-hide component 1`] 
 exports[`ShowHide should render a default show-hide component 1`] = `
 <InjectIntl(ShowHide)
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -884,8 +884,8 @@ exports[`ShowHide should render a default show-hide component 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -911,8 +911,8 @@ exports[`ShowHide should render a default show-hide component 1`] = `
     buttonAlign="start"
     focusRef={null}
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -921,8 +921,8 @@ exports[`ShowHide should render a default show-hide component 1`] = `
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
@@ -1013,8 +1013,8 @@ exports[`ShowHide should render a default show-hide component 1`] = `
 exports[`ShowHide should render a no preview show-hide component 1`] = `
 <InjectIntl(ShowHide)
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -1023,8 +1023,8 @@ exports[`ShowHide should render a no preview show-hide component 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -1045,8 +1045,8 @@ exports[`ShowHide should render a no preview show-hide component 1`] = `
     buttonAlign="start"
     focusRef={null}
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -1055,8 +1055,8 @@ exports[`ShowHide should render a no preview show-hide component 1`] = `
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
@@ -1140,8 +1140,8 @@ exports[`ShowHide should render a no preview show-hide component 1`] = `
 exports[`ShowHide should render an initially open show-hide component 1`] = `
 <InjectIntl(ShowHide)
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -1150,8 +1150,8 @@ exports[`ShowHide should render an initially open show-hide component 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -1178,8 +1178,8 @@ exports[`ShowHide should render an initially open show-hide component 1`] = `
     buttonAlign="start"
     focusRef={null}
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -1188,8 +1188,8 @@ exports[`ShowHide should render an initially open show-hide component 1`] = `
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
@@ -1280,8 +1280,8 @@ exports[`ShowHide should set buttonText prop correctly when it is collapsed 1`] 
 <InjectIntl(ShowHide)
   buttonText="Collapsed Text"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -1290,8 +1290,8 @@ exports[`ShowHide should set buttonText prop correctly when it is collapsed 1`] 
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -1319,8 +1319,8 @@ exports[`ShowHide should set buttonText prop correctly when it is collapsed 1`] 
     buttonText="Collapsed Text"
     focusRef={null}
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -1329,8 +1329,8 @@ exports[`ShowHide should set buttonText prop correctly when it is collapsed 1`] 
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
@@ -1422,8 +1422,8 @@ exports[`ShowHide should set buttonText prop correctly when it is expanded 1`] =
 <InjectIntl(ShowHide)
   buttonText="Expanded Text"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -1432,8 +1432,8 @@ exports[`ShowHide should set buttonText prop correctly when it is expanded 1`] =
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -1461,8 +1461,8 @@ exports[`ShowHide should set buttonText prop correctly when it is expanded 1`] =
     buttonText="Expanded Text"
     focusRef={null}
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -1471,8 +1471,8 @@ exports[`ShowHide should set buttonText prop correctly when it is expanded 1`] =
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
@@ -1562,8 +1562,8 @@ exports[`ShowHide should set buttonText prop correctly when it is expanded 1`] =
 exports[`ShowHide should set children prop correctly 1`] = `
 <InjectIntl(ShowHide)
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -1572,8 +1572,8 @@ exports[`ShowHide should set children prop correctly 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -1599,8 +1599,8 @@ exports[`ShowHide should set children prop correctly 1`] = `
     buttonAlign="start"
     focusRef={null}
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -1609,8 +1609,8 @@ exports[`ShowHide should set children prop correctly 1`] = `
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
@@ -1701,8 +1701,8 @@ exports[`ShowHide should set children prop correctly 1`] = `
 exports[`ShowHide should set isOpen prop correctly 1`] = `
 <InjectIntl(ShowHide)
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -1711,8 +1711,8 @@ exports[`ShowHide should set isOpen prop correctly 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -1739,8 +1739,8 @@ exports[`ShowHide should set isOpen prop correctly 1`] = `
     buttonAlign="start"
     focusRef={null}
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -1749,8 +1749,8 @@ exports[`ShowHide should set isOpen prop correctly 1`] = `
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
@@ -1840,8 +1840,8 @@ exports[`ShowHide should set isOpen prop correctly 1`] = `
 exports[`ShowHide should set preview prop correctly 1`] = `
 <InjectIntl(ShowHide)
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -1850,8 +1850,8 @@ exports[`ShowHide should set preview prop correctly 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -1877,8 +1877,8 @@ exports[`ShowHide should set preview prop correctly 1`] = `
     buttonAlign="start"
     focusRef={null}
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -1887,8 +1887,8 @@ exports[`ShowHide should set preview prop correctly 1`] = `
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
@@ -1980,8 +1980,8 @@ exports[`ShowHide should set the button to align right 1`] = `
 <InjectIntl(ShowHide)
   buttonAlign="end"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -1990,8 +1990,8 @@ exports[`ShowHide should set the button to align right 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -2017,8 +2017,8 @@ exports[`ShowHide should set the button to align right 1`] = `
     buttonAlign="end"
     focusRef={null}
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -2027,8 +2027,8 @@ exports[`ShowHide should set the button to align right 1`] = `
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],

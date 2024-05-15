@@ -17,7 +17,7 @@ exports[`should render a arrange with status and customProps 1`] = `
         height="150"
         src="http://placehold.it/350x150"
         style={
-          Object {
+          {
             "display": "block",
           }
         }
@@ -36,7 +36,7 @@ exports[`should render a icon with status 1`] = `
     fill="#8bc34a"
     height="100"
     style={
-      Object {
+      {
         "display": "block",
       }
     }
@@ -60,7 +60,7 @@ exports[`should render a image with status 1`] = `
     height="150"
     src="http://placehold.it/350x150"
     style={
-      Object {
+      {
         "display": "block",
       }
     }

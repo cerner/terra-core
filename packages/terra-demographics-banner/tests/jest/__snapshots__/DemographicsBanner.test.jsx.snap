@@ -15,8 +15,8 @@ exports[`renders a blank banner wrapper 1`] = `
   gestationalAge={null}
   gestationalAgeFullText="Terra.demographicsBanner.gestationalAgeFullText"
   gestationalAgeLabel="Terra.demographicsBanner.gestationalAge"
-  identifiers={Object {}}
-  identifiersLongForm={Object {}}
+  identifiers={{}}
+  identifiersLongForm={{}}
   personName="Terra.demographicsBanner.noDataProvided"
   personNameHeadingLevel={2}
   photo={null}
@@ -39,12 +39,12 @@ exports[`renders the banner wrapper with all props 1`] = `
     </span>
   }
   applicationRows={
-    Array [
-      Object {
+    [
+      {
         "Address": "1501 Walnut St. Apt #123",
         "City": "Kansas City MO",
       },
-      Object {
+      {
         "ZIP": 64108,
       },
     ]
@@ -60,13 +60,13 @@ exports[`renders the banner wrapper with all props 1`] = `
   gestationalAgeFullText="Terra.demographicsBanner.gestationalAgeFullText"
   gestationalAgeLabel="Terra.demographicsBanner.gestationalAge"
   identifiers={
-    Object {
+    {
       "MRN": 12343,
       "REA": "3JSDA",
     }
   }
   identifiersLongForm={
-    Object {
+    {
       "MRN": "Medical Record Number",
     }
   }

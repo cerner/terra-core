@@ -18,8 +18,8 @@ exports[`renders a banner that has basic information 1`] = `
       gestationalAge={null}
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
-      identifiers={Object {}}
-      identifiersLongForm={Object {}}
+      identifiers={{}}
+      identifiersLongForm={{}}
       personName="Terra Demographics Banner"
       personNameHeadingLevel={2}
       photo={null}
@@ -44,8 +44,8 @@ exports[`renders a banner that has basic information 1`] = `
       gestationalAge={null}
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
-      identifiers={Object {}}
-      identifiersLongForm={Object {}}
+      identifiers={{}}
+      identifiersLongForm={{}}
       personName="Terra Demographics Banner"
       personNameHeadingLevel={2}
       photo={null}
@@ -76,8 +76,8 @@ exports[`renders a blank banner properly 1`] = `
       gestationalAge={null}
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
-      identifiers={Object {}}
-      identifiersLongForm={Object {}}
+      identifiers={{}}
+      identifiersLongForm={{}}
       personName="--"
       personNameHeadingLevel={2}
       photo={null}
@@ -102,8 +102,8 @@ exports[`renders a blank banner properly 1`] = `
       gestationalAge={null}
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
-      identifiers={Object {}}
-      identifiersLongForm={Object {}}
+      identifiers={{}}
+      identifiersLongForm={{}}
       personName="--"
       personNameHeadingLevel={2}
       photo={null}
@@ -134,8 +134,8 @@ exports[`renders gestational date with a default label when the label is not pro
       gestationalAge="April 5, 2016"
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
-      identifiers={Object {}}
-      identifiersLongForm={Object {}}
+      identifiers={{}}
+      identifiersLongForm={{}}
       personName="--"
       personNameHeadingLevel={2}
       photo={null}
@@ -160,8 +160,8 @@ exports[`renders gestational date with a default label when the label is not pro
       gestationalAge="April 5, 2016"
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
-      identifiers={Object {}}
-      identifiersLongForm={Object {}}
+      identifiers={{}}
+      identifiersLongForm={{}}
       personName="--"
       personNameHeadingLevel={2}
       photo={null}
@@ -192,8 +192,8 @@ exports[`renders post menstrual date with a default label when the label is not 
       gestationalAge={null}
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
-      identifiers={Object {}}
-      identifiersLongForm={Object {}}
+      identifiers={{}}
+      identifiersLongForm={{}}
       personName="--"
       personNameHeadingLevel={2}
       photo={null}
@@ -218,8 +218,8 @@ exports[`renders post menstrual date with a default label when the label is not 
       gestationalAge={null}
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
-      identifiers={Object {}}
-      identifiersLongForm={Object {}}
+      identifiers={{}}
+      identifiersLongForm={{}}
       personName="--"
       personNameHeadingLevel={2}
       photo={null}
@@ -250,8 +250,8 @@ exports[`renders the banner appropriately for a deceased person 1`] = `
       gestationalAge={null}
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
-      identifiers={Object {}}
-      identifiersLongForm={Object {}}
+      identifiers={{}}
+      identifiersLongForm={{}}
       personName="Old Terra Demographics Banner"
       personNameHeadingLevel={2}
       photo={null}
@@ -276,8 +276,8 @@ exports[`renders the banner appropriately for a deceased person 1`] = `
       gestationalAge={null}
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
-      identifiers={Object {}}
-      identifiersLongForm={Object {}}
+      identifiers={{}}
+      identifiersLongForm={{}}
       personName="Old Terra Demographics Banner"
       personNameHeadingLevel={2}
       photo={null}
@@ -305,12 +305,12 @@ exports[`renders the banner appropriately for a person with gestational and post
         </span>
       }
       applicationRows={
-        Array [
-          Object {
+        [
+          {
             "Address": "1501 Walnut St. Apt #123",
             "City": "Kansas City MO",
           },
-          Object {
+          {
             "ZIP": 64108,
           },
         ]
@@ -326,12 +326,12 @@ exports[`renders the banner appropriately for a person with gestational and post
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
       identifiers={
-        Object {
+        {
           "MRN": 12343,
           "REA": "3JSDA",
         }
       }
-      identifiersLongForm={Object {}}
+      identifiersLongForm={{}}
       personName="Johnathon Doe"
       personNameHeadingLevel={2}
       photo={
@@ -361,12 +361,12 @@ exports[`renders the banner appropriately for a person with gestational and post
         </span>
       }
       applicationRows={
-        Array [
-          Object {
+        [
+          {
             "Address": "1501 Walnut St. Apt #123",
             "City": "Kansas City MO",
           },
-          Object {
+          {
             "ZIP": 64108,
           },
         ]
@@ -382,12 +382,12 @@ exports[`renders the banner appropriately for a person with gestational and post
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
       identifiers={
-        Object {
+        {
           "MRN": 12343,
           "REA": "3JSDA",
         }
       }
-      identifiersLongForm={Object {}}
+      identifiersLongForm={{}}
       personName="Johnathon Doe"
       personNameHeadingLevel={2}
       photo={
@@ -423,12 +423,12 @@ exports[`renders the banner properly for a deceased person with additional appli
         </span>
       }
       applicationRows={
-        Array [
-          Object {
+        [
+          {
             "Address": "1501 Walnut St. Apt #123",
             "City": "Kansas City MO",
           },
-          Object {
+          {
             "ZIP": 64108,
           },
         ]
@@ -444,12 +444,12 @@ exports[`renders the banner properly for a deceased person with additional appli
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
       identifiers={
-        Object {
+        {
           "MRN": 12343,
           "REA": "3JSDA",
         }
       }
-      identifiersLongForm={Object {}}
+      identifiersLongForm={{}}
       personName="Johnathon Doe"
       personNameHeadingLevel={2}
       photo={
@@ -479,12 +479,12 @@ exports[`renders the banner properly for a deceased person with additional appli
         </span>
       }
       applicationRows={
-        Array [
-          Object {
+        [
+          {
             "Address": "1501 Walnut St. Apt #123",
             "City": "Kansas City MO",
           },
-          Object {
+          {
             "ZIP": 64108,
           },
         ]
@@ -500,12 +500,12 @@ exports[`renders the banner properly for a deceased person with additional appli
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
       identifiers={
-        Object {
+        {
           "MRN": 12343,
           "REA": "3JSDA",
         }
       }
-      identifiersLongForm={Object {}}
+      identifiersLongForm={{}}
       personName="Johnathon Doe"
       personNameHeadingLevel={2}
       photo={
@@ -541,12 +541,12 @@ exports[`renders the banner that contains additional information 1`] = `
         </span>
       }
       applicationRows={
-        Array [
-          Object {
+        [
+          {
             "Address": "1501 Walnut St. Apt #123",
             "City": "Kansas City MO",
           },
-          Object {
+          {
             "ZIP": 64108,
           },
         ]
@@ -562,12 +562,12 @@ exports[`renders the banner that contains additional information 1`] = `
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
       identifiers={
-        Object {
+        {
           "MRN": 12343,
           "REA": "3JSDA",
         }
       }
-      identifiersLongForm={Object {}}
+      identifiersLongForm={{}}
       personName="Johnathon Doe"
       personNameHeadingLevel={2}
       photo={
@@ -597,12 +597,12 @@ exports[`renders the banner that contains additional information 1`] = `
         </span>
       }
       applicationRows={
-        Array [
-          Object {
+        [
+          {
             "Address": "1501 Walnut St. Apt #123",
             "City": "Kansas City MO",
           },
-          Object {
+          {
             "ZIP": 64108,
           },
         ]
@@ -618,12 +618,12 @@ exports[`renders the banner that contains additional information 1`] = `
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
       identifiers={
-        Object {
+        {
           "MRN": 12343,
           "REA": "3JSDA",
         }
       }
-      identifiersLongForm={Object {}}
+      identifiersLongForm={{}}
       personName="Johnathon Doe"
       personNameHeadingLevel={2}
       photo={

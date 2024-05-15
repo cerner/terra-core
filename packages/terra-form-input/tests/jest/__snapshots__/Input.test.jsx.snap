@@ -3,7 +3,7 @@
 exports[`Input correctly applies the theme context className 1`] = `
 <ThemeContextProvider
   theme={
-    Object {
+    {
       "className": "orion-fusion-theme",
     }
   }
@@ -57,15 +57,15 @@ exports[`Input should pass in refCallback as the ref prop of the input element 1
   name={null}
   refCallback={
     [MockFunction] {
-      "calls": Array [
-        Array [
+      "calls": [
+        [
           <input
             class="form-input"
           />,
         ],
       ],
-      "results": Array [
-        Object {
+      "results": [
+        {
           "type": "return",
           "value": undefined,
         },

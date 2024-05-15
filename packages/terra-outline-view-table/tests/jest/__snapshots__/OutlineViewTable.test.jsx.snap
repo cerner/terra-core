@@ -3,20 +3,20 @@
 exports[`OutlineViewTable should passthrough props to Table 1`] = `
 <Table
   bodyData={
-    Array [
-      Object {
-        "rows": Array [
-          Object {
-            "cells": Array [
-              Object {
+    [
+      {
+        "rows": [
+          {
+            "cells": [
+              {
                 "children": "John Smith",
                 "key": "cell-0",
               },
-              Object {
+              {
                 "children": "123 Adams Drive",
                 "key": "cell-1",
               },
-              Object {
+              {
                 "children": "111-222-3333",
                 "key": "cell-2",
               },
@@ -31,9 +31,9 @@ exports[`OutlineViewTable should passthrough props to Table 1`] = `
   checkStyle="toggle"
   className="outline test"
   columnWidths={
-    Array [
-      Object {
-        "static": Object {
+    [
+      {
+        "static": {
           "unit": "px",
           "value": 10,
         },
@@ -48,19 +48,19 @@ exports[`OutlineViewTable should passthrough props to Table 1`] = `
     </p>
   }
   headerData={
-    Object {
-      "cells": Array [
-        Object {
+    {
+      "cells": [
+        {
           "children": "Name",
           "id": "header-name",
           "key": "name",
         },
-        Object {
+        {
           "children": "Address",
           "id": "header-address",
           "key": "address",
         },
-        Object {
+        {
           "children": "Phone Number",
           "id": "header-phone_number",
           "key": "phone_number",

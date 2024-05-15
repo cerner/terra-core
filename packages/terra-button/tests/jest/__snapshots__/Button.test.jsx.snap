@@ -3,7 +3,7 @@
 exports[`correctly applies the theme context className 1`] = `
 <ThemeContextProvider
   theme={
-    Object {
+    {
       "className": "orion-fusion-theme",
     }
   }
@@ -55,8 +55,8 @@ exports[`should pass in refCallback as the ref prop of the input element 1`] = `
   isReversed={false}
   refCallback={
     [MockFunction] {
-      "calls": Array [
-        Array [
+      "calls": [
+        [
           <button
             aria-disabled="false"
             class="button neutral"
@@ -74,8 +74,8 @@ exports[`should pass in refCallback as the ref prop of the input element 1`] = `
           </button>,
         ],
       ],
-      "results": Array [
-        Object {
+      "results": [
+        {
           "type": "return",
           "value": undefined,
         },
@@ -124,7 +124,7 @@ exports[`should render a Button with merged attributes 1`] = `
   onKeyUp={[Function]}
   onMouseDown={[Function]}
   style={
-    Object {
+    {
       "height": "100px",
     }
   }

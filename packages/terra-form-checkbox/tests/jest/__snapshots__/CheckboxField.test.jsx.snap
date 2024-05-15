@@ -3,8 +3,8 @@
 exports[`correctly applies "inputAttrs" property to the Checkbox component 1`] = `
 <InjectIntl(CheckboxField)
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -13,8 +13,8 @@ exports[`correctly applies "inputAttrs" property to the Checkbox component 1`] =
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -36,8 +36,8 @@ exports[`correctly applies "inputAttrs" property to the Checkbox component 1`] =
     help={null}
     hideRequired={false}
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -46,8 +46,8 @@ exports[`correctly applies "inputAttrs" property to the Checkbox component 1`] =
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
@@ -66,7 +66,7 @@ exports[`correctly applies "inputAttrs" property to the Checkbox component 1`] =
     isInvalid={false}
     isLegendHidden={false}
     legend="Default CheckboxField"
-    legendAttrs={Object {}}
+    legendAttrs={{}}
     required={false}
     showOptional={false}
   >
@@ -89,7 +89,7 @@ exports[`correctly applies "inputAttrs" property to the Checkbox component 1`] =
       <Checkbox
         disabled={false}
         inputAttrs={
-          Object {
+          {
             "aria-describedby": "terra-checkbox-field-description-4  ",
             "data-custom-attr": "attr data",
           }
@@ -98,7 +98,7 @@ exports[`correctly applies "inputAttrs" property to the Checkbox component 1`] =
         isLabelHidden={false}
         key=".0"
         labelText="Default label"
-        labelTextAttrs={Object {}}
+        labelTextAttrs={{}}
         name={null}
       >
         <div
@@ -133,8 +133,8 @@ exports[`correctly applies "inputAttrs" property to the Checkbox component 1`] =
 exports[`correctly applies the theme context className 1`] = `
 <ThemeContextProvider
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -143,8 +143,8 @@ exports[`correctly applies the theme context className 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -160,7 +160,7 @@ exports[`correctly applies the theme context className 1`] = `
     }
   }
   theme={
-    Object {
+    {
       "className": "orion-fusion-theme",
     }
   }
@@ -173,8 +173,8 @@ exports[`correctly applies the theme context className 1`] = `
       help={null}
       hideRequired={false}
       intl={
-        Object {
-          "defaultFormats": Object {},
+        {
+          "defaultFormats": {},
           "defaultLocale": "en",
           "formatDate": [Function],
           "formatHTMLMessage": [Function],
@@ -183,8 +183,8 @@ exports[`correctly applies the theme context className 1`] = `
           "formatPlural": [Function],
           "formatRelative": [Function],
           "formatTime": [Function],
-          "formats": Object {},
-          "formatters": Object {
+          "formats": {},
+          "formatters": {
             "getDateTimeFormat": [Function],
             "getMessageFormat": [Function],
             "getNumberFormat": [Function],
@@ -203,7 +203,7 @@ exports[`correctly applies the theme context className 1`] = `
       isInvalid={false}
       isLegendHidden={false}
       legend="Hidden Legend legend"
-      legendAttrs={Object {}}
+      legendAttrs={{}}
       required={false}
       showOptional={false}
     >
@@ -235,8 +235,8 @@ exports[`should display the required icon for fields with hideRequired, but have
   help={null}
   hideRequired={true}
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -245,8 +245,8 @@ exports[`should display the required icon for fields with hideRequired, but have
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -265,7 +265,7 @@ exports[`should display the required icon for fields with hideRequired, but have
   isInvalid={true}
   isLegendHidden={false}
   legend="Hidden Required CheckboxField"
-  legendAttrs={Object {}}
+  legendAttrs={{}}
   required={true}
   showOptional={false}
 />
@@ -277,8 +277,8 @@ exports[`should hide the legend when requested 1`] = `
   help={null}
   hideRequired={false}
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -287,8 +287,8 @@ exports[`should hide the legend when requested 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -308,7 +308,7 @@ exports[`should hide the legend when requested 1`] = `
   isLegendHidden={true}
   legend="Hidden Legend legend"
   legendAttrs={
-    Object {
+    {
       "class": "application-legend",
     }
   }
@@ -323,8 +323,8 @@ exports[`should hide the required indicator when requested 1`] = `
   help={null}
   hideRequired={true}
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -333,8 +333,8 @@ exports[`should hide the required indicator when requested 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -353,7 +353,7 @@ exports[`should hide the required indicator when requested 1`] = `
   isInvalid={false}
   isLegendHidden={false}
   legend="Hidden Required CheckboxField"
-  legendAttrs={Object {}}
+  legendAttrs={{}}
   required={true}
   showOptional={false}
 />
@@ -365,8 +365,8 @@ exports[`should render a default checkbox field 1`] = `
   help={null}
   hideRequired={false}
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -375,8 +375,8 @@ exports[`should render a default checkbox field 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -395,7 +395,7 @@ exports[`should render a default checkbox field 1`] = `
   isInvalid={false}
   isLegendHidden={false}
   legend="Default CheckboxField"
-  legendAttrs={Object {}}
+  legendAttrs={{}}
   required={false}
   showOptional={false}
 />
@@ -407,8 +407,8 @@ exports[`should render a default checkbox field even if it has an undefined chil
   help={null}
   hideRequired={false}
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -417,8 +417,8 @@ exports[`should render a default checkbox field even if it has an undefined chil
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -437,7 +437,7 @@ exports[`should render a default checkbox field even if it has an undefined chil
   isInvalid={false}
   isLegendHidden={false}
   legend="Default CheckboxField"
-  legendAttrs={Object {}}
+  legendAttrs={{}}
   required={false}
   showOptional={false}
 />
@@ -449,8 +449,8 @@ exports[`should render a help message 1`] = `
   help="This will help up determine how many chairs to request"
   hideRequired={false}
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -459,8 +459,8 @@ exports[`should render a help message 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -479,7 +479,7 @@ exports[`should render a help message 1`] = `
   isInvalid={false}
   isLegendHidden={false}
   legend="Help CheckboxField"
-  legendAttrs={Object {}}
+  legendAttrs={{}}
   required={false}
   showOptional={false}
 />
@@ -491,8 +491,8 @@ exports[`should render an invalid checkbox field 1`] = `
   help={null}
   hideRequired={false}
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -501,8 +501,8 @@ exports[`should render an invalid checkbox field 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -521,7 +521,7 @@ exports[`should render an invalid checkbox field 1`] = `
   isInvalid={true}
   isLegendHidden={false}
   legend="Invalid CheckboxField"
-  legendAttrs={Object {}}
+  legendAttrs={{}}
   required={false}
   showOptional={false}
 />
@@ -533,8 +533,8 @@ exports[`should render an optional part on the label 1`] = `
   help={null}
   hideRequired={false}
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -543,8 +543,8 @@ exports[`should render an optional part on the label 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -563,7 +563,7 @@ exports[`should render an optional part on the label 1`] = `
   isInvalid={false}
   isLegendHidden={false}
   legend="Optional CheckboxField"
-  legendAttrs={Object {}}
+  legendAttrs={{}}
   required={false}
   showOptional={true}
 />
@@ -575,8 +575,8 @@ exports[`should render required checkbox field 1`] = `
   help={null}
   hideRequired={false}
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -585,8 +585,8 @@ exports[`should render required checkbox field 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -605,7 +605,7 @@ exports[`should render required checkbox field 1`] = `
   isInvalid={false}
   isLegendHidden={false}
   legend="Required CheckboxField"
-  legendAttrs={Object {}}
+  legendAttrs={{}}
   required={true}
   showOptional={false}
 />
@@ -617,8 +617,8 @@ exports[`should render the legend with custom attributes properly 1`] = `
   help={null}
   hideRequired={false}
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -627,8 +627,8 @@ exports[`should render the legend with custom attributes properly 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -648,7 +648,7 @@ exports[`should render the legend with custom attributes properly 1`] = `
   isLegendHidden={false}
   legend="Custom Legend CheckboxField"
   legendAttrs={
-    Object {
+    {
       "class": "application-legend",
     }
   }

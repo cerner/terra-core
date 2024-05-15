@@ -3,8 +3,8 @@
 exports[`correctly applies the theme context className 1`] = `
 <ThemeContextProvider
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -13,8 +13,8 @@ exports[`correctly applies the theme context className 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -30,13 +30,13 @@ exports[`correctly applies the theme context className 1`] = `
     }
   }
   theme={
-    Object {
+    {
       "className": "orion-fusion-theme",
     }
   }
 >
   <StatusView
-    buttonAttrs={Array []}
+    buttonAttrs={[]}
     isAlignedTop={false}
     isGlyphHidden={false}
   >
@@ -61,10 +61,10 @@ exports[`correctly applies the theme context className 1`] = `
 
 exports[`should render a no-data status view with a hidden glyph 1`] = `
 <StatusView
-  buttonAttrs={Array []}
+  buttonAttrs={[]}
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -73,8 +73,8 @@ exports[`should render a no-data status view with a hidden glyph 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -97,8 +97,8 @@ exports[`should render a no-data status view with a hidden glyph 1`] = `
     aria-live="polite"
     className="outer-view"
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -107,8 +107,8 @@ exports[`should render a no-data status view with a hidden glyph 1`] = `
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
@@ -136,7 +136,7 @@ exports[`should render a no-data status view with a hidden glyph 1`] = `
       >
         <FormattedMessage
           id="Terra.status-view.no-data"
-          values={Object {}}
+          values={{}}
         >
           <span>
             Terra.status-view.no-data
@@ -153,10 +153,10 @@ exports[`should render a no-data status view with a hidden glyph 1`] = `
 
 exports[`should render a no-matching-results status-view with top alignment 1`] = `
 <StatusView
-  buttonAttrs={Array []}
+  buttonAttrs={[]}
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -165,8 +165,8 @@ exports[`should render a no-matching-results status-view with top alignment 1`] 
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -189,8 +189,8 @@ exports[`should render a no-matching-results status-view with top alignment 1`] 
     aria-live="polite"
     className="outer-view is-aligned-top"
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -199,8 +199,8 @@ exports[`should render a no-matching-results status-view with top alignment 1`] 
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
@@ -235,7 +235,7 @@ exports[`should render a no-matching-results status-view with top alignment 1`] 
       >
         <FormattedMessage
           id="Terra.status-view.no-matching-results"
-          values={Object {}}
+          values={{}}
         >
           <span>
             Terra.status-view.no-matching-results
@@ -252,10 +252,10 @@ exports[`should render a no-matching-results status-view with top alignment 1`] 
 
 exports[`should render a not-authorized status-view 1`] = `
 <StatusView
-  buttonAttrs={Array []}
+  buttonAttrs={[]}
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -264,8 +264,8 @@ exports[`should render a not-authorized status-view 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -288,8 +288,8 @@ exports[`should render a not-authorized status-view 1`] = `
     aria-live="polite"
     className="outer-view"
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -298,8 +298,8 @@ exports[`should render a not-authorized status-view 1`] = `
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
@@ -334,7 +334,7 @@ exports[`should render a not-authorized status-view 1`] = `
       >
         <FormattedMessage
           id="Terra.status-view.not-authorized"
-          values={Object {}}
+          values={{}}
         >
           <span>
             Terra.status-view.not-authorized
@@ -352,12 +352,12 @@ exports[`should render a not-authorized status-view 1`] = `
 exports[`should render a status view with custom glyph, title, message, and two buttons 1`] = `
 <StatusView
   buttonAttrs={
-    Array [
-      Object {
+    [
+      {
         "key": 1,
         "text": "Action1",
       },
-      Object {
+      {
         "key": 2,
         "text": "Action2",
       },
@@ -370,8 +370,8 @@ exports[`should render a status view with custom glyph, title, message, and two 
     />
   }
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -380,8 +380,8 @@ exports[`should render a status view with custom glyph, title, message, and two 
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -405,8 +405,8 @@ exports[`should render a status view with custom glyph, title, message, and two 
     aria-live="polite"
     className="outer-view"
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -415,8 +415,8 @@ exports[`should render a status view with custom glyph, title, message, and two 
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
@@ -578,10 +578,10 @@ exports[`should render a status view with custom glyph, title, message, and two 
 
 exports[`should render an error status-view 1`] = `
 <StatusView
-  buttonAttrs={Array []}
+  buttonAttrs={[]}
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -590,8 +590,8 @@ exports[`should render an error status-view 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -614,8 +614,8 @@ exports[`should render an error status-view 1`] = `
     aria-live="polite"
     className="outer-view"
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -624,8 +624,8 @@ exports[`should render an error status-view 1`] = `
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
@@ -660,7 +660,7 @@ exports[`should render an error status-view 1`] = `
       >
         <FormattedMessage
           id="Terra.status-view.error"
-          values={Object {}}
+          values={{}}
         >
           <span>
             Terra.status-view.error

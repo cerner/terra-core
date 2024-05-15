@@ -511,8 +511,8 @@ exports[`Alert of type warning with text content should render an Alert componen
 exports[`Alert with no props should render a default component 1`] = `
 <InjectIntl(Alert)
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -521,8 +521,8 @@ exports[`Alert with no props should render a default component 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -542,8 +542,8 @@ exports[`Alert with no props should render a default component 1`] = `
     customColorClass="custom-default-color"
     disableAlertActionFocus={false}
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -552,8 +552,8 @@ exports[`Alert with no props should render a default component 1`] = `
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
@@ -784,8 +784,8 @@ exports[`Alert with props should render disableAlertActionFocus when provided 1`
 <InjectIntl(Alert)
   disableAlertActionFocus={true}
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -794,8 +794,8 @@ exports[`Alert with props should render disableAlertActionFocus when provided 1`
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -815,8 +815,8 @@ exports[`Alert with props should render disableAlertActionFocus when provided 1`
     customColorClass="custom-default-color"
     disableAlertActionFocus={true}
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -825,8 +825,8 @@ exports[`Alert with props should render disableAlertActionFocus when provided 1`
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],

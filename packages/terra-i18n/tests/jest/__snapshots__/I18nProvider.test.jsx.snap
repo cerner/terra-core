@@ -5,7 +5,7 @@ exports[`I18nProvider for snapshot tests renders a default I18nProvider 1`] = `
   key="en"
   locale="en"
   messages={
-    Object {
+    {
       "Terra": "Terra",
     }
   }

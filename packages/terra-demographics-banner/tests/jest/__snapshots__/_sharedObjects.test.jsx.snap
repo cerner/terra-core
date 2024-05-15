@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`applicationIdentifiers creates elements for each identifier when identifiers and invalid identifiersTitles provided 1`] = `
-Array [
+[
   <DemographicsBannerValue
     label="MRN"
     value={12343}
@@ -15,7 +15,7 @@ Array [
 `;
 
 exports[`applicationIdentifiers creates elements for each identifier when identifiers and valid identifiersTitles provided 1`] = `
-Array [
+[
   <DemographicsBannerValue
     abbrTitle="Medical Record Number"
     label="MRN"
@@ -30,7 +30,7 @@ Array [
 `;
 
 exports[`applicationIdentifiers creates elements for each identifier when only identifiers provided 1`] = `
-Array [
+[
   <DemographicsBannerValue
     label="MRN"
     value={12343}
@@ -43,7 +43,7 @@ Array [
 `;
 
 exports[`personDetails creates elements with age and gender titles for screen readers 1`] = `
-Array [
+[
   <DemographicsBannerValue
     abbrTitle="Age"
     value="25"
@@ -61,7 +61,7 @@ Array [
 `;
 
 exports[`personDetails creates elements with all provided props 1`] = `
-Array [
+[
   <DemographicsBannerValue
     value="25"
   />,
@@ -91,7 +91,7 @@ Array [
 `;
 
 exports[`personDetails creates elements with deceased 1`] = `
-Array [
+[
   <DemographicsBannerValue
     value="25"
   />,
@@ -111,7 +111,7 @@ Array [
 `;
 
 exports[`personDetails creates elements with gestational age 1`] = `
-Array [
+[
   <DemographicsBannerValue
     value="25"
   />,
@@ -132,7 +132,7 @@ Array [
 `;
 
 exports[`personDetails creates elements with minimum props 1`] = `
-Array [
+[
   <DemographicsBannerValue
     value="25"
   />,
@@ -148,7 +148,7 @@ Array [
 `;
 
 exports[`personDetails creates elements with post menstrual age 1`] = `
-Array [
+[
   <DemographicsBannerValue
     value="25"
   />,

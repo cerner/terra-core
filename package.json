@@ -44,7 +44,7 @@
     "@babel/preset-react": "7",
     "@cerner/browserslist-config-terra": "4",
     "@cerner/eslint-config-terra": "5",
-    "@cerner/jest-config-terra": "2",
+    "@cerner/jest-config-terra": "3",
     "@cerner/package-json-lint": "2",
     "@cerner/package-json-lint-config-terra": "2",
     "@cerner/stylelint-config-terra": "5",

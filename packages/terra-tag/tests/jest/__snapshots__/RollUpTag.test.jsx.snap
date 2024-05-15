@@ -3,8 +3,8 @@
 exports[`Rollup Tag should render rollup tag with the label "4 more" 1`] = `
 <InjectIntl(RollUpTag)
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -13,8 +13,8 @@ exports[`Rollup Tag should render rollup tag with the label "4 more" 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -34,8 +34,8 @@ exports[`Rollup Tag should render rollup tag with the label "4 more" 1`] = `
 >
   <RollUpTag
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -44,8 +44,8 @@ exports[`Rollup Tag should render rollup tag with the label "4 more" 1`] = `
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
@@ -120,8 +120,8 @@ exports[`Rollup Tag should render rollup tag with the label "4 more" 1`] = `
 exports[`Rollup Tag should render rollup tag with the label "show less" when isCollapsed is false 1`] = `
 <InjectIntl(RollUpTag)
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -130,8 +130,8 @@ exports[`Rollup Tag should render rollup tag with the label "show less" when isC
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -151,8 +151,8 @@ exports[`Rollup Tag should render rollup tag with the label "show less" when isC
 >
   <RollUpTag
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -161,8 +161,8 @@ exports[`Rollup Tag should render rollup tag with the label "show less" when isC
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
@@ -237,8 +237,8 @@ exports[`Rollup Tag should render rollup tag with the label "show less" when isC
 exports[`Rollup Tag should render rollup tag with the label "show less" when isCollapsed is true and rollupCount is 0 1`] = `
 <InjectIntl(RollUpTag)
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -247,8 +247,8 @@ exports[`Rollup Tag should render rollup tag with the label "show less" when isC
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -268,8 +268,8 @@ exports[`Rollup Tag should render rollup tag with the label "show less" when isC
 >
   <RollUpTag
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -278,8 +278,8 @@ exports[`Rollup Tag should render rollup tag with the label "show less" when isC
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],

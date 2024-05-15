@@ -203,7 +203,7 @@ exports[`ToggleSectionHeader should render an open toggle section header when cl
   isInitiallyOpen={false}
   isTransparent={false}
   level={2}
-  sectionHeaderAttrs={Object {}}
+  sectionHeaderAttrs={{}}
   title="opens on click title"
 >
   <div>

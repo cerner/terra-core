@@ -16,7 +16,7 @@ exports[`Divider it should pass the All the Props 1`] = `
 exports[`Divider should apply the theme context className to the text divider 1`] = `
 <ThemeContextProvider
   theme={
-    Object {
+    {
       "className": "theme-class-name",
     }
   }

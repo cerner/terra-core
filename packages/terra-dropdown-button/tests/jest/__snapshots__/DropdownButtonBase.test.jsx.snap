@@ -3,8 +3,8 @@
 exports[`Dropdown Button Base correctly applies the theme context className 1`] = `
 <ThemeContextProvider
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -13,8 +13,8 @@ exports[`Dropdown Button Base correctly applies the theme context className 1`] 
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -30,7 +30,7 @@ exports[`Dropdown Button Base correctly applies the theme context className 1`] 
     }
   }
   theme={
-    Object {
+    {
       "className": "orion-fusion-theme",
     }
   }
@@ -63,13 +63,13 @@ exports[`Dropdown Button Base correctly applies the theme context className 1`] 
           attachmentBehavior="flip"
           attachmentMargin={0}
           contentAttachment={
-            Object {
+            {
               "horizontal": "start",
               "vertical": "top",
             }
           }
           contentOffset={
-            Object {
+            {
               "horizontal": 0,
               "vertical": 0,
             }
@@ -77,13 +77,13 @@ exports[`Dropdown Button Base correctly applies the theme context className 1`] 
           isEnabled={true}
           isOpen={true}
           targetAttachment={
-            Object {
+            {
               "horizontal": "start",
               "vertical": "bottom",
             }
           }
           targetOffset={
-            Object {
+            {
               "horizontal": 0,
               "vertical": 0,
             }
@@ -119,7 +119,7 @@ exports[`Dropdown Button Base correctly applies the theme context className 1`] 
               <OnClickOutside(HookshotContent)
                 disableOnClickOutside={false}
                 eventTypes={
-                  Array [
+                  [
                     "mousedown",
                     "touchstart",
                   ]
@@ -136,7 +136,7 @@ exports[`Dropdown Button Base correctly applies the theme context className 1`] 
                   disableOnClickOutside={[Function]}
                   enableOnClickOutside={[Function]}
                   eventTypes={
-                    Array [
+                    [
                       "mousedown",
                       "touchstart",
                     ]
@@ -155,7 +155,7 @@ exports[`Dropdown Button Base correctly applies the theme context className 1`] 
                       _createFocusTrap={[Function]}
                       active={true}
                       focusTrapOptions={
-                        Object {
+                        {
                           "clickOutsideDeactivates": true,
                           "returnFocusOnDeactivate": true,
                         }
@@ -167,8 +167,8 @@ exports[`Dropdown Button Base correctly applies the theme context className 1`] 
                       >
                         <DropdownList
                           intl={
-                            Object {
-                              "defaultFormats": Object {},
+                            {
+                              "defaultFormats": {},
                               "defaultLocale": "en",
                               "formatDate": [Function],
                               "formatHTMLMessage": [Function],
@@ -177,8 +177,8 @@ exports[`Dropdown Button Base correctly applies the theme context className 1`] 
                               "formatPlural": [Function],
                               "formatRelative": [Function],
                               "formatTime": [Function],
-                              "formats": Object {},
-                              "formatters": Object {
+                              "formats": {},
+                              "formatters": {
                                 "getDateTimeFormat": [Function],
                                 "getMessageFormat": [Function],
                                 "getNumberFormat": [Function],
@@ -202,7 +202,7 @@ exports[`Dropdown Button Base correctly applies the theme context className 1`] 
                             onKeyUp={[Function]}
                             role="menu"
                             style={
-                              Object {
+                              {
                                 "width": undefined,
                               }
                             }
