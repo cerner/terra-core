@@ -30,16 +30,16 @@
     "NOTICE",
     "README.md"
   ],
+  "peerDependencies": {
+    "react": "16",
+    "react-dom": "16",
+    "react-intl": "2"
+  },
   "dependencies": {
     "classnames": "2",
     "intl": "1",
     "intl-locales-supported": ">=1.8.4 <1.8.12 || ^1.8.13",
     "prop-types": "15"
-  },
-  "peerDependencies": {
-    "react": "16",
-    "react-dom": "16",
-    "react-intl": "2"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",

@@ -30,6 +30,11 @@
     "NOTICE",
     "README.md"
   ],
+  "peerDependencies": {
+    "react": "16",
+    "react-dom": "16",
+    "react-intl": "2 || 3 || 4 || 5"
+  },
   "dependencies": {
     "classnames": "2",
     "keycode-js": "3",
@@ -38,11 +43,6 @@
     "terra-theme-context": "1",
     "terra-toggle": "^3.63.0",
     "uuid": "3.4.0"
-  },
-  "peerDependencies": {
-    "react": "16",
-    "react-dom": "16",
-    "react-intl": "2 || 3 || 4 || 5"
   },
   "devDependencies": {
     "react-test-renderer": "16"

@@ -30,15 +30,15 @@
     "NOTICE",
     "README.md"
   ],
-  "dependencies": {
-    "classnames": "2",
-    "prop-types": "15",
-    "terra-theme-context": "1"
-  },
   "peerDependencies": {
     "react": "16",
     "react-dom": "16",
     "react-intl": "2 || 3 || 4 || 5"
+  },
+  "dependencies": {
+    "classnames": "2",
+    "prop-types": "15",
+    "terra-theme-context": "1"
   },
   "devDependencies": {
     "csvtojson": "2",

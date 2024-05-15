@@ -30,6 +30,12 @@
     "NOTICE",
     "README.md"
   ],
+  "peerDependencies": {
+    "react": "16",
+    "react-dom": "16",
+    "react-intl": "2 || 3 || 4 || 5",
+    "terra-theme-provider": "^4.16.0"
+  },
   "dependencies": {
     "classnames": "2",
     "focus-trap-react": "6",
@@ -40,12 +46,6 @@
     "terra-icon": "^3.61.0",
     "terra-theme-context": "1",
     "wicg-inert": "3"
-  },
-  "peerDependencies": {
-    "react": "16",
-    "react-dom": "16",
-    "react-intl": "2 || 3 || 4 || 5",
-    "terra-theme-provider": "^4.16.0"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",

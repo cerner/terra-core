@@ -30,6 +30,11 @@
     "NOTICE",
     "README.md"
   ],
+  "peerDependencies": {
+    "react": "16",
+    "react-dom": "16",
+    "react-intl": "2 || 3 || 4 || 5"
+  },
   "dependencies": {
     "classnames": "2",
     "focus-trap-react": "6",
@@ -39,11 +44,6 @@
     "terra-mixins": "^1.41.0",
     "terra-theme-context": "1",
     "uuid": "3.4.0"
-  },
-  "peerDependencies": {
-    "react": "16",
-    "react-dom": "16",
-    "react-intl": "2 || 3 || 4 || 5"
   },
   "devDependencies": {
     "terra-icon": "^3.61.0"

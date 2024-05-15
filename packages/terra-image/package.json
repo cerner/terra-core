@@ -29,16 +29,16 @@
     "NOTICE",
     "README.md"
   ],
+  "peerDependencies": {
+    "react": "16",
+    "react-dom": "16",
+    "terra-theme-provider": "^4.16.0"
+  },
   "dependencies": {
     "classnames": "2",
     "object-fit-images": "3",
     "prop-types": "15",
     "terra-theme-context": "1"
-  },
-  "peerDependencies": {
-    "react": "16",
-    "react-dom": "16",
-    "terra-theme-provider": "^4.16.0"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",

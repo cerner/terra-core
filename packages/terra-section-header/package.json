@@ -29,6 +29,10 @@
     "NOTICE",
     "README.md"
   ],
+  "peerDependencies": {
+    "react": "16",
+    "react-dom": "16"
+  },
   "dependencies": {
     "classnames": "2",
     "keycode-js": "3",
@@ -36,10 +40,6 @@
     "terra-arrange": "^3.56.1",
     "terra-mixins": "^1.41.0",
     "terra-theme-context": "1"
-  },
-  "peerDependencies": {
-    "react": "16",
-    "react-dom": "16"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",

@@ -30,14 +30,14 @@
     "NOTICE",
     "README.md"
   ],
+  "peerDependencies": {
+    "react": "16",
+    "react-dom": "16"
+  },
   "dependencies": {
     "classnames": "2",
     "prop-types": "15",
     "terra-arrange": "^3.56.1"
-  },
-  "peerDependencies": {
-    "react": "16",
-    "react-dom": "16"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",
