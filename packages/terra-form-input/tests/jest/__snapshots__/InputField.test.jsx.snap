@@ -17,7 +17,7 @@ exports[`InputField should render a InputField with props 1`] = `
   isLabelHidden={true}
   label="Label Test"
   labelAttrs={
-    Object {
+    {
       "className": "label",
     }
   }
@@ -58,7 +58,7 @@ exports[`InputField should render a InputField with type specified by type attri
   isLabelHidden={true}
   label="Label Test"
   labelAttrs={
-    Object {
+    {
       "className": "label",
     }
   }
@@ -99,7 +99,7 @@ exports[`InputField should render a InputField with type specified through Input
   isLabelHidden={true}
   label="Label Test"
   labelAttrs={
-    Object {
+    {
       "className": "label",
     }
   }
@@ -139,7 +139,7 @@ exports[`InputField should render a default InputField component 1`] = `
   isInvalid={false}
   isLabelHidden={false}
   label="Label"
-  labelAttrs={Object {}}
+  labelAttrs={{}}
   required={false}
   showOptional={false}
 >
@@ -170,7 +170,7 @@ exports[`InputField should render a disabled InputField component 1`] = `
   isInvalid={false}
   isLabelHidden={false}
   label="Label"
-  labelAttrs={Object {}}
+  labelAttrs={{}}
   required={false}
   showOptional={false}
 >
@@ -201,7 +201,7 @@ exports[`InputField should render a disabled InputField component via inputAttrs
   isInvalid={false}
   isLabelHidden={false}
   label="Label"
-  labelAttrs={Object {}}
+  labelAttrs={{}}
   required={false}
   showOptional={false}
 >
@@ -233,7 +233,7 @@ exports[`InputField should render a valid InputField with props 1`] = `
   isLabelHidden={true}
   label="Label Test"
   labelAttrs={
-    Object {
+    {
       "className": "label",
     }
   }

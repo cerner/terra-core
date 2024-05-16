@@ -3,7 +3,7 @@
 exports[`Overlay correctly applies the theme context className 1`] = `
 <ThemeContextProvider
   theme={
-    Object {
+    {
       "className": "orion-fusion-theme",
     }
   }
@@ -50,7 +50,7 @@ exports[`Overlay correctly applies the theme context className 1`] = `
         <FocusTrap
           _createFocusTrap={[Function]}
           active={true}
-          focusTrapOptions={Object {}}
+          focusTrapOptions={{}}
           paused={false}
         >
           <div>
@@ -85,7 +85,7 @@ exports[`Overlay when isOpen is provided -backgroundStyle- should render with th
   <FocusTrap
     _createFocusTrap={[Function]}
     active={true}
-    focusTrapOptions={Object {}}
+    focusTrapOptions={{}}
     paused={false}
   >
     <div>
@@ -115,7 +115,7 @@ exports[`Overlay when isOpen is provided -backgroundStyle- should render with th
   <FocusTrap
     _createFocusTrap={[Function]}
     active={true}
-    focusTrapOptions={Object {}}
+    focusTrapOptions={{}}
     paused={false}
   >
     <div>
@@ -145,7 +145,7 @@ exports[`Overlay when isOpen is provided -backgroundStyle- should render with th
   <FocusTrap
     _createFocusTrap={[Function]}
     active={true}
-    focusTrapOptions={Object {}}
+    focusTrapOptions={{}}
     paused={false}
   >
     <div>
@@ -175,7 +175,7 @@ exports[`Overlay when isOpen is provided -default Overlay when isOpen- should re
   <FocusTrap
     _createFocusTrap={[Function]}
     active={true}
-    focusTrapOptions={Object {}}
+    focusTrapOptions={{}}
     paused={false}
   >
     <div>
@@ -205,7 +205,7 @@ exports[`Overlay when isOpen is provided should render with content 1`] = `
   <FocusTrap
     _createFocusTrap={[Function]}
     active={true}
-    focusTrapOptions={Object {}}
+    focusTrapOptions={{}}
     paused={false}
   >
     <div>
@@ -249,7 +249,7 @@ exports[`Overlay when isOpen is provided should render with isScrollable 1`] = `
   <FocusTrap
     _createFocusTrap={[Function]}
     active={true}
-    focusTrapOptions={Object {}}
+    focusTrapOptions={{}}
     paused={false}
   >
     <div>
@@ -279,7 +279,7 @@ exports[`Overlay when isOpen is provided should render with onRequestClose 1`] =
   <FocusTrap
     _createFocusTrap={[Function]}
     active={true}
-    focusTrapOptions={Object {}}
+    focusTrapOptions={{}}
     paused={false}
   >
     <div>

@@ -3,14 +3,14 @@
 exports[`correctly applies the theme context className 1`] = `
 <ThemeContextProvider
   theme={
-    Object {
+    {
       "className": "orion-fusion-theme",
     }
   }
 >
   <Fieldset
     isLegendHidden={false}
-    legendAttrs={Object {}}
+    legendAttrs={{}}
     required={false}
   >
     <fieldset

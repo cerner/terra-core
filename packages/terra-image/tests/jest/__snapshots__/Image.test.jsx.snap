@@ -3,7 +3,7 @@
 exports[`correctly applies the theme context className 1`] = `
 <ThemeContextProvider
   theme={
-    Object {
+    {
       "className": "orion-fusion-theme",
     }
   }
@@ -56,7 +56,7 @@ exports[`should ignore provided role and render image with default decorative im
 exports[`should render a circle image component with fluid behavior 1`] = `
 <div
   style={
-    Object {
+    {
       "backgroundColor": "#ffe4c4",
       "height": 200,
       "width": 200,

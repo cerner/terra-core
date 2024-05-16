@@ -12,7 +12,7 @@ exports[`should render a cell with width percentage 1`] = `
 <div
   className="cell"
   style={
-    Object {
+    {
       "flex": "0 0 0px",
       "maxWidth": "20%",
       "minWidth": "20%",
@@ -26,7 +26,7 @@ exports[`should render a cell with width scalar 1`] = `
 <div
   className="cell"
   style={
-    Object {
+    {
       "flex": "2 2 0px",
       "msFlex": "2 2 0px",
     }
@@ -38,7 +38,7 @@ exports[`should render a cell with width static 1`] = `
 <div
   className="cell"
   style={
-    Object {
+    {
       "flex": "0 0 0px",
       "maxWidth": "40rem",
       "minWidth": "40rem",

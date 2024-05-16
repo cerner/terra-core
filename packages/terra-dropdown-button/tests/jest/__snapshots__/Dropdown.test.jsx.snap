@@ -5,13 +5,13 @@ exports[`Dropdown renders a default dropdown 1`] = `
   attachmentBehavior="flip"
   attachmentMargin={0}
   contentAttachment={
-    Object {
+    {
       "horizontal": "start",
       "vertical": "top",
     }
   }
   contentOffset={
-    Object {
+    {
       "horizontal": 0,
       "vertical": 0,
     }
@@ -19,13 +19,13 @@ exports[`Dropdown renders a default dropdown 1`] = `
   isEnabled={true}
   isOpen={false}
   targetAttachment={
-    Object {
+    {
       "horizontal": "start",
       "vertical": "bottom",
     }
   }
   targetOffset={
-    Object {
+    {
       "horizontal": 0,
       "vertical": 0,
     }
@@ -34,7 +34,7 @@ exports[`Dropdown renders a default dropdown 1`] = `
 >
   <OnClickOutside(HookshotContent)
     eventTypes={
-      Array [
+      [
         "mousedown",
         "touchstart",
       ]
@@ -50,7 +50,7 @@ exports[`Dropdown renders a default dropdown 1`] = `
       _createFocusTrap={[Function]}
       active={true}
       focusTrapOptions={
-        Object {
+        {
           "clickOutsideDeactivates": true,
           "returnFocusOnDeactivate": true,
         }
@@ -75,13 +75,13 @@ exports[`Dropdown renders a dropdown with a bounding ref 1`] = `
   attachmentBehavior="flip"
   attachmentMargin={0}
   contentAttachment={
-    Object {
+    {
       "horizontal": "start",
       "vertical": "top",
     }
   }
   contentOffset={
-    Object {
+    {
       "horizontal": 0,
       "vertical": 0,
     }
@@ -89,13 +89,13 @@ exports[`Dropdown renders a dropdown with a bounding ref 1`] = `
   isEnabled={true}
   isOpen={false}
   targetAttachment={
-    Object {
+    {
       "horizontal": "start",
       "vertical": "bottom",
     }
   }
   targetOffset={
-    Object {
+    {
       "horizontal": 0,
       "vertical": 0,
     }
@@ -104,7 +104,7 @@ exports[`Dropdown renders a dropdown with a bounding ref 1`] = `
 >
   <OnClickOutside(HookshotContent)
     eventTypes={
-      Array [
+      [
         "mousedown",
         "touchstart",
       ]
@@ -120,7 +120,7 @@ exports[`Dropdown renders a dropdown with a bounding ref 1`] = `
       _createFocusTrap={[Function]}
       active={true}
       focusTrapOptions={
-        Object {
+        {
           "clickOutsideDeactivates": true,
           "returnFocusOnDeactivate": true,
         }
@@ -145,13 +145,13 @@ exports[`Dropdown renders a dropdown with a set width 1`] = `
   attachmentBehavior="flip"
   attachmentMargin={0}
   contentAttachment={
-    Object {
+    {
       "horizontal": "start",
       "vertical": "top",
     }
   }
   contentOffset={
-    Object {
+    {
       "horizontal": 0,
       "vertical": 0,
     }
@@ -159,13 +159,13 @@ exports[`Dropdown renders a dropdown with a set width 1`] = `
   isEnabled={true}
   isOpen={false}
   targetAttachment={
-    Object {
+    {
       "horizontal": "start",
       "vertical": "bottom",
     }
   }
   targetOffset={
-    Object {
+    {
       "horizontal": 0,
       "vertical": 0,
     }
@@ -174,7 +174,7 @@ exports[`Dropdown renders a dropdown with a set width 1`] = `
 >
   <OnClickOutside(HookshotContent)
     eventTypes={
-      Array [
+      [
         "mousedown",
         "touchstart",
       ]
@@ -190,7 +190,7 @@ exports[`Dropdown renders a dropdown with a set width 1`] = `
       _createFocusTrap={[Function]}
       active={true}
       focusTrapOptions={
-        Object {
+        {
           "clickOutsideDeactivates": true,
           "returnFocusOnDeactivate": true,
         }
@@ -216,13 +216,13 @@ exports[`Dropdown renders a dropdown with multiple children 1`] = `
   attachmentBehavior="flip"
   attachmentMargin={0}
   contentAttachment={
-    Object {
+    {
       "horizontal": "start",
       "vertical": "top",
     }
   }
   contentOffset={
-    Object {
+    {
       "horizontal": 0,
       "vertical": 0,
     }
@@ -230,13 +230,13 @@ exports[`Dropdown renders a dropdown with multiple children 1`] = `
   isEnabled={true}
   isOpen={false}
   targetAttachment={
-    Object {
+    {
       "horizontal": "start",
       "vertical": "bottom",
     }
   }
   targetOffset={
-    Object {
+    {
       "horizontal": 0,
       "vertical": 0,
     }
@@ -245,7 +245,7 @@ exports[`Dropdown renders a dropdown with multiple children 1`] = `
 >
   <OnClickOutside(HookshotContent)
     eventTypes={
-      Array [
+      [
         "mousedown",
         "touchstart",
       ]
@@ -261,7 +261,7 @@ exports[`Dropdown renders a dropdown with multiple children 1`] = `
       _createFocusTrap={[Function]}
       active={true}
       focusTrapOptions={
-        Object {
+        {
           "clickOutsideDeactivates": true,
           "returnFocusOnDeactivate": true,
         }
@@ -294,13 +294,13 @@ exports[`Dropdown renders an open dropdown 1`] = `
   attachmentBehavior="flip"
   attachmentMargin={0}
   contentAttachment={
-    Object {
+    {
       "horizontal": "start",
       "vertical": "top",
     }
   }
   contentOffset={
-    Object {
+    {
       "horizontal": 0,
       "vertical": 0,
     }
@@ -308,13 +308,13 @@ exports[`Dropdown renders an open dropdown 1`] = `
   isEnabled={true}
   isOpen={true}
   targetAttachment={
-    Object {
+    {
       "horizontal": "start",
       "vertical": "bottom",
     }
   }
   targetOffset={
-    Object {
+    {
       "horizontal": 0,
       "vertical": 0,
     }
@@ -323,7 +323,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
 >
   <OnClickOutside(HookshotContent)
     eventTypes={
-      Array [
+      [
         "mousedown",
         "touchstart",
       ]
@@ -339,7 +339,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
       _createFocusTrap={[Function]}
       active={true}
       focusTrapOptions={
-        Object {
+        {
           "clickOutsideDeactivates": true,
           "returnFocusOnDeactivate": true,
         }

@@ -3,8 +3,8 @@
 exports[`correctly applies the theme context className 1`] = `
 <ThemeContextProvider
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -13,8 +13,8 @@ exports[`correctly applies the theme context className 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -30,7 +30,7 @@ exports[`correctly applies the theme context className 1`] = `
     }
   }
   theme={
-    Object {
+    {
       "className": "orion-fusion-theme",
     }
   }
@@ -40,8 +40,8 @@ exports[`correctly applies the theme context className 1`] = `
       ariaSelectionStyle="none"
       dividerStyle="none"
       intl={
-        Object {
-          "defaultFormats": Object {},
+        {
+          "defaultFormats": {},
           "defaultLocale": "en",
           "formatDate": [Function],
           "formatHTMLMessage": [Function],
@@ -50,8 +50,8 @@ exports[`correctly applies the theme context className 1`] = `
           "formatPlural": [Function],
           "formatRelative": [Function],
           "formatTime": [Function],
-          "formats": Object {},
-          "formatters": Object {
+          "formats": {},
+          "formatters": {
             "getDateTimeFormat": [Function],
             "getMessageFormat": [Function],
             "getNumberFormat": [Function],
@@ -84,8 +84,8 @@ exports[`correctly applies the theme context className 1`] = `
 exports[`should render with ariaDescribedBy 1`] = `
 <div
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -94,8 +94,8 @@ exports[`should render with ariaDescribedBy 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -141,8 +141,8 @@ exports[`should render with ariaDescribedBy 1`] = `
 exports[`should render with ariaDescribedBy 2`] = `
 <div
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -151,8 +151,8 @@ exports[`should render with ariaDescribedBy 2`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -258,8 +258,8 @@ exports[`should render with ariaDescription 2`] = `
 exports[`should render with ariaDetails 1`] = `
 <div
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -268,8 +268,8 @@ exports[`should render with ariaDetails 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -315,8 +315,8 @@ exports[`should render with ariaDetails 1`] = `
 exports[`should render with ariaDetails 2`] = `
 <div
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -325,8 +325,8 @@ exports[`should render with ariaDetails 2`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -471,8 +471,8 @@ exports[`should render with null sections 1`] = `
   ariaSelectionStyle="none"
   dividerStyle="standard"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -481,8 +481,8 @@ exports[`should render with null sections 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],

@@ -3,7 +3,7 @@
 exports[`correctly applies the theme context className 1`] = `
 <ThemeContextProvider
   theme={
-    Object {
+    {
       "className": "orion-fusion-theme",
     }
   }
@@ -37,7 +37,7 @@ exports[`correctly applies the theme context className 1`] = `
 exports[`correctly applies the theme context className when isInvalid 1`] = `
 <ThemeContextProvider
   theme={
-    Object {
+    {
       "className": "orion-fusion-theme",
     }
   }

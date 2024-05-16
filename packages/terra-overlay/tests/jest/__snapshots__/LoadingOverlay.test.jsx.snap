@@ -4,8 +4,8 @@ exports[`LoadingOverlay should not render markup when isOpen is not provided 1`]
 <LoadingOverlay
   backgroundStyle="light"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -14,8 +14,8 @@ exports[`LoadingOverlay should not render markup when isOpen is not provided 1`]
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -40,8 +40,8 @@ exports[`LoadingOverlay should not render markup when isOpen is not provided 1`]
     backgroundStyle="light"
     className="loading-overlay"
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -50,8 +50,8 @@ exports[`LoadingOverlay should not render markup when isOpen is not provided 1`]
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
@@ -79,8 +79,8 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
 <LoadingOverlay
   backgroundStyle="light"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -89,8 +89,8 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -116,8 +116,8 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
     backgroundStyle="light"
     className="loading-overlay"
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -126,8 +126,8 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
@@ -204,7 +204,7 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
         <FocusTrap
           _createFocusTrap={[Function]}
           active={true}
-          focusTrapOptions={Object {}}
+          focusTrapOptions={{}}
           paused={false}
         >
           <div>
@@ -212,8 +212,8 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
               aria-live="polite"
               className="overlay fullscreen light layer-100 loading-overlay"
               intl={
-                Object {
-                  "defaultFormats": Object {},
+                {
+                  "defaultFormats": {},
                   "defaultLocale": "en",
                   "formatDate": [Function],
                   "formatHTMLMessage": [Function],
@@ -222,8 +222,8 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
                   "formatPlural": [Function],
                   "formatRelative": [Function],
                   "formatTime": [Function],
-                  "formats": Object {},
-                  "formatters": Object {
+                  "formats": {},
+                  "formatters": {
                     "getDateTimeFormat": [Function],
                     "getMessageFormat": [Function],
                     "getNumberFormat": [Function],
@@ -299,8 +299,8 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
 <LoadingOverlay
   backgroundStyle="light"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -309,8 +309,8 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -335,8 +335,8 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
     backgroundStyle="light"
     className="loading-overlay"
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -345,8 +345,8 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
@@ -423,7 +423,7 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
         <FocusTrap
           _createFocusTrap={[Function]}
           active={true}
-          focusTrapOptions={Object {}}
+          focusTrapOptions={{}}
           paused={false}
         >
           <div>
@@ -431,8 +431,8 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
               aria-live="polite"
               className="overlay fullscreen light layer-100 loading-overlay"
               intl={
-                Object {
-                  "defaultFormats": Object {},
+                {
+                  "defaultFormats": {},
                   "defaultLocale": "en",
                   "formatDate": [Function],
                   "formatHTMLMessage": [Function],
@@ -441,8 +441,8 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
                   "formatPlural": [Function],
                   "formatRelative": [Function],
                   "formatTime": [Function],
-                  "formats": Object {},
-                  "formatters": Object {
+                  "formats": {},
+                  "formatters": {
                     "getDateTimeFormat": [Function],
                     "getMessageFormat": [Function],
                     "getNumberFormat": [Function],
@@ -501,7 +501,7 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
                 </IconSpinner>
                 <FormattedMessage
                   id="Terra.Overlay.loading"
-                  values={Object {}}
+                  values={{}}
                 >
                   <div
                     className="message"

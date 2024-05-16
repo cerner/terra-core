@@ -3,8 +3,8 @@
 exports[`correctly applies "inputAttrs" property to the Radio component 1`] = `
 <InjectIntl(RadioField)
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -13,8 +13,8 @@ exports[`correctly applies "inputAttrs" property to the Radio component 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -36,8 +36,8 @@ exports[`correctly applies "inputAttrs" property to the Radio component 1`] = `
     help={null}
     hideRequired={false}
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -46,8 +46,8 @@ exports[`correctly applies "inputAttrs" property to the Radio component 1`] = `
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
@@ -66,7 +66,7 @@ exports[`correctly applies "inputAttrs" property to the Radio component 1`] = `
     isInvalid={false}
     isLegendHidden={false}
     legend="Default RadioField"
-    legendAttrs={Object {}}
+    legendAttrs={{}}
     required={false}
     showOptional={false}
   >
@@ -95,7 +95,7 @@ exports[`correctly applies "inputAttrs" property to the Radio component 1`] = `
         <Radio
           disabled={false}
           inputAttrs={
-            Object {
+            {
               "aria-describedby": " ",
               "data-custom-attr": "attr data",
             }
@@ -104,7 +104,7 @@ exports[`correctly applies "inputAttrs" property to the Radio component 1`] = `
           isLabelHidden={false}
           key=".0"
           labelText="Default label"
-          labelTextAttrs={Object {}}
+          labelTextAttrs={{}}
           name={null}
         >
           <div
@@ -145,8 +145,8 @@ exports[`correctly applies "inputAttrs" property to the Radio component 1`] = `
 exports[`correctly applies the theme context className 1`] = `
 <ThemeContextProvider
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -155,8 +155,8 @@ exports[`correctly applies the theme context className 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -172,7 +172,7 @@ exports[`correctly applies the theme context className 1`] = `
     }
   }
   theme={
-    Object {
+    {
       "className": "orion-fusion-theme",
     }
   }
@@ -185,8 +185,8 @@ exports[`correctly applies the theme context className 1`] = `
       help={null}
       hideRequired={false}
       intl={
-        Object {
-          "defaultFormats": Object {},
+        {
+          "defaultFormats": {},
           "defaultLocale": "en",
           "formatDate": [Function],
           "formatHTMLMessage": [Function],
@@ -195,8 +195,8 @@ exports[`correctly applies the theme context className 1`] = `
           "formatPlural": [Function],
           "formatRelative": [Function],
           "formatTime": [Function],
-          "formats": Object {},
-          "formatters": Object {
+          "formats": {},
+          "formatters": {
             "getDateTimeFormat": [Function],
             "getMessageFormat": [Function],
             "getNumberFormat": [Function],
@@ -215,7 +215,7 @@ exports[`correctly applies the theme context className 1`] = `
       isInvalid={false}
       isLegendHidden={false}
       legend="Default RadioField"
-      legendAttrs={Object {}}
+      legendAttrs={{}}
       required={false}
       showOptional={false}
     >
@@ -254,8 +254,8 @@ exports[`should display the required icon for fields with hideRequired, but have
   help={null}
   hideRequired={true}
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -264,8 +264,8 @@ exports[`should display the required icon for fields with hideRequired, but have
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -284,7 +284,7 @@ exports[`should display the required icon for fields with hideRequired, but have
   isInvalid={true}
   isLegendHidden={false}
   legend="Hidden Required CheckboxField"
-  legendAttrs={Object {}}
+  legendAttrs={{}}
   required={true}
   showOptional={false}
 />
@@ -296,8 +296,8 @@ exports[`should hide the legend when requested 1`] = `
   help={null}
   hideRequired={false}
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -306,8 +306,8 @@ exports[`should hide the legend when requested 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -327,7 +327,7 @@ exports[`should hide the legend when requested 1`] = `
   isLegendHidden={true}
   legend="Hidden Legend legend"
   legendAttrs={
-    Object {
+    {
       "class": "application-legend",
     }
   }
@@ -342,8 +342,8 @@ exports[`should hide the required indicator when requested 1`] = `
   help={null}
   hideRequired={true}
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -352,8 +352,8 @@ exports[`should hide the required indicator when requested 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -372,7 +372,7 @@ exports[`should hide the required indicator when requested 1`] = `
   isInvalid={false}
   isLegendHidden={false}
   legend="Hidden Required RadioField"
-  legendAttrs={Object {}}
+  legendAttrs={{}}
   required={true}
   showOptional={false}
 />
@@ -383,8 +383,8 @@ exports[`should not render onkeydown and onclick event on radio button for non-s
   help="This will help up determine how many chairs to request"
   id="RadioFieldOne"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -393,8 +393,8 @@ exports[`should not render onkeydown and onclick event on radio button for non-s
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -417,8 +417,8 @@ exports[`should not render onkeydown and onclick event on radio button for non-s
     hideRequired={false}
     id="RadioFieldOne"
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -427,8 +427,8 @@ exports[`should not render onkeydown and onclick event on radio button for non-s
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
@@ -447,7 +447,7 @@ exports[`should not render onkeydown and onclick event on radio button for non-s
     isInvalid={false}
     isLegendHidden={false}
     legend="Help RadioField"
-    legendAttrs={Object {}}
+    legendAttrs={{}}
     required={false}
     showOptional={false}
   >
@@ -477,7 +477,7 @@ exports[`should not render onkeydown and onclick event on radio button for non-s
           disabled={false}
           id="firstRadio"
           inputAttrs={
-            Object {
+            {
               "aria-describedby": " terra-radio-field-description-help-uuid123",
             }
           }
@@ -485,7 +485,7 @@ exports[`should not render onkeydown and onclick event on radio button for non-s
           isLabelHidden={false}
           key=".0"
           labelText="Radio"
-          labelTextAttrs={Object {}}
+          labelTextAttrs={{}}
           name={null}
         >
           <div
@@ -536,8 +536,8 @@ exports[`should render a default radio field 1`] = `
   help={null}
   hideRequired={false}
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -546,8 +546,8 @@ exports[`should render a default radio field 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -566,7 +566,7 @@ exports[`should render a default radio field 1`] = `
   isInvalid={false}
   isLegendHidden={false}
   legend="Default RadioField"
-  legendAttrs={Object {}}
+  legendAttrs={{}}
   required={false}
   showOptional={false}
 />
@@ -578,8 +578,8 @@ exports[`should render a default radio field if it has an undefined child 1`] = 
   help={null}
   hideRequired={false}
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -588,8 +588,8 @@ exports[`should render a default radio field if it has an undefined child 1`] = 
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -608,7 +608,7 @@ exports[`should render a default radio field if it has an undefined child 1`] = 
   isInvalid={false}
   isLegendHidden={false}
   legend="Default RadioField"
-  legendAttrs={Object {}}
+  legendAttrs={{}}
   required={false}
   showOptional={false}
 />
@@ -620,8 +620,8 @@ exports[`should render a help message 1`] = `
   help="This will help up determine how many chairs to request"
   hideRequired={false}
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -630,8 +630,8 @@ exports[`should render a help message 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -650,7 +650,7 @@ exports[`should render a help message 1`] = `
   isInvalid={false}
   isLegendHidden={false}
   legend="Help RadioField"
-  legendAttrs={Object {}}
+  legendAttrs={{}}
   required={false}
   showOptional={false}
 />
@@ -662,8 +662,8 @@ exports[`should render an invalid radio field 1`] = `
   help={null}
   hideRequired={false}
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -672,8 +672,8 @@ exports[`should render an invalid radio field 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -692,7 +692,7 @@ exports[`should render an invalid radio field 1`] = `
   isInvalid={true}
   isLegendHidden={false}
   legend="Invalid RadioField"
-  legendAttrs={Object {}}
+  legendAttrs={{}}
   required={false}
   showOptional={false}
 />
@@ -704,8 +704,8 @@ exports[`should render an optional part on the label 1`] = `
   help={null}
   hideRequired={false}
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -714,8 +714,8 @@ exports[`should render an optional part on the label 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -734,7 +734,7 @@ exports[`should render an optional part on the label 1`] = `
   isInvalid={false}
   isLegendHidden={false}
   legend="Optional RadioField"
-  legendAttrs={Object {}}
+  legendAttrs={{}}
   required={false}
   showOptional={true}
 />
@@ -745,8 +745,8 @@ exports[`should render onkeydown and onclick event on radio button for safari br
   help="This will help up determine how many chairs to request"
   id="RadioFieldOne"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -755,8 +755,8 @@ exports[`should render onkeydown and onclick event on radio button for safari br
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -779,8 +779,8 @@ exports[`should render onkeydown and onclick event on radio button for safari br
     hideRequired={false}
     id="RadioFieldOne"
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -789,8 +789,8 @@ exports[`should render onkeydown and onclick event on radio button for safari br
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
@@ -809,7 +809,7 @@ exports[`should render onkeydown and onclick event on radio button for safari br
     isInvalid={false}
     isLegendHidden={false}
     legend="Help RadioField"
-    legendAttrs={Object {}}
+    legendAttrs={{}}
     required={false}
     showOptional={false}
   >
@@ -839,7 +839,7 @@ exports[`should render onkeydown and onclick event on radio button for safari br
           disabled={false}
           id="firstRadio"
           inputAttrs={
-            Object {
+            {
               "aria-describedby": " terra-radio-field-description-help-uuid123",
               "onClick": [Function],
               "onKeyDown": [Function],
@@ -849,7 +849,7 @@ exports[`should render onkeydown and onclick event on radio button for safari br
           isLabelHidden={false}
           key=".0"
           labelText="Radio"
-          labelTextAttrs={Object {}}
+          labelTextAttrs={{}}
           name={null}
         >
           <div
@@ -956,8 +956,8 @@ exports[`should render required radio field 1`] = `
   help={null}
   hideRequired={false}
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -966,8 +966,8 @@ exports[`should render required radio field 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -986,7 +986,7 @@ exports[`should render required radio field 1`] = `
   isInvalid={false}
   isLegendHidden={false}
   legend="Required RadioField"
-  legendAttrs={Object {}}
+  legendAttrs={{}}
   required={true}
   showOptional={false}
 />
@@ -998,8 +998,8 @@ exports[`should render the legend with custom attributes properly 1`] = `
   help={null}
   hideRequired={false}
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -1008,8 +1008,8 @@ exports[`should render the legend with custom attributes properly 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -1029,7 +1029,7 @@ exports[`should render the legend with custom attributes properly 1`] = `
   isLegendHidden={false}
   legend="Custom Legend RadioField"
   legendAttrs={
-    Object {
+    {
       "class": "application-legend",
     }
   }

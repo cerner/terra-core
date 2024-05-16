@@ -61,7 +61,7 @@ exports[`Arrange should have all prop set correctly 1`] = `
   <span
     className="fit center fit-block"
     style={
-      Object {
+      {
         "maxWidth": "10px",
       }
     }
@@ -74,7 +74,7 @@ exports[`Arrange should have all prop set correctly 1`] = `
   <span
     className="fill center fill-block"
     style={
-      Object {
+      {
         "maxWidth": "20px",
       }
     }
@@ -86,7 +86,7 @@ exports[`Arrange should have all prop set correctly 1`] = `
   <span
     className="fit center"
     style={
-      Object {
+      {
         "maxWidth": "30px",
       }
     }

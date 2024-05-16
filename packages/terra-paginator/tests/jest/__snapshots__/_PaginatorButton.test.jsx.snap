@@ -4,8 +4,8 @@ exports[`Paginator should render a default paginator button 1`] = `
 <PaginatorButton
   id="test-button"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -14,8 +14,8 @@ exports[`Paginator should render a default paginator button 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],

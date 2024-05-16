@@ -3,8 +3,8 @@
 exports[`correctly applies the theme context className 1`] = `
 <ThemeContextProvider
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -13,8 +13,8 @@ exports[`correctly applies the theme context className 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -30,7 +30,7 @@ exports[`correctly applies the theme context className 1`] = `
     }
   }
   theme={
-    Object {
+    {
       "className": "orion-fusion-theme",
     }
   }
@@ -50,7 +50,7 @@ exports[`correctly applies the theme context className 1`] = `
     isInvalid={false}
     isLabelHidden={false}
     label="Field Label"
-    labelAttrs={Object {}}
+    labelAttrs={{}}
     required={false}
     showOptional={false}
   >
@@ -114,8 +114,8 @@ exports[`should render a field error message 1`] = `
 <div
   className="field"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -124,8 +124,8 @@ exports[`should render a field error message 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -166,8 +166,8 @@ exports[`should render a field help message 1`] = `
 <div
   className="field"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -176,8 +176,8 @@ exports[`should render a field help message 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -224,8 +224,8 @@ exports[`should render a field in error 1`] = `
 <div
   className="field"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -234,8 +234,8 @@ exports[`should render a field in error 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -288,8 +288,8 @@ exports[`should render a field label 1`] = `
 <div
   className="field"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -298,8 +298,8 @@ exports[`should render a field label 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -340,8 +340,8 @@ exports[`should render a field with a Select 1`] = `
 <div
   className="field"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -350,8 +350,8 @@ exports[`should render a field with a Select 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -427,8 +427,8 @@ exports[`should render a field with a Textarea 1`] = `
 <div
   className="field"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -437,8 +437,8 @@ exports[`should render a field with a Textarea 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -514,8 +514,8 @@ exports[`should render a field with a custom error icon 1`] = `
 <div
   className="field"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -524,8 +524,8 @@ exports[`should render a field with a custom error icon 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -566,8 +566,8 @@ exports[`should render a field with a hidden label 1`] = `
 <div
   className="field"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -576,8 +576,8 @@ exports[`should render a field with a hidden label 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -618,8 +618,8 @@ exports[`should render a field with a hidden label in error 1`] = `
 <div
   className="field"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -628,8 +628,8 @@ exports[`should render a field with a hidden label in error 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -682,8 +682,8 @@ exports[`should render a field with an Input 1`] = `
 <div
   className="field"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -692,8 +692,8 @@ exports[`should render a field with an Input 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -769,8 +769,8 @@ exports[`should render a required field in error 1`] = `
 <div
   className="field"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -779,8 +779,8 @@ exports[`should render a required field in error 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -839,8 +839,8 @@ exports[`should render a required field label 1`] = `
 <div
   className="field"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -849,8 +849,8 @@ exports[`should render a required field label 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -897,8 +897,8 @@ exports[`should render a required field label with required hidden 1`] = `
 <div
   className="field"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -907,8 +907,8 @@ exports[`should render a required field label with required hidden 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -955,8 +955,8 @@ exports[`should render a required field with a Select 1`] = `
 <div
   className="field"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -965,8 +965,8 @@ exports[`should render a required field with a Select 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -1051,8 +1051,8 @@ exports[`should render a required field with a Textarea 1`] = `
 <div
   className="field"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -1061,8 +1061,8 @@ exports[`should render a required field with a Textarea 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -1147,8 +1147,8 @@ exports[`should render a required field with a hidden label 1`] = `
 <div
   className="field"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -1157,8 +1157,8 @@ exports[`should render a required field with a hidden label 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -1205,8 +1205,8 @@ exports[`should render a required field with a hidden label in error 1`] = `
 <div
   className="field"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -1215,8 +1215,8 @@ exports[`should render a required field with a hidden label in error 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -1275,8 +1275,8 @@ exports[`should render a required field with an Input 1`] = `
 <div
   className="field"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -1285,8 +1285,8 @@ exports[`should render a required field with an Input 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -1371,8 +1371,8 @@ exports[`should render an inline field with most of the possible props are passe
 <div
   className="field field-inline"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -1381,8 +1381,8 @@ exports[`should render an inline field with most of the possible props are passe
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -1443,8 +1443,8 @@ exports[`should render an invalid and required field with a Select 1`] = `
   hideRequired={false}
   htmlFor="test"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -1453,8 +1453,8 @@ exports[`should render an invalid and required field with a Select 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -1473,15 +1473,15 @@ exports[`should render an invalid and required field with a Select 1`] = `
   isInvalid={true}
   isLabelHidden={false}
   label="Field Label"
-  labelAttrs={Object {}}
+  labelAttrs={{}}
   required={true}
   showOptional={false}
 >
   <div
     className="field"
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -1490,8 +1490,8 @@ exports[`should render an invalid and required field with a Select 1`] = `
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
@@ -1590,8 +1590,8 @@ exports[`should render an invalid and required field with a Textarea 1`] = `
   hideRequired={false}
   htmlFor="test"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -1600,8 +1600,8 @@ exports[`should render an invalid and required field with a Textarea 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -1620,15 +1620,15 @@ exports[`should render an invalid and required field with a Textarea 1`] = `
   isInvalid={true}
   isLabelHidden={false}
   label="Field Label"
-  labelAttrs={Object {}}
+  labelAttrs={{}}
   required={true}
   showOptional={false}
 >
   <div
     className="field"
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -1637,8 +1637,8 @@ exports[`should render an invalid and required field with a Textarea 1`] = `
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
@@ -1737,8 +1737,8 @@ exports[`should render an invalid and required field with an Input 1`] = `
   hideRequired={false}
   htmlFor="test"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -1747,8 +1747,8 @@ exports[`should render an invalid and required field with an Input 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -1767,15 +1767,15 @@ exports[`should render an invalid and required field with an Input 1`] = `
   isInvalid={true}
   isLabelHidden={false}
   label="Field Label"
-  labelAttrs={Object {}}
+  labelAttrs={{}}
   required={true}
   showOptional={false}
 >
   <div
     className="field"
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -1784,8 +1784,8 @@ exports[`should render an invalid and required field with an Input 1`] = `
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
@@ -1884,8 +1884,8 @@ exports[`should render an invalid field with a Select 1`] = `
   hideRequired={false}
   htmlFor="test"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -1894,8 +1894,8 @@ exports[`should render an invalid field with a Select 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -1914,15 +1914,15 @@ exports[`should render an invalid field with a Select 1`] = `
   isInvalid={true}
   isLabelHidden={false}
   label="Field Label"
-  labelAttrs={Object {}}
+  labelAttrs={{}}
   required={false}
   showOptional={false}
 >
   <div
     className="field"
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -1931,8 +1931,8 @@ exports[`should render an invalid field with a Select 1`] = `
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
@@ -2023,8 +2023,8 @@ exports[`should render an invalid field with an Input 1`] = `
   hideRequired={false}
   htmlFor="test"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -2033,8 +2033,8 @@ exports[`should render an invalid field with an Input 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -2053,15 +2053,15 @@ exports[`should render an invalid field with an Input 1`] = `
   isInvalid={true}
   isLabelHidden={false}
   label="Field Label"
-  labelAttrs={Object {}}
+  labelAttrs={{}}
   required={false}
   showOptional={false}
 >
   <div
     className="field"
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -2070,8 +2070,8 @@ exports[`should render an invalid field with an Input 1`] = `
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
@@ -2162,8 +2162,8 @@ exports[`should render an invalid field with an Textarea 1`] = `
   hideRequired={false}
   htmlFor="test"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -2172,8 +2172,8 @@ exports[`should render an invalid field with an Textarea 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -2192,15 +2192,15 @@ exports[`should render an invalid field with an Textarea 1`] = `
   isInvalid={true}
   isLabelHidden={false}
   label="Field Label"
-  labelAttrs={Object {}}
+  labelAttrs={{}}
   required={false}
   showOptional={false}
 >
   <div
     className="field"
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -2209,8 +2209,8 @@ exports[`should render an invalid field with an Textarea 1`] = `
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
@@ -2292,8 +2292,8 @@ exports[`should render an optional field in error 1`] = `
 <div
   className="field"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -2302,8 +2302,8 @@ exports[`should render an optional field in error 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -2337,7 +2337,7 @@ exports[`should render an optional field in error 1`] = `
       Field Label
       <FormattedMessage
         id="Terra.form.field.optional"
-        values={Object {}}
+        values={{}}
       >
         <Component />
       </FormattedMessage>
@@ -2362,8 +2362,8 @@ exports[`should render an optional field label 1`] = `
 <div
   className="field"
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -2372,8 +2372,8 @@ exports[`should render an optional field label 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -2399,7 +2399,7 @@ exports[`should render an optional field label 1`] = `
       Field Label
       <FormattedMessage
         id="Terra.form.field.optional"
-        values={Object {}}
+        values={{}}
       >
         <Component />
       </FormattedMessage>

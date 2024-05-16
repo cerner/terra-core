@@ -3,8 +3,8 @@
 exports[`Dropdown Button correctly applies the theme context className 1`] = `
 <ThemeContextProvider
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -13,8 +13,8 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -30,7 +30,7 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
     }
   }
   theme={
-    Object {
+    {
       "className": "orion-fusion-theme",
     }
   }
@@ -40,10 +40,10 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
     primaryOptionLabel="Primary Option"
   >
     <SplitButton
-      buttonAttrs={Object {}}
+      buttonAttrs={{}}
       intl={
-        Object {
-          "defaultFormats": Object {},
+        {
+          "defaultFormats": {},
           "defaultLocale": "en",
           "formatDate": [Function],
           "formatHTMLMessage": [Function],
@@ -52,8 +52,8 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
           "formatPlural": [Function],
           "formatRelative": [Function],
           "formatTime": [Function],
-          "formats": Object {},
-          "formatters": Object {
+          "formats": {},
+          "formatters": {
             "getDateTimeFormat": [Function],
             "getMessageFormat": [Function],
             "getNumberFormat": [Function],
@@ -140,13 +140,13 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
               attachmentBehavior="flip"
               attachmentMargin={0}
               contentAttachment={
-                Object {
+                {
                   "horizontal": "start",
                   "vertical": "top",
                 }
               }
               contentOffset={
-                Object {
+                {
                   "horizontal": 0,
                   "vertical": 0,
                 }
@@ -154,13 +154,13 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
               isEnabled={true}
               isOpen={false}
               targetAttachment={
-                Object {
+                {
                   "horizontal": "start",
                   "vertical": "bottom",
                 }
               }
               targetOffset={
-                Object {
+                {
                   "horizontal": 0,
                   "vertical": 0,
                 }
@@ -447,7 +447,7 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
   isDisabled={false}
   isOpen={false}
   items={
-    Array [
+    [
       <Item
         label="1st Option"
         onSelect={[Function]}

@@ -3,8 +3,8 @@
 exports[`should render List with items 1`] = `
 <InjectIntl(List)
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -13,8 +13,8 @@ exports[`should render List with items 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -35,8 +35,8 @@ exports[`should render List with items 1`] = `
     ariaSelectionStyle="none"
     dividerStyle="none"
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -45,8 +45,8 @@ exports[`should render List with items 1`] = `
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
@@ -87,19 +87,19 @@ exports[`should render List with items 1`] = `
         >
           <Provider
             context={
-              Object {
+              {
                 "$$typeof": Symbol(react.context),
-                "Consumer": Object {
+                "Consumer": {
                   "$$typeof": Symbol(react.context),
                   "_calculateChangedBits": null,
                   "_context": [Circular],
                 },
-                "Provider": Object {
+                "Provider": {
                   "$$typeof": Symbol(react.provider),
                   "_context": [Circular],
                 },
                 "_calculateChangedBits": null,
-                "_currentRenderer": Object {},
+                "_currentRenderer": {},
                 "_currentRenderer2": null,
                 "_currentValue": null,
                 "_currentValue2": null,
@@ -107,7 +107,7 @@ exports[`should render List with items 1`] = `
               }
             }
             store={
-              Object {
+              {
                 "@@observable": [Function],
                 "dispatch": [Function],
                 "getState": [Function],
@@ -139,7 +139,7 @@ exports[`should render List with items 1`] = `
                 renderClone={[Function]}
                 shouldAnimatePlaceholder={false}
                 snapshot={
-                  Object {
+                  {
                     "draggingFromThisWith": null,
                     "draggingOverWith": null,
                     "isDraggingOver": false,
@@ -190,14 +190,14 @@ exports[`should render List with items 1`] = `
                           isDragDisabled={false}
                           isEnabled={true}
                           mapped={
-                            Object {
+                            {
                               "combineTargetFor": null,
-                              "offset": Object {
+                              "offset": {
                                 "x": 0,
                                 "y": 0,
                               },
                               "shouldAnimateDisplacement": true,
-                              "snapshot": Object {
+                              "snapshot": {
                                 "combineTargetFor": null,
                                 "combineWith": null,
                                 "draggingOver": null,
@@ -228,7 +228,7 @@ exports[`should render List with items 1`] = `
                             refCallback={[Function]}
                             role="button"
                             style={
-                              Object {
+                              {
                                 "transform": null,
                                 "transition": null,
                               }
@@ -244,8 +244,8 @@ exports[`should render List with items 1`] = `
                               draggable={false}
                               hasChevron={false}
                               intl={
-                                Object {
-                                  "defaultFormats": Object {},
+                                {
+                                  "defaultFormats": {},
                                   "defaultLocale": "en",
                                   "formatDate": [Function],
                                   "formatHTMLMessage": [Function],
@@ -254,8 +254,8 @@ exports[`should render List with items 1`] = `
                                   "formatPlural": [Function],
                                   "formatRelative": [Function],
                                   "formatTime": [Function],
-                                  "formats": Object {},
-                                  "formatters": Object {
+                                  "formats": {},
+                                  "formatters": {
                                     "getDateTimeFormat": [Function],
                                     "getMessageFormat": [Function],
                                     "getNumberFormat": [Function],
@@ -279,7 +279,7 @@ exports[`should render List with items 1`] = `
                               refCallback={[Function]}
                               role="button"
                               style={
-                                Object {
+                                {
                                   "transform": null,
                                   "transition": null,
                                 }
@@ -303,7 +303,7 @@ exports[`should render List with items 1`] = `
                                 onTransitionEnd={null}
                                 role="option"
                                 style={
-                                  Object {
+                                  {
                                     "transform": null,
                                     "transition": null,
                                   }
@@ -440,14 +440,14 @@ exports[`should render List with items 1`] = `
                           isDragDisabled={false}
                           isEnabled={true}
                           mapped={
-                            Object {
+                            {
                               "combineTargetFor": null,
-                              "offset": Object {
+                              "offset": {
                                 "x": 0,
                                 "y": 0,
                               },
                               "shouldAnimateDisplacement": true,
-                              "snapshot": Object {
+                              "snapshot": {
                                 "combineTargetFor": null,
                                 "combineWith": null,
                                 "draggingOver": null,
@@ -478,7 +478,7 @@ exports[`should render List with items 1`] = `
                             refCallback={[Function]}
                             role="button"
                             style={
-                              Object {
+                              {
                                 "transform": null,
                                 "transition": null,
                               }
@@ -494,8 +494,8 @@ exports[`should render List with items 1`] = `
                               draggable={false}
                               hasChevron={false}
                               intl={
-                                Object {
-                                  "defaultFormats": Object {},
+                                {
+                                  "defaultFormats": {},
                                   "defaultLocale": "en",
                                   "formatDate": [Function],
                                   "formatHTMLMessage": [Function],
@@ -504,8 +504,8 @@ exports[`should render List with items 1`] = `
                                   "formatPlural": [Function],
                                   "formatRelative": [Function],
                                   "formatTime": [Function],
-                                  "formats": Object {},
-                                  "formatters": Object {
+                                  "formats": {},
+                                  "formatters": {
                                     "getDateTimeFormat": [Function],
                                     "getMessageFormat": [Function],
                                     "getNumberFormat": [Function],
@@ -529,7 +529,7 @@ exports[`should render List with items 1`] = `
                               refCallback={[Function]}
                               role="button"
                               style={
-                                Object {
+                                {
                                   "transform": null,
                                   "transition": null,
                                 }
@@ -553,7 +553,7 @@ exports[`should render List with items 1`] = `
                                 onTransitionEnd={null}
                                 role="option"
                                 style={
-                                  Object {
+                                  {
                                     "transform": null,
                                     "transition": null,
                                   }
@@ -699,8 +699,8 @@ exports[`should render List without Draggable items 1`] = `
 exports[`should render Section with items 1`] = `
 <InjectIntl(ListSection)
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -709,8 +709,8 @@ exports[`should render Section with items 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -730,8 +730,8 @@ exports[`should render Section with items 1`] = `
 >
   <ListSection
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -740,8 +740,8 @@ exports[`should render Section with items 1`] = `
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
@@ -783,19 +783,19 @@ exports[`should render Section with items 1`] = `
         >
           <Provider
             context={
-              Object {
+              {
                 "$$typeof": Symbol(react.context),
-                "Consumer": Object {
+                "Consumer": {
                   "$$typeof": Symbol(react.context),
                   "_calculateChangedBits": null,
                   "_context": [Circular],
                 },
-                "Provider": Object {
+                "Provider": {
                   "$$typeof": Symbol(react.provider),
                   "_context": [Circular],
                 },
                 "_calculateChangedBits": null,
-                "_currentRenderer": Object {},
+                "_currentRenderer": {},
                 "_currentRenderer2": null,
                 "_currentValue": null,
                 "_currentValue2": null,
@@ -803,7 +803,7 @@ exports[`should render Section with items 1`] = `
               }
             }
             store={
-              Object {
+              {
                 "@@observable": [Function],
                 "dispatch": [Function],
                 "getState": [Function],
@@ -835,7 +835,7 @@ exports[`should render Section with items 1`] = `
                 renderClone={[Function]}
                 shouldAnimatePlaceholder={false}
                 snapshot={
-                  Object {
+                  {
                     "draggingFromThisWith": null,
                     "draggingOverWith": null,
                     "isDraggingOver": false,
@@ -911,14 +911,14 @@ exports[`should render Section with items 1`] = `
                               isDragDisabled={false}
                               isEnabled={true}
                               mapped={
-                                Object {
+                                {
                                   "combineTargetFor": null,
-                                  "offset": Object {
+                                  "offset": {
                                     "x": 0,
                                     "y": 0,
                                   },
                                   "shouldAnimateDisplacement": true,
-                                  "snapshot": Object {
+                                  "snapshot": {
                                     "combineTargetFor": null,
                                     "combineWith": null,
                                     "draggingOver": null,
@@ -948,7 +948,7 @@ exports[`should render Section with items 1`] = `
                                 refCallback={[Function]}
                                 role="button"
                                 style={
-                                  Object {
+                                  {
                                     "transform": null,
                                     "transition": null,
                                   }
@@ -964,8 +964,8 @@ exports[`should render Section with items 1`] = `
                                   draggable={false}
                                   hasChevron={false}
                                   intl={
-                                    Object {
-                                      "defaultFormats": Object {},
+                                    {
+                                      "defaultFormats": {},
                                       "defaultLocale": "en",
                                       "formatDate": [Function],
                                       "formatHTMLMessage": [Function],
@@ -974,8 +974,8 @@ exports[`should render Section with items 1`] = `
                                       "formatPlural": [Function],
                                       "formatRelative": [Function],
                                       "formatTime": [Function],
-                                      "formats": Object {},
-                                      "formatters": Object {
+                                      "formats": {},
+                                      "formatters": {
                                         "getDateTimeFormat": [Function],
                                         "getMessageFormat": [Function],
                                         "getNumberFormat": [Function],
@@ -998,7 +998,7 @@ exports[`should render Section with items 1`] = `
                                   refCallback={[Function]}
                                   role="button"
                                   style={
-                                    Object {
+                                    {
                                       "transform": null,
                                       "transition": null,
                                     }
@@ -1022,7 +1022,7 @@ exports[`should render Section with items 1`] = `
                                     onTransitionEnd={null}
                                     role="option"
                                     style={
-                                      Object {
+                                      {
                                         "transform": null,
                                         "transition": null,
                                       }
@@ -1159,14 +1159,14 @@ exports[`should render Section with items 1`] = `
                               isDragDisabled={false}
                               isEnabled={true}
                               mapped={
-                                Object {
+                                {
                                   "combineTargetFor": null,
-                                  "offset": Object {
+                                  "offset": {
                                     "x": 0,
                                     "y": 0,
                                   },
                                   "shouldAnimateDisplacement": true,
-                                  "snapshot": Object {
+                                  "snapshot": {
                                     "combineTargetFor": null,
                                     "combineWith": null,
                                     "draggingOver": null,
@@ -1196,7 +1196,7 @@ exports[`should render Section with items 1`] = `
                                 refCallback={[Function]}
                                 role="button"
                                 style={
-                                  Object {
+                                  {
                                     "transform": null,
                                     "transition": null,
                                   }
@@ -1212,8 +1212,8 @@ exports[`should render Section with items 1`] = `
                                   draggable={false}
                                   hasChevron={false}
                                   intl={
-                                    Object {
-                                      "defaultFormats": Object {},
+                                    {
+                                      "defaultFormats": {},
                                       "defaultLocale": "en",
                                       "formatDate": [Function],
                                       "formatHTMLMessage": [Function],
@@ -1222,8 +1222,8 @@ exports[`should render Section with items 1`] = `
                                       "formatPlural": [Function],
                                       "formatRelative": [Function],
                                       "formatTime": [Function],
-                                      "formats": Object {},
-                                      "formatters": Object {
+                                      "formats": {},
+                                      "formatters": {
                                         "getDateTimeFormat": [Function],
                                         "getMessageFormat": [Function],
                                         "getNumberFormat": [Function],
@@ -1246,7 +1246,7 @@ exports[`should render Section with items 1`] = `
                                   refCallback={[Function]}
                                   role="button"
                                   style={
-                                    Object {
+                                    {
                                       "transform": null,
                                       "transition": null,
                                     }
@@ -1270,7 +1270,7 @@ exports[`should render Section with items 1`] = `
                                     onTransitionEnd={null}
                                     role="option"
                                     style={
-                                      Object {
+                                      {
                                         "transform": null,
                                         "transition": null,
                                       }
@@ -1394,8 +1394,8 @@ exports[`should render Section with items 1`] = `
 exports[`should render subsection with items 1`] = `
 <InjectIntl(ListSubsection)
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -1404,8 +1404,8 @@ exports[`should render subsection with items 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -1425,8 +1425,8 @@ exports[`should render subsection with items 1`] = `
 >
   <ListSubsection
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -1435,8 +1435,8 @@ exports[`should render subsection with items 1`] = `
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
@@ -1478,19 +1478,19 @@ exports[`should render subsection with items 1`] = `
         >
           <Provider
             context={
-              Object {
+              {
                 "$$typeof": Symbol(react.context),
-                "Consumer": Object {
+                "Consumer": {
                   "$$typeof": Symbol(react.context),
                   "_calculateChangedBits": null,
                   "_context": [Circular],
                 },
-                "Provider": Object {
+                "Provider": {
                   "$$typeof": Symbol(react.provider),
                   "_context": [Circular],
                 },
                 "_calculateChangedBits": null,
-                "_currentRenderer": Object {},
+                "_currentRenderer": {},
                 "_currentRenderer2": null,
                 "_currentValue": null,
                 "_currentValue2": null,
@@ -1498,7 +1498,7 @@ exports[`should render subsection with items 1`] = `
               }
             }
             store={
-              Object {
+              {
                 "@@observable": [Function],
                 "dispatch": [Function],
                 "getState": [Function],
@@ -1530,7 +1530,7 @@ exports[`should render subsection with items 1`] = `
                 renderClone={[Function]}
                 shouldAnimatePlaceholder={false}
                 snapshot={
-                  Object {
+                  {
                     "draggingFromThisWith": null,
                     "draggingOverWith": null,
                     "isDraggingOver": false,
@@ -1606,14 +1606,14 @@ exports[`should render subsection with items 1`] = `
                               isDragDisabled={false}
                               isEnabled={true}
                               mapped={
-                                Object {
+                                {
                                   "combineTargetFor": null,
-                                  "offset": Object {
+                                  "offset": {
                                     "x": 0,
                                     "y": 0,
                                   },
                                   "shouldAnimateDisplacement": true,
-                                  "snapshot": Object {
+                                  "snapshot": {
                                     "combineTargetFor": null,
                                     "combineWith": null,
                                     "draggingOver": null,
@@ -1643,7 +1643,7 @@ exports[`should render subsection with items 1`] = `
                                 refCallback={[Function]}
                                 role="button"
                                 style={
-                                  Object {
+                                  {
                                     "transform": null,
                                     "transition": null,
                                   }
@@ -1659,8 +1659,8 @@ exports[`should render subsection with items 1`] = `
                                   draggable={false}
                                   hasChevron={false}
                                   intl={
-                                    Object {
-                                      "defaultFormats": Object {},
+                                    {
+                                      "defaultFormats": {},
                                       "defaultLocale": "en",
                                       "formatDate": [Function],
                                       "formatHTMLMessage": [Function],
@@ -1669,8 +1669,8 @@ exports[`should render subsection with items 1`] = `
                                       "formatPlural": [Function],
                                       "formatRelative": [Function],
                                       "formatTime": [Function],
-                                      "formats": Object {},
-                                      "formatters": Object {
+                                      "formats": {},
+                                      "formatters": {
                                         "getDateTimeFormat": [Function],
                                         "getMessageFormat": [Function],
                                         "getNumberFormat": [Function],
@@ -1693,7 +1693,7 @@ exports[`should render subsection with items 1`] = `
                                   refCallback={[Function]}
                                   role="button"
                                   style={
-                                    Object {
+                                    {
                                       "transform": null,
                                       "transition": null,
                                     }
@@ -1717,7 +1717,7 @@ exports[`should render subsection with items 1`] = `
                                     onTransitionEnd={null}
                                     role="option"
                                     style={
-                                      Object {
+                                      {
                                         "transform": null,
                                         "transition": null,
                                       }
@@ -1854,14 +1854,14 @@ exports[`should render subsection with items 1`] = `
                               isDragDisabled={false}
                               isEnabled={true}
                               mapped={
-                                Object {
+                                {
                                   "combineTargetFor": null,
-                                  "offset": Object {
+                                  "offset": {
                                     "x": 0,
                                     "y": 0,
                                   },
                                   "shouldAnimateDisplacement": true,
-                                  "snapshot": Object {
+                                  "snapshot": {
                                     "combineTargetFor": null,
                                     "combineWith": null,
                                     "draggingOver": null,
@@ -1891,7 +1891,7 @@ exports[`should render subsection with items 1`] = `
                                 refCallback={[Function]}
                                 role="button"
                                 style={
-                                  Object {
+                                  {
                                     "transform": null,
                                     "transition": null,
                                   }
@@ -1907,8 +1907,8 @@ exports[`should render subsection with items 1`] = `
                                   draggable={false}
                                   hasChevron={false}
                                   intl={
-                                    Object {
-                                      "defaultFormats": Object {},
+                                    {
+                                      "defaultFormats": {},
                                       "defaultLocale": "en",
                                       "formatDate": [Function],
                                       "formatHTMLMessage": [Function],
@@ -1917,8 +1917,8 @@ exports[`should render subsection with items 1`] = `
                                       "formatPlural": [Function],
                                       "formatRelative": [Function],
                                       "formatTime": [Function],
-                                      "formats": Object {},
-                                      "formatters": Object {
+                                      "formats": {},
+                                      "formatters": {
                                         "getDateTimeFormat": [Function],
                                         "getMessageFormat": [Function],
                                         "getNumberFormat": [Function],
@@ -1941,7 +1941,7 @@ exports[`should render subsection with items 1`] = `
                                   refCallback={[Function]}
                                   role="button"
                                   style={
-                                    Object {
+                                    {
                                       "transform": null,
                                       "transition": null,
                                     }
@@ -1965,7 +1965,7 @@ exports[`should render subsection with items 1`] = `
                                     onTransitionEnd={null}
                                     role="option"
                                     style={
-                                      Object {
+                                      {
                                         "transform": null,
                                         "transition": null,
                                       }
@@ -2102,14 +2102,14 @@ exports[`should render subsection with items 1`] = `
                               isDragDisabled={false}
                               isEnabled={true}
                               mapped={
-                                Object {
+                                {
                                   "combineTargetFor": null,
-                                  "offset": Object {
+                                  "offset": {
                                     "x": 0,
                                     "y": 0,
                                   },
                                   "shouldAnimateDisplacement": true,
-                                  "snapshot": Object {
+                                  "snapshot": {
                                     "combineTargetFor": null,
                                     "combineWith": null,
                                     "draggingOver": null,
@@ -2139,7 +2139,7 @@ exports[`should render subsection with items 1`] = `
                                 refCallback={[Function]}
                                 role="button"
                                 style={
-                                  Object {
+                                  {
                                     "transform": null,
                                     "transition": null,
                                   }
@@ -2155,8 +2155,8 @@ exports[`should render subsection with items 1`] = `
                                   draggable={false}
                                   hasChevron={false}
                                   intl={
-                                    Object {
-                                      "defaultFormats": Object {},
+                                    {
+                                      "defaultFormats": {},
                                       "defaultLocale": "en",
                                       "formatDate": [Function],
                                       "formatHTMLMessage": [Function],
@@ -2165,8 +2165,8 @@ exports[`should render subsection with items 1`] = `
                                       "formatPlural": [Function],
                                       "formatRelative": [Function],
                                       "formatTime": [Function],
-                                      "formats": Object {},
-                                      "formatters": Object {
+                                      "formats": {},
+                                      "formatters": {
                                         "getDateTimeFormat": [Function],
                                         "getMessageFormat": [Function],
                                         "getNumberFormat": [Function],
@@ -2189,7 +2189,7 @@ exports[`should render subsection with items 1`] = `
                                   refCallback={[Function]}
                                   role="button"
                                   style={
-                                    Object {
+                                    {
                                       "transform": null,
                                       "transition": null,
                                     }
@@ -2213,7 +2213,7 @@ exports[`should render subsection with items 1`] = `
                                     onTransitionEnd={null}
                                     role="option"
                                     style={
-                                      Object {
+                                      {
                                         "transform": null,
                                         "transition": null,
                                       }

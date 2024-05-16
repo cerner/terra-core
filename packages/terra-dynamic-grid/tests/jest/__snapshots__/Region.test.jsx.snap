@@ -5,7 +5,7 @@ exports[`DynamicGrid should render a Grid with merged attributes 1`] = `
   className="TestClass region_3hmsj"
   data-mock="data"
   style={
-    Object {
+    {
       "height": "100px",
     }
   }

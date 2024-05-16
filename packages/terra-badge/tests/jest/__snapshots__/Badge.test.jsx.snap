@@ -3,8 +3,8 @@
 exports[`Badge with additional props correctly applies the theme context className 1`] = `
 <InjectIntl(Badge)
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -13,8 +13,8 @@ exports[`Badge with additional props correctly applies the theme context classNa
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -35,8 +35,8 @@ exports[`Badge with additional props correctly applies the theme context classNa
     icon={null}
     intent="default"
     intl={
-      Object {
-        "defaultFormats": Object {},
+      {
+        "defaultFormats": {},
         "defaultLocale": "en",
         "formatDate": [Function],
         "formatHTMLMessage": [Function],
@@ -45,8 +45,8 @@ exports[`Badge with additional props correctly applies the theme context classNa
         "formatPlural": [Function],
         "formatRelative": [Function],
         "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
+        "formats": {},
+        "formatters": {
           "getDateTimeFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],

@@ -3,8 +3,8 @@
 exports[`Dropdown List correctly applies the theme context className 1`] = `
 <ThemeContextProvider
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -13,8 +13,8 @@ exports[`Dropdown List correctly applies the theme context className 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -30,7 +30,7 @@ exports[`Dropdown List correctly applies the theme context className 1`] = `
     }
   }
   theme={
-    Object {
+    {
       "className": "orion-fusion-theme",
     }
   }
@@ -40,8 +40,8 @@ exports[`Dropdown List correctly applies the theme context className 1`] = `
   >
     <DropdownList
       intl={
-        Object {
-          "defaultFormats": Object {},
+        {
+          "defaultFormats": {},
           "defaultLocale": "en",
           "formatDate": [Function],
           "formatHTMLMessage": [Function],
@@ -50,8 +50,8 @@ exports[`Dropdown List correctly applies the theme context className 1`] = `
           "formatPlural": [Function],
           "formatRelative": [Function],
           "formatTime": [Function],
-          "formats": Object {},
-          "formatters": Object {
+          "formats": {},
+          "formatters": {
             "getDateTimeFormat": [Function],
             "getMessageFormat": [Function],
             "getNumberFormat": [Function],
@@ -75,7 +75,7 @@ exports[`Dropdown List correctly applies the theme context className 1`] = `
         onKeyUp={[Function]}
         role="menu"
         style={
-          Object {
+          {
             "width": undefined,
           }
         }
@@ -154,7 +154,7 @@ exports[`Dropdown List renders a default dropdown list 1`] = `
   onKeyUp={[Function]}
   role="menu"
   style={
-    Object {
+    {
       "width": undefined,
     }
   }
@@ -174,8 +174,8 @@ exports[`Dropdown List renders a default dropdown list 1`] = `
 exports[`Dropdown List renders a dropdown list a non-default focused option 1`] = `
 <DropdownList
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -184,8 +184,8 @@ exports[`Dropdown List renders a dropdown list a non-default focused option 1`] 
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -220,8 +220,8 @@ exports[`Dropdown List renders a dropdown list a non-default focused option 1`] 
 exports[`Dropdown List renders a dropdown list an active and focused option 1`] = `
 <DropdownList
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -230,8 +230,8 @@ exports[`Dropdown List renders a dropdown list an active and focused option 1`] 
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -266,8 +266,8 @@ exports[`Dropdown List renders a dropdown list an active and focused option 1`] 
 exports[`Dropdown List renders a dropdown list an active option 1`] = `
 <DropdownList
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -276,8 +276,8 @@ exports[`Dropdown List renders a dropdown list an active option 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -312,8 +312,8 @@ exports[`Dropdown List renders a dropdown list an active option 1`] = `
 exports[`Dropdown List renders a dropdown list with a set width 1`] = `
 <DropdownList
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -322,8 +322,8 @@ exports[`Dropdown List renders a dropdown list with a set width 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
@@ -351,8 +351,8 @@ exports[`Dropdown List renders a dropdown list with a set width 1`] = `
 exports[`Dropdown List renders a dropdown list with multiple children 1`] = `
 <DropdownList
   intl={
-    Object {
-      "defaultFormats": Object {},
+    {
+      "defaultFormats": {},
       "defaultLocale": "en",
       "formatDate": [Function],
       "formatHTMLMessage": [Function],
@@ -361,8 +361,8 @@ exports[`Dropdown List renders a dropdown list with multiple children 1`] = `
       "formatPlural": [Function],
       "formatRelative": [Function],
       "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
+      "formats": {},
+      "formatters": {
         "getDateTimeFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
