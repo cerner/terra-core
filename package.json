@@ -58,7 +58,7 @@
     "enzyme-adapter-react-16": "1",
     "enzyme-to-json": "3",
     "eslint": "7",
-    "gh-pages": "2",
+    "gh-pages": "5",
     "glob": "7",
     "jest": "29",
     "lerna": "6",
