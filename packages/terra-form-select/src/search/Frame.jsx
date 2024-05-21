@@ -233,8 +233,7 @@ class Frame extends React.Component {
 
     if (this.state.hasSearchChanged) {
       this.setState({
-        searchValue: this.props.display,
-        hasSearchChanged: false,
+        hasSearchChanged: true,
       });
     }
 
