@@ -63,7 +63,7 @@ describe('Hyperlink', () => {
   it('should render a default hyperlink button with data styling attribute', () => {
     const wrapper = enzymeIntl.renderWithIntl(<Hyperlink text="Default hyperlink button" onClick={() => {}} />);
     expect(wrapper.find('data-focus-styles-enabled')).toBeDefined();
-    expect(wrapper.prop('data-focus-styles-enabled')).toEqual("true");
+    expect(wrapper.prop('data-focus-styles-enabled')).toEqual('true');
     expect(wrapper).toMatchSnapshot();
   });
 
