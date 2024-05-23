@@ -231,13 +231,6 @@ class Frame extends React.Component {
 
     this.setState({ isFocused: false, focusedByTouch: false });
 
-    if (this.state.hasSearchChanged) {
-      this.setState({
-        searchValue: this.props.display,
-        hasSearchChanged: false,
-      });
-    }
-
     this.closeDropdown();
 
     if (this.props.onBlur) {
