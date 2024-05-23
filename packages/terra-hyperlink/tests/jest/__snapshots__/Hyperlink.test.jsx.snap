@@ -232,6 +232,7 @@ exports[`Hyperlink should render a external hyperlink 1`] = `
 exports[`Hyperlink should render a hyperlink button when oonClick is provided 1`] = `
 <button
   class="button-reset hyperlink default"
+  data-focus-styles-enabled="true"
   role="link"
   type="button"
 >
