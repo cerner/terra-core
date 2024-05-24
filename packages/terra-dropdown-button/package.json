@@ -1,6 +1,6 @@
 {
   "name": "terra-dropdown-button",
-  "version": "1.42.0",
+  "version": "1.43.0",
   "description": "Provides a dropdown button component and split button component for selecting a single option (action) from a list of options.",
   "author": "Cerner Corporation",
   "repository": {
@@ -46,7 +46,7 @@
     "uuid": "3.4.0"
   },
   "devDependencies": {
-    "terra-icon": "^3.61.0"
+    "terra-icon": "^3.62.0"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",

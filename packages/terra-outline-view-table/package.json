@@ -1,6 +1,6 @@
 {
   "name": "terra-outline-view-table",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "The terra-outline-view-table component ",
   "author": "Cerner Corporation",
   "repository": {
@@ -39,10 +39,10 @@
     "react-intl": "2 || 3 || 4 || 5"
   },
   "dependencies": {
-    "@cerner/terra-docs": "^1.11.0",
+    "@cerner/terra-docs": "^1.12.0",
     "classnames": "2",
     "prop-types": "15",
-    "terra-content-container": "^3.42.0",
+    "terra-content-container": "^3.43.0",
     "terra-mixins": "^1.41.0",
     "terra-table": "^4.36.0"
   },

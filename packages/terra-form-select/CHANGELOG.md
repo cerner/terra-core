@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 6.62.2 - (May 24, 2024)
+
 * Fixed
   * Search field value now persists when navigating to another component.
 

@@ -1,6 +1,6 @@
 {
   "name": "terra-toggle-button",
-  "version": "3.88.0",
+  "version": "3.89.0",
   "description": "Toggle button component that transitions content in and out with the click on a button.",
   "author": "Cerner Corporation",
   "repository": {
@@ -36,9 +36,9 @@
   "dependencies": {
     "classnames": "2",
     "prop-types": "15",
-    "terra-button": "^3.77.0",
-    "terra-icon": "^3.61.0",
-    "terra-toggle": "^3.63.0"
+    "terra-button": "^3.78.0",
+    "terra-icon": "^3.62.0",
+    "terra-toggle": "^3.64.0"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",

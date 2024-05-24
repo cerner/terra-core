@@ -1,6 +1,6 @@
 {
   "name": "terra-content-container",
-  "version": "3.42.0",
+  "version": "3.43.0",
   "description": "The Terra ContentContainer is a structural component for the purpose of arranging content with a header.",
   "author": "Cerner Corporation",
   "repository": {
@@ -36,7 +36,7 @@
   "dependencies": {
     "classnames": "2",
     "prop-types": "15",
-    "terra-scroll": "^2.37.0",
+    "terra-scroll": "^2.38.0",
     "terra-theme-context": "1"
   },
   "scripts": {

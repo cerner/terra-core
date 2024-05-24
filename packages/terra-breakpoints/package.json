@@ -1,6 +1,6 @@
 {
   "name": "terra-breakpoints",
-  "version": "2.40.0",
+  "version": "2.41.0",
   "description": "Contains components and utilities related to Terra's supported responsive breakpoints",
   "author": "Cerner Corporation",
   "repository": {

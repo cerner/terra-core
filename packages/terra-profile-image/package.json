@@ -1,6 +1,6 @@
 {
   "name": "terra-profile-image",
-  "version": "3.46.0",
+  "version": "3.47.0",
   "description": "The terra-profile-image component displays an avatar image while the profile image is being loaded. If the profile image successfully loads, the avatar image is replaced with the profile image. Otherwise, the avatar image is left as is. All styling set on the profile image will be applied to the avatar image.",
   "author": "Cerner Corporation",
   "repository": {
@@ -36,7 +36,7 @@
   "dependencies": {
     "classnames": "2",
     "prop-types": "15",
-    "terra-image": "^3.41.0",
+    "terra-image": "^3.42.0",
     "terra-mixins": "^1.41.0",
     "terra-theme-context": "1"
   },
