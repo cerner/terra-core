@@ -232,9 +232,9 @@ class Frame extends React.Component {
     this.setState({ isFocused: false, focusedByTouch: false });
 
     if (this.state.hasSearchChanged) {
-      this.setState({
-        searchValue: this.state.searchValue.trim(),
-      });
+      this.setState((prevState) => ({
+        searchValue: prevState.searchValue.trim(),
+      }));
     }
 
     this.closeDropdown();
