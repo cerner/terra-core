@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 2.70.1 - (May 24, 2024)
+
 * Fixed
   * Added missing data attribute for default variant.
 

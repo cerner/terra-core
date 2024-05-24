@@ -1,6 +1,6 @@
 {
   "name": "terra-action-footer",
-  "version": "2.68.0",
+  "version": "2.69.0",
   "description": "The terra-action-footer component is a footer bar that contains sockets for placing actionable items such as buttons and hyperlinks. The default variation contains a start and end socket, while the centered variation has only a center socket. If no actions are provided, the footer bar collapses to a themeable height and maintains the top border.",
   "author": "Cerner Corporation",
   "repository": {

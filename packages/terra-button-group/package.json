@@ -1,6 +1,6 @@
 {
   "name": "terra-button-group",
-  "version": "3.79.0",
+  "version": "3.80.0",
   "description": "The Terra Button Group component groups buttons and can maintain a toggle selection state.",
   "author": "Cerner Corporation",
   "repository": {
@@ -37,7 +37,7 @@
     "classnames": "2",
     "keycode-js": "3",
     "prop-types": "15",
-    "terra-button": "^3.77.0",
+    "terra-button": "^3.78.0",
     "terra-theme-context": "1"
   },
   "scripts": {

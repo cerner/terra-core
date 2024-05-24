@@ -1,6 +1,6 @@
 {
   "name": "terra-arrange",
-  "version": "3.56.1",
+  "version": "3.57.0",
   "description": "The arrange component is used for horizontally arranging and vertically aligning a single row of container elements.",
   "author": "Cerner Corporation",
   "repository": {

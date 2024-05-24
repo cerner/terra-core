@@ -1,6 +1,6 @@
 {
   "name": "terra-switch",
-  "version": "1.14.0",
+  "version": "1.15.0",
   "description": "The terra-switch component provides users a way to toggle between state ON and OFF.",
   "author": "Cerner Corporation",
   "repository": {

@@ -1,6 +1,6 @@
 {
   "name": "terra-heading",
-  "version": "4.58.0",
+  "version": "4.59.0",
   "description": "Terra includes styling for all standard headings `h1` through `h6`, as well as styles that match the size of their respective heading.",
   "author": "Cerner Corporation",
   "repository": {
@@ -37,7 +37,7 @@
   "dependencies": {
     "classnames": "2",
     "prop-types": "15",
-    "terra-arrange": "^3.56.1"
+    "terra-arrange": "^3.57.0"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",

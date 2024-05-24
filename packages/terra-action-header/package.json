@@ -1,6 +1,6 @@
 {
   "name": "terra-action-header",
-  "version": "2.93.0",
+  "version": "2.94.0",
   "description": "The terra-action-header component is a header bar containing a title and optional actionable items such as links and buttons.",
   "author": "Cerner Corporation",
   "repository": {
@@ -36,14 +36,14 @@
     "react-intl": "2 || 3 || 4 || 5"
   },
   "dependencies": {
-    "@cerner/terra-docs": "^1.11.0",
+    "@cerner/terra-docs": "^1.12.0",
     "classnames": "2",
     "lodash.uniqueid": "4",
     "prop-types": "15",
-    "terra-button": "^3.77.0",
+    "terra-button": "^3.78.0",
     "terra-mixins": "^1.41.0",
     "terra-theme-context": "1",
-    "terra-visually-hidden-text": "^2.38.0"
+    "terra-visually-hidden-text": "^2.39.0"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",
