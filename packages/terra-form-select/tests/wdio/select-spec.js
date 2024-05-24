@@ -1795,6 +1795,33 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
       after(() => $('#root').click());
     });
+
+    describe('should retain input value on fucusing another component', () => {
+      it('retain input and focus using tab key', () => {
+        $('[data-terra-select]').click();
+        const input = $('[data-terra-select-combobox] input');
+        input.setValue('Test');
+
+        // Pressing Tab key twice to focus the body
+        browser.keys('Tab');
+        browser.keys('Tab');
+
+        expect($('body')).toBeFocused();
+        expect(input).toHaveValue('Test');
+      });
+
+      it('should retain input value and focus body when body is clicked', () => {
+        const input = $('[data-terra-select-combobox] input');
+
+        $('[data-terra-select]').click();
+        input.setValue('Test');
+
+        $('body').click();
+
+        expect($('body')).toBeFocused();
+        expect(input).toHaveValue('Test');
+      });
+    });
   });
 
   describe('Search Variant - controlled', () => {

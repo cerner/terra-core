@@ -2,11 +2,13 @@
 
 ## Unreleased
 
+* Fixed
+  * Search field value now persists when navigating to another component.
+
 ## 6.62.1 - (May 13, 2024)
 
 * Fixed
   * Fixed a "prop not recognized" console error.
-
 
 ## 6.62.0 - (May 8, 2024)
 
