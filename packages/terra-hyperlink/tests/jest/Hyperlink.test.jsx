@@ -55,8 +55,15 @@ describe('Hyperlink', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render a hyperlink button when oonClick is provided', () => {
+  it('should render a hyperlink button when onClick is provided', () => {
     const wrapper = enzymeIntl.renderWithIntl(<Hyperlink text="Default hyperlink button" onClick={() => {}} />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render a default hyperlink button with data styling attribute', () => {
+    const wrapper = enzymeIntl.renderWithIntl(<Hyperlink text="Default hyperlink button" onClick={() => {}} />);
+    expect(wrapper.find('data-focus-styles-enabled')).toBeDefined();
+    expect(wrapper.prop('data-focus-styles-enabled')).toEqual('true');
     expect(wrapper).toMatchSnapshot();
   });
 

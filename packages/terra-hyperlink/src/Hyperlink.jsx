@@ -243,6 +243,7 @@ class Hyperlink extends React.Component {
           role="link"
           type="button"
           ref={this.linkRef}
+          data-focus-styles-enabled
         >
           <span className={cx('button-inner')}>
             <span className={cx('inner-text')}>
